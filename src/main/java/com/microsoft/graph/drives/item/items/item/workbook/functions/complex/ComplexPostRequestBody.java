@@ -29,7 +29,7 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new complexPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ComplexPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,8 +38,8 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a complexPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static ComplexPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ComplexPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ComplexPostRequestBody();
     }
@@ -47,7 +47,7 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -55,7 +55,7 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("iNum", (n) -> { this.setINum(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -67,7 +67,7 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the iNum property value. The iNum property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getINum() {
         return this.iNum;
     }
@@ -75,7 +75,7 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the realNum property value. The realNum property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getRealNum() {
         return this.realNum;
     }
@@ -83,7 +83,7 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the suffix property value. The suffix property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getSuffix() {
         return this.suffix;
     }
@@ -92,8 +92,8 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("iNum", this.getINum());
         writer.writeObjectValue("realNum", this.getRealNum());
@@ -105,8 +105,8 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -114,8 +114,8 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the iNum property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setINum(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setINum(@jakarta.annotation.Nullable final Json value) {
         this.iNum = value;
     }
     /**
@@ -123,8 +123,8 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the realNum property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRealNum(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setRealNum(@jakarta.annotation.Nullable final Json value) {
         this.realNum = value;
     }
     /**
@@ -132,8 +132,8 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the suffix property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuffix(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setSuffix(@jakarta.annotation.Nullable final Json value) {
         this.suffix = value;
     }
 }

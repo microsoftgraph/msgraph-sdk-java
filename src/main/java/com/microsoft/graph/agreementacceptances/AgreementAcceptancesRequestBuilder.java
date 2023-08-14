@@ -24,11 +24,11 @@ import java.util.Objects;
 public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of agreementAcceptance entities.
-     * @param agreementAcceptanceId Unique identifier of the item
+     * @param agreementAcceptanceId The unique identifier of agreementAcceptance
      * @return a AgreementAcceptanceItemRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public AgreementAcceptanceItemRequestBuilder byAgreementAcceptanceId(@javax.annotation.Nonnull final String agreementAcceptanceId) {
+    @jakarta.annotation.Nonnull
+    public AgreementAcceptanceItemRequestBuilder byAgreementAcceptanceId(@jakarta.annotation.Nonnull final String agreementAcceptanceId) {
         Objects.requireNonNull(agreementAcceptanceId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("agreementAcceptance%2Did", agreementAcceptanceId);
@@ -40,8 +40,8 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public AgreementAcceptancesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public AgreementAcceptancesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/agreementAcceptances{?%24search,%24select}", pathParameters);
     }
     /**
@@ -50,15 +50,15 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public AgreementAcceptancesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public AgreementAcceptancesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/agreementAcceptances{?%24search,%24select}", rawUrl);
     }
     /**
      * Get entities from agreementAcceptances
      * @return a CompletableFuture of agreementAcceptanceCollectionResponse
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementAcceptanceCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -77,8 +77,8 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of agreementAcceptanceCollectionResponse
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AgreementAcceptanceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<AgreementAcceptanceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -96,8 +96,8 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a CompletableFuture of agreementAcceptance
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AgreementAcceptance> post(@javax.annotation.Nonnull final AgreementAcceptance body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<AgreementAcceptance> post(@jakarta.annotation.Nonnull final AgreementAcceptance body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -116,8 +116,8 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of agreementAcceptance
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AgreementAcceptance> post(@javax.annotation.Nonnull final AgreementAcceptance body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<AgreementAcceptance> post(@jakarta.annotation.Nonnull final AgreementAcceptance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -135,7 +135,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
      * Get entities from agreementAcceptances
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -144,8 +144,8 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -165,8 +165,8 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final AgreementAcceptance body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AgreementAcceptance body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -175,8 +175,8 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final AgreementAcceptance body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AgreementAcceptance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -200,13 +200,13 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
          * Search items by search phrases
          */
         @QueryParameter(name = "%24search")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String search;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -216,7 +216,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

@@ -27,7 +27,7 @@ public class Place extends Entity implements Parsable {
      * Instantiates a new place and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Place() {
         super();
     }
@@ -36,8 +36,8 @@ public class Place extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a place
      */
-    @javax.annotation.Nonnull
-    public static Place createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Place createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -53,7 +53,7 @@ public class Place extends Entity implements Parsable {
      * Gets the address property value. The street address of the place.
      * @return a physicalAddress
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PhysicalAddress getAddress() {
         return this.address;
     }
@@ -61,7 +61,7 @@ public class Place extends Entity implements Parsable {
      * Gets the displayName property value. The name associated with the place.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -69,7 +69,7 @@ public class Place extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
@@ -82,7 +82,7 @@ public class Place extends Entity implements Parsable {
      * Gets the geoCoordinates property value. Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
      * @return a outlookGeoCoordinates
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OutlookGeoCoordinates getGeoCoordinates() {
         return this.geoCoordinates;
     }
@@ -90,7 +90,7 @@ public class Place extends Entity implements Parsable {
      * Gets the phone property value. The phone number of the place.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPhone() {
         return this.phone;
     }
@@ -99,8 +99,8 @@ public class Place extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("address", this.getAddress());
@@ -113,8 +113,8 @@ public class Place extends Entity implements Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddress(@javax.annotation.Nullable final PhysicalAddress value) {
+    @jakarta.annotation.Nonnull
+    public void setAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.address = value;
     }
     /**
@@ -122,8 +122,8 @@ public class Place extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -131,8 +131,8 @@ public class Place extends Entity implements Parsable {
      * @param value Value to set for the geoCoordinates property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGeoCoordinates(@javax.annotation.Nullable final OutlookGeoCoordinates value) {
+    @jakarta.annotation.Nonnull
+    public void setGeoCoordinates(@jakarta.annotation.Nullable final OutlookGeoCoordinates value) {
         this.geoCoordinates = value;
     }
     /**
@@ -140,8 +140,8 @@ public class Place extends Entity implements Parsable {
      * @param value Value to set for the phone property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhone(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPhone(@jakarta.annotation.Nullable final String value) {
         this.phone = value;
     }
 }

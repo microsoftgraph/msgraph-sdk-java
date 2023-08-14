@@ -23,7 +23,7 @@ public class UserSource extends DataSource implements Parsable {
      * Instantiates a new userSource and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserSource() {
         super();
         this.setOdataType("#microsoft.graph.security.userSource");
@@ -33,8 +33,8 @@ public class UserSource extends DataSource implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userSource
      */
-    @javax.annotation.Nonnull
-    public static UserSource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserSource();
     }
@@ -42,7 +42,7 @@ public class UserSource extends DataSource implements Parsable {
      * Gets the email property value. Email address of the user's mailbox.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmail() {
         return this.email;
     }
@@ -50,7 +50,7 @@ public class UserSource extends DataSource implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
@@ -62,7 +62,7 @@ public class UserSource extends DataSource implements Parsable {
      * Gets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
      * @return a sourceType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SourceType getIncludedSources() {
         return this.includedSources;
     }
@@ -70,7 +70,7 @@ public class UserSource extends DataSource implements Parsable {
      * Gets the siteWebUrl property value. The URL of the user's OneDrive for Business site. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSiteWebUrl() {
         return this.siteWebUrl;
     }
@@ -79,8 +79,8 @@ public class UserSource extends DataSource implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("email", this.getEmail());
@@ -92,8 +92,8 @@ public class UserSource extends DataSource implements Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
@@ -101,8 +101,8 @@ public class UserSource extends DataSource implements Parsable {
      * @param value Value to set for the includedSources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncludedSources(@javax.annotation.Nullable final SourceType value) {
+    @jakarta.annotation.Nonnull
+    public void setIncludedSources(@jakarta.annotation.Nullable final SourceType value) {
         this.includedSources = value;
     }
     /**
@@ -110,8 +110,8 @@ public class UserSource extends DataSource implements Parsable {
      * @param value Value to set for the siteWebUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSiteWebUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSiteWebUrl(@jakarta.annotation.Nullable final String value) {
         this.siteWebUrl = value;
     }
 }

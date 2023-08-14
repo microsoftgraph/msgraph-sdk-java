@@ -15,7 +15,7 @@ public class EducationPowerPointResource extends EducationResource implements Pa
      * Instantiates a new educationPowerPointResource and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationPowerPointResource() {
         super();
         this.setOdataType("#microsoft.graph.educationPowerPointResource");
@@ -25,8 +25,8 @@ public class EducationPowerPointResource extends EducationResource implements Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationPowerPointResource
      */
-    @javax.annotation.Nonnull
-    public static EducationPowerPointResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationPowerPointResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationPowerPointResource();
     }
@@ -34,7 +34,7 @@ public class EducationPowerPointResource extends EducationResource implements Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("fileUrl", (n) -> { this.setFileUrl(n.getStringValue()); });
@@ -44,7 +44,7 @@ public class EducationPowerPointResource extends EducationResource implements Pa
      * Gets the fileUrl property value. Location of the file on disk.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileUrl() {
         return this.fileUrl;
     }
@@ -53,8 +53,8 @@ public class EducationPowerPointResource extends EducationResource implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("fileUrl", this.getFileUrl());
@@ -64,8 +64,8 @@ public class EducationPowerPointResource extends EducationResource implements Pa
      * @param value Value to set for the fileUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFileUrl(@jakarta.annotation.Nullable final String value) {
         this.fileUrl = value;
     }
 }

@@ -15,10 +15,10 @@ public enum ManagedAppPinCharacterSet implements ValuedEnum {
     ManagedAppPinCharacterSet(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ManagedAppPinCharacterSet forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ManagedAppPinCharacterSet forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "numeric": return Numeric;

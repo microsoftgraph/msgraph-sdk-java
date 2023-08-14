@@ -27,24 +27,24 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the delta method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the mailFolders property of the microsoft.graph.user entity.
-     * @param mailFolderId Unique identifier of the item
+     * @param mailFolderId The unique identifier of mailFolder
      * @return a MailFolderItemRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public MailFolderItemRequestBuilder byMailFolderId(@javax.annotation.Nonnull final String mailFolderId) {
+    @jakarta.annotation.Nonnull
+    public MailFolderItemRequestBuilder byMailFolderId(@jakarta.annotation.Nonnull final String mailFolderId) {
         Objects.requireNonNull(mailFolderId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("mailFolder%2Did", mailFolderId);
@@ -56,8 +56,8 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public MailFoldersRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public MailFoldersRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders{?includeHiddenFolders*,%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
@@ -66,16 +66,16 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public MailFoldersRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public MailFoldersRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders{?includeHiddenFolders*,%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
      * The user's mail folders. Read-only. Nullable.
      * @return a CompletableFuture of mailFolderCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list-mailfolders?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list-mailfolders?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolderCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -93,10 +93,10 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
      * The user's mail folders. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mailFolderCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list-mailfolders?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list-mailfolders?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MailFolderCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<MailFolderCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -110,13 +110,13 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use this API to create a new mail folder in the root folder of the user's mailbox. If you intend a new folder to be hidden, you must set the **isHidden** property to `true` on creation.
+     * Use this API to create a new mail folder in the root folder of the user's mailbox. If you intend a new folder to be hidden, you must set the isHidden property to true on creation.
      * @param body The request body
      * @return a CompletableFuture of mailFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/user-post-mailfolders?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-post-mailfolders?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MailFolder> post(@javax.annotation.Nonnull final MailFolder body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<MailFolder> post(@jakarta.annotation.Nonnull final MailFolder body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -130,14 +130,14 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use this API to create a new mail folder in the root folder of the user's mailbox. If you intend a new folder to be hidden, you must set the **isHidden** property to `true` on creation.
+     * Use this API to create a new mail folder in the root folder of the user's mailbox. If you intend a new folder to be hidden, you must set the isHidden property to true on creation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mailFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/user-post-mailfolders?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-post-mailfolders?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MailFolder> post(@javax.annotation.Nonnull final MailFolder body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<MailFolder> post(@jakarta.annotation.Nonnull final MailFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -155,7 +155,7 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
      * The user's mail folders. Read-only. Nullable.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -164,8 +164,8 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -181,22 +181,22 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new mail folder in the root folder of the user's mailbox. If you intend a new folder to be hidden, you must set the **isHidden** property to `true` on creation.
+     * Use this API to create a new mail folder in the root folder of the user's mailbox. If you intend a new folder to be hidden, you must set the isHidden property to true on creation.
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final MailFolder body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MailFolder body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new mail folder in the root folder of the user's mailbox. If you intend a new folder to be hidden, you must set the **isHidden** property to `true` on creation.
+     * Use this API to create a new mail folder in the root folder of the user's mailbox. If you intend a new folder to be hidden, you must set the isHidden property to true on creation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final MailFolder body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MailFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -220,48 +220,48 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
          * Include count of items
          */
         @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Boolean count;
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Filter items by property values
          */
         @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String filter;
         /**
          * Include Hidden Folders
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String includeHiddenFolders;
         /**
          * Order items by property values
          */
         @QueryParameter(name = "%24orderby")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] orderby;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
         /**
          * Skip the first n items
          */
         @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer skip;
         /**
          * Show only the first n items
          */
         @QueryParameter(name = "%24top")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer top;
     }
     /**
@@ -271,7 +271,7 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

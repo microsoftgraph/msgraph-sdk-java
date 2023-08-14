@@ -26,17 +26,17 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.policyRoot entity.
-     * @param tokenLifetimePolicyId Unique identifier of the item
+     * @param tokenLifetimePolicyId The unique identifier of tokenLifetimePolicy
      * @return a TokenLifetimePolicyItemRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public TokenLifetimePolicyItemRequestBuilder byTokenLifetimePolicyId(@javax.annotation.Nonnull final String tokenLifetimePolicyId) {
+    @jakarta.annotation.Nonnull
+    public TokenLifetimePolicyItemRequestBuilder byTokenLifetimePolicyId(@jakarta.annotation.Nonnull final String tokenLifetimePolicyId) {
         Objects.requireNonNull(tokenLifetimePolicyId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("tokenLifetimePolicy%2Did", tokenLifetimePolicyId);
@@ -48,8 +48,8 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public TokenLifetimePoliciesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public TokenLifetimePoliciesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/policies/tokenLifetimePolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
@@ -58,16 +58,16 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public TokenLifetimePoliciesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public TokenLifetimePoliciesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/policies/tokenLifetimePolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
      * Get a list of tokenLifetimePolicy objects.
      * @return a CompletableFuture of tokenLifetimePolicyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/tokenlifetimepolicy-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenlifetimepolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicyCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -85,10 +85,10 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
      * Get a list of tokenLifetimePolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tokenLifetimePolicyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/tokenlifetimepolicy-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenlifetimepolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TokenLifetimePolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -105,10 +105,10 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
      * Create a new tokenLifetimePolicy object.
      * @param body The request body
      * @return a CompletableFuture of tokenLifetimePolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/tokenlifetimepolicy-post-tokenlifetimepolicies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenlifetimepolicy-post-tokenlifetimepolicies?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> post(@javax.annotation.Nonnull final TokenLifetimePolicy body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> post(@jakarta.annotation.Nonnull final TokenLifetimePolicy body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -126,10 +126,10 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tokenLifetimePolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/tokenlifetimepolicy-post-tokenlifetimepolicies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenlifetimepolicy-post-tokenlifetimepolicies?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> post(@javax.annotation.Nonnull final TokenLifetimePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> post(@jakarta.annotation.Nonnull final TokenLifetimePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -147,7 +147,7 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
      * Get a list of tokenLifetimePolicy objects.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -156,8 +156,8 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -177,8 +177,8 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final TokenLifetimePolicy body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final TokenLifetimePolicy body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -187,8 +187,8 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final TokenLifetimePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final TokenLifetimePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -212,49 +212,49 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
          * Include count of items
          */
         @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Boolean count;
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Filter items by property values
          */
         @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String filter;
         /**
          * Order items by property values
          */
         @QueryParameter(name = "%24orderby")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] orderby;
         /**
          * Search items by search phrases
          */
         @QueryParameter(name = "%24search")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String search;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
         /**
          * Skip the first n items
          */
         @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer skip;
         /**
          * Show only the first n items
          */
         @QueryParameter(name = "%24top")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer top;
     }
     /**
@@ -264,7 +264,7 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

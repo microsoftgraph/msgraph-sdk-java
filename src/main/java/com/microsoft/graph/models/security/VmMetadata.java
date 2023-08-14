@@ -36,7 +36,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      * Instantiates a new vmMetadata and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VmMetadata() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a vmMetadata
      */
-    @javax.annotation.Nonnull
-    public static VmMetadata createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static VmMetadata createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new VmMetadata();
     }
@@ -54,7 +54,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      * Gets the cloudProvider property value. The cloudProvider property
      * @return a vmCloudProvider
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VmCloudProvider getCloudProvider() {
         return this.cloudProvider;
     }
@@ -70,7 +70,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("cloudProvider", (n) -> { this.setCloudProvider(n.getEnumValue(VmCloudProvider.class)); });
@@ -84,7 +84,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -92,7 +92,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      * Gets the resourceId property value. Unique identifier of the Azure resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceId() {
         return this.resourceId;
     }
@@ -100,7 +100,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      * Gets the subscriptionId property value. Unique identifier of the Azure subscription the customer tenant belongs to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
@@ -108,7 +108,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      * Gets the vmId property value. Unique identifier of the virtual machine instance.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVmId() {
         return this.vmId;
     }
@@ -117,8 +117,8 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("cloudProvider", this.getCloudProvider());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -132,8 +132,8 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the cloudProvider property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudProvider(@javax.annotation.Nullable final VmCloudProvider value) {
+    @jakarta.annotation.Nonnull
+    public void setCloudProvider(@jakarta.annotation.Nullable final VmCloudProvider value) {
         this.cloudProvider = value;
     }
     /**
@@ -150,8 +150,8 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -159,8 +159,8 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the resourceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.resourceId = value;
     }
     /**
@@ -168,8 +168,8 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the subscriptionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubscriptionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSubscriptionId(@jakarta.annotation.Nullable final String value) {
         this.subscriptionId = value;
     }
     /**
@@ -177,8 +177,8 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the vmId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVmId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVmId(@jakarta.annotation.Nullable final String value) {
         this.vmId = value;
     }
 }

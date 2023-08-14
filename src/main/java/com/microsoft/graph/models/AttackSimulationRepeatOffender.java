@@ -28,7 +28,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * Instantiates a new attackSimulationRepeatOffender and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttackSimulationRepeatOffender() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a attackSimulationRepeatOffender
      */
-    @javax.annotation.Nonnull
-    public static AttackSimulationRepeatOffender createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AttackSimulationRepeatOffender createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AttackSimulationRepeatOffender();
     }
@@ -46,7 +46,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * Gets the attackSimulationUser property value. The user in an attack simulation and training campaign.
      * @return a attackSimulationUser
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttackSimulationUser getAttackSimulationUser() {
         return this.attackSimulationUser;
     }
@@ -62,7 +62,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("attackSimulationUser", (n) -> { this.setAttackSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
@@ -74,7 +74,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -82,7 +82,7 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * Gets the repeatOffenceCount property value. Number of repeat offences of the user in attack simulation and training campaigns.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRepeatOffenceCount() {
         return this.repeatOffenceCount;
     }
@@ -91,8 +91,8 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("attackSimulationUser", this.getAttackSimulationUser());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -104,8 +104,8 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -113,8 +113,8 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * @param value Value to set for the attackSimulationUser property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttackSimulationUser(@javax.annotation.Nullable final AttackSimulationUser value) {
+    @jakarta.annotation.Nonnull
+    public void setAttackSimulationUser(@jakarta.annotation.Nullable final AttackSimulationUser value) {
         this.attackSimulationUser = value;
     }
     /**
@@ -122,8 +122,8 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -131,8 +131,8 @@ public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Par
      * @param value Value to set for the repeatOffenceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRepeatOffenceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setRepeatOffenceCount(@jakarta.annotation.Nullable final Integer value) {
         this.repeatOffenceCount = value;
     }
 }

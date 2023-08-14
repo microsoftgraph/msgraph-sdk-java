@@ -26,8 +26,8 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public ShiftItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public ShiftItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/shifts/{shift%2Did}{?%24select}", pathParameters);
     }
     /**
@@ -36,16 +36,16 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public ShiftItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public ShiftItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/shifts/{shift%2Did}{?%24select}", rawUrl);
     }
     /**
      * Delete a shift from the schedule.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/shift-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/shift-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -63,10 +63,10 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
      * Delete a shift from the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/shift-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/shift-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -82,9 +82,9 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a shift object by ID.
      * @return a CompletableFuture of shift
-     * @see <a href="https://docs.microsoft.com/graph/api/shift-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/shift-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Shift> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -102,10 +102,10 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a shift object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of shift
-     * @see <a href="https://docs.microsoft.com/graph/api/shift-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/shift-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Shift> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Shift> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -119,13 +119,13 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Replace an existing shift. If the specified shift doesn't exist, this method returns `404 Not found`. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
+     * Replace an existing shift. If the specified shift doesn't exist, this method returns 404 Not found. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @return a CompletableFuture of shift
-     * @see <a href="https://docs.microsoft.com/graph/api/shift-put?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/shift-put?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Shift> patch(@javax.annotation.Nonnull final Shift body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Shift> patch(@jakarta.annotation.Nonnull final Shift body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -139,14 +139,14 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Replace an existing shift. If the specified shift doesn't exist, this method returns `404 Not found`. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
+     * Replace an existing shift. If the specified shift doesn't exist, this method returns 404 Not found. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of shift
-     * @see <a href="https://docs.microsoft.com/graph/api/shift-put?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/shift-put?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Shift> patch(@javax.annotation.Nonnull final Shift body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Shift> patch(@jakarta.annotation.Nonnull final Shift body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -164,7 +164,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
      * Delete a shift from the schedule.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -173,8 +173,8 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -191,7 +191,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a shift object by ID.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -200,8 +200,8 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -217,22 +217,22 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Replace an existing shift. If the specified shift doesn't exist, this method returns `404 Not found`. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
+     * Replace an existing shift. If the specified shift doesn't exist, this method returns 404 Not found. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final Shift body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Shift body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Replace an existing shift. If the specified shift doesn't exist, this method returns `404 Not found`. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
+     * Replace an existing shift. If the specified shift doesn't exist, this method returns 404 Not found. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final Shift body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Shift body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -261,7 +261,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -271,7 +271,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

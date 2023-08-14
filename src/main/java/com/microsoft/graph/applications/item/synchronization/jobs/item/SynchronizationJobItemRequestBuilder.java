@@ -29,42 +29,42 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the pause method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public PauseRequestBuilder pause() {
         return new PauseRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the provisionOnDemand method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ProvisionOnDemandRequestBuilder provisionOnDemand() {
         return new ProvisionOnDemandRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the restart method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RestartRequestBuilder restart() {
         return new RestartRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the schema property of the microsoft.graph.synchronizationJob entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SchemaRequestBuilder schema() {
         return new SchemaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the start method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public StartRequestBuilder start() {
         return new StartRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the validateCredentials method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ValidateCredentialsRequestBuilder validateCredentials() {
         return new ValidateCredentialsRequestBuilder(pathParameters, requestAdapter);
     }
@@ -74,8 +74,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public SynchronizationJobItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public SynchronizationJobItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/synchronization/jobs/{synchronizationJob%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -84,16 +84,16 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public SynchronizationJobItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public SynchronizationJobItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/synchronization/jobs/{synchronizationJob%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronizationjob-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -111,10 +111,10 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronizationjob-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -130,9 +130,9 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the existing synchronization job and its properties.
      * @return a CompletableFuture of synchronizationJob
-     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronizationjob-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationJob> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -150,10 +150,10 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the existing synchronization job and its properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of synchronizationJob
-     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronizationjob-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SynchronizationJob> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<SynchronizationJob> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -171,8 +171,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a CompletableFuture of synchronizationJob
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SynchronizationJob> patch(@javax.annotation.Nonnull final SynchronizationJob body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<SynchronizationJob> patch(@jakarta.annotation.Nonnull final SynchronizationJob body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -191,8 +191,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of synchronizationJob
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SynchronizationJob> patch(@javax.annotation.Nonnull final SynchronizationJob body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<SynchronizationJob> patch(@jakarta.annotation.Nonnull final SynchronizationJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -210,7 +210,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -219,8 +219,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -237,7 +237,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the existing synchronization job and its properties.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -246,8 +246,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -267,8 +267,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final SynchronizationJob body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SynchronizationJob body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -277,8 +277,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final SynchronizationJob body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SynchronizationJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -307,13 +307,13 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -323,7 +323,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

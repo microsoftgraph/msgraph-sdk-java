@@ -24,8 +24,8 @@ public class LogTeleconferenceDeviceQualityRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public LogTeleconferenceDeviceQualityRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public LogTeleconferenceDeviceQualityRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/communications/calls/logTeleconferenceDeviceQuality", pathParameters);
     }
     /**
@@ -34,18 +34,18 @@ public class LogTeleconferenceDeviceQualityRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public LogTeleconferenceDeviceQualityRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public LogTeleconferenceDeviceQualityRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/communications/calls/logTeleconferenceDeviceQuality", rawUrl);
     }
     /**
      * Log video teleconferencing device quality data. The Cloud Video Interop (CVI) bot represents video teleconferencing (VTC) devices and acts as a back-to-back agent for a VTC device in a conference call. Because a CVI bot is in the middle of the VTC and Microsoft Teams infrastructure as a VTC proxy, it has two media legs. One media leg is between the CVI bot and Teams infrastructure, such as Teams conference server or a Teams client. The other media leg is between the CVI bot and the VTC device.  The third-party partners own the VTC media leg and the Teams infrastructure cannot access the quality data of the third-party call leg.  This method is only for the CVI partners to provide their media quality data.
      * @param body The request body
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/call-logteleconferencedevicequality?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/call-logteleconferencedevicequality?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final LogTeleconferenceDeviceQualityPostRequestBody body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> post(@jakarta.annotation.Nonnull final LogTeleconferenceDeviceQualityPostRequestBody body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -63,10 +63,10 @@ public class LogTeleconferenceDeviceQualityRequestBuilder extends BaseRequestBui
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/call-logteleconferencedevicequality?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/call-logteleconferencedevicequality?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final LogTeleconferenceDeviceQualityPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> post(@jakarta.annotation.Nonnull final LogTeleconferenceDeviceQualityPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -85,8 +85,8 @@ public class LogTeleconferenceDeviceQualityRequestBuilder extends BaseRequestBui
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final LogTeleconferenceDeviceQualityPostRequestBody body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final LogTeleconferenceDeviceQualityPostRequestBody body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -95,8 +95,8 @@ public class LogTeleconferenceDeviceQualityRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final LogTeleconferenceDeviceQualityPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final LogTeleconferenceDeviceQualityPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;

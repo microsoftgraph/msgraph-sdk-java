@@ -17,10 +17,10 @@ public enum WindowsStartMenuModeType implements ValuedEnum {
     WindowsStartMenuModeType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsStartMenuModeType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsStartMenuModeType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "userDefined": return UserDefined;

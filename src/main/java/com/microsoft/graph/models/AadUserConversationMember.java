@@ -27,7 +27,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
      * Instantiates a new aadUserConversationMember and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AadUserConversationMember() {
         super();
         this.setOdataType("#microsoft.graph.aadUserConversationMember");
@@ -37,8 +37,8 @@ public class AadUserConversationMember extends ConversationMember implements Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a aadUserConversationMember
      */
-    @javax.annotation.Nonnull
-    public static AadUserConversationMember createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AadUserConversationMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AadUserConversationMember();
     }
@@ -46,7 +46,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
      * Gets the email property value. The email address of the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmail() {
         return this.email;
     }
@@ -54,7 +54,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
@@ -67,7 +67,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
      * Gets the tenantId property value. TenantId which the Azure AD user belongs to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -75,7 +75,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
      * Gets the user property value. The user property
      * @return a user
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public User getUser() {
         return this.user;
     }
@@ -83,7 +83,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
      * Gets the userId property value. The guid of the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -92,8 +92,8 @@ public class AadUserConversationMember extends ConversationMember implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("email", this.getEmail());
@@ -106,8 +106,8 @@ public class AadUserConversationMember extends ConversationMember implements Par
      * @param value Value to set for the email property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
@@ -115,8 +115,8 @@ public class AadUserConversationMember extends ConversationMember implements Par
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
@@ -124,8 +124,8 @@ public class AadUserConversationMember extends ConversationMember implements Par
      * @param value Value to set for the user property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUser(@javax.annotation.Nullable final User value) {
+    @jakarta.annotation.Nonnull
+    public void setUser(@jakarta.annotation.Nullable final User value) {
         this.user = value;
     }
     /**
@@ -133,8 +133,8 @@ public class AadUserConversationMember extends ConversationMember implements Par
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
 }

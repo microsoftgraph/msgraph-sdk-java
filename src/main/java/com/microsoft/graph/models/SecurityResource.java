@@ -28,7 +28,7 @@ public class SecurityResource implements AdditionalDataHolder, Parsable {
      * Instantiates a new securityResource and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SecurityResource() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class SecurityResource implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a securityResource
      */
-    @javax.annotation.Nonnull
-    public static SecurityResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SecurityResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SecurityResource();
     }
@@ -46,7 +46,7 @@ public class SecurityResource implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class SecurityResource implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -66,7 +66,7 @@ public class SecurityResource implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -74,7 +74,7 @@ public class SecurityResource implements AdditionalDataHolder, Parsable {
      * Gets the resource property value. Name of the resource that is related to current alert. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResource() {
         return this.resource;
     }
@@ -82,7 +82,7 @@ public class SecurityResource implements AdditionalDataHolder, Parsable {
      * Gets the resourceType property value. Represents type of security resources related to an alert. Possible values are: attacked, related.
      * @return a securityResourceType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SecurityResourceType getResourceType() {
         return this.resourceType;
     }
@@ -91,8 +91,8 @@ public class SecurityResource implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("resource", this.getResource());
@@ -104,8 +104,8 @@ public class SecurityResource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -113,8 +113,8 @@ public class SecurityResource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -122,8 +122,8 @@ public class SecurityResource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResource(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResource(@jakarta.annotation.Nullable final String value) {
         this.resource = value;
     }
     /**
@@ -131,8 +131,8 @@ public class SecurityResource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the resourceType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceType(@javax.annotation.Nullable final SecurityResourceType value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceType(@jakarta.annotation.Nullable final SecurityResourceType value) {
         this.resourceType = value;
     }
 }

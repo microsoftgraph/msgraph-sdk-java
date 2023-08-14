@@ -25,8 +25,8 @@ public class MicrosoftGraphSecurityRunHuntingQueryRequestBuilder extends BaseReq
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public MicrosoftGraphSecurityRunHuntingQueryRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public MicrosoftGraphSecurityRunHuntingQueryRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/security/microsoft.graph.security.runHuntingQuery", pathParameters);
     }
     /**
@@ -35,8 +35,8 @@ public class MicrosoftGraphSecurityRunHuntingQueryRequestBuilder extends BaseReq
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public MicrosoftGraphSecurityRunHuntingQueryRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public MicrosoftGraphSecurityRunHuntingQueryRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/security/microsoft.graph.security.runHuntingQuery", rawUrl);
     }
     /**
@@ -44,8 +44,8 @@ public class MicrosoftGraphSecurityRunHuntingQueryRequestBuilder extends BaseReq
      * @param body The request body
      * @return a CompletableFuture of huntingQueryResults
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HuntingQueryResults> post(@javax.annotation.Nonnull final RunHuntingQueryPostRequestBody body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<HuntingQueryResults> post(@jakarta.annotation.Nonnull final RunHuntingQueryPostRequestBody body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -64,8 +64,8 @@ public class MicrosoftGraphSecurityRunHuntingQueryRequestBuilder extends BaseReq
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of huntingQueryResults
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HuntingQueryResults> post(@javax.annotation.Nonnull final RunHuntingQueryPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<HuntingQueryResults> post(@jakarta.annotation.Nonnull final RunHuntingQueryPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -84,8 +84,8 @@ public class MicrosoftGraphSecurityRunHuntingQueryRequestBuilder extends BaseReq
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final RunHuntingQueryPostRequestBody body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RunHuntingQueryPostRequestBody body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -94,8 +94,8 @@ public class MicrosoftGraphSecurityRunHuntingQueryRequestBuilder extends BaseReq
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final RunHuntingQueryPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RunHuntingQueryPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;

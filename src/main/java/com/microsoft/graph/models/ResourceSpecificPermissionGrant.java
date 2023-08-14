@@ -31,7 +31,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * Instantiates a new resourceSpecificPermissionGrant and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResourceSpecificPermissionGrant() {
         super();
         this.setOdataType("#microsoft.graph.resourceSpecificPermissionGrant");
@@ -41,8 +41,8 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a resourceSpecificPermissionGrant
      */
-    @javax.annotation.Nonnull
-    public static ResourceSpecificPermissionGrant createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ResourceSpecificPermissionGrant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ResourceSpecificPermissionGrant();
     }
@@ -50,7 +50,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * Gets the clientAppId property value. ID of the service principal of the Azure AD app that has been granted access. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClientAppId() {
         return this.clientAppId;
     }
@@ -58,7 +58,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * Gets the clientId property value. ID of the Azure AD app that has been granted access. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClientId() {
         return this.clientId;
     }
@@ -66,7 +66,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("clientAppId", (n) -> { this.setClientAppId(n.getStringValue()); });
@@ -80,7 +80,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * Gets the permission property value. The name of the resource-specific permission. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPermission() {
         return this.permission;
     }
@@ -88,7 +88,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * Gets the permissionType property value. The type of permission. Possible values are: Application, Delegated. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPermissionType() {
         return this.permissionType;
     }
@@ -96,7 +96,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * Gets the resourceAppId property value. ID of the Azure AD app that is hosting the resource. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceAppId() {
         return this.resourceAppId;
     }
@@ -105,8 +105,8 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("clientAppId", this.getClientAppId());
@@ -120,8 +120,8 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * @param value Value to set for the clientAppId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientAppId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setClientAppId(@jakarta.annotation.Nullable final String value) {
         this.clientAppId = value;
     }
     /**
@@ -129,8 +129,8 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * @param value Value to set for the clientId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setClientId(@jakarta.annotation.Nullable final String value) {
         this.clientId = value;
     }
     /**
@@ -138,8 +138,8 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * @param value Value to set for the permission property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPermission(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPermission(@jakarta.annotation.Nullable final String value) {
         this.permission = value;
     }
     /**
@@ -147,8 +147,8 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * @param value Value to set for the permissionType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPermissionType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPermissionType(@jakarta.annotation.Nullable final String value) {
         this.permissionType = value;
     }
     /**
@@ -156,8 +156,8 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * @param value Value to set for the resourceAppId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceAppId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceAppId(@jakarta.annotation.Nullable final String value) {
         this.resourceAppId = value;
     }
 }

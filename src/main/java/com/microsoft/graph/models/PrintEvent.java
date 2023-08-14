@@ -10,10 +10,10 @@ public enum PrintEvent implements ValuedEnum {
     PrintEvent(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static PrintEvent forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static PrintEvent forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "jobStarted": return JobStarted;

@@ -44,7 +44,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * Instantiates a new getCachedReportPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GetCachedReportPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +53,8 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a getCachedReportPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static GetCachedReportPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GetCachedReportPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GetCachedReportPostRequestBody();
     }
@@ -62,7 +62,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +70,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("groupBy", (n) -> { this.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -86,7 +86,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * Gets the groupBy property value. The groupBy property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getGroupBy() {
         return this.groupBy;
     }
@@ -94,7 +94,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * Gets the id property value. The id property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -102,7 +102,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * Gets the orderBy property value. The orderBy property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getOrderBy() {
         return this.orderBy;
     }
@@ -110,7 +110,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * Gets the search property value. The search property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSearch() {
         return this.search;
     }
@@ -118,7 +118,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * Gets the select property value. The select property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {
         return this.select;
     }
@@ -126,7 +126,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * Gets the skip property value. The skip property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSkip() {
         return this.skip;
     }
@@ -134,7 +134,7 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * Gets the top property value. The top property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTop() {
         return this.top;
     }
@@ -143,8 +143,8 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("groupBy", this.getGroupBy());
         writer.writeStringValue("id", this.getId());
@@ -160,8 +160,8 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -169,8 +169,8 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the groupBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupBy(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupBy(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.groupBy = value;
     }
     /**
@@ -178,8 +178,8 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
@@ -187,8 +187,8 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the orderBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrderBy(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setOrderBy(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.orderBy = value;
     }
     /**
@@ -196,8 +196,8 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the search property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSearch(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSearch(@jakarta.annotation.Nullable final String value) {
         this.search = value;
     }
     /**
@@ -205,8 +205,8 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the select property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSelect(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSelect(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.select = value;
     }
     /**
@@ -214,8 +214,8 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the skip property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSkip(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSkip(@jakarta.annotation.Nullable final Integer value) {
         this.skip = value;
     }
     /**
@@ -223,8 +223,8 @@ public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the top property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTop(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTop(@jakarta.annotation.Nullable final Integer value) {
         this.top = value;
     }
 }

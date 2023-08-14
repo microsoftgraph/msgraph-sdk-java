@@ -30,7 +30,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * Instantiates a new managedAndroidLobApp and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedAndroidLobApp() {
         super();
         this.setOdataType("#microsoft.graph.managedAndroidLobApp");
@@ -40,8 +40,8 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedAndroidLobApp
      */
-    @javax.annotation.Nonnull
-    public static ManagedAndroidLobApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedAndroidLobApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagedAndroidLobApp();
     }
@@ -49,7 +49,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { this.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
@@ -62,7 +62,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      * @return a androidMinimumOperatingSystem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
         return this.minimumSupportedOperatingSystem;
     }
@@ -70,7 +70,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * Gets the packageId property value. The package identifier.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPackageId() {
         return this.packageId;
     }
@@ -78,7 +78,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * Gets the versionCode property value. The version code of managed Android Line of Business (LoB) app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersionCode() {
         return this.versionCode;
     }
@@ -86,7 +86,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * Gets the versionName property value. The version name of managed Android Line of Business (LoB) app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersionName() {
         return this.versionName;
     }
@@ -95,8 +95,8 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("minimumSupportedOperatingSystem", this.getMinimumSupportedOperatingSystem());
@@ -109,8 +109,8 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final AndroidMinimumOperatingSystem value) {
+    @jakarta.annotation.Nonnull
+    public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final AndroidMinimumOperatingSystem value) {
         this.minimumSupportedOperatingSystem = value;
     }
     /**
@@ -118,8 +118,8 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * @param value Value to set for the packageId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPackageId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPackageId(@jakarta.annotation.Nullable final String value) {
         this.packageId = value;
     }
     /**
@@ -127,8 +127,8 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * @param value Value to set for the versionCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersionCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVersionCode(@jakarta.annotation.Nullable final String value) {
         this.versionCode = value;
     }
     /**
@@ -136,8 +136,8 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * @param value Value to set for the versionName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersionName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVersionName(@jakarta.annotation.Nullable final String value) {
         this.versionName = value;
     }
 }

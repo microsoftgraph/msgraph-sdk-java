@@ -19,7 +19,7 @@ public class UserTeamwork extends Entity implements Parsable {
      * Instantiates a new userTeamwork and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserTeamwork() {
         super();
     }
@@ -28,8 +28,8 @@ public class UserTeamwork extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userTeamwork
      */
-    @javax.annotation.Nonnull
-    public static UserTeamwork createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserTeamwork createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserTeamwork();
     }
@@ -37,7 +37,7 @@ public class UserTeamwork extends Entity implements Parsable {
      * Gets the associatedTeams property value. The list of associatedTeamInfo objects that a user is associated with.
      * @return a associatedTeamInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AssociatedTeamInfo> getAssociatedTeams() {
         return this.associatedTeams;
     }
@@ -45,7 +45,7 @@ public class UserTeamwork extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("associatedTeams", (n) -> { this.setAssociatedTeams(n.getCollectionOfObjectValues(AssociatedTeamInfo::createFromDiscriminatorValue)); });
@@ -56,7 +56,7 @@ public class UserTeamwork extends Entity implements Parsable {
      * Gets the installedApps property value. The apps installed in the personal scope of this user.
      * @return a userScopeTeamsAppInstallation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UserScopeTeamsAppInstallation> getInstalledApps() {
         return this.installedApps;
     }
@@ -65,8 +65,8 @@ public class UserTeamwork extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("associatedTeams", this.getAssociatedTeams());
@@ -77,8 +77,8 @@ public class UserTeamwork extends Entity implements Parsable {
      * @param value Value to set for the associatedTeams property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssociatedTeams(@javax.annotation.Nullable final java.util.List<AssociatedTeamInfo> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssociatedTeams(@jakarta.annotation.Nullable final java.util.List<AssociatedTeamInfo> value) {
         this.associatedTeams = value;
     }
     /**
@@ -86,8 +86,8 @@ public class UserTeamwork extends Entity implements Parsable {
      * @param value Value to set for the installedApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstalledApps(@javax.annotation.Nullable final java.util.List<UserScopeTeamsAppInstallation> value) {
+    @jakarta.annotation.Nonnull
+    public void setInstalledApps(@jakarta.annotation.Nullable final java.util.List<UserScopeTeamsAppInstallation> value) {
         this.installedApps = value;
     }
 }

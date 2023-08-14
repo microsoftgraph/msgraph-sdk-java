@@ -51,7 +51,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * Instantiates a new deviceManagementPartner and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementPartner() {
         super();
     }
@@ -60,8 +60,8 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementPartner
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementPartner createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementPartner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementPartner();
     }
@@ -69,7 +69,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * Gets the displayName property value. Partner display name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -77,7 +77,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -95,7 +95,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * Gets the groupsRequiringPartnerEnrollment property value. User groups that specifies whether enrollment is through partner.
      * @return a deviceManagementPartnerAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementPartnerAssignment> getGroupsRequiringPartnerEnrollment() {
         return this.groupsRequiringPartnerEnrollment;
     }
@@ -103,7 +103,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * Gets the isConfigured property value. Whether device management partner is configured or not
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsConfigured() {
         return this.isConfigured;
     }
@@ -111,7 +111,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * Gets the lastHeartbeatDateTime property value. Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastHeartbeatDateTime() {
         return this.lastHeartbeatDateTime;
     }
@@ -119,7 +119,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * Gets the partnerAppType property value. Partner App Type.
      * @return a deviceManagementPartnerAppType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementPartnerAppType getPartnerAppType() {
         return this.partnerAppType;
     }
@@ -127,7 +127,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * Gets the partnerState property value. Partner state of this tenant.
      * @return a deviceManagementPartnerTenantState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementPartnerTenantState getPartnerState() {
         return this.partnerState;
     }
@@ -135,7 +135,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * Gets the singleTenantAppId property value. Partner Single tenant App id
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSingleTenantAppId() {
         return this.singleTenantAppId;
     }
@@ -143,7 +143,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * Gets the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime property value. DateTime in UTC when PartnerDevices will be marked as NonCompliant
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime() {
         return this.whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime;
     }
@@ -151,7 +151,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * Gets the whenPartnerDevicesWillBeRemovedDateTime property value. DateTime in UTC when PartnerDevices will be removed
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getWhenPartnerDevicesWillBeRemovedDateTime() {
         return this.whenPartnerDevicesWillBeRemovedDateTime;
     }
@@ -160,8 +160,8 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -179,8 +179,8 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -188,8 +188,8 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the groupsRequiringPartnerEnrollment property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupsRequiringPartnerEnrollment(@javax.annotation.Nullable final java.util.List<DeviceManagementPartnerAssignment> value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupsRequiringPartnerEnrollment(@jakarta.annotation.Nullable final java.util.List<DeviceManagementPartnerAssignment> value) {
         this.groupsRequiringPartnerEnrollment = value;
     }
     /**
@@ -197,8 +197,8 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the isConfigured property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsConfigured(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsConfigured(@jakarta.annotation.Nullable final Boolean value) {
         this.isConfigured = value;
     }
     /**
@@ -206,8 +206,8 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the lastHeartbeatDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastHeartbeatDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastHeartbeatDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastHeartbeatDateTime = value;
     }
     /**
@@ -215,8 +215,8 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the partnerAppType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPartnerAppType(@javax.annotation.Nullable final DeviceManagementPartnerAppType value) {
+    @jakarta.annotation.Nonnull
+    public void setPartnerAppType(@jakarta.annotation.Nullable final DeviceManagementPartnerAppType value) {
         this.partnerAppType = value;
     }
     /**
@@ -224,8 +224,8 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the partnerState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPartnerState(@javax.annotation.Nullable final DeviceManagementPartnerTenantState value) {
+    @jakarta.annotation.Nonnull
+    public void setPartnerState(@jakarta.annotation.Nullable final DeviceManagementPartnerTenantState value) {
         this.partnerState = value;
     }
     /**
@@ -233,8 +233,8 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the singleTenantAppId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSingleTenantAppId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSingleTenantAppId(@jakarta.annotation.Nullable final String value) {
         this.singleTenantAppId = value;
     }
     /**
@@ -242,8 +242,8 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime = value;
     }
     /**
@@ -251,8 +251,8 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the whenPartnerDevicesWillBeRemovedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWhenPartnerDevicesWillBeRemovedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setWhenPartnerDevicesWillBeRemovedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.whenPartnerDevicesWillBeRemovedDateTime = value;
     }
 }

@@ -28,28 +28,28 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the calendarPermissions property of the microsoft.graph.calendar entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CalendarPermissionsRequestBuilder calendarPermissions() {
         return new CalendarPermissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the calendarView property of the microsoft.graph.calendar entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CalendarViewRequestBuilder calendarView() {
         return new CalendarViewRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the events property of the microsoft.graph.calendar entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public EventsRequestBuilder events() {
         return new EventsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getSchedule method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public GetScheduleRequestBuilder getSchedule() {
         return new GetScheduleRequestBuilder(pathParameters, requestAdapter);
     }
@@ -58,8 +58,8 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
      * @param User Usage: User='{User}'
      * @return a allowedCalendarSharingRolesWithUserRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public AllowedCalendarSharingRolesWithUserRequestBuilder allowedCalendarSharingRolesWithUser(@javax.annotation.Nonnull final String user) {
+    @jakarta.annotation.Nonnull
+    public AllowedCalendarSharingRolesWithUserRequestBuilder allowedCalendarSharingRolesWithUser(@jakarta.annotation.Nonnull final String user) {
         Objects.requireNonNull(user);
         return new AllowedCalendarSharingRolesWithUserRequestBuilder(pathParameters, requestAdapter, user);
     }
@@ -69,8 +69,8 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public CalendarItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public CalendarItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendars/{calendar%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -79,15 +79,15 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public CalendarItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public CalendarItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendars/{calendar%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property calendars for users
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -106,8 +106,8 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -124,7 +124,7 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
      * The user's calendars. Read-only. Nullable.
      * @return a CompletableFuture of calendar
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Calendar> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -143,8 +143,8 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of calendar
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Calendar> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Calendar> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -162,8 +162,8 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a CompletableFuture of calendar
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Calendar> patch(@javax.annotation.Nonnull final Calendar body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Calendar> patch(@jakarta.annotation.Nonnull final Calendar body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -182,8 +182,8 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of calendar
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Calendar> patch(@javax.annotation.Nonnull final Calendar body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Calendar> patch(@jakarta.annotation.Nonnull final Calendar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -201,7 +201,7 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property calendars for users
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -210,8 +210,8 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -228,7 +228,7 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
      * The user's calendars. Read-only. Nullable.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -237,8 +237,8 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -258,8 +258,8 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final Calendar body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Calendar body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -268,8 +268,8 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final Calendar body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Calendar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -298,13 +298,13 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -314,7 +314,7 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

@@ -120,7 +120,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Instantiates a new organization and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Organization() {
         super();
         this.setOdataType("#microsoft.graph.organization");
@@ -130,8 +130,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a organization
      */
-    @javax.annotation.Nonnull
-    public static Organization createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Organization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Organization();
     }
@@ -139,7 +139,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the assignedPlans property value. The collection of service plans associated with the tenant. Not nullable.
      * @return a assignedPlan
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AssignedPlan> getAssignedPlans() {
         return this.assignedPlans;
     }
@@ -147,7 +147,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the branding property value. Branding for the organization. Nullable.
      * @return a organizationalBranding
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OrganizationalBranding getBranding() {
         return this.branding;
     }
@@ -155,7 +155,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the businessPhones property value. Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getBusinessPhones() {
         return this.businessPhones;
     }
@@ -163,7 +163,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the certificateBasedAuthConfiguration property value. Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      * @return a certificateBasedAuthConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CertificateBasedAuthConfiguration> getCertificateBasedAuthConfiguration() {
         return this.certificateBasedAuthConfiguration;
     }
@@ -171,7 +171,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the city property value. City name of the address for the organization.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCity() {
         return this.city;
     }
@@ -179,7 +179,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the country property value. Country/region name of the address for the organization.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCountry() {
         return this.country;
     }
@@ -187,7 +187,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the countryLetterCode property value. Country or region abbreviation for the organization in ISO 3166-2 format.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCountryLetterCode() {
         return this.countryLetterCode;
     }
@@ -195,7 +195,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the createdDateTime property value. Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -203,7 +203,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the defaultUsageLocation property value. Two-letter ISO 3166 country code indicating the default service usage location of an organization.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDefaultUsageLocation() {
         return this.defaultUsageLocation;
     }
@@ -211,7 +211,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the displayName property value. The display name for the tenant.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -219,7 +219,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the extensions property value. The collection of open extensions defined for the organization. Read-only. Nullable.
      * @return a extension
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
         return this.extensions;
     }
@@ -227,7 +227,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignedPlans", (n) -> { this.setAssignedPlans(n.getCollectionOfObjectValues(AssignedPlan::createFromDiscriminatorValue)); });
@@ -263,7 +263,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the marketingNotificationEmails property value. Not nullable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getMarketingNotificationEmails() {
         return this.marketingNotificationEmails;
     }
@@ -271,7 +271,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the mobileDeviceManagementAuthority property value. Mobile device management authority.
      * @return a mdmAuthority
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MdmAuthority getMobileDeviceManagementAuthority() {
         return this.mobileDeviceManagementAuthority;
     }
@@ -279,7 +279,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the onPremisesLastSyncDateTime property value. The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getOnPremisesLastSyncDateTime() {
         return this.onPremisesLastSyncDateTime;
     }
@@ -287,7 +287,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getOnPremisesSyncEnabled() {
         return this.onPremisesSyncEnabled;
     }
@@ -295,7 +295,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the partnerTenantType property value. The type of partnership this tenant has with Microsoft. The possible values are: microsoftSupport, syndicatePartner, breadthPartner, breadthPartnerDelegatedAdmin, resellerPartnerDelegatedAdmin, valueAddedResellerPartnerDelegatedAdmin, unknownFutureValue. Nullable. For more information about the possible types, see partnerTenantType values.
      * @return a partnerTenantType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PartnerTenantType getPartnerTenantType() {
         return this.partnerTenantType;
     }
@@ -303,7 +303,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the postalCode property value. Postal code of the address for the organization.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPostalCode() {
         return this.postalCode;
     }
@@ -311,7 +311,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the preferredLanguage property value. The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPreferredLanguage() {
         return this.preferredLanguage;
     }
@@ -319,7 +319,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the privacyProfile property value. The privacy profile of an organization.
      * @return a privacyProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrivacyProfile getPrivacyProfile() {
         return this.privacyProfile;
     }
@@ -327,7 +327,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the provisionedPlans property value. Not nullable.
      * @return a provisionedPlan
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ProvisionedPlan> getProvisionedPlans() {
         return this.provisionedPlans;
     }
@@ -335,7 +335,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the securityComplianceNotificationMails property value. Not nullable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSecurityComplianceNotificationMails() {
         return this.securityComplianceNotificationMails;
     }
@@ -343,7 +343,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the securityComplianceNotificationPhones property value. Not nullable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSecurityComplianceNotificationPhones() {
         return this.securityComplianceNotificationPhones;
     }
@@ -351,7 +351,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the state property value. State name of the address for the organization.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getState() {
         return this.state;
     }
@@ -359,7 +359,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the street property value. Street name of the address for organization.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStreet() {
         return this.street;
     }
@@ -367,7 +367,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the technicalNotificationMails property value. Not nullable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTechnicalNotificationMails() {
         return this.technicalNotificationMails;
     }
@@ -375,7 +375,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the tenantType property value. Not nullable. The tenant type option that was selected when the tenant was created. The possible values are:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C A customer identity access management (CIAM) service that serves business-to-consumer (B2C) scenarios.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantType() {
         return this.tenantType;
     }
@@ -383,7 +383,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Gets the verifiedDomains property value. The collection of domains associated with this tenant. Not nullable.
      * @return a verifiedDomain
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<VerifiedDomain> getVerifiedDomains() {
         return this.verifiedDomains;
     }
@@ -392,8 +392,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignedPlans", this.getAssignedPlans());
@@ -429,8 +429,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the assignedPlans property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignedPlans(@javax.annotation.Nullable final java.util.List<AssignedPlan> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignedPlans(@jakarta.annotation.Nullable final java.util.List<AssignedPlan> value) {
         this.assignedPlans = value;
     }
     /**
@@ -438,8 +438,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the branding property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBranding(@javax.annotation.Nullable final OrganizationalBranding value) {
+    @jakarta.annotation.Nonnull
+    public void setBranding(@jakarta.annotation.Nullable final OrganizationalBranding value) {
         this.branding = value;
     }
     /**
@@ -447,8 +447,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the businessPhones property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBusinessPhones(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setBusinessPhones(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.businessPhones = value;
     }
     /**
@@ -456,8 +456,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the certificateBasedAuthConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateBasedAuthConfiguration(@javax.annotation.Nullable final java.util.List<CertificateBasedAuthConfiguration> value) {
+    @jakarta.annotation.Nonnull
+    public void setCertificateBasedAuthConfiguration(@jakarta.annotation.Nullable final java.util.List<CertificateBasedAuthConfiguration> value) {
         this.certificateBasedAuthConfiguration = value;
     }
     /**
@@ -465,8 +465,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the city property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCity(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCity(@jakarta.annotation.Nullable final String value) {
         this.city = value;
     }
     /**
@@ -474,8 +474,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the country property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountry(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCountry(@jakarta.annotation.Nullable final String value) {
         this.country = value;
     }
     /**
@@ -483,8 +483,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the countryLetterCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountryLetterCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCountryLetterCode(@jakarta.annotation.Nullable final String value) {
         this.countryLetterCode = value;
     }
     /**
@@ -492,8 +492,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -501,8 +501,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the defaultUsageLocation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultUsageLocation(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultUsageLocation(@jakarta.annotation.Nullable final String value) {
         this.defaultUsageLocation = value;
     }
     /**
@@ -510,8 +510,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -519,8 +519,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
+    @jakarta.annotation.Nonnull
+    public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
         this.extensions = value;
     }
     /**
@@ -528,8 +528,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the marketingNotificationEmails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMarketingNotificationEmails(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setMarketingNotificationEmails(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.marketingNotificationEmails = value;
     }
     /**
@@ -537,8 +537,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the mobileDeviceManagementAuthority property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMobileDeviceManagementAuthority(@javax.annotation.Nullable final MdmAuthority value) {
+    @jakarta.annotation.Nonnull
+    public void setMobileDeviceManagementAuthority(@jakarta.annotation.Nullable final MdmAuthority value) {
         this.mobileDeviceManagementAuthority = value;
     }
     /**
@@ -546,8 +546,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesLastSyncDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnPremisesLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setOnPremisesLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.onPremisesLastSyncDateTime = value;
     }
     /**
@@ -555,8 +555,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesSyncEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnPremisesSyncEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setOnPremisesSyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.onPremisesSyncEnabled = value;
     }
     /**
@@ -564,8 +564,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the partnerTenantType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPartnerTenantType(@javax.annotation.Nullable final PartnerTenantType value) {
+    @jakarta.annotation.Nonnull
+    public void setPartnerTenantType(@jakarta.annotation.Nullable final PartnerTenantType value) {
         this.partnerTenantType = value;
     }
     /**
@@ -573,8 +573,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the postalCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPostalCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPostalCode(@jakarta.annotation.Nullable final String value) {
         this.postalCode = value;
     }
     /**
@@ -582,8 +582,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the preferredLanguage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreferredLanguage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPreferredLanguage(@jakarta.annotation.Nullable final String value) {
         this.preferredLanguage = value;
     }
     /**
@@ -591,8 +591,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the privacyProfile property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrivacyProfile(@javax.annotation.Nullable final PrivacyProfile value) {
+    @jakarta.annotation.Nonnull
+    public void setPrivacyProfile(@jakarta.annotation.Nullable final PrivacyProfile value) {
         this.privacyProfile = value;
     }
     /**
@@ -600,8 +600,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the provisionedPlans property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProvisionedPlans(@javax.annotation.Nullable final java.util.List<ProvisionedPlan> value) {
+    @jakarta.annotation.Nonnull
+    public void setProvisionedPlans(@jakarta.annotation.Nullable final java.util.List<ProvisionedPlan> value) {
         this.provisionedPlans = value;
     }
     /**
@@ -609,8 +609,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the securityComplianceNotificationMails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityComplianceNotificationMails(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSecurityComplianceNotificationMails(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.securityComplianceNotificationMails = value;
     }
     /**
@@ -618,8 +618,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the securityComplianceNotificationPhones property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityComplianceNotificationPhones(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSecurityComplianceNotificationPhones(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.securityComplianceNotificationPhones = value;
     }
     /**
@@ -627,8 +627,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final String value) {
         this.state = value;
     }
     /**
@@ -636,8 +636,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the street property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStreet(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStreet(@jakarta.annotation.Nullable final String value) {
         this.street = value;
     }
     /**
@@ -645,8 +645,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the technicalNotificationMails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTechnicalNotificationMails(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setTechnicalNotificationMails(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.technicalNotificationMails = value;
     }
     /**
@@ -654,8 +654,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the tenantType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantType(@jakarta.annotation.Nullable final String value) {
         this.tenantType = value;
     }
     /**
@@ -663,8 +663,8 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the verifiedDomains property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVerifiedDomains(@javax.annotation.Nullable final java.util.List<VerifiedDomain> value) {
+    @jakarta.annotation.Nonnull
+    public void setVerifiedDomains(@jakarta.annotation.Nullable final java.util.List<VerifiedDomain> value) {
         this.verifiedDomains = value;
     }
 }

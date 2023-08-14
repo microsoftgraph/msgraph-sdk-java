@@ -40,7 +40,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * Instantiates a new mediaStream and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaStream() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +49,8 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a mediaStream
      */
-    @javax.annotation.Nonnull
-    public static MediaStream createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MediaStream createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MediaStream();
     }
@@ -58,7 +58,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +66,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * Gets the direction property value. The direction property
      * @return a mediaDirection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaDirection getDirection() {
         return this.direction;
     }
@@ -74,7 +74,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("direction", (n) -> { this.setDirection(n.getEnumValue(MediaDirection.class)); });
@@ -89,7 +89,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * Gets the label property value. The media stream label.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLabel() {
         return this.label;
     }
@@ -97,7 +97,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * Gets the mediaType property value. The mediaType property
      * @return a modality
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Modality getMediaType() {
         return this.mediaType;
     }
@@ -105,7 +105,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -113,7 +113,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * Gets the serverMuted property value. If the media is muted by the server.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getServerMuted() {
         return this.serverMuted;
     }
@@ -121,7 +121,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * Gets the sourceId property value. The source ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSourceId() {
         return this.sourceId;
     }
@@ -130,8 +130,8 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("direction", this.getDirection());
         writer.writeStringValue("label", this.getLabel());
@@ -146,8 +146,8 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -155,8 +155,8 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the direction property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDirection(@javax.annotation.Nullable final MediaDirection value) {
+    @jakarta.annotation.Nonnull
+    public void setDirection(@jakarta.annotation.Nullable final MediaDirection value) {
         this.direction = value;
     }
     /**
@@ -164,8 +164,8 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the label property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLabel(@jakarta.annotation.Nullable final String value) {
         this.label = value;
     }
     /**
@@ -173,8 +173,8 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mediaType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaType(@javax.annotation.Nullable final Modality value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaType(@jakarta.annotation.Nullable final Modality value) {
         this.mediaType = value;
     }
     /**
@@ -182,8 +182,8 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -191,8 +191,8 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the serverMuted property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServerMuted(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setServerMuted(@jakarta.annotation.Nullable final Boolean value) {
         this.serverMuted = value;
     }
     /**
@@ -200,8 +200,8 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sourceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSourceId(@jakarta.annotation.Nullable final String value) {
         this.sourceId = value;
     }
 }

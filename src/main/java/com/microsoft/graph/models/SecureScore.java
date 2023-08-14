@@ -52,7 +52,7 @@ public class SecureScore extends Entity implements Parsable {
      * Instantiates a new secureScore and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SecureScore() {
         super();
     }
@@ -61,8 +61,8 @@ public class SecureScore extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a secureScore
      */
-    @javax.annotation.Nonnull
-    public static SecureScore createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SecureScore createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SecureScore();
     }
@@ -70,7 +70,7 @@ public class SecureScore extends Entity implements Parsable {
      * Gets the activeUserCount property value. Active user count of the given tenant.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getActiveUserCount() {
         return this.activeUserCount;
     }
@@ -78,7 +78,7 @@ public class SecureScore extends Entity implements Parsable {
      * Gets the averageComparativeScores property value. Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
      * @return a averageComparativeScore
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AverageComparativeScore> getAverageComparativeScores() {
         return this.averageComparativeScores;
     }
@@ -86,7 +86,7 @@ public class SecureScore extends Entity implements Parsable {
      * Gets the azureTenantId property value. GUID string for tenant ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureTenantId() {
         return this.azureTenantId;
     }
@@ -94,7 +94,7 @@ public class SecureScore extends Entity implements Parsable {
      * Gets the controlScores property value. Contains tenant scores for a set of controls.
      * @return a controlScore
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ControlScore> getControlScores() {
         return this.controlScores;
     }
@@ -102,7 +102,7 @@ public class SecureScore extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date when the entity is created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -110,7 +110,7 @@ public class SecureScore extends Entity implements Parsable {
      * Gets the currentScore property value. Tenant current attained score on specified date.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getCurrentScore() {
         return this.currentScore;
     }
@@ -118,7 +118,7 @@ public class SecureScore extends Entity implements Parsable {
      * Gets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getEnabledServices() {
         return this.enabledServices;
     }
@@ -126,7 +126,7 @@ public class SecureScore extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeUserCount", (n) -> { this.setActiveUserCount(n.getIntegerValue()); });
@@ -145,7 +145,7 @@ public class SecureScore extends Entity implements Parsable {
      * Gets the licensedUserCount property value. Licensed user count of the given tenant.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getLicensedUserCount() {
         return this.licensedUserCount;
     }
@@ -153,7 +153,7 @@ public class SecureScore extends Entity implements Parsable {
      * Gets the maxScore property value. Tenant maximum possible score on specified date.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getMaxScore() {
         return this.maxScore;
     }
@@ -161,7 +161,7 @@ public class SecureScore extends Entity implements Parsable {
      * Gets the vendorInformation property value. Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
      * @return a securityVendorInformation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {
         return this.vendorInformation;
     }
@@ -170,8 +170,8 @@ public class SecureScore extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("activeUserCount", this.getActiveUserCount());
@@ -190,8 +190,8 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the activeUserCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActiveUserCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setActiveUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.activeUserCount = value;
     }
     /**
@@ -199,8 +199,8 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the averageComparativeScores property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAverageComparativeScores(@javax.annotation.Nullable final java.util.List<AverageComparativeScore> value) {
+    @jakarta.annotation.Nonnull
+    public void setAverageComparativeScores(@jakarta.annotation.Nullable final java.util.List<AverageComparativeScore> value) {
         this.averageComparativeScores = value;
     }
     /**
@@ -208,8 +208,8 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAzureTenantId(@jakarta.annotation.Nullable final String value) {
         this.azureTenantId = value;
     }
     /**
@@ -217,8 +217,8 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the controlScores property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setControlScores(@javax.annotation.Nullable final java.util.List<ControlScore> value) {
+    @jakarta.annotation.Nonnull
+    public void setControlScores(@jakarta.annotation.Nullable final java.util.List<ControlScore> value) {
         this.controlScores = value;
     }
     /**
@@ -226,8 +226,8 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -235,8 +235,8 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the currentScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrentScore(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setCurrentScore(@jakarta.annotation.Nullable final Double value) {
         this.currentScore = value;
     }
     /**
@@ -244,8 +244,8 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the enabledServices property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnabledServices(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setEnabledServices(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.enabledServices = value;
     }
     /**
@@ -253,8 +253,8 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the licensedUserCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLicensedUserCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setLicensedUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.licensedUserCount = value;
     }
     /**
@@ -262,8 +262,8 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the maxScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaxScore(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setMaxScore(@jakarta.annotation.Nullable final Double value) {
         this.maxScore = value;
     }
     /**
@@ -271,8 +271,8 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
+    @jakarta.annotation.Nonnull
+    public void setVendorInformation(@jakarta.annotation.Nullable final SecurityVendorInformation value) {
         this.vendorInformation = value;
     }
 }

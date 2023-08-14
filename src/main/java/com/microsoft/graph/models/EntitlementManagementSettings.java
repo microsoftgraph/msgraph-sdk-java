@@ -20,7 +20,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
      * Instantiates a new entitlementManagementSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EntitlementManagementSettings() {
         super();
     }
@@ -29,8 +29,8 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a entitlementManagementSettings
      */
-    @javax.annotation.Nonnull
-    public static EntitlementManagementSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EntitlementManagementSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EntitlementManagementSettings();
     }
@@ -38,7 +38,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
      * Gets the durationUntilExternalUserDeletedAfterBlocked property value. If externalUserLifecycleAction is blockSignInAndDelete, the duration, typically a number of days, after an external user is blocked from sign in before their account is deleted.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getDurationUntilExternalUserDeletedAfterBlocked() {
         return this.durationUntilExternalUserDeletedAfterBlocked;
     }
@@ -46,7 +46,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
      * Gets the externalUserLifecycleAction property value. Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
      * @return a accessPackageExternalUserLifecycleAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageExternalUserLifecycleAction getExternalUserLifecycleAction() {
         return this.externalUserLifecycleAction;
     }
@@ -54,7 +54,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("durationUntilExternalUserDeletedAfterBlocked", (n) -> { this.setDurationUntilExternalUserDeletedAfterBlocked(n.getPeriodAndDurationValue()); });
@@ -66,8 +66,8 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writePeriodAndDurationValue("durationUntilExternalUserDeletedAfterBlocked", this.getDurationUntilExternalUserDeletedAfterBlocked());
@@ -78,8 +78,8 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
      * @param value Value to set for the durationUntilExternalUserDeletedAfterBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDurationUntilExternalUserDeletedAfterBlocked(@javax.annotation.Nullable final PeriodAndDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setDurationUntilExternalUserDeletedAfterBlocked(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.durationUntilExternalUserDeletedAfterBlocked = value;
     }
     /**
@@ -87,8 +87,8 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
      * @param value Value to set for the externalUserLifecycleAction property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalUserLifecycleAction(@javax.annotation.Nullable final AccessPackageExternalUserLifecycleAction value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalUserLifecycleAction(@jakarta.annotation.Nullable final AccessPackageExternalUserLifecycleAction value) {
         this.externalUserLifecycleAction = value;
     }
 }

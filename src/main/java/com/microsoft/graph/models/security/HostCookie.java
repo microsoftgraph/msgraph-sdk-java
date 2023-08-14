@@ -32,7 +32,7 @@ public class HostCookie extends Artifact implements Parsable {
      * Instantiates a new hostCookie and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public HostCookie() {
         super();
         this.setOdataType("#microsoft.graph.security.hostCookie");
@@ -42,8 +42,8 @@ public class HostCookie extends Artifact implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a hostCookie
      */
-    @javax.annotation.Nonnull
-    public static HostCookie createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static HostCookie createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new HostCookie();
     }
@@ -51,7 +51,7 @@ public class HostCookie extends Artifact implements Parsable {
      * Gets the domain property value. The URI for which the cookie is valid.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDomain() {
         return this.domain;
     }
@@ -59,7 +59,7 @@ public class HostCookie extends Artifact implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("domain", (n) -> { this.setDomain(n.getStringValue()); });
@@ -73,7 +73,7 @@ public class HostCookie extends Artifact implements Parsable {
      * Gets the firstSeenDateTime property value. The first date and time when this hostCookie was observed by Microsoft Defender Threat Intelligence. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
         return this.firstSeenDateTime;
     }
@@ -81,7 +81,7 @@ public class HostCookie extends Artifact implements Parsable {
      * Gets the host property value. The host property
      * @return a host
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Host getHost() {
         return this.host;
     }
@@ -89,7 +89,7 @@ public class HostCookie extends Artifact implements Parsable {
      * Gets the lastSeenDateTime property value. The most recent date and time when this hostCookie was observed by Microsoft Defender Threat Intelligence. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
         return this.lastSeenDateTime;
     }
@@ -97,7 +97,7 @@ public class HostCookie extends Artifact implements Parsable {
      * Gets the name property value. The name of the cookie, for example, JSESSIONID or SEARCH_NAMESITE.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -106,8 +106,8 @@ public class HostCookie extends Artifact implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("domain", this.getDomain());
@@ -121,8 +121,8 @@ public class HostCookie extends Artifact implements Parsable {
      * @param value Value to set for the domain property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDomain(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDomain(@jakarta.annotation.Nullable final String value) {
         this.domain = value;
     }
     /**
@@ -130,8 +130,8 @@ public class HostCookie extends Artifact implements Parsable {
      * @param value Value to set for the firstSeenDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstSeenDateTime = value;
     }
     /**
@@ -139,8 +139,8 @@ public class HostCookie extends Artifact implements Parsable {
      * @param value Value to set for the host property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHost(@javax.annotation.Nullable final Host value) {
+    @jakarta.annotation.Nonnull
+    public void setHost(@jakarta.annotation.Nullable final Host value) {
         this.host = value;
     }
     /**
@@ -148,8 +148,8 @@ public class HostCookie extends Artifact implements Parsable {
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSeenDateTime = value;
     }
     /**
@@ -157,8 +157,8 @@ public class HostCookie extends Artifact implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
 }

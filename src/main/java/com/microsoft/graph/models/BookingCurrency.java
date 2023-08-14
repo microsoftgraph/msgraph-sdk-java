@@ -15,7 +15,7 @@ public class BookingCurrency extends Entity implements Parsable {
      * Instantiates a new bookingCurrency and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BookingCurrency() {
         super();
     }
@@ -24,8 +24,8 @@ public class BookingCurrency extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a bookingCurrency
      */
-    @javax.annotation.Nonnull
-    public static BookingCurrency createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BookingCurrency createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BookingCurrency();
     }
@@ -33,7 +33,7 @@ public class BookingCurrency extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("symbol", (n) -> { this.setSymbol(n.getStringValue()); });
@@ -43,7 +43,7 @@ public class BookingCurrency extends Entity implements Parsable {
      * Gets the symbol property value. The currency symbol. For example, the currency symbol for the US dollar and for the Australian dollar is $.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSymbol() {
         return this.symbol;
     }
@@ -52,8 +52,8 @@ public class BookingCurrency extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("symbol", this.getSymbol());
@@ -63,8 +63,8 @@ public class BookingCurrency extends Entity implements Parsable {
      * @param value Value to set for the symbol property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSymbol(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSymbol(@jakarta.annotation.Nullable final String value) {
         this.symbol = value;
     }
 }

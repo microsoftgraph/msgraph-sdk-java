@@ -52,7 +52,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * Instantiates a new accessReviewStageSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessReviewStageSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -61,8 +61,8 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessReviewStageSettings
      */
-    @javax.annotation.Nonnull
-    public static AccessReviewStageSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessReviewStageSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessReviewStageSettings();
     }
@@ -70,7 +70,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -78,7 +78,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * Gets the decisionsThatWillMoveToNextStage property value. Indicate which decisions will go to the next stage. Can be a sub-set of Approve, Deny, Recommendation, or NotReviewed. If not provided, all decisions will go to the next stage. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getDecisionsThatWillMoveToNextStage() {
         return this.decisionsThatWillMoveToNextStage;
     }
@@ -86,7 +86,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * Gets the dependsOn property value. Defines the sequential or parallel order of the stages and depends on the stageId. Only sequential stages are currently supported. For example, if stageId is 2, then dependsOn must be 1. If stageId is 1, do not specify dependsOn. Required if stageId is not 1.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getDependsOn() {
         return this.dependsOn;
     }
@@ -94,7 +94,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * Gets the durationInDays property value. The duration of the stage. Required.  NOTE: The cumulative value of this property across all stages  1. Will override the instanceDurationInDays setting on the accessReviewScheduleDefinition object. 2. Cannot exceed the length of one recurrence. That is, if the review recurs weekly, the cumulative durationInDays cannot exceed 7.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDurationInDays() {
         return this.durationInDays;
     }
@@ -102,7 +102,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * Gets the fallbackReviewers property value. If provided, the fallback reviewers are asked to complete a review if the primary reviewers do not exist. For example, if managers are selected as reviewers and a principal under review does not have a manager in Azure AD, the fallback reviewers are asked to review that principal. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition object.
      * @return a accessReviewReviewerScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getFallbackReviewers() {
         return this.fallbackReviewers;
     }
@@ -110,7 +110,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("decisionsThatWillMoveToNextStage", (n) -> { this.setDecisionsThatWillMoveToNextStage(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -128,7 +128,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -136,7 +136,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * Gets the recommendationInsightSettings property value. The recommendationInsightSettings property
      * @return a accessReviewRecommendationInsightSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessReviewRecommendationInsightSetting> getRecommendationInsightSettings() {
         return this.recommendationInsightSettings;
     }
@@ -144,7 +144,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * Gets the recommendationsEnabled property value. Indicates whether showing recommendations to reviewers is enabled. Required. NOTE: The value of this property will override override the corresponding setting on the accessReviewScheduleDefinition object.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRecommendationsEnabled() {
         return this.recommendationsEnabled;
     }
@@ -152,7 +152,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * Gets the reviewers property value. Defines who the reviewers are. If none are specified, the review is a self-review (users review their own access).  For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition.
      * @return a accessReviewReviewerScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getReviewers() {
         return this.reviewers;
     }
@@ -160,7 +160,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * Gets the stageId property value. Unique identifier of the accessReviewStageSettings object. The stageId will be used by the dependsOn property to indicate the order of the stages. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStageId() {
         return this.stageId;
     }
@@ -169,8 +169,8 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("decisionsThatWillMoveToNextStage", this.getDecisionsThatWillMoveToNextStage());
         writer.writeCollectionOfPrimitiveValues("dependsOn", this.getDependsOn());
@@ -188,8 +188,8 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -197,8 +197,8 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the decisionsThatWillMoveToNextStage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDecisionsThatWillMoveToNextStage(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setDecisionsThatWillMoveToNextStage(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.decisionsThatWillMoveToNextStage = value;
     }
     /**
@@ -206,8 +206,8 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the dependsOn property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDependsOn(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setDependsOn(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.dependsOn = value;
     }
     /**
@@ -215,8 +215,8 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the durationInDays property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDurationInDays(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setDurationInDays(@jakarta.annotation.Nullable final Integer value) {
         this.durationInDays = value;
     }
     /**
@@ -224,8 +224,8 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the fallbackReviewers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFallbackReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
+    @jakarta.annotation.Nonnull
+    public void setFallbackReviewers(@jakarta.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this.fallbackReviewers = value;
     }
     /**
@@ -233,8 +233,8 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -242,8 +242,8 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the recommendationInsightSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecommendationInsightSettings(@javax.annotation.Nullable final java.util.List<AccessReviewRecommendationInsightSetting> value) {
+    @jakarta.annotation.Nonnull
+    public void setRecommendationInsightSettings(@jakarta.annotation.Nullable final java.util.List<AccessReviewRecommendationInsightSetting> value) {
         this.recommendationInsightSettings = value;
     }
     /**
@@ -251,8 +251,8 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the recommendationsEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecommendationsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRecommendationsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.recommendationsEnabled = value;
     }
     /**
@@ -260,8 +260,8 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the reviewers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
+    @jakarta.annotation.Nonnull
+    public void setReviewers(@jakarta.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this.reviewers = value;
     }
     /**
@@ -269,8 +269,8 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the stageId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStageId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStageId(@jakarta.annotation.Nullable final String value) {
         this.stageId = value;
     }
 }

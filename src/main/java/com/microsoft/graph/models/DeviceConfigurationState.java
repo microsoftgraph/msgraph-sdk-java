@@ -38,7 +38,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * Instantiates a new deviceConfigurationState and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceConfigurationState() {
         super();
     }
@@ -47,8 +47,8 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceConfigurationState
      */
-    @javax.annotation.Nonnull
-    public static DeviceConfigurationState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceConfigurationState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceConfigurationState();
     }
@@ -56,7 +56,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * Gets the displayName property value. The name of the policy for this policyBase
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -64,7 +64,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -79,7 +79,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * Gets the platformType property value. Supported platform types for policies.
      * @return a policyPlatformType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PolicyPlatformType getPlatformType() {
         return this.platformType;
     }
@@ -87,7 +87,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * Gets the settingCount property value. Count of how many setting a policy holds
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSettingCount() {
         return this.settingCount;
     }
@@ -95,7 +95,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * Gets the settingStates property value. The settingStates property
      * @return a deviceConfigurationSettingState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationSettingState> getSettingStates() {
         return this.settingStates;
     }
@@ -103,7 +103,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * Gets the state property value. The state property
      * @return a complianceStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
         return this.state;
     }
@@ -111,7 +111,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * Gets the version property value. The version of the policy
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getVersion() {
         return this.version;
     }
@@ -120,8 +120,8 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -136,8 +136,8 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -145,8 +145,8 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * @param value Value to set for the platformType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatformType(@javax.annotation.Nullable final PolicyPlatformType value) {
+    @jakarta.annotation.Nonnull
+    public void setPlatformType(@jakarta.annotation.Nullable final PolicyPlatformType value) {
         this.platformType = value;
     }
     /**
@@ -154,8 +154,8 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * @param value Value to set for the settingCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSettingCount(@jakarta.annotation.Nullable final Integer value) {
         this.settingCount = value;
     }
     /**
@@ -163,8 +163,8 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * @param value Value to set for the settingStates property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingStates(@javax.annotation.Nullable final java.util.List<DeviceConfigurationSettingState> value) {
+    @jakarta.annotation.Nonnull
+    public void setSettingStates(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationSettingState> value) {
         this.settingStates = value;
     }
     /**
@@ -172,8 +172,8 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final ComplianceStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final ComplianceStatus value) {
         this.state = value;
     }
     /**
@@ -181,8 +181,8 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setVersion(@jakarta.annotation.Nullable final Integer value) {
         this.version = value;
     }
 }

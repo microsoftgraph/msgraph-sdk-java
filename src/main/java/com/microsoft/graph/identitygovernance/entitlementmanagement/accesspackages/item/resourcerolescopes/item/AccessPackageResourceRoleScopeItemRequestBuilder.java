@@ -25,14 +25,14 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
     /**
      * Provides operations to manage the role property of the microsoft.graph.accessPackageResourceRoleScope entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RoleRequestBuilder role() {
         return new RoleRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the scope property of the microsoft.graph.accessPackageResourceRoleScope entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ScopeRequestBuilder scope() {
         return new ScopeRequestBuilder(pathParameters, requestAdapter);
     }
@@ -42,8 +42,8 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public AccessPackageResourceRoleScopeItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public AccessPackageResourceRoleScopeItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/resourceRoleScopes/{accessPackageResourceRoleScope%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -52,15 +52,16 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public AccessPackageResourceRoleScopeItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public AccessPackageResourceRoleScopeItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/resourceRoleScopes/{accessPackageResourceRoleScope%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property resourceRoleScopes for identityGovernance
+     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete-resourcerolescopes?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -75,12 +76,13 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Delete navigation property resourceRoleScopes for identityGovernance
+     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete-resourcerolescopes?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -94,10 +96,10 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      * @return a CompletableFuture of accessPackageResourceRoleScope
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -112,12 +114,12 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResourceRoleScope
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -135,8 +137,8 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
      * @param body The request body
      * @return a CompletableFuture of accessPackageResourceRoleScope
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> patch(@javax.annotation.Nonnull final AccessPackageResourceRoleScope body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> patch(@jakarta.annotation.Nonnull final AccessPackageResourceRoleScope body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -155,8 +157,8 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResourceRoleScope
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> patch(@javax.annotation.Nonnull final AccessPackageResourceRoleScope body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> patch(@jakarta.annotation.Nonnull final AccessPackageResourceRoleScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -171,20 +173,20 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Delete navigation property resourceRoleScopes for identityGovernance
+     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property resourceRoleScopes for identityGovernance
+     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -198,20 +200,20 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -231,8 +233,8 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final AccessPackageResourceRoleScope body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackageResourceRoleScope body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -241,8 +243,8 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final AccessPackageResourceRoleScope body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackageResourceRoleScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -264,20 +266,20 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      */
     public class GetQueryParameters {
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -287,7 +289,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

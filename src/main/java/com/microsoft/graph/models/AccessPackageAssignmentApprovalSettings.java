@@ -32,7 +32,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * Instantiates a new accessPackageAssignmentApprovalSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageAssignmentApprovalSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageAssignmentApprovalSettings
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageAssignmentApprovalSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageAssignmentApprovalSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackageAssignmentApprovalSettings();
     }
@@ -50,7 +50,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("isApprovalRequiredForAdd", (n) -> { this.setIsApprovalRequiredForAdd(n.getBooleanValue()); });
@@ -71,7 +71,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * Gets the isApprovalRequiredForAdd property value. If false, then approval is not required for new requests in this policy.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequiredForAdd() {
         return this.isApprovalRequiredForAdd;
     }
@@ -79,7 +79,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * Gets the isApprovalRequiredForUpdate property value. If false, then approval is not required for updates to requests in this policy.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequiredForUpdate() {
         return this.isApprovalRequiredForUpdate;
     }
@@ -87,7 +87,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -95,7 +95,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * Gets the stages property value. If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.
      * @return a accessPackageApprovalStage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageApprovalStage> getStages() {
         return this.stages;
     }
@@ -104,8 +104,8 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isApprovalRequiredForAdd", this.getIsApprovalRequiredForAdd());
         writer.writeBooleanValue("isApprovalRequiredForUpdate", this.getIsApprovalRequiredForUpdate());
@@ -118,8 +118,8 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -127,8 +127,8 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * @param value Value to set for the isApprovalRequiredForAdd property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsApprovalRequiredForAdd(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsApprovalRequiredForAdd(@jakarta.annotation.Nullable final Boolean value) {
         this.isApprovalRequiredForAdd = value;
     }
     /**
@@ -136,8 +136,8 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * @param value Value to set for the isApprovalRequiredForUpdate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsApprovalRequiredForUpdate(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsApprovalRequiredForUpdate(@jakarta.annotation.Nullable final Boolean value) {
         this.isApprovalRequiredForUpdate = value;
     }
     /**
@@ -145,8 +145,8 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -154,8 +154,8 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * @param value Value to set for the stages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStages(@javax.annotation.Nullable final java.util.List<AccessPackageApprovalStage> value) {
+    @jakarta.annotation.Nonnull
+    public void setStages(@jakarta.annotation.Nullable final java.util.List<AccessPackageApprovalStage> value) {
         this.stages = value;
     }
 }

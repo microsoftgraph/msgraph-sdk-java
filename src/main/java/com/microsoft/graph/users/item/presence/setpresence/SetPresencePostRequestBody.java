@@ -33,7 +33,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * Instantiates a new setPresencePostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SetPresencePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +42,8 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a setPresencePostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static SetPresencePostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SetPresencePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SetPresencePostRequestBody();
     }
@@ -51,7 +51,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the activity property value. The activity property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActivity() {
         return this.activity;
     }
@@ -59,7 +59,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -67,7 +67,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the availability property value. The availability property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAvailability() {
         return this.availability;
     }
@@ -75,7 +75,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the expirationDuration property value. The expirationDuration property
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getExpirationDuration() {
         return this.expirationDuration;
     }
@@ -83,7 +83,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("activity", (n) -> { this.setActivity(n.getStringValue()); });
@@ -96,7 +96,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the sessionId property value. The sessionId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSessionId() {
         return this.sessionId;
     }
@@ -105,8 +105,8 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("activity", this.getActivity());
         writer.writeStringValue("availability", this.getAvailability());
@@ -119,8 +119,8 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the activity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivity(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setActivity(@jakarta.annotation.Nullable final String value) {
         this.activity = value;
     }
     /**
@@ -128,8 +128,8 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -137,8 +137,8 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the availability property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAvailability(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAvailability(@jakarta.annotation.Nullable final String value) {
         this.availability = value;
     }
     /**
@@ -146,8 +146,8 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the expirationDuration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setExpirationDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.expirationDuration = value;
     }
     /**
@@ -155,8 +155,8 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the sessionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSessionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSessionId(@jakarta.annotation.Nullable final String value) {
         this.sessionId = value;
     }
 }

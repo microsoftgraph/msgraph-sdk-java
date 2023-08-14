@@ -27,17 +27,17 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
     /**
      * Provides operations to count the resources in the collection.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the accessPackageAssignmentApprovals property of the microsoft.graph.entitlementManagement entity.
-     * @param approvalId Unique identifier of the item
+     * @param approvalId The unique identifier of approval
      * @return a ApprovalItemRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public ApprovalItemRequestBuilder byApprovalId(@javax.annotation.Nonnull final String approvalId) {
+    @jakarta.annotation.Nonnull
+    public ApprovalItemRequestBuilder byApprovalId(@jakarta.annotation.Nonnull final String approvalId) {
         Objects.requireNonNull(approvalId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("approval%2Did", approvalId);
@@ -49,8 +49,8 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public AccessPackageAssignmentApprovalsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public AccessPackageAssignmentApprovalsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignmentApprovals{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
@@ -59,8 +59,8 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public AccessPackageAssignmentApprovalsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public AccessPackageAssignmentApprovalsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignmentApprovals{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
@@ -68,8 +68,8 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
      * @param on Usage: on='{on}'
      * @return a filterByCurrentUserWithOnRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@javax.annotation.Nonnull final String on) {
+    @jakarta.annotation.Nonnull
+    public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
         Objects.requireNonNull(on);
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
@@ -77,7 +77,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
      * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
      * @return a CompletableFuture of approvalCollectionResponse
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -96,8 +96,8 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of approvalCollectionResponse
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ApprovalCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ApprovalCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -115,8 +115,8 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
      * @param body The request body
      * @return a CompletableFuture of approval
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Approval> post(@javax.annotation.Nonnull final Approval body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Approval> post(@jakarta.annotation.Nonnull final Approval body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -135,8 +135,8 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of approval
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Approval> post(@javax.annotation.Nonnull final Approval body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Approval> post(@jakarta.annotation.Nonnull final Approval body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -154,7 +154,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
      * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -163,8 +163,8 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -184,8 +184,8 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final Approval body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Approval body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -194,8 +194,8 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final Approval body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Approval body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -219,49 +219,49 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
          * Include count of items
          */
         @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Boolean count;
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Filter items by property values
          */
         @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String filter;
         /**
          * Order items by property values
          */
         @QueryParameter(name = "%24orderby")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] orderby;
         /**
          * Search items by search phrases
          */
         @QueryParameter(name = "%24search")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String search;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
         /**
          * Skip the first n items
          */
         @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer skip;
         /**
          * Show only the first n items
          */
         @QueryParameter(name = "%24top")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer top;
     }
     /**
@@ -271,7 +271,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

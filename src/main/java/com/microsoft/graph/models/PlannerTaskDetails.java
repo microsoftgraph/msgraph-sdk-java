@@ -27,7 +27,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * Instantiates a new plannerTaskDetails and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerTaskDetails() {
         super();
     }
@@ -36,8 +36,8 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a plannerTaskDetails
      */
-    @javax.annotation.Nonnull
-    public static PlannerTaskDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PlannerTaskDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PlannerTaskDetails();
     }
@@ -45,7 +45,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * Gets the checklist property value. The collection of checklist items on the task.
      * @return a plannerChecklistItems
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerChecklistItems getChecklist() {
         return this.checklist;
     }
@@ -53,7 +53,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * Gets the description property value. Description of the task.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -61,7 +61,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("checklist", (n) -> { this.setChecklist(n.getObjectValue(PlannerChecklistItems::createFromDiscriminatorValue)); });
@@ -74,7 +74,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * Gets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
      * @return a plannerPreviewType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerPreviewType getPreviewType() {
         return this.previewType;
     }
@@ -82,7 +82,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * Gets the references property value. The collection of references on the task.
      * @return a plannerExternalReferences
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerExternalReferences getReferences() {
         return this.references;
     }
@@ -91,8 +91,8 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("checklist", this.getChecklist());
@@ -105,8 +105,8 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * @param value Value to set for the checklist property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChecklist(@javax.annotation.Nullable final PlannerChecklistItems value) {
+    @jakarta.annotation.Nonnull
+    public void setChecklist(@jakarta.annotation.Nullable final PlannerChecklistItems value) {
         this.checklist = value;
     }
     /**
@@ -114,8 +114,8 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -123,8 +123,8 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * @param value Value to set for the previewType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreviewType(@javax.annotation.Nullable final PlannerPreviewType value) {
+    @jakarta.annotation.Nonnull
+    public void setPreviewType(@jakarta.annotation.Nullable final PlannerPreviewType value) {
         this.previewType = value;
     }
     /**
@@ -132,8 +132,8 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * @param value Value to set for the references property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReferences(@javax.annotation.Nullable final PlannerExternalReferences value) {
+    @jakarta.annotation.Nonnull
+    public void setReferences(@jakarta.annotation.Nullable final PlannerExternalReferences value) {
         this.references = value;
     }
 }

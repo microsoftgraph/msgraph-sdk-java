@@ -32,7 +32,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      * Instantiates a new documentSetVersion and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DocumentSetVersion() {
         super();
         this.setOdataType("#microsoft.graph.documentSetVersion");
@@ -42,8 +42,8 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a documentSetVersion
      */
-    @javax.annotation.Nonnull
-    public static DocumentSetVersion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DocumentSetVersion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DocumentSetVersion();
     }
@@ -51,7 +51,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      * Gets the comment property value. Comment about the captured version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getComment() {
         return this.comment;
     }
@@ -59,7 +59,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      * Gets the createdBy property value. User who captured the version.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -67,7 +67,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      * Gets the createdDateTime property value. Date and time when this version was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -75,7 +75,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
@@ -89,7 +89,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      * Gets the items property value. Items within the document set that are captured as part of this version.
      * @return a documentSetVersionItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DocumentSetVersionItem> getItems() {
         return this.items;
     }
@@ -97,7 +97,7 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      * Gets the shouldCaptureMinorVersion property value. If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShouldCaptureMinorVersion() {
         return this.shouldCaptureMinorVersion;
     }
@@ -106,8 +106,8 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("comment", this.getComment());
@@ -121,8 +121,8 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      * @param value Value to set for the comment property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComment(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setComment(@jakarta.annotation.Nullable final String value) {
         this.comment = value;
     }
     /**
@@ -130,8 +130,8 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
@@ -139,8 +139,8 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -148,8 +148,8 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      * @param value Value to set for the items property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setItems(@javax.annotation.Nullable final java.util.List<DocumentSetVersionItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setItems(@jakarta.annotation.Nullable final java.util.List<DocumentSetVersionItem> value) {
         this.items = value;
     }
     /**
@@ -157,8 +157,8 @@ public class DocumentSetVersion extends ListItemVersion implements Parsable {
      * @param value Value to set for the shouldCaptureMinorVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShouldCaptureMinorVersion(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShouldCaptureMinorVersion(@jakarta.annotation.Nullable final Boolean value) {
         this.shouldCaptureMinorVersion = value;
     }
 }

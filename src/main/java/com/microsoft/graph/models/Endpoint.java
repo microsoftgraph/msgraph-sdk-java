@@ -31,7 +31,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * Instantiates a new endpoint and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Endpoint() {
         super();
         this.setOdataType("#microsoft.graph.endpoint");
@@ -41,8 +41,8 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a endpoint
      */
-    @javax.annotation.Nonnull
-    public static Endpoint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Endpoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Endpoint();
     }
@@ -50,7 +50,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * Gets the capability property value. The capability property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCapability() {
         return this.capability;
     }
@@ -58,7 +58,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("capability", (n) -> { this.setCapability(n.getStringValue()); });
@@ -72,7 +72,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * Gets the providerId property value. The providerId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProviderId() {
         return this.providerId;
     }
@@ -80,7 +80,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * Gets the providerName property value. The providerName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProviderName() {
         return this.providerName;
     }
@@ -88,7 +88,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * Gets the providerResourceId property value. The providerResourceId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProviderResourceId() {
         return this.providerResourceId;
     }
@@ -96,7 +96,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * Gets the uri property value. The uri property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUri() {
         return this.uri;
     }
@@ -105,8 +105,8 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("capability", this.getCapability());
@@ -120,8 +120,8 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * @param value Value to set for the capability property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCapability(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCapability(@jakarta.annotation.Nullable final String value) {
         this.capability = value;
     }
     /**
@@ -129,8 +129,8 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * @param value Value to set for the providerId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProviderId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProviderId(@jakarta.annotation.Nullable final String value) {
         this.providerId = value;
     }
     /**
@@ -138,8 +138,8 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * @param value Value to set for the providerName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProviderName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProviderName(@jakarta.annotation.Nullable final String value) {
         this.providerName = value;
     }
     /**
@@ -147,8 +147,8 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * @param value Value to set for the providerResourceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProviderResourceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProviderResourceId(@jakarta.annotation.Nullable final String value) {
         this.providerResourceId = value;
     }
     /**
@@ -156,8 +156,8 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * @param value Value to set for the uri property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUri(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUri(@jakarta.annotation.Nullable final String value) {
         this.uri = value;
     }
 }

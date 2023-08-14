@@ -15,7 +15,7 @@ public class UrlAssessmentRequest extends ThreatAssessmentRequest implements Par
      * Instantiates a new urlAssessmentRequest and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UrlAssessmentRequest() {
         super();
         this.setOdataType("#microsoft.graph.urlAssessmentRequest");
@@ -25,8 +25,8 @@ public class UrlAssessmentRequest extends ThreatAssessmentRequest implements Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a urlAssessmentRequest
      */
-    @javax.annotation.Nonnull
-    public static UrlAssessmentRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UrlAssessmentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UrlAssessmentRequest();
     }
@@ -34,7 +34,7 @@ public class UrlAssessmentRequest extends ThreatAssessmentRequest implements Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
@@ -44,7 +44,7 @@ public class UrlAssessmentRequest extends ThreatAssessmentRequest implements Par
      * Gets the url property value. The URL string.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUrl() {
         return this.url;
     }
@@ -53,8 +53,8 @@ public class UrlAssessmentRequest extends ThreatAssessmentRequest implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("url", this.getUrl());
@@ -64,8 +64,8 @@ public class UrlAssessmentRequest extends ThreatAssessmentRequest implements Par
      * @param value Value to set for the url property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUrl(@jakarta.annotation.Nullable final String value) {
         this.url = value;
     }
 }

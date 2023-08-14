@@ -39,7 +39,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * Instantiates a new iosLobApp and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosLobApp() {
         super();
         this.setOdataType("#microsoft.graph.iosLobApp");
@@ -49,8 +49,8 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a iosLobApp
      */
-    @javax.annotation.Nonnull
-    public static IosLobApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IosLobApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IosLobApp();
     }
@@ -58,7 +58,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * Gets the applicableDeviceType property value. Contains properties of the possible iOS device types the mobile app can run on.
      * @return a iosDeviceType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosDeviceType getApplicableDeviceType() {
         return this.applicableDeviceType;
     }
@@ -66,7 +66,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * Gets the buildNumber property value. The build number of iOS Line of Business (LoB) app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBuildNumber() {
         return this.buildNumber;
     }
@@ -74,7 +74,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * Gets the bundleId property value. The Identity Name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBundleId() {
         return this.bundleId;
     }
@@ -82,7 +82,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * Gets the expirationDateTime property value. The expiration time.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
         return this.expirationDateTime;
     }
@@ -90,7 +90,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicableDeviceType", (n) -> { this.setApplicableDeviceType(n.getObjectValue(IosDeviceType::createFromDiscriminatorValue)); });
@@ -105,7 +105,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      * @return a iosMinimumOperatingSystem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
         return this.minimumSupportedOperatingSystem;
     }
@@ -113,7 +113,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * Gets the versionNumber property value. The version number of iOS Line of Business (LoB) app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersionNumber() {
         return this.versionNumber;
     }
@@ -122,8 +122,8 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("applicableDeviceType", this.getApplicableDeviceType());
@@ -138,8 +138,8 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the applicableDeviceType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicableDeviceType(@javax.annotation.Nullable final IosDeviceType value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicableDeviceType(@jakarta.annotation.Nullable final IosDeviceType value) {
         this.applicableDeviceType = value;
     }
     /**
@@ -147,8 +147,8 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the buildNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBuildNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setBuildNumber(@jakarta.annotation.Nullable final String value) {
         this.buildNumber = value;
     }
     /**
@@ -156,8 +156,8 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the bundleId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBundleId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setBundleId(@jakarta.annotation.Nullable final String value) {
         this.bundleId = value;
     }
     /**
@@ -165,8 +165,8 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
@@ -174,8 +174,8 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final IosMinimumOperatingSystem value) {
+    @jakarta.annotation.Nonnull
+    public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final IosMinimumOperatingSystem value) {
         this.minimumSupportedOperatingSystem = value;
     }
     /**
@@ -183,8 +183,8 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the versionNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersionNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVersionNumber(@jakarta.annotation.Nullable final String value) {
         this.versionNumber = value;
     }
 }

@@ -19,7 +19,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
      * Instantiates a new workbookChartGridlines and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookChartGridlines() {
         super();
     }
@@ -28,8 +28,8 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workbookChartGridlines
      */
-    @javax.annotation.Nonnull
-    public static WorkbookChartGridlines createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkbookChartGridlines createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WorkbookChartGridlines();
     }
@@ -37,7 +37,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartGridlinesFormat::createFromDiscriminatorValue)); });
@@ -48,7 +48,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
      * Gets the format property value. Represents the formatting of chart gridlines. Read-only.
      * @return a workbookChartGridlinesFormat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookChartGridlinesFormat getFormat() {
         return this.format;
     }
@@ -56,7 +56,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
      * Gets the visible property value. Boolean value representing if the axis gridlines are visible or not.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getVisible() {
         return this.visible;
     }
@@ -65,8 +65,8 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("format", this.getFormat());
@@ -77,8 +77,8 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
      * @param value Value to set for the format property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFormat(@javax.annotation.Nullable final WorkbookChartGridlinesFormat value) {
+    @jakarta.annotation.Nonnull
+    public void setFormat(@jakarta.annotation.Nullable final WorkbookChartGridlinesFormat value) {
         this.format = value;
     }
     /**
@@ -86,8 +86,8 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
      * @param value Value to set for the visible property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVisible(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setVisible(@jakarta.annotation.Nullable final Boolean value) {
         this.visible = value;
     }
 }

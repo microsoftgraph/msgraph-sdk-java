@@ -63,7 +63,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * Instantiates a new deviceCompliancePolicy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceCompliancePolicy() {
         super();
     }
@@ -72,8 +72,8 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceCompliancePolicy
      */
-    @javax.annotation.Nonnull
-    public static DeviceCompliancePolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceCompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -95,7 +95,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * Gets the assignments property value. The collection of assignments for this compliance policy.
      * @return a deviceCompliancePolicyAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceCompliancePolicyAssignment> getAssignments() {
         return this.assignments;
     }
@@ -103,7 +103,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * Gets the createdDateTime property value. DateTime the object was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -111,7 +111,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * Gets the description property value. Admin provided description of the Device Configuration.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -119,7 +119,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * Gets the deviceSettingStateSummaries property value. Compliance Setting State Device Summary
      * @return a settingStateDeviceSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SettingStateDeviceSummary> getDeviceSettingStateSummaries() {
         return this.deviceSettingStateSummaries;
     }
@@ -127,7 +127,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * Gets the deviceStatuses property value. List of DeviceComplianceDeviceStatus.
      * @return a deviceComplianceDeviceStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceDeviceStatus> getDeviceStatuses() {
         return this.deviceStatuses;
     }
@@ -135,7 +135,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * Gets the deviceStatusOverview property value. Device compliance devices status overview
      * @return a deviceComplianceDeviceOverview
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceComplianceDeviceOverview getDeviceStatusOverview() {
         return this.deviceStatusOverview;
     }
@@ -143,7 +143,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * Gets the displayName property value. Admin provided name of the device configuration.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -151,7 +151,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(DeviceCompliancePolicyAssignment::createFromDiscriminatorValue)); });
@@ -172,7 +172,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -180,7 +180,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * Gets the scheduledActionsForRule property value. The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      * @return a deviceComplianceScheduledActionForRule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceScheduledActionForRule> getScheduledActionsForRule() {
         return this.scheduledActionsForRule;
     }
@@ -188,7 +188,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * Gets the userStatuses property value. List of DeviceComplianceUserStatus.
      * @return a deviceComplianceUserStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceUserStatus> getUserStatuses() {
         return this.userStatuses;
     }
@@ -196,7 +196,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * Gets the userStatusOverview property value. Device compliance users status overview
      * @return a deviceComplianceUserOverview
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceComplianceUserOverview getUserStatusOverview() {
         return this.userStatusOverview;
     }
@@ -204,7 +204,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * Gets the version property value. Version of the device configuration.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getVersion() {
         return this.version;
     }
@@ -213,8 +213,8 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
@@ -235,8 +235,8 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignments(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicyAssignment> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceCompliancePolicyAssignment> value) {
         this.assignments = value;
     }
     /**
@@ -244,8 +244,8 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -253,8 +253,8 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -262,8 +262,8 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * @param value Value to set for the deviceSettingStateSummaries property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceSettingStateSummaries(@javax.annotation.Nullable final java.util.List<SettingStateDeviceSummary> value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceSettingStateSummaries(@jakarta.annotation.Nullable final java.util.List<SettingStateDeviceSummary> value) {
         this.deviceSettingStateSummaries = value;
     }
     /**
@@ -271,8 +271,8 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * @param value Value to set for the deviceStatuses property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceStatuses(@javax.annotation.Nullable final java.util.List<DeviceComplianceDeviceStatus> value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceStatuses(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceDeviceStatus> value) {
         this.deviceStatuses = value;
     }
     /**
@@ -280,8 +280,8 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * @param value Value to set for the deviceStatusOverview property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceStatusOverview(@javax.annotation.Nullable final DeviceComplianceDeviceOverview value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceStatusOverview(@jakarta.annotation.Nullable final DeviceComplianceDeviceOverview value) {
         this.deviceStatusOverview = value;
     }
     /**
@@ -289,8 +289,8 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -298,8 +298,8 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -307,8 +307,8 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * @param value Value to set for the scheduledActionsForRule property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScheduledActionsForRule(@javax.annotation.Nullable final java.util.List<DeviceComplianceScheduledActionForRule> value) {
+    @jakarta.annotation.Nonnull
+    public void setScheduledActionsForRule(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceScheduledActionForRule> value) {
         this.scheduledActionsForRule = value;
     }
     /**
@@ -316,8 +316,8 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * @param value Value to set for the userStatuses property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserStatuses(@javax.annotation.Nullable final java.util.List<DeviceComplianceUserStatus> value) {
+    @jakarta.annotation.Nonnull
+    public void setUserStatuses(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceUserStatus> value) {
         this.userStatuses = value;
     }
     /**
@@ -325,8 +325,8 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * @param value Value to set for the userStatusOverview property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserStatusOverview(@javax.annotation.Nullable final DeviceComplianceUserOverview value) {
+    @jakarta.annotation.Nonnull
+    public void setUserStatusOverview(@jakarta.annotation.Nullable final DeviceComplianceUserOverview value) {
         this.userStatusOverview = value;
     }
     /**
@@ -334,8 +334,8 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setVersion(@jakarta.annotation.Nullable final Integer value) {
         this.version = value;
     }
 }

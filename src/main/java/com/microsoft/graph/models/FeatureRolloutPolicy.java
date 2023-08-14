@@ -35,7 +35,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * Instantiates a new featureRolloutPolicy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FeatureRolloutPolicy() {
         super();
     }
@@ -44,8 +44,8 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a featureRolloutPolicy
      */
-    @javax.annotation.Nonnull
-    public static FeatureRolloutPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static FeatureRolloutPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new FeatureRolloutPolicy();
     }
@@ -53,7 +53,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * Gets the appliesTo property value. Nullable. Specifies a list of directoryObjects that feature is enabled for.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getAppliesTo() {
         return this.appliesTo;
     }
@@ -61,7 +61,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * Gets the description property value. A description for this feature rollout policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -69,7 +69,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * Gets the displayName property value. The display name for this  feature rollout policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -77,7 +77,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * Gets the feature property value. The feature property
      * @return a stagedFeatureName
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public StagedFeatureName getFeature() {
         return this.feature;
     }
@@ -85,7 +85,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
@@ -100,7 +100,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * Gets the isAppliedToOrganization property value. Indicates whether this feature rollout policy should be applied to the entire organization.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAppliedToOrganization() {
         return this.isAppliedToOrganization;
     }
@@ -108,7 +108,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * Gets the isEnabled property value. Indicates whether the feature rollout is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
@@ -117,8 +117,8 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("appliesTo", this.getAppliesTo());
@@ -133,8 +133,8 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * @param value Value to set for the appliesTo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppliesTo(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
+    @jakarta.annotation.Nonnull
+    public void setAppliesTo(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.appliesTo = value;
     }
     /**
@@ -142,8 +142,8 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -151,8 +151,8 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -160,8 +160,8 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * @param value Value to set for the feature property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeature(@javax.annotation.Nullable final StagedFeatureName value) {
+    @jakarta.annotation.Nonnull
+    public void setFeature(@jakarta.annotation.Nullable final StagedFeatureName value) {
         this.feature = value;
     }
     /**
@@ -169,8 +169,8 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * @param value Value to set for the isAppliedToOrganization property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAppliedToOrganization(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsAppliedToOrganization(@jakarta.annotation.Nullable final Boolean value) {
         this.isAppliedToOrganization = value;
     }
     /**
@@ -178,8 +178,8 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
 }

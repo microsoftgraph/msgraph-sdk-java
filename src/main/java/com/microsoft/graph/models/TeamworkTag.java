@@ -35,7 +35,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * Instantiates a new teamworkTag and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkTag() {
         super();
     }
@@ -44,8 +44,8 @@ public class TeamworkTag extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamworkTag
      */
-    @javax.annotation.Nonnull
-    public static TeamworkTag createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeamworkTag createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamworkTag();
     }
@@ -53,7 +53,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * Gets the description property value. The description of the tag as it will appear to the user in Microsoft Teams. A teamworkTag can't have more than 200 teamworkTagMembers.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -61,7 +61,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * Gets the displayName property value. The name of the tag as it will appear to the user in Microsoft Teams.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -69,7 +69,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -84,7 +84,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * Gets the memberCount property value. The number of users assigned to the tag.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMemberCount() {
         return this.memberCount;
     }
@@ -92,7 +92,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * Gets the members property value. Users assigned to the tag.
      * @return a teamworkTagMember
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TeamworkTagMember> getMembers() {
         return this.members;
     }
@@ -100,7 +100,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * Gets the tagType property value. The type of the tag. Default is standard.
      * @return a teamworkTagType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkTagType getTagType() {
         return this.tagType;
     }
@@ -108,7 +108,7 @@ public class TeamworkTag extends Entity implements Parsable {
      * Gets the teamId property value. ID of the team in which the tag is defined.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTeamId() {
         return this.teamId;
     }
@@ -117,8 +117,8 @@ public class TeamworkTag extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -133,8 +133,8 @@ public class TeamworkTag extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -142,8 +142,8 @@ public class TeamworkTag extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -151,8 +151,8 @@ public class TeamworkTag extends Entity implements Parsable {
      * @param value Value to set for the memberCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMemberCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMemberCount(@jakarta.annotation.Nullable final Integer value) {
         this.memberCount = value;
     }
     /**
@@ -160,8 +160,8 @@ public class TeamworkTag extends Entity implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMembers(@javax.annotation.Nullable final java.util.List<TeamworkTagMember> value) {
+    @jakarta.annotation.Nonnull
+    public void setMembers(@jakarta.annotation.Nullable final java.util.List<TeamworkTagMember> value) {
         this.members = value;
     }
     /**
@@ -169,8 +169,8 @@ public class TeamworkTag extends Entity implements Parsable {
      * @param value Value to set for the tagType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTagType(@javax.annotation.Nullable final TeamworkTagType value) {
+    @jakarta.annotation.Nonnull
+    public void setTagType(@jakarta.annotation.Nullable final TeamworkTagType value) {
         this.tagType = value;
     }
     /**
@@ -178,8 +178,8 @@ public class TeamworkTag extends Entity implements Parsable {
      * @param value Value to set for the teamId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeamId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTeamId(@jakarta.annotation.Nullable final String value) {
         this.teamId = value;
     }
 }

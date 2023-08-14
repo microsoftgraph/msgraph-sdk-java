@@ -36,7 +36,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * Instantiates a new sharingInvitation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SharingInvitation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a sharingInvitation
      */
-    @javax.annotation.Nonnull
-    public static SharingInvitation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SharingInvitation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SharingInvitation();
     }
@@ -54,7 +54,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * Gets the email property value. The email address provided for the recipient of the sharing invitation. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmail() {
         return this.email;
     }
@@ -70,7 +70,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
@@ -84,7 +84,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * Gets the invitedBy property value. Provides information about who sent the invitation that created this permission, if that information is available. Read-only.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getInvitedBy() {
         return this.invitedBy;
     }
@@ -92,7 +92,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -100,7 +100,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * Gets the redeemedBy property value. The redeemedBy property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRedeemedBy() {
         return this.redeemedBy;
     }
@@ -108,7 +108,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * Gets the signInRequired property value. If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSignInRequired() {
         return this.signInRequired;
     }
@@ -117,8 +117,8 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("email", this.getEmail());
         writer.writeObjectValue("invitedBy", this.getInvitedBy());
@@ -132,8 +132,8 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
@@ -150,8 +150,8 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the invitedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInvitedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setInvitedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.invitedBy = value;
     }
     /**
@@ -159,8 +159,8 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -168,8 +168,8 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the redeemedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRedeemedBy(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRedeemedBy(@jakarta.annotation.Nullable final String value) {
         this.redeemedBy = value;
     }
     /**
@@ -177,8 +177,8 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the signInRequired property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSignInRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSignInRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.signInRequired = value;
     }
 }

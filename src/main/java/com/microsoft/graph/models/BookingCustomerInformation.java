@@ -43,7 +43,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * Instantiates a new bookingCustomerInformation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BookingCustomerInformation() {
         super();
         this.setOdataType("#microsoft.graph.bookingCustomerInformation");
@@ -53,8 +53,8 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a bookingCustomerInformation
      */
-    @javax.annotation.Nonnull
-    public static BookingCustomerInformation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BookingCustomerInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BookingCustomerInformation();
     }
@@ -62,7 +62,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * Gets the customerId property value. The ID of the bookingCustomer for this appointment. If no ID is specified when an appointment is created, then a new bookingCustomer object is created. Once set, you should consider the customerId immutable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomerId() {
         return this.customerId;
     }
@@ -70,7 +70,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * Gets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment
      * @return a bookingQuestionAnswer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<BookingQuestionAnswer> getCustomQuestionAnswers() {
         return this.customQuestionAnswers;
     }
@@ -78,7 +78,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * Gets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmailAddress() {
         return this.emailAddress;
     }
@@ -86,7 +86,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("customerId", (n) -> { this.setCustomerId(n.getStringValue()); });
@@ -103,7 +103,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * Gets the location property value. Represents location information for thebookingCustomerwho is booking the appointment.
      * @return a location
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Location getLocation() {
         return this.location;
     }
@@ -111,7 +111,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * Gets the name property value. The customer's name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -119,7 +119,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * Gets the notes property value. Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID. You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by the customerId.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNotes() {
         return this.notes;
     }
@@ -127,7 +127,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * Gets the phone property value. The customer's phone number.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPhone() {
         return this.phone;
     }
@@ -135,7 +135,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * Gets the timeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTimeZone() {
         return this.timeZone;
     }
@@ -144,8 +144,8 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("customerId", this.getCustomerId());
@@ -162,8 +162,8 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the customerId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomerId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomerId(@jakarta.annotation.Nullable final String value) {
         this.customerId = value;
     }
     /**
@@ -171,8 +171,8 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the customQuestionAnswers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomQuestionAnswers(@javax.annotation.Nullable final java.util.List<BookingQuestionAnswer> value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomQuestionAnswers(@jakarta.annotation.Nullable final java.util.List<BookingQuestionAnswer> value) {
         this.customQuestionAnswers = value;
     }
     /**
@@ -180,8 +180,8 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.emailAddress = value;
     }
     /**
@@ -189,8 +189,8 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the location property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocation(@javax.annotation.Nullable final Location value) {
+    @jakarta.annotation.Nonnull
+    public void setLocation(@jakarta.annotation.Nullable final Location value) {
         this.location = value;
     }
     /**
@@ -198,8 +198,8 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -207,8 +207,8 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the notes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotes(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNotes(@jakarta.annotation.Nullable final String value) {
         this.notes = value;
     }
     /**
@@ -216,8 +216,8 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the phone property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhone(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPhone(@jakarta.annotation.Nullable final String value) {
         this.phone = value;
     }
     /**
@@ -225,8 +225,8 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the timeZone property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimeZone(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTimeZone(@jakarta.annotation.Nullable final String value) {
         this.timeZone = value;
     }
 }

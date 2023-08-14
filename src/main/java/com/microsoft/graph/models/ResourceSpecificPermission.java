@@ -41,7 +41,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * Instantiates a new resourceSpecificPermission and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResourceSpecificPermission() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -50,8 +50,8 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a resourceSpecificPermission
      */
-    @javax.annotation.Nonnull
-    public static ResourceSpecificPermission createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ResourceSpecificPermission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ResourceSpecificPermission();
     }
@@ -59,7 +59,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -67,7 +67,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * Gets the description property value. Describes the level of access that the resource-specific permission represents.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -75,7 +75,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * Gets the displayName property value. The display name for the resource-specific permission.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -83,7 +83,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -98,7 +98,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * Gets the id property value. The unique identifier for the resource-specific application permission.
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getId() {
         return this.id;
     }
@@ -106,7 +106,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * Gets the isEnabled property value. Indicates whether the permission is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
@@ -114,7 +114,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -122,7 +122,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * Gets the value property value. The value of the permission.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getValue() {
         return this.value;
     }
@@ -131,8 +131,8 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -147,8 +147,8 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -156,8 +156,8 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -165,8 +165,8 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -174,8 +174,8 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final UUID value) {
         this.id = value;
     }
     /**
@@ -183,8 +183,8 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
@@ -192,8 +192,8 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -201,8 +201,8 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }
 }

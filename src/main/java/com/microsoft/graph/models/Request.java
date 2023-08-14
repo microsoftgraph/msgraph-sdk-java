@@ -36,7 +36,7 @@ public class Request extends Entity implements Parsable {
      * Instantiates a new request and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Request() {
         super();
     }
@@ -45,8 +45,8 @@ public class Request extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a request
      */
-    @javax.annotation.Nonnull
-    public static Request createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Request createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -63,7 +63,7 @@ public class Request extends Entity implements Parsable {
      * Gets the approvalId property value. The identifier of the approval of the request.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getApprovalId() {
         return this.approvalId;
     }
@@ -71,7 +71,7 @@ public class Request extends Entity implements Parsable {
      * Gets the completedDateTime property value. The request completion date time.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
         return this.completedDateTime;
     }
@@ -79,7 +79,7 @@ public class Request extends Entity implements Parsable {
      * Gets the createdBy property value. The principal that created the request.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -87,7 +87,7 @@ public class Request extends Entity implements Parsable {
      * Gets the createdDateTime property value. The request creation date time.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -95,7 +95,7 @@ public class Request extends Entity implements Parsable {
      * Gets the customData property value. Free text field to define any custom data for the request. Not used.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomData() {
         return this.customData;
     }
@@ -103,7 +103,7 @@ public class Request extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("approvalId", (n) -> { this.setApprovalId(n.getStringValue()); });
@@ -118,7 +118,7 @@ public class Request extends Entity implements Parsable {
      * Gets the status property value. The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStatus() {
         return this.status;
     }
@@ -127,8 +127,8 @@ public class Request extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("approvalId", this.getApprovalId());
@@ -143,8 +143,8 @@ public class Request extends Entity implements Parsable {
      * @param value Value to set for the approvalId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApprovalId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setApprovalId(@jakarta.annotation.Nullable final String value) {
         this.approvalId = value;
     }
     /**
@@ -152,8 +152,8 @@ public class Request extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completedDateTime = value;
     }
     /**
@@ -161,8 +161,8 @@ public class Request extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
@@ -170,8 +170,8 @@ public class Request extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -179,8 +179,8 @@ public class Request extends Entity implements Parsable {
      * @param value Value to set for the customData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomData(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomData(@jakarta.annotation.Nullable final String value) {
         this.customData = value;
     }
     /**
@@ -188,8 +188,8 @@ public class Request extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final String value) {
         this.status = value;
     }
 }

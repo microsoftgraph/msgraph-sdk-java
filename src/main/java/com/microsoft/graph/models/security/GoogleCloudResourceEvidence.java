@@ -35,17 +35,18 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * Instantiates a new googleCloudResourceEvidence and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GoogleCloudResourceEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.googleCloudResourceEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a googleCloudResourceEvidence
      */
-    @javax.annotation.Nonnull
-    public static GoogleCloudResourceEvidence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GoogleCloudResourceEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GoogleCloudResourceEvidence();
     }
@@ -53,7 +54,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("location", (n) -> { this.setLocation(n.getStringValue()); });
@@ -68,7 +69,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * Gets the location property value. The zone or region where the resource is located.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLocation() {
         return this.location;
     }
@@ -76,7 +77,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * Gets the locationType property value. The type of location. Possible values are: unknown, regional, zonal, global, unknownFutureValue.
      * @return a googleCloudLocationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GoogleCloudLocationType getLocationType() {
         return this.locationType;
     }
@@ -84,7 +85,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * Gets the projectId property value. The Google project ID as defined by the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProjectId() {
         return this.projectId;
     }
@@ -92,7 +93,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * Gets the projectNumber property value. The project number assigned by Google.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getProjectNumber() {
         return this.projectNumber;
     }
@@ -100,7 +101,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * Gets the resourceName property value. The name of the resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceName() {
         return this.resourceName;
     }
@@ -108,7 +109,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * Gets the resourceType property value. The type of the resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceType() {
         return this.resourceType;
     }
@@ -117,8 +118,8 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("location", this.getLocation());
@@ -133,8 +134,8 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * @param value Value to set for the location property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocation(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLocation(@jakarta.annotation.Nullable final String value) {
         this.location = value;
     }
     /**
@@ -142,8 +143,8 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * @param value Value to set for the locationType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocationType(@javax.annotation.Nullable final GoogleCloudLocationType value) {
+    @jakarta.annotation.Nonnull
+    public void setLocationType(@jakarta.annotation.Nullable final GoogleCloudLocationType value) {
         this.locationType = value;
     }
     /**
@@ -151,8 +152,8 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * @param value Value to set for the projectId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProjectId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProjectId(@jakarta.annotation.Nullable final String value) {
         this.projectId = value;
     }
     /**
@@ -160,8 +161,8 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * @param value Value to set for the projectNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProjectNumber(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setProjectNumber(@jakarta.annotation.Nullable final Long value) {
         this.projectNumber = value;
     }
     /**
@@ -169,8 +170,8 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * @param value Value to set for the resourceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceName(@jakarta.annotation.Nullable final String value) {
         this.resourceName = value;
     }
     /**
@@ -178,8 +179,8 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
      * @param value Value to set for the resourceType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceType(@jakarta.annotation.Nullable final String value) {
         this.resourceType = value;
     }
 }

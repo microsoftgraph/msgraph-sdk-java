@@ -28,7 +28,7 @@ public class ChecklistItem extends Entity implements Parsable {
      * Instantiates a new checklistItem and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChecklistItem() {
         super();
     }
@@ -37,8 +37,8 @@ public class ChecklistItem extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a checklistItem
      */
-    @javax.annotation.Nonnull
-    public static ChecklistItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ChecklistItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ChecklistItem();
     }
@@ -46,7 +46,7 @@ public class ChecklistItem extends Entity implements Parsable {
      * Gets the checkedDateTime property value. The date and time when the checklistItem was finished.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCheckedDateTime() {
         return this.checkedDateTime;
     }
@@ -54,7 +54,7 @@ public class ChecklistItem extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time when the checklistItem was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -62,7 +62,7 @@ public class ChecklistItem extends Entity implements Parsable {
      * Gets the displayName property value. Field indicating the title of checklistItem.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -70,7 +70,7 @@ public class ChecklistItem extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("checkedDateTime", (n) -> { this.setCheckedDateTime(n.getOffsetDateTimeValue()); });
@@ -83,7 +83,7 @@ public class ChecklistItem extends Entity implements Parsable {
      * Gets the isChecked property value. State indicating whether the item is checked off or not.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsChecked() {
         return this.isChecked;
     }
@@ -92,8 +92,8 @@ public class ChecklistItem extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("checkedDateTime", this.getCheckedDateTime());
@@ -106,8 +106,8 @@ public class ChecklistItem extends Entity implements Parsable {
      * @param value Value to set for the checkedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCheckedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCheckedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.checkedDateTime = value;
     }
     /**
@@ -115,8 +115,8 @@ public class ChecklistItem extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -124,8 +124,8 @@ public class ChecklistItem extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -133,8 +133,8 @@ public class ChecklistItem extends Entity implements Parsable {
      * @param value Value to set for the isChecked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsChecked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsChecked(@jakarta.annotation.Nullable final Boolean value) {
         this.isChecked = value;
     }
 }

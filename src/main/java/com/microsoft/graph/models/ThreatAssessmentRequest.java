@@ -44,7 +44,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * Instantiates a new threatAssessmentRequest and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ThreatAssessmentRequest() {
         super();
     }
@@ -53,8 +53,8 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a threatAssessmentRequest
      */
-    @javax.annotation.Nonnull
-    public static ThreatAssessmentRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ThreatAssessmentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -72,7 +72,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * Gets the category property value. The category property
      * @return a threatCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ThreatCategory getCategory() {
         return this.category;
     }
@@ -80,7 +80,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * Gets the contentType property value. The content type of threat assessment. Possible values are: mail, url, file.
      * @return a threatAssessmentContentType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ThreatAssessmentContentType getContentType() {
         return this.contentType;
     }
@@ -88,7 +88,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * Gets the createdBy property value. The threat assessment request creator.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -96,7 +96,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -104,7 +104,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * Gets the expectedAssessment property value. The expectedAssessment property
      * @return a threatExpectedAssessment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ThreatExpectedAssessment getExpectedAssessment() {
         return this.expectedAssessment;
     }
@@ -112,7 +112,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ThreatCategory.class)); });
@@ -129,7 +129,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * Gets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
      * @return a threatAssessmentRequestSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ThreatAssessmentRequestSource getRequestSource() {
         return this.requestSource;
     }
@@ -137,7 +137,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * Gets the results property value. A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
      * @return a threatAssessmentResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ThreatAssessmentResult> getResults() {
         return this.results;
     }
@@ -145,7 +145,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * Gets the status property value. The assessment process status. Possible values are: pending, completed.
      * @return a threatAssessmentStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ThreatAssessmentStatus getStatus() {
         return this.status;
     }
@@ -154,8 +154,8 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("category", this.getCategory());
@@ -172,8 +172,8 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory(@javax.annotation.Nullable final ThreatCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setCategory(@jakarta.annotation.Nullable final ThreatCategory value) {
         this.category = value;
     }
     /**
@@ -181,8 +181,8 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * @param value Value to set for the contentType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentType(@javax.annotation.Nullable final ThreatAssessmentContentType value) {
+    @jakarta.annotation.Nonnull
+    public void setContentType(@jakarta.annotation.Nullable final ThreatAssessmentContentType value) {
         this.contentType = value;
     }
     /**
@@ -190,8 +190,8 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
@@ -199,8 +199,8 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -208,8 +208,8 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * @param value Value to set for the expectedAssessment property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpectedAssessment(@javax.annotation.Nullable final ThreatExpectedAssessment value) {
+    @jakarta.annotation.Nonnull
+    public void setExpectedAssessment(@jakarta.annotation.Nullable final ThreatExpectedAssessment value) {
         this.expectedAssessment = value;
     }
     /**
@@ -217,8 +217,8 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * @param value Value to set for the requestSource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestSource(@javax.annotation.Nullable final ThreatAssessmentRequestSource value) {
+    @jakarta.annotation.Nonnull
+    public void setRequestSource(@jakarta.annotation.Nullable final ThreatAssessmentRequestSource value) {
         this.requestSource = value;
     }
     /**
@@ -226,8 +226,8 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * @param value Value to set for the results property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResults(@javax.annotation.Nullable final java.util.List<ThreatAssessmentResult> value) {
+    @jakarta.annotation.Nonnull
+    public void setResults(@jakarta.annotation.Nullable final java.util.List<ThreatAssessmentResult> value) {
         this.results = value;
     }
     /**
@@ -235,8 +235,8 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final ThreatAssessmentStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final ThreatAssessmentStatus value) {
         this.status = value;
     }
 }

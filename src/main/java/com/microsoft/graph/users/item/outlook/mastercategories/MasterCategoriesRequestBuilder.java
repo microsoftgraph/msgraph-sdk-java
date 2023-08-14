@@ -26,17 +26,17 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity.
-     * @param outlookCategoryId Unique identifier of the item
+     * @param outlookCategoryId The unique identifier of outlookCategory
      * @return a OutlookCategoryItemRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public OutlookCategoryItemRequestBuilder byOutlookCategoryId(@javax.annotation.Nonnull final String outlookCategoryId) {
+    @jakarta.annotation.Nonnull
+    public OutlookCategoryItemRequestBuilder byOutlookCategoryId(@jakarta.annotation.Nonnull final String outlookCategoryId) {
         Objects.requireNonNull(outlookCategoryId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("outlookCategory%2Did", outlookCategoryId);
@@ -48,8 +48,8 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public MasterCategoriesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public MasterCategoriesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/masterCategories{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", pathParameters);
     }
     /**
@@ -58,16 +58,16 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public MasterCategoriesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public MasterCategoriesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/masterCategories{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
      * Get all the categories that have been defined for the user.
      * @return a CompletableFuture of outlookCategoryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookCategoryCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -85,10 +85,10 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
      * Get all the categories that have been defined for the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of outlookCategoryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookCategoryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookCategoryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -105,10 +105,10 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
      * Create an outlookCategory object in the user's master list of categories.
      * @param body The request body
      * @return a CompletableFuture of outlookCategory
-     * @see <a href="https://docs.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookCategory> post(@javax.annotation.Nonnull final OutlookCategory body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookCategory> post(@jakarta.annotation.Nonnull final OutlookCategory body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -126,10 +126,10 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of outlookCategory
-     * @see <a href="https://docs.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookCategory> post(@javax.annotation.Nonnull final OutlookCategory body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookCategory> post(@jakarta.annotation.Nonnull final OutlookCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -147,7 +147,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
      * Get all the categories that have been defined for the user.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -156,8 +156,8 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -177,8 +177,8 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final OutlookCategory body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final OutlookCategory body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -187,8 +187,8 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final OutlookCategory body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final OutlookCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -212,37 +212,37 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
          * Include count of items
          */
         @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Boolean count;
         /**
          * Filter items by property values
          */
         @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String filter;
         /**
          * Order items by property values
          */
         @QueryParameter(name = "%24orderby")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] orderby;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
         /**
          * Skip the first n items
          */
         @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer skip;
         /**
          * Show only the first n items
          */
         @QueryParameter(name = "%24top")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer top;
     }
     /**
@@ -252,7 +252,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

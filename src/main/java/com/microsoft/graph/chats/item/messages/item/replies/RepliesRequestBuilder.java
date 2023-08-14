@@ -27,24 +27,24 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the delta method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the replies property of the microsoft.graph.chatMessage entity.
-     * @param chatMessageId1 Unique identifier of the item
+     * @param chatMessageId1 The unique identifier of chatMessage
      * @return a ChatMessageItemRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public ChatMessageItemRequestBuilder byChatMessageId1(@javax.annotation.Nonnull final String chatMessageId1) {
+    @jakarta.annotation.Nonnull
+    public ChatMessageItemRequestBuilder byChatMessageId1(@jakarta.annotation.Nonnull final String chatMessageId1) {
         Objects.requireNonNull(chatMessageId1);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("chatMessage%2Did1", chatMessageId1);
@@ -56,8 +56,8 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public RepliesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public RepliesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/messages/{chatMessage%2Did}/replies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
@@ -66,16 +66,16 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public RepliesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public RepliesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/messages/{chatMessage%2Did}/replies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
      * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
      * @return a CompletableFuture of chatMessageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-list-replies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-list-replies?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessageCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -93,10 +93,10 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
      * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chatMessageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-list-replies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-list-replies?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ChatMessageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessageCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -110,13 +110,13 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Send a new reply to a chatMessage in a specified channel.
+     * Create a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @return a CompletableFuture of chatMessage
-     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ChatMessage> post(@javax.annotation.Nonnull final ChatMessage body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessage> post(@jakarta.annotation.Nonnull final ChatMessage body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -130,14 +130,14 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Send a new reply to a chatMessage in a specified channel.
+     * Create a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chatMessage
-     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ChatMessage> post(@javax.annotation.Nonnull final ChatMessage body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessage> post(@jakarta.annotation.Nonnull final ChatMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -155,7 +155,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
      * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -164,8 +164,8 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -181,22 +181,22 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Send a new reply to a chatMessage in a specified channel.
+     * Create a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final ChatMessage body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ChatMessage body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Send a new reply to a chatMessage in a specified channel.
+     * Create a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final ChatMessage body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ChatMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -220,49 +220,49 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
          * Include count of items
          */
         @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Boolean count;
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Filter items by property values
          */
         @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String filter;
         /**
          * Order items by property values
          */
         @QueryParameter(name = "%24orderby")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] orderby;
         /**
          * Search items by search phrases
          */
         @QueryParameter(name = "%24search")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String search;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
         /**
          * Skip the first n items
          */
         @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer skip;
         /**
          * Show only the first n items
          */
         @QueryParameter(name = "%24top")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer top;
     }
     /**
@@ -272,7 +272,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

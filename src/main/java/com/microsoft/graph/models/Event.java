@@ -180,7 +180,7 @@ public class Event extends OutlookItem implements Parsable {
      * Instantiates a new event and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Event() {
         super();
         this.setOdataType("#microsoft.graph.event");
@@ -190,8 +190,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a event
      */
-    @javax.annotation.Nonnull
-    public static Event createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Event createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Event();
     }
@@ -199,7 +199,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowNewTimeProposals() {
         return this.allowNewTimeProposals;
     }
@@ -207,7 +207,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the attachments property value. The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
      * @return a attachment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Attachment> getAttachments() {
         return this.attachments;
     }
@@ -215,7 +215,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the attendees property value. The collection of attendees for the event.
      * @return a attendee
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Attendee> getAttendees() {
         return this.attendees;
     }
@@ -223,7 +223,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the body property value. The body of the message associated with the event. It can be in HTML or text format.
      * @return a itemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemBody getBody() {
         return this.body;
     }
@@ -231,7 +231,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the bodyPreview property value. The preview of the message associated with the event. It is in text format.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBodyPreview() {
         return this.bodyPreview;
     }
@@ -239,7 +239,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the calendar property value. The calendar that contains the event. Navigation property. Read-only.
      * @return a calendar
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Calendar getCalendar() {
         return this.calendar;
     }
@@ -247,7 +247,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the end property value. The date, time, and time zone that the event ends. By default, the end time is in UTC.
      * @return a dateTimeTimeZone
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DateTimeTimeZone getEnd() {
         return this.end;
     }
@@ -255,7 +255,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the extensions property value. The collection of open extensions defined for the event. Nullable.
      * @return a extension
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
         return this.extensions;
     }
@@ -263,7 +263,7 @@ public class Event extends OutlookItem implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowNewTimeProposals", (n) -> { this.setAllowNewTimeProposals(n.getBooleanValue()); });
@@ -314,7 +314,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the hasAttachments property value. Set to true if the event has attachments.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
         return this.hasAttachments;
     }
@@ -322,7 +322,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the hideAttendees property value. When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHideAttendees() {
         return this.hideAttendees;
     }
@@ -330,7 +330,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the iCalUId property value. A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getICalUId() {
         return this.iCalUId;
     }
@@ -338,7 +338,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the importance property value. The importance property
      * @return a importance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Importance getImportance() {
         return this.importance;
     }
@@ -346,7 +346,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
      * @return a event
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Event> getInstances() {
         return this.instances;
     }
@@ -354,7 +354,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the isAllDay property value. The isAllDay property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAllDay() {
         return this.isAllDay;
     }
@@ -362,7 +362,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the isCancelled property value. The isCancelled property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsCancelled() {
         return this.isCancelled;
     }
@@ -370,7 +370,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the isDraft property value. The isDraft property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDraft() {
         return this.isDraft;
     }
@@ -378,7 +378,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the isOnlineMeeting property value. The isOnlineMeeting property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsOnlineMeeting() {
         return this.isOnlineMeeting;
     }
@@ -386,7 +386,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the isOrganizer property value. The isOrganizer property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsOrganizer() {
         return this.isOrganizer;
     }
@@ -394,7 +394,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the isReminderOn property value. The isReminderOn property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsReminderOn() {
         return this.isReminderOn;
     }
@@ -402,7 +402,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the location property value. The location property
      * @return a location
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Location getLocation() {
         return this.location;
     }
@@ -410,7 +410,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the locations property value. The locations property
      * @return a location
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Location> getLocations() {
         return this.locations;
     }
@@ -418,7 +418,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the event. Read-only. Nullable.
      * @return a multiValueLegacyExtendedProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
         return this.multiValueExtendedProperties;
     }
@@ -426,7 +426,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the onlineMeeting property value. The onlineMeeting property
      * @return a onlineMeetingInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnlineMeetingInfo getOnlineMeeting() {
         return this.onlineMeeting;
     }
@@ -434,7 +434,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the onlineMeetingProvider property value. The onlineMeetingProvider property
      * @return a onlineMeetingProviderType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnlineMeetingProviderType getOnlineMeetingProvider() {
         return this.onlineMeetingProvider;
     }
@@ -442,7 +442,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the onlineMeetingUrl property value. The onlineMeetingUrl property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOnlineMeetingUrl() {
         return this.onlineMeetingUrl;
     }
@@ -450,7 +450,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the organizer property value. The organizer property
      * @return a recipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Recipient getOrganizer() {
         return this.organizer;
     }
@@ -458,7 +458,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the originalEndTimeZone property value. The originalEndTimeZone property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOriginalEndTimeZone() {
         return this.originalEndTimeZone;
     }
@@ -466,7 +466,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the originalStart property value. The originalStart property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getOriginalStart() {
         return this.originalStart;
     }
@@ -474,7 +474,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the originalStartTimeZone property value. The originalStartTimeZone property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOriginalStartTimeZone() {
         return this.originalStartTimeZone;
     }
@@ -482,7 +482,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the recurrence property value. The recurrence property
      * @return a patternedRecurrence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PatternedRecurrence getRecurrence() {
         return this.recurrence;
     }
@@ -490,7 +490,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the reminderMinutesBeforeStart property value. The reminderMinutesBeforeStart property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getReminderMinutesBeforeStart() {
         return this.reminderMinutesBeforeStart;
     }
@@ -498,7 +498,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the responseRequested property value. The responseRequested property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getResponseRequested() {
         return this.responseRequested;
     }
@@ -506,7 +506,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the responseStatus property value. The responseStatus property
      * @return a responseStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResponseStatus getResponseStatus() {
         return this.responseStatus;
     }
@@ -514,7 +514,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the sensitivity property value. The sensitivity property
      * @return a sensitivity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Sensitivity getSensitivity() {
         return this.sensitivity;
     }
@@ -522,7 +522,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the seriesMasterId property value. The seriesMasterId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSeriesMasterId() {
         return this.seriesMasterId;
     }
@@ -530,7 +530,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the showAs property value. The showAs property
      * @return a freeBusyStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FreeBusyStatus getShowAs() {
         return this.showAs;
     }
@@ -538,7 +538,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the event. Read-only. Nullable.
      * @return a singleValueLegacyExtendedProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
         return this.singleValueExtendedProperties;
     }
@@ -546,7 +546,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the start property value. The start property
      * @return a dateTimeTimeZone
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DateTimeTimeZone getStart() {
         return this.start;
     }
@@ -554,7 +554,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the subject property value. The subject property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubject() {
         return this.subject;
     }
@@ -562,7 +562,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the transactionId property value. The transactionId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTransactionId() {
         return this.transactionId;
     }
@@ -570,7 +570,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the type property value. The type property
      * @return a eventType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EventType getType() {
         return this.type;
     }
@@ -578,7 +578,7 @@ public class Event extends OutlookItem implements Parsable {
      * Gets the webLink property value. The webLink property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebLink() {
         return this.webLink;
     }
@@ -587,8 +587,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("allowNewTimeProposals", this.getAllowNewTimeProposals());
@@ -639,8 +639,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the allowNewTimeProposals property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowNewTimeProposals(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowNewTimeProposals(@jakarta.annotation.Nullable final Boolean value) {
         this.allowNewTimeProposals = value;
     }
     /**
@@ -648,8 +648,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the attachments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttachments(@javax.annotation.Nullable final java.util.List<Attachment> value) {
+    @jakarta.annotation.Nonnull
+    public void setAttachments(@jakarta.annotation.Nullable final java.util.List<Attachment> value) {
         this.attachments = value;
     }
     /**
@@ -657,8 +657,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the attendees property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttendees(@javax.annotation.Nullable final java.util.List<Attendee> value) {
+    @jakarta.annotation.Nonnull
+    public void setAttendees(@jakarta.annotation.Nullable final java.util.List<Attendee> value) {
         this.attendees = value;
     }
     /**
@@ -666,8 +666,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the body property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBody(@javax.annotation.Nullable final ItemBody value) {
+    @jakarta.annotation.Nonnull
+    public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
         this.body = value;
     }
     /**
@@ -675,8 +675,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the bodyPreview property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBodyPreview(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setBodyPreview(@jakarta.annotation.Nullable final String value) {
         this.bodyPreview = value;
     }
     /**
@@ -684,8 +684,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the calendar property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCalendar(@javax.annotation.Nullable final Calendar value) {
+    @jakarta.annotation.Nonnull
+    public void setCalendar(@jakarta.annotation.Nullable final Calendar value) {
         this.calendar = value;
     }
     /**
@@ -693,8 +693,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the end property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnd(@javax.annotation.Nullable final DateTimeTimeZone value) {
+    @jakarta.annotation.Nonnull
+    public void setEnd(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.end = value;
     }
     /**
@@ -702,8 +702,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
+    @jakarta.annotation.Nonnull
+    public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
         this.extensions = value;
     }
     /**
@@ -711,8 +711,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
         this.hasAttachments = value;
     }
     /**
@@ -720,8 +720,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the hideAttendees property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHideAttendees(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setHideAttendees(@jakarta.annotation.Nullable final Boolean value) {
         this.hideAttendees = value;
     }
     /**
@@ -729,8 +729,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the iCalUId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setICalUId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setICalUId(@jakarta.annotation.Nullable final String value) {
         this.iCalUId = value;
     }
     /**
@@ -738,8 +738,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the importance property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImportance(@javax.annotation.Nullable final Importance value) {
+    @jakarta.annotation.Nonnull
+    public void setImportance(@jakarta.annotation.Nullable final Importance value) {
         this.importance = value;
     }
     /**
@@ -747,8 +747,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the instances property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstances(@javax.annotation.Nullable final java.util.List<Event> value) {
+    @jakarta.annotation.Nonnull
+    public void setInstances(@jakarta.annotation.Nullable final java.util.List<Event> value) {
         this.instances = value;
     }
     /**
@@ -756,8 +756,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the isAllDay property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAllDay(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsAllDay(@jakarta.annotation.Nullable final Boolean value) {
         this.isAllDay = value;
     }
     /**
@@ -765,8 +765,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the isCancelled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsCancelled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsCancelled(@jakarta.annotation.Nullable final Boolean value) {
         this.isCancelled = value;
     }
     /**
@@ -774,8 +774,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the isDraft property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDraft(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsDraft(@jakarta.annotation.Nullable final Boolean value) {
         this.isDraft = value;
     }
     /**
@@ -783,8 +783,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the isOnlineMeeting property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsOnlineMeeting(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsOnlineMeeting(@jakarta.annotation.Nullable final Boolean value) {
         this.isOnlineMeeting = value;
     }
     /**
@@ -792,8 +792,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the isOrganizer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsOrganizer(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsOrganizer(@jakarta.annotation.Nullable final Boolean value) {
         this.isOrganizer = value;
     }
     /**
@@ -801,8 +801,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the isReminderOn property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsReminderOn(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsReminderOn(@jakarta.annotation.Nullable final Boolean value) {
         this.isReminderOn = value;
     }
     /**
@@ -810,8 +810,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the location property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocation(@javax.annotation.Nullable final Location value) {
+    @jakarta.annotation.Nonnull
+    public void setLocation(@jakarta.annotation.Nullable final Location value) {
         this.location = value;
     }
     /**
@@ -819,8 +819,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the locations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocations(@javax.annotation.Nullable final java.util.List<Location> value) {
+    @jakarta.annotation.Nonnull
+    public void setLocations(@jakarta.annotation.Nullable final java.util.List<Location> value) {
         this.locations = value;
     }
     /**
@@ -828,8 +828,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the multiValueExtendedProperties property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
+    @jakarta.annotation.Nonnull
+    public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this.multiValueExtendedProperties = value;
     }
     /**
@@ -837,8 +837,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the onlineMeeting property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnlineMeeting(@javax.annotation.Nullable final OnlineMeetingInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setOnlineMeeting(@jakarta.annotation.Nullable final OnlineMeetingInfo value) {
         this.onlineMeeting = value;
     }
     /**
@@ -846,8 +846,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the onlineMeetingProvider property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnlineMeetingProvider(@javax.annotation.Nullable final OnlineMeetingProviderType value) {
+    @jakarta.annotation.Nonnull
+    public void setOnlineMeetingProvider(@jakarta.annotation.Nullable final OnlineMeetingProviderType value) {
         this.onlineMeetingProvider = value;
     }
     /**
@@ -855,8 +855,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the onlineMeetingUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnlineMeetingUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOnlineMeetingUrl(@jakarta.annotation.Nullable final String value) {
         this.onlineMeetingUrl = value;
     }
     /**
@@ -864,8 +864,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the organizer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrganizer(@javax.annotation.Nullable final Recipient value) {
+    @jakarta.annotation.Nonnull
+    public void setOrganizer(@jakarta.annotation.Nullable final Recipient value) {
         this.organizer = value;
     }
     /**
@@ -873,8 +873,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the originalEndTimeZone property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOriginalEndTimeZone(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOriginalEndTimeZone(@jakarta.annotation.Nullable final String value) {
         this.originalEndTimeZone = value;
     }
     /**
@@ -882,8 +882,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the originalStart property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOriginalStart(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setOriginalStart(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.originalStart = value;
     }
     /**
@@ -891,8 +891,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the originalStartTimeZone property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOriginalStartTimeZone(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOriginalStartTimeZone(@jakarta.annotation.Nullable final String value) {
         this.originalStartTimeZone = value;
     }
     /**
@@ -900,8 +900,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the recurrence property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecurrence(@javax.annotation.Nullable final PatternedRecurrence value) {
+    @jakarta.annotation.Nonnull
+    public void setRecurrence(@jakarta.annotation.Nullable final PatternedRecurrence value) {
         this.recurrence = value;
     }
     /**
@@ -909,8 +909,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the reminderMinutesBeforeStart property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReminderMinutesBeforeStart(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setReminderMinutesBeforeStart(@jakarta.annotation.Nullable final Integer value) {
         this.reminderMinutesBeforeStart = value;
     }
     /**
@@ -918,8 +918,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the responseRequested property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResponseRequested(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setResponseRequested(@jakarta.annotation.Nullable final Boolean value) {
         this.responseRequested = value;
     }
     /**
@@ -927,8 +927,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the responseStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResponseStatus(@javax.annotation.Nullable final ResponseStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setResponseStatus(@jakarta.annotation.Nullable final ResponseStatus value) {
         this.responseStatus = value;
     }
     /**
@@ -936,8 +936,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the sensitivity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSensitivity(@javax.annotation.Nullable final Sensitivity value) {
+    @jakarta.annotation.Nonnull
+    public void setSensitivity(@jakarta.annotation.Nullable final Sensitivity value) {
         this.sensitivity = value;
     }
     /**
@@ -945,8 +945,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the seriesMasterId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSeriesMasterId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSeriesMasterId(@jakarta.annotation.Nullable final String value) {
         this.seriesMasterId = value;
     }
     /**
@@ -954,8 +954,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the showAs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowAs(@javax.annotation.Nullable final FreeBusyStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setShowAs(@jakarta.annotation.Nullable final FreeBusyStatus value) {
         this.showAs = value;
     }
     /**
@@ -963,8 +963,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the singleValueExtendedProperties property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
+    @jakarta.annotation.Nonnull
+    public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this.singleValueExtendedProperties = value;
     }
     /**
@@ -972,8 +972,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the start property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStart(@javax.annotation.Nullable final DateTimeTimeZone value) {
+    @jakarta.annotation.Nonnull
+    public void setStart(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.start = value;
     }
     /**
@@ -981,8 +981,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
     /**
@@ -990,8 +990,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the transactionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTransactionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTransactionId(@jakarta.annotation.Nullable final String value) {
         this.transactionId = value;
     }
     /**
@@ -999,8 +999,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final EventType value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final EventType value) {
         this.type = value;
     }
     /**
@@ -1008,8 +1008,8 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the webLink property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebLink(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWebLink(@jakarta.annotation.Nullable final String value) {
         this.webLink = value;
     }
 }

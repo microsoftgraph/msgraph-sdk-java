@@ -48,7 +48,7 @@ public class RiskyUser extends Entity implements Parsable {
      * Instantiates a new riskyUser and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RiskyUser() {
         super();
     }
@@ -57,8 +57,8 @@ public class RiskyUser extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a riskyUser
      */
-    @javax.annotation.Nonnull
-    public static RiskyUser createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RiskyUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -73,7 +73,7 @@ public class RiskyUser extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("history", (n) -> { this.setHistory(n.getCollectionOfObjectValues(RiskyUserHistoryItem::createFromDiscriminatorValue)); });
@@ -91,7 +91,7 @@ public class RiskyUser extends Entity implements Parsable {
      * Gets the history property value. The activity related to user risk level change
      * @return a riskyUserHistoryItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<RiskyUserHistoryItem> getHistory() {
         return this.history;
     }
@@ -99,7 +99,7 @@ public class RiskyUser extends Entity implements Parsable {
      * Gets the isDeleted property value. Indicates whether the user is deleted. Possible values are: true, false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
         return this.isDeleted;
     }
@@ -107,7 +107,7 @@ public class RiskyUser extends Entity implements Parsable {
      * Gets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsProcessing() {
         return this.isProcessing;
     }
@@ -115,7 +115,7 @@ public class RiskyUser extends Entity implements Parsable {
      * Gets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      * @return a riskDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RiskDetail getRiskDetail() {
         return this.riskDetail;
     }
@@ -123,7 +123,7 @@ public class RiskyUser extends Entity implements Parsable {
      * Gets the riskLastUpdatedDateTime property value. The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRiskLastUpdatedDateTime() {
         return this.riskLastUpdatedDateTime;
     }
@@ -131,7 +131,7 @@ public class RiskyUser extends Entity implements Parsable {
      * Gets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
      * @return a riskLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RiskLevel getRiskLevel() {
         return this.riskLevel;
     }
@@ -139,7 +139,7 @@ public class RiskyUser extends Entity implements Parsable {
      * Gets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @return a riskState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RiskState getRiskState() {
         return this.riskState;
     }
@@ -147,7 +147,7 @@ public class RiskyUser extends Entity implements Parsable {
      * Gets the userDisplayName property value. Risky user display name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserDisplayName() {
         return this.userDisplayName;
     }
@@ -155,7 +155,7 @@ public class RiskyUser extends Entity implements Parsable {
      * Gets the userPrincipalName property value. Risky user principal name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -164,8 +164,8 @@ public class RiskyUser extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("history", this.getHistory());
@@ -183,8 +183,8 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the history property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHistory(@javax.annotation.Nullable final java.util.List<RiskyUserHistoryItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setHistory(@jakarta.annotation.Nullable final java.util.List<RiskyUserHistoryItem> value) {
         this.history = value;
     }
     /**
@@ -192,8 +192,8 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the isDeleted property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDeleted(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsDeleted(@jakarta.annotation.Nullable final Boolean value) {
         this.isDeleted = value;
     }
     /**
@@ -201,8 +201,8 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the isProcessing property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsProcessing(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsProcessing(@jakarta.annotation.Nullable final Boolean value) {
         this.isProcessing = value;
     }
     /**
@@ -210,8 +210,8 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the riskDetail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRiskDetail(@javax.annotation.Nullable final RiskDetail value) {
+    @jakarta.annotation.Nonnull
+    public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
         this.riskDetail = value;
     }
     /**
@@ -219,8 +219,8 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the riskLastUpdatedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRiskLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setRiskLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.riskLastUpdatedDateTime = value;
     }
     /**
@@ -228,8 +228,8 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the riskLevel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRiskLevel(@javax.annotation.Nullable final RiskLevel value) {
+    @jakarta.annotation.Nonnull
+    public void setRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {
         this.riskLevel = value;
     }
     /**
@@ -237,8 +237,8 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the riskState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRiskState(@javax.annotation.Nullable final RiskState value) {
+    @jakarta.annotation.Nonnull
+    public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {
         this.riskState = value;
     }
     /**
@@ -246,8 +246,8 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
@@ -255,8 +255,8 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

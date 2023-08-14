@@ -19,7 +19,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
      * Instantiates a new joinMeetingIdMeetingInfo and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public JoinMeetingIdMeetingInfo() {
         super();
         this.setOdataType("#microsoft.graph.joinMeetingIdMeetingInfo");
@@ -29,8 +29,8 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a joinMeetingIdMeetingInfo
      */
-    @javax.annotation.Nonnull
-    public static JoinMeetingIdMeetingInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static JoinMeetingIdMeetingInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new JoinMeetingIdMeetingInfo();
     }
@@ -38,7 +38,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("joinMeetingId", (n) -> { this.setJoinMeetingId(n.getStringValue()); });
@@ -49,7 +49,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
      * Gets the joinMeetingId property value. The ID used to join the meeting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getJoinMeetingId() {
         return this.joinMeetingId;
     }
@@ -57,7 +57,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
      * Gets the passcode property value. The passcode used to join the meeting. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPasscode() {
         return this.passcode;
     }
@@ -66,8 +66,8 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("joinMeetingId", this.getJoinMeetingId());
@@ -78,8 +78,8 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
      * @param value Value to set for the joinMeetingId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJoinMeetingId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setJoinMeetingId(@jakarta.annotation.Nullable final String value) {
         this.joinMeetingId = value;
     }
     /**
@@ -87,8 +87,8 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
      * @param value Value to set for the passcode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasscode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPasscode(@jakarta.annotation.Nullable final String value) {
         this.passcode = value;
     }
 }

@@ -12,7 +12,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of application entities.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
@@ -22,8 +22,8 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public TokenLifetimePolicyItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public TokenLifetimePolicyItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/tokenLifetimePolicies/{tokenLifetimePolicy%2Did}", pathParameters);
     }
     /**
@@ -32,8 +32,8 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public TokenLifetimePolicyItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public TokenLifetimePolicyItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/tokenLifetimePolicies/{tokenLifetimePolicy%2Did}", rawUrl);
     }
 }

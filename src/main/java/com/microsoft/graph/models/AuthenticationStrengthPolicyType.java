@@ -11,10 +11,10 @@ public enum AuthenticationStrengthPolicyType implements ValuedEnum {
     AuthenticationStrengthPolicyType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AuthenticationStrengthPolicyType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AuthenticationStrengthPolicyType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "builtIn": return BuiltIn;

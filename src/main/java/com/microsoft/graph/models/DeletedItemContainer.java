@@ -16,7 +16,7 @@ public class DeletedItemContainer extends Entity implements Parsable {
      * Instantiates a new deletedItemContainer and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeletedItemContainer() {
         super();
     }
@@ -25,8 +25,8 @@ public class DeletedItemContainer extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deletedItemContainer
      */
-    @javax.annotation.Nonnull
-    public static DeletedItemContainer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeletedItemContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeletedItemContainer();
     }
@@ -34,7 +34,7 @@ public class DeletedItemContainer extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("workflows", (n) -> { this.setWorkflows(n.getCollectionOfObjectValues(Workflow::createFromDiscriminatorValue)); });
@@ -44,7 +44,7 @@ public class DeletedItemContainer extends Entity implements Parsable {
      * Gets the workflows property value. Deleted workflows that end up in the deletedItemsContainer.
      * @return a workflow
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Workflow> getWorkflows() {
         return this.workflows;
     }
@@ -53,8 +53,8 @@ public class DeletedItemContainer extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("workflows", this.getWorkflows());
@@ -64,8 +64,8 @@ public class DeletedItemContainer extends Entity implements Parsable {
      * @param value Value to set for the workflows property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkflows(@javax.annotation.Nullable final java.util.List<Workflow> value) {
+    @jakarta.annotation.Nonnull
+    public void setWorkflows(@jakarta.annotation.Nullable final java.util.List<Workflow> value) {
         this.workflows = value;
     }
 }

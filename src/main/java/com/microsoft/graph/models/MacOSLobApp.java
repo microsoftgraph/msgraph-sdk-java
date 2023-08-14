@@ -50,7 +50,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * Instantiates a new macOSLobApp and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSLobApp() {
         super();
         this.setOdataType("#microsoft.graph.macOSLobApp");
@@ -60,8 +60,8 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a macOSLobApp
      */
-    @javax.annotation.Nonnull
-    public static MacOSLobApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MacOSLobApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MacOSLobApp();
     }
@@ -69,7 +69,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * Gets the buildNumber property value. The build number of the package. This should match the package CFBundleShortVersionString of the .pkg file.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBuildNumber() {
         return this.buildNumber;
     }
@@ -77,7 +77,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * Gets the bundleId property value. The primary bundleId of the package.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBundleId() {
         return this.bundleId;
     }
@@ -85,7 +85,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * Gets the childApps property value. List of ComplexType macOSLobChildApp objects. Represents the apps expected to be installed by the package.
      * @return a macOSLobChildApp
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MacOSLobChildApp> getChildApps() {
         return this.childApps;
     }
@@ -93,7 +93,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("buildNumber", (n) -> { this.setBuildNumber(n.getStringValue()); });
@@ -111,7 +111,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * Gets the ignoreVersionDetection property value. When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIgnoreVersionDetection() {
         return this.ignoreVersionDetection;
     }
@@ -119,7 +119,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * Gets the installAsManaged property value. When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getInstallAsManaged() {
         return this.installAsManaged;
     }
@@ -127,7 +127,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * Gets the md5Hash property value. The MD5 hash codes. This is empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getMd5Hash() {
         return this.md5Hash;
     }
@@ -135,7 +135,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * Gets the md5HashChunkSize property value. The chunk size for MD5 hash. This is '0' or empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMd5HashChunkSize() {
         return this.md5HashChunkSize;
     }
@@ -143,7 +143,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * Gets the minimumSupportedOperatingSystem property value. ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application.
      * @return a macOSMinimumOperatingSystem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
         return this.minimumSupportedOperatingSystem;
     }
@@ -151,7 +151,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * Gets the versionNumber property value. The version number of the package. This should match the package CFBundleVersion in the packageinfo file.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersionNumber() {
         return this.versionNumber;
     }
@@ -160,8 +160,8 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("buildNumber", this.getBuildNumber());
@@ -179,8 +179,8 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the buildNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBuildNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setBuildNumber(@jakarta.annotation.Nullable final String value) {
         this.buildNumber = value;
     }
     /**
@@ -188,8 +188,8 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the bundleId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBundleId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setBundleId(@jakarta.annotation.Nullable final String value) {
         this.bundleId = value;
     }
     /**
@@ -197,8 +197,8 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the childApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChildApps(@javax.annotation.Nullable final java.util.List<MacOSLobChildApp> value) {
+    @jakarta.annotation.Nonnull
+    public void setChildApps(@jakarta.annotation.Nullable final java.util.List<MacOSLobChildApp> value) {
         this.childApps = value;
     }
     /**
@@ -206,8 +206,8 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the ignoreVersionDetection property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIgnoreVersionDetection(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIgnoreVersionDetection(@jakarta.annotation.Nullable final Boolean value) {
         this.ignoreVersionDetection = value;
     }
     /**
@@ -215,8 +215,8 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the installAsManaged property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallAsManaged(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setInstallAsManaged(@jakarta.annotation.Nullable final Boolean value) {
         this.installAsManaged = value;
     }
     /**
@@ -224,8 +224,8 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the md5Hash property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMd5Hash(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setMd5Hash(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.md5Hash = value;
     }
     /**
@@ -233,8 +233,8 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the md5HashChunkSize property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMd5HashChunkSize(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMd5HashChunkSize(@jakarta.annotation.Nullable final Integer value) {
         this.md5HashChunkSize = value;
     }
     /**
@@ -242,8 +242,8 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final MacOSMinimumOperatingSystem value) {
+    @jakarta.annotation.Nonnull
+    public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final MacOSMinimumOperatingSystem value) {
         this.minimumSupportedOperatingSystem = value;
     }
     /**
@@ -251,8 +251,8 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the versionNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersionNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVersionNumber(@jakarta.annotation.Nullable final String value) {
         this.versionNumber = value;
     }
 }

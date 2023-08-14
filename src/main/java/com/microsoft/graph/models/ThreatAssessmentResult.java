@@ -24,7 +24,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      * Instantiates a new threatAssessmentResult and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ThreatAssessmentResult() {
         super();
     }
@@ -33,8 +33,8 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a threatAssessmentResult
      */
-    @javax.annotation.Nonnull
-    public static ThreatAssessmentResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ThreatAssessmentResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ThreatAssessmentResult();
     }
@@ -42,7 +42,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -50,7 +50,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -62,7 +62,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      * Gets the message property value. The result message for each threat assessment.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMessage() {
         return this.message;
     }
@@ -70,7 +70,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      * Gets the resultType property value. The threat assessment result type. Possible values are: checkPolicy, rescan.
      * @return a threatAssessmentResultType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ThreatAssessmentResultType getResultType() {
         return this.resultType;
     }
@@ -79,8 +79,8 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -92,8 +92,8 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -101,8 +101,8 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      * @param value Value to set for the message property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMessage(@jakarta.annotation.Nullable final String value) {
         this.message = value;
     }
     /**
@@ -110,8 +110,8 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      * @param value Value to set for the resultType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResultType(@javax.annotation.Nullable final ThreatAssessmentResultType value) {
+    @jakarta.annotation.Nonnull
+    public void setResultType(@jakarta.annotation.Nullable final ThreatAssessmentResultType value) {
         this.resultType = value;
     }
 }

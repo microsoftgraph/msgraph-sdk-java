@@ -29,42 +29,42 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
     /**
      * Provides operations to manage the dataSource property of the microsoft.graph.security.ediscoveryNoncustodialDataSource entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DataSourceRequestBuilder dataSource() {
         return new DataSourceRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the lastIndexOperation property of the microsoft.graph.security.ediscoveryNoncustodialDataSource entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public LastIndexOperationRequestBuilder lastIndexOperation() {
         return new LastIndexOperationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the applyHold method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityApplyHoldRequestBuilder microsoftGraphSecurityApplyHold() {
         return new MicrosoftGraphSecurityApplyHoldRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the release method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityReleaseRequestBuilder microsoftGraphSecurityRelease() {
         return new MicrosoftGraphSecurityReleaseRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the removeHold method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityRemoveHoldRequestBuilder microsoftGraphSecurityRemoveHold() {
         return new MicrosoftGraphSecurityRemoveHoldRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the updateIndex method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityUpdateIndexRequestBuilder microsoftGraphSecurityUpdateIndex() {
         return new MicrosoftGraphSecurityUpdateIndexRequestBuilder(pathParameters, requestAdapter);
     }
@@ -74,8 +74,8 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public EdiscoveryNoncustodialDataSourceItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public EdiscoveryNoncustodialDataSourceItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/noncustodialDataSources/{ediscoveryNoncustodialDataSource%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -84,15 +84,15 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public EdiscoveryNoncustodialDataSourceItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public EdiscoveryNoncustodialDataSourceItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/noncustodialDataSources/{ediscoveryNoncustodialDataSource%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property noncustodialDataSources for security
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -111,8 +111,8 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -129,7 +129,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
      * Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
      * @return a CompletableFuture of ediscoveryNoncustodialDataSource
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSource> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -148,8 +148,8 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryNoncustodialDataSource
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSource> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSource> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -167,8 +167,8 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
      * @param body The request body
      * @return a CompletableFuture of ediscoveryNoncustodialDataSource
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSource> patch(@javax.annotation.Nonnull final EdiscoveryNoncustodialDataSource body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSource> patch(@jakarta.annotation.Nonnull final EdiscoveryNoncustodialDataSource body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -187,8 +187,8 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryNoncustodialDataSource
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSource> patch(@javax.annotation.Nonnull final EdiscoveryNoncustodialDataSource body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSource> patch(@jakarta.annotation.Nonnull final EdiscoveryNoncustodialDataSource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -206,7 +206,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
      * Delete navigation property noncustodialDataSources for security
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -215,8 +215,8 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -233,7 +233,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
      * Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -242,8 +242,8 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -263,8 +263,8 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final EdiscoveryNoncustodialDataSource body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EdiscoveryNoncustodialDataSource body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -273,8 +273,8 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final EdiscoveryNoncustodialDataSource body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EdiscoveryNoncustodialDataSource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -303,13 +303,13 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -319,7 +319,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequ
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

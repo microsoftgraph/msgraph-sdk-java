@@ -23,7 +23,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * Instantiates a new serviceAnnouncement and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServiceAnnouncement() {
         super();
     }
@@ -32,8 +32,8 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a serviceAnnouncement
      */
-    @javax.annotation.Nonnull
-    public static ServiceAnnouncement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ServiceAnnouncement createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ServiceAnnouncement();
     }
@@ -41,7 +41,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("healthOverviews", (n) -> { this.setHealthOverviews(n.getCollectionOfObjectValues(ServiceHealth::createFromDiscriminatorValue)); });
@@ -53,7 +53,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * Gets the healthOverviews property value. A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
      * @return a serviceHealth
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ServiceHealth> getHealthOverviews() {
         return this.healthOverviews;
     }
@@ -61,7 +61,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * Gets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
      * @return a serviceHealthIssue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ServiceHealthIssue> getIssues() {
         return this.issues;
     }
@@ -69,7 +69,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * Gets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
      * @return a serviceUpdateMessage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ServiceUpdateMessage> getMessages() {
         return this.messages;
     }
@@ -78,8 +78,8 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("healthOverviews", this.getHealthOverviews());
@@ -91,8 +91,8 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * @param value Value to set for the healthOverviews property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHealthOverviews(@javax.annotation.Nullable final java.util.List<ServiceHealth> value) {
+    @jakarta.annotation.Nonnull
+    public void setHealthOverviews(@jakarta.annotation.Nullable final java.util.List<ServiceHealth> value) {
         this.healthOverviews = value;
     }
     /**
@@ -100,8 +100,8 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * @param value Value to set for the issues property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIssues(@javax.annotation.Nullable final java.util.List<ServiceHealthIssue> value) {
+    @jakarta.annotation.Nonnull
+    public void setIssues(@jakarta.annotation.Nullable final java.util.List<ServiceHealthIssue> value) {
         this.issues = value;
     }
     /**
@@ -109,8 +109,8 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * @param value Value to set for the messages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessages(@javax.annotation.Nullable final java.util.List<ServiceUpdateMessage> value) {
+    @jakarta.annotation.Nonnull
+    public void setMessages(@jakarta.annotation.Nullable final java.util.List<ServiceUpdateMessage> value) {
         this.messages = value;
     }
 }

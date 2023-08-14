@@ -35,7 +35,7 @@ public class ContactFolder extends Entity implements Parsable {
      * Instantiates a new contactFolder and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ContactFolder() {
         super();
     }
@@ -44,8 +44,8 @@ public class ContactFolder extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a contactFolder
      */
-    @javax.annotation.Nonnull
-    public static ContactFolder createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ContactFolder createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ContactFolder();
     }
@@ -53,7 +53,7 @@ public class ContactFolder extends Entity implements Parsable {
      * Gets the childFolders property value. The collection of child folders in the folder. Navigation property. Read-only. Nullable.
      * @return a contactFolder
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ContactFolder> getChildFolders() {
         return this.childFolders;
     }
@@ -61,7 +61,7 @@ public class ContactFolder extends Entity implements Parsable {
      * Gets the contacts property value. The contacts in the folder. Navigation property. Read-only. Nullable.
      * @return a contact
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Contact> getContacts() {
         return this.contacts;
     }
@@ -69,7 +69,7 @@ public class ContactFolder extends Entity implements Parsable {
      * Gets the displayName property value. The folder's display name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -77,7 +77,7 @@ public class ContactFolder extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("childFolders", (n) -> { this.setChildFolders(n.getCollectionOfObjectValues(ContactFolder::createFromDiscriminatorValue)); });
@@ -92,7 +92,7 @@ public class ContactFolder extends Entity implements Parsable {
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
      * @return a multiValueLegacyExtendedProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
         return this.multiValueExtendedProperties;
     }
@@ -100,7 +100,7 @@ public class ContactFolder extends Entity implements Parsable {
      * Gets the parentFolderId property value. The ID of the folder's parent folder.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getParentFolderId() {
         return this.parentFolderId;
     }
@@ -108,7 +108,7 @@ public class ContactFolder extends Entity implements Parsable {
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
      * @return a singleValueLegacyExtendedProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
         return this.singleValueExtendedProperties;
     }
@@ -117,8 +117,8 @@ public class ContactFolder extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("childFolders", this.getChildFolders());
@@ -133,8 +133,8 @@ public class ContactFolder extends Entity implements Parsable {
      * @param value Value to set for the childFolders property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChildFolders(@javax.annotation.Nullable final java.util.List<ContactFolder> value) {
+    @jakarta.annotation.Nonnull
+    public void setChildFolders(@jakarta.annotation.Nullable final java.util.List<ContactFolder> value) {
         this.childFolders = value;
     }
     /**
@@ -142,8 +142,8 @@ public class ContactFolder extends Entity implements Parsable {
      * @param value Value to set for the contacts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContacts(@javax.annotation.Nullable final java.util.List<Contact> value) {
+    @jakarta.annotation.Nonnull
+    public void setContacts(@jakarta.annotation.Nullable final java.util.List<Contact> value) {
         this.contacts = value;
     }
     /**
@@ -151,8 +151,8 @@ public class ContactFolder extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -160,8 +160,8 @@ public class ContactFolder extends Entity implements Parsable {
      * @param value Value to set for the multiValueExtendedProperties property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
+    @jakarta.annotation.Nonnull
+    public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this.multiValueExtendedProperties = value;
     }
     /**
@@ -169,8 +169,8 @@ public class ContactFolder extends Entity implements Parsable {
      * @param value Value to set for the parentFolderId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParentFolderId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setParentFolderId(@jakarta.annotation.Nullable final String value) {
         this.parentFolderId = value;
     }
     /**
@@ -178,8 +178,8 @@ public class ContactFolder extends Entity implements Parsable {
      * @param value Value to set for the singleValueExtendedProperties property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
+    @jakarta.annotation.Nonnull
+    public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this.singleValueExtendedProperties = value;
     }
 }

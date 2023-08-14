@@ -27,8 +27,8 @@ public class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder exten
      * @param top Usage: top={top}
      * @return a void
      */
-    @javax.annotation.Nullable
-    public ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter, @javax.annotation.Nullable final Integer skip, @javax.annotation.Nullable final Integer top) {
+    @jakarta.annotation.Nullable
+    public ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final Integer skip, @jakarta.annotation.Nullable final Integer top) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/exportDeviceAndAppManagementData(skip={skip},top={top})", pathParameters);
         this.pathParameters.put("skip", skip);
         this.pathParameters.put("top", top);
@@ -39,15 +39,15 @@ public class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder exten
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/exportDeviceAndAppManagementData(skip={skip},top={top})", rawUrl);
     }
     /**
      * Invoke function exportDeviceAndAppManagementData
      * @return a CompletableFuture of deviceAndAppManagementData
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementData> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -66,8 +66,8 @@ public class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder exten
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceAndAppManagementData
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementData> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementData> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -84,7 +84,7 @@ public class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder exten
      * Invoke function exportDeviceAndAppManagementData
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -93,8 +93,8 @@ public class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder exten
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;

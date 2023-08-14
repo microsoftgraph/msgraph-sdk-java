@@ -28,7 +28,7 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
      * Instantiates a new settingValue and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SettingValue() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a settingValue
      */
-    @javax.annotation.Nonnull
-    public static SettingValue createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SettingValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SettingValue();
     }
@@ -46,7 +46,7 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
@@ -66,7 +66,7 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
      * Gets the name property value. Name of the setting (as defined by the groupSettingTemplate).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -74,7 +74,7 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -82,7 +82,7 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
      * Gets the value property value. Value of the setting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getValue() {
         return this.value;
     }
@@ -91,8 +91,8 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -104,8 +104,8 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -113,8 +113,8 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -122,8 +122,8 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -131,8 +131,8 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }
 }

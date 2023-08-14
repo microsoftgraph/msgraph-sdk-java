@@ -55,7 +55,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * Instantiates a new userExperienceAnalyticsBaseline and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsBaseline() {
         super();
     }
@@ -64,8 +64,8 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsBaseline
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsBaseline createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsBaseline createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsBaseline();
     }
@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * Gets the appHealthMetrics property value. The scores and insights for the application health metrics.
      * @return a userExperienceAnalyticsCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getAppHealthMetrics() {
         return this.appHealthMetrics;
     }
@@ -81,7 +81,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * Gets the batteryHealthMetrics property value. The scores and insights for the battery health metrics.
      * @return a userExperienceAnalyticsCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getBatteryHealthMetrics() {
         return this.batteryHealthMetrics;
     }
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * Gets the bestPracticesMetrics property value. The scores and insights for the best practices metrics.
      * @return a userExperienceAnalyticsCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getBestPracticesMetrics() {
         return this.bestPracticesMetrics;
     }
@@ -97,7 +97,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * Gets the createdDateTime property value. The date the custom baseline was created. The value cannot be modified and is automatically populated when the baseline is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -105,7 +105,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * Gets the deviceBootPerformanceMetrics property value. The scores and insights for the device boot performance metrics.
      * @return a userExperienceAnalyticsCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getDeviceBootPerformanceMetrics() {
         return this.deviceBootPerformanceMetrics;
     }
@@ -113,7 +113,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * Gets the displayName property value. The name of the baseline.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -121,7 +121,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appHealthMetrics", (n) -> { this.setAppHealthMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
@@ -140,7 +140,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * Gets the isBuiltIn property value. When TRUE, indicates the current baseline is the commercial median baseline. When FALSE, indicates it is a custom baseline. FALSE by default.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {
         return this.isBuiltIn;
     }
@@ -148,7 +148,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * Gets the rebootAnalyticsMetrics property value. The scores and insights for the reboot analytics metrics.
      * @return a userExperienceAnalyticsCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getRebootAnalyticsMetrics() {
         return this.rebootAnalyticsMetrics;
     }
@@ -156,7 +156,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * Gets the resourcePerformanceMetrics property value. The scores and insights for the resource performance metrics.
      * @return a userExperienceAnalyticsCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getResourcePerformanceMetrics() {
         return this.resourcePerformanceMetrics;
     }
@@ -164,7 +164,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * Gets the workFromAnywhereMetrics property value. The scores and insights for the work from anywhere metrics.
      * @return a userExperienceAnalyticsCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getWorkFromAnywhereMetrics() {
         return this.workFromAnywhereMetrics;
     }
@@ -173,8 +173,8 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("appHealthMetrics", this.getAppHealthMetrics());
@@ -193,8 +193,8 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the appHealthMetrics property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppHealthMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setAppHealthMetrics(@jakarta.annotation.Nullable final UserExperienceAnalyticsCategory value) {
         this.appHealthMetrics = value;
     }
     /**
@@ -202,8 +202,8 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the batteryHealthMetrics property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBatteryHealthMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setBatteryHealthMetrics(@jakarta.annotation.Nullable final UserExperienceAnalyticsCategory value) {
         this.batteryHealthMetrics = value;
     }
     /**
@@ -211,8 +211,8 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the bestPracticesMetrics property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBestPracticesMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setBestPracticesMetrics(@jakarta.annotation.Nullable final UserExperienceAnalyticsCategory value) {
         this.bestPracticesMetrics = value;
     }
     /**
@@ -220,8 +220,8 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -229,8 +229,8 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the deviceBootPerformanceMetrics property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceBootPerformanceMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceBootPerformanceMetrics(@jakarta.annotation.Nullable final UserExperienceAnalyticsCategory value) {
         this.deviceBootPerformanceMetrics = value;
     }
     /**
@@ -238,8 +238,8 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -247,8 +247,8 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the isBuiltIn property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsBuiltIn(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsBuiltIn(@jakarta.annotation.Nullable final Boolean value) {
         this.isBuiltIn = value;
     }
     /**
@@ -256,8 +256,8 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the rebootAnalyticsMetrics property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRebootAnalyticsMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setRebootAnalyticsMetrics(@jakarta.annotation.Nullable final UserExperienceAnalyticsCategory value) {
         this.rebootAnalyticsMetrics = value;
     }
     /**
@@ -265,8 +265,8 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the resourcePerformanceMetrics property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourcePerformanceMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setResourcePerformanceMetrics(@jakarta.annotation.Nullable final UserExperienceAnalyticsCategory value) {
         this.resourcePerformanceMetrics = value;
     }
     /**
@@ -274,8 +274,8 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the workFromAnywhereMetrics property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkFromAnywhereMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setWorkFromAnywhereMetrics(@jakarta.annotation.Nullable final UserExperienceAnalyticsCategory value) {
         this.workFromAnywhereMetrics = value;
     }
 }

@@ -58,7 +58,7 @@ public class UserProcessingResult extends Entity implements Parsable {
      * Instantiates a new userProcessingResult and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserProcessingResult() {
         super();
     }
@@ -67,8 +67,8 @@ public class UserProcessingResult extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userProcessingResult
      */
-    @javax.annotation.Nonnull
-    public static UserProcessingResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserProcessingResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserProcessingResult();
     }
@@ -76,7 +76,7 @@ public class UserProcessingResult extends Entity implements Parsable {
      * Gets the completedDateTime property value. The date time that the workflow execution for a user completed. Value is null if the workflow hasn't completed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
         return this.completedDateTime;
     }
@@ -84,7 +84,7 @@ public class UserProcessingResult extends Entity implements Parsable {
      * Gets the failedTasksCount property value. The number of tasks that failed in the workflow execution.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFailedTasksCount() {
         return this.failedTasksCount;
     }
@@ -92,7 +92,7 @@ public class UserProcessingResult extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
@@ -112,7 +112,7 @@ public class UserProcessingResult extends Entity implements Parsable {
      * Gets the processingStatus property value. The processingStatus property
      * @return a lifecycleWorkflowProcessingStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LifecycleWorkflowProcessingStatus getProcessingStatus() {
         return this.processingStatus;
     }
@@ -120,7 +120,7 @@ public class UserProcessingResult extends Entity implements Parsable {
      * Gets the scheduledDateTime property value. The date time that the workflow is scheduled to be executed for a user.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getScheduledDateTime() {
         return this.scheduledDateTime;
     }
@@ -128,7 +128,7 @@ public class UserProcessingResult extends Entity implements Parsable {
      * Gets the startedDateTime property value. The date time that the workflow execution started. Value is null if the workflow execution has not started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
         return this.startedDateTime;
     }
@@ -136,7 +136,7 @@ public class UserProcessingResult extends Entity implements Parsable {
      * Gets the subject property value. The subject property
      * @return a user
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public User getSubject() {
         return this.subject;
     }
@@ -144,7 +144,7 @@ public class UserProcessingResult extends Entity implements Parsable {
      * Gets the taskProcessingResults property value. The associated individual task execution.
      * @return a taskProcessingResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TaskProcessingResult> getTaskProcessingResults() {
         return this.taskProcessingResults;
     }
@@ -152,7 +152,7 @@ public class UserProcessingResult extends Entity implements Parsable {
      * Gets the totalTasksCount property value. The total number of tasks that in the workflow execution.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalTasksCount() {
         return this.totalTasksCount;
     }
@@ -160,7 +160,7 @@ public class UserProcessingResult extends Entity implements Parsable {
      * Gets the totalUnprocessedTasksCount property value. The total number of unprocessed tasks for the workflow.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalUnprocessedTasksCount() {
         return this.totalUnprocessedTasksCount;
     }
@@ -168,7 +168,7 @@ public class UserProcessingResult extends Entity implements Parsable {
      * Gets the workflowExecutionType property value. The workflowExecutionType property
      * @return a workflowExecutionType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkflowExecutionType getWorkflowExecutionType() {
         return this.workflowExecutionType;
     }
@@ -176,7 +176,7 @@ public class UserProcessingResult extends Entity implements Parsable {
      * Gets the workflowVersion property value. The version of the workflow that was executed.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getWorkflowVersion() {
         return this.workflowVersion;
     }
@@ -185,8 +185,8 @@ public class UserProcessingResult extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("completedDateTime", this.getCompletedDateTime());
@@ -206,8 +206,8 @@ public class UserProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completedDateTime = value;
     }
     /**
@@ -215,8 +215,8 @@ public class UserProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the failedTasksCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedTasksCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFailedTasksCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedTasksCount = value;
     }
     /**
@@ -224,8 +224,8 @@ public class UserProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the processingStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProcessingStatus(@javax.annotation.Nullable final LifecycleWorkflowProcessingStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setProcessingStatus(@jakarta.annotation.Nullable final LifecycleWorkflowProcessingStatus value) {
         this.processingStatus = value;
     }
     /**
@@ -233,8 +233,8 @@ public class UserProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the scheduledDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScheduledDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setScheduledDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.scheduledDateTime = value;
     }
     /**
@@ -242,8 +242,8 @@ public class UserProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the startedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startedDateTime = value;
     }
     /**
@@ -251,8 +251,8 @@ public class UserProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final User value) {
+    @jakarta.annotation.Nonnull
+    public void setSubject(@jakarta.annotation.Nullable final User value) {
         this.subject = value;
     }
     /**
@@ -260,8 +260,8 @@ public class UserProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the taskProcessingResults property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTaskProcessingResults(@javax.annotation.Nullable final java.util.List<TaskProcessingResult> value) {
+    @jakarta.annotation.Nonnull
+    public void setTaskProcessingResults(@jakarta.annotation.Nullable final java.util.List<TaskProcessingResult> value) {
         this.taskProcessingResults = value;
     }
     /**
@@ -269,8 +269,8 @@ public class UserProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the totalTasksCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalTasksCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalTasksCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalTasksCount = value;
     }
     /**
@@ -278,8 +278,8 @@ public class UserProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the totalUnprocessedTasksCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalUnprocessedTasksCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalUnprocessedTasksCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalUnprocessedTasksCount = value;
     }
     /**
@@ -287,8 +287,8 @@ public class UserProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the workflowExecutionType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkflowExecutionType(@javax.annotation.Nullable final WorkflowExecutionType value) {
+    @jakarta.annotation.Nonnull
+    public void setWorkflowExecutionType(@jakarta.annotation.Nullable final WorkflowExecutionType value) {
         this.workflowExecutionType = value;
     }
     /**
@@ -296,8 +296,8 @@ public class UserProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the workflowVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkflowVersion(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setWorkflowVersion(@jakarta.annotation.Nullable final Integer value) {
         this.workflowVersion = value;
     }
 }

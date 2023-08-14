@@ -62,7 +62,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * Instantiates a new macOSGeneralDeviceConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSGeneralDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSGeneralDeviceConfiguration");
@@ -72,8 +72,8 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a macOSGeneralDeviceConfiguration
      */
-    @javax.annotation.Nonnull
-    public static MacOSGeneralDeviceConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MacOSGeneralDeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MacOSGeneralDeviceConfiguration();
     }
@@ -81,7 +81,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
      * @return a appListType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AppListType getCompliantAppListType() {
         return this.compliantAppListType;
     }
@@ -89,7 +89,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * Gets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      * @return a appListItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getCompliantAppsList() {
         return this.compliantAppsList;
     }
@@ -97,7 +97,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * Gets the emailInDomainSuffixes property value. An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getEmailInDomainSuffixes() {
         return this.emailInDomainSuffixes;
     }
@@ -105,7 +105,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("compliantAppListType", (n) -> { this.setCompliantAppListType(n.getEnumValue(AppListType.class)); });
@@ -126,7 +126,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * Gets the passwordBlockSimple property value. Block simple passwords.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
         return this.passwordBlockSimple;
     }
@@ -134,7 +134,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * Gets the passwordExpirationDays property value. Number of days before the password expires.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
         return this.passwordExpirationDays;
     }
@@ -142,7 +142,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * Gets the passwordMinimumCharacterSetCount property value. Number of character sets a password must contain. Valid values 0 to 4
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
         return this.passwordMinimumCharacterSetCount;
     }
@@ -150,7 +150,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * Gets the passwordMinimumLength property value. Minimum length of passwords.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
         return this.passwordMinimumLength;
     }
@@ -158,7 +158,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity required before a password is required.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
         return this.passwordMinutesOfInactivityBeforeLock;
     }
@@ -166,7 +166,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity required before the screen times out.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
         return this.passwordMinutesOfInactivityBeforeScreenTimeout;
     }
@@ -174,7 +174,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
         return this.passwordPreviousPasswordBlockCount;
     }
@@ -182,7 +182,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * Gets the passwordRequired property value. Whether or not to require a password.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
         return this.passwordRequired;
     }
@@ -190,7 +190,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
         return this.passwordRequiredType;
     }
@@ -199,8 +199,8 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("compliantAppListType", this.getCompliantAppListType());
@@ -221,8 +221,8 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the compliantAppListType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompliantAppListType(@javax.annotation.Nullable final AppListType value) {
+    @jakarta.annotation.Nonnull
+    public void setCompliantAppListType(@jakarta.annotation.Nullable final AppListType value) {
         this.compliantAppListType = value;
     }
     /**
@@ -230,8 +230,8 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the compliantAppsList property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompliantAppsList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setCompliantAppsList(@jakarta.annotation.Nullable final java.util.List<AppListItem> value) {
         this.compliantAppsList = value;
     }
     /**
@@ -239,8 +239,8 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the emailInDomainSuffixes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailInDomainSuffixes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailInDomainSuffixes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.emailInDomainSuffixes = value;
     }
     /**
@@ -248,8 +248,8 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordBlockSimple property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordBlockSimple(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordBlockSimple = value;
     }
     /**
@@ -257,8 +257,8 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.passwordExpirationDays = value;
     }
     /**
@@ -266,8 +266,8 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumCharacterSetCount = value;
     }
     /**
@@ -275,8 +275,8 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumLength = value;
     }
     /**
@@ -284,8 +284,8 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordMinutesOfInactivityBeforeLock(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinutesOfInactivityBeforeLock = value;
     }
     /**
@@ -293,8 +293,8 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
@@ -302,8 +302,8 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordPreviousPasswordBlockCount = value;
     }
     /**
@@ -311,8 +311,8 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordRequired = value;
     }
     /**
@@ -320,8 +320,8 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
         this.passwordRequiredType = value;
     }
 }

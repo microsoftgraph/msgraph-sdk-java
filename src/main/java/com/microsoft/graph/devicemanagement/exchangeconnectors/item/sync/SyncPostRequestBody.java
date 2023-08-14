@@ -21,7 +21,7 @@ public class SyncPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new syncPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SyncPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -30,8 +30,8 @@ public class SyncPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a syncPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static SyncPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SyncPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SyncPostRequestBody();
     }
@@ -39,7 +39,7 @@ public class SyncPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -47,7 +47,7 @@ public class SyncPostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
         deserializerMap.put("syncType", (n) -> { this.setSyncType(n.getEnumValue(DeviceManagementExchangeConnectorSyncType.class)); });
@@ -57,7 +57,7 @@ public class SyncPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the syncType property value. The type of Exchange Connector sync requested.
      * @return a deviceManagementExchangeConnectorSyncType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementExchangeConnectorSyncType getSyncType() {
         return this.syncType;
     }
@@ -66,8 +66,8 @@ public class SyncPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("syncType", this.getSyncType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -77,8 +77,8 @@ public class SyncPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -86,8 +86,8 @@ public class SyncPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the syncType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSyncType(@javax.annotation.Nullable final DeviceManagementExchangeConnectorSyncType value) {
+    @jakarta.annotation.Nonnull
+    public void setSyncType(@jakarta.annotation.Nullable final DeviceManagementExchangeConnectorSyncType value) {
         this.syncType = value;
     }
 }

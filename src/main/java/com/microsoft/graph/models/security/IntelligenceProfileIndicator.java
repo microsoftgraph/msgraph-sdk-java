@@ -20,7 +20,7 @@ public class IntelligenceProfileIndicator extends Indicator implements Parsable 
      * Instantiates a new intelligenceProfileIndicator and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IntelligenceProfileIndicator() {
         super();
         this.setOdataType("#microsoft.graph.security.intelligenceProfileIndicator");
@@ -30,8 +30,8 @@ public class IntelligenceProfileIndicator extends Indicator implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a intelligenceProfileIndicator
      */
-    @javax.annotation.Nonnull
-    public static IntelligenceProfileIndicator createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IntelligenceProfileIndicator createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IntelligenceProfileIndicator();
     }
@@ -39,7 +39,7 @@ public class IntelligenceProfileIndicator extends Indicator implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
@@ -50,7 +50,7 @@ public class IntelligenceProfileIndicator extends Indicator implements Parsable 
      * Gets the firstSeenDateTime property value. Designate when an artifact was first used actively in an attack, when a particular sample was compiled, or if neither of those could be ascertained when the file was first seen in public repositories (for example, VirusTotal, ANY.RUN, Hybrid Analysis) or reported publicly.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
         return this.firstSeenDateTime;
     }
@@ -58,7 +58,7 @@ public class IntelligenceProfileIndicator extends Indicator implements Parsable 
      * Gets the lastSeenDateTime property value. Designate when an artifact was most recently used actively in an attack, when a particular sample was compiled, or if neither of those could be ascertained when the file was first seen in public repositories (for example, VirusTotal, ANY.RUN, Hybrid Analysis) or reported publicly.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
         return this.lastSeenDateTime;
     }
@@ -67,8 +67,8 @@ public class IntelligenceProfileIndicator extends Indicator implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("firstSeenDateTime", this.getFirstSeenDateTime());
@@ -79,8 +79,8 @@ public class IntelligenceProfileIndicator extends Indicator implements Parsable 
      * @param value Value to set for the firstSeenDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstSeenDateTime = value;
     }
     /**
@@ -88,8 +88,8 @@ public class IntelligenceProfileIndicator extends Indicator implements Parsable 
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSeenDateTime = value;
     }
 }

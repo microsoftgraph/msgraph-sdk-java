@@ -27,7 +27,7 @@ public class PlannerBucket extends Entity implements Parsable {
      * Instantiates a new plannerBucket and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerBucket() {
         super();
     }
@@ -36,8 +36,8 @@ public class PlannerBucket extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a plannerBucket
      */
-    @javax.annotation.Nonnull
-    public static PlannerBucket createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PlannerBucket createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PlannerBucket();
     }
@@ -45,7 +45,7 @@ public class PlannerBucket extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
@@ -58,7 +58,7 @@ public class PlannerBucket extends Entity implements Parsable {
      * Gets the name property value. Name of the bucket.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -66,7 +66,7 @@ public class PlannerBucket extends Entity implements Parsable {
      * Gets the orderHint property value. Hint used to order items of this type in a list view. For details about the supported format, see Using order hints in Planner.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOrderHint() {
         return this.orderHint;
     }
@@ -74,7 +74,7 @@ public class PlannerBucket extends Entity implements Parsable {
      * Gets the planId property value. Plan ID to which the bucket belongs.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPlanId() {
         return this.planId;
     }
@@ -82,7 +82,7 @@ public class PlannerBucket extends Entity implements Parsable {
      * Gets the tasks property value. Read-only. Nullable. The collection of tasks in the bucket.
      * @return a plannerTask
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PlannerTask> getTasks() {
         return this.tasks;
     }
@@ -91,8 +91,8 @@ public class PlannerBucket extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("name", this.getName());
@@ -105,8 +105,8 @@ public class PlannerBucket extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -114,8 +114,8 @@ public class PlannerBucket extends Entity implements Parsable {
      * @param value Value to set for the orderHint property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrderHint(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOrderHint(@jakarta.annotation.Nullable final String value) {
         this.orderHint = value;
     }
     /**
@@ -123,8 +123,8 @@ public class PlannerBucket extends Entity implements Parsable {
      * @param value Value to set for the planId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlanId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPlanId(@jakarta.annotation.Nullable final String value) {
         this.planId = value;
     }
     /**
@@ -132,8 +132,8 @@ public class PlannerBucket extends Entity implements Parsable {
      * @param value Value to set for the tasks property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTasks(@javax.annotation.Nullable final java.util.List<PlannerTask> value) {
+    @jakarta.annotation.Nonnull
+    public void setTasks(@jakarta.annotation.Nullable final java.util.List<PlannerTask> value) {
         this.tasks = value;
     }
 }

@@ -26,21 +26,21 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getAttackSimulationRepeatOffenders method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public GetAttackSimulationRepeatOffendersRequestBuilder getAttackSimulationRepeatOffenders() {
         return new GetAttackSimulationRepeatOffendersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getAttackSimulationSimulationUserCoverage method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public GetAttackSimulationSimulationUserCoverageRequestBuilder getAttackSimulationSimulationUserCoverage() {
         return new GetAttackSimulationSimulationUserCoverageRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getAttackSimulationTrainingUserCoverage method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public GetAttackSimulationTrainingUserCoverageRequestBuilder getAttackSimulationTrainingUserCoverage() {
         return new GetAttackSimulationTrainingUserCoverageRequestBuilder(pathParameters, requestAdapter);
     }
@@ -50,8 +50,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public SecurityRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public SecurityRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/reports/security{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -60,15 +60,15 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public SecurityRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public SecurityRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/reports/security{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property security for reports
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -87,8 +87,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -105,7 +105,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * Represents an abstract type that contains resources for attack simulation and training reports.
      * @return a CompletableFuture of securityReportsRoot
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecurityReportsRoot> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -124,8 +124,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of securityReportsRoot
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SecurityReportsRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<SecurityReportsRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -143,8 +143,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a CompletableFuture of securityReportsRoot
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SecurityReportsRoot> patch(@javax.annotation.Nonnull final SecurityReportsRoot body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<SecurityReportsRoot> patch(@jakarta.annotation.Nonnull final SecurityReportsRoot body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -163,8 +163,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of securityReportsRoot
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SecurityReportsRoot> patch(@javax.annotation.Nonnull final SecurityReportsRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<SecurityReportsRoot> patch(@jakarta.annotation.Nonnull final SecurityReportsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -182,7 +182,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property security for reports
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -191,8 +191,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -209,7 +209,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * Represents an abstract type that contains resources for attack simulation and training reports.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -218,8 +218,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -239,8 +239,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final SecurityReportsRoot body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SecurityReportsRoot body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -249,8 +249,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final SecurityReportsRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SecurityReportsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -279,13 +279,13 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -295,7 +295,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

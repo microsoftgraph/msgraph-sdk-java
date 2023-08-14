@@ -107,7 +107,7 @@ public class Call extends Entity implements Parsable {
      * Instantiates a new call and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Call() {
         super();
     }
@@ -116,8 +116,8 @@ public class Call extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a call
      */
-    @javax.annotation.Nonnull
-    public static Call createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Call createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Call();
     }
@@ -125,7 +125,7 @@ public class Call extends Entity implements Parsable {
      * Gets the audioRoutingGroups property value. The audioRoutingGroups property
      * @return a audioRoutingGroup
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AudioRoutingGroup> getAudioRoutingGroups() {
         return this.audioRoutingGroups;
     }
@@ -133,7 +133,7 @@ public class Call extends Entity implements Parsable {
      * Gets the callbackUri property value. The callback URL on which callbacks will be delivered. Must be https.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCallbackUri() {
         return this.callbackUri;
     }
@@ -141,7 +141,7 @@ public class Call extends Entity implements Parsable {
      * Gets the callChainId property value. A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCallChainId() {
         return this.callChainId;
     }
@@ -149,7 +149,7 @@ public class Call extends Entity implements Parsable {
      * Gets the callOptions property value. Contains the optional features for the call.
      * @return a callOptions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CallOptions getCallOptions() {
         return this.callOptions;
     }
@@ -157,7 +157,7 @@ public class Call extends Entity implements Parsable {
      * Gets the callRoutes property value. The routing information on how the call was retargeted. Read-only.
      * @return a callRoute
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CallRoute> getCallRoutes() {
         return this.callRoutes;
     }
@@ -165,7 +165,7 @@ public class Call extends Entity implements Parsable {
      * Gets the chatInfo property value. The chat information. Required information for joining a meeting.
      * @return a chatInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatInfo getChatInfo() {
         return this.chatInfo;
     }
@@ -173,7 +173,7 @@ public class Call extends Entity implements Parsable {
      * Gets the contentSharingSessions property value. The contentSharingSessions property
      * @return a contentSharingSession
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ContentSharingSession> getContentSharingSessions() {
         return this.contentSharingSessions;
     }
@@ -181,7 +181,7 @@ public class Call extends Entity implements Parsable {
      * Gets the direction property value. The direction of the call. The possible value are incoming or outgoing. Read-only.
      * @return a callDirection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CallDirection getDirection() {
         return this.direction;
     }
@@ -189,7 +189,7 @@ public class Call extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("audioRoutingGroups", (n) -> { this.setAudioRoutingGroups(n.getCollectionOfObjectValues(AudioRoutingGroup::createFromDiscriminatorValue)); });
@@ -222,7 +222,7 @@ public class Call extends Entity implements Parsable {
      * Gets the incomingContext property value. Call context associated with an incoming call.
      * @return a incomingContext
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IncomingContext getIncomingContext() {
         return this.incomingContext;
     }
@@ -230,7 +230,7 @@ public class Call extends Entity implements Parsable {
      * Gets the mediaConfig property value. The media configuration. Required.
      * @return a mediaConfig
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaConfig getMediaConfig() {
         return this.mediaConfig;
     }
@@ -238,7 +238,7 @@ public class Call extends Entity implements Parsable {
      * Gets the mediaState property value. Read-only. The call media state.
      * @return a callMediaState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CallMediaState getMediaState() {
         return this.mediaState;
     }
@@ -246,7 +246,7 @@ public class Call extends Entity implements Parsable {
      * Gets the meetingInfo property value. The meeting information. Required information for meeting scenarios.
      * @return a meetingInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MeetingInfo getMeetingInfo() {
         return this.meetingInfo;
     }
@@ -254,7 +254,7 @@ public class Call extends Entity implements Parsable {
      * Gets the myParticipantId property value. The myParticipantId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMyParticipantId() {
         return this.myParticipantId;
     }
@@ -262,7 +262,7 @@ public class Call extends Entity implements Parsable {
      * Gets the operations property value. The operations property
      * @return a commsOperation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CommsOperation> getOperations() {
         return this.operations;
     }
@@ -270,7 +270,7 @@ public class Call extends Entity implements Parsable {
      * Gets the participants property value. The participants property
      * @return a participant
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Participant> getParticipants() {
         return this.participants;
     }
@@ -278,7 +278,7 @@ public class Call extends Entity implements Parsable {
      * Gets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
      * @return a modality
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Modality> getRequestedModalities() {
         return this.requestedModalities;
     }
@@ -286,7 +286,7 @@ public class Call extends Entity implements Parsable {
      * Gets the resultInfo property value. The result information. For example can hold termination reason. Read-only.
      * @return a resultInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResultInfo getResultInfo() {
         return this.resultInfo;
     }
@@ -294,7 +294,7 @@ public class Call extends Entity implements Parsable {
      * Gets the source property value. The originator of the call.
      * @return a participantInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ParticipantInfo getSource() {
         return this.source;
     }
@@ -302,7 +302,7 @@ public class Call extends Entity implements Parsable {
      * Gets the state property value. The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
      * @return a callState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CallState getState() {
         return this.state;
     }
@@ -310,7 +310,7 @@ public class Call extends Entity implements Parsable {
      * Gets the subject property value. The subject of the conversation.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubject() {
         return this.subject;
     }
@@ -318,7 +318,7 @@ public class Call extends Entity implements Parsable {
      * Gets the targets property value. The targets of the call. Required information for creating peer to peer call.
      * @return a invitationParticipantInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<InvitationParticipantInfo> getTargets() {
         return this.targets;
     }
@@ -326,7 +326,7 @@ public class Call extends Entity implements Parsable {
      * Gets the tenantId property value. The tenantId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -334,7 +334,7 @@ public class Call extends Entity implements Parsable {
      * Gets the toneInfo property value. The toneInfo property
      * @return a toneInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ToneInfo getToneInfo() {
         return this.toneInfo;
     }
@@ -342,7 +342,7 @@ public class Call extends Entity implements Parsable {
      * Gets the transcription property value. The transcription information for the call. Read-only.
      * @return a callTranscriptionInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CallTranscriptionInfo getTranscription() {
         return this.transcription;
     }
@@ -351,8 +351,8 @@ public class Call extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("audioRoutingGroups", this.getAudioRoutingGroups());
@@ -385,8 +385,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the audioRoutingGroups property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAudioRoutingGroups(@javax.annotation.Nullable final java.util.List<AudioRoutingGroup> value) {
+    @jakarta.annotation.Nonnull
+    public void setAudioRoutingGroups(@jakarta.annotation.Nullable final java.util.List<AudioRoutingGroup> value) {
         this.audioRoutingGroups = value;
     }
     /**
@@ -394,8 +394,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the callbackUri property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallbackUri(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCallbackUri(@jakarta.annotation.Nullable final String value) {
         this.callbackUri = value;
     }
     /**
@@ -403,8 +403,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the callChainId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallChainId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCallChainId(@jakarta.annotation.Nullable final String value) {
         this.callChainId = value;
     }
     /**
@@ -412,8 +412,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the callOptions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallOptions(@javax.annotation.Nullable final CallOptions value) {
+    @jakarta.annotation.Nonnull
+    public void setCallOptions(@jakarta.annotation.Nullable final CallOptions value) {
         this.callOptions = value;
     }
     /**
@@ -421,8 +421,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the callRoutes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallRoutes(@javax.annotation.Nullable final java.util.List<CallRoute> value) {
+    @jakarta.annotation.Nonnull
+    public void setCallRoutes(@jakarta.annotation.Nullable final java.util.List<CallRoute> value) {
         this.callRoutes = value;
     }
     /**
@@ -430,8 +430,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the chatInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChatInfo(@javax.annotation.Nullable final ChatInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setChatInfo(@jakarta.annotation.Nullable final ChatInfo value) {
         this.chatInfo = value;
     }
     /**
@@ -439,8 +439,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the contentSharingSessions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentSharingSessions(@javax.annotation.Nullable final java.util.List<ContentSharingSession> value) {
+    @jakarta.annotation.Nonnull
+    public void setContentSharingSessions(@jakarta.annotation.Nullable final java.util.List<ContentSharingSession> value) {
         this.contentSharingSessions = value;
     }
     /**
@@ -448,8 +448,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the direction property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDirection(@javax.annotation.Nullable final CallDirection value) {
+    @jakarta.annotation.Nonnull
+    public void setDirection(@jakarta.annotation.Nullable final CallDirection value) {
         this.direction = value;
     }
     /**
@@ -457,8 +457,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the incomingContext property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncomingContext(@javax.annotation.Nullable final IncomingContext value) {
+    @jakarta.annotation.Nonnull
+    public void setIncomingContext(@jakarta.annotation.Nullable final IncomingContext value) {
         this.incomingContext = value;
     }
     /**
@@ -466,8 +466,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the mediaConfig property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaConfig(@javax.annotation.Nullable final MediaConfig value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaConfig(@jakarta.annotation.Nullable final MediaConfig value) {
         this.mediaConfig = value;
     }
     /**
@@ -475,8 +475,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the mediaState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaState(@javax.annotation.Nullable final CallMediaState value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaState(@jakarta.annotation.Nullable final CallMediaState value) {
         this.mediaState = value;
     }
     /**
@@ -484,8 +484,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the meetingInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMeetingInfo(@javax.annotation.Nullable final MeetingInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setMeetingInfo(@jakarta.annotation.Nullable final MeetingInfo value) {
         this.meetingInfo = value;
     }
     /**
@@ -493,8 +493,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the myParticipantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMyParticipantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMyParticipantId(@jakarta.annotation.Nullable final String value) {
         this.myParticipantId = value;
     }
     /**
@@ -502,8 +502,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperations(@javax.annotation.Nullable final java.util.List<CommsOperation> value) {
+    @jakarta.annotation.Nonnull
+    public void setOperations(@jakarta.annotation.Nullable final java.util.List<CommsOperation> value) {
         this.operations = value;
     }
     /**
@@ -511,8 +511,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the participants property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParticipants(@javax.annotation.Nullable final java.util.List<Participant> value) {
+    @jakarta.annotation.Nonnull
+    public void setParticipants(@jakarta.annotation.Nullable final java.util.List<Participant> value) {
         this.participants = value;
     }
     /**
@@ -520,8 +520,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the requestedModalities property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestedModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
+    @jakarta.annotation.Nonnull
+    public void setRequestedModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {
         this.requestedModalities = value;
     }
     /**
@@ -529,8 +529,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the resultInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResultInfo(@javax.annotation.Nullable final ResultInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setResultInfo(@jakarta.annotation.Nullable final ResultInfo value) {
         this.resultInfo = value;
     }
     /**
@@ -538,8 +538,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the source property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSource(@javax.annotation.Nullable final ParticipantInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setSource(@jakarta.annotation.Nullable final ParticipantInfo value) {
         this.source = value;
     }
     /**
@@ -547,8 +547,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final CallState value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final CallState value) {
         this.state = value;
     }
     /**
@@ -556,8 +556,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
     /**
@@ -565,8 +565,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the targets property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargets(@javax.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
+    @jakarta.annotation.Nonnull
+    public void setTargets(@jakarta.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
         this.targets = value;
     }
     /**
@@ -574,8 +574,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
@@ -583,8 +583,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the toneInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setToneInfo(@javax.annotation.Nullable final ToneInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setToneInfo(@jakarta.annotation.Nullable final ToneInfo value) {
         this.toneInfo = value;
     }
     /**
@@ -592,8 +592,8 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the transcription property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTranscription(@javax.annotation.Nullable final CallTranscriptionInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setTranscription(@jakarta.annotation.Nullable final CallTranscriptionInfo value) {
         this.transcription = value;
     }
 }

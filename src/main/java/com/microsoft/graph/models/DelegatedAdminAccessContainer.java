@@ -28,7 +28,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * Instantiates a new delegatedAdminAccessContainer and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DelegatedAdminAccessContainer() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a delegatedAdminAccessContainer
      */
-    @javax.annotation.Nonnull
-    public static DelegatedAdminAccessContainer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DelegatedAdminAccessContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DelegatedAdminAccessContainer();
     }
@@ -46,7 +46,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * Gets the accessContainerId property value. The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of an Azure AD security group in the Microsoft partner's tenant.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAccessContainerId() {
         return this.accessContainerId;
     }
@@ -54,7 +54,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * Gets the accessContainerType property value. The accessContainerType property
      * @return a delegatedAdminAccessContainerType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DelegatedAdminAccessContainerType getAccessContainerType() {
         return this.accessContainerType;
     }
@@ -62,7 +62,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +70,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("accessContainerId", (n) -> { this.setAccessContainerId(n.getStringValue()); });
@@ -82,7 +82,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -91,8 +91,8 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("accessContainerId", this.getAccessContainerId());
         writer.writeEnumValue("accessContainerType", this.getAccessContainerType());
@@ -104,8 +104,8 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * @param value Value to set for the accessContainerId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessContainerId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessContainerId(@jakarta.annotation.Nullable final String value) {
         this.accessContainerId = value;
     }
     /**
@@ -113,8 +113,8 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * @param value Value to set for the accessContainerType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessContainerType(@javax.annotation.Nullable final DelegatedAdminAccessContainerType value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessContainerType(@jakarta.annotation.Nullable final DelegatedAdminAccessContainerType value) {
         this.accessContainerType = value;
     }
     /**
@@ -122,8 +122,8 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -131,8 +131,8 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

@@ -17,10 +17,10 @@ public enum Win32LobAppMsiPackageType implements ValuedEnum {
     Win32LobAppMsiPackageType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static Win32LobAppMsiPackageType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static Win32LobAppMsiPackageType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "perMachine": return PerMachine;

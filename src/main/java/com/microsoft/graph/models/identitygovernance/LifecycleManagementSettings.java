@@ -21,7 +21,7 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
      * Instantiates a new lifecycleManagementSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LifecycleManagementSettings() {
         super();
     }
@@ -30,8 +30,8 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a lifecycleManagementSettings
      */
-    @javax.annotation.Nonnull
-    public static LifecycleManagementSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static LifecycleManagementSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new LifecycleManagementSettings();
     }
@@ -39,7 +39,7 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
      * Gets the emailSettings property value. The emailSettings property
      * @return a emailSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailSettings getEmailSettings() {
         return this.emailSettings;
     }
@@ -47,7 +47,7 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("emailSettings", (n) -> { this.setEmailSettings(n.getObjectValue(EmailSettings::createFromDiscriminatorValue)); });
@@ -58,7 +58,7 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
      * Gets the workflowScheduleIntervalInHours property value. The interval in hours at which all workflows running in the tenant should be scheduled for execution. This interval has a minimum value of 1 and a maximum value of 24. The default value is 3 hours.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getWorkflowScheduleIntervalInHours() {
         return this.workflowScheduleIntervalInHours;
     }
@@ -67,8 +67,8 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("emailSettings", this.getEmailSettings());
@@ -79,8 +79,8 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
      * @param value Value to set for the emailSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailSettings(@javax.annotation.Nullable final EmailSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailSettings(@jakarta.annotation.Nullable final EmailSettings value) {
         this.emailSettings = value;
     }
     /**
@@ -88,8 +88,8 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
      * @param value Value to set for the workflowScheduleIntervalInHours property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkflowScheduleIntervalInHours(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setWorkflowScheduleIntervalInHours(@jakarta.annotation.Nullable final Integer value) {
         this.workflowScheduleIntervalInHours = value;
     }
 }

@@ -52,7 +52,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * Instantiates a new accessPackageAssignmentRequestRequirements and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageAssignmentRequestRequirements() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -61,8 +61,8 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageAssignmentRequestRequirements
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageAssignmentRequestRequirements createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageAssignmentRequestRequirements createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackageAssignmentRequestRequirements();
     }
@@ -70,7 +70,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -78,7 +78,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * Gets the allowCustomAssignmentSchedule property value. Indicates whether the requestor is allowed to set a custom schedule.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowCustomAssignmentSchedule() {
         return this.allowCustomAssignmentSchedule;
     }
@@ -86,7 +86,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("allowCustomAssignmentSchedule", (n) -> { this.setAllowCustomAssignmentSchedule(n.getBooleanValue()); });
@@ -104,7 +104,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * Gets the isApprovalRequiredForAdd property value. Indicates whether a request to add must be approved by an approver.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequiredForAdd() {
         return this.isApprovalRequiredForAdd;
     }
@@ -112,7 +112,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * Gets the isApprovalRequiredForUpdate property value. Indicates whether a request to update must be approved by an approver.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequiredForUpdate() {
         return this.isApprovalRequiredForUpdate;
     }
@@ -120,7 +120,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -128,7 +128,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * Gets the policyDescription property value. The description of the policy that the user is trying to request access using.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPolicyDescription() {
         return this.policyDescription;
     }
@@ -136,7 +136,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * Gets the policyDisplayName property value. The display name of the policy that the user is trying to request access using.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPolicyDisplayName() {
         return this.policyDisplayName;
     }
@@ -144,7 +144,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * Gets the policyId property value. The identifier of the policy that these requirements are associated with. This identifier can be used when creating a new assignment request.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPolicyId() {
         return this.policyId;
     }
@@ -152,7 +152,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * Gets the questions property value. The questions property
      * @return a accessPackageQuestion
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageQuestion> getQuestions() {
         return this.questions;
     }
@@ -160,7 +160,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * Gets the schedule property value. Schedule restrictions enforced, if any.
      * @return a entitlementManagementSchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EntitlementManagementSchedule getSchedule() {
         return this.schedule;
     }
@@ -169,8 +169,8 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowCustomAssignmentSchedule", this.getAllowCustomAssignmentSchedule());
         writer.writeBooleanValue("isApprovalRequiredForAdd", this.getIsApprovalRequiredForAdd());
@@ -188,8 +188,8 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -197,8 +197,8 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the allowCustomAssignmentSchedule property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowCustomAssignmentSchedule(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowCustomAssignmentSchedule(@jakarta.annotation.Nullable final Boolean value) {
         this.allowCustomAssignmentSchedule = value;
     }
     /**
@@ -206,8 +206,8 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the isApprovalRequiredForAdd property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsApprovalRequiredForAdd(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsApprovalRequiredForAdd(@jakarta.annotation.Nullable final Boolean value) {
         this.isApprovalRequiredForAdd = value;
     }
     /**
@@ -215,8 +215,8 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the isApprovalRequiredForUpdate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsApprovalRequiredForUpdate(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsApprovalRequiredForUpdate(@jakarta.annotation.Nullable final Boolean value) {
         this.isApprovalRequiredForUpdate = value;
     }
     /**
@@ -224,8 +224,8 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -233,8 +233,8 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the policyDescription property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPolicyDescription(@jakarta.annotation.Nullable final String value) {
         this.policyDescription = value;
     }
     /**
@@ -242,8 +242,8 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the policyDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPolicyDisplayName(@jakarta.annotation.Nullable final String value) {
         this.policyDisplayName = value;
     }
     /**
@@ -251,8 +251,8 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the policyId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPolicyId(@jakarta.annotation.Nullable final String value) {
         this.policyId = value;
     }
     /**
@@ -260,8 +260,8 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the questions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQuestions(@javax.annotation.Nullable final java.util.List<AccessPackageQuestion> value) {
+    @jakarta.annotation.Nonnull
+    public void setQuestions(@jakarta.annotation.Nullable final java.util.List<AccessPackageQuestion> value) {
         this.questions = value;
     }
     /**
@@ -269,8 +269,8 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the schedule property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchedule(@javax.annotation.Nullable final EntitlementManagementSchedule value) {
+    @jakarta.annotation.Nonnull
+    public void setSchedule(@jakarta.annotation.Nullable final EntitlementManagementSchedule value) {
         this.schedule = value;
     }
 }

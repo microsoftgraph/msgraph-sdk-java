@@ -59,7 +59,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * Instantiates a new deviceConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceConfiguration() {
         super();
     }
@@ -68,8 +68,8 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceConfiguration
      */
-    @javax.annotation.Nonnull
-    public static DeviceConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -109,7 +109,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * Gets the assignments property value. The list of assignments for the device configuration profile.
      * @return a deviceConfigurationAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationAssignment> getAssignments() {
         return this.assignments;
     }
@@ -117,7 +117,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * Gets the createdDateTime property value. DateTime the object was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -125,7 +125,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * Gets the description property value. Admin provided description of the Device Configuration.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -133,7 +133,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * Gets the deviceSettingStateSummaries property value. Device Configuration Setting State Device Summary
      * @return a settingStateDeviceSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SettingStateDeviceSummary> getDeviceSettingStateSummaries() {
         return this.deviceSettingStateSummaries;
     }
@@ -141,7 +141,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * Gets the deviceStatuses property value. Device configuration installation status by device.
      * @return a deviceConfigurationDeviceStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationDeviceStatus> getDeviceStatuses() {
         return this.deviceStatuses;
     }
@@ -149,7 +149,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * Gets the deviceStatusOverview property value. Device Configuration devices status overview
      * @return a deviceConfigurationDeviceOverview
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceConfigurationDeviceOverview getDeviceStatusOverview() {
         return this.deviceStatusOverview;
     }
@@ -157,7 +157,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * Gets the displayName property value. Admin provided name of the device configuration.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -165,7 +165,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(DeviceConfigurationAssignment::createFromDiscriminatorValue)); });
@@ -185,7 +185,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -193,7 +193,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * Gets the userStatuses property value. Device configuration installation status by user.
      * @return a deviceConfigurationUserStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationUserStatus> getUserStatuses() {
         return this.userStatuses;
     }
@@ -201,7 +201,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * Gets the userStatusOverview property value. Device Configuration users status overview
      * @return a deviceConfigurationUserOverview
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceConfigurationUserOverview getUserStatusOverview() {
         return this.userStatusOverview;
     }
@@ -209,7 +209,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * Gets the version property value. Version of the device configuration.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getVersion() {
         return this.version;
     }
@@ -218,8 +218,8 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
@@ -239,8 +239,8 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignments(@javax.annotation.Nullable final java.util.List<DeviceConfigurationAssignment> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationAssignment> value) {
         this.assignments = value;
     }
     /**
@@ -248,8 +248,8 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -257,8 +257,8 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -266,8 +266,8 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the deviceSettingStateSummaries property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceSettingStateSummaries(@javax.annotation.Nullable final java.util.List<SettingStateDeviceSummary> value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceSettingStateSummaries(@jakarta.annotation.Nullable final java.util.List<SettingStateDeviceSummary> value) {
         this.deviceSettingStateSummaries = value;
     }
     /**
@@ -275,8 +275,8 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the deviceStatuses property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceStatuses(@javax.annotation.Nullable final java.util.List<DeviceConfigurationDeviceStatus> value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceStatuses(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationDeviceStatus> value) {
         this.deviceStatuses = value;
     }
     /**
@@ -284,8 +284,8 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the deviceStatusOverview property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceStatusOverview(@javax.annotation.Nullable final DeviceConfigurationDeviceOverview value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceStatusOverview(@jakarta.annotation.Nullable final DeviceConfigurationDeviceOverview value) {
         this.deviceStatusOverview = value;
     }
     /**
@@ -293,8 +293,8 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -302,8 +302,8 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -311,8 +311,8 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the userStatuses property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserStatuses(@javax.annotation.Nullable final java.util.List<DeviceConfigurationUserStatus> value) {
+    @jakarta.annotation.Nonnull
+    public void setUserStatuses(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationUserStatus> value) {
         this.userStatuses = value;
     }
     /**
@@ -320,8 +320,8 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the userStatusOverview property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserStatusOverview(@javax.annotation.Nullable final DeviceConfigurationUserOverview value) {
+    @jakarta.annotation.Nonnull
+    public void setUserStatusOverview(@jakarta.annotation.Nullable final DeviceConfigurationUserOverview value) {
         this.userStatusOverview = value;
     }
     /**
@@ -329,8 +329,8 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setVersion(@jakarta.annotation.Nullable final Integer value) {
         this.version = value;
     }
 }

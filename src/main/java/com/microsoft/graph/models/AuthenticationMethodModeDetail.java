@@ -19,7 +19,7 @@ public class AuthenticationMethodModeDetail extends Entity implements Parsable {
      * Instantiates a new authenticationMethodModeDetail and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationMethodModeDetail() {
         super();
     }
@@ -28,8 +28,8 @@ public class AuthenticationMethodModeDetail extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a authenticationMethodModeDetail
      */
-    @javax.annotation.Nonnull
-    public static AuthenticationMethodModeDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AuthenticationMethodModeDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AuthenticationMethodModeDetail();
     }
@@ -37,7 +37,7 @@ public class AuthenticationMethodModeDetail extends Entity implements Parsable {
      * Gets the authenticationMethod property value. The authenticationMethod property
      * @return a baseAuthenticationMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BaseAuthenticationMethod getAuthenticationMethod() {
         return this.authenticationMethod;
     }
@@ -45,7 +45,7 @@ public class AuthenticationMethodModeDetail extends Entity implements Parsable {
      * Gets the displayName property value. The display name of this mode
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -53,7 +53,7 @@ public class AuthenticationMethodModeDetail extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(BaseAuthenticationMethod.class)); });
@@ -65,8 +65,8 @@ public class AuthenticationMethodModeDetail extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("authenticationMethod", this.getAuthenticationMethod());
@@ -77,8 +77,8 @@ public class AuthenticationMethodModeDetail extends Entity implements Parsable {
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationMethod(@javax.annotation.Nullable final BaseAuthenticationMethod value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final BaseAuthenticationMethod value) {
         this.authenticationMethod = value;
     }
     /**
@@ -86,8 +86,8 @@ public class AuthenticationMethodModeDetail extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
 }

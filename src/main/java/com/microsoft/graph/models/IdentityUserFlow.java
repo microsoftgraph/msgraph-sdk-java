@@ -19,7 +19,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
      * Instantiates a new identityUserFlow and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentityUserFlow() {
         super();
     }
@@ -28,8 +28,8 @@ public class IdentityUserFlow extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a identityUserFlow
      */
-    @javax.annotation.Nonnull
-    public static IdentityUserFlow createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IdentityUserFlow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -44,7 +44,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("userFlowType", (n) -> { this.setUserFlowType(n.getEnumValue(UserFlowType.class)); });
@@ -55,7 +55,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
      * Gets the userFlowType property value. The userFlowType property
      * @return a userFlowType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserFlowType getUserFlowType() {
         return this.userFlowType;
     }
@@ -63,7 +63,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
      * Gets the userFlowTypeVersion property value. The userFlowTypeVersion property
      * @return a float
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Float getUserFlowTypeVersion() {
         return this.userFlowTypeVersion;
     }
@@ -72,8 +72,8 @@ public class IdentityUserFlow extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("userFlowType", this.getUserFlowType());
@@ -84,8 +84,8 @@ public class IdentityUserFlow extends Entity implements Parsable {
      * @param value Value to set for the userFlowType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserFlowType(@javax.annotation.Nullable final UserFlowType value) {
+    @jakarta.annotation.Nonnull
+    public void setUserFlowType(@jakarta.annotation.Nullable final UserFlowType value) {
         this.userFlowType = value;
     }
     /**
@@ -93,8 +93,8 @@ public class IdentityUserFlow extends Entity implements Parsable {
      * @param value Value to set for the userFlowTypeVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserFlowTypeVersion(@javax.annotation.Nullable final Float value) {
+    @jakarta.annotation.Nonnull
+    public void setUserFlowTypeVersion(@jakarta.annotation.Nullable final Float value) {
         this.userFlowTypeVersion = value;
     }
 }

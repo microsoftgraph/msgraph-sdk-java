@@ -44,7 +44,7 @@ public class Host extends Artifact implements Parsable {
      * Instantiates a new host and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Host() {
         super();
         this.setOdataType("#microsoft.graph.security.host");
@@ -54,8 +54,8 @@ public class Host extends Artifact implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a host
      */
-    @javax.annotation.Nonnull
-    public static Host createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Host createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -71,7 +71,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the components property value. The hostComponents that are associated with this host.
      * @return a hostComponent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<HostComponent> getComponents() {
         return this.components;
     }
@@ -79,7 +79,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the cookies property value. The hostCookies that are associated with this host.
      * @return a hostCookie
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<HostCookie> getCookies() {
         return this.cookies;
     }
@@ -87,7 +87,7 @@ public class Host extends Artifact implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("components", (n) -> { this.setComponents(n.getCollectionOfObjectValues(HostComponent::createFromDiscriminatorValue)); });
@@ -104,7 +104,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the firstSeenDateTime property value. The first date and time this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
         return this.firstSeenDateTime;
     }
@@ -112,7 +112,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the lastSeenDateTime property value. The most recent date and time when this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
         return this.lastSeenDateTime;
     }
@@ -120,7 +120,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the passiveDns property value. Passive DNS retrieval about this host.
      * @return a passiveDnsRecord
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PassiveDnsRecord> getPassiveDns() {
         return this.passiveDns;
     }
@@ -128,7 +128,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the passiveDnsReverse property value. Reverse passive DNS retrieval about this host.
      * @return a passiveDnsRecord
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PassiveDnsRecord> getPassiveDnsReverse() {
         return this.passiveDnsReverse;
     }
@@ -136,7 +136,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the reputation property value. Represents a calculated reputation of this host.
      * @return a hostReputation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public HostReputation getReputation() {
         return this.reputation;
     }
@@ -144,7 +144,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the trackers property value. The hostTrackers that are associated with this host.
      * @return a hostTracker
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<HostTracker> getTrackers() {
         return this.trackers;
     }
@@ -153,8 +153,8 @@ public class Host extends Artifact implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("components", this.getComponents());
@@ -171,8 +171,8 @@ public class Host extends Artifact implements Parsable {
      * @param value Value to set for the components property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComponents(@javax.annotation.Nullable final java.util.List<HostComponent> value) {
+    @jakarta.annotation.Nonnull
+    public void setComponents(@jakarta.annotation.Nullable final java.util.List<HostComponent> value) {
         this.components = value;
     }
     /**
@@ -180,8 +180,8 @@ public class Host extends Artifact implements Parsable {
      * @param value Value to set for the cookies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCookies(@javax.annotation.Nullable final java.util.List<HostCookie> value) {
+    @jakarta.annotation.Nonnull
+    public void setCookies(@jakarta.annotation.Nullable final java.util.List<HostCookie> value) {
         this.cookies = value;
     }
     /**
@@ -189,8 +189,8 @@ public class Host extends Artifact implements Parsable {
      * @param value Value to set for the firstSeenDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstSeenDateTime = value;
     }
     /**
@@ -198,8 +198,8 @@ public class Host extends Artifact implements Parsable {
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSeenDateTime = value;
     }
     /**
@@ -207,8 +207,8 @@ public class Host extends Artifact implements Parsable {
      * @param value Value to set for the passiveDns property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPassiveDns(@javax.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
+    @jakarta.annotation.Nonnull
+    public void setPassiveDns(@jakarta.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
         this.passiveDns = value;
     }
     /**
@@ -216,8 +216,8 @@ public class Host extends Artifact implements Parsable {
      * @param value Value to set for the passiveDnsReverse property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPassiveDnsReverse(@javax.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
+    @jakarta.annotation.Nonnull
+    public void setPassiveDnsReverse(@jakarta.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
         this.passiveDnsReverse = value;
     }
     /**
@@ -225,8 +225,8 @@ public class Host extends Artifact implements Parsable {
      * @param value Value to set for the reputation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReputation(@javax.annotation.Nullable final HostReputation value) {
+    @jakarta.annotation.Nonnull
+    public void setReputation(@jakarta.annotation.Nullable final HostReputation value) {
         this.reputation = value;
     }
     /**
@@ -234,8 +234,8 @@ public class Host extends Artifact implements Parsable {
      * @param value Value to set for the trackers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrackers(@javax.annotation.Nullable final java.util.List<HostTracker> value) {
+    @jakarta.annotation.Nonnull
+    public void setTrackers(@jakarta.annotation.Nullable final java.util.List<HostTracker> value) {
         this.trackers = value;
     }
 }

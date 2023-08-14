@@ -15,7 +15,7 @@ public class OrganizerMeetingInfo extends MeetingInfo implements Parsable {
      * Instantiates a new organizerMeetingInfo and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OrganizerMeetingInfo() {
         super();
         this.setOdataType("#microsoft.graph.organizerMeetingInfo");
@@ -25,8 +25,8 @@ public class OrganizerMeetingInfo extends MeetingInfo implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a organizerMeetingInfo
      */
-    @javax.annotation.Nonnull
-    public static OrganizerMeetingInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OrganizerMeetingInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OrganizerMeetingInfo();
     }
@@ -34,7 +34,7 @@ public class OrganizerMeetingInfo extends MeetingInfo implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("organizer", (n) -> { this.setOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -44,7 +44,7 @@ public class OrganizerMeetingInfo extends MeetingInfo implements Parsable {
      * Gets the organizer property value. The organizer property
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getOrganizer() {
         return this.organizer;
     }
@@ -53,8 +53,8 @@ public class OrganizerMeetingInfo extends MeetingInfo implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("organizer", this.getOrganizer());
@@ -64,8 +64,8 @@ public class OrganizerMeetingInfo extends MeetingInfo implements Parsable {
      * @param value Value to set for the organizer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrganizer(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setOrganizer(@jakarta.annotation.Nullable final IdentitySet value) {
         this.organizer = value;
     }
 }

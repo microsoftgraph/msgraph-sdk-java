@@ -31,7 +31,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * Instantiates a new unifiedRoleManagementPolicyAssignment and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyAssignment() {
         super();
     }
@@ -40,8 +40,8 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a unifiedRoleManagementPolicyAssignment
      */
-    @javax.annotation.Nonnull
-    public static UnifiedRoleManagementPolicyAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UnifiedRoleManagementPolicyAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UnifiedRoleManagementPolicyAssignment();
     }
@@ -49,7 +49,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("policy", (n) -> { this.setPolicy(n.getObjectValue(UnifiedRoleManagementPolicy::createFromDiscriminatorValue)); });
@@ -63,7 +63,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * Gets the policy property value. The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
      * @return a unifiedRoleManagementPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicy getPolicy() {
         return this.policy;
     }
@@ -71,7 +71,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * Gets the policyId property value. The id of the policy. Inherited from entity.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPolicyId() {
         return this.policyId;
     }
@@ -79,7 +79,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * Gets the roleDefinitionId property value. The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -87,7 +87,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * Gets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getScopeId() {
         return this.scopeId;
     }
@@ -95,7 +95,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * Gets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getScopeType() {
         return this.scopeType;
     }
@@ -104,8 +104,8 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("policy", this.getPolicy());
@@ -119,8 +119,8 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * @param value Value to set for the policy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicy(@javax.annotation.Nullable final UnifiedRoleManagementPolicy value) {
+    @jakarta.annotation.Nonnull
+    public void setPolicy(@jakarta.annotation.Nullable final UnifiedRoleManagementPolicy value) {
         this.policy = value;
     }
     /**
@@ -128,8 +128,8 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * @param value Value to set for the policyId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPolicyId(@jakarta.annotation.Nullable final String value) {
         this.policyId = value;
     }
     /**
@@ -137,8 +137,8 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.roleDefinitionId = value;
     }
     /**
@@ -146,8 +146,8 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * @param value Value to set for the scopeId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScopeId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setScopeId(@jakarta.annotation.Nullable final String value) {
         this.scopeId = value;
     }
     /**
@@ -155,8 +155,8 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
      * @param value Value to set for the scopeType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScopeType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setScopeType(@jakarta.annotation.Nullable final String value) {
         this.scopeType = value;
     }
 }

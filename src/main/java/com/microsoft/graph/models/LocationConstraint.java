@@ -32,7 +32,7 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      * Instantiates a new locationConstraint and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocationConstraint() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a locationConstraint
      */
-    @javax.annotation.Nonnull
-    public static LocationConstraint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static LocationConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new LocationConstraint();
     }
@@ -50,7 +50,7 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("isRequired", (n) -> { this.setIsRequired(n.getBooleanValue()); });
@@ -71,7 +71,7 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      * Gets the isRequired property value. The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes will not return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
         return this.isRequired;
     }
@@ -79,7 +79,7 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      * Gets the locations property value. Constraint information for one or more locations that the client requests for the meeting.
      * @return a locationConstraintItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<LocationConstraintItem> getLocations() {
         return this.locations;
     }
@@ -87,7 +87,7 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -95,7 +95,7 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      * Gets the suggestLocation property value. The client requests the service to suggest one or more meeting locations.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSuggestLocation() {
         return this.suggestLocation;
     }
@@ -104,8 +104,8 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isRequired", this.getIsRequired());
         writer.writeCollectionOfObjectValues("locations", this.getLocations());
@@ -118,8 +118,8 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -127,8 +127,8 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isRequired property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isRequired = value;
     }
     /**
@@ -136,8 +136,8 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the locations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocations(@javax.annotation.Nullable final java.util.List<LocationConstraintItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setLocations(@jakarta.annotation.Nullable final java.util.List<LocationConstraintItem> value) {
         this.locations = value;
     }
     /**
@@ -145,8 +145,8 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -154,8 +154,8 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the suggestLocation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuggestLocation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSuggestLocation(@jakarta.annotation.Nullable final Boolean value) {
         this.suggestLocation = value;
     }
 }

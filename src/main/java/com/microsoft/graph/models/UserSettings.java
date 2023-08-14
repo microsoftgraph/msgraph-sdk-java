@@ -23,7 +23,7 @@ public class UserSettings extends Entity implements Parsable {
      * Instantiates a new userSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserSettings() {
         super();
     }
@@ -32,8 +32,8 @@ public class UserSettings extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userSettings
      */
-    @javax.annotation.Nonnull
-    public static UserSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserSettings();
     }
@@ -41,7 +41,7 @@ public class UserSettings extends Entity implements Parsable {
      * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn't have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getContributionToContentDiscoveryAsOrganizationDisabled() {
         return this.contributionToContentDiscoveryAsOrganizationDisabled;
     }
@@ -49,7 +49,7 @@ public class UserSettings extends Entity implements Parsable {
      * Gets the contributionToContentDiscoveryDisabled property value. When set to true, the delegate access to the user's trending API is disabled. When set to true, documents in the user's Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected. Users can control this setting in Office Delve.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getContributionToContentDiscoveryDisabled() {
         return this.contributionToContentDiscoveryDisabled;
     }
@@ -57,7 +57,7 @@ public class UserSettings extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contributionToContentDiscoveryAsOrganizationDisabled", (n) -> { this.setContributionToContentDiscoveryAsOrganizationDisabled(n.getBooleanValue()); });
@@ -69,7 +69,7 @@ public class UserSettings extends Entity implements Parsable {
      * Gets the shiftPreferences property value. The shiftPreferences property
      * @return a shiftPreferences
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ShiftPreferences getShiftPreferences() {
         return this.shiftPreferences;
     }
@@ -78,8 +78,8 @@ public class UserSettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("contributionToContentDiscoveryAsOrganizationDisabled", this.getContributionToContentDiscoveryAsOrganizationDisabled());
@@ -91,8 +91,8 @@ public class UserSettings extends Entity implements Parsable {
      * @param value Value to set for the contributionToContentDiscoveryAsOrganizationDisabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContributionToContentDiscoveryAsOrganizationDisabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setContributionToContentDiscoveryAsOrganizationDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.contributionToContentDiscoveryAsOrganizationDisabled = value;
     }
     /**
@@ -100,8 +100,8 @@ public class UserSettings extends Entity implements Parsable {
      * @param value Value to set for the contributionToContentDiscoveryDisabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContributionToContentDiscoveryDisabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setContributionToContentDiscoveryDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.contributionToContentDiscoveryDisabled = value;
     }
     /**
@@ -109,8 +109,8 @@ public class UserSettings extends Entity implements Parsable {
      * @param value Value to set for the shiftPreferences property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShiftPreferences(@javax.annotation.Nullable final ShiftPreferences value) {
+    @jakarta.annotation.Nonnull
+    public void setShiftPreferences(@jakarta.annotation.Nullable final ShiftPreferences value) {
         this.shiftPreferences = value;
     }
 }

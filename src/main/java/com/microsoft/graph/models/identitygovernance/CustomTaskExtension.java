@@ -35,7 +35,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      * Instantiates a new customTaskExtension and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CustomTaskExtension() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.customTaskExtension");
@@ -45,8 +45,8 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a customTaskExtension
      */
-    @javax.annotation.Nonnull
-    public static CustomTaskExtension createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CustomTaskExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CustomTaskExtension();
     }
@@ -54,7 +54,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      * Gets the callbackConfiguration property value. The callback configuration for a custom task extension.
      * @return a customExtensionCallbackConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CustomExtensionCallbackConfiguration getCallbackConfiguration() {
         return this.callbackConfiguration;
     }
@@ -62,7 +62,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      * Gets the createdBy property value. The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
      * @return a user
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public User getCreatedBy() {
         return this.createdBy;
     }
@@ -70,7 +70,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      * Gets the createdDateTime property value. When the custom task extension was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -78,7 +78,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("callbackConfiguration", (n) -> { this.setCallbackConfiguration(n.getObjectValue(CustomExtensionCallbackConfiguration::createFromDiscriminatorValue)); });
@@ -92,7 +92,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      * Gets the lastModifiedBy property value. The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
      * @return a user
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public User getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -100,7 +100,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      * Gets the lastModifiedDateTime property value. When the custom extension was last modified.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -109,8 +109,8 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("callbackConfiguration", this.getCallbackConfiguration());
@@ -124,8 +124,8 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      * @param value Value to set for the callbackConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallbackConfiguration(@javax.annotation.Nullable final CustomExtensionCallbackConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setCallbackConfiguration(@jakarta.annotation.Nullable final CustomExtensionCallbackConfiguration value) {
         this.callbackConfiguration = value;
     }
     /**
@@ -133,8 +133,8 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final User value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final User value) {
         this.createdBy = value;
     }
     /**
@@ -142,8 +142,8 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -151,8 +151,8 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final User value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final User value) {
         this.lastModifiedBy = value;
     }
     /**
@@ -160,8 +160,8 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
 }

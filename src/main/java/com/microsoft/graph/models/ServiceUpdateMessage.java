@@ -56,7 +56,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * Instantiates a new serviceUpdateMessage and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServiceUpdateMessage() {
         super();
         this.setOdataType("#microsoft.graph.serviceUpdateMessage");
@@ -66,8 +66,8 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a serviceUpdateMessage
      */
-    @javax.annotation.Nonnull
-    public static ServiceUpdateMessage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ServiceUpdateMessage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ServiceUpdateMessage();
     }
@@ -75,7 +75,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * Gets the actionRequiredByDateTime property value. The expected deadline of the action for the message.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getActionRequiredByDateTime() {
         return this.actionRequiredByDateTime;
     }
@@ -83,7 +83,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * Gets the attachments property value. A collection of serviceAnnouncementAttachments.
      * @return a serviceAnnouncementAttachment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ServiceAnnouncementAttachment> getAttachments() {
         return this.attachments;
     }
@@ -91,7 +91,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * Gets the attachmentsArchive property value. The zip file that contains all attachments for a message.
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getAttachmentsArchive() {
         return this.attachmentsArchive;
     }
@@ -99,7 +99,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * Gets the body property value. The body property
      * @return a itemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemBody getBody() {
         return this.body;
     }
@@ -107,7 +107,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * Gets the category property value. The category property
      * @return a serviceUpdateCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServiceUpdateCategory getCategory() {
         return this.category;
     }
@@ -115,7 +115,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("actionRequiredByDateTime", (n) -> { this.setActionRequiredByDateTime(n.getOffsetDateTimeValue()); });
@@ -135,7 +135,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * Gets the hasAttachments property value. Indicates whether the message has any attachment.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
         return this.hasAttachments;
     }
@@ -143,7 +143,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * Gets the isMajorChange property value. Indicates whether the message describes a major update for the service.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsMajorChange() {
         return this.isMajorChange;
     }
@@ -151,7 +151,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * Gets the services property value. The affected services by the service message.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getServices() {
         return this.services;
     }
@@ -159,7 +159,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * Gets the severity property value. The severity property
      * @return a serviceUpdateSeverity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServiceUpdateSeverity getSeverity() {
         return this.severity;
     }
@@ -167,7 +167,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * Gets the tags property value. A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
         return this.tags;
     }
@@ -175,7 +175,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * Gets the viewPoint property value. Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
      * @return a serviceUpdateMessageViewpoint
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServiceUpdateMessageViewpoint getViewPoint() {
         return this.viewPoint;
     }
@@ -184,8 +184,8 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("actionRequiredByDateTime", this.getActionRequiredByDateTime());
@@ -205,8 +205,8 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the actionRequiredByDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActionRequiredByDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setActionRequiredByDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.actionRequiredByDateTime = value;
     }
     /**
@@ -214,8 +214,8 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the attachments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttachments(@javax.annotation.Nullable final java.util.List<ServiceAnnouncementAttachment> value) {
+    @jakarta.annotation.Nonnull
+    public void setAttachments(@jakarta.annotation.Nullable final java.util.List<ServiceAnnouncementAttachment> value) {
         this.attachments = value;
     }
     /**
@@ -223,8 +223,8 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the attachmentsArchive property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttachmentsArchive(@javax.annotation.Nullable final byte[] value) {
+    @jakarta.annotation.Nonnull
+    public void setAttachmentsArchive(@jakarta.annotation.Nullable final byte[] value) {
         this.attachmentsArchive = value;
     }
     /**
@@ -232,8 +232,8 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the body property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBody(@javax.annotation.Nullable final ItemBody value) {
+    @jakarta.annotation.Nonnull
+    public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
         this.body = value;
     }
     /**
@@ -241,8 +241,8 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the category property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory(@javax.annotation.Nullable final ServiceUpdateCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setCategory(@jakarta.annotation.Nullable final ServiceUpdateCategory value) {
         this.category = value;
     }
     /**
@@ -250,8 +250,8 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
         this.hasAttachments = value;
     }
     /**
@@ -259,8 +259,8 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the isMajorChange property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsMajorChange(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsMajorChange(@jakarta.annotation.Nullable final Boolean value) {
         this.isMajorChange = value;
     }
     /**
@@ -268,8 +268,8 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the services property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServices(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setServices(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.services = value;
     }
     /**
@@ -277,8 +277,8 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the severity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSeverity(@javax.annotation.Nullable final ServiceUpdateSeverity value) {
+    @jakarta.annotation.Nonnull
+    public void setSeverity(@jakarta.annotation.Nullable final ServiceUpdateSeverity value) {
         this.severity = value;
     }
     /**
@@ -286,8 +286,8 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the tags property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.tags = value;
     }
     /**
@@ -295,8 +295,8 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the viewPoint property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setViewPoint(@javax.annotation.Nullable final ServiceUpdateMessageViewpoint value) {
+    @jakarta.annotation.Nonnull
+    public void setViewPoint(@jakarta.annotation.Nullable final ServiceUpdateMessageViewpoint value) {
         this.viewPoint = value;
     }
 }

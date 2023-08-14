@@ -39,7 +39,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * Instantiates a new deviceConfigurationDeviceStateSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceConfigurationDeviceStateSummary() {
         super();
     }
@@ -48,8 +48,8 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceConfigurationDeviceStateSummary
      */
-    @javax.annotation.Nonnull
-    public static DeviceConfigurationDeviceStateSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceConfigurationDeviceStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceConfigurationDeviceStateSummary();
     }
@@ -57,7 +57,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * Gets the compliantDeviceCount property value. Number of compliant devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCompliantDeviceCount() {
         return this.compliantDeviceCount;
     }
@@ -65,7 +65,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * Gets the conflictDeviceCount property value. Number of conflict devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getConflictDeviceCount() {
         return this.conflictDeviceCount;
     }
@@ -73,7 +73,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * Gets the errorDeviceCount property value. Number of error devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
         return this.errorDeviceCount;
     }
@@ -81,7 +81,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("compliantDeviceCount", (n) -> { this.setCompliantDeviceCount(n.getIntegerValue()); });
@@ -97,7 +97,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * Gets the nonCompliantDeviceCount property value. Number of NonCompliant devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
         return this.nonCompliantDeviceCount;
     }
@@ -105,7 +105,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * Gets the notApplicableDeviceCount property value. Number of not applicable devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
         return this.notApplicableDeviceCount;
     }
@@ -113,7 +113,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * Gets the remediatedDeviceCount property value. Number of remediated devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRemediatedDeviceCount() {
         return this.remediatedDeviceCount;
     }
@@ -121,7 +121,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * Gets the unknownDeviceCount property value. Number of unknown devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {
         return this.unknownDeviceCount;
     }
@@ -130,8 +130,8 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("compliantDeviceCount", this.getCompliantDeviceCount());
@@ -147,8 +147,8 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * @param value Value to set for the compliantDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.compliantDeviceCount = value;
     }
     /**
@@ -156,8 +156,8 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * @param value Value to set for the conflictDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConflictDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setConflictDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.conflictDeviceCount = value;
     }
     /**
@@ -165,8 +165,8 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * @param value Value to set for the errorDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setErrorDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.errorDeviceCount = value;
     }
     /**
@@ -174,8 +174,8 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * @param value Value to set for the nonCompliantDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNonCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNonCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.nonCompliantDeviceCount = value;
     }
     /**
@@ -183,8 +183,8 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * @param value Value to set for the notApplicableDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotApplicableDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNotApplicableDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.notApplicableDeviceCount = value;
     }
     /**
@@ -192,8 +192,8 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * @param value Value to set for the remediatedDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemediatedDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setRemediatedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.remediatedDeviceCount = value;
     }
     /**
@@ -201,8 +201,8 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * @param value Value to set for the unknownDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnknownDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setUnknownDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.unknownDeviceCount = value;
     }
 }

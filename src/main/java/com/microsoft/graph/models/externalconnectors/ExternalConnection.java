@@ -52,7 +52,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * Instantiates a new externalConnection and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExternalConnection() {
         super();
     }
@@ -61,8 +61,8 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a externalConnection
      */
-    @javax.annotation.Nonnull
-    public static ExternalConnection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ExternalConnection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ExternalConnection();
     }
@@ -70,7 +70,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * Gets the activitySettings property value. Collects configurable settings related to activities involving connector content.
      * @return a activitySettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ActivitySettings getActivitySettings() {
         return this.activitySettings;
     }
@@ -78,7 +78,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * Gets the configuration property value. Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
      * @return a configuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Configuration getConfiguration() {
         return this.configuration;
     }
@@ -86,7 +86,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * Gets the description property value. Description of the connection displayed in the Microsoft 365 admin center. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -94,7 +94,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activitySettings", (n) -> { this.setActivitySettings(n.getObjectValue(ActivitySettings::createFromDiscriminatorValue)); });
@@ -113,7 +113,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * Gets the groups property value. The groups property
      * @return a externalGroup
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ExternalGroup> getGroups() {
         return this.groups;
     }
@@ -121,7 +121,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * Gets the items property value. The items property
      * @return a externalItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ExternalItem> getItems() {
         return this.items;
     }
@@ -129,7 +129,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * Gets the name property value. The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -137,7 +137,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * Gets the operations property value. The operations property
      * @return a connectionOperation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ConnectionOperation> getOperations() {
         return this.operations;
     }
@@ -145,7 +145,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * Gets the schema property value. The schema property
      * @return a schema
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Schema getSchema() {
         return this.schema;
     }
@@ -153,7 +153,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * Gets the searchSettings property value. The settings configuring the search experience for content in this connection, such as the display templates for search results.
      * @return a searchSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SearchSettings getSearchSettings() {
         return this.searchSettings;
     }
@@ -161,7 +161,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * Gets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
      * @return a connectionState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConnectionState getState() {
         return this.state;
     }
@@ -170,8 +170,8 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("activitySettings", this.getActivitySettings());
@@ -189,8 +189,8 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the activitySettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivitySettings(@javax.annotation.Nullable final ActivitySettings value) {
+    @jakarta.annotation.Nonnull
+    public void setActivitySettings(@jakarta.annotation.Nullable final ActivitySettings value) {
         this.activitySettings = value;
     }
     /**
@@ -198,8 +198,8 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the configuration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfiguration(@javax.annotation.Nullable final Configuration value) {
+    @jakarta.annotation.Nonnull
+    public void setConfiguration(@jakarta.annotation.Nullable final Configuration value) {
         this.configuration = value;
     }
     /**
@@ -207,8 +207,8 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -216,8 +216,8 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the groups property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroups(@javax.annotation.Nullable final java.util.List<ExternalGroup> value) {
+    @jakarta.annotation.Nonnull
+    public void setGroups(@jakarta.annotation.Nullable final java.util.List<ExternalGroup> value) {
         this.groups = value;
     }
     /**
@@ -225,8 +225,8 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the items property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setItems(@javax.annotation.Nullable final java.util.List<ExternalItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setItems(@jakarta.annotation.Nullable final java.util.List<ExternalItem> value) {
         this.items = value;
     }
     /**
@@ -234,8 +234,8 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -243,8 +243,8 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperations(@javax.annotation.Nullable final java.util.List<ConnectionOperation> value) {
+    @jakarta.annotation.Nonnull
+    public void setOperations(@jakarta.annotation.Nullable final java.util.List<ConnectionOperation> value) {
         this.operations = value;
     }
     /**
@@ -252,8 +252,8 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the schema property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchema(@javax.annotation.Nullable final Schema value) {
+    @jakarta.annotation.Nonnull
+    public void setSchema(@jakarta.annotation.Nullable final Schema value) {
         this.schema = value;
     }
     /**
@@ -261,8 +261,8 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the searchSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSearchSettings(@javax.annotation.Nullable final SearchSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setSearchSettings(@jakarta.annotation.Nullable final SearchSettings value) {
         this.searchSettings = value;
     }
     /**
@@ -270,8 +270,8 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final ConnectionState value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final ConnectionState value) {
         this.state = value;
     }
 }

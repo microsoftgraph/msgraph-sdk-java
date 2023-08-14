@@ -33,7 +33,7 @@ public class ReplaceBPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new replaceBPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ReplaceBPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +42,8 @@ public class ReplaceBPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a replaceBPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static ReplaceBPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ReplaceBPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ReplaceBPostRequestBody();
     }
@@ -51,7 +51,7 @@ public class ReplaceBPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -59,7 +59,7 @@ public class ReplaceBPostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("newText", (n) -> { this.setNewText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -72,7 +72,7 @@ public class ReplaceBPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the newText property value. The newText property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getNewText() {
         return this.newText;
     }
@@ -80,7 +80,7 @@ public class ReplaceBPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the numBytes property value. The numBytes property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getNumBytes() {
         return this.numBytes;
     }
@@ -88,7 +88,7 @@ public class ReplaceBPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the oldText property value. The oldText property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getOldText() {
         return this.oldText;
     }
@@ -96,7 +96,7 @@ public class ReplaceBPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the startNum property value. The startNum property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getStartNum() {
         return this.startNum;
     }
@@ -105,8 +105,8 @@ public class ReplaceBPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("newText", this.getNewText());
         writer.writeObjectValue("numBytes", this.getNumBytes());
@@ -119,8 +119,8 @@ public class ReplaceBPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -128,8 +128,8 @@ public class ReplaceBPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the newText property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNewText(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setNewText(@jakarta.annotation.Nullable final Json value) {
         this.newText = value;
     }
     /**
@@ -137,8 +137,8 @@ public class ReplaceBPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the numBytes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNumBytes(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setNumBytes(@jakarta.annotation.Nullable final Json value) {
         this.numBytes = value;
     }
     /**
@@ -146,8 +146,8 @@ public class ReplaceBPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the oldText property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOldText(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setOldText(@jakarta.annotation.Nullable final Json value) {
         this.oldText = value;
     }
     /**
@@ -155,8 +155,8 @@ public class ReplaceBPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the startNum property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartNum(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setStartNum(@jakarta.annotation.Nullable final Json value) {
         this.startNum = value;
     }
 }

@@ -53,7 +53,7 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * Instantiates a new oddFPricePostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OddFPricePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -62,8 +62,8 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a oddFPricePostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static OddFPricePostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OddFPricePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OddFPricePostRequestBody();
     }
@@ -71,7 +71,7 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -79,7 +79,7 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the basis property value. The basis property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getBasis() {
         return this.basis;
     }
@@ -87,7 +87,7 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("basis", (n) -> { this.setBasis(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -105,7 +105,7 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the firstCoupon property value. The firstCoupon property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getFirstCoupon() {
         return this.firstCoupon;
     }
@@ -113,7 +113,7 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the frequency property value. The frequency property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getFrequency() {
         return this.frequency;
     }
@@ -121,7 +121,7 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the issue property value. The issue property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getIssue() {
         return this.issue;
     }
@@ -129,7 +129,7 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the maturity property value. The maturity property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getMaturity() {
         return this.maturity;
     }
@@ -137,7 +137,7 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the rate property value. The rate property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getRate() {
         return this.rate;
     }
@@ -145,7 +145,7 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the redemption property value. The redemption property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getRedemption() {
         return this.redemption;
     }
@@ -153,7 +153,7 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the settlement property value. The settlement property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getSettlement() {
         return this.settlement;
     }
@@ -161,7 +161,7 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the yld property value. The yld property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getYld() {
         return this.yld;
     }
@@ -170,8 +170,8 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("basis", this.getBasis());
         writer.writeObjectValue("firstCoupon", this.getFirstCoupon());
@@ -189,8 +189,8 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -198,8 +198,8 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the basis property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBasis(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setBasis(@jakarta.annotation.Nullable final Json value) {
         this.basis = value;
     }
     /**
@@ -207,8 +207,8 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the firstCoupon property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirstCoupon(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setFirstCoupon(@jakarta.annotation.Nullable final Json value) {
         this.firstCoupon = value;
     }
     /**
@@ -216,8 +216,8 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the frequency property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFrequency(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setFrequency(@jakarta.annotation.Nullable final Json value) {
         this.frequency = value;
     }
     /**
@@ -225,8 +225,8 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the issue property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIssue(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setIssue(@jakarta.annotation.Nullable final Json value) {
         this.issue = value;
     }
     /**
@@ -234,8 +234,8 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the maturity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaturity(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setMaturity(@jakarta.annotation.Nullable final Json value) {
         this.maturity = value;
     }
     /**
@@ -243,8 +243,8 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the rate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRate(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setRate(@jakarta.annotation.Nullable final Json value) {
         this.rate = value;
     }
     /**
@@ -252,8 +252,8 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the redemption property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRedemption(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setRedemption(@jakarta.annotation.Nullable final Json value) {
         this.redemption = value;
     }
     /**
@@ -261,8 +261,8 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the settlement property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettlement(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setSettlement(@jakarta.annotation.Nullable final Json value) {
         this.settlement = value;
     }
     /**
@@ -270,8 +270,8 @@ public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the yld property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setYld(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setYld(@jakarta.annotation.Nullable final Json value) {
         this.yld = value;
     }
 }

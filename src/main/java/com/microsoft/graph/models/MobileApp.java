@@ -75,7 +75,7 @@ public class MobileApp extends Entity implements Parsable {
      * Instantiates a new mobileApp and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MobileApp() {
         super();
     }
@@ -84,8 +84,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a mobileApp
      */
-    @javax.annotation.Nonnull
-    public static MobileApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MobileApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -124,7 +124,7 @@ public class MobileApp extends Entity implements Parsable {
      * Gets the assignments property value. The list of group assignments for this mobile app.
      * @return a mobileAppAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MobileAppAssignment> getAssignments() {
         return this.assignments;
     }
@@ -132,7 +132,7 @@ public class MobileApp extends Entity implements Parsable {
      * Gets the categories property value. The list of categories for this app.
      * @return a mobileAppCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MobileAppCategory> getCategories() {
         return this.categories;
     }
@@ -140,7 +140,7 @@ public class MobileApp extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time the app was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -148,7 +148,7 @@ public class MobileApp extends Entity implements Parsable {
      * Gets the description property value. The description of the app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -156,7 +156,7 @@ public class MobileApp extends Entity implements Parsable {
      * Gets the developer property value. The developer of the app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeveloper() {
         return this.developer;
     }
@@ -164,7 +164,7 @@ public class MobileApp extends Entity implements Parsable {
      * Gets the displayName property value. The admin provided or imported title of the app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -172,7 +172,7 @@ public class MobileApp extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(MobileAppAssignment::createFromDiscriminatorValue)); });
@@ -196,7 +196,7 @@ public class MobileApp extends Entity implements Parsable {
      * Gets the informationUrl property value. The more information Url.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInformationUrl() {
         return this.informationUrl;
     }
@@ -204,7 +204,7 @@ public class MobileApp extends Entity implements Parsable {
      * Gets the isFeatured property value. The value indicating whether the app is marked as featured by the admin.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsFeatured() {
         return this.isFeatured;
     }
@@ -212,7 +212,7 @@ public class MobileApp extends Entity implements Parsable {
      * Gets the largeIcon property value. The large icon, to be displayed in the app details and used for upload of the icon.
      * @return a mimeContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MimeContent getLargeIcon() {
         return this.largeIcon;
     }
@@ -220,7 +220,7 @@ public class MobileApp extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time the app was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -228,7 +228,7 @@ public class MobileApp extends Entity implements Parsable {
      * Gets the notes property value. Notes for the app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNotes() {
         return this.notes;
     }
@@ -236,7 +236,7 @@ public class MobileApp extends Entity implements Parsable {
      * Gets the owner property value. The owner of the app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOwner() {
         return this.owner;
     }
@@ -244,7 +244,7 @@ public class MobileApp extends Entity implements Parsable {
      * Gets the privacyInformationUrl property value. The privacy statement Url.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrivacyInformationUrl() {
         return this.privacyInformationUrl;
     }
@@ -252,7 +252,7 @@ public class MobileApp extends Entity implements Parsable {
      * Gets the publisher property value. The publisher of the app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPublisher() {
         return this.publisher;
     }
@@ -260,7 +260,7 @@ public class MobileApp extends Entity implements Parsable {
      * Gets the publishingState property value. Indicates the publishing state of an app.
      * @return a mobileAppPublishingState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MobileAppPublishingState getPublishingState() {
         return this.publishingState;
     }
@@ -269,8 +269,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
@@ -294,8 +294,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignments(@javax.annotation.Nullable final java.util.List<MobileAppAssignment> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<MobileAppAssignment> value) {
         this.assignments = value;
     }
     /**
@@ -303,8 +303,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategories(@javax.annotation.Nullable final java.util.List<MobileAppCategory> value) {
+    @jakarta.annotation.Nonnull
+    public void setCategories(@jakarta.annotation.Nullable final java.util.List<MobileAppCategory> value) {
         this.categories = value;
     }
     /**
@@ -312,8 +312,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -321,8 +321,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -330,8 +330,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the developer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeveloper(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeveloper(@jakarta.annotation.Nullable final String value) {
         this.developer = value;
     }
     /**
@@ -339,8 +339,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -348,8 +348,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the informationUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInformationUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setInformationUrl(@jakarta.annotation.Nullable final String value) {
         this.informationUrl = value;
     }
     /**
@@ -357,8 +357,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the isFeatured property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsFeatured(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsFeatured(@jakarta.annotation.Nullable final Boolean value) {
         this.isFeatured = value;
     }
     /**
@@ -366,8 +366,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the largeIcon property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLargeIcon(@javax.annotation.Nullable final MimeContent value) {
+    @jakarta.annotation.Nonnull
+    public void setLargeIcon(@jakarta.annotation.Nullable final MimeContent value) {
         this.largeIcon = value;
     }
     /**
@@ -375,8 +375,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -384,8 +384,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotes(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNotes(@jakarta.annotation.Nullable final String value) {
         this.notes = value;
     }
     /**
@@ -393,8 +393,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the owner property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOwner(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOwner(@jakarta.annotation.Nullable final String value) {
         this.owner = value;
     }
     /**
@@ -402,8 +402,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the privacyInformationUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrivacyInformationUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrivacyInformationUrl(@jakarta.annotation.Nullable final String value) {
         this.privacyInformationUrl = value;
     }
     /**
@@ -411,8 +411,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the publisher property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublisher(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.publisher = value;
     }
     /**
@@ -420,8 +420,8 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the publishingState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublishingState(@javax.annotation.Nullable final MobileAppPublishingState value) {
+    @jakarta.annotation.Nonnull
+    public void setPublishingState(@jakarta.annotation.Nullable final MobileAppPublishingState value) {
         this.publishingState = value;
     }
 }

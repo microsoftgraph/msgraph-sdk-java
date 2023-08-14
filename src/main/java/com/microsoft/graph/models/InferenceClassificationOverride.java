@@ -19,7 +19,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      * Instantiates a new inferenceClassificationOverride and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InferenceClassificationOverride() {
         super();
     }
@@ -28,8 +28,8 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a inferenceClassificationOverride
      */
-    @javax.annotation.Nonnull
-    public static InferenceClassificationOverride createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static InferenceClassificationOverride createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new InferenceClassificationOverride();
     }
@@ -37,7 +37,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      * Gets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
      * @return a inferenceClassificationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InferenceClassificationType getClassifyAs() {
         return this.classifyAs;
     }
@@ -45,7 +45,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("classifyAs", (n) -> { this.setClassifyAs(n.getEnumValue(InferenceClassificationType.class)); });
@@ -56,7 +56,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      * Gets the senderEmailAddress property value. The email address information of the sender for whom the override is created.
      * @return a emailAddress
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailAddress getSenderEmailAddress() {
         return this.senderEmailAddress;
     }
@@ -65,8 +65,8 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("classifyAs", this.getClassifyAs());
@@ -77,8 +77,8 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      * @param value Value to set for the classifyAs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClassifyAs(@javax.annotation.Nullable final InferenceClassificationType value) {
+    @jakarta.annotation.Nonnull
+    public void setClassifyAs(@jakarta.annotation.Nullable final InferenceClassificationType value) {
         this.classifyAs = value;
     }
     /**
@@ -86,8 +86,8 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      * @param value Value to set for the senderEmailAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSenderEmailAddress(@javax.annotation.Nullable final EmailAddress value) {
+    @jakarta.annotation.Nonnull
+    public void setSenderEmailAddress(@jakarta.annotation.Nullable final EmailAddress value) {
         this.senderEmailAddress = value;
     }
 }

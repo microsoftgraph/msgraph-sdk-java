@@ -36,7 +36,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * Instantiates a new attributeMappingSource and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttributeMappingSource() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a attributeMappingSource
      */
-    @javax.annotation.Nonnull
-    public static AttributeMappingSource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AttributeMappingSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AttributeMappingSource();
     }
@@ -54,7 +54,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * Gets the expression property value. Equivalent expression representation of this attributeMappingSource object.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExpression() {
         return this.expression;
     }
@@ -70,7 +70,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("expression", (n) -> { this.setExpression(n.getStringValue()); });
@@ -84,7 +84,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * Gets the name property value. Name parameter of the mapping source. Depending on the type property value, this can be the name of the function, the name of the source attribute, or a constant value to be used.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -92,7 +92,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -100,7 +100,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * Gets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type is not Function, this property will be null/empty array.
      * @return a stringKeyAttributeMappingSourceValuePair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<StringKeyAttributeMappingSourceValuePair> getParameters() {
         return this.parameters;
     }
@@ -108,7 +108,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * Gets the type property value. The type property
      * @return a attributeMappingSourceType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttributeMappingSourceType getType() {
         return this.type;
     }
@@ -117,8 +117,8 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("expression", this.getExpression());
         writer.writeStringValue("name", this.getName());
@@ -132,8 +132,8 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the expression property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpression(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExpression(@jakarta.annotation.Nullable final String value) {
         this.expression = value;
     }
     /**
@@ -150,8 +150,8 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -159,8 +159,8 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -168,8 +168,8 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the parameters property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParameters(@javax.annotation.Nullable final java.util.List<StringKeyAttributeMappingSourceValuePair> value) {
+    @jakarta.annotation.Nonnull
+    public void setParameters(@jakarta.annotation.Nullable final java.util.List<StringKeyAttributeMappingSourceValuePair> value) {
         this.parameters = value;
     }
     /**
@@ -177,8 +177,8 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final AttributeMappingSourceType value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final AttributeMappingSourceType value) {
         this.type = value;
     }
 }

@@ -26,17 +26,17 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
     /**
      * Provides operations to count the resources in the collection.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsMetricHistory property of the microsoft.graph.deviceManagement entity.
-     * @param userExperienceAnalyticsMetricHistoryId Unique identifier of the item
+     * @param userExperienceAnalyticsMetricHistoryId The unique identifier of userExperienceAnalyticsMetricHistory
      * @return a UserExperienceAnalyticsMetricHistoryItemRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public UserExperienceAnalyticsMetricHistoryItemRequestBuilder byUserExperienceAnalyticsMetricHistoryId(@javax.annotation.Nonnull final String userExperienceAnalyticsMetricHistoryId) {
+    @jakarta.annotation.Nonnull
+    public UserExperienceAnalyticsMetricHistoryItemRequestBuilder byUserExperienceAnalyticsMetricHistoryId(@jakarta.annotation.Nonnull final String userExperienceAnalyticsMetricHistoryId) {
         Objects.requireNonNull(userExperienceAnalyticsMetricHistoryId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("userExperienceAnalyticsMetricHistory%2Did", userExperienceAnalyticsMetricHistoryId);
@@ -48,8 +48,8 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public UserExperienceAnalyticsMetricHistoryRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsMetricHistoryRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsMetricHistory{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
@@ -58,15 +58,15 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public UserExperienceAnalyticsMetricHistoryRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsMetricHistoryRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsMetricHistory{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
      * User experience analytics metric history
      * @return a CompletableFuture of userExperienceAnalyticsMetricHistoryCollectionResponse
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsMetricHistoryCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -85,8 +85,8 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userExperienceAnalyticsMetricHistoryCollectionResponse
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsMetricHistoryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsMetricHistoryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -104,8 +104,8 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
      * @param body The request body
      * @return a CompletableFuture of userExperienceAnalyticsMetricHistory
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsMetricHistory> post(@javax.annotation.Nonnull final UserExperienceAnalyticsMetricHistory body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsMetricHistory> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsMetricHistory body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -124,8 +124,8 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userExperienceAnalyticsMetricHistory
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsMetricHistory> post(@javax.annotation.Nonnull final UserExperienceAnalyticsMetricHistory body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsMetricHistory> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsMetricHistory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -143,7 +143,7 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
      * User experience analytics metric history
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -152,8 +152,8 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -173,8 +173,8 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final UserExperienceAnalyticsMetricHistory body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsMetricHistory body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -183,8 +183,8 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final UserExperienceAnalyticsMetricHistory body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsMetricHistory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -208,49 +208,49 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
          * Include count of items
          */
         @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Boolean count;
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Filter items by property values
          */
         @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String filter;
         /**
          * Order items by property values
          */
         @QueryParameter(name = "%24orderby")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] orderby;
         /**
          * Search items by search phrases
          */
         @QueryParameter(name = "%24search")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String search;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
         /**
          * Skip the first n items
          */
         @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer skip;
         /**
          * Show only the first n items
          */
         @QueryParameter(name = "%24top")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer top;
     }
     /**
@@ -260,7 +260,7 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

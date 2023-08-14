@@ -53,7 +53,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * Instantiates a new accessPackageApprovalStage and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageApprovalStage() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -62,8 +62,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageApprovalStage
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageApprovalStage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageApprovalStage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackageApprovalStage();
     }
@@ -71,7 +71,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -79,7 +79,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * Gets the durationBeforeAutomaticDenial property value. The number of days that a request can be pending a response before it is automatically denied.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getDurationBeforeAutomaticDenial() {
         return this.durationBeforeAutomaticDenial;
     }
@@ -87,7 +87,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * Gets the durationBeforeEscalation property value. If escalation is required, the time a request can be pending a response from a primary approver.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getDurationBeforeEscalation() {
         return this.durationBeforeEscalation;
     }
@@ -95,7 +95,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * Gets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
      * @return a subjectSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getEscalationApprovers() {
         return this.escalationApprovers;
     }
@@ -103,7 +103,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * Gets the fallbackEscalationApprovers property value. The subjects, typically users, who are the fallback escalation approvers.
      * @return a subjectSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getFallbackEscalationApprovers() {
         return this.fallbackEscalationApprovers;
     }
@@ -111,7 +111,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * Gets the fallbackPrimaryApprovers property value. The subjects, typically users, who are the fallback primary approvers.
      * @return a subjectSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getFallbackPrimaryApprovers() {
         return this.fallbackPrimaryApprovers;
     }
@@ -119,7 +119,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("durationBeforeAutomaticDenial", (n) -> { this.setDurationBeforeAutomaticDenial(n.getPeriodAndDurationValue()); });
@@ -137,7 +137,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * Gets the isApproverJustificationRequired property value. Indicates whether the approver is required to provide a justification for approving a request.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsApproverJustificationRequired() {
         return this.isApproverJustificationRequired;
     }
@@ -145,7 +145,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * Gets the isEscalationEnabled property value. If true, then one or more escalationApprovers are configured in this approval stage.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEscalationEnabled() {
         return this.isEscalationEnabled;
     }
@@ -153,7 +153,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -161,7 +161,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * Gets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.
      * @return a subjectSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getPrimaryApprovers() {
         return this.primaryApprovers;
     }
@@ -170,8 +170,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writePeriodAndDurationValue("durationBeforeAutomaticDenial", this.getDurationBeforeAutomaticDenial());
         writer.writePeriodAndDurationValue("durationBeforeEscalation", this.getDurationBeforeEscalation());
@@ -189,8 +189,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -198,8 +198,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the durationBeforeAutomaticDenial property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDurationBeforeAutomaticDenial(@javax.annotation.Nullable final PeriodAndDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setDurationBeforeAutomaticDenial(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.durationBeforeAutomaticDenial = value;
     }
     /**
@@ -207,8 +207,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the durationBeforeEscalation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDurationBeforeEscalation(@javax.annotation.Nullable final PeriodAndDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setDurationBeforeEscalation(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.durationBeforeEscalation = value;
     }
     /**
@@ -216,8 +216,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the escalationApprovers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEscalationApprovers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
+    @jakarta.annotation.Nonnull
+    public void setEscalationApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
         this.escalationApprovers = value;
     }
     /**
@@ -225,8 +225,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the fallbackEscalationApprovers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFallbackEscalationApprovers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
+    @jakarta.annotation.Nonnull
+    public void setFallbackEscalationApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
         this.fallbackEscalationApprovers = value;
     }
     /**
@@ -234,8 +234,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the fallbackPrimaryApprovers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFallbackPrimaryApprovers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
+    @jakarta.annotation.Nonnull
+    public void setFallbackPrimaryApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
         this.fallbackPrimaryApprovers = value;
     }
     /**
@@ -243,8 +243,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the isApproverJustificationRequired property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsApproverJustificationRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsApproverJustificationRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isApproverJustificationRequired = value;
     }
     /**
@@ -252,8 +252,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the isEscalationEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEscalationEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsEscalationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEscalationEnabled = value;
     }
     /**
@@ -261,8 +261,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -270,8 +270,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the primaryApprovers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrimaryApprovers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
+    @jakarta.annotation.Nonnull
+    public void setPrimaryApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
         this.primaryApprovers = value;
     }
 }

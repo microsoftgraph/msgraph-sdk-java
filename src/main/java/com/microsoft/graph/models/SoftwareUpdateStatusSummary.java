@@ -71,7 +71,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * Instantiates a new softwareUpdateStatusSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SoftwareUpdateStatusSummary() {
         super();
     }
@@ -80,8 +80,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a softwareUpdateStatusSummary
      */
-    @javax.annotation.Nonnull
-    public static SoftwareUpdateStatusSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SoftwareUpdateStatusSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SoftwareUpdateStatusSummary();
     }
@@ -89,7 +89,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * Gets the compliantDeviceCount property value. Number of compliant devices.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCompliantDeviceCount() {
         return this.compliantDeviceCount;
     }
@@ -97,7 +97,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * Gets the compliantUserCount property value. Number of compliant users.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCompliantUserCount() {
         return this.compliantUserCount;
     }
@@ -105,7 +105,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * Gets the conflictDeviceCount property value. Number of conflict devices.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getConflictDeviceCount() {
         return this.conflictDeviceCount;
     }
@@ -113,7 +113,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * Gets the conflictUserCount property value. Number of conflict users.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getConflictUserCount() {
         return this.conflictUserCount;
     }
@@ -121,7 +121,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * Gets the displayName property value. The name of the policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -129,7 +129,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * Gets the errorDeviceCount property value. Number of devices had error.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
         return this.errorDeviceCount;
     }
@@ -137,7 +137,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * Gets the errorUserCount property value. Number of users had error.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getErrorUserCount() {
         return this.errorUserCount;
     }
@@ -145,7 +145,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("compliantDeviceCount", (n) -> { this.setCompliantDeviceCount(n.getIntegerValue()); });
@@ -169,7 +169,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * Gets the nonCompliantDeviceCount property value. Number of non compliant devices.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
         return this.nonCompliantDeviceCount;
     }
@@ -177,7 +177,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * Gets the nonCompliantUserCount property value. Number of non compliant users.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNonCompliantUserCount() {
         return this.nonCompliantUserCount;
     }
@@ -185,7 +185,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * Gets the notApplicableDeviceCount property value. Number of not applicable devices.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
         return this.notApplicableDeviceCount;
     }
@@ -193,7 +193,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * Gets the notApplicableUserCount property value. Number of not applicable users.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNotApplicableUserCount() {
         return this.notApplicableUserCount;
     }
@@ -201,7 +201,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * Gets the remediatedDeviceCount property value. Number of remediated devices.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRemediatedDeviceCount() {
         return this.remediatedDeviceCount;
     }
@@ -209,7 +209,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * Gets the remediatedUserCount property value. Number of remediated users.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRemediatedUserCount() {
         return this.remediatedUserCount;
     }
@@ -217,7 +217,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * Gets the unknownDeviceCount property value. Number of unknown devices.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {
         return this.unknownDeviceCount;
     }
@@ -225,7 +225,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * Gets the unknownUserCount property value. Number of unknown users.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUnknownUserCount() {
         return this.unknownUserCount;
     }
@@ -234,8 +234,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("compliantDeviceCount", this.getCompliantDeviceCount());
@@ -259,8 +259,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param value Value to set for the compliantDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.compliantDeviceCount = value;
     }
     /**
@@ -268,8 +268,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param value Value to set for the compliantUserCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompliantUserCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setCompliantUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.compliantUserCount = value;
     }
     /**
@@ -277,8 +277,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param value Value to set for the conflictDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConflictDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setConflictDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.conflictDeviceCount = value;
     }
     /**
@@ -286,8 +286,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param value Value to set for the conflictUserCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConflictUserCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setConflictUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.conflictUserCount = value;
     }
     /**
@@ -295,8 +295,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -304,8 +304,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param value Value to set for the errorDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setErrorDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.errorDeviceCount = value;
     }
     /**
@@ -313,8 +313,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param value Value to set for the errorUserCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorUserCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setErrorUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.errorUserCount = value;
     }
     /**
@@ -322,8 +322,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param value Value to set for the nonCompliantDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNonCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNonCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.nonCompliantDeviceCount = value;
     }
     /**
@@ -331,8 +331,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param value Value to set for the nonCompliantUserCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNonCompliantUserCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNonCompliantUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.nonCompliantUserCount = value;
     }
     /**
@@ -340,8 +340,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param value Value to set for the notApplicableDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotApplicableDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNotApplicableDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.notApplicableDeviceCount = value;
     }
     /**
@@ -349,8 +349,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param value Value to set for the notApplicableUserCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotApplicableUserCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNotApplicableUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.notApplicableUserCount = value;
     }
     /**
@@ -358,8 +358,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param value Value to set for the remediatedDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemediatedDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setRemediatedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.remediatedDeviceCount = value;
     }
     /**
@@ -367,8 +367,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param value Value to set for the remediatedUserCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemediatedUserCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setRemediatedUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.remediatedUserCount = value;
     }
     /**
@@ -376,8 +376,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param value Value to set for the unknownDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnknownDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setUnknownDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.unknownDeviceCount = value;
     }
     /**
@@ -385,8 +385,8 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
      * @param value Value to set for the unknownUserCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnknownUserCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setUnknownUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.unknownUserCount = value;
     }
 }

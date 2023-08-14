@@ -19,7 +19,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
      * Instantiates a new onPremisesDirectorySynchronization and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronization() {
         super();
     }
@@ -28,8 +28,8 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a onPremisesDirectorySynchronization
      */
-    @javax.annotation.Nonnull
-    public static OnPremisesDirectorySynchronization createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OnPremisesDirectorySynchronization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OnPremisesDirectorySynchronization();
     }
@@ -37,7 +37,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
      * Gets the configuration property value. Consists of configurations that can be fine-tuned and impact the on-premises directory synchronization process for a tenant.
      * @return a onPremisesDirectorySynchronizationConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronizationConfiguration getConfiguration() {
         return this.configuration;
     }
@@ -45,7 +45,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
      * Gets the features property value. The features property
      * @return a onPremisesDirectorySynchronizationFeature
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronizationFeature getFeatures() {
         return this.features;
     }
@@ -53,7 +53,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("configuration", (n) -> { this.setConfiguration(n.getObjectValue(OnPremisesDirectorySynchronizationConfiguration::createFromDiscriminatorValue)); });
@@ -65,8 +65,8 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("configuration", this.getConfiguration());
@@ -77,8 +77,8 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
      * @param value Value to set for the configuration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfiguration(@javax.annotation.Nullable final OnPremisesDirectorySynchronizationConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setConfiguration(@jakarta.annotation.Nullable final OnPremisesDirectorySynchronizationConfiguration value) {
         this.configuration = value;
     }
     /**
@@ -86,8 +86,8 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
      * @param value Value to set for the features property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeatures(@javax.annotation.Nullable final OnPremisesDirectorySynchronizationFeature value) {
+    @jakarta.annotation.Nonnull
+    public void setFeatures(@jakarta.annotation.Nullable final OnPremisesDirectorySynchronizationFeature value) {
         this.features = value;
     }
 }

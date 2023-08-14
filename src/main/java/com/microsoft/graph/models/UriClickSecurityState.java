@@ -45,7 +45,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * Instantiates a new uriClickSecurityState and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UriClickSecurityState() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -54,8 +54,8 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a uriClickSecurityState
      */
-    @javax.annotation.Nonnull
-    public static UriClickSecurityState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UriClickSecurityState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UriClickSecurityState();
     }
@@ -63,7 +63,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -71,7 +71,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the clickAction property value. The clickAction property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClickAction() {
         return this.clickAction;
     }
@@ -79,7 +79,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the clickDateTime property value. The clickDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getClickDateTime() {
         return this.clickDateTime;
     }
@@ -87,7 +87,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("clickAction", (n) -> { this.setClickAction(n.getStringValue()); });
@@ -103,7 +103,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the id property value. The id property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -111,7 +111,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -119,7 +119,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the sourceId property value. The sourceId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSourceId() {
         return this.sourceId;
     }
@@ -127,7 +127,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the uriDomain property value. The uriDomain property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUriDomain() {
         return this.uriDomain;
     }
@@ -135,7 +135,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the verdict property value. The verdict property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVerdict() {
         return this.verdict;
     }
@@ -144,8 +144,8 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("clickAction", this.getClickAction());
         writer.writeOffsetDateTimeValue("clickDateTime", this.getClickDateTime());
@@ -161,8 +161,8 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -170,8 +170,8 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the clickAction property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClickAction(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setClickAction(@jakarta.annotation.Nullable final String value) {
         this.clickAction = value;
     }
     /**
@@ -179,8 +179,8 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the clickDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClickDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setClickDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.clickDateTime = value;
     }
     /**
@@ -188,8 +188,8 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
@@ -197,8 +197,8 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -206,8 +206,8 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sourceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSourceId(@jakarta.annotation.Nullable final String value) {
         this.sourceId = value;
     }
     /**
@@ -215,8 +215,8 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the uriDomain property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUriDomain(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUriDomain(@jakarta.annotation.Nullable final String value) {
         this.uriDomain = value;
     }
     /**
@@ -224,8 +224,8 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the verdict property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVerdict(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVerdict(@jakarta.annotation.Nullable final String value) {
         this.verdict = value;
     }
 }

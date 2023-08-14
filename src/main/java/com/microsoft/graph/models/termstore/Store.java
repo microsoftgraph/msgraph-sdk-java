@@ -28,7 +28,7 @@ public class Store extends Entity implements Parsable {
      * Instantiates a new store and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Store() {
         super();
     }
@@ -37,8 +37,8 @@ public class Store extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a store
      */
-    @javax.annotation.Nonnull
-    public static Store createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Store createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Store();
     }
@@ -46,7 +46,7 @@ public class Store extends Entity implements Parsable {
      * Gets the defaultLanguageTag property value. Default language of the term store.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDefaultLanguageTag() {
         return this.defaultLanguageTag;
     }
@@ -54,7 +54,7 @@ public class Store extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("defaultLanguageTag", (n) -> { this.setDefaultLanguageTag(n.getStringValue()); });
@@ -67,7 +67,7 @@ public class Store extends Entity implements Parsable {
      * Gets the groups property value. Collection of all groups available in the term store.
      * @return a group
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Group> getGroups() {
         return this.groups;
     }
@@ -75,7 +75,7 @@ public class Store extends Entity implements Parsable {
      * Gets the languageTags property value. List of languages for the term store.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getLanguageTags() {
         return this.languageTags;
     }
@@ -83,7 +83,7 @@ public class Store extends Entity implements Parsable {
      * Gets the sets property value. Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
      * @return a set
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Set> getSets() {
         return this.sets;
     }
@@ -92,8 +92,8 @@ public class Store extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("defaultLanguageTag", this.getDefaultLanguageTag());
@@ -106,8 +106,8 @@ public class Store extends Entity implements Parsable {
      * @param value Value to set for the defaultLanguageTag property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultLanguageTag(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultLanguageTag(@jakarta.annotation.Nullable final String value) {
         this.defaultLanguageTag = value;
     }
     /**
@@ -115,8 +115,8 @@ public class Store extends Entity implements Parsable {
      * @param value Value to set for the groups property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroups(@javax.annotation.Nullable final java.util.List<Group> value) {
+    @jakarta.annotation.Nonnull
+    public void setGroups(@jakarta.annotation.Nullable final java.util.List<Group> value) {
         this.groups = value;
     }
     /**
@@ -124,8 +124,8 @@ public class Store extends Entity implements Parsable {
      * @param value Value to set for the languageTags property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLanguageTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setLanguageTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.languageTags = value;
     }
     /**
@@ -133,8 +133,8 @@ public class Store extends Entity implements Parsable {
      * @param value Value to set for the sets property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSets(@javax.annotation.Nullable final java.util.List<Set> value) {
+    @jakarta.annotation.Nonnull
+    public void setSets(@jakarta.annotation.Nullable final java.util.List<Set> value) {
         this.sets = value;
     }
 }

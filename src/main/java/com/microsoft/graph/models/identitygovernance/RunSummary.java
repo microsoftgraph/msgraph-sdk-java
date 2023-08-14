@@ -44,7 +44,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * Instantiates a new runSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RunSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +53,8 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a runSummary
      */
-    @javax.annotation.Nonnull
-    public static RunSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RunSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RunSummary();
     }
@@ -62,7 +62,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +70,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * Gets the failedRuns property value. The number of failed workflow runs.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFailedRuns() {
         return this.failedRuns;
     }
@@ -78,7 +78,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * Gets the failedTasks property value. The number of failed tasks of a workflow.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFailedTasks() {
         return this.failedTasks;
     }
@@ -86,7 +86,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("failedRuns", (n) -> { this.setFailedRuns(n.getIntegerValue()); });
@@ -102,7 +102,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -110,7 +110,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * Gets the successfulRuns property value. The number of successful workflow runs.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSuccessfulRuns() {
         return this.successfulRuns;
     }
@@ -118,7 +118,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * Gets the totalRuns property value. The total number of runs for a workflow.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalRuns() {
         return this.totalRuns;
     }
@@ -126,7 +126,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * Gets the totalTasks property value. The total number of tasks processed by a workflow.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalTasks() {
         return this.totalTasks;
     }
@@ -134,7 +134,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * Gets the totalUsers property value. The total number of users processed by a workflow.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalUsers() {
         return this.totalUsers;
     }
@@ -143,8 +143,8 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("failedRuns", this.getFailedRuns());
         writer.writeIntegerValue("failedTasks", this.getFailedTasks());
@@ -160,8 +160,8 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -169,8 +169,8 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the failedRuns property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedRuns(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFailedRuns(@jakarta.annotation.Nullable final Integer value) {
         this.failedRuns = value;
     }
     /**
@@ -178,8 +178,8 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the failedTasks property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedTasks(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFailedTasks(@jakarta.annotation.Nullable final Integer value) {
         this.failedTasks = value;
     }
     /**
@@ -187,8 +187,8 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -196,8 +196,8 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the successfulRuns property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuccessfulRuns(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSuccessfulRuns(@jakarta.annotation.Nullable final Integer value) {
         this.successfulRuns = value;
     }
     /**
@@ -205,8 +205,8 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the totalRuns property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalRuns(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalRuns(@jakarta.annotation.Nullable final Integer value) {
         this.totalRuns = value;
     }
     /**
@@ -214,8 +214,8 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the totalTasks property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalTasks(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalTasks(@jakarta.annotation.Nullable final Integer value) {
         this.totalTasks = value;
     }
     /**
@@ -223,8 +223,8 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the totalUsers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalUsers(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalUsers(@jakarta.annotation.Nullable final Integer value) {
         this.totalUsers = value;
     }
 }

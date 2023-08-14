@@ -36,7 +36,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      * Instantiates a new redundancyDetectionSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RedundancyDetectionSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a redundancyDetectionSettings
      */
-    @javax.annotation.Nonnull
-    public static RedundancyDetectionSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RedundancyDetectionSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RedundancyDetectionSettings();
     }
@@ -54,7 +54,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
@@ -76,7 +76,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      * Gets the isEnabled property value. Indicates whether email threading and near duplicate detection are enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
@@ -84,7 +84,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      * Gets the maxWords property value. Specifies the maximum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaxWords() {
         return this.maxWords;
     }
@@ -92,7 +92,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      * Gets the minWords property value. Specifies the minimum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMinWords() {
         return this.minWords;
     }
@@ -100,7 +100,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -108,7 +108,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      * Gets the similarityThreshold property value. Specifies the similarity level for documents to be put in the same near duplicate set. To learn more, see Document and email similarity threshold.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSimilarityThreshold() {
         return this.similarityThreshold;
     }
@@ -117,8 +117,8 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeIntegerValue("maxWords", this.getMaxWords());
@@ -132,8 +132,8 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
@@ -150,8 +150,8 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the maxWords property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaxWords(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMaxWords(@jakarta.annotation.Nullable final Integer value) {
         this.maxWords = value;
     }
     /**
@@ -159,8 +159,8 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the minWords property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinWords(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMinWords(@jakarta.annotation.Nullable final Integer value) {
         this.minWords = value;
     }
     /**
@@ -168,8 +168,8 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -177,8 +177,8 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the similarityThreshold property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSimilarityThreshold(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSimilarityThreshold(@jakarta.annotation.Nullable final Integer value) {
         this.similarityThreshold = value;
     }
 }

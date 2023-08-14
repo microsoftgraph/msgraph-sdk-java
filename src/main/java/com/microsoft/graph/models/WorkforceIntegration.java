@@ -35,7 +35,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * Instantiates a new workforceIntegration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkforceIntegration() {
         super();
         this.setOdataType("#microsoft.graph.workforceIntegration");
@@ -45,8 +45,8 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workforceIntegration
      */
-    @javax.annotation.Nonnull
-    public static WorkforceIntegration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkforceIntegration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WorkforceIntegration();
     }
@@ -54,7 +54,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * Gets the apiVersion property value. API version for the call back URL. Start with 1.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getApiVersion() {
         return this.apiVersion;
     }
@@ -62,7 +62,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * Gets the displayName property value. Name of the workforce integration.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -70,7 +70,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * Gets the encryption property value. The workforce integration encryption resource.
      * @return a workforceIntegrationEncryption
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkforceIntegrationEncryption getEncryption() {
         return this.encryption;
     }
@@ -78,7 +78,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("apiVersion", (n) -> { this.setApiVersion(n.getIntegerValue()); });
@@ -93,7 +93,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * Gets the isActive property value. Indicates whether this workforce integration is currently active and available.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsActive() {
         return this.isActive;
     }
@@ -101,7 +101,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * Gets the supportedEntities property value. The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, userShiftPreferences, openshift, openShiftRequest, offerShiftRequest, unknownFutureValue.
      * @return a workforceIntegrationSupportedEntities
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkforceIntegrationSupportedEntities getSupportedEntities() {
         return this.supportedEntities;
     }
@@ -109,7 +109,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * Gets the url property value. Workforce Integration URL for callbacks from the Shifts service.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUrl() {
         return this.url;
     }
@@ -118,8 +118,8 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("apiVersion", this.getApiVersion());
@@ -134,8 +134,8 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param value Value to set for the apiVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApiVersion(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setApiVersion(@jakarta.annotation.Nullable final Integer value) {
         this.apiVersion = value;
     }
     /**
@@ -143,8 +143,8 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -152,8 +152,8 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param value Value to set for the encryption property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEncryption(@javax.annotation.Nullable final WorkforceIntegrationEncryption value) {
+    @jakarta.annotation.Nonnull
+    public void setEncryption(@jakarta.annotation.Nullable final WorkforceIntegrationEncryption value) {
         this.encryption = value;
     }
     /**
@@ -161,8 +161,8 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param value Value to set for the isActive property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsActive(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
         this.isActive = value;
     }
     /**
@@ -170,8 +170,8 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param value Value to set for the supportedEntities property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedEntities(@javax.annotation.Nullable final WorkforceIntegrationSupportedEntities value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedEntities(@jakarta.annotation.Nullable final WorkforceIntegrationSupportedEntities value) {
         this.supportedEntities = value;
     }
     /**
@@ -179,8 +179,8 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @param value Value to set for the url property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUrl(@jakarta.annotation.Nullable final String value) {
         this.url = value;
     }
 }

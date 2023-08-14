@@ -24,7 +24,7 @@ public class AuthoredNote extends Entity implements Parsable {
      * Instantiates a new authoredNote and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthoredNote() {
         super();
     }
@@ -33,8 +33,8 @@ public class AuthoredNote extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a authoredNote
      */
-    @javax.annotation.Nonnull
-    public static AuthoredNote createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AuthoredNote createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AuthoredNote();
     }
@@ -42,7 +42,7 @@ public class AuthoredNote extends Entity implements Parsable {
      * Gets the author property value. Identity information about the note's author.
      * @return a identity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Identity getAuthor() {
         return this.author;
     }
@@ -50,7 +50,7 @@ public class AuthoredNote extends Entity implements Parsable {
      * Gets the content property value. The content of the note.
      * @return a itemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemBody getContent() {
         return this.content;
     }
@@ -58,7 +58,7 @@ public class AuthoredNote extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -66,7 +66,7 @@ public class AuthoredNote extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("author", (n) -> { this.setAuthor(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
@@ -79,8 +79,8 @@ public class AuthoredNote extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("author", this.getAuthor());
@@ -92,8 +92,8 @@ public class AuthoredNote extends Entity implements Parsable {
      * @param value Value to set for the author property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthor(@javax.annotation.Nullable final Identity value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthor(@jakarta.annotation.Nullable final Identity value) {
         this.author = value;
     }
     /**
@@ -101,8 +101,8 @@ public class AuthoredNote extends Entity implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContent(@javax.annotation.Nullable final ItemBody value) {
+    @jakarta.annotation.Nonnull
+    public void setContent(@jakarta.annotation.Nullable final ItemBody value) {
         this.content = value;
     }
     /**
@@ -110,8 +110,8 @@ public class AuthoredNote extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
 }

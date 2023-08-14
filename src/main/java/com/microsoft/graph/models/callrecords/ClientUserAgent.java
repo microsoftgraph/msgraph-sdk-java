@@ -27,7 +27,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * Instantiates a new clientUserAgent and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ClientUserAgent() {
         super();
         this.setOdataType("#microsoft.graph.callRecords.clientUserAgent");
@@ -37,8 +37,8 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a clientUserAgent
      */
-    @javax.annotation.Nonnull
-    public static ClientUserAgent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ClientUserAgent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ClientUserAgent();
     }
@@ -46,7 +46,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * Gets the azureADAppId property value. The unique identifier of the Azure AD application used by this endpoint.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureADAppId() {
         return this.azureADAppId;
     }
@@ -54,7 +54,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * Gets the communicationServiceId property value. Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCommunicationServiceId() {
         return this.communicationServiceId;
     }
@@ -62,7 +62,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("azureADAppId", (n) -> { this.setAzureADAppId(n.getStringValue()); });
@@ -75,7 +75,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * Gets the platform property value. The platform property
      * @return a clientPlatform
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ClientPlatform getPlatform() {
         return this.platform;
     }
@@ -83,7 +83,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * Gets the productFamily property value. The productFamily property
      * @return a productFamily
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ProductFamily getProductFamily() {
         return this.productFamily;
     }
@@ -92,8 +92,8 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("azureADAppId", this.getAzureADAppId());
@@ -106,8 +106,8 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * @param value Value to set for the azureADAppId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureADAppId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAzureADAppId(@jakarta.annotation.Nullable final String value) {
         this.azureADAppId = value;
     }
     /**
@@ -115,8 +115,8 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * @param value Value to set for the communicationServiceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCommunicationServiceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCommunicationServiceId(@jakarta.annotation.Nullable final String value) {
         this.communicationServiceId = value;
     }
     /**
@@ -124,8 +124,8 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * @param value Value to set for the platform property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatform(@javax.annotation.Nullable final ClientPlatform value) {
+    @jakarta.annotation.Nonnull
+    public void setPlatform(@jakarta.annotation.Nullable final ClientPlatform value) {
         this.platform = value;
     }
     /**
@@ -133,8 +133,8 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * @param value Value to set for the productFamily property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProductFamily(@javax.annotation.Nullable final ProductFamily value) {
+    @jakarta.annotation.Nonnull
+    public void setProductFamily(@jakarta.annotation.Nullable final ProductFamily value) {
         this.productFamily = value;
     }
 }

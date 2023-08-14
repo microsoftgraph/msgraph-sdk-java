@@ -98,7 +98,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Instantiates a new androidCompliancePolicy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidCompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.androidCompliancePolicy");
@@ -108,8 +108,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidCompliancePolicy
      */
-    @javax.annotation.Nonnull
-    public static AndroidCompliancePolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidCompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidCompliancePolicy();
     }
@@ -117,7 +117,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDeviceThreatProtectionEnabled() {
         return this.deviceThreatProtectionEnabled;
     }
@@ -125,7 +125,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @return a deviceThreatProtectionLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceThreatProtectionLevel getDeviceThreatProtectionRequiredSecurityLevel() {
         return this.deviceThreatProtectionRequiredSecurityLevel;
     }
@@ -133,7 +133,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceThreatProtectionEnabled", (n) -> { this.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
@@ -163,7 +163,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the minAndroidSecurityPatchLevel property value. Minimum Android security patch level.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMinAndroidSecurityPatchLevel() {
         return this.minAndroidSecurityPatchLevel;
     }
@@ -171,7 +171,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the osMaximumVersion property value. Maximum Android version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
         return this.osMaximumVersion;
     }
@@ -179,7 +179,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the osMinimumVersion property value. Minimum Android version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
         return this.osMinimumVersion;
     }
@@ -187,7 +187,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 365
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
         return this.passwordExpirationDays;
     }
@@ -195,7 +195,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
         return this.passwordMinimumLength;
     }
@@ -203,7 +203,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
         return this.passwordMinutesOfInactivityBeforeLock;
     }
@@ -211,7 +211,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 1 to 24
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
         return this.passwordPreviousPasswordBlockCount;
     }
@@ -219,7 +219,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the passwordRequired property value. Require a password to unlock device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
         return this.passwordRequired;
     }
@@ -227,7 +227,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the passwordRequiredType property value. Android required password type.
      * @return a androidRequiredPasswordType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidRequiredPasswordType getPasswordRequiredType() {
         return this.passwordRequiredType;
     }
@@ -235,7 +235,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSecurityBlockJailbrokenDevices() {
         return this.securityBlockJailbrokenDevices;
     }
@@ -243,7 +243,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the securityDisableUsbDebugging property value. Disable USB debugging on Android devices.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSecurityDisableUsbDebugging() {
         return this.securityDisableUsbDebugging;
     }
@@ -251,7 +251,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the securityPreventInstallAppsFromUnknownSources property value. Require that devices disallow installation of apps from unknown sources.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSecurityPreventInstallAppsFromUnknownSources() {
         return this.securityPreventInstallAppsFromUnknownSources;
     }
@@ -259,7 +259,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the securityRequireCompanyPortalAppIntegrity property value. Require the device to pass the Company Portal client app runtime integrity check.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSecurityRequireCompanyPortalAppIntegrity() {
         return this.securityRequireCompanyPortalAppIntegrity;
     }
@@ -267,7 +267,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the securityRequireGooglePlayServices property value. Require Google Play Services to be installed and enabled on the device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSecurityRequireGooglePlayServices() {
         return this.securityRequireGooglePlayServices;
     }
@@ -275,7 +275,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the securityRequireSafetyNetAttestationBasicIntegrity property value. Require the device to pass the SafetyNet basic integrity check.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSecurityRequireSafetyNetAttestationBasicIntegrity() {
         return this.securityRequireSafetyNetAttestationBasicIntegrity;
     }
@@ -283,7 +283,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the securityRequireSafetyNetAttestationCertifiedDevice property value. Require the device to pass the SafetyNet certified device check.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSecurityRequireSafetyNetAttestationCertifiedDevice() {
         return this.securityRequireSafetyNetAttestationCertifiedDevice;
     }
@@ -291,7 +291,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the securityRequireUpToDateSecurityProviders property value. Require the device to have up to date security providers. The device will require Google Play Services to be enabled and up to date.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSecurityRequireUpToDateSecurityProviders() {
         return this.securityRequireUpToDateSecurityProviders;
     }
@@ -299,7 +299,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSecurityRequireVerifyApps() {
         return this.securityRequireVerifyApps;
     }
@@ -307,7 +307,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Gets the storageRequireEncryption property value. Require encryption on Android devices.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
         return this.storageRequireEncryption;
     }
@@ -316,8 +316,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("deviceThreatProtectionEnabled", this.getDeviceThreatProtectionEnabled());
@@ -347,8 +347,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the deviceThreatProtectionEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceThreatProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceThreatProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.deviceThreatProtectionEnabled = value;
     }
     /**
@@ -356,8 +356,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceThreatProtectionRequiredSecurityLevel(@jakarta.annotation.Nullable final DeviceThreatProtectionLevel value) {
         this.deviceThreatProtectionRequiredSecurityLevel = value;
     }
     /**
@@ -365,8 +365,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the minAndroidSecurityPatchLevel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinAndroidSecurityPatchLevel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMinAndroidSecurityPatchLevel(@jakarta.annotation.Nullable final String value) {
         this.minAndroidSecurityPatchLevel = value;
     }
     /**
@@ -374,8 +374,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the osMaximumVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMaximumVersion = value;
     }
     /**
@@ -383,8 +383,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the osMinimumVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMinimumVersion = value;
     }
     /**
@@ -392,8 +392,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.passwordExpirationDays = value;
     }
     /**
@@ -401,8 +401,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumLength = value;
     }
     /**
@@ -410,8 +410,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordMinutesOfInactivityBeforeLock(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinutesOfInactivityBeforeLock = value;
     }
     /**
@@ -419,8 +419,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordPreviousPasswordBlockCount = value;
     }
     /**
@@ -428,8 +428,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordRequired = value;
     }
     /**
@@ -437,8 +437,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordRequiredType(@javax.annotation.Nullable final AndroidRequiredPasswordType value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidRequiredPasswordType value) {
         this.passwordRequiredType = value;
     }
     /**
@@ -446,8 +446,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityBlockJailbrokenDevices property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityBlockJailbrokenDevices(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSecurityBlockJailbrokenDevices(@jakarta.annotation.Nullable final Boolean value) {
         this.securityBlockJailbrokenDevices = value;
     }
     /**
@@ -455,8 +455,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityDisableUsbDebugging property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityDisableUsbDebugging(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSecurityDisableUsbDebugging(@jakarta.annotation.Nullable final Boolean value) {
         this.securityDisableUsbDebugging = value;
     }
     /**
@@ -464,8 +464,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityPreventInstallAppsFromUnknownSources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityPreventInstallAppsFromUnknownSources(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSecurityPreventInstallAppsFromUnknownSources(@jakarta.annotation.Nullable final Boolean value) {
         this.securityPreventInstallAppsFromUnknownSources = value;
     }
     /**
@@ -473,8 +473,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityRequireCompanyPortalAppIntegrity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityRequireCompanyPortalAppIntegrity(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSecurityRequireCompanyPortalAppIntegrity(@jakarta.annotation.Nullable final Boolean value) {
         this.securityRequireCompanyPortalAppIntegrity = value;
     }
     /**
@@ -482,8 +482,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityRequireGooglePlayServices property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityRequireGooglePlayServices(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSecurityRequireGooglePlayServices(@jakarta.annotation.Nullable final Boolean value) {
         this.securityRequireGooglePlayServices = value;
     }
     /**
@@ -491,8 +491,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityRequireSafetyNetAttestationBasicIntegrity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityRequireSafetyNetAttestationBasicIntegrity(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSecurityRequireSafetyNetAttestationBasicIntegrity(@jakarta.annotation.Nullable final Boolean value) {
         this.securityRequireSafetyNetAttestationBasicIntegrity = value;
     }
     /**
@@ -500,8 +500,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityRequireSafetyNetAttestationCertifiedDevice property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityRequireSafetyNetAttestationCertifiedDevice(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSecurityRequireSafetyNetAttestationCertifiedDevice(@jakarta.annotation.Nullable final Boolean value) {
         this.securityRequireSafetyNetAttestationCertifiedDevice = value;
     }
     /**
@@ -509,8 +509,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityRequireUpToDateSecurityProviders property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityRequireUpToDateSecurityProviders(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSecurityRequireUpToDateSecurityProviders(@jakarta.annotation.Nullable final Boolean value) {
         this.securityRequireUpToDateSecurityProviders = value;
     }
     /**
@@ -518,8 +518,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityRequireVerifyApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityRequireVerifyApps(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSecurityRequireVerifyApps(@jakarta.annotation.Nullable final Boolean value) {
         this.securityRequireVerifyApps = value;
     }
     /**
@@ -527,8 +527,8 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the storageRequireEncryption property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStorageRequireEncryption(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setStorageRequireEncryption(@jakarta.annotation.Nullable final Boolean value) {
         this.storageRequireEncryption = value;
     }
 }

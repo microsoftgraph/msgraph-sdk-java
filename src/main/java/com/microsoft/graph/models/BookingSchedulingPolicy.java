@@ -44,7 +44,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * Instantiates a new bookingSchedulingPolicy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BookingSchedulingPolicy() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +53,8 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a bookingSchedulingPolicy
      */
-    @javax.annotation.Nonnull
-    public static BookingSchedulingPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BookingSchedulingPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BookingSchedulingPolicy();
     }
@@ -62,7 +62,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +70,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * Gets the allowStaffSelection property value. True if to allow customers to choose a specific person for the booking.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowStaffSelection() {
         return this.allowStaffSelection;
     }
@@ -78,7 +78,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("allowStaffSelection", (n) -> { this.setAllowStaffSelection(n.getBooleanValue()); });
@@ -93,7 +93,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * Gets the maximumAdvance property value. Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getMaximumAdvance() {
         return this.maximumAdvance;
     }
@@ -101,7 +101,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * Gets the minimumLeadTime property value. The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getMinimumLeadTime() {
         return this.minimumLeadTime;
     }
@@ -109,7 +109,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -117,7 +117,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * Gets the sendConfirmationsToOwner property value. True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSendConfirmationsToOwner() {
         return this.sendConfirmationsToOwner;
     }
@@ -125,7 +125,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * Gets the timeSlotInterval property value. Duration of each time slot, denoted in ISO 8601 format.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getTimeSlotInterval() {
         return this.timeSlotInterval;
     }
@@ -134,8 +134,8 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowStaffSelection", this.getAllowStaffSelection());
         writer.writePeriodAndDurationValue("maximumAdvance", this.getMaximumAdvance());
@@ -150,8 +150,8 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -159,8 +159,8 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowStaffSelection property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowStaffSelection(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowStaffSelection(@jakarta.annotation.Nullable final Boolean value) {
         this.allowStaffSelection = value;
     }
     /**
@@ -168,8 +168,8 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the maximumAdvance property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaximumAdvance(@javax.annotation.Nullable final PeriodAndDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setMaximumAdvance(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.maximumAdvance = value;
     }
     /**
@@ -177,8 +177,8 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the minimumLeadTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumLeadTime(@javax.annotation.Nullable final PeriodAndDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setMinimumLeadTime(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.minimumLeadTime = value;
     }
     /**
@@ -186,8 +186,8 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -195,8 +195,8 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sendConfirmationsToOwner property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSendConfirmationsToOwner(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSendConfirmationsToOwner(@jakarta.annotation.Nullable final Boolean value) {
         this.sendConfirmationsToOwner = value;
     }
     /**
@@ -204,8 +204,8 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the timeSlotInterval property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimeSlotInterval(@javax.annotation.Nullable final PeriodAndDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setTimeSlotInterval(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.timeSlotInterval = value;
     }
 }

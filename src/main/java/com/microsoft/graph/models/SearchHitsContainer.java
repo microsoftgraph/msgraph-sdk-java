@@ -36,7 +36,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * Instantiates a new searchHitsContainer and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SearchHitsContainer() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a searchHitsContainer
      */
-    @javax.annotation.Nonnull
-    public static SearchHitsContainer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SearchHitsContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SearchHitsContainer();
     }
@@ -54,7 +54,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * Gets the aggregations property value. The aggregations property
      * @return a searchAggregation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SearchAggregation> getAggregations() {
         return this.aggregations;
     }
@@ -70,7 +70,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("aggregations", (n) -> { this.setAggregations(n.getCollectionOfObjectValues(SearchAggregation::createFromDiscriminatorValue)); });
@@ -84,7 +84,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * Gets the hits property value. A collection of the search results.
      * @return a searchHit
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SearchHit> getHits() {
         return this.hits;
     }
@@ -92,7 +92,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * Gets the moreResultsAvailable property value. Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getMoreResultsAvailable() {
         return this.moreResultsAvailable;
     }
@@ -100,7 +100,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -108,7 +108,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * Gets the total property value. The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotal() {
         return this.total;
     }
@@ -117,8 +117,8 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("aggregations", this.getAggregations());
         writer.writeCollectionOfObjectValues("hits", this.getHits());
@@ -132,8 +132,8 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the aggregations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAggregations(@javax.annotation.Nullable final java.util.List<SearchAggregation> value) {
+    @jakarta.annotation.Nonnull
+    public void setAggregations(@jakarta.annotation.Nullable final java.util.List<SearchAggregation> value) {
         this.aggregations = value;
     }
     /**
@@ -150,8 +150,8 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the hits property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHits(@javax.annotation.Nullable final java.util.List<SearchHit> value) {
+    @jakarta.annotation.Nonnull
+    public void setHits(@jakarta.annotation.Nullable final java.util.List<SearchHit> value) {
         this.hits = value;
     }
     /**
@@ -159,8 +159,8 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the moreResultsAvailable property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMoreResultsAvailable(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setMoreResultsAvailable(@jakarta.annotation.Nullable final Boolean value) {
         this.moreResultsAvailable = value;
     }
     /**
@@ -168,8 +168,8 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -177,8 +177,8 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the total property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotal(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotal(@jakarta.annotation.Nullable final Integer value) {
         this.total = value;
     }
 }

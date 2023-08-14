@@ -24,7 +24,7 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the roleDefinition property of the microsoft.graph.roleAssignment entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RoleDefinitionRequestBuilder roleDefinition() {
         return new RoleDefinitionRequestBuilder(pathParameters, requestAdapter);
     }
@@ -34,8 +34,8 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public RoleAssignmentItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public RoleAssignmentItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/roleDefinitions/{roleDefinition%2Did}/roleAssignments/{roleAssignment%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -44,15 +44,16 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public RoleAssignmentItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public RoleAssignmentItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/roleDefinitions/{roleDefinition%2Did}/roleAssignments/{roleAssignment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property roleAssignments for deviceManagement
+     * Deletes a roleAssignment.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roleassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -67,12 +68,13 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property roleAssignments for deviceManagement
+     * Deletes a roleAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roleassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -86,10 +88,11 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List of Role assignments for this role definition.
+     * Read properties and relationships of the roleAssignment object.
      * @return a CompletableFuture of roleAssignment
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roleassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleAssignment> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -104,12 +107,13 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List of Role assignments for this role definition.
+     * Read properties and relationships of the roleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of roleAssignment
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roleassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RoleAssignment> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<RoleAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -123,12 +127,13 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property roleAssignments in deviceManagement
+     * Update the properties of a roleAssignment object.
      * @param body The request body
      * @return a CompletableFuture of roleAssignment
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roleassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RoleAssignment> patch(@javax.annotation.Nonnull final RoleAssignment body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<RoleAssignment> patch(@jakarta.annotation.Nonnull final RoleAssignment body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -142,13 +147,14 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property roleAssignments in deviceManagement
+     * Update the properties of a roleAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of roleAssignment
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roleassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RoleAssignment> patch(@javax.annotation.Nonnull final RoleAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<RoleAssignment> patch(@jakarta.annotation.Nonnull final RoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -163,20 +169,20 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property roleAssignments for deviceManagement
+     * Deletes a roleAssignment.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property roleAssignments for deviceManagement
+     * Deletes a roleAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -190,20 +196,20 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of Role assignments for this role definition.
+     * Read properties and relationships of the roleAssignment object.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
     /**
-     * List of Role assignments for this role definition.
+     * Read properties and relationships of the roleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -219,22 +225,22 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property roleAssignments in deviceManagement
+     * Update the properties of a roleAssignment object.
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final RoleAssignment body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RoleAssignment body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property roleAssignments in deviceManagement
+     * Update the properties of a roleAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final RoleAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -256,20 +262,20 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * List of Role assignments for this role definition.
+     * Read properties and relationships of the roleAssignment object.
      */
     public class GetQueryParameters {
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -279,7 +285,7 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

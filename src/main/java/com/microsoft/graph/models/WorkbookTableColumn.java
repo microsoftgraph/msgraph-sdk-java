@@ -27,7 +27,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      * Instantiates a new workbookTableColumn and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookTableColumn() {
         super();
     }
@@ -36,8 +36,8 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workbookTableColumn
      */
-    @javax.annotation.Nonnull
-    public static WorkbookTableColumn createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkbookTableColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WorkbookTableColumn();
     }
@@ -45,7 +45,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("filter", (n) -> { this.setFilter(n.getObjectValue(WorkbookFilter::createFromDiscriminatorValue)); });
@@ -58,7 +58,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      * Gets the filter property value. Retrieve the filter applied to the column. Read-only.
      * @return a workbookFilter
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookFilter getFilter() {
         return this.filter;
     }
@@ -66,7 +66,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      * Gets the index property value. Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getIndex() {
         return this.index;
     }
@@ -74,7 +74,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      * Gets the name property value. Returns the name of the table column.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -82,7 +82,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getValues() {
         return this.values;
     }
@@ -91,8 +91,8 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("filter", this.getFilter());
@@ -105,8 +105,8 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      * @param value Value to set for the filter property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFilter(@javax.annotation.Nullable final WorkbookFilter value) {
+    @jakarta.annotation.Nonnull
+    public void setFilter(@jakarta.annotation.Nullable final WorkbookFilter value) {
         this.filter = value;
     }
     /**
@@ -114,8 +114,8 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      * @param value Value to set for the index property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIndex(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setIndex(@jakarta.annotation.Nullable final Integer value) {
         this.index = value;
     }
     /**
@@ -123,8 +123,8 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -132,8 +132,8 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      * @param value Value to set for the values property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValues(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setValues(@jakarta.annotation.Nullable final Json value) {
         this.values = value;
     }
 }

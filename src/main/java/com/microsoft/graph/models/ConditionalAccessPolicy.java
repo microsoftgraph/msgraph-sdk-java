@@ -44,7 +44,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * Instantiates a new conditionalAccessPolicy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConditionalAccessPolicy() {
         super();
     }
@@ -53,8 +53,8 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a conditionalAccessPolicy
      */
-    @javax.annotation.Nonnull
-    public static ConditionalAccessPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ConditionalAccessPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ConditionalAccessPolicy();
     }
@@ -62,7 +62,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * Gets the conditions property value. The conditions property
      * @return a conditionalAccessConditionSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConditionalAccessConditionSet getConditions() {
         return this.conditions;
     }
@@ -70,7 +70,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -78,7 +78,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * Gets the description property value. The description property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -86,7 +86,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * Gets the displayName property value. Specifies a display name for the conditionalAccessPolicy object.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -94,7 +94,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("conditions", (n) -> { this.setConditions(n.getObjectValue(ConditionalAccessConditionSet::createFromDiscriminatorValue)); });
@@ -111,7 +111,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * Gets the grantControls property value. Specifies the grant controls that must be fulfilled to pass the policy.
      * @return a conditionalAccessGrantControls
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConditionalAccessGrantControls getGrantControls() {
         return this.grantControls;
     }
@@ -119,7 +119,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
         return this.modifiedDateTime;
     }
@@ -127,7 +127,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * Gets the sessionControls property value. Specifies the session controls that are enforced after sign-in.
      * @return a conditionalAccessSessionControls
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConditionalAccessSessionControls getSessionControls() {
         return this.sessionControls;
     }
@@ -135,7 +135,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * Gets the state property value. The state property
      * @return a conditionalAccessPolicyState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConditionalAccessPolicyState getState() {
         return this.state;
     }
@@ -144,8 +144,8 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("conditions", this.getConditions());
@@ -162,8 +162,8 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the conditions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConditions(@javax.annotation.Nullable final ConditionalAccessConditionSet value) {
+    @jakarta.annotation.Nonnull
+    public void setConditions(@jakarta.annotation.Nullable final ConditionalAccessConditionSet value) {
         this.conditions = value;
     }
     /**
@@ -171,8 +171,8 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -180,8 +180,8 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -189,8 +189,8 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -198,8 +198,8 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the grantControls property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGrantControls(@javax.annotation.Nullable final ConditionalAccessGrantControls value) {
+    @jakarta.annotation.Nonnull
+    public void setGrantControls(@jakarta.annotation.Nullable final ConditionalAccessGrantControls value) {
         this.grantControls = value;
     }
     /**
@@ -207,8 +207,8 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
     }
     /**
@@ -216,8 +216,8 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the sessionControls property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSessionControls(@javax.annotation.Nullable final ConditionalAccessSessionControls value) {
+    @jakarta.annotation.Nonnull
+    public void setSessionControls(@jakarta.annotation.Nullable final ConditionalAccessSessionControls value) {
         this.sessionControls = value;
     }
     /**
@@ -225,8 +225,8 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final ConditionalAccessPolicyState value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final ConditionalAccessPolicyState value) {
         this.state = value;
     }
 }

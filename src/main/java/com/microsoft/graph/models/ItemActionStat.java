@@ -28,7 +28,7 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
      * Instantiates a new itemActionStat and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemActionStat() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a itemActionStat
      */
-    @javax.annotation.Nonnull
-    public static ItemActionStat createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ItemActionStat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ItemActionStat();
     }
@@ -46,7 +46,7 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
      * Gets the actionCount property value. The number of times the action took place. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getActionCount() {
         return this.actionCount;
     }
@@ -54,7 +54,7 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
      * Gets the actorCount property value. The number of distinct actors that performed the action. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getActorCount() {
         return this.actorCount;
     }
@@ -62,7 +62,7 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +70,7 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("actionCount", (n) -> { this.setActionCount(n.getIntegerValue()); });
@@ -82,7 +82,7 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -91,8 +91,8 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("actionCount", this.getActionCount());
         writer.writeIntegerValue("actorCount", this.getActorCount());
@@ -104,8 +104,8 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the actionCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActionCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setActionCount(@jakarta.annotation.Nullable final Integer value) {
         this.actionCount = value;
     }
     /**
@@ -113,8 +113,8 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the actorCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActorCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setActorCount(@jakarta.annotation.Nullable final Integer value) {
         this.actorCount = value;
     }
     /**
@@ -122,8 +122,8 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -131,8 +131,8 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

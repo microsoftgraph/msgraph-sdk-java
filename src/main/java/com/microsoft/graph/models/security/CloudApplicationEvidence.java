@@ -31,17 +31,18 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * Instantiates a new cloudApplicationEvidence and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudApplicationEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.cloudApplicationEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudApplicationEvidence
      */
-    @javax.annotation.Nonnull
-    public static CloudApplicationEvidence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudApplicationEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudApplicationEvidence();
     }
@@ -49,7 +50,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * Gets the appId property value. Unique identifier of the application.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getAppId() {
         return this.appId;
     }
@@ -57,7 +58,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * Gets the displayName property value. Name of the application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -65,7 +66,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getLongValue()); });
@@ -79,7 +80,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * Gets the instanceId property value. Identifier of the instance of the Software as a Service (SaaS) application.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getInstanceId() {
         return this.instanceId;
     }
@@ -87,7 +88,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * Gets the instanceName property value. Name of the instance of the SaaS application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInstanceName() {
         return this.instanceName;
     }
@@ -95,7 +96,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * Gets the saasAppId property value. The identifier of the SaaS application.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getSaasAppId() {
         return this.saasAppId;
     }
@@ -104,8 +105,8 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeLongValue("appId", this.getAppId());
@@ -119,8 +120,8 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * @param value Value to set for the appId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppId(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setAppId(@jakarta.annotation.Nullable final Long value) {
         this.appId = value;
     }
     /**
@@ -128,8 +129,8 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -137,8 +138,8 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * @param value Value to set for the instanceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstanceId(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setInstanceId(@jakarta.annotation.Nullable final Long value) {
         this.instanceId = value;
     }
     /**
@@ -146,8 +147,8 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * @param value Value to set for the instanceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstanceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setInstanceName(@jakarta.annotation.Nullable final String value) {
         this.instanceName = value;
     }
     /**
@@ -155,8 +156,8 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
      * @param value Value to set for the saasAppId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSaasAppId(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setSaasAppId(@jakarta.annotation.Nullable final Long value) {
         this.saasAppId = value;
     }
 }

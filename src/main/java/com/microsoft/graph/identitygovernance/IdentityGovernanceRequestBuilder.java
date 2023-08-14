@@ -28,35 +28,35 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessReviews property of the microsoft.graph.identityGovernance entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AccessReviewsRequestBuilder accessReviews() {
         return new AccessReviewsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the appConsent property of the microsoft.graph.identityGovernance entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AppConsentRequestBuilder appConsent() {
         return new AppConsentRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the entitlementManagement property of the microsoft.graph.identityGovernance entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public EntitlementManagementRequestBuilder entitlementManagement() {
         return new EntitlementManagementRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the lifecycleWorkflows property of the microsoft.graph.identityGovernance entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public LifecycleWorkflowsRequestBuilder lifecycleWorkflows() {
         return new LifecycleWorkflowsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the termsOfUse property of the microsoft.graph.identityGovernance entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TermsOfUseRequestBuilder termsOfUse() {
         return new TermsOfUseRequestBuilder(pathParameters, requestAdapter);
     }
@@ -66,8 +66,8 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public IdentityGovernanceRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public IdentityGovernanceRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -76,15 +76,15 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public IdentityGovernanceRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public IdentityGovernanceRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance{?%24select,%24expand}", rawUrl);
     }
     /**
      * Get identityGovernance
      * @return a CompletableFuture of identityGovernance
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityGovernance> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -103,8 +103,8 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityGovernance
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityGovernance> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<IdentityGovernance> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -122,8 +122,8 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a CompletableFuture of identityGovernance
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityGovernance> patch(@javax.annotation.Nonnull final IdentityGovernance body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<IdentityGovernance> patch(@jakarta.annotation.Nonnull final IdentityGovernance body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -142,8 +142,8 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityGovernance
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityGovernance> patch(@javax.annotation.Nonnull final IdentityGovernance body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<IdentityGovernance> patch(@jakarta.annotation.Nonnull final IdentityGovernance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -161,7 +161,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * Get identityGovernance
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -170,8 +170,8 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -191,8 +191,8 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final IdentityGovernance body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityGovernance body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -201,8 +201,8 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final IdentityGovernance body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityGovernance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -226,13 +226,13 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -242,7 +242,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

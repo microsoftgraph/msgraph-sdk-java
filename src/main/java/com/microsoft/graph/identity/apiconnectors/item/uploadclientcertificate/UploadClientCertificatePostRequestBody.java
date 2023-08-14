@@ -24,7 +24,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      * Instantiates a new uploadClientCertificatePostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UploadClientCertificatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -33,8 +33,8 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a uploadClientCertificatePostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static UploadClientCertificatePostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UploadClientCertificatePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UploadClientCertificatePostRequestBody();
     }
@@ -42,7 +42,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -50,7 +50,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("password", (n) -> { this.setPassword(n.getStringValue()); });
@@ -61,7 +61,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      * Gets the password property value. The password property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPassword() {
         return this.password;
     }
@@ -69,7 +69,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      * Gets the pkcs12Value property value. The pkcs12Value property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPkcs12Value() {
         return this.pkcs12Value;
     }
@@ -78,8 +78,8 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("password", this.getPassword());
         writer.writeStringValue("pkcs12Value", this.getPkcs12Value());
@@ -90,8 +90,8 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -99,8 +99,8 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the password property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPassword(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPassword(@jakarta.annotation.Nullable final String value) {
         this.password = value;
     }
     /**
@@ -108,8 +108,8 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the pkcs12Value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPkcs12Value(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPkcs12Value(@jakarta.annotation.Nullable final String value) {
         this.pkcs12Value = value;
     }
 }

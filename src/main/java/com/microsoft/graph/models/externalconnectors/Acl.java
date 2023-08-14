@@ -32,7 +32,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
      * Instantiates a new acl and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Acl() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class Acl implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a acl
      */
-    @javax.annotation.Nonnull
-    public static Acl createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Acl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Acl();
     }
@@ -50,7 +50,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
      * Gets the accessType property value. The accessType property
      * @return a accessType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessType getAccessType() {
         return this.accessType;
     }
@@ -58,7 +58,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +66,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("accessType", (n) -> { this.setAccessType(n.getEnumValue(AccessType.class)); });
@@ -79,7 +79,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -87,7 +87,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
      * Gets the type property value. The type property
      * @return a aclType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AclType getType() {
         return this.type;
     }
@@ -95,7 +95,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
      * Gets the value property value. The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getValue() {
         return this.value;
     }
@@ -104,8 +104,8 @@ public class Acl implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("accessType", this.getAccessType());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -118,8 +118,8 @@ public class Acl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accessType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessType(@javax.annotation.Nullable final AccessType value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessType(@jakarta.annotation.Nullable final AccessType value) {
         this.accessType = value;
     }
     /**
@@ -127,8 +127,8 @@ public class Acl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -136,8 +136,8 @@ public class Acl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -145,8 +145,8 @@ public class Acl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final AclType value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final AclType value) {
         this.type = value;
     }
     /**
@@ -154,8 +154,8 @@ public class Acl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }
 }

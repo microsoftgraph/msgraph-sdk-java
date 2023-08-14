@@ -15,7 +15,7 @@ public class OutlookUser extends Entity implements Parsable {
      * Instantiates a new outlookUser and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OutlookUser() {
         super();
     }
@@ -24,8 +24,8 @@ public class OutlookUser extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a outlookUser
      */
-    @javax.annotation.Nonnull
-    public static OutlookUser createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OutlookUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OutlookUser();
     }
@@ -33,7 +33,7 @@ public class OutlookUser extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("masterCategories", (n) -> { this.setMasterCategories(n.getCollectionOfObjectValues(OutlookCategory::createFromDiscriminatorValue)); });
@@ -43,7 +43,7 @@ public class OutlookUser extends Entity implements Parsable {
      * Gets the masterCategories property value. A list of categories defined for the user.
      * @return a outlookCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OutlookCategory> getMasterCategories() {
         return this.masterCategories;
     }
@@ -52,8 +52,8 @@ public class OutlookUser extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("masterCategories", this.getMasterCategories());
@@ -63,8 +63,8 @@ public class OutlookUser extends Entity implements Parsable {
      * @param value Value to set for the masterCategories property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMasterCategories(@javax.annotation.Nullable final java.util.List<OutlookCategory> value) {
+    @jakarta.annotation.Nonnull
+    public void setMasterCategories(@jakarta.annotation.Nullable final java.util.List<OutlookCategory> value) {
         this.masterCategories = value;
     }
 }

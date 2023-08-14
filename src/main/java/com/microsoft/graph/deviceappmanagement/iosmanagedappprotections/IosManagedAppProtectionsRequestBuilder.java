@@ -26,17 +26,17 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the iosManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
-     * @param iosManagedAppProtectionId Unique identifier of the item
+     * @param iosManagedAppProtectionId The unique identifier of iosManagedAppProtection
      * @return a IosManagedAppProtectionItemRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public IosManagedAppProtectionItemRequestBuilder byIosManagedAppProtectionId(@javax.annotation.Nonnull final String iosManagedAppProtectionId) {
+    @jakarta.annotation.Nonnull
+    public IosManagedAppProtectionItemRequestBuilder byIosManagedAppProtectionId(@jakarta.annotation.Nonnull final String iosManagedAppProtectionId) {
         Objects.requireNonNull(iosManagedAppProtectionId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("iosManagedAppProtection%2Did", iosManagedAppProtectionId);
@@ -48,8 +48,8 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public IosManagedAppProtectionsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public IosManagedAppProtectionsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/iosManagedAppProtections{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
@@ -58,15 +58,16 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public IosManagedAppProtectionsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public IosManagedAppProtectionsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/iosManagedAppProtections{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * iOS managed app policies.
+     * List properties and relationships of the iosManagedAppProtection objects.
      * @return a CompletableFuture of iosManagedAppProtectionCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtectionCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -81,12 +82,13 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * iOS managed app policies.
+     * List properties and relationships of the iosManagedAppProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of iosManagedAppProtectionCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IosManagedAppProtectionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<IosManagedAppProtectionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -100,12 +102,13 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to iosManagedAppProtections for deviceAppManagement
+     * Create a new iosManagedAppProtection object.
      * @param body The request body
      * @return a CompletableFuture of iosManagedAppProtection
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IosManagedAppProtection> post(@javax.annotation.Nonnull final IosManagedAppProtection body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<IosManagedAppProtection> post(@jakarta.annotation.Nonnull final IosManagedAppProtection body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -119,13 +122,14 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to iosManagedAppProtections for deviceAppManagement
+     * Create a new iosManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of iosManagedAppProtection
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IosManagedAppProtection> post(@javax.annotation.Nonnull final IosManagedAppProtection body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<IosManagedAppProtection> post(@jakarta.annotation.Nonnull final IosManagedAppProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -140,20 +144,20 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * iOS managed app policies.
+     * List properties and relationships of the iosManagedAppProtection objects.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
     /**
-     * iOS managed app policies.
+     * List properties and relationships of the iosManagedAppProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -169,22 +173,22 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to iosManagedAppProtections for deviceAppManagement
+     * Create a new iosManagedAppProtection object.
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final IosManagedAppProtection body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final IosManagedAppProtection body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to iosManagedAppProtections for deviceAppManagement
+     * Create a new iosManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final IosManagedAppProtection body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final IosManagedAppProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -201,56 +205,56 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * iOS managed app policies.
+     * List properties and relationships of the iosManagedAppProtection objects.
      */
     public class GetQueryParameters {
         /**
          * Include count of items
          */
         @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Boolean count;
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Filter items by property values
          */
         @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String filter;
         /**
          * Order items by property values
          */
         @QueryParameter(name = "%24orderby")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] orderby;
         /**
          * Search items by search phrases
          */
         @QueryParameter(name = "%24search")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String search;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
         /**
          * Skip the first n items
          */
         @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer skip;
         /**
          * Show only the first n items
          */
         @QueryParameter(name = "%24top")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer top;
     }
     /**
@@ -260,7 +264,7 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

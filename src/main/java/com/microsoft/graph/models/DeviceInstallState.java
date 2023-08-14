@@ -47,7 +47,7 @@ public class DeviceInstallState extends Entity implements Parsable {
      * Instantiates a new deviceInstallState and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceInstallState() {
         super();
     }
@@ -56,8 +56,8 @@ public class DeviceInstallState extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceInstallState
      */
-    @javax.annotation.Nonnull
-    public static DeviceInstallState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceInstallState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceInstallState();
     }
@@ -65,7 +65,7 @@ public class DeviceInstallState extends Entity implements Parsable {
      * Gets the deviceId property value. Device Id.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -73,7 +73,7 @@ public class DeviceInstallState extends Entity implements Parsable {
      * Gets the deviceName property value. Device name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -81,7 +81,7 @@ public class DeviceInstallState extends Entity implements Parsable {
      * Gets the errorCode property value. The error code for install failures.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getErrorCode() {
         return this.errorCode;
     }
@@ -89,7 +89,7 @@ public class DeviceInstallState extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
@@ -106,7 +106,7 @@ public class DeviceInstallState extends Entity implements Parsable {
      * Gets the installState property value. Possible values for install state.
      * @return a installState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InstallState getInstallState() {
         return this.installState;
     }
@@ -114,7 +114,7 @@ public class DeviceInstallState extends Entity implements Parsable {
      * Gets the lastSyncDateTime property value. Last sync date and time.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
         return this.lastSyncDateTime;
     }
@@ -122,7 +122,7 @@ public class DeviceInstallState extends Entity implements Parsable {
      * Gets the osDescription property value. OS Description.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsDescription() {
         return this.osDescription;
     }
@@ -130,7 +130,7 @@ public class DeviceInstallState extends Entity implements Parsable {
      * Gets the osVersion property value. OS Version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsVersion() {
         return this.osVersion;
     }
@@ -138,7 +138,7 @@ public class DeviceInstallState extends Entity implements Parsable {
      * Gets the userName property value. Device User Name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserName() {
         return this.userName;
     }
@@ -147,8 +147,8 @@ public class DeviceInstallState extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("deviceId", this.getDeviceId());
@@ -165,8 +165,8 @@ public class DeviceInstallState extends Entity implements Parsable {
      * @param value Value to set for the deviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
@@ -174,8 +174,8 @@ public class DeviceInstallState extends Entity implements Parsable {
      * @param value Value to set for the deviceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
@@ -183,8 +183,8 @@ public class DeviceInstallState extends Entity implements Parsable {
      * @param value Value to set for the errorCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setErrorCode(@jakarta.annotation.Nullable final String value) {
         this.errorCode = value;
     }
     /**
@@ -192,8 +192,8 @@ public class DeviceInstallState extends Entity implements Parsable {
      * @param value Value to set for the installState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallState(@javax.annotation.Nullable final InstallState value) {
+    @jakarta.annotation.Nonnull
+    public void setInstallState(@jakarta.annotation.Nullable final InstallState value) {
         this.installState = value;
     }
     /**
@@ -201,8 +201,8 @@ public class DeviceInstallState extends Entity implements Parsable {
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSyncDateTime = value;
     }
     /**
@@ -210,8 +210,8 @@ public class DeviceInstallState extends Entity implements Parsable {
      * @param value Value to set for the osDescription property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsDescription(@jakarta.annotation.Nullable final String value) {
         this.osDescription = value;
     }
     /**
@@ -219,8 +219,8 @@ public class DeviceInstallState extends Entity implements Parsable {
      * @param value Value to set for the osVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsVersion(@jakarta.annotation.Nullable final String value) {
         this.osVersion = value;
     }
     /**
@@ -228,8 +228,8 @@ public class DeviceInstallState extends Entity implements Parsable {
      * @param value Value to set for the userName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
 }

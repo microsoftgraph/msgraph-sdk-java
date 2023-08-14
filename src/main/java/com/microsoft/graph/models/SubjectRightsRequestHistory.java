@@ -41,7 +41,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * Instantiates a new subjectRightsRequestHistory and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectRightsRequestHistory() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -50,8 +50,8 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a subjectRightsRequestHistory
      */
-    @javax.annotation.Nonnull
-    public static SubjectRightsRequestHistory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SubjectRightsRequestHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SubjectRightsRequestHistory();
     }
@@ -59,7 +59,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -67,7 +67,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * Gets the changedBy property value. Identity of the user who changed the  subject rights request.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getChangedBy() {
         return this.changedBy;
     }
@@ -75,7 +75,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * Gets the eventDateTime property value. Data and time when the entity was changed.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
         return this.eventDateTime;
     }
@@ -83,7 +83,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("changedBy", (n) -> { this.setChangedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -98,7 +98,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -106,7 +106,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * Gets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
      * @return a subjectRightsRequestStage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectRightsRequestStage getStage() {
         return this.stage;
     }
@@ -114,7 +114,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * Gets the stageStatus property value. The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
      * @return a subjectRightsRequestStageStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectRightsRequestStageStatus getStageStatus() {
         return this.stageStatus;
     }
@@ -122,7 +122,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * Gets the type property value. Type of history.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getType() {
         return this.type;
     }
@@ -131,8 +131,8 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("changedBy", this.getChangedBy());
         writer.writeOffsetDateTimeValue("eventDateTime", this.getEventDateTime());
@@ -147,8 +147,8 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -156,8 +156,8 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param value Value to set for the changedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChangedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setChangedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.changedBy = value;
     }
     /**
@@ -165,8 +165,8 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.eventDateTime = value;
     }
     /**
@@ -174,8 +174,8 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -183,8 +183,8 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param value Value to set for the stage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStage(@javax.annotation.Nullable final SubjectRightsRequestStage value) {
+    @jakarta.annotation.Nonnull
+    public void setStage(@jakarta.annotation.Nullable final SubjectRightsRequestStage value) {
         this.stage = value;
     }
     /**
@@ -192,8 +192,8 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param value Value to set for the stageStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStageStatus(@javax.annotation.Nullable final SubjectRightsRequestStageStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStageStatus(@jakarta.annotation.Nullable final SubjectRightsRequestStageStatus value) {
         this.stageStatus = value;
     }
     /**
@@ -201,8 +201,8 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
 }

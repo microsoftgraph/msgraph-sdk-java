@@ -23,7 +23,7 @@ public class ItemAnalytics extends Entity implements Parsable {
      * Instantiates a new itemAnalytics and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemAnalytics() {
         super();
     }
@@ -32,8 +32,8 @@ public class ItemAnalytics extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a itemAnalytics
      */
-    @javax.annotation.Nonnull
-    public static ItemAnalytics createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ItemAnalytics createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ItemAnalytics();
     }
@@ -41,7 +41,7 @@ public class ItemAnalytics extends Entity implements Parsable {
      * Gets the allTime property value. The allTime property
      * @return a itemActivityStat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemActivityStat getAllTime() {
         return this.allTime;
     }
@@ -49,7 +49,7 @@ public class ItemAnalytics extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allTime", (n) -> { this.setAllTime(n.getObjectValue(ItemActivityStat::createFromDiscriminatorValue)); });
@@ -61,7 +61,7 @@ public class ItemAnalytics extends Entity implements Parsable {
      * Gets the itemActivityStats property value. The itemActivityStats property
      * @return a itemActivityStat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ItemActivityStat> getItemActivityStats() {
         return this.itemActivityStats;
     }
@@ -69,7 +69,7 @@ public class ItemAnalytics extends Entity implements Parsable {
      * Gets the lastSevenDays property value. The lastSevenDays property
      * @return a itemActivityStat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemActivityStat getLastSevenDays() {
         return this.lastSevenDays;
     }
@@ -78,8 +78,8 @@ public class ItemAnalytics extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("allTime", this.getAllTime());
@@ -91,8 +91,8 @@ public class ItemAnalytics extends Entity implements Parsable {
      * @param value Value to set for the allTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllTime(@javax.annotation.Nullable final ItemActivityStat value) {
+    @jakarta.annotation.Nonnull
+    public void setAllTime(@jakarta.annotation.Nullable final ItemActivityStat value) {
         this.allTime = value;
     }
     /**
@@ -100,8 +100,8 @@ public class ItemAnalytics extends Entity implements Parsable {
      * @param value Value to set for the itemActivityStats property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setItemActivityStats(@javax.annotation.Nullable final java.util.List<ItemActivityStat> value) {
+    @jakarta.annotation.Nonnull
+    public void setItemActivityStats(@jakarta.annotation.Nullable final java.util.List<ItemActivityStat> value) {
         this.itemActivityStats = value;
     }
     /**
@@ -109,8 +109,8 @@ public class ItemAnalytics extends Entity implements Parsable {
      * @param value Value to set for the lastSevenDays property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSevenDays(@javax.annotation.Nullable final ItemActivityStat value) {
+    @jakarta.annotation.Nonnull
+    public void setLastSevenDays(@jakarta.annotation.Nullable final ItemActivityStat value) {
         this.lastSevenDays = value;
     }
 }

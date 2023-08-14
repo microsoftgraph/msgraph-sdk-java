@@ -2,8 +2,10 @@ package com.microsoft.graph.groups.item.team.channels.item.messages.item;
 
 import com.microsoft.graph.groups.item.team.channels.item.messages.item.hostedcontents.HostedContentsRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.messages.item.replies.RepliesRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.messages.item.setreaction.SetReactionRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.messages.item.softdelete.SoftDeleteRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.messages.item.undosoftdelete.UndoSoftDeleteRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.messages.item.unsetreaction.UnsetReactionRequestBuilder;
 import com.microsoft.graph.models.ChatMessage;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -27,30 +29,44 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the hostedContents property of the microsoft.graph.chatMessage entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public HostedContentsRequestBuilder hostedContents() {
         return new HostedContentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the replies property of the microsoft.graph.chatMessage entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RepliesRequestBuilder replies() {
         return new RepliesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the setReaction method.
+     */
+    @jakarta.annotation.Nonnull
+    public SetReactionRequestBuilder setReaction() {
+        return new SetReactionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the softDelete method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SoftDeleteRequestBuilder softDelete() {
         return new SoftDeleteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the undoSoftDelete method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public UndoSoftDeleteRequestBuilder undoSoftDelete() {
         return new UndoSoftDeleteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the unsetReaction method.
+     */
+    @jakarta.annotation.Nonnull
+    public UnsetReactionRequestBuilder unsetReaction() {
+        return new UnsetReactionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new ChatMessageItemRequestBuilder and sets the default values.
@@ -58,8 +74,8 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public ChatMessageItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public ChatMessageItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/channels/{channel%2Did}/messages/{chatMessage%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -68,15 +84,15 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public ChatMessageItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public ChatMessageItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/channels/{channel%2Did}/messages/{chatMessage%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property messages for groups
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -95,8 +111,8 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -112,9 +128,9 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a single message or a message reply in a channel or a chat.
      * @return a CompletableFuture of chatMessage
-     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -132,10 +148,10 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve a single message or a message reply in a channel or a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chatMessage
-     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ChatMessage> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -149,13 +165,13 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update a chatMessage object. With the exception of the **policyViolation** property, all properties of a **chatMessage** can be updated in delegated permissions scenarios.Only the **policyViolation** property of a **chatMessage** can be updated in application permissions scenarios. The update only works for chats where members are Microsoft Teams users. If one of the participants is using Skype, the operation will fail. This method does not support federation. Only the user in the tenant who sent the message can perform data loss prevention (DLP) updates on the specified chat message.
+     * Update a chatMessage object. With the exception of the policyViolation property, all properties of a chatMessage can be updated in delegated permissions scenarios.Only the policyViolation property of a chatMessage can be updated in application permissions scenarios. The update only works for chats where members are Microsoft Teams users. If one of the participants is using Skype, the operation will fail. This method does not support federation. Only the user in the tenant who sent the message can perform data loss prevention (DLP) updates on the specified chat message.
      * @param body The request body
      * @return a CompletableFuture of chatMessage
-     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ChatMessage> patch(@javax.annotation.Nonnull final ChatMessage body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessage> patch(@jakarta.annotation.Nonnull final ChatMessage body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -169,14 +185,14 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update a chatMessage object. With the exception of the **policyViolation** property, all properties of a **chatMessage** can be updated in delegated permissions scenarios.Only the **policyViolation** property of a **chatMessage** can be updated in application permissions scenarios. The update only works for chats where members are Microsoft Teams users. If one of the participants is using Skype, the operation will fail. This method does not support federation. Only the user in the tenant who sent the message can perform data loss prevention (DLP) updates on the specified chat message.
+     * Update a chatMessage object. With the exception of the policyViolation property, all properties of a chatMessage can be updated in delegated permissions scenarios.Only the policyViolation property of a chatMessage can be updated in application permissions scenarios. The update only works for chats where members are Microsoft Teams users. If one of the participants is using Skype, the operation will fail. This method does not support federation. Only the user in the tenant who sent the message can perform data loss prevention (DLP) updates on the specified chat message.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chatMessage
-     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ChatMessage> patch(@javax.annotation.Nonnull final ChatMessage body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessage> patch(@jakarta.annotation.Nonnull final ChatMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -194,7 +210,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property messages for groups
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -203,8 +219,8 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -221,7 +237,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve a single message or a message reply in a channel or a chat.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -230,8 +246,8 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -247,22 +263,22 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update a chatMessage object. With the exception of the **policyViolation** property, all properties of a **chatMessage** can be updated in delegated permissions scenarios.Only the **policyViolation** property of a **chatMessage** can be updated in application permissions scenarios. The update only works for chats where members are Microsoft Teams users. If one of the participants is using Skype, the operation will fail. This method does not support federation. Only the user in the tenant who sent the message can perform data loss prevention (DLP) updates on the specified chat message.
+     * Update a chatMessage object. With the exception of the policyViolation property, all properties of a chatMessage can be updated in delegated permissions scenarios.Only the policyViolation property of a chatMessage can be updated in application permissions scenarios. The update only works for chats where members are Microsoft Teams users. If one of the participants is using Skype, the operation will fail. This method does not support federation. Only the user in the tenant who sent the message can perform data loss prevention (DLP) updates on the specified chat message.
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final ChatMessage body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ChatMessage body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update a chatMessage object. With the exception of the **policyViolation** property, all properties of a **chatMessage** can be updated in delegated permissions scenarios.Only the **policyViolation** property of a **chatMessage** can be updated in application permissions scenarios. The update only works for chats where members are Microsoft Teams users. If one of the participants is using Skype, the operation will fail. This method does not support federation. Only the user in the tenant who sent the message can perform data loss prevention (DLP) updates on the specified chat message.
+     * Update a chatMessage object. With the exception of the policyViolation property, all properties of a chatMessage can be updated in delegated permissions scenarios.Only the policyViolation property of a chatMessage can be updated in application permissions scenarios. The update only works for chats where members are Microsoft Teams users. If one of the participants is using Skype, the operation will fail. This method does not support federation. Only the user in the tenant who sent the message can perform data loss prevention (DLP) updates on the specified chat message.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final ChatMessage body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ChatMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -291,13 +307,13 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -307,7 +323,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

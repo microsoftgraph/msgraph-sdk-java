@@ -15,7 +15,7 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
      * Instantiates a new serviceHostedMediaConfig and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServiceHostedMediaConfig() {
         super();
         this.setOdataType("#microsoft.graph.serviceHostedMediaConfig");
@@ -25,8 +25,8 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a serviceHostedMediaConfig
      */
-    @javax.annotation.Nonnull
-    public static ServiceHostedMediaConfig createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ServiceHostedMediaConfig createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ServiceHostedMediaConfig();
     }
@@ -34,7 +34,7 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("preFetchMedia", (n) -> { this.setPreFetchMedia(n.getCollectionOfObjectValues(MediaInfo::createFromDiscriminatorValue)); });
@@ -44,7 +44,7 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
      * Gets the preFetchMedia property value. The list of media to pre-fetch.
      * @return a mediaInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MediaInfo> getPreFetchMedia() {
         return this.preFetchMedia;
     }
@@ -53,8 +53,8 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("preFetchMedia", this.getPreFetchMedia());
@@ -64,8 +64,8 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
      * @param value Value to set for the preFetchMedia property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreFetchMedia(@javax.annotation.Nullable final java.util.List<MediaInfo> value) {
+    @jakarta.annotation.Nonnull
+    public void setPreFetchMedia(@jakarta.annotation.Nullable final java.util.List<MediaInfo> value) {
         this.preFetchMedia = value;
     }
 }

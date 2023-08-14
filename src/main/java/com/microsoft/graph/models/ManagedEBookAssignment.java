@@ -22,7 +22,7 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      * Instantiates a new managedEBookAssignment and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedEBookAssignment() {
         super();
     }
@@ -31,8 +31,8 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedEBookAssignment
      */
-    @javax.annotation.Nonnull
-    public static ManagedEBookAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedEBookAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -47,7 +47,7 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("installIntent", (n) -> { this.setInstallIntent(n.getEnumValue(InstallIntent.class)); });
@@ -58,7 +58,7 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      * Gets the installIntent property value. Possible values for the install intent chosen by the admin.
      * @return a installIntent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InstallIntent getInstallIntent() {
         return this.installIntent;
     }
@@ -66,7 +66,7 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      * Gets the target property value. The assignment target for eBook.
      * @return a deviceAndAppManagementAssignmentTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
         return this.target;
     }
@@ -75,8 +75,8 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("installIntent", this.getInstallIntent());
@@ -87,8 +87,8 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      * @param value Value to set for the installIntent property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallIntent(@javax.annotation.Nullable final InstallIntent value) {
+    @jakarta.annotation.Nonnull
+    public void setInstallIntent(@jakarta.annotation.Nullable final InstallIntent value) {
         this.installIntent = value;
     }
     /**
@@ -96,8 +96,8 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      * @param value Value to set for the target property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
+    @jakarta.annotation.Nonnull
+    public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this.target = value;
     }
 }

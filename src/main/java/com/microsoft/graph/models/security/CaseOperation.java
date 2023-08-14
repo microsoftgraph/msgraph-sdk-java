@@ -43,7 +43,7 @@ public class CaseOperation extends Entity implements Parsable {
      * Instantiates a new caseOperation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CaseOperation() {
         super();
     }
@@ -52,8 +52,8 @@ public class CaseOperation extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a caseOperation
      */
-    @javax.annotation.Nonnull
-    public static CaseOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CaseOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -74,7 +74,7 @@ public class CaseOperation extends Entity implements Parsable {
      * Gets the action property value. The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
      * @return a caseAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CaseAction getAction() {
         return this.action;
     }
@@ -82,7 +82,7 @@ public class CaseOperation extends Entity implements Parsable {
      * Gets the completedDateTime property value. The date and time the operation was completed.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
         return this.completedDateTime;
     }
@@ -90,7 +90,7 @@ public class CaseOperation extends Entity implements Parsable {
      * Gets the createdBy property value. The user that created the operation.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -98,7 +98,7 @@ public class CaseOperation extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time the operation was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -106,7 +106,7 @@ public class CaseOperation extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(CaseAction.class)); });
@@ -122,7 +122,7 @@ public class CaseOperation extends Entity implements Parsable {
      * Gets the percentProgress property value. The progress of the operation.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPercentProgress() {
         return this.percentProgress;
     }
@@ -130,7 +130,7 @@ public class CaseOperation extends Entity implements Parsable {
      * Gets the resultInfo property value. Contains success and failure-specific result information.
      * @return a resultInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResultInfo getResultInfo() {
         return this.resultInfo;
     }
@@ -138,7 +138,7 @@ public class CaseOperation extends Entity implements Parsable {
      * Gets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
      * @return a caseOperationStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CaseOperationStatus getStatus() {
         return this.status;
     }
@@ -147,8 +147,8 @@ public class CaseOperation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("action", this.getAction());
@@ -164,8 +164,8 @@ public class CaseOperation extends Entity implements Parsable {
      * @param value Value to set for the action property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAction(@javax.annotation.Nullable final CaseAction value) {
+    @jakarta.annotation.Nonnull
+    public void setAction(@jakarta.annotation.Nullable final CaseAction value) {
         this.action = value;
     }
     /**
@@ -173,8 +173,8 @@ public class CaseOperation extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completedDateTime = value;
     }
     /**
@@ -182,8 +182,8 @@ public class CaseOperation extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
@@ -191,8 +191,8 @@ public class CaseOperation extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -200,8 +200,8 @@ public class CaseOperation extends Entity implements Parsable {
      * @param value Value to set for the percentProgress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPercentProgress(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPercentProgress(@jakarta.annotation.Nullable final Integer value) {
         this.percentProgress = value;
     }
     /**
@@ -209,8 +209,8 @@ public class CaseOperation extends Entity implements Parsable {
      * @param value Value to set for the resultInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResultInfo(@javax.annotation.Nullable final ResultInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setResultInfo(@jakarta.annotation.Nullable final ResultInfo value) {
         this.resultInfo = value;
     }
     /**
@@ -218,8 +218,8 @@ public class CaseOperation extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final CaseOperationStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final CaseOperationStatus value) {
         this.status = value;
     }
 }

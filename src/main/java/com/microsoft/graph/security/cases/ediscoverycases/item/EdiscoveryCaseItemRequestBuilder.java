@@ -32,63 +32,63 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CustodiansRequestBuilder custodians() {
         return new CustodiansRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the close method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityCloseRequestBuilder microsoftGraphSecurityClose() {
         return new MicrosoftGraphSecurityCloseRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the reopen method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityReopenRequestBuilder microsoftGraphSecurityReopen() {
         return new MicrosoftGraphSecurityReopenRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the noncustodialDataSources property of the microsoft.graph.security.ediscoveryCase entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public NoncustodialDataSourcesRequestBuilder noncustodialDataSources() {
         return new NoncustodialDataSourcesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the operations property of the microsoft.graph.security.ediscoveryCase entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the reviewSets property of the microsoft.graph.security.ediscoveryCase entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ReviewSetsRequestBuilder reviewSets() {
         return new ReviewSetsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the searches property of the microsoft.graph.security.ediscoveryCase entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SearchesRequestBuilder searches() {
         return new SearchesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.security.ediscoveryCase entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SettingsRequestBuilder settings() {
         return new SettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tags property of the microsoft.graph.security.ediscoveryCase entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TagsRequestBuilder tags() {
         return new TagsRequestBuilder(pathParameters, requestAdapter);
     }
@@ -98,8 +98,8 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public EdiscoveryCaseItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public EdiscoveryCaseItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -108,16 +108,16 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public EdiscoveryCaseItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public EdiscoveryCaseItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete an ediscoveryCase object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-casesroot-delete-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-casesroot-delete-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -135,10 +135,10 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * Delete an ediscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-casesroot-delete-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-casesroot-delete-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -154,9 +154,9 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an ediscoveryCase object.
      * @return a CompletableFuture of ediscoveryCase
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCase> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -174,10 +174,10 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of an ediscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryCase
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoveryCase> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<EdiscoveryCase> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -194,10 +194,10 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an ediscoveryCase object.
      * @param body The request body
      * @return a CompletableFuture of ediscoveryCase
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoveryCase> patch(@javax.annotation.Nonnull final EdiscoveryCase body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<EdiscoveryCase> patch(@jakarta.annotation.Nonnull final EdiscoveryCase body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -215,10 +215,10 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryCase
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EdiscoveryCase> patch(@javax.annotation.Nonnull final EdiscoveryCase body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<EdiscoveryCase> patch(@jakarta.annotation.Nonnull final EdiscoveryCase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -236,7 +236,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * Delete an ediscoveryCase object.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -245,8 +245,8 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -263,7 +263,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of an ediscoveryCase object.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -272,8 +272,8 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -293,8 +293,8 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final EdiscoveryCase body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EdiscoveryCase body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -303,8 +303,8 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final EdiscoveryCase body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EdiscoveryCase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -333,13 +333,13 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -349,7 +349,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

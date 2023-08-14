@@ -28,7 +28,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * Instantiates a new unifiedRoleEligibilityScheduleInstance and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleInstance() {
         super();
     }
@@ -37,8 +37,8 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a unifiedRoleEligibilityScheduleInstance
      */
-    @javax.annotation.Nonnull
-    public static UnifiedRoleEligibilityScheduleInstance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UnifiedRoleEligibilityScheduleInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UnifiedRoleEligibilityScheduleInstance();
     }
@@ -46,7 +46,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * Gets the endDateTime property value. The end date of the schedule instance.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
         return this.endDateTime;
     }
@@ -54,7 +54,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
@@ -67,7 +67,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * Gets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMemberType() {
         return this.memberType;
     }
@@ -75,7 +75,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * Gets the roleEligibilityScheduleId property value. The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleEligibilityScheduleId() {
         return this.roleEligibilityScheduleId;
     }
@@ -83,7 +83,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * Gets the startDateTime property value. When this instance starts.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
@@ -92,8 +92,8 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
@@ -106,8 +106,8 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
@@ -115,8 +115,8 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * @param value Value to set for the memberType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMemberType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMemberType(@jakarta.annotation.Nullable final String value) {
         this.memberType = value;
     }
     /**
@@ -124,8 +124,8 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * @param value Value to set for the roleEligibilityScheduleId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleEligibilityScheduleId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleEligibilityScheduleId(@jakarta.annotation.Nullable final String value) {
         this.roleEligibilityScheduleId = value;
     }
     /**
@@ -133,8 +133,8 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
 }

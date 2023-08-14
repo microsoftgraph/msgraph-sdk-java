@@ -49,7 +49,7 @@ public class Article extends Entity implements Parsable {
      * Instantiates a new article and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Article() {
         super();
     }
@@ -58,8 +58,8 @@ public class Article extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a article
      */
-    @javax.annotation.Nonnull
-    public static Article createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Article createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Article();
     }
@@ -67,7 +67,7 @@ public class Article extends Entity implements Parsable {
      * Gets the body property value. The body property
      * @return a formattedContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FormattedContent getBody() {
         return this.body;
     }
@@ -75,7 +75,7 @@ public class Article extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time when this article was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -83,7 +83,7 @@ public class Article extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(FormattedContent::createFromDiscriminatorValue)); });
@@ -101,7 +101,7 @@ public class Article extends Entity implements Parsable {
      * Gets the imageUrl property value. URL of the header image for this article, used for display purposes.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getImageUrl() {
         return this.imageUrl;
     }
@@ -109,7 +109,7 @@ public class Article extends Entity implements Parsable {
      * Gets the indicators property value. Indicators related to this article.
      * @return a articleIndicator
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ArticleIndicator> getIndicators() {
         return this.indicators;
     }
@@ -117,7 +117,7 @@ public class Article extends Entity implements Parsable {
      * Gets the isFeatured property value. Indicates whether this article is currently featured by Microsoft.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsFeatured() {
         return this.isFeatured;
     }
@@ -125,7 +125,7 @@ public class Article extends Entity implements Parsable {
      * Gets the lastUpdatedDateTime property value. The most recent date and time when this article was updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this.lastUpdatedDateTime;
     }
@@ -133,7 +133,7 @@ public class Article extends Entity implements Parsable {
      * Gets the summary property value. The summary property
      * @return a formattedContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FormattedContent getSummary() {
         return this.summary;
     }
@@ -141,7 +141,7 @@ public class Article extends Entity implements Parsable {
      * Gets the tags property value. Tags for this article, communicating keywords, or key concepts.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
         return this.tags;
     }
@@ -149,7 +149,7 @@ public class Article extends Entity implements Parsable {
      * Gets the title property value. The title of this article.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTitle() {
         return this.title;
     }
@@ -158,8 +158,8 @@ public class Article extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("body", this.getBody());
@@ -177,8 +177,8 @@ public class Article extends Entity implements Parsable {
      * @param value Value to set for the body property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBody(@javax.annotation.Nullable final FormattedContent value) {
+    @jakarta.annotation.Nonnull
+    public void setBody(@jakarta.annotation.Nullable final FormattedContent value) {
         this.body = value;
     }
     /**
@@ -186,8 +186,8 @@ public class Article extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -195,8 +195,8 @@ public class Article extends Entity implements Parsable {
      * @param value Value to set for the imageUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImageUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setImageUrl(@jakarta.annotation.Nullable final String value) {
         this.imageUrl = value;
     }
     /**
@@ -204,8 +204,8 @@ public class Article extends Entity implements Parsable {
      * @param value Value to set for the indicators property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIndicators(@javax.annotation.Nullable final java.util.List<ArticleIndicator> value) {
+    @jakarta.annotation.Nonnull
+    public void setIndicators(@jakarta.annotation.Nullable final java.util.List<ArticleIndicator> value) {
         this.indicators = value;
     }
     /**
@@ -213,8 +213,8 @@ public class Article extends Entity implements Parsable {
      * @param value Value to set for the isFeatured property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsFeatured(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsFeatured(@jakarta.annotation.Nullable final Boolean value) {
         this.isFeatured = value;
     }
     /**
@@ -222,8 +222,8 @@ public class Article extends Entity implements Parsable {
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
@@ -231,8 +231,8 @@ public class Article extends Entity implements Parsable {
      * @param value Value to set for the summary property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSummary(@javax.annotation.Nullable final FormattedContent value) {
+    @jakarta.annotation.Nonnull
+    public void setSummary(@jakarta.annotation.Nullable final FormattedContent value) {
         this.summary = value;
     }
     /**
@@ -240,8 +240,8 @@ public class Article extends Entity implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.tags = value;
     }
     /**
@@ -249,8 +249,8 @@ public class Article extends Entity implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTitle(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
 }

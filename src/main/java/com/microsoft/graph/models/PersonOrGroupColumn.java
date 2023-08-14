@@ -32,7 +32,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * Instantiates a new personOrGroupColumn and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PersonOrGroupColumn() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a personOrGroupColumn
      */
-    @javax.annotation.Nonnull
-    public static PersonOrGroupColumn createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PersonOrGroupColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PersonOrGroupColumn();
     }
@@ -50,7 +50,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * Gets the allowMultipleSelection property value. Indicates whether multiple values can be selected from the source.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowMultipleSelection() {
         return this.allowMultipleSelection;
     }
@@ -66,7 +66,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * Gets the chooseFromType property value. Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getChooseFromType() {
         return this.chooseFromType;
     }
@@ -74,7 +74,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * Gets the displayAs property value. How to display the information about the person or group chosen. See below.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayAs() {
         return this.displayAs;
     }
@@ -82,7 +82,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("allowMultipleSelection", (n) -> { this.setAllowMultipleSelection(n.getBooleanValue()); });
@@ -95,7 +95,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -104,8 +104,8 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowMultipleSelection", this.getAllowMultipleSelection());
         writer.writeStringValue("chooseFromType", this.getChooseFromType());
@@ -118,8 +118,8 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -127,8 +127,8 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowMultipleSelection property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowMultipleSelection(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowMultipleSelection(@jakarta.annotation.Nullable final Boolean value) {
         this.allowMultipleSelection = value;
     }
     /**
@@ -136,8 +136,8 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the chooseFromType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChooseFromType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setChooseFromType(@jakarta.annotation.Nullable final String value) {
         this.chooseFromType = value;
     }
     /**
@@ -145,8 +145,8 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayAs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayAs(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayAs(@jakarta.annotation.Nullable final String value) {
         this.displayAs = value;
     }
     /**
@@ -154,8 +154,8 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

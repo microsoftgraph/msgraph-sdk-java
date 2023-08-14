@@ -34,77 +34,77 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the createdBy property of the microsoft.graph.identityGovernance.workflowBase entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CreatedByRequestBuilder createdBy() {
         return new CreatedByRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the executionScope property of the microsoft.graph.identityGovernance.workflow entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ExecutionScopeRequestBuilder executionScope() {
         return new ExecutionScopeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the lastModifiedBy property of the microsoft.graph.identityGovernance.workflowBase entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public LastModifiedByRequestBuilder lastModifiedBy() {
         return new LastModifiedByRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the activate method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceActivateRequestBuilder microsoftGraphIdentityGovernanceActivate() {
         return new MicrosoftGraphIdentityGovernanceActivateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the createNewVersion method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder microsoftGraphIdentityGovernanceCreateNewVersion() {
         return new MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the restore method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceRestoreRequestBuilder microsoftGraphIdentityGovernanceRestore() {
         return new MicrosoftGraphIdentityGovernanceRestoreRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the runs property of the microsoft.graph.identityGovernance.workflow entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RunsRequestBuilder runs() {
         return new RunsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the taskReports property of the microsoft.graph.identityGovernance.workflow entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TaskReportsRequestBuilder taskReports() {
         return new TaskReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tasks property of the microsoft.graph.identityGovernance.workflowBase entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userProcessingResults property of the microsoft.graph.identityGovernance.workflow entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public UserProcessingResultsRequestBuilder userProcessingResults() {
         return new UserProcessingResultsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the versions property of the microsoft.graph.identityGovernance.workflow entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public VersionsRequestBuilder versions() {
         return new VersionsRequestBuilder(pathParameters, requestAdapter);
     }
@@ -114,8 +114,8 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public WorkflowItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public WorkflowItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -124,16 +124,16 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public WorkflowItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public WorkflowItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete a workflow object and its associated tasks, taskProcessingResults and versions. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -151,10 +151,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * Delete a workflow object and its associated tasks, taskProcessingResults and versions. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -170,9 +170,9 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a workflow object.
      * @return a CompletableFuture of workflow
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Workflow> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -190,10 +190,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workflow
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Workflow> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Workflow> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -210,10 +210,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a workflow object. Only the properties listed in the request body table can be updated. To update any other workflow properties, see workflow: createNewVersion.
      * @param body The request body
      * @return a CompletableFuture of workflow
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Workflow> patch(@javax.annotation.Nonnull final Workflow body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Workflow> patch(@jakarta.annotation.Nonnull final Workflow body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -231,10 +231,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workflow
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Workflow> patch(@javax.annotation.Nonnull final Workflow body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Workflow> patch(@jakarta.annotation.Nonnull final Workflow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -252,7 +252,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * Delete a workflow object and its associated tasks, taskProcessingResults and versions. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -261,8 +261,8 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -279,7 +279,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a workflow object.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -288,8 +288,8 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -309,8 +309,8 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final Workflow body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Workflow body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -319,8 +319,8 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final Workflow body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Workflow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -349,13 +349,13 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -365,7 +365,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

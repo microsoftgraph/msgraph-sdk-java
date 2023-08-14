@@ -52,7 +52,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * Instantiates a new accessPackageAssignmentRequestorSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageAssignmentRequestorSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -61,8 +61,8 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageAssignmentRequestorSettings
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageAssignmentRequestorSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageAssignmentRequestorSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackageAssignmentRequestorSettings();
     }
@@ -70,7 +70,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -78,7 +78,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * Gets the allowCustomAssignmentSchedule property value. False indicates that the requestor is not permitted to include a schedule in their request.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowCustomAssignmentSchedule() {
         return this.allowCustomAssignmentSchedule;
     }
@@ -86,7 +86,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * Gets the enableOnBehalfRequestorsToAddAccess property value. True allows on-behalf-of requestors to create a request to add access for another principal.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableOnBehalfRequestorsToAddAccess() {
         return this.enableOnBehalfRequestorsToAddAccess;
     }
@@ -94,7 +94,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * Gets the enableOnBehalfRequestorsToRemoveAccess property value. True allows on-behalf-of requestors to create a request to remove access for another principal.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableOnBehalfRequestorsToRemoveAccess() {
         return this.enableOnBehalfRequestorsToRemoveAccess;
     }
@@ -102,7 +102,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * Gets the enableOnBehalfRequestorsToUpdateAccess property value. True allows on-behalf-of requestors to create a request to update access for another principal.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableOnBehalfRequestorsToUpdateAccess() {
         return this.enableOnBehalfRequestorsToUpdateAccess;
     }
@@ -110,7 +110,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * Gets the enableTargetsToSelfAddAccess property value. True allows requestors to create a request to add access for themselves.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableTargetsToSelfAddAccess() {
         return this.enableTargetsToSelfAddAccess;
     }
@@ -118,7 +118,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * Gets the enableTargetsToSelfRemoveAccess property value. True allows requestors to create a request to remove their access.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableTargetsToSelfRemoveAccess() {
         return this.enableTargetsToSelfRemoveAccess;
     }
@@ -126,7 +126,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * Gets the enableTargetsToSelfUpdateAccess property value. True allows requestors to create a request to update their access.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableTargetsToSelfUpdateAccess() {
         return this.enableTargetsToSelfUpdateAccess;
     }
@@ -134,7 +134,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("allowCustomAssignmentSchedule", (n) -> { this.setAllowCustomAssignmentSchedule(n.getBooleanValue()); });
@@ -152,7 +152,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -160,7 +160,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * Gets the onBehalfRequestors property value. The principals who can request on-behalf-of others.
      * @return a subjectSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getOnBehalfRequestors() {
         return this.onBehalfRequestors;
     }
@@ -169,8 +169,8 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowCustomAssignmentSchedule", this.getAllowCustomAssignmentSchedule());
         writer.writeBooleanValue("enableOnBehalfRequestorsToAddAccess", this.getEnableOnBehalfRequestorsToAddAccess());
@@ -188,8 +188,8 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -197,8 +197,8 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the allowCustomAssignmentSchedule property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowCustomAssignmentSchedule(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowCustomAssignmentSchedule(@jakarta.annotation.Nullable final Boolean value) {
         this.allowCustomAssignmentSchedule = value;
     }
     /**
@@ -206,8 +206,8 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the enableOnBehalfRequestorsToAddAccess property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableOnBehalfRequestorsToAddAccess(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableOnBehalfRequestorsToAddAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.enableOnBehalfRequestorsToAddAccess = value;
     }
     /**
@@ -215,8 +215,8 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the enableOnBehalfRequestorsToRemoveAccess property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableOnBehalfRequestorsToRemoveAccess(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableOnBehalfRequestorsToRemoveAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.enableOnBehalfRequestorsToRemoveAccess = value;
     }
     /**
@@ -224,8 +224,8 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the enableOnBehalfRequestorsToUpdateAccess property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableOnBehalfRequestorsToUpdateAccess(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableOnBehalfRequestorsToUpdateAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.enableOnBehalfRequestorsToUpdateAccess = value;
     }
     /**
@@ -233,8 +233,8 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the enableTargetsToSelfAddAccess property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableTargetsToSelfAddAccess(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableTargetsToSelfAddAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.enableTargetsToSelfAddAccess = value;
     }
     /**
@@ -242,8 +242,8 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the enableTargetsToSelfRemoveAccess property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableTargetsToSelfRemoveAccess(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableTargetsToSelfRemoveAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.enableTargetsToSelfRemoveAccess = value;
     }
     /**
@@ -251,8 +251,8 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the enableTargetsToSelfUpdateAccess property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableTargetsToSelfUpdateAccess(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableTargetsToSelfUpdateAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.enableTargetsToSelfUpdateAccess = value;
     }
     /**
@@ -260,8 +260,8 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -269,8 +269,8 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the onBehalfRequestors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnBehalfRequestors(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
+    @jakarta.annotation.Nonnull
+    public void setOnBehalfRequestors(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
         this.onBehalfRequestors = value;
     }
 }

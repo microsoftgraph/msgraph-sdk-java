@@ -13,10 +13,10 @@ public enum SynchronizationStatusCode implements ValuedEnum {
     SynchronizationStatusCode(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static SynchronizationStatusCode forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static SynchronizationStatusCode forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "NotConfigured": return NotConfigured;

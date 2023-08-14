@@ -66,7 +66,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * Instantiates a new win32LobApp and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Win32LobApp() {
         super();
         this.setOdataType("#microsoft.graph.win32LobApp");
@@ -76,8 +76,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a win32LobApp
      */
-    @javax.annotation.Nonnull
-    public static Win32LobApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Win32LobApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Win32LobApp();
     }
@@ -85,7 +85,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @return a windowsArchitecture
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsArchitecture getApplicableArchitectures() {
         return this.applicableArchitectures;
     }
@@ -93,7 +93,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumValue(WindowsArchitecture.class)); });
@@ -115,7 +115,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * Gets the installCommandLine property value. The command line to install this app
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInstallCommandLine() {
         return this.installCommandLine;
     }
@@ -123,7 +123,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * Gets the installExperience property value. The install experience for this app.
      * @return a win32LobAppInstallExperience
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Win32LobAppInstallExperience getInstallExperience() {
         return this.installExperience;
     }
@@ -131,7 +131,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * Gets the minimumCpuSpeedInMHz property value. The value for the minimum CPU speed which is required to install this app.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMinimumCpuSpeedInMHz() {
         return this.minimumCpuSpeedInMHz;
     }
@@ -139,7 +139,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * Gets the minimumFreeDiskSpaceInMB property value. The value for the minimum free disk space which is required to install this app.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMinimumFreeDiskSpaceInMB() {
         return this.minimumFreeDiskSpaceInMB;
     }
@@ -147,7 +147,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * Gets the minimumMemoryInMB property value. The value for the minimum physical memory which is required to install this app.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMinimumMemoryInMB() {
         return this.minimumMemoryInMB;
     }
@@ -155,7 +155,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * Gets the minimumNumberOfProcessors property value. The value for the minimum number of processors which is required to install this app.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMinimumNumberOfProcessors() {
         return this.minimumNumberOfProcessors;
     }
@@ -163,7 +163,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * Gets the minimumSupportedWindowsRelease property value. The value for the minimum supported windows release.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMinimumSupportedWindowsRelease() {
         return this.minimumSupportedWindowsRelease;
     }
@@ -171,7 +171,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * Gets the msiInformation property value. The MSI details if this Win32 app is an MSI app.
      * @return a win32LobAppMsiInformation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Win32LobAppMsiInformation getMsiInformation() {
         return this.msiInformation;
     }
@@ -179,7 +179,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * Gets the returnCodes property value. The return codes for post installation behavior.
      * @return a win32LobAppReturnCode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Win32LobAppReturnCode> getReturnCodes() {
         return this.returnCodes;
     }
@@ -187,7 +187,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * Gets the rules property value. The detection and requirement rules for this app.
      * @return a win32LobAppRule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Win32LobAppRule> getRules() {
         return this.rules;
     }
@@ -195,7 +195,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * Gets the setupFilePath property value. The relative path of the setup file in the encrypted Win32LobApp package.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSetupFilePath() {
         return this.setupFilePath;
     }
@@ -203,7 +203,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * Gets the uninstallCommandLine property value. The command line to uninstall this app
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUninstallCommandLine() {
         return this.uninstallCommandLine;
     }
@@ -212,8 +212,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("applicableArchitectures", this.getApplicableArchitectures());
@@ -235,8 +235,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the applicableArchitectures property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicableArchitectures(@javax.annotation.Nullable final WindowsArchitecture value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicableArchitectures(@jakarta.annotation.Nullable final WindowsArchitecture value) {
         this.applicableArchitectures = value;
     }
     /**
@@ -244,8 +244,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the installCommandLine property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallCommandLine(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setInstallCommandLine(@jakarta.annotation.Nullable final String value) {
         this.installCommandLine = value;
     }
     /**
@@ -253,8 +253,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the installExperience property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallExperience(@javax.annotation.Nullable final Win32LobAppInstallExperience value) {
+    @jakarta.annotation.Nonnull
+    public void setInstallExperience(@jakarta.annotation.Nullable final Win32LobAppInstallExperience value) {
         this.installExperience = value;
     }
     /**
@@ -262,8 +262,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the minimumCpuSpeedInMHz property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumCpuSpeedInMHz(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMinimumCpuSpeedInMHz(@jakarta.annotation.Nullable final Integer value) {
         this.minimumCpuSpeedInMHz = value;
     }
     /**
@@ -271,8 +271,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the minimumFreeDiskSpaceInMB property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumFreeDiskSpaceInMB(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMinimumFreeDiskSpaceInMB(@jakarta.annotation.Nullable final Integer value) {
         this.minimumFreeDiskSpaceInMB = value;
     }
     /**
@@ -280,8 +280,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the minimumMemoryInMB property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumMemoryInMB(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMinimumMemoryInMB(@jakarta.annotation.Nullable final Integer value) {
         this.minimumMemoryInMB = value;
     }
     /**
@@ -289,8 +289,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the minimumNumberOfProcessors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumNumberOfProcessors(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMinimumNumberOfProcessors(@jakarta.annotation.Nullable final Integer value) {
         this.minimumNumberOfProcessors = value;
     }
     /**
@@ -298,8 +298,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the minimumSupportedWindowsRelease property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumSupportedWindowsRelease(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMinimumSupportedWindowsRelease(@jakarta.annotation.Nullable final String value) {
         this.minimumSupportedWindowsRelease = value;
     }
     /**
@@ -307,8 +307,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the msiInformation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMsiInformation(@javax.annotation.Nullable final Win32LobAppMsiInformation value) {
+    @jakarta.annotation.Nonnull
+    public void setMsiInformation(@jakarta.annotation.Nullable final Win32LobAppMsiInformation value) {
         this.msiInformation = value;
     }
     /**
@@ -316,8 +316,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the returnCodes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReturnCodes(@javax.annotation.Nullable final java.util.List<Win32LobAppReturnCode> value) {
+    @jakarta.annotation.Nonnull
+    public void setReturnCodes(@jakarta.annotation.Nullable final java.util.List<Win32LobAppReturnCode> value) {
         this.returnCodes = value;
     }
     /**
@@ -325,8 +325,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the rules property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRules(@javax.annotation.Nullable final java.util.List<Win32LobAppRule> value) {
+    @jakarta.annotation.Nonnull
+    public void setRules(@jakarta.annotation.Nullable final java.util.List<Win32LobAppRule> value) {
         this.rules = value;
     }
     /**
@@ -334,8 +334,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the setupFilePath property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSetupFilePath(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSetupFilePath(@jakarta.annotation.Nullable final String value) {
         this.setupFilePath = value;
     }
     /**
@@ -343,8 +343,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the uninstallCommandLine property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUninstallCommandLine(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUninstallCommandLine(@jakarta.annotation.Nullable final String value) {
         this.uninstallCommandLine = value;
     }
 }

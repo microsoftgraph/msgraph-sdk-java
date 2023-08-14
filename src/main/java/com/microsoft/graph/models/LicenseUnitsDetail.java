@@ -17,7 +17,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     private Integer enabled;
     /**
-     * The lockedOut property
+     * The number of units that are locked out because the customer cancelled their subscription of the service SKU.
      */
     private Integer lockedOut;
     /**
@@ -36,7 +36,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * Instantiates a new licenseUnitsDetail and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LicenseUnitsDetail() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a licenseUnitsDetail
      */
-    @javax.annotation.Nonnull
-    public static LicenseUnitsDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static LicenseUnitsDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new LicenseUnitsDetail();
     }
@@ -54,7 +54,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * Gets the enabled property value. The number of units that are enabled for the active subscription of the service SKU.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getEnabled() {
         return this.enabled;
     }
@@ -70,7 +70,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getIntegerValue()); });
@@ -81,10 +81,10 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lockedOut property value. The lockedOut property
+     * Gets the lockedOut property value. The number of units that are locked out because the customer cancelled their subscription of the service SKU.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getLockedOut() {
         return this.lockedOut;
     }
@@ -92,7 +92,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -100,7 +100,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * Gets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSuspended() {
         return this.suspended;
     }
@@ -108,7 +108,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * Gets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state).
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getWarning() {
         return this.warning;
     }
@@ -117,8 +117,8 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("enabled", this.getEnabled());
         writer.writeIntegerValue("lockedOut", this.getLockedOut());
@@ -132,8 +132,8 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,17 +141,17 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the enabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnabled(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setEnabled(@jakarta.annotation.Nullable final Integer value) {
         this.enabled = value;
     }
     /**
-     * Sets the lockedOut property value. The lockedOut property
+     * Sets the lockedOut property value. The number of units that are locked out because the customer cancelled their subscription of the service SKU.
      * @param value Value to set for the lockedOut property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLockedOut(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setLockedOut(@jakarta.annotation.Nullable final Integer value) {
         this.lockedOut = value;
     }
     /**
@@ -159,8 +159,8 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -168,8 +168,8 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the suspended property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuspended(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSuspended(@jakarta.annotation.Nullable final Integer value) {
         this.suspended = value;
     }
     /**
@@ -177,8 +177,8 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the warning property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWarning(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setWarning(@jakarta.annotation.Nullable final Integer value) {
         this.warning = value;
     }
 }

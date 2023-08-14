@@ -36,7 +36,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * Instantiates a new securityVendorInformation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SecurityVendorInformation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a securityVendorInformation
      */
-    @javax.annotation.Nonnull
-    public static SecurityVendorInformation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SecurityVendorInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SecurityVendorInformation();
     }
@@ -54,7 +54,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -76,7 +76,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -84,7 +84,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * Gets the provider property value. Specific provider (product/service - not vendor company); for example, WindowsDefenderATP.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProvider() {
         return this.provider;
     }
@@ -92,7 +92,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * Gets the providerVersion property value. Version of the provider or subprovider, if it exists, that generated the alert. Required
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProviderVersion() {
         return this.providerVersion;
     }
@@ -100,7 +100,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * Gets the subProvider property value. Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubProvider() {
         return this.subProvider;
     }
@@ -108,7 +108,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * Gets the vendor property value. Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVendor() {
         return this.vendor;
     }
@@ -117,8 +117,8 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("provider", this.getProvider());
@@ -132,8 +132,8 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -150,8 +150,8 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the provider property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProvider(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProvider(@jakarta.annotation.Nullable final String value) {
         this.provider = value;
     }
     /**
@@ -159,8 +159,8 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the providerVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProviderVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProviderVersion(@jakarta.annotation.Nullable final String value) {
         this.providerVersion = value;
     }
     /**
@@ -168,8 +168,8 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the subProvider property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubProvider(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSubProvider(@jakarta.annotation.Nullable final String value) {
         this.subProvider = value;
     }
     /**
@@ -177,8 +177,8 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the vendor property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVendor(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVendor(@jakarta.annotation.Nullable final String value) {
         this.vendor = value;
     }
 }

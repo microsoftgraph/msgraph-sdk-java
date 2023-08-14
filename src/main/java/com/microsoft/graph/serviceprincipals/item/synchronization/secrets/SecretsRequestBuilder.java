@@ -23,7 +23,7 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
@@ -33,8 +33,8 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public SecretsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public SecretsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/secrets", pathParameters);
     }
     /**
@@ -43,8 +43,8 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public SecretsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public SecretsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/secrets", rawUrl);
     }
     /**
@@ -52,8 +52,8 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a CompletableFuture of synchronizationSecretKeyStringValuePair
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<java.util.List<SynchronizationSecretKeyStringValuePair>> put(@javax.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<java.util.List<SynchronizationSecretKeyStringValuePair>> put(@jakarta.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body) {
         try {
             final RequestInformation requestInfo = toPutRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -72,8 +72,8 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of synchronizationSecretKeyStringValuePair
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<java.util.List<SynchronizationSecretKeyStringValuePair>> put(@javax.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body, @javax.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<java.util.List<SynchronizationSecretKeyStringValuePair>> put(@jakarta.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
@@ -92,8 +92,8 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPutRequestInformation(@javax.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body) throws URISyntaxException {
         return toPutRequestInformation(body, null);
     }
     /**
@@ -102,8 +102,8 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPutRequestInformation(@javax.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body, @javax.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PUT;

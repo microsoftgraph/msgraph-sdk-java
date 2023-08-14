@@ -35,7 +35,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * Instantiates a new telecomExpenseManagementPartner and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TelecomExpenseManagementPartner() {
         super();
     }
@@ -44,8 +44,8 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a telecomExpenseManagementPartner
      */
-    @javax.annotation.Nonnull
-    public static TelecomExpenseManagementPartner createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TelecomExpenseManagementPartner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TelecomExpenseManagementPartner();
     }
@@ -53,7 +53,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * Gets the appAuthorized property value. Whether the partner's AAD app has been authorized to access Intune.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAppAuthorized() {
         return this.appAuthorized;
     }
@@ -61,7 +61,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * Gets the displayName property value. Display name of the TEM partner.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -69,7 +69,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * Gets the enabled property value. Whether Intune's connection to the TEM service is currently enabled or disabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -77,7 +77,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appAuthorized", (n) -> { this.setAppAuthorized(n.getBooleanValue()); });
@@ -91,7 +91,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * Gets the lastConnectionDateTime property value. Timestamp of the last request sent to Intune by the TEM partner.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastConnectionDateTime() {
         return this.lastConnectionDateTime;
     }
@@ -99,7 +99,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * Gets the url property value. URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUrl() {
         return this.url;
     }
@@ -108,8 +108,8 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("appAuthorized", this.getAppAuthorized());
@@ -123,8 +123,8 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * @param value Value to set for the appAuthorized property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppAuthorized(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAppAuthorized(@jakarta.annotation.Nullable final Boolean value) {
         this.appAuthorized = value;
     }
     /**
@@ -132,8 +132,8 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -141,8 +141,8 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * @param value Value to set for the enabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.enabled = value;
     }
     /**
@@ -150,8 +150,8 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * @param value Value to set for the lastConnectionDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastConnectionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastConnectionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastConnectionDateTime = value;
     }
     /**
@@ -159,8 +159,8 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * @param value Value to set for the url property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUrl(@jakarta.annotation.Nullable final String value) {
         this.url = value;
     }
 }

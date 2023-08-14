@@ -50,7 +50,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * Instantiates a new userExperienceAnalyticsDeviceScores and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsDeviceScores() {
         super();
     }
@@ -59,8 +59,8 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsDeviceScores
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsDeviceScores createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsDeviceScores createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsDeviceScores();
     }
@@ -68,7 +68,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * Gets the appReliabilityScore property value. Indicates a score calculated from application health data to indicate when a device is having problems running one or more applications. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getAppReliabilityScore() {
         return this.appReliabilityScore;
     }
@@ -76,7 +76,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * Gets the batteryHealthScore property value. Indicates a calulated score indicating the health of the device's battery. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getBatteryHealthScore() {
         return this.batteryHealthScore;
     }
@@ -84,7 +84,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * Gets the deviceName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * Gets the endpointAnalyticsScore property value. Indicates a weighted average of the various scores. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getEndpointAnalyticsScore() {
         return this.endpointAnalyticsScore;
     }
@@ -100,7 +100,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appReliabilityScore", (n) -> { this.setAppReliabilityScore(n.getDoubleValue()); });
@@ -118,7 +118,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * Gets the healthStatus property value. The healthStatus property
      * @return a userExperienceAnalyticsHealthState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
         return this.healthStatus;
     }
@@ -126,7 +126,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * Gets the manufacturer property value. The manufacturer name of the device. Examples: Microsoft Corporation, HP, Lenovo. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManufacturer() {
         return this.manufacturer;
     }
@@ -134,7 +134,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * Gets the model property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getModel() {
         return this.model;
     }
@@ -142,7 +142,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * Gets the startupPerformanceScore property value. Indicates a weighted average of boot score and logon score used for measuring startup performance. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getStartupPerformanceScore() {
         return this.startupPerformanceScore;
     }
@@ -150,7 +150,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * Gets the workFromAnywhereScore property value. Indicates a weighted score of the work from anywhere on a device level. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getWorkFromAnywhereScore() {
         return this.workFromAnywhereScore;
     }
@@ -159,8 +159,8 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeDoubleValue("appReliabilityScore", this.getAppReliabilityScore());
@@ -178,8 +178,8 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the appReliabilityScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppReliabilityScore(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setAppReliabilityScore(@jakarta.annotation.Nullable final Double value) {
         this.appReliabilityScore = value;
     }
     /**
@@ -187,8 +187,8 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the batteryHealthScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBatteryHealthScore(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setBatteryHealthScore(@jakarta.annotation.Nullable final Double value) {
         this.batteryHealthScore = value;
     }
     /**
@@ -196,8 +196,8 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the deviceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
@@ -205,8 +205,8 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the endpointAnalyticsScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndpointAnalyticsScore(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setEndpointAnalyticsScore(@jakarta.annotation.Nullable final Double value) {
         this.endpointAnalyticsScore = value;
     }
     /**
@@ -214,8 +214,8 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHealthStatus(@javax.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
+    @jakarta.annotation.Nonnull
+    public void setHealthStatus(@jakarta.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
         this.healthStatus = value;
     }
     /**
@@ -223,8 +223,8 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManufacturer(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
@@ -232,8 +232,8 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the model property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
@@ -241,8 +241,8 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the startupPerformanceScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartupPerformanceScore(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setStartupPerformanceScore(@jakarta.annotation.Nullable final Double value) {
         this.startupPerformanceScore = value;
     }
     /**
@@ -250,8 +250,8 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      * @param value Value to set for the workFromAnywhereScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkFromAnywhereScore(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setWorkFromAnywhereScore(@jakarta.annotation.Nullable final Double value) {
         this.workFromAnywhereScore = value;
     }
 }

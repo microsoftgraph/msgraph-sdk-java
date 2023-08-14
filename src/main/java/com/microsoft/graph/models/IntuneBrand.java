@@ -79,7 +79,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Instantiates a new intuneBrand and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IntuneBrand() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -88,8 +88,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a intuneBrand
      */
-    @javax.annotation.Nonnull
-    public static IntuneBrand createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IntuneBrand createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IntuneBrand();
     }
@@ -97,7 +97,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -105,7 +105,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the contactITEmailAddress property value. Email address of the person/organization responsible for IT support.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContactITEmailAddress() {
         return this.contactITEmailAddress;
     }
@@ -113,7 +113,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the contactITName property value. Name of the person/organization responsible for IT support.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContactITName() {
         return this.contactITName;
     }
@@ -121,7 +121,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the contactITNotes property value. Text comments regarding the person/organization responsible for IT support.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContactITNotes() {
         return this.contactITNotes;
     }
@@ -129,7 +129,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the contactITPhoneNumber property value. Phone number of the person/organization responsible for IT support.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContactITPhoneNumber() {
         return this.contactITPhoneNumber;
     }
@@ -137,7 +137,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the darkBackgroundLogo property value. Logo image displayed in Company Portal apps which have a dark background behind the logo.
      * @return a mimeContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MimeContent getDarkBackgroundLogo() {
         return this.darkBackgroundLogo;
     }
@@ -145,7 +145,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. Company/organization name that is displayed to end users.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -153,7 +153,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(15);
         deserializerMap.put("contactITEmailAddress", (n) -> { this.setContactITEmailAddress(n.getStringValue()); });
@@ -177,7 +177,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the lightBackgroundLogo property value. Logo image displayed in Company Portal apps which have a light background behind the logo.
      * @return a mimeContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MimeContent getLightBackgroundLogo() {
         return this.lightBackgroundLogo;
     }
@@ -185,7 +185,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -193,7 +193,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOnlineSupportSiteName() {
         return this.onlineSupportSiteName;
     }
@@ -201,7 +201,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOnlineSupportSiteUrl() {
         return this.onlineSupportSiteUrl;
     }
@@ -209,7 +209,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the privacyUrl property value. URL to the company/organizations privacy policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrivacyUrl() {
         return this.privacyUrl;
     }
@@ -217,7 +217,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the showDisplayNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowDisplayNameNextToLogo() {
         return this.showDisplayNameNextToLogo;
     }
@@ -225,7 +225,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the showLogo property value. Boolean that represents whether the administrator-supplied logo images are shown or not shown.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowLogo() {
         return this.showLogo;
     }
@@ -233,7 +233,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the showNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowNameNextToLogo() {
         return this.showNameNextToLogo;
     }
@@ -241,7 +241,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the themeColor property value. Primary theme color used in the Company Portal applications and web portal.
      * @return a rgbColor
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RgbColor getThemeColor() {
         return this.themeColor;
     }
@@ -250,8 +250,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("contactITEmailAddress", this.getContactITEmailAddress());
         writer.writeStringValue("contactITName", this.getContactITName());
@@ -275,8 +275,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -284,8 +284,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contactITEmailAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContactITEmailAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContactITEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.contactITEmailAddress = value;
     }
     /**
@@ -293,8 +293,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contactITName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContactITName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContactITName(@jakarta.annotation.Nullable final String value) {
         this.contactITName = value;
     }
     /**
@@ -302,8 +302,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contactITNotes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContactITNotes(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContactITNotes(@jakarta.annotation.Nullable final String value) {
         this.contactITNotes = value;
     }
     /**
@@ -311,8 +311,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contactITPhoneNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContactITPhoneNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContactITPhoneNumber(@jakarta.annotation.Nullable final String value) {
         this.contactITPhoneNumber = value;
     }
     /**
@@ -320,8 +320,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the darkBackgroundLogo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDarkBackgroundLogo(@javax.annotation.Nullable final MimeContent value) {
+    @jakarta.annotation.Nonnull
+    public void setDarkBackgroundLogo(@jakarta.annotation.Nullable final MimeContent value) {
         this.darkBackgroundLogo = value;
     }
     /**
@@ -329,8 +329,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -338,8 +338,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lightBackgroundLogo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLightBackgroundLogo(@javax.annotation.Nullable final MimeContent value) {
+    @jakarta.annotation.Nonnull
+    public void setLightBackgroundLogo(@jakarta.annotation.Nullable final MimeContent value) {
         this.lightBackgroundLogo = value;
     }
     /**
@@ -347,8 +347,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -356,8 +356,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the onlineSupportSiteName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnlineSupportSiteName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOnlineSupportSiteName(@jakarta.annotation.Nullable final String value) {
         this.onlineSupportSiteName = value;
     }
     /**
@@ -365,8 +365,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the onlineSupportSiteUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnlineSupportSiteUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOnlineSupportSiteUrl(@jakarta.annotation.Nullable final String value) {
         this.onlineSupportSiteUrl = value;
     }
     /**
@@ -374,8 +374,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the privacyUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrivacyUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrivacyUrl(@jakarta.annotation.Nullable final String value) {
         this.privacyUrl = value;
     }
     /**
@@ -383,8 +383,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the showDisplayNameNextToLogo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowDisplayNameNextToLogo(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowDisplayNameNextToLogo(@jakarta.annotation.Nullable final Boolean value) {
         this.showDisplayNameNextToLogo = value;
     }
     /**
@@ -392,8 +392,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the showLogo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowLogo(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowLogo(@jakarta.annotation.Nullable final Boolean value) {
         this.showLogo = value;
     }
     /**
@@ -401,8 +401,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the showNameNextToLogo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowNameNextToLogo(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowNameNextToLogo(@jakarta.annotation.Nullable final Boolean value) {
         this.showNameNextToLogo = value;
     }
     /**
@@ -410,8 +410,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the themeColor property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThemeColor(@javax.annotation.Nullable final RgbColor value) {
+    @jakarta.annotation.Nonnull
+    public void setThemeColor(@jakarta.annotation.Nullable final RgbColor value) {
         this.themeColor = value;
     }
 }

@@ -33,7 +33,7 @@ public class FDistPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new FDistPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FDistPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +42,8 @@ public class FDistPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a FDistPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static FDistPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static FDistPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new FDistPostRequestBody();
     }
@@ -51,7 +51,7 @@ public class FDistPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -59,7 +59,7 @@ public class FDistPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the cumulative property value. The cumulative property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getCumulative() {
         return this.cumulative;
     }
@@ -67,7 +67,7 @@ public class FDistPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the degFreedom1 property value. The degFreedom1 property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getDegFreedom1() {
         return this.degFreedom1;
     }
@@ -75,7 +75,7 @@ public class FDistPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the degFreedom2 property value. The degFreedom2 property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getDegFreedom2() {
         return this.degFreedom2;
     }
@@ -83,7 +83,7 @@ public class FDistPostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("cumulative", (n) -> { this.setCumulative(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -96,7 +96,7 @@ public class FDistPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the x property value. The x property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getX() {
         return this.x;
     }
@@ -105,8 +105,8 @@ public class FDistPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("cumulative", this.getCumulative());
         writer.writeObjectValue("degFreedom1", this.getDegFreedom1());
@@ -119,8 +119,8 @@ public class FDistPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -128,8 +128,8 @@ public class FDistPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the cumulative property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCumulative(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setCumulative(@jakarta.annotation.Nullable final Json value) {
         this.cumulative = value;
     }
     /**
@@ -137,8 +137,8 @@ public class FDistPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the degFreedom1 property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDegFreedom1(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setDegFreedom1(@jakarta.annotation.Nullable final Json value) {
         this.degFreedom1 = value;
     }
     /**
@@ -146,8 +146,8 @@ public class FDistPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the degFreedom2 property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDegFreedom2(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setDegFreedom2(@jakarta.annotation.Nullable final Json value) {
         this.degFreedom2 = value;
     }
     /**
@@ -155,8 +155,8 @@ public class FDistPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the x property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setX(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setX(@jakarta.annotation.Nullable final Json value) {
         this.x = value;
     }
 }

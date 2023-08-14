@@ -36,7 +36,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * Instantiates a new attributeMappingParameterSchema and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttributeMappingParameterSchema() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a attributeMappingParameterSchema
      */
-    @javax.annotation.Nonnull
-    public static AttributeMappingParameterSchema createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AttributeMappingParameterSchema createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AttributeMappingParameterSchema();
     }
@@ -54,7 +54,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * Gets the allowMultipleOccurrences property value. The given parameter can be provided multiple times (for example, multiple input strings in the Concatenate(string,string,...) function).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowMultipleOccurrences() {
         return this.allowMultipleOccurrences;
     }
@@ -70,7 +70,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("allowMultipleOccurrences", (n) -> { this.setAllowMultipleOccurrences(n.getBooleanValue()); });
@@ -84,7 +84,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * Gets the name property value. Parameter name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -92,7 +92,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -100,7 +100,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * Gets the required property value. true if the parameter is required; otherwise false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequired() {
         return this.required;
     }
@@ -108,7 +108,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * Gets the type property value. The type property
      * @return a attributeType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttributeType getType() {
         return this.type;
     }
@@ -117,8 +117,8 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowMultipleOccurrences", this.getAllowMultipleOccurrences());
         writer.writeStringValue("name", this.getName());
@@ -132,8 +132,8 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * @param value Value to set for the allowMultipleOccurrences property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowMultipleOccurrences(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowMultipleOccurrences(@jakarta.annotation.Nullable final Boolean value) {
         this.allowMultipleOccurrences = value;
     }
     /**
@@ -150,8 +150,8 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -159,8 +159,8 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -168,8 +168,8 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * @param value Value to set for the required property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.required = value;
     }
     /**
@@ -177,8 +177,8 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final AttributeType value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final AttributeType value) {
         this.type = value;
     }
 }

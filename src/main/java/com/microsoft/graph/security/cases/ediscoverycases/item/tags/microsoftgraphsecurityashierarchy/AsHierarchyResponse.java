@@ -17,7 +17,7 @@ public class AsHierarchyResponse extends BaseCollectionPaginationCountResponse i
      * Instantiates a new asHierarchyResponse and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AsHierarchyResponse() {
         super();
     }
@@ -26,8 +26,8 @@ public class AsHierarchyResponse extends BaseCollectionPaginationCountResponse i
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a asHierarchyResponse
      */
-    @javax.annotation.Nonnull
-    public static AsHierarchyResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AsHierarchyResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AsHierarchyResponse();
     }
@@ -35,7 +35,7 @@ public class AsHierarchyResponse extends BaseCollectionPaginationCountResponse i
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(EdiscoveryReviewTag::createFromDiscriminatorValue)); });
@@ -45,7 +45,7 @@ public class AsHierarchyResponse extends BaseCollectionPaginationCountResponse i
      * Gets the value property value. The value property
      * @return a ediscoveryReviewTag
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewTag> getValue() {
         return this.value;
     }
@@ -54,8 +54,8 @@ public class AsHierarchyResponse extends BaseCollectionPaginationCountResponse i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("value", this.getValue());
@@ -65,8 +65,8 @@ public class AsHierarchyResponse extends BaseCollectionPaginationCountResponse i
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
         this.value = value;
     }
 }

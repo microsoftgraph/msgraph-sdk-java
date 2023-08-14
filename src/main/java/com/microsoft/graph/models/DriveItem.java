@@ -139,7 +139,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Instantiates a new driveItem and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DriveItem() {
         super();
         this.setOdataType("#microsoft.graph.driveItem");
@@ -149,8 +149,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a driveItem
      */
-    @javax.annotation.Nonnull
-    public static DriveItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DriveItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DriveItem();
     }
@@ -158,7 +158,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the analytics property value. Analytics about the view activities that took place on this item.
      * @return a itemAnalytics
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemAnalytics getAnalytics() {
         return this.analytics;
     }
@@ -166,7 +166,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the audio property value. Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
      * @return a audio
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Audio getAudio() {
         return this.audio;
     }
@@ -174,7 +174,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the bundle property value. Bundle metadata, if the item is a bundle. Read-only.
      * @return a bundle
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Bundle getBundle() {
         return this.bundle;
     }
@@ -182,7 +182,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the children property value. Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
      * @return a driveItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DriveItem> getChildren() {
         return this.children;
     }
@@ -190,7 +190,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the content property value. The content stream, if the item represents a file.
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getContent() {
         return this.content;
     }
@@ -198,7 +198,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the cTag property value. An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCTag() {
         return this.cTag;
     }
@@ -206,7 +206,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the deleted property value. Information about the deleted state of the item. Read-only.
      * @return a deleted
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Deleted getDeleted() {
         return this.deleted;
     }
@@ -214,7 +214,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("analytics", (n) -> { this.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
@@ -255,7 +255,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the file property value. File metadata, if the item is a file. Read-only.
      * @return a file
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public File getFile() {
         return this.file;
     }
@@ -263,7 +263,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the fileSystemInfo property value. File system information on client. Read-write.
      * @return a fileSystemInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FileSystemInfo getFileSystemInfo() {
         return this.fileSystemInfo;
     }
@@ -271,7 +271,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the folder property value. Folder metadata, if the item is a folder. Read-only.
      * @return a folder
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Folder getFolder() {
         return this.folder;
     }
@@ -279,7 +279,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the image property value. Image metadata, if the item is an image. Read-only.
      * @return a image
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Image getImage() {
         return this.image;
     }
@@ -287,7 +287,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the listItem property value. For drives in SharePoint, the associated document library list item. Read-only. Nullable.
      * @return a listItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ListItem getListItem() {
         return this.listItem;
     }
@@ -295,7 +295,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the location property value. Location metadata, if the item has location data. Read-only.
      * @return a geoCoordinates
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GeoCoordinates getLocation() {
         return this.location;
     }
@@ -303,7 +303,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the malware property value. Malware metadata, if the item was detected to contain malware. Read-only.
      * @return a malware
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Malware getMalware() {
         return this.malware;
     }
@@ -311,7 +311,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the package property value. If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
      * @return a packageEscaped
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PackageEscaped getPackage() {
         return this.packageEscaped;
     }
@@ -319,7 +319,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the pendingOperations property value. If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
      * @return a pendingOperations
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PendingOperations getPendingOperations() {
         return this.pendingOperations;
     }
@@ -327,7 +327,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the permissions property value. The set of permissions for the item. Read-only. Nullable.
      * @return a permission
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Permission> getPermissions() {
         return this.permissions;
     }
@@ -335,7 +335,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the photo property value. Photo metadata, if the item is a photo. Read-only.
      * @return a photo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Photo getPhoto() {
         return this.photo;
     }
@@ -343,7 +343,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
      * @return a publicationFacet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PublicationFacet getPublication() {
         return this.publication;
     }
@@ -351,7 +351,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the remoteItem property value. Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
      * @return a remoteItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RemoteItem getRemoteItem() {
         return this.remoteItem;
     }
@@ -359,7 +359,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the root property value. If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive.
      * @return a root
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Root getRoot() {
         return this.root;
     }
@@ -367,7 +367,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the searchResult property value. Search metadata, if the item is from a search result. Read-only.
      * @return a searchResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SearchResult getSearchResult() {
         return this.searchResult;
     }
@@ -375,7 +375,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the shared property value. Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
      * @return a shared
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Shared getShared() {
         return this.shared;
     }
@@ -383,7 +383,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
      * @return a sharepointIds
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SharepointIds getSharepointIds() {
         return this.sharepointIds;
     }
@@ -391,7 +391,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the size property value. Size of the item in bytes. Read-only.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getSize() {
         return this.size;
     }
@@ -399,7 +399,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the specialFolder property value. If the current item is also available as a special folder, this facet is returned. Read-only.
      * @return a specialFolder
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SpecialFolder getSpecialFolder() {
         return this.specialFolder;
     }
@@ -407,7 +407,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the subscriptions property value. The set of subscriptions on the item. Only supported on the root of a drive.
      * @return a subscription
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Subscription> getSubscriptions() {
         return this.subscriptions;
     }
@@ -415,7 +415,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the thumbnails property value. Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
      * @return a thumbnailSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ThumbnailSet> getThumbnails() {
         return this.thumbnails;
     }
@@ -423,7 +423,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the versions property value. The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
      * @return a driveItemVersion
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DriveItemVersion> getVersions() {
         return this.versions;
     }
@@ -431,7 +431,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the video property value. Video metadata, if the item is a video. Read-only.
      * @return a video
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Video getVideo() {
         return this.video;
     }
@@ -439,7 +439,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the webDavUrl property value. WebDAV compatible URL for the item.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebDavUrl() {
         return this.webDavUrl;
     }
@@ -447,7 +447,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Gets the workbook property value. For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
      * @return a workbook
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Workbook getWorkbook() {
         return this.workbook;
     }
@@ -456,8 +456,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("analytics", this.getAnalytics());
@@ -498,8 +498,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the analytics property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnalytics(@javax.annotation.Nullable final ItemAnalytics value) {
+    @jakarta.annotation.Nonnull
+    public void setAnalytics(@jakarta.annotation.Nullable final ItemAnalytics value) {
         this.analytics = value;
     }
     /**
@@ -507,8 +507,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the audio property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAudio(@javax.annotation.Nullable final Audio value) {
+    @jakarta.annotation.Nonnull
+    public void setAudio(@jakarta.annotation.Nullable final Audio value) {
         this.audio = value;
     }
     /**
@@ -516,8 +516,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the bundle property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBundle(@javax.annotation.Nullable final Bundle value) {
+    @jakarta.annotation.Nonnull
+    public void setBundle(@jakarta.annotation.Nullable final Bundle value) {
         this.bundle = value;
     }
     /**
@@ -525,8 +525,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the children property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChildren(@javax.annotation.Nullable final java.util.List<DriveItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setChildren(@jakarta.annotation.Nullable final java.util.List<DriveItem> value) {
         this.children = value;
     }
     /**
@@ -534,8 +534,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContent(@javax.annotation.Nullable final byte[] value) {
+    @jakarta.annotation.Nonnull
+    public void setContent(@jakarta.annotation.Nullable final byte[] value) {
         this.content = value;
     }
     /**
@@ -543,8 +543,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the cTag property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCTag(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCTag(@jakarta.annotation.Nullable final String value) {
         this.cTag = value;
     }
     /**
@@ -552,8 +552,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the deleted property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeleted(@javax.annotation.Nullable final Deleted value) {
+    @jakarta.annotation.Nonnull
+    public void setDeleted(@jakarta.annotation.Nullable final Deleted value) {
         this.deleted = value;
     }
     /**
@@ -561,8 +561,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the file property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFile(@javax.annotation.Nullable final File value) {
+    @jakarta.annotation.Nonnull
+    public void setFile(@jakarta.annotation.Nullable final File value) {
         this.file = value;
     }
     /**
@@ -570,8 +570,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the fileSystemInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileSystemInfo(@javax.annotation.Nullable final FileSystemInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setFileSystemInfo(@jakarta.annotation.Nullable final FileSystemInfo value) {
         this.fileSystemInfo = value;
     }
     /**
@@ -579,8 +579,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the folder property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFolder(@javax.annotation.Nullable final Folder value) {
+    @jakarta.annotation.Nonnull
+    public void setFolder(@jakarta.annotation.Nullable final Folder value) {
         this.folder = value;
     }
     /**
@@ -588,8 +588,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the image property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImage(@javax.annotation.Nullable final Image value) {
+    @jakarta.annotation.Nonnull
+    public void setImage(@jakarta.annotation.Nullable final Image value) {
         this.image = value;
     }
     /**
@@ -597,8 +597,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the listItem property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setListItem(@javax.annotation.Nullable final ListItem value) {
+    @jakarta.annotation.Nonnull
+    public void setListItem(@jakarta.annotation.Nullable final ListItem value) {
         this.listItem = value;
     }
     /**
@@ -606,8 +606,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the location property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocation(@javax.annotation.Nullable final GeoCoordinates value) {
+    @jakarta.annotation.Nonnull
+    public void setLocation(@jakarta.annotation.Nullable final GeoCoordinates value) {
         this.location = value;
     }
     /**
@@ -615,8 +615,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the malware property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMalware(@javax.annotation.Nullable final Malware value) {
+    @jakarta.annotation.Nonnull
+    public void setMalware(@jakarta.annotation.Nullable final Malware value) {
         this.malware = value;
     }
     /**
@@ -624,8 +624,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the package property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPackage(@javax.annotation.Nullable final PackageEscaped value) {
+    @jakarta.annotation.Nonnull
+    public void setPackage(@jakarta.annotation.Nullable final PackageEscaped value) {
         this.packageEscaped = value;
     }
     /**
@@ -633,8 +633,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the pendingOperations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPendingOperations(@javax.annotation.Nullable final PendingOperations value) {
+    @jakarta.annotation.Nonnull
+    public void setPendingOperations(@jakarta.annotation.Nullable final PendingOperations value) {
         this.pendingOperations = value;
     }
     /**
@@ -642,8 +642,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the permissions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPermissions(@javax.annotation.Nullable final java.util.List<Permission> value) {
+    @jakarta.annotation.Nonnull
+    public void setPermissions(@jakarta.annotation.Nullable final java.util.List<Permission> value) {
         this.permissions = value;
     }
     /**
@@ -651,8 +651,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the photo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhoto(@javax.annotation.Nullable final Photo value) {
+    @jakarta.annotation.Nonnull
+    public void setPhoto(@jakarta.annotation.Nullable final Photo value) {
         this.photo = value;
     }
     /**
@@ -660,8 +660,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the publication property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublication(@javax.annotation.Nullable final PublicationFacet value) {
+    @jakarta.annotation.Nonnull
+    public void setPublication(@jakarta.annotation.Nullable final PublicationFacet value) {
         this.publication = value;
     }
     /**
@@ -669,8 +669,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the remoteItem property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemoteItem(@javax.annotation.Nullable final RemoteItem value) {
+    @jakarta.annotation.Nonnull
+    public void setRemoteItem(@jakarta.annotation.Nullable final RemoteItem value) {
         this.remoteItem = value;
     }
     /**
@@ -678,8 +678,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the root property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoot(@javax.annotation.Nullable final Root value) {
+    @jakarta.annotation.Nonnull
+    public void setRoot(@jakarta.annotation.Nullable final Root value) {
         this.root = value;
     }
     /**
@@ -687,8 +687,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the searchResult property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSearchResult(@javax.annotation.Nullable final SearchResult value) {
+    @jakarta.annotation.Nonnull
+    public void setSearchResult(@jakarta.annotation.Nullable final SearchResult value) {
         this.searchResult = value;
     }
     /**
@@ -696,8 +696,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the shared property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShared(@javax.annotation.Nullable final Shared value) {
+    @jakarta.annotation.Nonnull
+    public void setShared(@jakarta.annotation.Nullable final Shared value) {
         this.shared = value;
     }
     /**
@@ -705,8 +705,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the sharepointIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharepointIds(@javax.annotation.Nullable final SharepointIds value) {
+    @jakarta.annotation.Nonnull
+    public void setSharepointIds(@jakarta.annotation.Nullable final SharepointIds value) {
         this.sharepointIds = value;
     }
     /**
@@ -714,8 +714,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSize(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setSize(@jakarta.annotation.Nullable final Long value) {
         this.size = value;
     }
     /**
@@ -723,8 +723,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the specialFolder property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSpecialFolder(@javax.annotation.Nullable final SpecialFolder value) {
+    @jakarta.annotation.Nonnull
+    public void setSpecialFolder(@jakarta.annotation.Nullable final SpecialFolder value) {
         this.specialFolder = value;
     }
     /**
@@ -732,8 +732,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the subscriptions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubscriptions(@javax.annotation.Nullable final java.util.List<Subscription> value) {
+    @jakarta.annotation.Nonnull
+    public void setSubscriptions(@jakarta.annotation.Nullable final java.util.List<Subscription> value) {
         this.subscriptions = value;
     }
     /**
@@ -741,8 +741,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the thumbnails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThumbnails(@javax.annotation.Nullable final java.util.List<ThumbnailSet> value) {
+    @jakarta.annotation.Nonnull
+    public void setThumbnails(@jakarta.annotation.Nullable final java.util.List<ThumbnailSet> value) {
         this.thumbnails = value;
     }
     /**
@@ -750,8 +750,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the versions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersions(@javax.annotation.Nullable final java.util.List<DriveItemVersion> value) {
+    @jakarta.annotation.Nonnull
+    public void setVersions(@jakarta.annotation.Nullable final java.util.List<DriveItemVersion> value) {
         this.versions = value;
     }
     /**
@@ -759,8 +759,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the video property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVideo(@javax.annotation.Nullable final Video value) {
+    @jakarta.annotation.Nonnull
+    public void setVideo(@jakarta.annotation.Nullable final Video value) {
         this.video = value;
     }
     /**
@@ -768,8 +768,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the webDavUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebDavUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWebDavUrl(@jakarta.annotation.Nullable final String value) {
         this.webDavUrl = value;
     }
     /**
@@ -777,8 +777,8 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the workbook property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkbook(@javax.annotation.Nullable final Workbook value) {
+    @jakarta.annotation.Nonnull
+    public void setWorkbook(@jakarta.annotation.Nullable final Workbook value) {
         this.workbook = value;
     }
 }

@@ -26,7 +26,7 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new transferPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TransferPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -35,8 +35,8 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a transferPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static TransferPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TransferPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TransferPostRequestBody();
     }
@@ -44,7 +44,7 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -52,7 +52,7 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("transferee", (n) -> { this.setTransferee(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
@@ -63,7 +63,7 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the transferee property value. The transferee property
      * @return a participantInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ParticipantInfo getTransferee() {
         return this.transferee;
     }
@@ -71,7 +71,7 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the transferTarget property value. The transferTarget property
      * @return a invitationParticipantInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InvitationParticipantInfo getTransferTarget() {
         return this.transferTarget;
     }
@@ -80,8 +80,8 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("transferee", this.getTransferee());
         writer.writeObjectValue("transferTarget", this.getTransferTarget());
@@ -92,8 +92,8 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -101,8 +101,8 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the transferee property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTransferee(@javax.annotation.Nullable final ParticipantInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setTransferee(@jakarta.annotation.Nullable final ParticipantInfo value) {
         this.transferee = value;
     }
     /**
@@ -110,8 +110,8 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the transferTarget property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTransferTarget(@javax.annotation.Nullable final InvitationParticipantInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setTransferTarget(@jakarta.annotation.Nullable final InvitationParticipantInfo value) {
         this.transferTarget = value;
     }
 }

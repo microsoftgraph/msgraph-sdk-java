@@ -32,7 +32,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      * Instantiates a new documentSetContent and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DocumentSetContent() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a documentSetContent
      */
-    @javax.annotation.Nonnull
-    public static DocumentSetContent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DocumentSetContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DocumentSetContent();
     }
@@ -50,7 +50,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      * Gets the contentType property value. Content type information of the file.
      * @return a contentTypeInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ContentTypeInfo getContentType() {
         return this.contentType;
     }
@@ -66,7 +66,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getObjectValue(ContentTypeInfo::createFromDiscriminatorValue)); });
@@ -79,7 +79,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      * Gets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileName() {
         return this.fileName;
     }
@@ -87,7 +87,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      * Gets the folderName property value. Folder name in which the file will be placed when a new document set is created in the library.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFolderName() {
         return this.folderName;
     }
@@ -95,7 +95,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -104,8 +104,8 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("contentType", this.getContentType());
         writer.writeStringValue("fileName", this.getFileName());
@@ -118,8 +118,8 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -127,8 +127,8 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contentType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentType(@javax.annotation.Nullable final ContentTypeInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setContentType(@jakarta.annotation.Nullable final ContentTypeInfo value) {
         this.contentType = value;
     }
     /**
@@ -136,8 +136,8 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the fileName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFileName(@jakarta.annotation.Nullable final String value) {
         this.fileName = value;
     }
     /**
@@ -145,8 +145,8 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the folderName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFolderName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFolderName(@jakarta.annotation.Nullable final String value) {
         this.folderName = value;
     }
     /**
@@ -154,8 +154,8 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

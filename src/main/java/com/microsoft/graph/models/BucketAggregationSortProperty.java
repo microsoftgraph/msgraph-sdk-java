@@ -12,10 +12,10 @@ public enum BucketAggregationSortProperty implements ValuedEnum {
     BucketAggregationSortProperty(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static BucketAggregationSortProperty forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static BucketAggregationSortProperty forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "count": return Count;

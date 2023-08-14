@@ -36,7 +36,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * Instantiates a new authenticationMethodsRegistrationCampaign and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationMethodsRegistrationCampaign() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a authenticationMethodsRegistrationCampaign
      */
-    @javax.annotation.Nonnull
-    public static AuthenticationMethodsRegistrationCampaign createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AuthenticationMethodsRegistrationCampaign createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AuthenticationMethodsRegistrationCampaign();
     }
@@ -54,7 +54,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * Gets the excludeTargets property value. Users and groups of users that are excluded from being prompted to set up the authentication method.
      * @return a excludeTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ExcludeTarget> getExcludeTargets() {
         return this.excludeTargets;
     }
@@ -70,7 +70,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("excludeTargets", (n) -> { this.setExcludeTargets(n.getCollectionOfObjectValues(ExcludeTarget::createFromDiscriminatorValue)); });
@@ -84,7 +84,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * Gets the includeTargets property value. Users and groups of users that are prompted to set up the authentication method.
      * @return a authenticationMethodsRegistrationCampaignIncludeTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> getIncludeTargets() {
         return this.includeTargets;
     }
@@ -92,7 +92,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -100,7 +100,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * Gets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum: 0 days. Maximum: 14 days. If the value is '0', the user is prompted during every MFA attempt.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSnoozeDurationInDays() {
         return this.snoozeDurationInDays;
     }
@@ -108,7 +108,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * Gets the state property value. The state property
      * @return a advancedConfigState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AdvancedConfigState getState() {
         return this.state;
     }
@@ -117,8 +117,8 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("excludeTargets", this.getExcludeTargets());
         writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
@@ -132,8 +132,8 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * @param value Value to set for the excludeTargets property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExcludeTargets(@javax.annotation.Nullable final java.util.List<ExcludeTarget> value) {
+    @jakarta.annotation.Nonnull
+    public void setExcludeTargets(@jakarta.annotation.Nullable final java.util.List<ExcludeTarget> value) {
         this.excludeTargets = value;
     }
     /**
@@ -150,8 +150,8 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * @param value Value to set for the includeTargets property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncludeTargets(@javax.annotation.Nullable final java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> value) {
+    @jakarta.annotation.Nonnull
+    public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> value) {
         this.includeTargets = value;
     }
     /**
@@ -159,8 +159,8 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -168,8 +168,8 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * @param value Value to set for the snoozeDurationInDays property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSnoozeDurationInDays(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSnoozeDurationInDays(@jakarta.annotation.Nullable final Integer value) {
         this.snoozeDurationInDays = value;
     }
     /**
@@ -177,8 +177,8 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final AdvancedConfigState value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final AdvancedConfigState value) {
         this.state = value;
     }
 }

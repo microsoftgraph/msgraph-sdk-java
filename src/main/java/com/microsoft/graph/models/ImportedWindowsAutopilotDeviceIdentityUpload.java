@@ -27,7 +27,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * Instantiates a new importedWindowsAutopilotDeviceIdentityUpload and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityUpload() {
         super();
     }
@@ -36,8 +36,8 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a importedWindowsAutopilotDeviceIdentityUpload
      */
-    @javax.annotation.Nonnull
-    public static ImportedWindowsAutopilotDeviceIdentityUpload createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ImportedWindowsAutopilotDeviceIdentityUpload createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ImportedWindowsAutopilotDeviceIdentityUpload();
     }
@@ -45,7 +45,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * Gets the createdDateTimeUtc property value. DateTime when the entity is created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTimeUtc() {
         return this.createdDateTimeUtc;
     }
@@ -53,7 +53,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * Gets the deviceIdentities property value. Collection of all Autopilot devices as a part of this upload.
      * @return a importedWindowsAutopilotDeviceIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ImportedWindowsAutopilotDeviceIdentity> getDeviceIdentities() {
         return this.deviceIdentities;
     }
@@ -61,7 +61,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTimeUtc", (n) -> { this.setCreatedDateTimeUtc(n.getOffsetDateTimeValue()); });
@@ -73,7 +73,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * Gets the status property value. The status property
      * @return a importedWindowsAutopilotDeviceIdentityUploadStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityUploadStatus getStatus() {
         return this.status;
     }
@@ -82,8 +82,8 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTimeUtc", this.getCreatedDateTimeUtc());
@@ -95,8 +95,8 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * @param value Value to set for the createdDateTimeUtc property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTimeUtc(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTimeUtc(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTimeUtc = value;
     }
     /**
@@ -104,8 +104,8 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * @param value Value to set for the deviceIdentities property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceIdentities(@javax.annotation.Nullable final java.util.List<ImportedWindowsAutopilotDeviceIdentity> value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceIdentities(@jakarta.annotation.Nullable final java.util.List<ImportedWindowsAutopilotDeviceIdentity> value) {
         this.deviceIdentities = value;
     }
     /**
@@ -113,8 +113,8 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final ImportedWindowsAutopilotDeviceIdentityUploadStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final ImportedWindowsAutopilotDeviceIdentityUploadStatus value) {
         this.status = value;
     }
 }

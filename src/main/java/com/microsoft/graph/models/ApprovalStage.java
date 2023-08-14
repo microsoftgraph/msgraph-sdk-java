@@ -40,7 +40,7 @@ public class ApprovalStage extends Entity implements Parsable {
      * Instantiates a new approvalStage and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ApprovalStage() {
         super();
     }
@@ -49,8 +49,8 @@ public class ApprovalStage extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a approvalStage
      */
-    @javax.annotation.Nonnull
-    public static ApprovalStage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ApprovalStage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ApprovalStage();
     }
@@ -58,7 +58,7 @@ public class ApprovalStage extends Entity implements Parsable {
      * Gets the assignedToMe property value. Indicates whether the stage is assigned to the calling user to review. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAssignedToMe() {
         return this.assignedToMe;
     }
@@ -66,7 +66,7 @@ public class ApprovalStage extends Entity implements Parsable {
      * Gets the displayName property value. The label provided by the policy creator to identify an approval stage. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -74,7 +74,7 @@ public class ApprovalStage extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignedToMe", (n) -> { this.setAssignedToMe(n.getBooleanValue()); });
@@ -90,7 +90,7 @@ public class ApprovalStage extends Entity implements Parsable {
      * Gets the justification property value. The justification associated with the approval stage decision.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getJustification() {
         return this.justification;
     }
@@ -98,7 +98,7 @@ public class ApprovalStage extends Entity implements Parsable {
      * Gets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
      * @return a identity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Identity getReviewedBy() {
         return this.reviewedBy;
     }
@@ -106,7 +106,7 @@ public class ApprovalStage extends Entity implements Parsable {
      * Gets the reviewedDateTime property value. The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getReviewedDateTime() {
         return this.reviewedDateTime;
     }
@@ -114,7 +114,7 @@ public class ApprovalStage extends Entity implements Parsable {
      * Gets the reviewResult property value. The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getReviewResult() {
         return this.reviewResult;
     }
@@ -122,7 +122,7 @@ public class ApprovalStage extends Entity implements Parsable {
      * Gets the status property value. The stage status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStatus() {
         return this.status;
     }
@@ -131,8 +131,8 @@ public class ApprovalStage extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("assignedToMe", this.getAssignedToMe());
@@ -148,8 +148,8 @@ public class ApprovalStage extends Entity implements Parsable {
      * @param value Value to set for the assignedToMe property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignedToMe(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignedToMe(@jakarta.annotation.Nullable final Boolean value) {
         this.assignedToMe = value;
     }
     /**
@@ -157,8 +157,8 @@ public class ApprovalStage extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -166,8 +166,8 @@ public class ApprovalStage extends Entity implements Parsable {
      * @param value Value to set for the justification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJustification(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setJustification(@jakarta.annotation.Nullable final String value) {
         this.justification = value;
     }
     /**
@@ -175,8 +175,8 @@ public class ApprovalStage extends Entity implements Parsable {
      * @param value Value to set for the reviewedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewedBy(@javax.annotation.Nullable final Identity value) {
+    @jakarta.annotation.Nonnull
+    public void setReviewedBy(@jakarta.annotation.Nullable final Identity value) {
         this.reviewedBy = value;
     }
     /**
@@ -184,8 +184,8 @@ public class ApprovalStage extends Entity implements Parsable {
      * @param value Value to set for the reviewedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setReviewedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.reviewedDateTime = value;
     }
     /**
@@ -193,8 +193,8 @@ public class ApprovalStage extends Entity implements Parsable {
      * @param value Value to set for the reviewResult property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewResult(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setReviewResult(@jakarta.annotation.Nullable final String value) {
         this.reviewResult = value;
     }
     /**
@@ -202,8 +202,8 @@ public class ApprovalStage extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final String value) {
         this.status = value;
     }
 }

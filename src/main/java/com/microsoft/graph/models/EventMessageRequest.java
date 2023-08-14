@@ -35,7 +35,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * Instantiates a new eventMessageRequest and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EventMessageRequest() {
         super();
         this.setOdataType("#microsoft.graph.eventMessageRequest");
@@ -45,8 +45,8 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a eventMessageRequest
      */
-    @javax.annotation.Nonnull
-    public static EventMessageRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EventMessageRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EventMessageRequest();
     }
@@ -54,7 +54,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * Gets the allowNewTimeProposals property value. True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowNewTimeProposals() {
         return this.allowNewTimeProposals;
     }
@@ -62,7 +62,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowNewTimeProposals", (n) -> { this.setAllowNewTimeProposals(n.getBooleanValue()); });
@@ -77,7 +77,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * Gets the meetingRequestType property value. The meetingRequestType property
      * @return a meetingRequestType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MeetingRequestType getMeetingRequestType() {
         return this.meetingRequestType;
     }
@@ -85,7 +85,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * Gets the previousEndDateTime property value. If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
      * @return a dateTimeTimeZone
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DateTimeTimeZone getPreviousEndDateTime() {
         return this.previousEndDateTime;
     }
@@ -93,7 +93,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * Gets the previousLocation property value. If the meeting update changes the meeting location, this property specifies the previous meeting location.
      * @return a location
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Location getPreviousLocation() {
         return this.previousLocation;
     }
@@ -101,7 +101,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * Gets the previousStartDateTime property value. If the meeting update changes the meeting start time, this property specifies the previous meeting start time.
      * @return a dateTimeTimeZone
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DateTimeTimeZone getPreviousStartDateTime() {
         return this.previousStartDateTime;
     }
@@ -109,7 +109,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * Gets the responseRequested property value. Set to true if the sender would like the invitee to send a response to the requested meeting.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getResponseRequested() {
         return this.responseRequested;
     }
@@ -118,8 +118,8 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("allowNewTimeProposals", this.getAllowNewTimeProposals());
@@ -134,8 +134,8 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * @param value Value to set for the allowNewTimeProposals property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowNewTimeProposals(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowNewTimeProposals(@jakarta.annotation.Nullable final Boolean value) {
         this.allowNewTimeProposals = value;
     }
     /**
@@ -143,8 +143,8 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * @param value Value to set for the meetingRequestType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMeetingRequestType(@javax.annotation.Nullable final MeetingRequestType value) {
+    @jakarta.annotation.Nonnull
+    public void setMeetingRequestType(@jakarta.annotation.Nullable final MeetingRequestType value) {
         this.meetingRequestType = value;
     }
     /**
@@ -152,8 +152,8 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * @param value Value to set for the previousEndDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreviousEndDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
+    @jakarta.annotation.Nonnull
+    public void setPreviousEndDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.previousEndDateTime = value;
     }
     /**
@@ -161,8 +161,8 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * @param value Value to set for the previousLocation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreviousLocation(@javax.annotation.Nullable final Location value) {
+    @jakarta.annotation.Nonnull
+    public void setPreviousLocation(@jakarta.annotation.Nullable final Location value) {
         this.previousLocation = value;
     }
     /**
@@ -170,8 +170,8 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * @param value Value to set for the previousStartDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreviousStartDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
+    @jakarta.annotation.Nonnull
+    public void setPreviousStartDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.previousStartDateTime = value;
     }
     /**
@@ -179,8 +179,8 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      * @param value Value to set for the responseRequested property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResponseRequested(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setResponseRequested(@jakarta.annotation.Nullable final Boolean value) {
         this.responseRequested = value;
     }
 }

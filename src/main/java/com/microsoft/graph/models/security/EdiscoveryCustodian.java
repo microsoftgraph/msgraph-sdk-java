@@ -36,7 +36,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * Instantiates a new ediscoveryCustodian and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EdiscoveryCustodian() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoveryCustodian");
@@ -46,8 +46,8 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a ediscoveryCustodian
      */
-    @javax.annotation.Nonnull
-    public static EdiscoveryCustodian createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EdiscoveryCustodian createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EdiscoveryCustodian();
     }
@@ -55,7 +55,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * Gets the acknowledgedDateTime property value. Date and time the custodian acknowledged a hold notification.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getAcknowledgedDateTime() {
         return this.acknowledgedDateTime;
     }
@@ -63,7 +63,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * Gets the email property value. Email address of the custodian.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmail() {
         return this.email;
     }
@@ -71,7 +71,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("acknowledgedDateTime", (n) -> { this.setAcknowledgedDateTime(n.getOffsetDateTimeValue()); });
@@ -86,7 +86,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * Gets the lastIndexOperation property value. Operation entity that represents the latest indexing for the custodian.
      * @return a ediscoveryIndexOperation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EdiscoveryIndexOperation getLastIndexOperation() {
         return this.lastIndexOperation;
     }
@@ -94,7 +94,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * Gets the siteSources property value. Data source entity for SharePoint sites associated with the custodian.
      * @return a siteSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SiteSource> getSiteSources() {
         return this.siteSources;
     }
@@ -102,7 +102,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * Gets the unifiedGroupSources property value. Data source entity for groups associated with the custodian.
      * @return a unifiedGroupSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedGroupSource> getUnifiedGroupSources() {
         return this.unifiedGroupSources;
     }
@@ -110,7 +110,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * Gets the userSources property value. Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @return a userSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UserSource> getUserSources() {
         return this.userSources;
     }
@@ -119,8 +119,8 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("acknowledgedDateTime", this.getAcknowledgedDateTime());
@@ -135,8 +135,8 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * @param value Value to set for the acknowledgedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAcknowledgedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setAcknowledgedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.acknowledgedDateTime = value;
     }
     /**
@@ -144,8 +144,8 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * @param value Value to set for the email property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
@@ -153,8 +153,8 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * @param value Value to set for the lastIndexOperation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastIndexOperation(@javax.annotation.Nullable final EdiscoveryIndexOperation value) {
+    @jakarta.annotation.Nonnull
+    public void setLastIndexOperation(@jakarta.annotation.Nullable final EdiscoveryIndexOperation value) {
         this.lastIndexOperation = value;
     }
     /**
@@ -162,8 +162,8 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * @param value Value to set for the siteSources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSiteSources(@javax.annotation.Nullable final java.util.List<SiteSource> value) {
+    @jakarta.annotation.Nonnull
+    public void setSiteSources(@jakarta.annotation.Nullable final java.util.List<SiteSource> value) {
         this.siteSources = value;
     }
     /**
@@ -171,8 +171,8 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * @param value Value to set for the unifiedGroupSources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnifiedGroupSources(@javax.annotation.Nullable final java.util.List<UnifiedGroupSource> value) {
+    @jakarta.annotation.Nonnull
+    public void setUnifiedGroupSources(@jakarta.annotation.Nullable final java.util.List<UnifiedGroupSource> value) {
         this.unifiedGroupSources = value;
     }
     /**
@@ -180,8 +180,8 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * @param value Value to set for the userSources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserSources(@javax.annotation.Nullable final java.util.List<UserSource> value) {
+    @jakarta.annotation.Nonnull
+    public void setUserSources(@jakarta.annotation.Nullable final java.util.List<UserSource> value) {
         this.userSources = value;
     }
 }

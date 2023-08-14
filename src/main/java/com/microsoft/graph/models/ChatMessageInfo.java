@@ -36,7 +36,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * Instantiates a new chatMessageInfo and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatMessageInfo() {
         super();
     }
@@ -45,8 +45,8 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a chatMessageInfo
      */
-    @javax.annotation.Nonnull
-    public static ChatMessageInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ChatMessageInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ChatMessageInfo();
     }
@@ -54,7 +54,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * Gets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object does not return @mentions and attachments.
      * @return a itemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemBody getBody() {
         return this.body;
     }
@@ -62,7 +62,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * Gets the createdDateTime property value. Date time object representing the time at which message was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -70,7 +70,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * Gets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
      * @return a eventMessageDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EventMessageDetail getEventDetail() {
         return this.eventDetail;
     }
@@ -78,7 +78,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
@@ -93,7 +93,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * Gets the from property value. Information about the sender of the message.
      * @return a chatMessageFromIdentitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatMessageFromIdentitySet getFrom() {
         return this.from;
     }
@@ -101,7 +101,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * Gets the isDeleted property value. If set to true, the original message has been deleted.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
         return this.isDeleted;
     }
@@ -109,7 +109,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * Gets the messageType property value. The messageType property
      * @return a chatMessageType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatMessageType getMessageType() {
         return this.messageType;
     }
@@ -118,8 +118,8 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("body", this.getBody());
@@ -134,8 +134,8 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * @param value Value to set for the body property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBody(@javax.annotation.Nullable final ItemBody value) {
+    @jakarta.annotation.Nonnull
+    public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
         this.body = value;
     }
     /**
@@ -143,8 +143,8 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -152,8 +152,8 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * @param value Value to set for the eventDetail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEventDetail(@javax.annotation.Nullable final EventMessageDetail value) {
+    @jakarta.annotation.Nonnull
+    public void setEventDetail(@jakarta.annotation.Nullable final EventMessageDetail value) {
         this.eventDetail = value;
     }
     /**
@@ -161,8 +161,8 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * @param value Value to set for the from property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFrom(@javax.annotation.Nullable final ChatMessageFromIdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setFrom(@jakarta.annotation.Nullable final ChatMessageFromIdentitySet value) {
         this.from = value;
     }
     /**
@@ -170,8 +170,8 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * @param value Value to set for the isDeleted property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDeleted(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsDeleted(@jakarta.annotation.Nullable final Boolean value) {
         this.isDeleted = value;
     }
     /**
@@ -179,8 +179,8 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * @param value Value to set for the messageType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessageType(@javax.annotation.Nullable final ChatMessageType value) {
+    @jakarta.annotation.Nonnull
+    public void setMessageType(@jakarta.annotation.Nullable final ChatMessageType value) {
         this.messageType = value;
     }
 }

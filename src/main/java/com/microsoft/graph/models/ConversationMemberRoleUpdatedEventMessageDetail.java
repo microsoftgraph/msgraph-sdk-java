@@ -23,7 +23,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      * Instantiates a new conversationMemberRoleUpdatedEventMessageDetail and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConversationMemberRoleUpdatedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.conversationMemberRoleUpdatedEventMessageDetail");
@@ -33,8 +33,8 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a conversationMemberRoleUpdatedEventMessageDetail
      */
-    @javax.annotation.Nonnull
-    public static ConversationMemberRoleUpdatedEventMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ConversationMemberRoleUpdatedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ConversationMemberRoleUpdatedEventMessageDetail();
     }
@@ -42,7 +42,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      * Gets the conversationMemberRoles property value. Roles for the coversation member user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getConversationMemberRoles() {
         return this.conversationMemberRoles;
     }
@@ -50,7 +50,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      * Gets the conversationMemberUser property value. Identity of the conversation member user.
      * @return a teamworkUserIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkUserIdentity getConversationMemberUser() {
         return this.conversationMemberUser;
     }
@@ -58,7 +58,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("conversationMemberRoles", (n) -> { this.setConversationMemberRoles(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -70,7 +70,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      * Gets the initiator property value. Initiator of the event.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
         return this.initiator;
     }
@@ -79,8 +79,8 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("conversationMemberRoles", this.getConversationMemberRoles());
@@ -92,8 +92,8 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      * @param value Value to set for the conversationMemberRoles property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConversationMemberRoles(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setConversationMemberRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.conversationMemberRoles = value;
     }
     /**
@@ -101,8 +101,8 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      * @param value Value to set for the conversationMemberUser property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConversationMemberUser(@javax.annotation.Nullable final TeamworkUserIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setConversationMemberUser(@jakarta.annotation.Nullable final TeamworkUserIdentity value) {
         this.conversationMemberUser = value;
     }
     /**
@@ -110,8 +110,8 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      * @param value Value to set for the initiator property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
 }

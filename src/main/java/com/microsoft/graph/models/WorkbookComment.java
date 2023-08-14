@@ -23,7 +23,7 @@ public class WorkbookComment extends Entity implements Parsable {
      * Instantiates a new workbookComment and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookComment() {
         super();
     }
@@ -32,8 +32,8 @@ public class WorkbookComment extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workbookComment
      */
-    @javax.annotation.Nonnull
-    public static WorkbookComment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkbookComment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WorkbookComment();
     }
@@ -41,7 +41,7 @@ public class WorkbookComment extends Entity implements Parsable {
      * Gets the content property value. The content of comment.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContent() {
         return this.content;
     }
@@ -49,7 +49,7 @@ public class WorkbookComment extends Entity implements Parsable {
      * Gets the contentType property value. Indicates the type for the comment.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContentType() {
         return this.contentType;
     }
@@ -57,7 +57,7 @@ public class WorkbookComment extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
@@ -69,7 +69,7 @@ public class WorkbookComment extends Entity implements Parsable {
      * Gets the replies property value. The replies property
      * @return a workbookCommentReply
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkbookCommentReply> getReplies() {
         return this.replies;
     }
@@ -78,8 +78,8 @@ public class WorkbookComment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("content", this.getContent());
@@ -91,8 +91,8 @@ public class WorkbookComment extends Entity implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContent(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContent(@jakarta.annotation.Nullable final String value) {
         this.content = value;
     }
     /**
@@ -100,8 +100,8 @@ public class WorkbookComment extends Entity implements Parsable {
      * @param value Value to set for the contentType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContentType(@jakarta.annotation.Nullable final String value) {
         this.contentType = value;
     }
     /**
@@ -109,8 +109,8 @@ public class WorkbookComment extends Entity implements Parsable {
      * @param value Value to set for the replies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReplies(@javax.annotation.Nullable final java.util.List<WorkbookCommentReply> value) {
+    @jakarta.annotation.Nonnull
+    public void setReplies(@jakarta.annotation.Nullable final java.util.List<WorkbookCommentReply> value) {
         this.replies = value;
     }
 }

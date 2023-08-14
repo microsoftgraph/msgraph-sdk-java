@@ -28,7 +28,7 @@ public class Relation extends Entity implements Parsable {
      * Instantiates a new relation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Relation() {
         super();
     }
@@ -37,8 +37,8 @@ public class Relation extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a relation
      */
-    @javax.annotation.Nonnull
-    public static Relation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Relation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Relation();
     }
@@ -46,7 +46,7 @@ public class Relation extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("fromTerm", (n) -> { this.setFromTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
@@ -59,7 +59,7 @@ public class Relation extends Entity implements Parsable {
      * Gets the fromTerm property value. The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
      * @return a term
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Term getFromTerm() {
         return this.fromTerm;
     }
@@ -67,7 +67,7 @@ public class Relation extends Entity implements Parsable {
      * Gets the relationship property value. The type of relation. Possible values are: pin, reuse.
      * @return a relationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RelationType getRelationship() {
         return this.relationship;
     }
@@ -75,7 +75,7 @@ public class Relation extends Entity implements Parsable {
      * Gets the set property value. The [set] in which the relation is relevant.
      * @return a set
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Set getSet() {
         return this.set;
     }
@@ -83,7 +83,7 @@ public class Relation extends Entity implements Parsable {
      * Gets the toTerm property value. The to [term] of the relation. The term to which the relationship is defined.
      * @return a term
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Term getToTerm() {
         return this.toTerm;
     }
@@ -92,8 +92,8 @@ public class Relation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("fromTerm", this.getFromTerm());
@@ -106,8 +106,8 @@ public class Relation extends Entity implements Parsable {
      * @param value Value to set for the fromTerm property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFromTerm(@javax.annotation.Nullable final Term value) {
+    @jakarta.annotation.Nonnull
+    public void setFromTerm(@jakarta.annotation.Nullable final Term value) {
         this.fromTerm = value;
     }
     /**
@@ -115,8 +115,8 @@ public class Relation extends Entity implements Parsable {
      * @param value Value to set for the relationship property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRelationship(@javax.annotation.Nullable final RelationType value) {
+    @jakarta.annotation.Nonnull
+    public void setRelationship(@jakarta.annotation.Nullable final RelationType value) {
         this.relationship = value;
     }
     /**
@@ -124,8 +124,8 @@ public class Relation extends Entity implements Parsable {
      * @param value Value to set for the set property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSet(@javax.annotation.Nullable final Set value) {
+    @jakarta.annotation.Nonnull
+    public void setSet(@jakarta.annotation.Nullable final Set value) {
         this.set = value;
     }
     /**
@@ -133,8 +133,8 @@ public class Relation extends Entity implements Parsable {
      * @param value Value to set for the toTerm property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setToTerm(@javax.annotation.Nullable final Term value) {
+    @jakarta.annotation.Nonnull
+    public void setToTerm(@jakarta.annotation.Nullable final Term value) {
         this.toTerm = value;
     }
 }

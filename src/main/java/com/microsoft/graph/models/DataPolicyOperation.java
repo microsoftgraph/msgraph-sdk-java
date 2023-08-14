@@ -36,7 +36,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * Instantiates a new dataPolicyOperation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DataPolicyOperation() {
         super();
     }
@@ -45,8 +45,8 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a dataPolicyOperation
      */
-    @javax.annotation.Nonnull
-    public static DataPolicyOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DataPolicyOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DataPolicyOperation();
     }
@@ -54,7 +54,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * Gets the completedDateTime property value. Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Null until the operation completes.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
         return this.completedDateTime;
     }
@@ -62,7 +62,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
@@ -77,7 +77,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * Gets the progress property value. Specifies the progress of an operation.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getProgress() {
         return this.progress;
     }
@@ -85,7 +85,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * Gets the status property value. Possible values are: notStarted, running, complete, failed, unknownFutureValue.
      * @return a dataPolicyOperationStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DataPolicyOperationStatus getStatus() {
         return this.status;
     }
@@ -93,7 +93,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * Gets the storageLocation property value. The URL location to where data is being exported for export requests.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStorageLocation() {
         return this.storageLocation;
     }
@@ -101,7 +101,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * Gets the submittedDateTime property value. Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getSubmittedDateTime() {
         return this.submittedDateTime;
     }
@@ -109,7 +109,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * Gets the userId property value. The id for the user on whom the operation is performed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -118,8 +118,8 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("completedDateTime", this.getCompletedDateTime());
@@ -134,8 +134,8 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completedDateTime = value;
     }
     /**
@@ -143,8 +143,8 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the progress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProgress(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setProgress(@jakarta.annotation.Nullable final Double value) {
         this.progress = value;
     }
     /**
@@ -152,8 +152,8 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final DataPolicyOperationStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final DataPolicyOperationStatus value) {
         this.status = value;
     }
     /**
@@ -161,8 +161,8 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the storageLocation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStorageLocation(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStorageLocation(@jakarta.annotation.Nullable final String value) {
         this.storageLocation = value;
     }
     /**
@@ -170,8 +170,8 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the submittedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubmittedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setSubmittedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.submittedDateTime = value;
     }
     /**
@@ -179,8 +179,8 @@ public class DataPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
 }

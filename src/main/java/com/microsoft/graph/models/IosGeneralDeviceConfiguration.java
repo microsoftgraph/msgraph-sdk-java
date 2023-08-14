@@ -538,7 +538,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Instantiates a new iosGeneralDeviceConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosGeneralDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosGeneralDeviceConfiguration");
@@ -548,8 +548,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a iosGeneralDeviceConfiguration
      */
-    @javax.annotation.Nonnull
-    public static IosGeneralDeviceConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IosGeneralDeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IosGeneralDeviceConfiguration();
     }
@@ -557,7 +557,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the accountBlockModification property value. Indicates whether or not to allow account modification when the device is in supervised mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAccountBlockModification() {
         return this.accountBlockModification;
     }
@@ -565,7 +565,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the activationLockAllowWhenSupervised property value. Indicates whether or not to allow activation lock when the device is in the supervised mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getActivationLockAllowWhenSupervised() {
         return this.activationLockAllowWhenSupervised;
     }
@@ -573,7 +573,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the airDropBlocked property value. Indicates whether or not to allow AirDrop when the device is in supervised mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAirDropBlocked() {
         return this.airDropBlocked;
     }
@@ -581,7 +581,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the airDropForceUnmanagedDropTarget property value. Indicates whether or not to cause AirDrop to be considered an unmanaged drop target (iOS 9.0 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAirDropForceUnmanagedDropTarget() {
         return this.airDropForceUnmanagedDropTarget;
     }
@@ -589,7 +589,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the airPlayForcePairingPasswordForOutgoingRequests property value. Indicates whether or not to enforce all devices receiving AirPlay requests from this device to use a pairing password.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAirPlayForcePairingPasswordForOutgoingRequests() {
         return this.airPlayForcePairingPasswordForOutgoingRequests;
     }
@@ -597,7 +597,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the appleNewsBlocked property value. Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAppleNewsBlocked() {
         return this.appleNewsBlocked;
     }
@@ -605,7 +605,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the appleWatchBlockPairing property value. Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAppleWatchBlockPairing() {
         return this.appleWatchBlockPairing;
     }
@@ -613,7 +613,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the appleWatchForceWristDetection property value. Indicates whether or not to force a paired Apple Watch to use Wrist Detection (iOS 8.2 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAppleWatchForceWristDetection() {
         return this.appleWatchForceWristDetection;
     }
@@ -621,7 +621,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the appsSingleAppModeList property value. Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements.
      * @return a appListItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getAppsSingleAppModeList() {
         return this.appsSingleAppModeList;
     }
@@ -629,7 +629,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the appStoreBlockAutomaticDownloads property value. Indicates whether or not to block the automatic downloading of apps purchased on other devices when the device is in supervised mode (iOS 9.0 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAppStoreBlockAutomaticDownloads() {
         return this.appStoreBlockAutomaticDownloads;
     }
@@ -637,7 +637,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the appStoreBlocked property value. Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAppStoreBlocked() {
         return this.appStoreBlocked;
     }
@@ -645,7 +645,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the appStoreBlockInAppPurchases property value. Indicates whether or not to block the user from making in app purchases.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAppStoreBlockInAppPurchases() {
         return this.appStoreBlockInAppPurchases;
     }
@@ -653,7 +653,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the appStoreBlockUIAppInstallation property value. Indicates whether or not to block the App Store app, not restricting installation through Host apps. Applies to supervised mode only (iOS 9.0 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAppStoreBlockUIAppInstallation() {
         return this.appStoreBlockUIAppInstallation;
     }
@@ -661,7 +661,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the appStoreRequirePassword property value. Indicates whether or not to require a password when using the app store.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAppStoreRequirePassword() {
         return this.appStoreRequirePassword;
     }
@@ -669,7 +669,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the appsVisibilityList property value. List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
      * @return a appListItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getAppsVisibilityList() {
         return this.appsVisibilityList;
     }
@@ -677,7 +677,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the appsVisibilityListType property value. Possible values of the compliance app list.
      * @return a appListType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AppListType getAppsVisibilityListType() {
         return this.appsVisibilityListType;
     }
@@ -685,7 +685,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the bluetoothBlockModification property value. Indicates whether or not to allow modification of Bluetooth settings when the device is in supervised mode (iOS 10.0 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBluetoothBlockModification() {
         return this.bluetoothBlockModification;
     }
@@ -693,7 +693,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the cameraBlocked property value. Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCameraBlocked() {
         return this.cameraBlocked;
     }
@@ -701,7 +701,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCellularBlockDataRoaming() {
         return this.cellularBlockDataRoaming;
     }
@@ -709,7 +709,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the cellularBlockGlobalBackgroundFetchWhileRoaming property value. Indicates whether or not to block global background fetch while roaming.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCellularBlockGlobalBackgroundFetchWhileRoaming() {
         return this.cellularBlockGlobalBackgroundFetchWhileRoaming;
     }
@@ -717,7 +717,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the cellularBlockPerAppDataModification property value. Indicates whether or not to allow changes to cellular app data usage settings when the device is in supervised mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCellularBlockPerAppDataModification() {
         return this.cellularBlockPerAppDataModification;
     }
@@ -725,7 +725,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the cellularBlockPersonalHotspot property value. Indicates whether or not to block Personal Hotspot.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCellularBlockPersonalHotspot() {
         return this.cellularBlockPersonalHotspot;
     }
@@ -733,7 +733,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the cellularBlockVoiceRoaming property value. Indicates whether or not to block voice roaming.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCellularBlockVoiceRoaming() {
         return this.cellularBlockVoiceRoaming;
     }
@@ -741,7 +741,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the certificatesBlockUntrustedTlsCertificates property value. Indicates whether or not to block untrusted TLS certificates.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCertificatesBlockUntrustedTlsCertificates() {
         return this.certificatesBlockUntrustedTlsCertificates;
     }
@@ -749,7 +749,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the classroomAppBlockRemoteScreenObservation property value. Indicates whether or not to allow remote screen observation by Classroom app when the device is in supervised mode (iOS 9.3 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getClassroomAppBlockRemoteScreenObservation() {
         return this.classroomAppBlockRemoteScreenObservation;
     }
@@ -757,7 +757,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getClassroomAppForceUnpromptedScreenObservation() {
         return this.classroomAppForceUnpromptedScreenObservation;
     }
@@ -765,7 +765,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
      * @return a appListType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AppListType getCompliantAppListType() {
         return this.compliantAppListType;
     }
@@ -773,7 +773,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      * @return a appListItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getCompliantAppsList() {
         return this.compliantAppsList;
     }
@@ -781,7 +781,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the configurationProfileBlockChanges property value. Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getConfigurationProfileBlockChanges() {
         return this.configurationProfileBlockChanges;
     }
@@ -789,7 +789,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the definitionLookupBlocked property value. Indicates whether or not to block definition lookup when the device is in supervised mode (iOS 8.1.3 and later ).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDefinitionLookupBlocked() {
         return this.definitionLookupBlocked;
     }
@@ -797,7 +797,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the deviceBlockEnableRestrictions property value. Indicates whether or not to allow the user to enables restrictions in the device settings when the device is in supervised mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDeviceBlockEnableRestrictions() {
         return this.deviceBlockEnableRestrictions;
     }
@@ -805,7 +805,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the deviceBlockEraseContentAndSettings property value. Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDeviceBlockEraseContentAndSettings() {
         return this.deviceBlockEraseContentAndSettings;
     }
@@ -813,7 +813,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the deviceBlockNameModification property value. Indicates whether or not to allow device name modification when the device is in supervised mode (iOS 9.0 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDeviceBlockNameModification() {
         return this.deviceBlockNameModification;
     }
@@ -821,7 +821,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDiagnosticDataBlockSubmission() {
         return this.diagnosticDataBlockSubmission;
     }
@@ -829,7 +829,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the diagnosticDataBlockSubmissionModification property value. Indicates whether or not to allow diagnostics submission settings modification when the device is in supervised mode (iOS 9.3.2 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDiagnosticDataBlockSubmissionModification() {
         return this.diagnosticDataBlockSubmissionModification;
     }
@@ -837,7 +837,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the documentsBlockManagedDocumentsInUnmanagedApps property value. Indicates whether or not to block the user from viewing managed documents in unmanaged apps.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDocumentsBlockManagedDocumentsInUnmanagedApps() {
         return this.documentsBlockManagedDocumentsInUnmanagedApps;
     }
@@ -845,7 +845,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the documentsBlockUnmanagedDocumentsInManagedApps property value. Indicates whether or not to block the user from viewing unmanaged documents in managed apps.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDocumentsBlockUnmanagedDocumentsInManagedApps() {
         return this.documentsBlockUnmanagedDocumentsInManagedApps;
     }
@@ -853,7 +853,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the emailInDomainSuffixes property value. An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getEmailInDomainSuffixes() {
         return this.emailInDomainSuffixes;
     }
@@ -861,7 +861,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the enterpriseAppBlockTrust property value. Indicates whether or not to block the user from trusting an enterprise app.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnterpriseAppBlockTrust() {
         return this.enterpriseAppBlockTrust;
     }
@@ -869,7 +869,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the enterpriseAppBlockTrustModification property value. [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnterpriseAppBlockTrustModification() {
         return this.enterpriseAppBlockTrustModification;
     }
@@ -877,7 +877,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the faceTimeBlocked property value. Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFaceTimeBlocked() {
         return this.faceTimeBlocked;
     }
@@ -885,7 +885,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountBlockModification", (n) -> { this.setAccountBlockModification(n.getBooleanValue()); });
@@ -1025,7 +1025,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the findMyFriendsBlocked property value. Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFindMyFriendsBlocked() {
         return this.findMyFriendsBlocked;
     }
@@ -1033,7 +1033,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the gameCenterBlocked property value. Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getGameCenterBlocked() {
         return this.gameCenterBlocked;
     }
@@ -1041,7 +1041,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the gamingBlockGameCenterFriends property value. Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getGamingBlockGameCenterFriends() {
         return this.gamingBlockGameCenterFriends;
     }
@@ -1049,7 +1049,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the gamingBlockMultiplayer property value. Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getGamingBlockMultiplayer() {
         return this.gamingBlockMultiplayer;
     }
@@ -1057,7 +1057,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the hostPairingBlocked property value. indicates whether or not to allow host pairing to control the devices an iOS device can pair with when the iOS device is in supervised mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHostPairingBlocked() {
         return this.hostPairingBlocked;
     }
@@ -1065,7 +1065,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the iBooksStoreBlocked property value. Indicates whether or not to block the user from using the iBooks Store when the device is in supervised mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIBooksStoreBlocked() {
         return this.iBooksStoreBlocked;
     }
@@ -1073,7 +1073,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the iBooksStoreBlockErotica property value. Indicates whether or not to block the user from downloading media from the iBookstore that has been tagged as erotica.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIBooksStoreBlockErotica() {
         return this.iBooksStoreBlockErotica;
     }
@@ -1081,7 +1081,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the iCloudBlockActivityContinuation property value. Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getICloudBlockActivityContinuation() {
         return this.iCloudBlockActivityContinuation;
     }
@@ -1089,7 +1089,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the iCloudBlockBackup property value. Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getICloudBlockBackup() {
         return this.iCloudBlockBackup;
     }
@@ -1097,7 +1097,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the iCloudBlockDocumentSync property value. Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getICloudBlockDocumentSync() {
         return this.iCloudBlockDocumentSync;
     }
@@ -1105,7 +1105,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the iCloudBlockManagedAppsSync property value. Indicates whether or not to block Managed Apps Cloud Sync.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getICloudBlockManagedAppsSync() {
         return this.iCloudBlockManagedAppsSync;
     }
@@ -1113,7 +1113,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the iCloudBlockPhotoLibrary property value. Indicates whether or not to block iCloud Photo Library.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getICloudBlockPhotoLibrary() {
         return this.iCloudBlockPhotoLibrary;
     }
@@ -1121,7 +1121,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the iCloudBlockPhotoStreamSync property value. Indicates whether or not to block iCloud Photo Stream Sync.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getICloudBlockPhotoStreamSync() {
         return this.iCloudBlockPhotoStreamSync;
     }
@@ -1129,7 +1129,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the iCloudBlockSharedPhotoStream property value. Indicates whether or not to block Shared Photo Stream.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getICloudBlockSharedPhotoStream() {
         return this.iCloudBlockSharedPhotoStream;
     }
@@ -1137,7 +1137,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the iCloudRequireEncryptedBackup property value. Indicates whether or not to require backups to iCloud be encrypted.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getICloudRequireEncryptedBackup() {
         return this.iCloudRequireEncryptedBackup;
     }
@@ -1145,7 +1145,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the iTunesBlockExplicitContent property value. Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getITunesBlockExplicitContent() {
         return this.iTunesBlockExplicitContent;
     }
@@ -1153,7 +1153,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the iTunesBlockMusicService property value. Indicates whether or not to block Music service and revert Music app to classic mode when the device is in supervised mode (iOS 9.3 and later and macOS 10.12 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getITunesBlockMusicService() {
         return this.iTunesBlockMusicService;
     }
@@ -1161,7 +1161,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the iTunesBlockRadio property value. Indicates whether or not to block the user from using iTunes Radio when the device is in supervised mode (iOS 9.3 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getITunesBlockRadio() {
         return this.iTunesBlockRadio;
     }
@@ -1169,7 +1169,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the keyboardBlockAutoCorrect property value. Indicates whether or not to block keyboard auto-correction when the device is in supervised mode (iOS 8.1.3 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKeyboardBlockAutoCorrect() {
         return this.keyboardBlockAutoCorrect;
     }
@@ -1177,7 +1177,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the keyboardBlockDictation property value. Indicates whether or not to block the user from using dictation input when the device is in supervised mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKeyboardBlockDictation() {
         return this.keyboardBlockDictation;
     }
@@ -1185,7 +1185,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the keyboardBlockPredictive property value. Indicates whether or not to block predictive keyboards when device is in supervised mode (iOS 8.1.3 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKeyboardBlockPredictive() {
         return this.keyboardBlockPredictive;
     }
@@ -1193,7 +1193,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the keyboardBlockShortcuts property value. Indicates whether or not to block keyboard shortcuts when the device is in supervised mode (iOS 9.0 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKeyboardBlockShortcuts() {
         return this.keyboardBlockShortcuts;
     }
@@ -1201,7 +1201,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the keyboardBlockSpellCheck property value. Indicates whether or not to block keyboard spell-checking when the device is in supervised mode (iOS 8.1.3 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKeyboardBlockSpellCheck() {
         return this.keyboardBlockSpellCheck;
     }
@@ -1209,7 +1209,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeAllowAssistiveSpeak property value. Indicates whether or not to allow assistive speak while in kiosk mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowAssistiveSpeak() {
         return this.kioskModeAllowAssistiveSpeak;
     }
@@ -1217,7 +1217,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeAllowAssistiveTouchSettings property value. Indicates whether or not to allow access to the Assistive Touch Settings while in kiosk mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowAssistiveTouchSettings() {
         return this.kioskModeAllowAssistiveTouchSettings;
     }
@@ -1225,7 +1225,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeAllowAutoLock property value. Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowAutoLock() {
         return this.kioskModeAllowAutoLock;
     }
@@ -1233,7 +1233,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeAllowColorInversionSettings property value. Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowColorInversionSettings() {
         return this.kioskModeAllowColorInversionSettings;
     }
@@ -1241,7 +1241,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeAllowRingerSwitch property value. Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowRingerSwitch() {
         return this.kioskModeAllowRingerSwitch;
     }
@@ -1249,7 +1249,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeAllowScreenRotation property value. Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowScreenRotation() {
         return this.kioskModeAllowScreenRotation;
     }
@@ -1257,7 +1257,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeAllowSleepButton property value. Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowSleepButton() {
         return this.kioskModeAllowSleepButton;
     }
@@ -1265,7 +1265,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeAllowTouchscreen property value. Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowTouchscreen() {
         return this.kioskModeAllowTouchscreen;
     }
@@ -1273,7 +1273,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeAllowVoiceOverSettings property value. Indicates whether or not to allow access to the voice over settings while in kiosk mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowVoiceOverSettings() {
         return this.kioskModeAllowVoiceOverSettings;
     }
@@ -1281,7 +1281,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeAllowVolumeButtons property value. Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowVolumeButtons() {
         return this.kioskModeAllowVolumeButtons;
     }
@@ -1289,7 +1289,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeAllowZoomSettings property value. Indicates whether or not to allow access to the zoom settings while in kiosk mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskModeAllowZoomSettings() {
         return this.kioskModeAllowZoomSettings;
     }
@@ -1297,7 +1297,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeAppStoreUrl property value. URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getKioskModeAppStoreUrl() {
         return this.kioskModeAppStoreUrl;
     }
@@ -1305,7 +1305,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeBuiltInAppId property value. ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getKioskModeBuiltInAppId() {
         return this.kioskModeBuiltInAppId;
     }
@@ -1313,7 +1313,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeManagedAppId property value. Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getKioskModeManagedAppId() {
         return this.kioskModeManagedAppId;
     }
@@ -1321,7 +1321,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeRequireAssistiveTouch property value. Indicates whether or not to require assistive touch while in kiosk mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskModeRequireAssistiveTouch() {
         return this.kioskModeRequireAssistiveTouch;
     }
@@ -1329,7 +1329,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeRequireColorInversion property value. Indicates whether or not to require color inversion while in kiosk mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskModeRequireColorInversion() {
         return this.kioskModeRequireColorInversion;
     }
@@ -1337,7 +1337,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeRequireMonoAudio property value. Indicates whether or not to require mono audio while in kiosk mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskModeRequireMonoAudio() {
         return this.kioskModeRequireMonoAudio;
     }
@@ -1345,7 +1345,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeRequireVoiceOver property value. Indicates whether or not to require voice over while in kiosk mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskModeRequireVoiceOver() {
         return this.kioskModeRequireVoiceOver;
     }
@@ -1353,7 +1353,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the kioskModeRequireZoom property value. Indicates whether or not to require zoom while in kiosk mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskModeRequireZoom() {
         return this.kioskModeRequireZoom;
     }
@@ -1361,7 +1361,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the lockScreenBlockControlCenter property value. Indicates whether or not to block the user from using control center on the lock screen.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getLockScreenBlockControlCenter() {
         return this.lockScreenBlockControlCenter;
     }
@@ -1369,7 +1369,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the lockScreenBlockNotificationView property value. Indicates whether or not to block the user from using the notification view on the lock screen.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getLockScreenBlockNotificationView() {
         return this.lockScreenBlockNotificationView;
     }
@@ -1377,7 +1377,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the lockScreenBlockPassbook property value. Indicates whether or not to block the user from using passbook when the device is locked.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getLockScreenBlockPassbook() {
         return this.lockScreenBlockPassbook;
     }
@@ -1385,7 +1385,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the lockScreenBlockTodayView property value. Indicates whether or not to block the user from using the Today View on the lock screen.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getLockScreenBlockTodayView() {
         return this.lockScreenBlockTodayView;
     }
@@ -1393,7 +1393,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the mediaContentRatingApps property value. Apps rating as in media content
      * @return a ratingAppsType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RatingAppsType getMediaContentRatingApps() {
         return this.mediaContentRatingApps;
     }
@@ -1401,7 +1401,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the mediaContentRatingAustralia property value. Media content rating settings for Australia
      * @return a mediaContentRatingAustralia
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaContentRatingAustralia getMediaContentRatingAustralia() {
         return this.mediaContentRatingAustralia;
     }
@@ -1409,7 +1409,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the mediaContentRatingCanada property value. Media content rating settings for Canada
      * @return a mediaContentRatingCanada
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaContentRatingCanada getMediaContentRatingCanada() {
         return this.mediaContentRatingCanada;
     }
@@ -1417,7 +1417,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the mediaContentRatingFrance property value. Media content rating settings for France
      * @return a mediaContentRatingFrance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaContentRatingFrance getMediaContentRatingFrance() {
         return this.mediaContentRatingFrance;
     }
@@ -1425,7 +1425,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the mediaContentRatingGermany property value. Media content rating settings for Germany
      * @return a mediaContentRatingGermany
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaContentRatingGermany getMediaContentRatingGermany() {
         return this.mediaContentRatingGermany;
     }
@@ -1433,7 +1433,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the mediaContentRatingIreland property value. Media content rating settings for Ireland
      * @return a mediaContentRatingIreland
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaContentRatingIreland getMediaContentRatingIreland() {
         return this.mediaContentRatingIreland;
     }
@@ -1441,7 +1441,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the mediaContentRatingJapan property value. Media content rating settings for Japan
      * @return a mediaContentRatingJapan
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaContentRatingJapan getMediaContentRatingJapan() {
         return this.mediaContentRatingJapan;
     }
@@ -1449,7 +1449,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the mediaContentRatingNewZealand property value. Media content rating settings for New Zealand
      * @return a mediaContentRatingNewZealand
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaContentRatingNewZealand getMediaContentRatingNewZealand() {
         return this.mediaContentRatingNewZealand;
     }
@@ -1457,7 +1457,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the mediaContentRatingUnitedKingdom property value. Media content rating settings for United Kingdom
      * @return a mediaContentRatingUnitedKingdom
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaContentRatingUnitedKingdom getMediaContentRatingUnitedKingdom() {
         return this.mediaContentRatingUnitedKingdom;
     }
@@ -1465,7 +1465,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the mediaContentRatingUnitedStates property value. Media content rating settings for United States
      * @return a mediaContentRatingUnitedStates
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaContentRatingUnitedStates getMediaContentRatingUnitedStates() {
         return this.mediaContentRatingUnitedStates;
     }
@@ -1473,7 +1473,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the messagesBlocked property value. Indicates whether or not to block the user from using the Messages app on the supervised device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getMessagesBlocked() {
         return this.messagesBlocked;
     }
@@ -1481,7 +1481,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the networkUsageRules property value. List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
      * @return a iosNetworkUsageRule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IosNetworkUsageRule> getNetworkUsageRules() {
         return this.networkUsageRules;
     }
@@ -1489,7 +1489,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the notificationsBlockSettingsModification property value. Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getNotificationsBlockSettingsModification() {
         return this.notificationsBlockSettingsModification;
     }
@@ -1497,7 +1497,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the passcodeBlockFingerprintModification property value. Block modification of registered Touch ID fingerprints when in supervised mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPasscodeBlockFingerprintModification() {
         return this.passcodeBlockFingerprintModification;
     }
@@ -1505,7 +1505,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the passcodeBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPasscodeBlockFingerprintUnlock() {
         return this.passcodeBlockFingerprintUnlock;
     }
@@ -1513,7 +1513,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the passcodeBlockModification property value. Indicates whether or not to allow passcode modification on the supervised device (iOS 9.0 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPasscodeBlockModification() {
         return this.passcodeBlockModification;
     }
@@ -1521,7 +1521,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the passcodeBlockSimple property value. Indicates whether or not to block simple passcodes.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPasscodeBlockSimple() {
         return this.passcodeBlockSimple;
     }
@@ -1529,7 +1529,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the passcodeExpirationDays property value. Number of days before the passcode expires. Valid values 1 to 65535
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasscodeExpirationDays() {
         return this.passcodeExpirationDays;
     }
@@ -1537,7 +1537,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the passcodeMinimumCharacterSetCount property value. Number of character sets a passcode must contain. Valid values 0 to 4
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasscodeMinimumCharacterSetCount() {
         return this.passcodeMinimumCharacterSetCount;
     }
@@ -1545,7 +1545,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the passcodeMinimumLength property value. Minimum length of passcode. Valid values 4 to 14
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasscodeMinimumLength() {
         return this.passcodeMinimumLength;
     }
@@ -1553,7 +1553,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the passcodeMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a passcode is required.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasscodeMinutesOfInactivityBeforeLock() {
         return this.passcodeMinutesOfInactivityBeforeLock;
     }
@@ -1561,7 +1561,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the passcodeMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasscodeMinutesOfInactivityBeforeScreenTimeout() {
         return this.passcodeMinutesOfInactivityBeforeScreenTimeout;
     }
@@ -1569,7 +1569,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the passcodePreviousPasscodeBlockCount property value. Number of previous passcodes to block. Valid values 1 to 24
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasscodePreviousPasscodeBlockCount() {
         return this.passcodePreviousPasscodeBlockCount;
     }
@@ -1577,7 +1577,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the passcodeRequired property value. Indicates whether or not to require a passcode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPasscodeRequired() {
         return this.passcodeRequired;
     }
@@ -1585,7 +1585,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the passcodeRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RequiredPasswordType getPasscodeRequiredType() {
         return this.passcodeRequiredType;
     }
@@ -1593,7 +1593,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the passcodeSignInFailureCountBeforeWipe property value. Number of sign in failures allowed before wiping the device. Valid values 2 to 11
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasscodeSignInFailureCountBeforeWipe() {
         return this.passcodeSignInFailureCountBeforeWipe;
     }
@@ -1601,7 +1601,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the podcastsBlocked property value. Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPodcastsBlocked() {
         return this.podcastsBlocked;
     }
@@ -1609,7 +1609,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the safariBlockAutofill property value. Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSafariBlockAutofill() {
         return this.safariBlockAutofill;
     }
@@ -1617,7 +1617,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the safariBlocked property value. Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSafariBlocked() {
         return this.safariBlocked;
     }
@@ -1625,7 +1625,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the safariBlockJavaScript property value. Indicates whether or not to block JavaScript in Safari.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSafariBlockJavaScript() {
         return this.safariBlockJavaScript;
     }
@@ -1633,7 +1633,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the safariBlockPopups property value. Indicates whether or not to block popups in Safari.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSafariBlockPopups() {
         return this.safariBlockPopups;
     }
@@ -1641,7 +1641,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the safariCookieSettings property value. Web Browser Cookie Settings.
      * @return a webBrowserCookieSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WebBrowserCookieSettings getSafariCookieSettings() {
         return this.safariCookieSettings;
     }
@@ -1649,7 +1649,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the safariManagedDomains property value. URLs matching the patterns listed here will be considered managed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSafariManagedDomains() {
         return this.safariManagedDomains;
     }
@@ -1657,7 +1657,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the safariPasswordAutoFillDomains property value. Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised mode (iOS 9.3 and later).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSafariPasswordAutoFillDomains() {
         return this.safariPasswordAutoFillDomains;
     }
@@ -1665,7 +1665,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the safariRequireFraudWarning property value. Indicates whether or not to require fraud warning in Safari.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSafariRequireFraudWarning() {
         return this.safariRequireFraudWarning;
     }
@@ -1673,7 +1673,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the screenCaptureBlocked property value. Indicates whether or not to block the user from taking Screenshots.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
         return this.screenCaptureBlocked;
     }
@@ -1681,7 +1681,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the siriBlocked property value. Indicates whether or not to block the user from using Siri.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSiriBlocked() {
         return this.siriBlocked;
     }
@@ -1689,7 +1689,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the siriBlockedWhenLocked property value. Indicates whether or not to block the user from using Siri when locked.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSiriBlockedWhenLocked() {
         return this.siriBlockedWhenLocked;
     }
@@ -1697,7 +1697,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the siriBlockUserGeneratedContent property value. Indicates whether or not to block Siri from querying user-generated content when used on a supervised device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSiriBlockUserGeneratedContent() {
         return this.siriBlockUserGeneratedContent;
     }
@@ -1705,7 +1705,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the siriRequireProfanityFilter property value. Indicates whether or not to prevent Siri from dictating, or speaking profane language on supervised device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSiriRequireProfanityFilter() {
         return this.siriRequireProfanityFilter;
     }
@@ -1713,7 +1713,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the spotlightBlockInternetResults property value. Indicates whether or not to block Spotlight search from returning internet results on supervised device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSpotlightBlockInternetResults() {
         return this.spotlightBlockInternetResults;
     }
@@ -1721,7 +1721,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the voiceDialingBlocked property value. Indicates whether or not to block voice dialing.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getVoiceDialingBlocked() {
         return this.voiceDialingBlocked;
     }
@@ -1729,7 +1729,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the wallpaperBlockModification property value. Indicates whether or not to allow wallpaper modification on supervised device (iOS 9.0 and later) .
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getWallpaperBlockModification() {
         return this.wallpaperBlockModification;
     }
@@ -1737,7 +1737,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Gets the wiFiConnectOnlyToConfiguredNetworks property value. Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getWiFiConnectOnlyToConfiguredNetworks() {
         return this.wiFiConnectOnlyToConfiguredNetworks;
     }
@@ -1746,8 +1746,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("accountBlockModification", this.getAccountBlockModification());
@@ -1887,8 +1887,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the accountBlockModification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccountBlockModification(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAccountBlockModification(@jakarta.annotation.Nullable final Boolean value) {
         this.accountBlockModification = value;
     }
     /**
@@ -1896,8 +1896,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the activationLockAllowWhenSupervised property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivationLockAllowWhenSupervised(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setActivationLockAllowWhenSupervised(@jakarta.annotation.Nullable final Boolean value) {
         this.activationLockAllowWhenSupervised = value;
     }
     /**
@@ -1905,8 +1905,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the airDropBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAirDropBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAirDropBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.airDropBlocked = value;
     }
     /**
@@ -1914,8 +1914,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the airDropForceUnmanagedDropTarget property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAirDropForceUnmanagedDropTarget(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAirDropForceUnmanagedDropTarget(@jakarta.annotation.Nullable final Boolean value) {
         this.airDropForceUnmanagedDropTarget = value;
     }
     /**
@@ -1923,8 +1923,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the airPlayForcePairingPasswordForOutgoingRequests property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAirPlayForcePairingPasswordForOutgoingRequests(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAirPlayForcePairingPasswordForOutgoingRequests(@jakarta.annotation.Nullable final Boolean value) {
         this.airPlayForcePairingPasswordForOutgoingRequests = value;
     }
     /**
@@ -1932,8 +1932,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appleNewsBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppleNewsBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAppleNewsBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.appleNewsBlocked = value;
     }
     /**
@@ -1941,8 +1941,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appleWatchBlockPairing property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppleWatchBlockPairing(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAppleWatchBlockPairing(@jakarta.annotation.Nullable final Boolean value) {
         this.appleWatchBlockPairing = value;
     }
     /**
@@ -1950,8 +1950,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appleWatchForceWristDetection property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppleWatchForceWristDetection(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAppleWatchForceWristDetection(@jakarta.annotation.Nullable final Boolean value) {
         this.appleWatchForceWristDetection = value;
     }
     /**
@@ -1959,8 +1959,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appsSingleAppModeList property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppsSingleAppModeList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setAppsSingleAppModeList(@jakarta.annotation.Nullable final java.util.List<AppListItem> value) {
         this.appsSingleAppModeList = value;
     }
     /**
@@ -1968,8 +1968,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appStoreBlockAutomaticDownloads property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppStoreBlockAutomaticDownloads(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAppStoreBlockAutomaticDownloads(@jakarta.annotation.Nullable final Boolean value) {
         this.appStoreBlockAutomaticDownloads = value;
     }
     /**
@@ -1977,8 +1977,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appStoreBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppStoreBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAppStoreBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.appStoreBlocked = value;
     }
     /**
@@ -1986,8 +1986,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appStoreBlockInAppPurchases property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppStoreBlockInAppPurchases(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAppStoreBlockInAppPurchases(@jakarta.annotation.Nullable final Boolean value) {
         this.appStoreBlockInAppPurchases = value;
     }
     /**
@@ -1995,8 +1995,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appStoreBlockUIAppInstallation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppStoreBlockUIAppInstallation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAppStoreBlockUIAppInstallation(@jakarta.annotation.Nullable final Boolean value) {
         this.appStoreBlockUIAppInstallation = value;
     }
     /**
@@ -2004,8 +2004,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appStoreRequirePassword property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppStoreRequirePassword(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAppStoreRequirePassword(@jakarta.annotation.Nullable final Boolean value) {
         this.appStoreRequirePassword = value;
     }
     /**
@@ -2013,8 +2013,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appsVisibilityList property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppsVisibilityList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setAppsVisibilityList(@jakarta.annotation.Nullable final java.util.List<AppListItem> value) {
         this.appsVisibilityList = value;
     }
     /**
@@ -2022,8 +2022,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appsVisibilityListType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppsVisibilityListType(@javax.annotation.Nullable final AppListType value) {
+    @jakarta.annotation.Nonnull
+    public void setAppsVisibilityListType(@jakarta.annotation.Nullable final AppListType value) {
         this.appsVisibilityListType = value;
     }
     /**
@@ -2031,8 +2031,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the bluetoothBlockModification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBluetoothBlockModification(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setBluetoothBlockModification(@jakarta.annotation.Nullable final Boolean value) {
         this.bluetoothBlockModification = value;
     }
     /**
@@ -2040,8 +2040,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cameraBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCameraBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setCameraBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.cameraBlocked = value;
     }
     /**
@@ -2049,8 +2049,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockDataRoaming property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCellularBlockDataRoaming(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setCellularBlockDataRoaming(@jakarta.annotation.Nullable final Boolean value) {
         this.cellularBlockDataRoaming = value;
     }
     /**
@@ -2058,8 +2058,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockGlobalBackgroundFetchWhileRoaming property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCellularBlockGlobalBackgroundFetchWhileRoaming(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setCellularBlockGlobalBackgroundFetchWhileRoaming(@jakarta.annotation.Nullable final Boolean value) {
         this.cellularBlockGlobalBackgroundFetchWhileRoaming = value;
     }
     /**
@@ -2067,8 +2067,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockPerAppDataModification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCellularBlockPerAppDataModification(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setCellularBlockPerAppDataModification(@jakarta.annotation.Nullable final Boolean value) {
         this.cellularBlockPerAppDataModification = value;
     }
     /**
@@ -2076,8 +2076,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockPersonalHotspot property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCellularBlockPersonalHotspot(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setCellularBlockPersonalHotspot(@jakarta.annotation.Nullable final Boolean value) {
         this.cellularBlockPersonalHotspot = value;
     }
     /**
@@ -2085,8 +2085,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockVoiceRoaming property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCellularBlockVoiceRoaming(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setCellularBlockVoiceRoaming(@jakarta.annotation.Nullable final Boolean value) {
         this.cellularBlockVoiceRoaming = value;
     }
     /**
@@ -2094,8 +2094,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the certificatesBlockUntrustedTlsCertificates property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificatesBlockUntrustedTlsCertificates(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setCertificatesBlockUntrustedTlsCertificates(@jakarta.annotation.Nullable final Boolean value) {
         this.certificatesBlockUntrustedTlsCertificates = value;
     }
     /**
@@ -2103,8 +2103,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the classroomAppBlockRemoteScreenObservation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClassroomAppBlockRemoteScreenObservation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setClassroomAppBlockRemoteScreenObservation(@jakarta.annotation.Nullable final Boolean value) {
         this.classroomAppBlockRemoteScreenObservation = value;
     }
     /**
@@ -2112,8 +2112,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the classroomAppForceUnpromptedScreenObservation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClassroomAppForceUnpromptedScreenObservation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setClassroomAppForceUnpromptedScreenObservation(@jakarta.annotation.Nullable final Boolean value) {
         this.classroomAppForceUnpromptedScreenObservation = value;
     }
     /**
@@ -2121,8 +2121,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the compliantAppListType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompliantAppListType(@javax.annotation.Nullable final AppListType value) {
+    @jakarta.annotation.Nonnull
+    public void setCompliantAppListType(@jakarta.annotation.Nullable final AppListType value) {
         this.compliantAppListType = value;
     }
     /**
@@ -2130,8 +2130,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the compliantAppsList property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompliantAppsList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setCompliantAppsList(@jakarta.annotation.Nullable final java.util.List<AppListItem> value) {
         this.compliantAppsList = value;
     }
     /**
@@ -2139,8 +2139,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the configurationProfileBlockChanges property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigurationProfileBlockChanges(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setConfigurationProfileBlockChanges(@jakarta.annotation.Nullable final Boolean value) {
         this.configurationProfileBlockChanges = value;
     }
     /**
@@ -2148,8 +2148,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the definitionLookupBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefinitionLookupBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDefinitionLookupBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.definitionLookupBlocked = value;
     }
     /**
@@ -2157,8 +2157,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the deviceBlockEnableRestrictions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceBlockEnableRestrictions(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceBlockEnableRestrictions(@jakarta.annotation.Nullable final Boolean value) {
         this.deviceBlockEnableRestrictions = value;
     }
     /**
@@ -2166,8 +2166,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the deviceBlockEraseContentAndSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceBlockEraseContentAndSettings(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceBlockEraseContentAndSettings(@jakarta.annotation.Nullable final Boolean value) {
         this.deviceBlockEraseContentAndSettings = value;
     }
     /**
@@ -2175,8 +2175,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the deviceBlockNameModification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceBlockNameModification(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceBlockNameModification(@jakarta.annotation.Nullable final Boolean value) {
         this.deviceBlockNameModification = value;
     }
     /**
@@ -2184,8 +2184,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the diagnosticDataBlockSubmission property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDiagnosticDataBlockSubmission(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDiagnosticDataBlockSubmission(@jakarta.annotation.Nullable final Boolean value) {
         this.diagnosticDataBlockSubmission = value;
     }
     /**
@@ -2193,8 +2193,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the diagnosticDataBlockSubmissionModification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDiagnosticDataBlockSubmissionModification(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDiagnosticDataBlockSubmissionModification(@jakarta.annotation.Nullable final Boolean value) {
         this.diagnosticDataBlockSubmissionModification = value;
     }
     /**
@@ -2202,8 +2202,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the documentsBlockManagedDocumentsInUnmanagedApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDocumentsBlockManagedDocumentsInUnmanagedApps(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDocumentsBlockManagedDocumentsInUnmanagedApps(@jakarta.annotation.Nullable final Boolean value) {
         this.documentsBlockManagedDocumentsInUnmanagedApps = value;
     }
     /**
@@ -2211,8 +2211,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the documentsBlockUnmanagedDocumentsInManagedApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDocumentsBlockUnmanagedDocumentsInManagedApps(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDocumentsBlockUnmanagedDocumentsInManagedApps(@jakarta.annotation.Nullable final Boolean value) {
         this.documentsBlockUnmanagedDocumentsInManagedApps = value;
     }
     /**
@@ -2220,8 +2220,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the emailInDomainSuffixes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailInDomainSuffixes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailInDomainSuffixes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.emailInDomainSuffixes = value;
     }
     /**
@@ -2229,8 +2229,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the enterpriseAppBlockTrust property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnterpriseAppBlockTrust(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnterpriseAppBlockTrust(@jakarta.annotation.Nullable final Boolean value) {
         this.enterpriseAppBlockTrust = value;
     }
     /**
@@ -2238,8 +2238,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the enterpriseAppBlockTrustModification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnterpriseAppBlockTrustModification(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnterpriseAppBlockTrustModification(@jakarta.annotation.Nullable final Boolean value) {
         this.enterpriseAppBlockTrustModification = value;
     }
     /**
@@ -2247,8 +2247,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the faceTimeBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFaceTimeBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setFaceTimeBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.faceTimeBlocked = value;
     }
     /**
@@ -2256,8 +2256,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the findMyFriendsBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFindMyFriendsBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setFindMyFriendsBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.findMyFriendsBlocked = value;
     }
     /**
@@ -2265,8 +2265,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the gameCenterBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGameCenterBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setGameCenterBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.gameCenterBlocked = value;
     }
     /**
@@ -2274,8 +2274,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the gamingBlockGameCenterFriends property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGamingBlockGameCenterFriends(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setGamingBlockGameCenterFriends(@jakarta.annotation.Nullable final Boolean value) {
         this.gamingBlockGameCenterFriends = value;
     }
     /**
@@ -2283,8 +2283,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the gamingBlockMultiplayer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGamingBlockMultiplayer(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setGamingBlockMultiplayer(@jakarta.annotation.Nullable final Boolean value) {
         this.gamingBlockMultiplayer = value;
     }
     /**
@@ -2292,8 +2292,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the hostPairingBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHostPairingBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setHostPairingBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.hostPairingBlocked = value;
     }
     /**
@@ -2301,8 +2301,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iBooksStoreBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIBooksStoreBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIBooksStoreBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.iBooksStoreBlocked = value;
     }
     /**
@@ -2310,8 +2310,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iBooksStoreBlockErotica property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIBooksStoreBlockErotica(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIBooksStoreBlockErotica(@jakarta.annotation.Nullable final Boolean value) {
         this.iBooksStoreBlockErotica = value;
     }
     /**
@@ -2319,8 +2319,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudBlockActivityContinuation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setICloudBlockActivityContinuation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setICloudBlockActivityContinuation(@jakarta.annotation.Nullable final Boolean value) {
         this.iCloudBlockActivityContinuation = value;
     }
     /**
@@ -2328,8 +2328,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudBlockBackup property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setICloudBlockBackup(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setICloudBlockBackup(@jakarta.annotation.Nullable final Boolean value) {
         this.iCloudBlockBackup = value;
     }
     /**
@@ -2337,8 +2337,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudBlockDocumentSync property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setICloudBlockDocumentSync(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setICloudBlockDocumentSync(@jakarta.annotation.Nullable final Boolean value) {
         this.iCloudBlockDocumentSync = value;
     }
     /**
@@ -2346,8 +2346,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudBlockManagedAppsSync property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setICloudBlockManagedAppsSync(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setICloudBlockManagedAppsSync(@jakarta.annotation.Nullable final Boolean value) {
         this.iCloudBlockManagedAppsSync = value;
     }
     /**
@@ -2355,8 +2355,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudBlockPhotoLibrary property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setICloudBlockPhotoLibrary(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setICloudBlockPhotoLibrary(@jakarta.annotation.Nullable final Boolean value) {
         this.iCloudBlockPhotoLibrary = value;
     }
     /**
@@ -2364,8 +2364,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudBlockPhotoStreamSync property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setICloudBlockPhotoStreamSync(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setICloudBlockPhotoStreamSync(@jakarta.annotation.Nullable final Boolean value) {
         this.iCloudBlockPhotoStreamSync = value;
     }
     /**
@@ -2373,8 +2373,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudBlockSharedPhotoStream property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setICloudBlockSharedPhotoStream(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setICloudBlockSharedPhotoStream(@jakarta.annotation.Nullable final Boolean value) {
         this.iCloudBlockSharedPhotoStream = value;
     }
     /**
@@ -2382,8 +2382,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudRequireEncryptedBackup property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setICloudRequireEncryptedBackup(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setICloudRequireEncryptedBackup(@jakarta.annotation.Nullable final Boolean value) {
         this.iCloudRequireEncryptedBackup = value;
     }
     /**
@@ -2391,8 +2391,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iTunesBlockExplicitContent property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setITunesBlockExplicitContent(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setITunesBlockExplicitContent(@jakarta.annotation.Nullable final Boolean value) {
         this.iTunesBlockExplicitContent = value;
     }
     /**
@@ -2400,8 +2400,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iTunesBlockMusicService property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setITunesBlockMusicService(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setITunesBlockMusicService(@jakarta.annotation.Nullable final Boolean value) {
         this.iTunesBlockMusicService = value;
     }
     /**
@@ -2409,8 +2409,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iTunesBlockRadio property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setITunesBlockRadio(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setITunesBlockRadio(@jakarta.annotation.Nullable final Boolean value) {
         this.iTunesBlockRadio = value;
     }
     /**
@@ -2418,8 +2418,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the keyboardBlockAutoCorrect property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKeyboardBlockAutoCorrect(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKeyboardBlockAutoCorrect(@jakarta.annotation.Nullable final Boolean value) {
         this.keyboardBlockAutoCorrect = value;
     }
     /**
@@ -2427,8 +2427,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the keyboardBlockDictation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKeyboardBlockDictation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKeyboardBlockDictation(@jakarta.annotation.Nullable final Boolean value) {
         this.keyboardBlockDictation = value;
     }
     /**
@@ -2436,8 +2436,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the keyboardBlockPredictive property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKeyboardBlockPredictive(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKeyboardBlockPredictive(@jakarta.annotation.Nullable final Boolean value) {
         this.keyboardBlockPredictive = value;
     }
     /**
@@ -2445,8 +2445,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the keyboardBlockShortcuts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKeyboardBlockShortcuts(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKeyboardBlockShortcuts(@jakarta.annotation.Nullable final Boolean value) {
         this.keyboardBlockShortcuts = value;
     }
     /**
@@ -2454,8 +2454,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the keyboardBlockSpellCheck property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKeyboardBlockSpellCheck(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKeyboardBlockSpellCheck(@jakarta.annotation.Nullable final Boolean value) {
         this.keyboardBlockSpellCheck = value;
     }
     /**
@@ -2463,8 +2463,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowAssistiveSpeak property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeAllowAssistiveSpeak(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeAllowAssistiveSpeak(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskModeAllowAssistiveSpeak = value;
     }
     /**
@@ -2472,8 +2472,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowAssistiveTouchSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeAllowAssistiveTouchSettings(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeAllowAssistiveTouchSettings(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskModeAllowAssistiveTouchSettings = value;
     }
     /**
@@ -2481,8 +2481,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowAutoLock property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeAllowAutoLock(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeAllowAutoLock(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskModeAllowAutoLock = value;
     }
     /**
@@ -2490,8 +2490,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowColorInversionSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeAllowColorInversionSettings(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeAllowColorInversionSettings(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskModeAllowColorInversionSettings = value;
     }
     /**
@@ -2499,8 +2499,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowRingerSwitch property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeAllowRingerSwitch(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeAllowRingerSwitch(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskModeAllowRingerSwitch = value;
     }
     /**
@@ -2508,8 +2508,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowScreenRotation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeAllowScreenRotation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeAllowScreenRotation(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskModeAllowScreenRotation = value;
     }
     /**
@@ -2517,8 +2517,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowSleepButton property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeAllowSleepButton(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeAllowSleepButton(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskModeAllowSleepButton = value;
     }
     /**
@@ -2526,8 +2526,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowTouchscreen property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeAllowTouchscreen(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeAllowTouchscreen(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskModeAllowTouchscreen = value;
     }
     /**
@@ -2535,8 +2535,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowVoiceOverSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeAllowVoiceOverSettings(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeAllowVoiceOverSettings(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskModeAllowVoiceOverSettings = value;
     }
     /**
@@ -2544,8 +2544,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowVolumeButtons property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeAllowVolumeButtons(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeAllowVolumeButtons(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskModeAllowVolumeButtons = value;
     }
     /**
@@ -2553,8 +2553,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowZoomSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeAllowZoomSettings(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeAllowZoomSettings(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskModeAllowZoomSettings = value;
     }
     /**
@@ -2562,8 +2562,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAppStoreUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeAppStoreUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeAppStoreUrl(@jakarta.annotation.Nullable final String value) {
         this.kioskModeAppStoreUrl = value;
     }
     /**
@@ -2571,8 +2571,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeBuiltInAppId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeBuiltInAppId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeBuiltInAppId(@jakarta.annotation.Nullable final String value) {
         this.kioskModeBuiltInAppId = value;
     }
     /**
@@ -2580,8 +2580,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeManagedAppId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeManagedAppId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeManagedAppId(@jakarta.annotation.Nullable final String value) {
         this.kioskModeManagedAppId = value;
     }
     /**
@@ -2589,8 +2589,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeRequireAssistiveTouch property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeRequireAssistiveTouch(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeRequireAssistiveTouch(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskModeRequireAssistiveTouch = value;
     }
     /**
@@ -2598,8 +2598,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeRequireColorInversion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeRequireColorInversion(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeRequireColorInversion(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskModeRequireColorInversion = value;
     }
     /**
@@ -2607,8 +2607,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeRequireMonoAudio property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeRequireMonoAudio(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeRequireMonoAudio(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskModeRequireMonoAudio = value;
     }
     /**
@@ -2616,8 +2616,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeRequireVoiceOver property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeRequireVoiceOver(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeRequireVoiceOver(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskModeRequireVoiceOver = value;
     }
     /**
@@ -2625,8 +2625,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeRequireZoom property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskModeRequireZoom(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setKioskModeRequireZoom(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskModeRequireZoom = value;
     }
     /**
@@ -2634,8 +2634,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the lockScreenBlockControlCenter property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLockScreenBlockControlCenter(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setLockScreenBlockControlCenter(@jakarta.annotation.Nullable final Boolean value) {
         this.lockScreenBlockControlCenter = value;
     }
     /**
@@ -2643,8 +2643,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the lockScreenBlockNotificationView property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLockScreenBlockNotificationView(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setLockScreenBlockNotificationView(@jakarta.annotation.Nullable final Boolean value) {
         this.lockScreenBlockNotificationView = value;
     }
     /**
@@ -2652,8 +2652,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the lockScreenBlockPassbook property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLockScreenBlockPassbook(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setLockScreenBlockPassbook(@jakarta.annotation.Nullable final Boolean value) {
         this.lockScreenBlockPassbook = value;
     }
     /**
@@ -2661,8 +2661,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the lockScreenBlockTodayView property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLockScreenBlockTodayView(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setLockScreenBlockTodayView(@jakarta.annotation.Nullable final Boolean value) {
         this.lockScreenBlockTodayView = value;
     }
     /**
@@ -2670,8 +2670,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaContentRatingApps(@javax.annotation.Nullable final RatingAppsType value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaContentRatingApps(@jakarta.annotation.Nullable final RatingAppsType value) {
         this.mediaContentRatingApps = value;
     }
     /**
@@ -2679,8 +2679,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingAustralia property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaContentRatingAustralia(@javax.annotation.Nullable final MediaContentRatingAustralia value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaContentRatingAustralia(@jakarta.annotation.Nullable final MediaContentRatingAustralia value) {
         this.mediaContentRatingAustralia = value;
     }
     /**
@@ -2688,8 +2688,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingCanada property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaContentRatingCanada(@javax.annotation.Nullable final MediaContentRatingCanada value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaContentRatingCanada(@jakarta.annotation.Nullable final MediaContentRatingCanada value) {
         this.mediaContentRatingCanada = value;
     }
     /**
@@ -2697,8 +2697,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingFrance property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaContentRatingFrance(@javax.annotation.Nullable final MediaContentRatingFrance value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaContentRatingFrance(@jakarta.annotation.Nullable final MediaContentRatingFrance value) {
         this.mediaContentRatingFrance = value;
     }
     /**
@@ -2706,8 +2706,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingGermany property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaContentRatingGermany(@javax.annotation.Nullable final MediaContentRatingGermany value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaContentRatingGermany(@jakarta.annotation.Nullable final MediaContentRatingGermany value) {
         this.mediaContentRatingGermany = value;
     }
     /**
@@ -2715,8 +2715,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingIreland property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaContentRatingIreland(@javax.annotation.Nullable final MediaContentRatingIreland value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaContentRatingIreland(@jakarta.annotation.Nullable final MediaContentRatingIreland value) {
         this.mediaContentRatingIreland = value;
     }
     /**
@@ -2724,8 +2724,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingJapan property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaContentRatingJapan(@javax.annotation.Nullable final MediaContentRatingJapan value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaContentRatingJapan(@jakarta.annotation.Nullable final MediaContentRatingJapan value) {
         this.mediaContentRatingJapan = value;
     }
     /**
@@ -2733,8 +2733,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingNewZealand property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaContentRatingNewZealand(@javax.annotation.Nullable final MediaContentRatingNewZealand value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaContentRatingNewZealand(@jakarta.annotation.Nullable final MediaContentRatingNewZealand value) {
         this.mediaContentRatingNewZealand = value;
     }
     /**
@@ -2742,8 +2742,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingUnitedKingdom property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaContentRatingUnitedKingdom(@javax.annotation.Nullable final MediaContentRatingUnitedKingdom value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaContentRatingUnitedKingdom(@jakarta.annotation.Nullable final MediaContentRatingUnitedKingdom value) {
         this.mediaContentRatingUnitedKingdom = value;
     }
     /**
@@ -2751,8 +2751,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingUnitedStates property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaContentRatingUnitedStates(@javax.annotation.Nullable final MediaContentRatingUnitedStates value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaContentRatingUnitedStates(@jakarta.annotation.Nullable final MediaContentRatingUnitedStates value) {
         this.mediaContentRatingUnitedStates = value;
     }
     /**
@@ -2760,8 +2760,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the messagesBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessagesBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setMessagesBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.messagesBlocked = value;
     }
     /**
@@ -2769,8 +2769,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the networkUsageRules property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkUsageRules(@javax.annotation.Nullable final java.util.List<IosNetworkUsageRule> value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkUsageRules(@jakarta.annotation.Nullable final java.util.List<IosNetworkUsageRule> value) {
         this.networkUsageRules = value;
     }
     /**
@@ -2778,8 +2778,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the notificationsBlockSettingsModification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotificationsBlockSettingsModification(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setNotificationsBlockSettingsModification(@jakarta.annotation.Nullable final Boolean value) {
         this.notificationsBlockSettingsModification = value;
     }
     /**
@@ -2787,8 +2787,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeBlockFingerprintModification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasscodeBlockFingerprintModification(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPasscodeBlockFingerprintModification(@jakarta.annotation.Nullable final Boolean value) {
         this.passcodeBlockFingerprintModification = value;
     }
     /**
@@ -2796,8 +2796,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeBlockFingerprintUnlock property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasscodeBlockFingerprintUnlock(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPasscodeBlockFingerprintUnlock(@jakarta.annotation.Nullable final Boolean value) {
         this.passcodeBlockFingerprintUnlock = value;
     }
     /**
@@ -2805,8 +2805,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeBlockModification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasscodeBlockModification(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPasscodeBlockModification(@jakarta.annotation.Nullable final Boolean value) {
         this.passcodeBlockModification = value;
     }
     /**
@@ -2814,8 +2814,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeBlockSimple property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasscodeBlockSimple(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPasscodeBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
         this.passcodeBlockSimple = value;
     }
     /**
@@ -2823,8 +2823,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeExpirationDays property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasscodeExpirationDays(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasscodeExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.passcodeExpirationDays = value;
     }
     /**
@@ -2832,8 +2832,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeMinimumCharacterSetCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasscodeMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasscodeMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
         this.passcodeMinimumCharacterSetCount = value;
     }
     /**
@@ -2841,8 +2841,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeMinimumLength property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasscodeMinimumLength(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasscodeMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passcodeMinimumLength = value;
     }
     /**
@@ -2850,8 +2850,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeMinutesOfInactivityBeforeLock property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasscodeMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasscodeMinutesOfInactivityBeforeLock(@jakarta.annotation.Nullable final Integer value) {
         this.passcodeMinutesOfInactivityBeforeLock = value;
     }
     /**
@@ -2859,8 +2859,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasscodeMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasscodeMinutesOfInactivityBeforeScreenTimeout(@jakarta.annotation.Nullable final Integer value) {
         this.passcodeMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
@@ -2868,8 +2868,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodePreviousPasscodeBlockCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasscodePreviousPasscodeBlockCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasscodePreviousPasscodeBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.passcodePreviousPasscodeBlockCount = value;
     }
     /**
@@ -2877,8 +2877,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeRequired property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasscodeRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPasscodeRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.passcodeRequired = value;
     }
     /**
@@ -2886,8 +2886,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeRequiredType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasscodeRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
+    @jakarta.annotation.Nonnull
+    public void setPasscodeRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
         this.passcodeRequiredType = value;
     }
     /**
@@ -2895,8 +2895,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeSignInFailureCountBeforeWipe property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasscodeSignInFailureCountBeforeWipe(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasscodeSignInFailureCountBeforeWipe(@jakarta.annotation.Nullable final Integer value) {
         this.passcodeSignInFailureCountBeforeWipe = value;
     }
     /**
@@ -2904,8 +2904,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the podcastsBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPodcastsBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPodcastsBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.podcastsBlocked = value;
     }
     /**
@@ -2913,8 +2913,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safariBlockAutofill property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSafariBlockAutofill(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSafariBlockAutofill(@jakarta.annotation.Nullable final Boolean value) {
         this.safariBlockAutofill = value;
     }
     /**
@@ -2922,8 +2922,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safariBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSafariBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSafariBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.safariBlocked = value;
     }
     /**
@@ -2931,8 +2931,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safariBlockJavaScript property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSafariBlockJavaScript(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSafariBlockJavaScript(@jakarta.annotation.Nullable final Boolean value) {
         this.safariBlockJavaScript = value;
     }
     /**
@@ -2940,8 +2940,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safariBlockPopups property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSafariBlockPopups(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSafariBlockPopups(@jakarta.annotation.Nullable final Boolean value) {
         this.safariBlockPopups = value;
     }
     /**
@@ -2949,8 +2949,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safariCookieSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSafariCookieSettings(@javax.annotation.Nullable final WebBrowserCookieSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setSafariCookieSettings(@jakarta.annotation.Nullable final WebBrowserCookieSettings value) {
         this.safariCookieSettings = value;
     }
     /**
@@ -2958,8 +2958,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safariManagedDomains property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSafariManagedDomains(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSafariManagedDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.safariManagedDomains = value;
     }
     /**
@@ -2967,8 +2967,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safariPasswordAutoFillDomains property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSafariPasswordAutoFillDomains(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSafariPasswordAutoFillDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.safariPasswordAutoFillDomains = value;
     }
     /**
@@ -2976,8 +2976,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safariRequireFraudWarning property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSafariRequireFraudWarning(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSafariRequireFraudWarning(@jakarta.annotation.Nullable final Boolean value) {
         this.safariRequireFraudWarning = value;
     }
     /**
@@ -2985,8 +2985,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the screenCaptureBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setScreenCaptureBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.screenCaptureBlocked = value;
     }
     /**
@@ -2994,8 +2994,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the siriBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSiriBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSiriBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.siriBlocked = value;
     }
     /**
@@ -3003,8 +3003,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the siriBlockedWhenLocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSiriBlockedWhenLocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSiriBlockedWhenLocked(@jakarta.annotation.Nullable final Boolean value) {
         this.siriBlockedWhenLocked = value;
     }
     /**
@@ -3012,8 +3012,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the siriBlockUserGeneratedContent property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSiriBlockUserGeneratedContent(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSiriBlockUserGeneratedContent(@jakarta.annotation.Nullable final Boolean value) {
         this.siriBlockUserGeneratedContent = value;
     }
     /**
@@ -3021,8 +3021,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the siriRequireProfanityFilter property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSiriRequireProfanityFilter(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSiriRequireProfanityFilter(@jakarta.annotation.Nullable final Boolean value) {
         this.siriRequireProfanityFilter = value;
     }
     /**
@@ -3030,8 +3030,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the spotlightBlockInternetResults property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSpotlightBlockInternetResults(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSpotlightBlockInternetResults(@jakarta.annotation.Nullable final Boolean value) {
         this.spotlightBlockInternetResults = value;
     }
     /**
@@ -3039,8 +3039,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the voiceDialingBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVoiceDialingBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setVoiceDialingBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.voiceDialingBlocked = value;
     }
     /**
@@ -3048,8 +3048,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the wallpaperBlockModification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWallpaperBlockModification(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setWallpaperBlockModification(@jakarta.annotation.Nullable final Boolean value) {
         this.wallpaperBlockModification = value;
     }
     /**
@@ -3057,8 +3057,8 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the wiFiConnectOnlyToConfiguredNetworks property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWiFiConnectOnlyToConfiguredNetworks(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setWiFiConnectOnlyToConfiguredNetworks(@jakarta.annotation.Nullable final Boolean value) {
         this.wiFiConnectOnlyToConfiguredNetworks = value;
     }
 }

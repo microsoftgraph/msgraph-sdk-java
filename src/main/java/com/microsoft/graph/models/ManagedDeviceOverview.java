@@ -34,7 +34,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * Instantiates a new managedDeviceOverview and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedDeviceOverview() {
         super();
     }
@@ -43,8 +43,8 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedDeviceOverview
      */
-    @javax.annotation.Nonnull
-    public static ManagedDeviceOverview createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedDeviceOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagedDeviceOverview();
     }
@@ -52,7 +52,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * Gets the deviceExchangeAccessStateSummary property value. Distribution of Exchange Access State in Intune
      * @return a deviceExchangeAccessStateSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceExchangeAccessStateSummary getDeviceExchangeAccessStateSummary() {
         return this.deviceExchangeAccessStateSummary;
     }
@@ -60,7 +60,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * Gets the deviceOperatingSystemSummary property value. Device operating system summary.
      * @return a deviceOperatingSystemSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceOperatingSystemSummary getDeviceOperatingSystemSummary() {
         return this.deviceOperatingSystemSummary;
     }
@@ -68,7 +68,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * Gets the dualEnrolledDeviceCount property value. The number of devices enrolled in both MDM and EAS
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDualEnrolledDeviceCount() {
         return this.dualEnrolledDeviceCount;
     }
@@ -76,7 +76,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * Gets the enrolledDeviceCount property value. Total enrolled device count. Does not include PC devices managed via Intune PC Agent
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getEnrolledDeviceCount() {
         return this.enrolledDeviceCount;
     }
@@ -84,7 +84,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceExchangeAccessStateSummary", (n) -> { this.setDeviceExchangeAccessStateSummary(n.getObjectValue(DeviceExchangeAccessStateSummary::createFromDiscriminatorValue)); });
@@ -98,7 +98,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * Gets the mdmEnrolledCount property value. The number of devices enrolled in MDM
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMdmEnrolledCount() {
         return this.mdmEnrolledCount;
     }
@@ -107,8 +107,8 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("deviceExchangeAccessStateSummary", this.getDeviceExchangeAccessStateSummary());
@@ -122,8 +122,8 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the deviceExchangeAccessStateSummary property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceExchangeAccessStateSummary(@javax.annotation.Nullable final DeviceExchangeAccessStateSummary value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceExchangeAccessStateSummary(@jakarta.annotation.Nullable final DeviceExchangeAccessStateSummary value) {
         this.deviceExchangeAccessStateSummary = value;
     }
     /**
@@ -131,8 +131,8 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the deviceOperatingSystemSummary property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceOperatingSystemSummary(@javax.annotation.Nullable final DeviceOperatingSystemSummary value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceOperatingSystemSummary(@jakarta.annotation.Nullable final DeviceOperatingSystemSummary value) {
         this.deviceOperatingSystemSummary = value;
     }
     /**
@@ -140,8 +140,8 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the dualEnrolledDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDualEnrolledDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setDualEnrolledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.dualEnrolledDeviceCount = value;
     }
     /**
@@ -149,8 +149,8 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the enrolledDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrolledDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setEnrolledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.enrolledDeviceCount = value;
     }
     /**
@@ -158,8 +158,8 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the mdmEnrolledCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMdmEnrolledCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMdmEnrolledCount(@jakarta.annotation.Nullable final Integer value) {
         this.mdmEnrolledCount = value;
     }
 }

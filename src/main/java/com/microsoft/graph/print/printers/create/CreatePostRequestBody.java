@@ -45,7 +45,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new createPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CreatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -54,8 +54,8 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a createPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static CreatePostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CreatePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CreatePostRequestBody();
     }
@@ -63,7 +63,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -71,7 +71,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the certificateSigningRequest property value. The certificateSigningRequest property
      * @return a printCertificateSigningRequest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrintCertificateSigningRequest getCertificateSigningRequest() {
         return this.certificateSigningRequest;
     }
@@ -79,7 +79,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the connectorId property value. The connectorId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConnectorId() {
         return this.connectorId;
     }
@@ -87,7 +87,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -95,7 +95,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("certificateSigningRequest", (n) -> { this.setCertificateSigningRequest(n.getObjectValue(PrintCertificateSigningRequest::createFromDiscriminatorValue)); });
@@ -111,7 +111,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the hasPhysicalDevice property value. The hasPhysicalDevice property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHasPhysicalDevice() {
         return this.hasPhysicalDevice;
     }
@@ -119,7 +119,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the manufacturer property value. The manufacturer property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManufacturer() {
         return this.manufacturer;
     }
@@ -127,7 +127,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the model property value. The model property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getModel() {
         return this.model;
     }
@@ -135,7 +135,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the physicalDeviceId property value. The physicalDeviceId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPhysicalDeviceId() {
         return this.physicalDeviceId;
     }
@@ -144,8 +144,8 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("certificateSigningRequest", this.getCertificateSigningRequest());
         writer.writeStringValue("connectorId", this.getConnectorId());
@@ -161,8 +161,8 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -170,8 +170,8 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the certificateSigningRequest property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateSigningRequest(@javax.annotation.Nullable final PrintCertificateSigningRequest value) {
+    @jakarta.annotation.Nonnull
+    public void setCertificateSigningRequest(@jakarta.annotation.Nullable final PrintCertificateSigningRequest value) {
         this.certificateSigningRequest = value;
     }
     /**
@@ -179,8 +179,8 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the connectorId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectorId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectorId(@jakarta.annotation.Nullable final String value) {
         this.connectorId = value;
     }
     /**
@@ -188,8 +188,8 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -197,8 +197,8 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the hasPhysicalDevice property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHasPhysicalDevice(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setHasPhysicalDevice(@jakarta.annotation.Nullable final Boolean value) {
         this.hasPhysicalDevice = value;
     }
     /**
@@ -206,8 +206,8 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManufacturer(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
@@ -215,8 +215,8 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the model property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
@@ -224,8 +224,8 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the physicalDeviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhysicalDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPhysicalDeviceId(@jakarta.annotation.Nullable final String value) {
         this.physicalDeviceId = value;
     }
 }

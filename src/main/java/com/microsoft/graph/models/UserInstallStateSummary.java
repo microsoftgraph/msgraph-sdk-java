@@ -34,7 +34,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      * Instantiates a new userInstallStateSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserInstallStateSummary() {
         super();
     }
@@ -43,8 +43,8 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userInstallStateSummary
      */
-    @javax.annotation.Nonnull
-    public static UserInstallStateSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserInstallStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserInstallStateSummary();
     }
@@ -52,7 +52,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      * Gets the deviceStates property value. The install state of the eBook.
      * @return a deviceInstallState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceInstallState> getDeviceStates() {
         return this.deviceStates;
     }
@@ -60,7 +60,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      * Gets the failedDeviceCount property value. Failed Device Count.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFailedDeviceCount() {
         return this.failedDeviceCount;
     }
@@ -68,7 +68,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceStates", (n) -> { this.setDeviceStates(n.getCollectionOfObjectValues(DeviceInstallState::createFromDiscriminatorValue)); });
@@ -82,7 +82,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      * Gets the installedDeviceCount property value. Installed Device Count.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getInstalledDeviceCount() {
         return this.installedDeviceCount;
     }
@@ -90,7 +90,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      * Gets the notInstalledDeviceCount property value. Not installed device count.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNotInstalledDeviceCount() {
         return this.notInstalledDeviceCount;
     }
@@ -98,7 +98,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      * Gets the userName property value. User name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserName() {
         return this.userName;
     }
@@ -107,8 +107,8 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("deviceStates", this.getDeviceStates());
@@ -122,8 +122,8 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      * @param value Value to set for the deviceStates property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceStates(@javax.annotation.Nullable final java.util.List<DeviceInstallState> value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceStates(@jakarta.annotation.Nullable final java.util.List<DeviceInstallState> value) {
         this.deviceStates = value;
     }
     /**
@@ -131,8 +131,8 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      * @param value Value to set for the failedDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFailedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedDeviceCount = value;
     }
     /**
@@ -140,8 +140,8 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      * @param value Value to set for the installedDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstalledDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setInstalledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.installedDeviceCount = value;
     }
     /**
@@ -149,8 +149,8 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      * @param value Value to set for the notInstalledDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotInstalledDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNotInstalledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.notInstalledDeviceCount = value;
     }
     /**
@@ -158,8 +158,8 @@ public class UserInstallStateSummary extends Entity implements Parsable {
      * @param value Value to set for the userName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
 }

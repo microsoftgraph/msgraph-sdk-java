@@ -29,7 +29,7 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new lookupPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LookupPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,8 +38,8 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a lookupPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static LookupPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static LookupPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new LookupPostRequestBody();
     }
@@ -47,7 +47,7 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -55,7 +55,7 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("lookupValue", (n) -> { this.setLookupValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -67,7 +67,7 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the lookupValue property value. The lookupValue property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getLookupValue() {
         return this.lookupValue;
     }
@@ -75,7 +75,7 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the lookupVector property value. The lookupVector property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getLookupVector() {
         return this.lookupVector;
     }
@@ -83,7 +83,7 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the resultVector property value. The resultVector property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getResultVector() {
         return this.resultVector;
     }
@@ -92,8 +92,8 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("lookupValue", this.getLookupValue());
         writer.writeObjectValue("lookupVector", this.getLookupVector());
@@ -105,8 +105,8 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -114,8 +114,8 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lookupValue property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLookupValue(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setLookupValue(@jakarta.annotation.Nullable final Json value) {
         this.lookupValue = value;
     }
     /**
@@ -123,8 +123,8 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lookupVector property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLookupVector(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setLookupVector(@jakarta.annotation.Nullable final Json value) {
         this.lookupVector = value;
     }
     /**
@@ -132,8 +132,8 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the resultVector property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResultVector(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setResultVector(@jakarta.annotation.Nullable final Json value) {
         this.resultVector = value;
     }
 }

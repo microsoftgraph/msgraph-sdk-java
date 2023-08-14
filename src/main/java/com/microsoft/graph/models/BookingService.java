@@ -99,7 +99,7 @@ public class BookingService extends Entity implements Parsable {
      * Instantiates a new bookingService and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BookingService() {
         super();
     }
@@ -108,8 +108,8 @@ public class BookingService extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a bookingService
      */
-    @javax.annotation.Nonnull
-    public static BookingService createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BookingService createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BookingService();
     }
@@ -117,7 +117,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the additionalInformation property value. Additional information that is sent to the customer when an appointment is confirmed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAdditionalInformation() {
         return this.additionalInformation;
     }
@@ -125,7 +125,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the customQuestions property value. Contains the set of custom questions associated with a particular service.
      * @return a bookingQuestionAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<BookingQuestionAssignment> getCustomQuestions() {
         return this.customQuestions;
     }
@@ -133,7 +133,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the defaultDuration property value. The default length of the service, represented in numbers of days, hours, minutes, and seconds. For example, P11D23H59M59.999999999999S.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getDefaultDuration() {
         return this.defaultDuration;
     }
@@ -141,7 +141,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the defaultLocation property value. The default physical location for the service.
      * @return a location
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Location getDefaultLocation() {
         return this.defaultLocation;
     }
@@ -149,7 +149,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the defaultPrice property value. The default monetary price for the service.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getDefaultPrice() {
         return this.defaultPrice;
     }
@@ -157,7 +157,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the defaultPriceType property value. Represents the type of pricing of a booking service.
      * @return a bookingPriceType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BookingPriceType getDefaultPriceType() {
         return this.defaultPriceType;
     }
@@ -165,7 +165,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the defaultReminders property value. The default set of reminders for an appointment of this service. The value of this property is available only when reading this bookingService by its ID.
      * @return a bookingReminder
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<BookingReminder> getDefaultReminders() {
         return this.defaultReminders;
     }
@@ -173,7 +173,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the description property value. A text description for the service.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -181,7 +181,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the displayName property value. A service name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -189,7 +189,7 @@ public class BookingService extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("additionalInformation", (n) -> { this.setAdditionalInformation(n.getStringValue()); });
@@ -219,7 +219,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the isAnonymousJoinEnabled property value. True if the URL to join the appointment anonymously (anonymousJoinWebUrl) will be generated for the appointment booked for this service.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAnonymousJoinEnabled() {
         return this.isAnonymousJoinEnabled;
     }
@@ -227,7 +227,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the isHiddenFromCustomers property value. True means this service is not available to customers for booking.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsHiddenFromCustomers() {
         return this.isHiddenFromCustomers;
     }
@@ -235,7 +235,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the isLocationOnline property value. True indicates that the appointments for the service will be held online. Default value is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsLocationOnline() {
         return this.isLocationOnline;
     }
@@ -243,7 +243,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the languageTag property value. The language of the self-service booking page.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLanguageTag() {
         return this.languageTag;
     }
@@ -251,7 +251,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the maximumAttendeesCount property value. The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaximumAttendeesCount() {
         return this.maximumAttendeesCount;
     }
@@ -259,7 +259,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the notes property value. Additional information about this service.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNotes() {
         return this.notes;
     }
@@ -267,7 +267,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the postBuffer property value. The time to buffer after an appointment for this service ends, and before the next customer appointment can be booked.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getPostBuffer() {
         return this.postBuffer;
     }
@@ -275,7 +275,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the preBuffer property value. The time to buffer before an appointment for this service can start.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getPreBuffer() {
         return this.preBuffer;
     }
@@ -283,7 +283,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the schedulingPolicy property value. The set of policies that determine how appointments for this type of service should be created and managed.
      * @return a bookingSchedulingPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BookingSchedulingPolicy getSchedulingPolicy() {
         return this.schedulingPolicy;
     }
@@ -291,7 +291,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the smsNotificationsEnabled property value. True indicates SMS notifications can be sent to the customers for the appointment of the service. Default value is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSmsNotificationsEnabled() {
         return this.smsNotificationsEnabled;
     }
@@ -299,7 +299,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the staffMemberIds property value. Represents those staff members who provide this service.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getStaffMemberIds() {
         return this.staffMemberIds;
     }
@@ -307,7 +307,7 @@ public class BookingService extends Entity implements Parsable {
      * Gets the webUrl property value. The URL a customer uses to access the service.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebUrl() {
         return this.webUrl;
     }
@@ -316,8 +316,8 @@ public class BookingService extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("additionalInformation", this.getAdditionalInformation());
@@ -346,8 +346,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the additionalInformation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalInformation(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalInformation(@jakarta.annotation.Nullable final String value) {
         this.additionalInformation = value;
     }
     /**
@@ -355,8 +355,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the customQuestions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomQuestions(@javax.annotation.Nullable final java.util.List<BookingQuestionAssignment> value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomQuestions(@jakarta.annotation.Nullable final java.util.List<BookingQuestionAssignment> value) {
         this.customQuestions = value;
     }
     /**
@@ -364,8 +364,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the defaultDuration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.defaultDuration = value;
     }
     /**
@@ -373,8 +373,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the defaultLocation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultLocation(@javax.annotation.Nullable final Location value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultLocation(@jakarta.annotation.Nullable final Location value) {
         this.defaultLocation = value;
     }
     /**
@@ -382,8 +382,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the defaultPrice property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultPrice(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultPrice(@jakarta.annotation.Nullable final Double value) {
         this.defaultPrice = value;
     }
     /**
@@ -391,8 +391,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the defaultPriceType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultPriceType(@javax.annotation.Nullable final BookingPriceType value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultPriceType(@jakarta.annotation.Nullable final BookingPriceType value) {
         this.defaultPriceType = value;
     }
     /**
@@ -400,8 +400,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the defaultReminders property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultReminders(@javax.annotation.Nullable final java.util.List<BookingReminder> value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultReminders(@jakarta.annotation.Nullable final java.util.List<BookingReminder> value) {
         this.defaultReminders = value;
     }
     /**
@@ -409,8 +409,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -418,8 +418,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -427,8 +427,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the isAnonymousJoinEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAnonymousJoinEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsAnonymousJoinEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isAnonymousJoinEnabled = value;
     }
     /**
@@ -436,8 +436,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the isHiddenFromCustomers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsHiddenFromCustomers(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsHiddenFromCustomers(@jakarta.annotation.Nullable final Boolean value) {
         this.isHiddenFromCustomers = value;
     }
     /**
@@ -445,8 +445,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the isLocationOnline property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsLocationOnline(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsLocationOnline(@jakarta.annotation.Nullable final Boolean value) {
         this.isLocationOnline = value;
     }
     /**
@@ -454,8 +454,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the languageTag property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLanguageTag(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
         this.languageTag = value;
     }
     /**
@@ -463,8 +463,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the maximumAttendeesCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaximumAttendeesCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMaximumAttendeesCount(@jakarta.annotation.Nullable final Integer value) {
         this.maximumAttendeesCount = value;
     }
     /**
@@ -472,8 +472,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotes(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNotes(@jakarta.annotation.Nullable final String value) {
         this.notes = value;
     }
     /**
@@ -481,8 +481,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the postBuffer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPostBuffer(@javax.annotation.Nullable final PeriodAndDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setPostBuffer(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.postBuffer = value;
     }
     /**
@@ -490,8 +490,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the preBuffer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreBuffer(@javax.annotation.Nullable final PeriodAndDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setPreBuffer(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.preBuffer = value;
     }
     /**
@@ -499,8 +499,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the schedulingPolicy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchedulingPolicy(@javax.annotation.Nullable final BookingSchedulingPolicy value) {
+    @jakarta.annotation.Nonnull
+    public void setSchedulingPolicy(@jakarta.annotation.Nullable final BookingSchedulingPolicy value) {
         this.schedulingPolicy = value;
     }
     /**
@@ -508,8 +508,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the smsNotificationsEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSmsNotificationsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSmsNotificationsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.smsNotificationsEnabled = value;
     }
     /**
@@ -517,8 +517,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the staffMemberIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStaffMemberIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setStaffMemberIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.staffMemberIds = value;
     }
     /**
@@ -526,8 +526,8 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }
 }

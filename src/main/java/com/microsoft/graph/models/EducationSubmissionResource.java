@@ -19,7 +19,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      * Instantiates a new educationSubmissionResource and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSubmissionResource() {
         super();
     }
@@ -28,8 +28,8 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationSubmissionResource
      */
-    @javax.annotation.Nonnull
-    public static EducationSubmissionResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationSubmissionResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationSubmissionResource();
     }
@@ -37,7 +37,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      * Gets the assignmentResourceUrl property value. Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssignmentResourceUrl() {
         return this.assignmentResourceUrl;
     }
@@ -45,7 +45,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignmentResourceUrl", (n) -> { this.setAssignmentResourceUrl(n.getStringValue()); });
@@ -56,7 +56,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      * Gets the resource property value. Resource object.
      * @return a educationResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationResource getResource() {
         return this.resource;
     }
@@ -65,8 +65,8 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("assignmentResourceUrl", this.getAssignmentResourceUrl());
@@ -77,8 +77,8 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      * @param value Value to set for the assignmentResourceUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentResourceUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignmentResourceUrl(@jakarta.annotation.Nullable final String value) {
         this.assignmentResourceUrl = value;
     }
     /**
@@ -86,8 +86,8 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResource(@javax.annotation.Nullable final EducationResource value) {
+    @jakarta.annotation.Nonnull
+    public void setResource(@jakarta.annotation.Nullable final EducationResource value) {
         this.resource = value;
     }
 }

@@ -47,7 +47,7 @@ public class RbacApplication extends Entity implements Parsable {
      * Instantiates a new rbacApplication and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RbacApplication() {
         super();
     }
@@ -56,8 +56,8 @@ public class RbacApplication extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a rbacApplication
      */
-    @javax.annotation.Nonnull
-    public static RbacApplication createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RbacApplication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RbacApplication();
     }
@@ -65,7 +65,7 @@ public class RbacApplication extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("resourceNamespaces", (n) -> { this.setResourceNamespaces(n.getCollectionOfObjectValues(UnifiedRbacResourceNamespace::createFromDiscriminatorValue)); });
@@ -83,7 +83,7 @@ public class RbacApplication extends Entity implements Parsable {
      * Gets the resourceNamespaces property value. The resourceNamespaces property
      * @return a unifiedRbacResourceNamespace
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRbacResourceNamespace> getResourceNamespaces() {
         return this.resourceNamespaces;
     }
@@ -91,7 +91,7 @@ public class RbacApplication extends Entity implements Parsable {
      * Gets the roleAssignments property value. Resource to grant access to users or groups.
      * @return a unifiedRoleAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignment> getRoleAssignments() {
         return this.roleAssignments;
     }
@@ -99,7 +99,7 @@ public class RbacApplication extends Entity implements Parsable {
      * Gets the roleAssignmentScheduleInstances property value. Instances for active role assignments.
      * @return a unifiedRoleAssignmentScheduleInstance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignmentScheduleInstance> getRoleAssignmentScheduleInstances() {
         return this.roleAssignmentScheduleInstances;
     }
@@ -107,7 +107,7 @@ public class RbacApplication extends Entity implements Parsable {
      * Gets the roleAssignmentScheduleRequests property value. Requests for active role assignments to principals through PIM.
      * @return a unifiedRoleAssignmentScheduleRequest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignmentScheduleRequest> getRoleAssignmentScheduleRequests() {
         return this.roleAssignmentScheduleRequests;
     }
@@ -115,7 +115,7 @@ public class RbacApplication extends Entity implements Parsable {
      * Gets the roleAssignmentSchedules property value. Schedules for active role assignment operations.
      * @return a unifiedRoleAssignmentSchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignmentSchedule> getRoleAssignmentSchedules() {
         return this.roleAssignmentSchedules;
     }
@@ -123,7 +123,7 @@ public class RbacApplication extends Entity implements Parsable {
      * Gets the roleDefinitions property value. Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
      * @return a unifiedRoleDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleDefinition> getRoleDefinitions() {
         return this.roleDefinitions;
     }
@@ -131,7 +131,7 @@ public class RbacApplication extends Entity implements Parsable {
      * Gets the roleEligibilityScheduleInstances property value. Instances for role eligibility requests.
      * @return a unifiedRoleEligibilityScheduleInstance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleEligibilityScheduleInstance> getRoleEligibilityScheduleInstances() {
         return this.roleEligibilityScheduleInstances;
     }
@@ -139,7 +139,7 @@ public class RbacApplication extends Entity implements Parsable {
      * Gets the roleEligibilityScheduleRequests property value. Requests for role eligibilities for principals through PIM.
      * @return a unifiedRoleEligibilityScheduleRequest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleEligibilityScheduleRequest> getRoleEligibilityScheduleRequests() {
         return this.roleEligibilityScheduleRequests;
     }
@@ -147,7 +147,7 @@ public class RbacApplication extends Entity implements Parsable {
      * Gets the roleEligibilitySchedules property value. Schedules for role eligibility operations.
      * @return a unifiedRoleEligibilitySchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleEligibilitySchedule> getRoleEligibilitySchedules() {
         return this.roleEligibilitySchedules;
     }
@@ -156,8 +156,8 @@ public class RbacApplication extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("resourceNamespaces", this.getResourceNamespaces());
@@ -175,8 +175,8 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the resourceNamespaces property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceNamespaces(@javax.annotation.Nullable final java.util.List<UnifiedRbacResourceNamespace> value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceNamespaces(@jakarta.annotation.Nullable final java.util.List<UnifiedRbacResourceNamespace> value) {
         this.resourceNamespaces = value;
     }
     /**
@@ -184,8 +184,8 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleAssignments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignment> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleAssignments(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleAssignment> value) {
         this.roleAssignments = value;
     }
     /**
@@ -193,8 +193,8 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleAssignmentScheduleInstances property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleAssignmentScheduleInstances(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignmentScheduleInstance> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleAssignmentScheduleInstances(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleAssignmentScheduleInstance> value) {
         this.roleAssignmentScheduleInstances = value;
     }
     /**
@@ -202,8 +202,8 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleAssignmentScheduleRequests property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleAssignmentScheduleRequests(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignmentScheduleRequest> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleAssignmentScheduleRequests(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleAssignmentScheduleRequest> value) {
         this.roleAssignmentScheduleRequests = value;
     }
     /**
@@ -211,8 +211,8 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleAssignmentSchedules property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleAssignmentSchedules(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignmentSchedule> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleAssignmentSchedules(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleAssignmentSchedule> value) {
         this.roleAssignmentSchedules = value;
     }
     /**
@@ -220,8 +220,8 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleDefinitions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinitions(@javax.annotation.Nullable final java.util.List<UnifiedRoleDefinition> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDefinitions(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleDefinition> value) {
         this.roleDefinitions = value;
     }
     /**
@@ -229,8 +229,8 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleEligibilityScheduleInstances property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleEligibilityScheduleInstances(@javax.annotation.Nullable final java.util.List<UnifiedRoleEligibilityScheduleInstance> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleEligibilityScheduleInstances(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleEligibilityScheduleInstance> value) {
         this.roleEligibilityScheduleInstances = value;
     }
     /**
@@ -238,8 +238,8 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleEligibilityScheduleRequests property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleEligibilityScheduleRequests(@javax.annotation.Nullable final java.util.List<UnifiedRoleEligibilityScheduleRequest> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleEligibilityScheduleRequests(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleEligibilityScheduleRequest> value) {
         this.roleEligibilityScheduleRequests = value;
     }
     /**
@@ -247,8 +247,8 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleEligibilitySchedules property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleEligibilitySchedules(@javax.annotation.Nullable final java.util.List<UnifiedRoleEligibilitySchedule> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleEligibilitySchedules(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleEligibilitySchedule> value) {
         this.roleEligibilitySchedules = value;
     }
 }

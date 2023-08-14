@@ -12,10 +12,10 @@ public enum ChatMessagePolicyViolationDlpActionTypes implements ValuedEnum {
     ChatMessagePolicyViolationDlpActionTypes(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ChatMessagePolicyViolationDlpActionTypes forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ChatMessagePolicyViolationDlpActionTypes forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

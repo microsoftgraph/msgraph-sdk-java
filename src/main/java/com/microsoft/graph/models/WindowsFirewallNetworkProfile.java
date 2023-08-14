@@ -71,7 +71,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * Instantiates a new windowsFirewallNetworkProfile and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsFirewallNetworkProfile() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -80,8 +80,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsFirewallNetworkProfile
      */
-    @javax.annotation.Nonnull
-    public static WindowsFirewallNetworkProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsFirewallNetworkProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsFirewallNetworkProfile();
     }
@@ -89,7 +89,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -97,7 +97,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * Gets the authorizedApplicationRulesFromGroupPolicyMerged property value. Configures the firewall to merge authorized application rules from group policy with those from local store instead of ignoring the local store rules. When AuthorizedApplicationRulesFromGroupPolicyNotMerged and AuthorizedApplicationRulesFromGroupPolicyMerged are both true, AuthorizedApplicationRulesFromGroupPolicyMerged takes priority.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAuthorizedApplicationRulesFromGroupPolicyMerged() {
         return this.authorizedApplicationRulesFromGroupPolicyMerged;
     }
@@ -105,7 +105,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * Gets the connectionSecurityRulesFromGroupPolicyMerged property value. Configures the firewall to merge connection security rules from group policy with those from local store instead of ignoring the local store rules. When ConnectionSecurityRulesFromGroupPolicyNotMerged and ConnectionSecurityRulesFromGroupPolicyMerged are both true, ConnectionSecurityRulesFromGroupPolicyMerged takes priority.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getConnectionSecurityRulesFromGroupPolicyMerged() {
         return this.connectionSecurityRulesFromGroupPolicyMerged;
     }
@@ -113,7 +113,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
         deserializerMap.put("authorizedApplicationRulesFromGroupPolicyMerged", (n) -> { this.setAuthorizedApplicationRulesFromGroupPolicyMerged(n.getBooleanValue()); });
@@ -135,7 +135,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * Gets the firewallEnabled property value. State Management Setting.
      * @return a stateManagementSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public StateManagementSetting getFirewallEnabled() {
         return this.firewallEnabled;
     }
@@ -143,7 +143,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * Gets the globalPortRulesFromGroupPolicyMerged property value. Configures the firewall to merge global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getGlobalPortRulesFromGroupPolicyMerged() {
         return this.globalPortRulesFromGroupPolicyMerged;
     }
@@ -151,7 +151,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * Gets the inboundConnectionsBlocked property value. Configures the firewall to block all incoming connections by default. When InboundConnectionsRequired and InboundConnectionsBlocked are both true, InboundConnectionsBlocked takes priority.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getInboundConnectionsBlocked() {
         return this.inboundConnectionsBlocked;
     }
@@ -159,7 +159,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * Gets the inboundNotificationsBlocked property value. Prevents the firewall from displaying notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getInboundNotificationsBlocked() {
         return this.inboundNotificationsBlocked;
     }
@@ -167,7 +167,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * Gets the incomingTrafficBlocked property value. Configures the firewall to block all incoming traffic regardless of other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIncomingTrafficBlocked() {
         return this.incomingTrafficBlocked;
     }
@@ -175,7 +175,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -183,7 +183,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * Gets the outboundConnectionsBlocked property value. Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getOutboundConnectionsBlocked() {
         return this.outboundConnectionsBlocked;
     }
@@ -191,7 +191,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * Gets the policyRulesFromGroupPolicyMerged property value. Configures the firewall to merge Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPolicyRulesFromGroupPolicyMerged() {
         return this.policyRulesFromGroupPolicyMerged;
     }
@@ -199,7 +199,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * Gets the securedPacketExemptionAllowed property value. Configures the firewall to allow the host computer to respond to unsolicited network traffic of that traffic is secured by IPSec even when stealthModeBlocked is set to true. When SecuredPacketExemptionBlocked and SecuredPacketExemptionAllowed are both true, SecuredPacketExemptionAllowed takes priority.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSecuredPacketExemptionAllowed() {
         return this.securedPacketExemptionAllowed;
     }
@@ -207,7 +207,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * Gets the stealthModeBlocked property value. Prevent the server from operating in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStealthModeBlocked() {
         return this.stealthModeBlocked;
     }
@@ -215,7 +215,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * Gets the unicastResponsesToMulticastBroadcastsBlocked property value. Configures the firewall to block unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUnicastResponsesToMulticastBroadcastsBlocked() {
         return this.unicastResponsesToMulticastBroadcastsBlocked;
     }
@@ -224,8 +224,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("authorizedApplicationRulesFromGroupPolicyMerged", this.getAuthorizedApplicationRulesFromGroupPolicyMerged());
         writer.writeBooleanValue("connectionSecurityRulesFromGroupPolicyMerged", this.getConnectionSecurityRulesFromGroupPolicyMerged());
@@ -247,8 +247,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -256,8 +256,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the authorizedApplicationRulesFromGroupPolicyMerged property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthorizedApplicationRulesFromGroupPolicyMerged(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthorizedApplicationRulesFromGroupPolicyMerged(@jakarta.annotation.Nullable final Boolean value) {
         this.authorizedApplicationRulesFromGroupPolicyMerged = value;
     }
     /**
@@ -265,8 +265,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the connectionSecurityRulesFromGroupPolicyMerged property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectionSecurityRulesFromGroupPolicyMerged(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectionSecurityRulesFromGroupPolicyMerged(@jakarta.annotation.Nullable final Boolean value) {
         this.connectionSecurityRulesFromGroupPolicyMerged = value;
     }
     /**
@@ -274,8 +274,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the firewallEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirewallEnabled(@javax.annotation.Nullable final StateManagementSetting value) {
+    @jakarta.annotation.Nonnull
+    public void setFirewallEnabled(@jakarta.annotation.Nullable final StateManagementSetting value) {
         this.firewallEnabled = value;
     }
     /**
@@ -283,8 +283,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the globalPortRulesFromGroupPolicyMerged property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGlobalPortRulesFromGroupPolicyMerged(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setGlobalPortRulesFromGroupPolicyMerged(@jakarta.annotation.Nullable final Boolean value) {
         this.globalPortRulesFromGroupPolicyMerged = value;
     }
     /**
@@ -292,8 +292,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the inboundConnectionsBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInboundConnectionsBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setInboundConnectionsBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.inboundConnectionsBlocked = value;
     }
     /**
@@ -301,8 +301,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the inboundNotificationsBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInboundNotificationsBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setInboundNotificationsBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.inboundNotificationsBlocked = value;
     }
     /**
@@ -310,8 +310,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the incomingTrafficBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncomingTrafficBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIncomingTrafficBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.incomingTrafficBlocked = value;
     }
     /**
@@ -319,8 +319,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -328,8 +328,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the outboundConnectionsBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOutboundConnectionsBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setOutboundConnectionsBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.outboundConnectionsBlocked = value;
     }
     /**
@@ -337,8 +337,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the policyRulesFromGroupPolicyMerged property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyRulesFromGroupPolicyMerged(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPolicyRulesFromGroupPolicyMerged(@jakarta.annotation.Nullable final Boolean value) {
         this.policyRulesFromGroupPolicyMerged = value;
     }
     /**
@@ -346,8 +346,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the securedPacketExemptionAllowed property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecuredPacketExemptionAllowed(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSecuredPacketExemptionAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.securedPacketExemptionAllowed = value;
     }
     /**
@@ -355,8 +355,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the stealthModeBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStealthModeBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setStealthModeBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.stealthModeBlocked = value;
     }
     /**
@@ -364,8 +364,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the unicastResponsesToMulticastBroadcastsBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnicastResponsesToMulticastBroadcastsBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setUnicastResponsesToMulticastBroadcastsBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.unicastResponsesToMulticastBroadcastsBlocked = value;
     }
 }

@@ -28,7 +28,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      * Instantiates a new x509CertificateAuthenticationModeConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public X509CertificateAuthenticationModeConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a x509CertificateAuthenticationModeConfiguration
      */
-    @javax.annotation.Nonnull
-    public static X509CertificateAuthenticationModeConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static X509CertificateAuthenticationModeConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new X509CertificateAuthenticationModeConfiguration();
     }
@@ -46,7 +46,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -66,7 +66,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -74,7 +74,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      * Gets the rules property value. Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
      * @return a x509CertificateRule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<X509CertificateRule> getRules() {
         return this.rules;
     }
@@ -82,7 +82,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      * Gets the x509CertificateAuthenticationDefaultMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
      * @return a x509CertificateAuthenticationMode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public X509CertificateAuthenticationMode getX509CertificateAuthenticationDefaultMode() {
         return this.x509CertificateAuthenticationDefaultMode;
     }
@@ -91,8 +91,8 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("rules", this.getRules());
@@ -104,8 +104,8 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -113,8 +113,8 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -122,8 +122,8 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      * @param value Value to set for the rules property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRules(@javax.annotation.Nullable final java.util.List<X509CertificateRule> value) {
+    @jakarta.annotation.Nonnull
+    public void setRules(@jakarta.annotation.Nullable final java.util.List<X509CertificateRule> value) {
         this.rules = value;
     }
     /**
@@ -131,8 +131,8 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      * @param value Value to set for the x509CertificateAuthenticationDefaultMode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setX509CertificateAuthenticationDefaultMode(@javax.annotation.Nullable final X509CertificateAuthenticationMode value) {
+    @jakarta.annotation.Nonnull
+    public void setX509CertificateAuthenticationDefaultMode(@jakarta.annotation.Nullable final X509CertificateAuthenticationMode value) {
         this.x509CertificateAuthenticationDefaultMode = value;
     }
 }

@@ -32,7 +32,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * Instantiates a new delegatedAdminRelationshipOperation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipOperation() {
         super();
     }
@@ -41,8 +41,8 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a delegatedAdminRelationshipOperation
      */
-    @javax.annotation.Nonnull
-    public static DelegatedAdminRelationshipOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DelegatedAdminRelationshipOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DelegatedAdminRelationshipOperation();
     }
@@ -50,7 +50,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * Gets the createdDateTime property value. The time in ISO 8601 format and in UTC time when the long-running operation was created. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -58,7 +58,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * Gets the data property value. The data (payload) for the operation. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getData() {
         return this.data;
     }
@@ -66,7 +66,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -80,7 +80,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * Gets the lastModifiedDateTime property value. The time in ISO 8601 format and in UTC time when the long-running operation was last modified. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -88,7 +88,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * Gets the operationType property value. The operationType property
      * @return a delegatedAdminRelationshipOperationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipOperationType getOperationType() {
         return this.operationType;
     }
@@ -96,7 +96,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * Gets the status property value. The status property
      * @return a longRunningOperationStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LongRunningOperationStatus getStatus() {
         return this.status;
     }
@@ -105,8 +105,8 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -120,8 +120,8 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -129,8 +129,8 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * @param value Value to set for the data property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setData(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setData(@jakarta.annotation.Nullable final String value) {
         this.data = value;
     }
     /**
@@ -138,8 +138,8 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -147,8 +147,8 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * @param value Value to set for the operationType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperationType(@javax.annotation.Nullable final DelegatedAdminRelationshipOperationType value) {
+    @jakarta.annotation.Nonnull
+    public void setOperationType(@jakarta.annotation.Nullable final DelegatedAdminRelationshipOperationType value) {
         this.operationType = value;
     }
     /**
@@ -156,8 +156,8 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final LongRunningOperationStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final LongRunningOperationStatus value) {
         this.status = value;
     }
 }

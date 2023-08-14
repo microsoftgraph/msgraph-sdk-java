@@ -36,7 +36,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * Instantiates a new taskReportSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TaskReportSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a taskReportSummary
      */
-    @javax.annotation.Nonnull
-    public static TaskReportSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TaskReportSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TaskReportSummary();
     }
@@ -54,7 +54,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * Gets the failedTasks property value. The number of failed tasks in a report.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFailedTasks() {
         return this.failedTasks;
     }
@@ -70,7 +70,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("failedTasks", (n) -> { this.setFailedTasks(n.getIntegerValue()); });
@@ -84,7 +84,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -92,7 +92,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * Gets the successfulTasks property value. The total number of successful tasks in a report.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSuccessfulTasks() {
         return this.successfulTasks;
     }
@@ -100,7 +100,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * Gets the totalTasks property value. The total number of tasks in a report.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalTasks() {
         return this.totalTasks;
     }
@@ -108,7 +108,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * Gets the unprocessedTasks property value. The number of unprocessed tasks in a report.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUnprocessedTasks() {
         return this.unprocessedTasks;
     }
@@ -117,8 +117,8 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("failedTasks", this.getFailedTasks());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -132,8 +132,8 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the failedTasks property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedTasks(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFailedTasks(@jakarta.annotation.Nullable final Integer value) {
         this.failedTasks = value;
     }
     /**
@@ -150,8 +150,8 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -159,8 +159,8 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the successfulTasks property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuccessfulTasks(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSuccessfulTasks(@jakarta.annotation.Nullable final Integer value) {
         this.successfulTasks = value;
     }
     /**
@@ -168,8 +168,8 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the totalTasks property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalTasks(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalTasks(@jakarta.annotation.Nullable final Integer value) {
         this.totalTasks = value;
     }
     /**
@@ -177,8 +177,8 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the unprocessedTasks property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnprocessedTasks(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setUnprocessedTasks(@jakarta.annotation.Nullable final Integer value) {
         this.unprocessedTasks = value;
     }
 }

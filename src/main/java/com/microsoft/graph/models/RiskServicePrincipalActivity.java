@@ -28,7 +28,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
      * Instantiates a new riskServicePrincipalActivity and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RiskServicePrincipalActivity() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a riskServicePrincipalActivity
      */
-    @javax.annotation.Nonnull
-    public static RiskServicePrincipalActivity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RiskServicePrincipalActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RiskServicePrincipalActivity();
     }
@@ -46,7 +46,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
      * Gets the detail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
      * @return a riskDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RiskDetail getDetail() {
         return this.detail;
     }
@@ -62,7 +62,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("detail", (n) -> { this.setDetail(n.getEnumValue(RiskDetail.class)); });
@@ -74,7 +74,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -82,7 +82,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
      * Gets the riskEventTypes property value. The riskEventTypes property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRiskEventTypes() {
         return this.riskEventTypes;
     }
@@ -91,8 +91,8 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("detail", this.getDetail());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -104,8 +104,8 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -113,8 +113,8 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
      * @param value Value to set for the detail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetail(@javax.annotation.Nullable final RiskDetail value) {
+    @jakarta.annotation.Nonnull
+    public void setDetail(@jakarta.annotation.Nullable final RiskDetail value) {
         this.detail = value;
     }
     /**
@@ -122,8 +122,8 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -131,8 +131,8 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
      * @param value Value to set for the riskEventTypes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRiskEventTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setRiskEventTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.riskEventTypes = value;
     }
 }

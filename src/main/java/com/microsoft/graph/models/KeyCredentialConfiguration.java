@@ -34,7 +34,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      * Instantiates a new keyCredentialConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public KeyCredentialConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -43,8 +43,8 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a keyCredentialConfiguration
      */
-    @javax.annotation.Nonnull
-    public static KeyCredentialConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static KeyCredentialConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new KeyCredentialConfiguration();
     }
@@ -52,7 +52,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -60,7 +60,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("maxLifetime", (n) -> { this.setMaxLifetime(n.getPeriodAndDurationValue()); });
@@ -73,7 +73,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      * Gets the maxLifetime property value. The maxLifetime property
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getMaxLifetime() {
         return this.maxLifetime;
     }
@@ -81,7 +81,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -89,7 +89,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      * Gets the restrictForAppsCreatedAfterDateTime property value. Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRestrictForAppsCreatedAfterDateTime() {
         return this.restrictForAppsCreatedAfterDateTime;
     }
@@ -97,7 +97,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      * Gets the restrictionType property value. The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
      * @return a appKeyCredentialRestrictionType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AppKeyCredentialRestrictionType getRestrictionType() {
         return this.restrictionType;
     }
@@ -106,8 +106,8 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writePeriodAndDurationValue("maxLifetime", this.getMaxLifetime());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -120,8 +120,8 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -129,8 +129,8 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the maxLifetime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaxLifetime(@javax.annotation.Nullable final PeriodAndDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setMaxLifetime(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.maxLifetime = value;
     }
     /**
@@ -138,8 +138,8 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -147,8 +147,8 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the restrictForAppsCreatedAfterDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRestrictForAppsCreatedAfterDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setRestrictForAppsCreatedAfterDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.restrictForAppsCreatedAfterDateTime = value;
     }
     /**
@@ -156,8 +156,8 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the restrictionType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRestrictionType(@javax.annotation.Nullable final AppKeyCredentialRestrictionType value) {
+    @jakarta.annotation.Nonnull
+    public void setRestrictionType(@jakarta.annotation.Nullable final AppKeyCredentialRestrictionType value) {
         this.restrictionType = value;
     }
 }

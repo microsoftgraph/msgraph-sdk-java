@@ -26,8 +26,8 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public IdentityUserFlowAttributeItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public IdentityUserFlowAttributeItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identity/userFlowAttributes/{identityUserFlowAttribute%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -36,16 +36,16 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public IdentityUserFlowAttributeItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public IdentityUserFlowAttributeItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identity/userFlowAttributes/{identityUserFlowAttribute%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete an identityUserFlowAttribute. Only custom user flow attributes can be deleted.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -63,10 +63,10 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
      * Delete an identityUserFlowAttribute. Only custom user flow attributes can be deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -82,9 +82,9 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
     /**
      * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @return a CompletableFuture of identityUserFlowAttribute
-     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttribute> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -102,10 +102,10 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
      * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityUserFlowAttribute
-     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityUserFlowAttribute> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<IdentityUserFlowAttribute> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -122,10 +122,10 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
      * Update the properties of a identityUserFlowAttribute object. Only custom user flow attributes can be updated.
      * @param body The request body
      * @return a CompletableFuture of identityUserFlowAttribute
-     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityUserFlowAttribute> patch(@javax.annotation.Nonnull final IdentityUserFlowAttribute body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<IdentityUserFlowAttribute> patch(@jakarta.annotation.Nonnull final IdentityUserFlowAttribute body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -143,10 +143,10 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityUserFlowAttribute
-     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityUserFlowAttribute> patch(@javax.annotation.Nonnull final IdentityUserFlowAttribute body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<IdentityUserFlowAttribute> patch(@jakarta.annotation.Nonnull final IdentityUserFlowAttribute body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -164,7 +164,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
      * Delete an identityUserFlowAttribute. Only custom user flow attributes can be deleted.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -173,8 +173,8 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -191,7 +191,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
      * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -200,8 +200,8 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -221,8 +221,8 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final IdentityUserFlowAttribute body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityUserFlowAttribute body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -231,8 +231,8 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final IdentityUserFlowAttribute body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityUserFlowAttribute body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -261,13 +261,13 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -277,7 +277,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

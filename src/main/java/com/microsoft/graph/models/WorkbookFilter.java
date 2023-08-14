@@ -15,7 +15,7 @@ public class WorkbookFilter extends Entity implements Parsable {
      * Instantiates a new workbookFilter and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookFilter() {
         super();
     }
@@ -24,8 +24,8 @@ public class WorkbookFilter extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workbookFilter
      */
-    @javax.annotation.Nonnull
-    public static WorkbookFilter createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkbookFilter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WorkbookFilter();
     }
@@ -33,7 +33,7 @@ public class WorkbookFilter extends Entity implements Parsable {
      * Gets the criteria property value. The currently applied filter on the given column. Read-only.
      * @return a workbookFilterCriteria
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookFilterCriteria getCriteria() {
         return this.criteria;
     }
@@ -41,7 +41,7 @@ public class WorkbookFilter extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("criteria", (n) -> { this.setCriteria(n.getObjectValue(WorkbookFilterCriteria::createFromDiscriminatorValue)); });
@@ -52,8 +52,8 @@ public class WorkbookFilter extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("criteria", this.getCriteria());
@@ -63,8 +63,8 @@ public class WorkbookFilter extends Entity implements Parsable {
      * @param value Value to set for the criteria property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCriteria(@javax.annotation.Nullable final WorkbookFilterCriteria value) {
+    @jakarta.annotation.Nonnull
+    public void setCriteria(@jakarta.annotation.Nullable final WorkbookFilterCriteria value) {
         this.criteria = value;
     }
 }

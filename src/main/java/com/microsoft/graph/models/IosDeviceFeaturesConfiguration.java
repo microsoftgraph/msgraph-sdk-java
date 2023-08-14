@@ -34,7 +34,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * Instantiates a new iosDeviceFeaturesConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosDeviceFeaturesConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosDeviceFeaturesConfiguration");
@@ -44,8 +44,8 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a iosDeviceFeaturesConfiguration
      */
-    @javax.annotation.Nonnull
-    public static IosDeviceFeaturesConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IosDeviceFeaturesConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IosDeviceFeaturesConfiguration();
     }
@@ -53,7 +53,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * Gets the assetTagTemplate property value. Asset tag information for the device, displayed on the login window and lock screen.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssetTagTemplate() {
         return this.assetTagTemplate;
     }
@@ -61,7 +61,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assetTagTemplate", (n) -> { this.setAssetTagTemplate(n.getStringValue()); });
@@ -75,7 +75,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * Gets the homeScreenDockIcons property value. A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
      * @return a iosHomeScreenItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IosHomeScreenItem> getHomeScreenDockIcons() {
         return this.homeScreenDockIcons;
     }
@@ -83,7 +83,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * Gets the homeScreenPages property value. A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
      * @return a iosHomeScreenPage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IosHomeScreenPage> getHomeScreenPages() {
         return this.homeScreenPages;
     }
@@ -91,7 +91,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * Gets the lockScreenFootnote property value. A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLockScreenFootnote() {
         return this.lockScreenFootnote;
     }
@@ -99,7 +99,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * Gets the notificationSettings property value. Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
      * @return a iosNotificationSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IosNotificationSettings> getNotificationSettings() {
         return this.notificationSettings;
     }
@@ -108,8 +108,8 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("assetTagTemplate", this.getAssetTagTemplate());
@@ -123,8 +123,8 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the assetTagTemplate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssetTagTemplate(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssetTagTemplate(@jakarta.annotation.Nullable final String value) {
         this.assetTagTemplate = value;
     }
     /**
@@ -132,8 +132,8 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the homeScreenDockIcons property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHomeScreenDockIcons(@javax.annotation.Nullable final java.util.List<IosHomeScreenItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setHomeScreenDockIcons(@jakarta.annotation.Nullable final java.util.List<IosHomeScreenItem> value) {
         this.homeScreenDockIcons = value;
     }
     /**
@@ -141,8 +141,8 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the homeScreenPages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHomeScreenPages(@javax.annotation.Nullable final java.util.List<IosHomeScreenPage> value) {
+    @jakarta.annotation.Nonnull
+    public void setHomeScreenPages(@jakarta.annotation.Nullable final java.util.List<IosHomeScreenPage> value) {
         this.homeScreenPages = value;
     }
     /**
@@ -150,8 +150,8 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the lockScreenFootnote property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLockScreenFootnote(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLockScreenFootnote(@jakarta.annotation.Nullable final String value) {
         this.lockScreenFootnote = value;
     }
     /**
@@ -159,8 +159,8 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the notificationSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotificationSettings(@javax.annotation.Nullable final java.util.List<IosNotificationSettings> value) {
+    @jakarta.annotation.Nonnull
+    public void setNotificationSettings(@jakarta.annotation.Nullable final java.util.List<IosNotificationSettings> value) {
         this.notificationSettings = value;
     }
 }

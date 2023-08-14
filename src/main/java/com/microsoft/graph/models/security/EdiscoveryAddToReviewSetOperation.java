@@ -19,7 +19,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      * Instantiates a new ediscoveryAddToReviewSetOperation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EdiscoveryAddToReviewSetOperation() {
         super();
     }
@@ -28,8 +28,8 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a ediscoveryAddToReviewSetOperation
      */
-    @javax.annotation.Nonnull
-    public static EdiscoveryAddToReviewSetOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EdiscoveryAddToReviewSetOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EdiscoveryAddToReviewSetOperation();
     }
@@ -37,7 +37,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("reviewSet", (n) -> { this.setReviewSet(n.getObjectValue(EdiscoveryReviewSet::createFromDiscriminatorValue)); });
@@ -48,7 +48,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      * Gets the reviewSet property value. eDiscovery review set to which items matching source collection query gets added.
      * @return a ediscoveryReviewSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EdiscoveryReviewSet getReviewSet() {
         return this.reviewSet;
     }
@@ -56,7 +56,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      * Gets the search property value. eDiscovery search that gets added to review set.
      * @return a ediscoverySearch
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EdiscoverySearch getSearch() {
         return this.search;
     }
@@ -65,8 +65,8 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("reviewSet", this.getReviewSet());
@@ -77,8 +77,8 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      * @param value Value to set for the reviewSet property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewSet(@javax.annotation.Nullable final EdiscoveryReviewSet value) {
+    @jakarta.annotation.Nonnull
+    public void setReviewSet(@jakarta.annotation.Nullable final EdiscoveryReviewSet value) {
         this.reviewSet = value;
     }
     /**
@@ -86,8 +86,8 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      * @param value Value to set for the search property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSearch(@javax.annotation.Nullable final EdiscoverySearch value) {
+    @jakarta.annotation.Nonnull
+    public void setSearch(@jakarta.annotation.Nullable final EdiscoverySearch value) {
         this.search = value;
     }
 }

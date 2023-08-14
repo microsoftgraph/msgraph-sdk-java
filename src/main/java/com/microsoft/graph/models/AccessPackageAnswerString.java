@@ -15,7 +15,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
      * Instantiates a new accessPackageAnswerString and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageAnswerString() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageAnswerString");
@@ -25,8 +25,8 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageAnswerString
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageAnswerString createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageAnswerString createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackageAnswerString();
     }
@@ -34,7 +34,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
@@ -44,7 +44,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
      * Gets the value property value. The value stored on the requestor's user profile, if this answer is configured to be stored as a specific attribute.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getValue() {
         return this.value;
     }
@@ -53,8 +53,8 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("value", this.getValue());
@@ -64,8 +64,8 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }
 }

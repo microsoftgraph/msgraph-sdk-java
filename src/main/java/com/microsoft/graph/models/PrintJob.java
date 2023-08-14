@@ -48,7 +48,7 @@ public class PrintJob extends Entity implements Parsable {
      * Instantiates a new printJob and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrintJob() {
         super();
     }
@@ -57,8 +57,8 @@ public class PrintJob extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a printJob
      */
-    @javax.annotation.Nonnull
-    public static PrintJob createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrintJob createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrintJob();
     }
@@ -66,7 +66,7 @@ public class PrintJob extends Entity implements Parsable {
      * Gets the configuration property value. The configuration property
      * @return a printJobConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrintJobConfiguration getConfiguration() {
         return this.configuration;
     }
@@ -74,7 +74,7 @@ public class PrintJob extends Entity implements Parsable {
      * Gets the createdBy property value. The createdBy property
      * @return a userIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserIdentity getCreatedBy() {
         return this.createdBy;
     }
@@ -82,7 +82,7 @@ public class PrintJob extends Entity implements Parsable {
      * Gets the createdDateTime property value. The DateTimeOffset when the job was created. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -90,7 +90,7 @@ public class PrintJob extends Entity implements Parsable {
      * Gets the documents property value. The documents property
      * @return a printDocument
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintDocument> getDocuments() {
         return this.documents;
     }
@@ -98,7 +98,7 @@ public class PrintJob extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("configuration", (n) -> { this.setConfiguration(n.getObjectValue(PrintJobConfiguration::createFromDiscriminatorValue)); });
@@ -116,7 +116,7 @@ public class PrintJob extends Entity implements Parsable {
      * Gets the isFetchable property value. If true, document can be fetched by printer.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsFetchable() {
         return this.isFetchable;
     }
@@ -124,7 +124,7 @@ public class PrintJob extends Entity implements Parsable {
      * Gets the redirectedFrom property value. Contains the source job URL, if the job has been redirected from another printer.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRedirectedFrom() {
         return this.redirectedFrom;
     }
@@ -132,7 +132,7 @@ public class PrintJob extends Entity implements Parsable {
      * Gets the redirectedTo property value. Contains the destination job URL, if the job has been redirected to another printer.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRedirectedTo() {
         return this.redirectedTo;
     }
@@ -140,7 +140,7 @@ public class PrintJob extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a printJobStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrintJobStatus getStatus() {
         return this.status;
     }
@@ -148,7 +148,7 @@ public class PrintJob extends Entity implements Parsable {
      * Gets the tasks property value. A list of printTasks that were triggered by this print job.
      * @return a printTask
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintTask> getTasks() {
         return this.tasks;
     }
@@ -157,8 +157,8 @@ public class PrintJob extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("configuration", this.getConfiguration());
@@ -176,8 +176,8 @@ public class PrintJob extends Entity implements Parsable {
      * @param value Value to set for the configuration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfiguration(@javax.annotation.Nullable final PrintJobConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setConfiguration(@jakarta.annotation.Nullable final PrintJobConfiguration value) {
         this.configuration = value;
     }
     /**
@@ -185,8 +185,8 @@ public class PrintJob extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final UserIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final UserIdentity value) {
         this.createdBy = value;
     }
     /**
@@ -194,8 +194,8 @@ public class PrintJob extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -203,8 +203,8 @@ public class PrintJob extends Entity implements Parsable {
      * @param value Value to set for the documents property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDocuments(@javax.annotation.Nullable final java.util.List<PrintDocument> value) {
+    @jakarta.annotation.Nonnull
+    public void setDocuments(@jakarta.annotation.Nullable final java.util.List<PrintDocument> value) {
         this.documents = value;
     }
     /**
@@ -212,8 +212,8 @@ public class PrintJob extends Entity implements Parsable {
      * @param value Value to set for the isFetchable property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsFetchable(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsFetchable(@jakarta.annotation.Nullable final Boolean value) {
         this.isFetchable = value;
     }
     /**
@@ -221,8 +221,8 @@ public class PrintJob extends Entity implements Parsable {
      * @param value Value to set for the redirectedFrom property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRedirectedFrom(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRedirectedFrom(@jakarta.annotation.Nullable final String value) {
         this.redirectedFrom = value;
     }
     /**
@@ -230,8 +230,8 @@ public class PrintJob extends Entity implements Parsable {
      * @param value Value to set for the redirectedTo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRedirectedTo(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRedirectedTo(@jakarta.annotation.Nullable final String value) {
         this.redirectedTo = value;
     }
     /**
@@ -239,8 +239,8 @@ public class PrintJob extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final PrintJobStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final PrintJobStatus value) {
         this.status = value;
     }
     /**
@@ -248,8 +248,8 @@ public class PrintJob extends Entity implements Parsable {
      * @param value Value to set for the tasks property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTasks(@javax.annotation.Nullable final java.util.List<PrintTask> value) {
+    @jakarta.annotation.Nonnull
+    public void setTasks(@jakarta.annotation.Nullable final java.util.List<PrintTask> value) {
         this.tasks = value;
     }
 }

@@ -23,7 +23,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      * Instantiates a new timeOffReason and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TimeOffReason() {
         super();
         this.setOdataType("#microsoft.graph.timeOffReason");
@@ -33,8 +33,8 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a timeOffReason
      */
-    @javax.annotation.Nonnull
-    public static TimeOffReason createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TimeOffReason createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TimeOffReason();
     }
@@ -42,7 +42,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      * Gets the displayName property value. The name of the timeOffReason. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -50,7 +50,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -62,7 +62,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      * Gets the iconType property value. Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.
      * @return a timeOffReasonIconType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TimeOffReasonIconType getIconType() {
         return this.iconType;
     }
@@ -70,7 +70,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      * Gets the isActive property value. Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsActive() {
         return this.isActive;
     }
@@ -79,8 +79,8 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -92,8 +92,8 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -101,8 +101,8 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the iconType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIconType(@javax.annotation.Nullable final TimeOffReasonIconType value) {
+    @jakarta.annotation.Nonnull
+    public void setIconType(@jakarta.annotation.Nullable final TimeOffReasonIconType value) {
         this.iconType = value;
     }
     /**
@@ -110,8 +110,8 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the isActive property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsActive(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
         this.isActive = value;
     }
 }

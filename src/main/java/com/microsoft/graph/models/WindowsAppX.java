@@ -42,7 +42,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * Instantiates a new windowsAppX and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsAppX() {
         super();
         this.setOdataType("#microsoft.graph.windowsAppX");
@@ -52,8 +52,8 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsAppX
      */
-    @javax.annotation.Nonnull
-    public static WindowsAppX createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsAppX createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsAppX();
     }
@@ -61,7 +61,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @return a windowsArchitecture
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsArchitecture getApplicableArchitectures() {
         return this.applicableArchitectures;
     }
@@ -69,7 +69,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumValue(WindowsArchitecture.class)); });
@@ -85,7 +85,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * Gets the identityName property value. The identity name of the uploaded app package. For example: 'Contoso.DemoApp'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIdentityName() {
         return this.identityName;
     }
@@ -93,7 +93,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * Gets the identityPublisherHash property value. The identity publisher hash of the uploaded app package. This is the hash of the publisher from the manifest. For example: 'AB82CD0XYZ'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIdentityPublisherHash() {
         return this.identityPublisherHash;
     }
@@ -101,7 +101,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * Gets the identityResourceIdentifier property value. The identity resource identifier of the uploaded app package. For example: 'TestResourceId'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIdentityResourceIdentifier() {
         return this.identityResourceIdentifier;
     }
@@ -109,7 +109,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * Gets the identityVersion property value. The identity version of the uploaded app package. For example: '1.0.0.0'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIdentityVersion() {
         return this.identityVersion;
     }
@@ -117,7 +117,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * Gets the isBundle property value. When TRUE, indicates that the app is a bundle. When FALSE, indicates that the app is not a bundle. By default, property is set to FALSE.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsBundle() {
         return this.isBundle;
     }
@@ -125,7 +125,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * Gets the minimumSupportedOperatingSystem property value. The minimum operating system required for a Windows mobile app.
      * @return a windowsMinimumOperatingSystem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
         return this.minimumSupportedOperatingSystem;
     }
@@ -134,8 +134,8 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("applicableArchitectures", this.getApplicableArchitectures());
@@ -151,8 +151,8 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * @param value Value to set for the applicableArchitectures property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicableArchitectures(@javax.annotation.Nullable final WindowsArchitecture value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicableArchitectures(@jakarta.annotation.Nullable final WindowsArchitecture value) {
         this.applicableArchitectures = value;
     }
     /**
@@ -160,8 +160,8 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * @param value Value to set for the identityName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentityName(@jakarta.annotation.Nullable final String value) {
         this.identityName = value;
     }
     /**
@@ -169,8 +169,8 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * @param value Value to set for the identityPublisherHash property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityPublisherHash(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentityPublisherHash(@jakarta.annotation.Nullable final String value) {
         this.identityPublisherHash = value;
     }
     /**
@@ -178,8 +178,8 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * @param value Value to set for the identityResourceIdentifier property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityResourceIdentifier(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentityResourceIdentifier(@jakarta.annotation.Nullable final String value) {
         this.identityResourceIdentifier = value;
     }
     /**
@@ -187,8 +187,8 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * @param value Value to set for the identityVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentityVersion(@jakarta.annotation.Nullable final String value) {
         this.identityVersion = value;
     }
     /**
@@ -196,8 +196,8 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * @param value Value to set for the isBundle property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsBundle(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsBundle(@jakarta.annotation.Nullable final Boolean value) {
         this.isBundle = value;
     }
     /**
@@ -205,8 +205,8 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final WindowsMinimumOperatingSystem value) {
+    @jakarta.annotation.Nonnull
+    public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final WindowsMinimumOperatingSystem value) {
         this.minimumSupportedOperatingSystem = value;
     }
 }

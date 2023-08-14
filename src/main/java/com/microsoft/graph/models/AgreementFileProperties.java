@@ -40,7 +40,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * Instantiates a new agreementFileProperties and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AgreementFileProperties() {
         super();
     }
@@ -49,8 +49,8 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a agreementFileProperties
      */
-    @javax.annotation.Nonnull
-    public static AgreementFileProperties createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AgreementFileProperties createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -67,7 +67,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date time representing when the file was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -75,7 +75,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * Gets the displayName property value. Localized display name of the policy file of an agreement. The localized display name is shown to end users who view the agreement.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -83,7 +83,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -99,7 +99,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * Gets the fileData property value. Data that represents the terms of use PDF document. Read-only.
      * @return a agreementFileData
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AgreementFileData getFileData() {
         return this.fileData;
     }
@@ -107,7 +107,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * Gets the fileName property value. Name of the agreement file (for example, TOU.pdf). Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileName() {
         return this.fileName;
     }
@@ -115,7 +115,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * Gets the isDefault property value. If none of the languages matches the client preference, indicates whether this is the default agreement file . If none of the files are marked as default, the first one is treated as the default. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
         return this.isDefault;
     }
@@ -123,7 +123,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * Gets the isMajorVersion property value. Indicates whether the agreement file is a major version update. Major version updates invalidate the agreement's acceptances on the corresponding language.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsMajorVersion() {
         return this.isMajorVersion;
     }
@@ -131,7 +131,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * Gets the language property value. The language of the agreement file in the format 'languagecode2-country/regioncode2'. 'languagecode2' is a lowercase two-letter code derived from ISO 639-1, while 'country/regioncode2' is derived from ISO 3166 and usually consists of two uppercase letters, or a BCP-47 language tag. For example, U.S. English is en-US. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLanguage() {
         return this.language;
     }
@@ -140,8 +140,8 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -157,8 +157,8 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -166,8 +166,8 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -175,8 +175,8 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * @param value Value to set for the fileData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileData(@javax.annotation.Nullable final AgreementFileData value) {
+    @jakarta.annotation.Nonnull
+    public void setFileData(@jakarta.annotation.Nullable final AgreementFileData value) {
         this.fileData = value;
     }
     /**
@@ -184,8 +184,8 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * @param value Value to set for the fileName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFileName(@jakarta.annotation.Nullable final String value) {
         this.fileName = value;
     }
     /**
@@ -193,8 +193,8 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * @param value Value to set for the isDefault property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefault = value;
     }
     /**
@@ -202,8 +202,8 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * @param value Value to set for the isMajorVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsMajorVersion(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsMajorVersion(@jakarta.annotation.Nullable final Boolean value) {
         this.isMajorVersion = value;
     }
     /**
@@ -211,8 +211,8 @@ public class AgreementFileProperties extends Entity implements Parsable {
      * @param value Value to set for the language property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLanguage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLanguage(@jakarta.annotation.Nullable final String value) {
         this.language = value;
     }
 }

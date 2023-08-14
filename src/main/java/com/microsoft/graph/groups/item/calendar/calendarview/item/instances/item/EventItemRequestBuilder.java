@@ -33,70 +33,70 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the accept method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AcceptRequestBuilder accept() {
         return new AcceptRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the attachments property of the microsoft.graph.event entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
         return new AttachmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the calendar property of the microsoft.graph.event entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the cancel method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CancelRequestBuilder cancel() {
         return new CancelRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the decline method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DeclineRequestBuilder decline() {
         return new DeclineRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the dismissReminder method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DismissReminderRequestBuilder dismissReminder() {
         return new DismissReminderRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.event entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the forward method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ForwardRequestBuilder forward() {
         return new ForwardRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the snoozeReminder method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SnoozeReminderRequestBuilder snoozeReminder() {
         return new SnoozeReminderRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the tentativelyAccept method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TentativelyAcceptRequestBuilder tentativelyAccept() {
         return new TentativelyAcceptRequestBuilder(pathParameters, requestAdapter);
     }
@@ -106,8 +106,8 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public EventItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public EventItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/calendar/calendarView/{event%2Did}/instances/{event%2Did1}{?startDateTime*,endDateTime*,%24select}", pathParameters);
     }
     /**
@@ -116,15 +116,15 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public EventItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public EventItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/calendar/calendarView/{event%2Did}/instances/{event%2Did1}{?startDateTime*,endDateTime*,%24select}", rawUrl);
     }
     /**
      * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
      * @return a CompletableFuture of event
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Event> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -143,8 +143,8 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of event
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Event> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Event> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -161,7 +161,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
      * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -170,8 +170,8 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -193,18 +193,18 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         /**
          * The end date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String endDateTime;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
         /**
          * The start date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T19:00:00-08:00
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String startDateTime;
     }
     /**
@@ -214,7 +214,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
 }

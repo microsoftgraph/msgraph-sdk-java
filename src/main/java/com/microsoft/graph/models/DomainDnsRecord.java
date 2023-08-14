@@ -31,7 +31,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      * Instantiates a new domainDnsRecord and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DomainDnsRecord() {
         super();
     }
@@ -40,8 +40,8 @@ public class DomainDnsRecord extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a domainDnsRecord
      */
-    @javax.annotation.Nonnull
-    public static DomainDnsRecord createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DomainDnsRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -60,7 +60,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isOptional", (n) -> { this.setIsOptional(n.getBooleanValue()); });
@@ -74,7 +74,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      * Gets the isOptional property value. If false, this record must be configured by the customer at the DNS host for Microsoft Online Services to operate correctly with the domain.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsOptional() {
         return this.isOptional;
     }
@@ -82,7 +82,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      * Gets the label property value. Value used when configuring the name of the DNS record at the DNS host.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLabel() {
         return this.label;
     }
@@ -90,7 +90,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      * Gets the recordType property value. Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, Txt.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRecordType() {
         return this.recordType;
     }
@@ -98,7 +98,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      * Gets the supportedService property value. Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSupportedService() {
         return this.supportedService;
     }
@@ -106,7 +106,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      * Gets the ttl property value. Value to use when configuring the time-to-live (ttl) property of the DNS record at the DNS host. Not nullable.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTtl() {
         return this.ttl;
     }
@@ -115,8 +115,8 @@ public class DomainDnsRecord extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("isOptional", this.getIsOptional());
@@ -130,8 +130,8 @@ public class DomainDnsRecord extends Entity implements Parsable {
      * @param value Value to set for the isOptional property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsOptional(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsOptional(@jakarta.annotation.Nullable final Boolean value) {
         this.isOptional = value;
     }
     /**
@@ -139,8 +139,8 @@ public class DomainDnsRecord extends Entity implements Parsable {
      * @param value Value to set for the label property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLabel(@jakarta.annotation.Nullable final String value) {
         this.label = value;
     }
     /**
@@ -148,8 +148,8 @@ public class DomainDnsRecord extends Entity implements Parsable {
      * @param value Value to set for the recordType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecordType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRecordType(@jakarta.annotation.Nullable final String value) {
         this.recordType = value;
     }
     /**
@@ -157,8 +157,8 @@ public class DomainDnsRecord extends Entity implements Parsable {
      * @param value Value to set for the supportedService property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedService(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedService(@jakarta.annotation.Nullable final String value) {
         this.supportedService = value;
     }
     /**
@@ -166,8 +166,8 @@ public class DomainDnsRecord extends Entity implements Parsable {
      * @param value Value to set for the ttl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTtl(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTtl(@jakarta.annotation.Nullable final Integer value) {
         this.ttl = value;
     }
 }

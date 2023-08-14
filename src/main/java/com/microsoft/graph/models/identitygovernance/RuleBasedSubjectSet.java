@@ -16,7 +16,7 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
      * Instantiates a new ruleBasedSubjectSet and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RuleBasedSubjectSet() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.ruleBasedSubjectSet");
@@ -26,8 +26,8 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a ruleBasedSubjectSet
      */
-    @javax.annotation.Nonnull
-    public static RuleBasedSubjectSet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RuleBasedSubjectSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RuleBasedSubjectSet();
     }
@@ -35,7 +35,7 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("rule", (n) -> { this.setRule(n.getStringValue()); });
@@ -45,7 +45,7 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
      * Gets the rule property value. The rule for the subject set. Lifecycle Workflows supports a rich set of user properties for configuring the rules using $filter query expressions. For more information, see supported user and query parameters.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRule() {
         return this.rule;
     }
@@ -54,8 +54,8 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("rule", this.getRule());
@@ -65,8 +65,8 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
      * @param value Value to set for the rule property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRule(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRule(@jakarta.annotation.Nullable final String value) {
         this.rule = value;
     }
 }

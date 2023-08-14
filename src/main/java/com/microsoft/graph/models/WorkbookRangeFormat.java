@@ -47,7 +47,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * Instantiates a new workbookRangeFormat and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookRangeFormat() {
         super();
     }
@@ -56,8 +56,8 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workbookRangeFormat
      */
-    @javax.annotation.Nonnull
-    public static WorkbookRangeFormat createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkbookRangeFormat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WorkbookRangeFormat();
     }
@@ -65,7 +65,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * Gets the borders property value. Collection of border objects that apply to the overall range selected Read-only.
      * @return a workbookRangeBorder
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkbookRangeBorder> getBorders() {
         return this.borders;
     }
@@ -73,7 +73,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * Gets the columnWidth property value. Gets or sets the width of all colums within the range. If the column widths are not uniform, null will be returned.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getColumnWidth() {
         return this.columnWidth;
     }
@@ -81,7 +81,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("borders", (n) -> { this.setBorders(n.getCollectionOfObjectValues(WorkbookRangeBorder::createFromDiscriminatorValue)); });
@@ -99,7 +99,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * Gets the fill property value. Returns the fill object defined on the overall range. Read-only.
      * @return a workbookRangeFill
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookRangeFill getFill() {
         return this.fill;
     }
@@ -107,7 +107,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * Gets the font property value. Returns the font object defined on the overall range selected Read-only.
      * @return a workbookRangeFont
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookRangeFont getFont() {
         return this.font;
     }
@@ -115,7 +115,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * Gets the horizontalAlignment property value. Represents the horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHorizontalAlignment() {
         return this.horizontalAlignment;
     }
@@ -123,7 +123,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * Gets the protection property value. Returns the format protection object for a range. Read-only.
      * @return a workbookFormatProtection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookFormatProtection getProtection() {
         return this.protection;
     }
@@ -131,7 +131,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * Gets the rowHeight property value. Gets or sets the height of all rows in the range. If the row heights are not uniform null will be returned.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getRowHeight() {
         return this.rowHeight;
     }
@@ -139,7 +139,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * Gets the verticalAlignment property value. Represents the vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVerticalAlignment() {
         return this.verticalAlignment;
     }
@@ -147,7 +147,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * Gets the wrapText property value. Indicates if Excel wraps the text in the object. A null value indicates that the entire range doesn't have uniform wrap setting
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getWrapText() {
         return this.wrapText;
     }
@@ -156,8 +156,8 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("borders", this.getBorders());
@@ -175,8 +175,8 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * @param value Value to set for the borders property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBorders(@javax.annotation.Nullable final java.util.List<WorkbookRangeBorder> value) {
+    @jakarta.annotation.Nonnull
+    public void setBorders(@jakarta.annotation.Nullable final java.util.List<WorkbookRangeBorder> value) {
         this.borders = value;
     }
     /**
@@ -184,8 +184,8 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * @param value Value to set for the columnWidth property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setColumnWidth(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setColumnWidth(@jakarta.annotation.Nullable final Double value) {
         this.columnWidth = value;
     }
     /**
@@ -193,8 +193,8 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * @param value Value to set for the fill property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFill(@javax.annotation.Nullable final WorkbookRangeFill value) {
+    @jakarta.annotation.Nonnull
+    public void setFill(@jakarta.annotation.Nullable final WorkbookRangeFill value) {
         this.fill = value;
     }
     /**
@@ -202,8 +202,8 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * @param value Value to set for the font property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFont(@javax.annotation.Nullable final WorkbookRangeFont value) {
+    @jakarta.annotation.Nonnull
+    public void setFont(@jakarta.annotation.Nullable final WorkbookRangeFont value) {
         this.font = value;
     }
     /**
@@ -211,8 +211,8 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * @param value Value to set for the horizontalAlignment property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHorizontalAlignment(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setHorizontalAlignment(@jakarta.annotation.Nullable final String value) {
         this.horizontalAlignment = value;
     }
     /**
@@ -220,8 +220,8 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * @param value Value to set for the protection property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProtection(@javax.annotation.Nullable final WorkbookFormatProtection value) {
+    @jakarta.annotation.Nonnull
+    public void setProtection(@jakarta.annotation.Nullable final WorkbookFormatProtection value) {
         this.protection = value;
     }
     /**
@@ -229,8 +229,8 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * @param value Value to set for the rowHeight property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRowHeight(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setRowHeight(@jakarta.annotation.Nullable final Double value) {
         this.rowHeight = value;
     }
     /**
@@ -238,8 +238,8 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * @param value Value to set for the verticalAlignment property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVerticalAlignment(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVerticalAlignment(@jakarta.annotation.Nullable final String value) {
         this.verticalAlignment = value;
     }
     /**
@@ -247,8 +247,8 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * @param value Value to set for the wrapText property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWrapText(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setWrapText(@jakarta.annotation.Nullable final Boolean value) {
         this.wrapText = value;
     }
 }

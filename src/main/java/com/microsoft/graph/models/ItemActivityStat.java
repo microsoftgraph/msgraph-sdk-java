@@ -52,7 +52,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      * Instantiates a new itemActivityStat and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemActivityStat() {
         super();
     }
@@ -61,8 +61,8 @@ public class ItemActivityStat extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a itemActivityStat
      */
-    @javax.annotation.Nonnull
-    public static ItemActivityStat createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ItemActivityStat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ItemActivityStat();
     }
@@ -70,7 +70,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      * Gets the access property value. Statistics about the access actions in this interval. Read-only.
      * @return a itemActionStat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemActionStat getAccess() {
         return this.access;
     }
@@ -78,7 +78,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      * Gets the activities property value. Exposes the itemActivities represented in this itemActivityStat resource.
      * @return a itemActivity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ItemActivity> getActivities() {
         return this.activities;
     }
@@ -86,7 +86,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      * Gets the create property value. Statistics about the create actions in this interval. Read-only.
      * @return a itemActionStat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemActionStat getCreate() {
         return this.create;
     }
@@ -94,7 +94,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      * Gets the delete property value. Statistics about the delete actions in this interval. Read-only.
      * @return a itemActionStat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemActionStat getDelete() {
         return this.delete;
     }
@@ -102,7 +102,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      * Gets the edit property value. Statistics about the edit actions in this interval. Read-only.
      * @return a itemActionStat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemActionStat getEdit() {
         return this.edit;
     }
@@ -110,7 +110,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      * Gets the endDateTime property value. When the interval ends. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
         return this.endDateTime;
     }
@@ -118,7 +118,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("access", (n) -> { this.setAccess(n.getObjectValue(ItemActionStat::createFromDiscriminatorValue)); });
@@ -137,7 +137,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      * Gets the incompleteData property value. Indicates that the statistics in this interval are based on incomplete data. Read-only.
      * @return a incompleteData
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IncompleteData getIncompleteData() {
         return this.incompleteData;
     }
@@ -145,7 +145,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      * Gets the isTrending property value. Indicates whether the item is 'trending.' Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsTrending() {
         return this.isTrending;
     }
@@ -153,7 +153,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      * Gets the move property value. Statistics about the move actions in this interval. Read-only.
      * @return a itemActionStat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemActionStat getMove() {
         return this.move;
     }
@@ -161,7 +161,7 @@ public class ItemActivityStat extends Entity implements Parsable {
      * Gets the startDateTime property value. When the interval starts. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
@@ -170,8 +170,8 @@ public class ItemActivityStat extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("access", this.getAccess());
@@ -190,8 +190,8 @@ public class ItemActivityStat extends Entity implements Parsable {
      * @param value Value to set for the access property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccess(@javax.annotation.Nullable final ItemActionStat value) {
+    @jakarta.annotation.Nonnull
+    public void setAccess(@jakarta.annotation.Nullable final ItemActionStat value) {
         this.access = value;
     }
     /**
@@ -199,8 +199,8 @@ public class ItemActivityStat extends Entity implements Parsable {
      * @param value Value to set for the activities property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivities(@javax.annotation.Nullable final java.util.List<ItemActivity> value) {
+    @jakarta.annotation.Nonnull
+    public void setActivities(@jakarta.annotation.Nullable final java.util.List<ItemActivity> value) {
         this.activities = value;
     }
     /**
@@ -208,8 +208,8 @@ public class ItemActivityStat extends Entity implements Parsable {
      * @param value Value to set for the create property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreate(@javax.annotation.Nullable final ItemActionStat value) {
+    @jakarta.annotation.Nonnull
+    public void setCreate(@jakarta.annotation.Nullable final ItemActionStat value) {
         this.create = value;
     }
     /**
@@ -217,8 +217,8 @@ public class ItemActivityStat extends Entity implements Parsable {
      * @param value Value to set for the delete property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDelete(@javax.annotation.Nullable final ItemActionStat value) {
+    @jakarta.annotation.Nonnull
+    public void setDelete(@jakarta.annotation.Nullable final ItemActionStat value) {
         this.delete = value;
     }
     /**
@@ -226,8 +226,8 @@ public class ItemActivityStat extends Entity implements Parsable {
      * @param value Value to set for the edit property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEdit(@javax.annotation.Nullable final ItemActionStat value) {
+    @jakarta.annotation.Nonnull
+    public void setEdit(@jakarta.annotation.Nullable final ItemActionStat value) {
         this.edit = value;
     }
     /**
@@ -235,8 +235,8 @@ public class ItemActivityStat extends Entity implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
@@ -244,8 +244,8 @@ public class ItemActivityStat extends Entity implements Parsable {
      * @param value Value to set for the incompleteData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncompleteData(@javax.annotation.Nullable final IncompleteData value) {
+    @jakarta.annotation.Nonnull
+    public void setIncompleteData(@jakarta.annotation.Nullable final IncompleteData value) {
         this.incompleteData = value;
     }
     /**
@@ -253,8 +253,8 @@ public class ItemActivityStat extends Entity implements Parsable {
      * @param value Value to set for the isTrending property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsTrending(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsTrending(@jakarta.annotation.Nullable final Boolean value) {
         this.isTrending = value;
     }
     /**
@@ -262,8 +262,8 @@ public class ItemActivityStat extends Entity implements Parsable {
      * @param value Value to set for the move property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMove(@javax.annotation.Nullable final ItemActionStat value) {
+    @jakarta.annotation.Nonnull
+    public void setMove(@jakarta.annotation.Nullable final ItemActionStat value) {
         this.move = value;
     }
     /**
@@ -271,8 +271,8 @@ public class ItemActivityStat extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
 }

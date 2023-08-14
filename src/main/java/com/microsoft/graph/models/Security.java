@@ -57,7 +57,7 @@ public class Security extends Entity implements Parsable {
      * Instantiates a new security and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Security() {
         super();
     }
@@ -66,8 +66,8 @@ public class Security extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a security
      */
-    @javax.annotation.Nonnull
-    public static Security createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Security createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Security();
     }
@@ -75,7 +75,7 @@ public class Security extends Entity implements Parsable {
      * Gets the alerts property value. The alerts property
      * @return a alert
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Alert> getAlerts() {
         return this.alerts;
     }
@@ -83,7 +83,7 @@ public class Security extends Entity implements Parsable {
      * Gets the alerts_v2 property value. A collection of alerts in Microsoft 365 Defender.
      * @return a alert
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Alert> getAlertsV2() {
         return this.alertsV2;
     }
@@ -91,7 +91,7 @@ public class Security extends Entity implements Parsable {
      * Gets the attackSimulation property value. The attackSimulation property
      * @return a attackSimulationRoot
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttackSimulationRoot getAttackSimulation() {
         return this.attackSimulation;
     }
@@ -99,7 +99,7 @@ public class Security extends Entity implements Parsable {
      * Gets the cases property value. The cases property
      * @return a casesRoot
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CasesRoot getCases() {
         return this.cases;
     }
@@ -107,7 +107,7 @@ public class Security extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
@@ -126,7 +126,7 @@ public class Security extends Entity implements Parsable {
      * Gets the incidents property value. A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
      * @return a incident
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Incident> getIncidents() {
         return this.incidents;
     }
@@ -134,7 +134,7 @@ public class Security extends Entity implements Parsable {
      * Gets the secureScoreControlProfiles property value. The secureScoreControlProfiles property
      * @return a secureScoreControlProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SecureScoreControlProfile> getSecureScoreControlProfiles() {
         return this.secureScoreControlProfiles;
     }
@@ -142,7 +142,7 @@ public class Security extends Entity implements Parsable {
      * Gets the secureScores property value. The secureScores property
      * @return a secureScore
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SecureScore> getSecureScores() {
         return this.secureScores;
     }
@@ -150,7 +150,7 @@ public class Security extends Entity implements Parsable {
      * Gets the threatIntelligence property value. The threatIntelligence property
      * @return a threatIntelligence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ThreatIntelligence getThreatIntelligence() {
         return this.threatIntelligence;
     }
@@ -158,7 +158,7 @@ public class Security extends Entity implements Parsable {
      * Gets the triggers property value. The triggers property
      * @return a triggersRoot
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TriggersRoot getTriggers() {
         return this.triggers;
     }
@@ -166,7 +166,7 @@ public class Security extends Entity implements Parsable {
      * Gets the triggerTypes property value. The triggerTypes property
      * @return a triggerTypesRoot
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TriggerTypesRoot getTriggerTypes() {
         return this.triggerTypes;
     }
@@ -175,8 +175,8 @@ public class Security extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("alerts", this.getAlerts());
@@ -195,8 +195,8 @@ public class Security extends Entity implements Parsable {
      * @param value Value to set for the alerts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlerts(@javax.annotation.Nullable final java.util.List<Alert> value) {
+    @jakarta.annotation.Nonnull
+    public void setAlerts(@jakarta.annotation.Nullable final java.util.List<Alert> value) {
         this.alerts = value;
     }
     /**
@@ -204,8 +204,8 @@ public class Security extends Entity implements Parsable {
      * @param value Value to set for the alerts_v2 property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlertsV2(@javax.annotation.Nullable final java.util.List<Alert> value) {
+    @jakarta.annotation.Nonnull
+    public void setAlertsV2(@jakarta.annotation.Nullable final java.util.List<Alert> value) {
         this.alertsV2 = value;
     }
     /**
@@ -213,8 +213,8 @@ public class Security extends Entity implements Parsable {
      * @param value Value to set for the attackSimulation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttackSimulation(@javax.annotation.Nullable final AttackSimulationRoot value) {
+    @jakarta.annotation.Nonnull
+    public void setAttackSimulation(@jakarta.annotation.Nullable final AttackSimulationRoot value) {
         this.attackSimulation = value;
     }
     /**
@@ -222,8 +222,8 @@ public class Security extends Entity implements Parsable {
      * @param value Value to set for the cases property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCases(@javax.annotation.Nullable final CasesRoot value) {
+    @jakarta.annotation.Nonnull
+    public void setCases(@jakarta.annotation.Nullable final CasesRoot value) {
         this.cases = value;
     }
     /**
@@ -231,8 +231,8 @@ public class Security extends Entity implements Parsable {
      * @param value Value to set for the incidents property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncidents(@javax.annotation.Nullable final java.util.List<Incident> value) {
+    @jakarta.annotation.Nonnull
+    public void setIncidents(@jakarta.annotation.Nullable final java.util.List<Incident> value) {
         this.incidents = value;
     }
     /**
@@ -240,8 +240,8 @@ public class Security extends Entity implements Parsable {
      * @param value Value to set for the secureScoreControlProfiles property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecureScoreControlProfiles(@javax.annotation.Nullable final java.util.List<SecureScoreControlProfile> value) {
+    @jakarta.annotation.Nonnull
+    public void setSecureScoreControlProfiles(@jakarta.annotation.Nullable final java.util.List<SecureScoreControlProfile> value) {
         this.secureScoreControlProfiles = value;
     }
     /**
@@ -249,8 +249,8 @@ public class Security extends Entity implements Parsable {
      * @param value Value to set for the secureScores property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecureScores(@javax.annotation.Nullable final java.util.List<SecureScore> value) {
+    @jakarta.annotation.Nonnull
+    public void setSecureScores(@jakarta.annotation.Nullable final java.util.List<SecureScore> value) {
         this.secureScores = value;
     }
     /**
@@ -258,8 +258,8 @@ public class Security extends Entity implements Parsable {
      * @param value Value to set for the threatIntelligence property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThreatIntelligence(@javax.annotation.Nullable final ThreatIntelligence value) {
+    @jakarta.annotation.Nonnull
+    public void setThreatIntelligence(@jakarta.annotation.Nullable final ThreatIntelligence value) {
         this.threatIntelligence = value;
     }
     /**
@@ -267,8 +267,8 @@ public class Security extends Entity implements Parsable {
      * @param value Value to set for the triggers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTriggers(@javax.annotation.Nullable final TriggersRoot value) {
+    @jakarta.annotation.Nonnull
+    public void setTriggers(@jakarta.annotation.Nullable final TriggersRoot value) {
         this.triggers = value;
     }
     /**
@@ -276,8 +276,8 @@ public class Security extends Entity implements Parsable {
      * @param value Value to set for the triggerTypes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTriggerTypes(@javax.annotation.Nullable final TriggerTypesRoot value) {
+    @jakarta.annotation.Nonnull
+    public void setTriggerTypes(@jakarta.annotation.Nullable final TriggerTypesRoot value) {
         this.triggerTypes = value;
     }
 }

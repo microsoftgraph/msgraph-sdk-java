@@ -39,7 +39,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * Instantiates a new accessPackageSubject and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageSubject() {
         super();
     }
@@ -48,8 +48,8 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageSubject
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageSubject createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageSubject createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackageSubject();
     }
@@ -57,7 +57,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * Gets the connectedOrganization property value. The connected organization of the subject. Read-only. Nullable.
      * @return a connectedOrganization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConnectedOrganization getConnectedOrganization() {
         return this.connectedOrganization;
     }
@@ -65,7 +65,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * Gets the displayName property value. The display name of the subject.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -73,7 +73,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * Gets the email property value. The email address of the subject.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmail() {
         return this.email;
     }
@@ -81,7 +81,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("connectedOrganization", (n) -> { this.setConnectedOrganization(n.getObjectValue(ConnectedOrganization::createFromDiscriminatorValue)); });
@@ -97,7 +97,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * Gets the objectId property value. The object identifier of the subject. null if the subject is not yet a user in the tenant.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getObjectId() {
         return this.objectId;
     }
@@ -105,7 +105,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * Gets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOnPremisesSecurityIdentifier() {
         return this.onPremisesSecurityIdentifier;
     }
@@ -113,7 +113,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * Gets the principalName property value. The principal name, if known, of the subject.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrincipalName() {
         return this.principalName;
     }
@@ -121,7 +121,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * Gets the subjectType property value. The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
      * @return a accessPackageSubjectType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageSubjectType getSubjectType() {
         return this.subjectType;
     }
@@ -130,8 +130,8 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("connectedOrganization", this.getConnectedOrganization());
@@ -147,8 +147,8 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param value Value to set for the connectedOrganization property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectedOrganization(@javax.annotation.Nullable final ConnectedOrganization value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectedOrganization(@jakarta.annotation.Nullable final ConnectedOrganization value) {
         this.connectedOrganization = value;
     }
     /**
@@ -156,8 +156,8 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -165,8 +165,8 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
@@ -174,8 +174,8 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param value Value to set for the objectId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setObjectId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setObjectId(@jakarta.annotation.Nullable final String value) {
         this.objectId = value;
     }
     /**
@@ -183,8 +183,8 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnPremisesSecurityIdentifier(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOnPremisesSecurityIdentifier(@jakarta.annotation.Nullable final String value) {
         this.onPremisesSecurityIdentifier = value;
     }
     /**
@@ -192,8 +192,8 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param value Value to set for the principalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.principalName = value;
     }
     /**
@@ -201,8 +201,8 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param value Value to set for the subjectType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubjectType(@javax.annotation.Nullable final AccessPackageSubjectType value) {
+    @jakarta.annotation.Nonnull
+    public void setSubjectType(@jakarta.annotation.Nullable final AccessPackageSubjectType value) {
         this.subjectType = value;
     }
 }

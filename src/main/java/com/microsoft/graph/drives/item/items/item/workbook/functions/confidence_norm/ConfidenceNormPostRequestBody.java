@@ -29,7 +29,7 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Pars
      * Instantiates a new ConfidenceNormPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConfidenceNormPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,8 +38,8 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a ConfidenceNormPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static ConfidenceNormPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ConfidenceNormPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ConfidenceNormPostRequestBody();
     }
@@ -47,7 +47,7 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Pars
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -55,7 +55,7 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Pars
      * Gets the alpha property value. The alpha property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getAlpha() {
         return this.alpha;
     }
@@ -63,7 +63,7 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("alpha", (n) -> { this.setAlpha(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -75,7 +75,7 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Pars
      * Gets the size property value. The size property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getSize() {
         return this.size;
     }
@@ -83,7 +83,7 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Pars
      * Gets the standardDev property value. The standardDev property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getStandardDev() {
         return this.standardDev;
     }
@@ -92,8 +92,8 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("alpha", this.getAlpha());
         writer.writeObjectValue("size", this.getSize());
@@ -105,8 +105,8 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -114,8 +114,8 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the alpha property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlpha(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setAlpha(@jakarta.annotation.Nullable final Json value) {
         this.alpha = value;
     }
     /**
@@ -123,8 +123,8 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the size property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSize(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setSize(@jakarta.annotation.Nullable final Json value) {
         this.size = value;
     }
     /**
@@ -132,8 +132,8 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the standardDev property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStandardDev(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setStandardDev(@jakarta.annotation.Nullable final Json value) {
         this.standardDev = value;
     }
 }

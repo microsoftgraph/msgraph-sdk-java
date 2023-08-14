@@ -26,8 +26,8 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public IdentityProviderItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public IdentityProviderItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityProviders/{identityProvider%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -36,8 +36,8 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public IdentityProviderItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public IdentityProviderItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityProviders/{identityProvider%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
@@ -45,9 +45,9 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of void
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
-     * @see <a href="https://docs.microsoft.com/graph/api/identityprovider-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityprovider-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     @Deprecated
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
@@ -68,11 +68,11 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of void
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
-     * @see <a href="https://docs.microsoft.com/graph/api/identityprovider-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityprovider-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     @Deprecated
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -90,9 +90,9 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of identityProvider
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
-     * @see <a href="https://docs.microsoft.com/graph/api/identityprovider-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityprovider-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     @Deprecated
     public java.util.concurrent.CompletableFuture<IdentityProvider> get() {
         try {
@@ -113,11 +113,11 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of identityProvider
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
-     * @see <a href="https://docs.microsoft.com/graph/api/identityprovider-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityprovider-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     @Deprecated
-    public java.util.concurrent.CompletableFuture<IdentityProvider> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<IdentityProvider> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -136,11 +136,11 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of identityProvider
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
-     * @see <a href="https://docs.microsoft.com/graph/api/identityprovider-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityprovider-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     @Deprecated
-    public java.util.concurrent.CompletableFuture<IdentityProvider> patch(@javax.annotation.Nonnull final IdentityProvider body) {
+    public java.util.concurrent.CompletableFuture<IdentityProvider> patch(@jakarta.annotation.Nonnull final IdentityProvider body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -160,11 +160,11 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of identityProvider
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
-     * @see <a href="https://docs.microsoft.com/graph/api/identityprovider-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityprovider-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     @Deprecated
-    public java.util.concurrent.CompletableFuture<IdentityProvider> patch(@javax.annotation.Nonnull final IdentityProvider body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<IdentityProvider> patch(@jakarta.annotation.Nonnull final IdentityProvider body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -184,7 +184,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     @Deprecated
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
@@ -196,9 +196,9 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     @Deprecated
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -217,7 +217,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     @Deprecated
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
@@ -229,9 +229,9 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     @Deprecated
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -253,9 +253,9 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     @Deprecated
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final IdentityProvider body) throws URISyntaxException {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityProvider body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -266,9 +266,9 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     @Deprecated
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final IdentityProvider body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityProvider body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -297,13 +297,13 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -313,7 +313,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

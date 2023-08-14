@@ -27,8 +27,8 @@ public class GetSharePointActivityUserDetailWithDateRequestBuilder extends BaseR
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public GetSharePointActivityUserDetailWithDateRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter, @javax.annotation.Nullable final LocalDate date) {
+    @jakarta.annotation.Nullable
+    public GetSharePointActivityUserDetailWithDateRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final LocalDate date) {
         super(requestAdapter, "{+baseurl}/reports/getSharePointActivityUserDetail(date={date})", pathParameters);
         this.pathParameters.put("date", date);
     }
@@ -38,15 +38,15 @@ public class GetSharePointActivityUserDetailWithDateRequestBuilder extends BaseR
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public GetSharePointActivityUserDetailWithDateRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public GetSharePointActivityUserDetailWithDateRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/reports/getSharePointActivityUserDetail(date={date})", rawUrl);
     }
     /**
      * Invoke function getSharePointActivityUserDetail
      * @return a CompletableFuture of InputStream
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -65,8 +65,8 @@ public class GetSharePointActivityUserDetailWithDateRequestBuilder extends BaseR
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<InputStream> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -83,7 +83,7 @@ public class GetSharePointActivityUserDetailWithDateRequestBuilder extends BaseR
      * Invoke function getSharePointActivityUserDetail
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -92,8 +92,8 @@ public class GetSharePointActivityUserDetailWithDateRequestBuilder extends BaseR
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;

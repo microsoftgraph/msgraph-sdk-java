@@ -23,7 +23,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * Instantiates a new chatRenamedEventMessageDetail and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatRenamedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.chatRenamedEventMessageDetail");
@@ -33,8 +33,8 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a chatRenamedEventMessageDetail
      */
-    @javax.annotation.Nonnull
-    public static ChatRenamedEventMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ChatRenamedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ChatRenamedEventMessageDetail();
     }
@@ -42,7 +42,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * Gets the chatDisplayName property value. The updated name of the chat.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getChatDisplayName() {
         return this.chatDisplayName;
     }
@@ -50,7 +50,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * Gets the chatId property value. Unique identifier of the chat.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getChatId() {
         return this.chatId;
     }
@@ -58,7 +58,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("chatDisplayName", (n) -> { this.setChatDisplayName(n.getStringValue()); });
@@ -70,7 +70,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * Gets the initiator property value. Initiator of the event.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
         return this.initiator;
     }
@@ -79,8 +79,8 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("chatDisplayName", this.getChatDisplayName());
@@ -92,8 +92,8 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * @param value Value to set for the chatDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChatDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setChatDisplayName(@jakarta.annotation.Nullable final String value) {
         this.chatDisplayName = value;
     }
     /**
@@ -101,8 +101,8 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * @param value Value to set for the chatId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChatId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setChatId(@jakarta.annotation.Nullable final String value) {
         this.chatId = value;
     }
     /**
@@ -110,8 +110,8 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * @param value Value to set for the initiator property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
 }

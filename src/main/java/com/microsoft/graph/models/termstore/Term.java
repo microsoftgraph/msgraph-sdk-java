@@ -46,7 +46,7 @@ public class Term extends Entity implements Parsable {
      * Instantiates a new term and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Term() {
         super();
     }
@@ -55,8 +55,8 @@ public class Term extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a term
      */
-    @javax.annotation.Nonnull
-    public static Term createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Term createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Term();
     }
@@ -64,7 +64,7 @@ public class Term extends Entity implements Parsable {
      * Gets the children property value. Children of current term.
      * @return a term
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Term> getChildren() {
         return this.children;
     }
@@ -72,7 +72,7 @@ public class Term extends Entity implements Parsable {
      * Gets the createdDateTime property value. Date and time of term creation. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -80,7 +80,7 @@ public class Term extends Entity implements Parsable {
      * Gets the descriptions property value. Description about term that is dependent on the languageTag.
      * @return a localizedDescription
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<LocalizedDescription> getDescriptions() {
         return this.descriptions;
     }
@@ -88,7 +88,7 @@ public class Term extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("children", (n) -> { this.setChildren(n.getCollectionOfObjectValues(Term::createFromDiscriminatorValue)); });
@@ -105,7 +105,7 @@ public class Term extends Entity implements Parsable {
      * Gets the labels property value. Label metadata for a term.
      * @return a localizedLabel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<LocalizedLabel> getLabels() {
         return this.labels;
     }
@@ -113,7 +113,7 @@ public class Term extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. Last date and time of term modification. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -121,7 +121,7 @@ public class Term extends Entity implements Parsable {
      * Gets the properties property value. Collection of properties on the term.
      * @return a keyValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getProperties() {
         return this.properties;
     }
@@ -129,7 +129,7 @@ public class Term extends Entity implements Parsable {
      * Gets the relations property value. To indicate which terms are related to the current term as either pinned or reused.
      * @return a relation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Relation> getRelations() {
         return this.relations;
     }
@@ -137,7 +137,7 @@ public class Term extends Entity implements Parsable {
      * Gets the set property value. The [set] in which the term is created.
      * @return a set
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Set getSet() {
         return this.set;
     }
@@ -146,8 +146,8 @@ public class Term extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("children", this.getChildren());
@@ -164,8 +164,8 @@ public class Term extends Entity implements Parsable {
      * @param value Value to set for the children property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChildren(@javax.annotation.Nullable final java.util.List<Term> value) {
+    @jakarta.annotation.Nonnull
+    public void setChildren(@jakarta.annotation.Nullable final java.util.List<Term> value) {
         this.children = value;
     }
     /**
@@ -173,8 +173,8 @@ public class Term extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -182,8 +182,8 @@ public class Term extends Entity implements Parsable {
      * @param value Value to set for the descriptions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescriptions(@javax.annotation.Nullable final java.util.List<LocalizedDescription> value) {
+    @jakarta.annotation.Nonnull
+    public void setDescriptions(@jakarta.annotation.Nullable final java.util.List<LocalizedDescription> value) {
         this.descriptions = value;
     }
     /**
@@ -191,8 +191,8 @@ public class Term extends Entity implements Parsable {
      * @param value Value to set for the labels property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabels(@javax.annotation.Nullable final java.util.List<LocalizedLabel> value) {
+    @jakarta.annotation.Nonnull
+    public void setLabels(@jakarta.annotation.Nullable final java.util.List<LocalizedLabel> value) {
         this.labels = value;
     }
     /**
@@ -200,8 +200,8 @@ public class Term extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -209,8 +209,8 @@ public class Term extends Entity implements Parsable {
      * @param value Value to set for the properties property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProperties(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
+    @jakarta.annotation.Nonnull
+    public void setProperties(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
         this.properties = value;
     }
     /**
@@ -218,8 +218,8 @@ public class Term extends Entity implements Parsable {
      * @param value Value to set for the relations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRelations(@javax.annotation.Nullable final java.util.List<Relation> value) {
+    @jakarta.annotation.Nonnull
+    public void setRelations(@jakarta.annotation.Nullable final java.util.List<Relation> value) {
         this.relations = value;
     }
     /**
@@ -227,8 +227,8 @@ public class Term extends Entity implements Parsable {
      * @param value Value to set for the set property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSet(@javax.annotation.Nullable final Set value) {
+    @jakarta.annotation.Nonnull
+    public void setSet(@jakarta.annotation.Nullable final Set value) {
         this.set = value;
     }
 }

@@ -28,7 +28,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * Instantiates a new educationAssignmentDefaults and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationAssignmentDefaults() {
         super();
     }
@@ -37,8 +37,8 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationAssignmentDefaults
      */
-    @javax.annotation.Nonnull
-    public static EducationAssignmentDefaults createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationAssignmentDefaults createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationAssignmentDefaults();
     }
@@ -46,7 +46,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * Gets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
      * @return a educationAddedStudentAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationAddedStudentAction getAddedStudentAction() {
         return this.addedStudentAction;
     }
@@ -54,7 +54,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * Gets the addToCalendarAction property value. Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
      * @return a educationAddToCalendarOptions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationAddToCalendarOptions getAddToCalendarAction() {
         return this.addToCalendarAction;
     }
@@ -62,7 +62,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * Gets the dueTime property value. Class-level default value for due time field. Default value is 23:59:00.
      * @return a LocalTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalTime getDueTime() {
         return this.dueTime;
     }
@@ -70,7 +70,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("addedStudentAction", (n) -> { this.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction.class)); });
@@ -83,7 +83,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * Gets the notificationChannelUrl property value. Default Teams channel to which notifications will be sent. Default value is null.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNotificationChannelUrl() {
         return this.notificationChannelUrl;
     }
@@ -92,8 +92,8 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("addedStudentAction", this.getAddedStudentAction());
@@ -106,8 +106,8 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * @param value Value to set for the addedStudentAction property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddedStudentAction(@javax.annotation.Nullable final EducationAddedStudentAction value) {
+    @jakarta.annotation.Nonnull
+    public void setAddedStudentAction(@jakarta.annotation.Nullable final EducationAddedStudentAction value) {
         this.addedStudentAction = value;
     }
     /**
@@ -115,8 +115,8 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * @param value Value to set for the addToCalendarAction property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddToCalendarAction(@javax.annotation.Nullable final EducationAddToCalendarOptions value) {
+    @jakarta.annotation.Nonnull
+    public void setAddToCalendarAction(@jakarta.annotation.Nullable final EducationAddToCalendarOptions value) {
         this.addToCalendarAction = value;
     }
     /**
@@ -124,8 +124,8 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * @param value Value to set for the dueTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDueTime(@javax.annotation.Nullable final LocalTime value) {
+    @jakarta.annotation.Nonnull
+    public void setDueTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.dueTime = value;
     }
     /**
@@ -133,8 +133,8 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * @param value Value to set for the notificationChannelUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotificationChannelUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNotificationChannelUrl(@jakarta.annotation.Nullable final String value) {
         this.notificationChannelUrl = value;
     }
 }

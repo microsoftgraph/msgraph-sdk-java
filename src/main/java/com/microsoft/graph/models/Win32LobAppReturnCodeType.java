@@ -21,10 +21,10 @@ public enum Win32LobAppReturnCodeType implements ValuedEnum {
     Win32LobAppReturnCodeType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static Win32LobAppReturnCodeType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static Win32LobAppReturnCodeType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "failed": return Failed;

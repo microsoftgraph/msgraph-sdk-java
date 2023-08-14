@@ -69,7 +69,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * Instantiates a new process and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Process() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -78,8 +78,8 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a process
      */
-    @javax.annotation.Nonnull
-    public static Process createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Process createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Process();
     }
@@ -87,7 +87,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * Gets the accountName property value. User account identifier (user account context the process ran under) for example, AccountName, SID, and so on.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAccountName() {
         return this.accountName;
     }
@@ -95,7 +95,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -103,7 +103,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * Gets the commandLine property value. The full process invocation commandline including all parameters.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCommandLine() {
         return this.commandLine;
     }
@@ -111,7 +111,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * Gets the createdDateTime property value. Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -119,7 +119,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
         deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
@@ -141,7 +141,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * Gets the fileHash property value. Complex type containing file hashes (cryptographic and location-sensitive).
      * @return a fileHash
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FileHash getFileHash() {
         return this.fileHash;
     }
@@ -149,7 +149,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * Gets the integrityLevel property value. The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
      * @return a processIntegrityLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ProcessIntegrityLevel getIntegrityLevel() {
         return this.integrityLevel;
     }
@@ -157,7 +157,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * Gets the isElevated property value. True if the process is elevated.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsElevated() {
         return this.isElevated;
     }
@@ -165,7 +165,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * Gets the name property value. The name of the process' Image file.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -173,7 +173,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -181,7 +181,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * Gets the parentProcessCreatedDateTime property value. DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getParentProcessCreatedDateTime() {
         return this.parentProcessCreatedDateTime;
     }
@@ -189,7 +189,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * Gets the parentProcessId property value. The Process ID (PID) of the parent process.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getParentProcessId() {
         return this.parentProcessId;
     }
@@ -197,7 +197,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * Gets the parentProcessName property value. The name of the image file of the parent process.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getParentProcessName() {
         return this.parentProcessName;
     }
@@ -205,7 +205,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * Gets the path property value. Full path, including filename.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPath() {
         return this.path;
     }
@@ -213,7 +213,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * Gets the processId property value. The Process ID (PID) of the process.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getProcessId() {
         return this.processId;
     }
@@ -222,8 +222,8 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("accountName", this.getAccountName());
         writer.writeStringValue("commandLine", this.getCommandLine());
@@ -245,8 +245,8 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accountName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccountName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAccountName(@jakarta.annotation.Nullable final String value) {
         this.accountName = value;
     }
     /**
@@ -254,8 +254,8 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -263,8 +263,8 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the commandLine property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCommandLine(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCommandLine(@jakarta.annotation.Nullable final String value) {
         this.commandLine = value;
     }
     /**
@@ -272,8 +272,8 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -281,8 +281,8 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the fileHash property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileHash(@javax.annotation.Nullable final FileHash value) {
+    @jakarta.annotation.Nonnull
+    public void setFileHash(@jakarta.annotation.Nullable final FileHash value) {
         this.fileHash = value;
     }
     /**
@@ -290,8 +290,8 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the integrityLevel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIntegrityLevel(@javax.annotation.Nullable final ProcessIntegrityLevel value) {
+    @jakarta.annotation.Nonnull
+    public void setIntegrityLevel(@jakarta.annotation.Nullable final ProcessIntegrityLevel value) {
         this.integrityLevel = value;
     }
     /**
@@ -299,8 +299,8 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isElevated property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsElevated(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsElevated(@jakarta.annotation.Nullable final Boolean value) {
         this.isElevated = value;
     }
     /**
@@ -308,8 +308,8 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -317,8 +317,8 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -326,8 +326,8 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the parentProcessCreatedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParentProcessCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setParentProcessCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.parentProcessCreatedDateTime = value;
     }
     /**
@@ -335,8 +335,8 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the parentProcessId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParentProcessId(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setParentProcessId(@jakarta.annotation.Nullable final Integer value) {
         this.parentProcessId = value;
     }
     /**
@@ -344,8 +344,8 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the parentProcessName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParentProcessName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setParentProcessName(@jakarta.annotation.Nullable final String value) {
         this.parentProcessName = value;
     }
     /**
@@ -353,8 +353,8 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the path property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPath(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPath(@jakarta.annotation.Nullable final String value) {
         this.path = value;
     }
     /**
@@ -362,8 +362,8 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the processId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProcessId(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setProcessId(@jakarta.annotation.Nullable final Integer value) {
         this.processId = value;
     }
 }

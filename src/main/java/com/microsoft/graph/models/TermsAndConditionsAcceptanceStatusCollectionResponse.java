@@ -15,7 +15,7 @@ public class TermsAndConditionsAcceptanceStatusCollectionResponse extends BaseCo
      * Instantiates a new termsAndConditionsAcceptanceStatusCollectionResponse and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TermsAndConditionsAcceptanceStatusCollectionResponse() {
         super();
     }
@@ -24,8 +24,8 @@ public class TermsAndConditionsAcceptanceStatusCollectionResponse extends BaseCo
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a termsAndConditionsAcceptanceStatusCollectionResponse
      */
-    @javax.annotation.Nonnull
-    public static TermsAndConditionsAcceptanceStatusCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TermsAndConditionsAcceptanceStatusCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TermsAndConditionsAcceptanceStatusCollectionResponse();
     }
@@ -33,7 +33,7 @@ public class TermsAndConditionsAcceptanceStatusCollectionResponse extends BaseCo
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(TermsAndConditionsAcceptanceStatus::createFromDiscriminatorValue)); });
@@ -43,7 +43,7 @@ public class TermsAndConditionsAcceptanceStatusCollectionResponse extends BaseCo
      * Gets the value property value. The value property
      * @return a termsAndConditionsAcceptanceStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TermsAndConditionsAcceptanceStatus> getValue() {
         return this.value;
     }
@@ -52,8 +52,8 @@ public class TermsAndConditionsAcceptanceStatusCollectionResponse extends BaseCo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("value", this.getValue());
@@ -63,8 +63,8 @@ public class TermsAndConditionsAcceptanceStatusCollectionResponse extends BaseCo
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final java.util.List<TermsAndConditionsAcceptanceStatus> value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final java.util.List<TermsAndConditionsAcceptanceStatus> value) {
         this.value = value;
     }
 }

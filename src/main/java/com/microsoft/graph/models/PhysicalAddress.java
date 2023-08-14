@@ -40,7 +40,7 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * Instantiates a new physicalAddress and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PhysicalAddress() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +49,8 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a physicalAddress
      */
-    @javax.annotation.Nonnull
-    public static PhysicalAddress createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PhysicalAddress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PhysicalAddress();
     }
@@ -58,7 +58,7 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +66,7 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * Gets the city property value. The city.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCity() {
         return this.city;
     }
@@ -74,7 +74,7 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * Gets the countryOrRegion property value. The country or region. It's a free-format string value, for example, 'United States'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCountryOrRegion() {
         return this.countryOrRegion;
     }
@@ -82,7 +82,7 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("city", (n) -> { this.setCity(n.getStringValue()); });
@@ -97,7 +97,7 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -105,7 +105,7 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * Gets the postalCode property value. The postal code.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPostalCode() {
         return this.postalCode;
     }
@@ -113,7 +113,7 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * Gets the state property value. The state.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getState() {
         return this.state;
     }
@@ -121,7 +121,7 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * Gets the street property value. The street.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStreet() {
         return this.street;
     }
@@ -130,8 +130,8 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("city", this.getCity());
         writer.writeStringValue("countryOrRegion", this.getCountryOrRegion());
@@ -146,8 +146,8 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -155,8 +155,8 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the city property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCity(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCity(@jakarta.annotation.Nullable final String value) {
         this.city = value;
     }
     /**
@@ -164,8 +164,8 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the countryOrRegion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountryOrRegion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCountryOrRegion(@jakarta.annotation.Nullable final String value) {
         this.countryOrRegion = value;
     }
     /**
@@ -173,8 +173,8 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -182,8 +182,8 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the postalCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPostalCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPostalCode(@jakarta.annotation.Nullable final String value) {
         this.postalCode = value;
     }
     /**
@@ -191,8 +191,8 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final String value) {
         this.state = value;
     }
     /**
@@ -200,8 +200,8 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the street property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStreet(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStreet(@jakarta.annotation.Nullable final String value) {
         this.street = value;
     }
 }

@@ -19,7 +19,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * Instantiates a new educationFeedbackResourceOutcome and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationFeedbackResourceOutcome() {
         super();
         this.setOdataType("#microsoft.graph.educationFeedbackResourceOutcome");
@@ -29,8 +29,8 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationFeedbackResourceOutcome
      */
-    @javax.annotation.Nonnull
-    public static EducationFeedbackResourceOutcome createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationFeedbackResourceOutcome createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationFeedbackResourceOutcome();
     }
@@ -38,7 +38,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * Gets the feedbackResource property value. The actual feedback resource.
      * @return a educationResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationResource getFeedbackResource() {
         return this.feedbackResource;
     }
@@ -46,7 +46,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("feedbackResource", (n) -> { this.setFeedbackResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
@@ -57,7 +57,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * Gets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
      * @return a educationFeedbackResourceOutcomeStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationFeedbackResourceOutcomeStatus getResourceStatus() {
         return this.resourceStatus;
     }
@@ -66,8 +66,8 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("feedbackResource", this.getFeedbackResource());
@@ -78,8 +78,8 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * @param value Value to set for the feedbackResource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeedbackResource(@javax.annotation.Nullable final EducationResource value) {
+    @jakarta.annotation.Nonnull
+    public void setFeedbackResource(@jakarta.annotation.Nullable final EducationResource value) {
         this.feedbackResource = value;
     }
     /**
@@ -87,8 +87,8 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * @param value Value to set for the resourceStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceStatus(@javax.annotation.Nullable final EducationFeedbackResourceOutcomeStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceStatus(@jakarta.annotation.Nullable final EducationFeedbackResourceOutcomeStatus value) {
         this.resourceStatus = value;
     }
 }

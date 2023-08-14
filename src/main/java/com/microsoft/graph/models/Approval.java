@@ -15,7 +15,7 @@ public class Approval extends Entity implements Parsable {
      * Instantiates a new approval and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Approval() {
         super();
     }
@@ -24,8 +24,8 @@ public class Approval extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a approval
      */
-    @javax.annotation.Nonnull
-    public static Approval createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Approval createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Approval();
     }
@@ -33,7 +33,7 @@ public class Approval extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("stages", (n) -> { this.setStages(n.getCollectionOfObjectValues(ApprovalStage::createFromDiscriminatorValue)); });
@@ -43,7 +43,7 @@ public class Approval extends Entity implements Parsable {
      * Gets the stages property value. A collection of stages in the approval decision.
      * @return a approvalStage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ApprovalStage> getStages() {
         return this.stages;
     }
@@ -52,8 +52,8 @@ public class Approval extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("stages", this.getStages());
@@ -63,8 +63,8 @@ public class Approval extends Entity implements Parsable {
      * @param value Value to set for the stages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStages(@javax.annotation.Nullable final java.util.List<ApprovalStage> value) {
+    @jakarta.annotation.Nonnull
+    public void setStages(@jakarta.annotation.Nullable final java.util.List<ApprovalStage> value) {
         this.stages = value;
     }
 }

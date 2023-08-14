@@ -18,7 +18,7 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
      * Instantiates a new resetPasscodeActionResult and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResetPasscodeActionResult() {
         super();
     }
@@ -27,8 +27,8 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a resetPasscodeActionResult
      */
-    @javax.annotation.Nonnull
-    public static ResetPasscodeActionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ResetPasscodeActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ResetPasscodeActionResult();
     }
@@ -36,7 +36,7 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("passcode", (n) -> { this.setPasscode(n.getStringValue()); });
@@ -46,7 +46,7 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
      * Gets the passcode property value. Newly generated passcode for the device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPasscode() {
         return this.passcode;
     }
@@ -55,8 +55,8 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("passcode", this.getPasscode());
@@ -66,8 +66,8 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
      * @param value Value to set for the passcode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasscode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPasscode(@jakarta.annotation.Nullable final String value) {
         this.passcode = value;
     }
 }

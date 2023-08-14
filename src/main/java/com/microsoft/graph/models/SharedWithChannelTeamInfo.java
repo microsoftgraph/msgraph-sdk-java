@@ -19,7 +19,7 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      * Instantiates a new sharedWithChannelTeamInfo and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SharedWithChannelTeamInfo() {
         super();
     }
@@ -28,8 +28,8 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a sharedWithChannelTeamInfo
      */
-    @javax.annotation.Nonnull
-    public static SharedWithChannelTeamInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SharedWithChannelTeamInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SharedWithChannelTeamInfo();
     }
@@ -37,7 +37,7 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      * Gets the allowedMembers property value. A collection of team members who have access to the shared channel.
      * @return a conversationMember
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ConversationMember> getAllowedMembers() {
         return this.allowedMembers;
     }
@@ -45,7 +45,7 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowedMembers", (n) -> { this.setAllowedMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
@@ -56,7 +56,7 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      * Gets the isHostTeam property value. Indicates whether the team is the host of the channel.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsHostTeam() {
         return this.isHostTeam;
     }
@@ -65,8 +65,8 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("allowedMembers", this.getAllowedMembers());
@@ -77,8 +77,8 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      * @param value Value to set for the allowedMembers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowedMembers(@javax.annotation.Nullable final java.util.List<ConversationMember> value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowedMembers(@jakarta.annotation.Nullable final java.util.List<ConversationMember> value) {
         this.allowedMembers = value;
     }
     /**
@@ -86,8 +86,8 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      * @param value Value to set for the isHostTeam property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsHostTeam(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsHostTeam(@jakarta.annotation.Nullable final Boolean value) {
         this.isHostTeam = value;
     }
 }

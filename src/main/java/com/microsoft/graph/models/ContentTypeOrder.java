@@ -28,7 +28,7 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
      * Instantiates a new contentTypeOrder and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ContentTypeOrder() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a contentTypeOrder
      */
-    @javax.annotation.Nonnull
-    public static ContentTypeOrder createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ContentTypeOrder createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ContentTypeOrder();
     }
@@ -46,7 +46,7 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
      * Gets the default property value. Indicates whether this is the default content type
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDefault() {
         return this.defaultEscaped;
     }
@@ -62,7 +62,7 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("default", (n) -> { this.setDefault(n.getBooleanValue()); });
@@ -74,7 +74,7 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -82,7 +82,7 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
      * Gets the position property value. Specifies the position in which the content type appears in the selection UI.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPosition() {
         return this.position;
     }
@@ -91,8 +91,8 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("default", this.getDefault());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -104,8 +104,8 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -113,8 +113,8 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the default property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefault(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.defaultEscaped = value;
     }
     /**
@@ -122,8 +122,8 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -131,8 +131,8 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the position property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPosition(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPosition(@jakarta.annotation.Nullable final Integer value) {
         this.position = value;
     }
 }

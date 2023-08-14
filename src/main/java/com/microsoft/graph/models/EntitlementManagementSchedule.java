@@ -33,7 +33,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * Instantiates a new entitlementManagementSchedule and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EntitlementManagementSchedule() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +42,8 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a entitlementManagementSchedule
      */
-    @javax.annotation.Nonnull
-    public static EntitlementManagementSchedule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EntitlementManagementSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EntitlementManagementSchedule();
     }
@@ -51,7 +51,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -59,7 +59,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * Gets the expiration property value. When the access should expire.
      * @return a expirationPattern
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExpirationPattern getExpiration() {
         return this.expiration;
     }
@@ -67,7 +67,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("expiration", (n) -> { this.setExpiration(n.getObjectValue(ExpirationPattern::createFromDiscriminatorValue)); });
@@ -80,7 +80,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -88,7 +88,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * Gets the recurrence property value. For recurring access reviews.  Not used in access requests.
      * @return a patternedRecurrence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PatternedRecurrence getRecurrence() {
         return this.recurrence;
     }
@@ -96,7 +96,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * Gets the startDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
@@ -105,8 +105,8 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("expiration", this.getExpiration());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -119,8 +119,8 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -128,8 +128,8 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * @param value Value to set for the expiration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpiration(@javax.annotation.Nullable final ExpirationPattern value) {
+    @jakarta.annotation.Nonnull
+    public void setExpiration(@jakarta.annotation.Nullable final ExpirationPattern value) {
         this.expiration = value;
     }
     /**
@@ -137,8 +137,8 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -146,8 +146,8 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * @param value Value to set for the recurrence property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecurrence(@javax.annotation.Nullable final PatternedRecurrence value) {
+    @jakarta.annotation.Nonnull
+    public void setRecurrence(@jakarta.annotation.Nullable final PatternedRecurrence value) {
         this.recurrence = value;
     }
     /**
@@ -155,8 +155,8 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
 }

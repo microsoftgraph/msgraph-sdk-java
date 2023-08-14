@@ -40,7 +40,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * Instantiates a new chatMessagePolicyViolation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatMessagePolicyViolation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +49,8 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a chatMessagePolicyViolation
      */
-    @javax.annotation.Nonnull
-    public static ChatMessagePolicyViolation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ChatMessagePolicyViolation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ChatMessagePolicyViolation();
     }
@@ -58,7 +58,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +66,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * Gets the dlpAction property value. The action taken by the DLP provider on the message with sensitive content. Supported values are: NoneNotifySender -- Inform the sender of the violation but allow readers to read the message.BlockAccess -- Block readers from reading the message.BlockAccessExternal -- Block users outside the organization from reading the message, while allowing users within the organization to read the message.
      * @return a chatMessagePolicyViolationDlpActionTypes
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatMessagePolicyViolationDlpActionTypes getDlpAction() {
         return this.dlpAction;
     }
@@ -74,7 +74,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("dlpAction", (n) -> { this.setDlpAction(n.getEnumValue(ChatMessagePolicyViolationDlpActionTypes.class)); });
@@ -89,7 +89,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * Gets the justificationText property value. Justification text provided by the sender of the message when overriding a policy violation.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getJustificationText() {
         return this.justificationText;
     }
@@ -97,7 +97,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -105,7 +105,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * Gets the policyTip property value. Information to display to the message sender about why the message was flagged as a violation.
      * @return a chatMessagePolicyViolationPolicyTip
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatMessagePolicyViolationPolicyTip getPolicyTip() {
         return this.policyTip;
     }
@@ -113,7 +113,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * Gets the userAction property value. Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction is not required.
      * @return a chatMessagePolicyViolationUserActionTypes
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatMessagePolicyViolationUserActionTypes getUserAction() {
         return this.userAction;
     }
@@ -121,7 +121,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * Gets the verdictDetails property value. Indicates what actions the sender may take in response to the policy violation. Supported values are: NoneAllowFalsePositiveOverride -- Allows the sender to declare the policyViolation to be an error in the DLP app and its rules, and allow readers to see the message again if the dlpAction had hidden it.AllowOverrideWithoutJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, without needing to provide an explanation for doing so. AllowOverrideWithJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, after providing an explanation for doing so.AllowOverrideWithoutJustification and AllowOverrideWithJustification are mutually exclusive.
      * @return a chatMessagePolicyViolationVerdictDetailsTypes
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatMessagePolicyViolationVerdictDetailsTypes getVerdictDetails() {
         return this.verdictDetails;
     }
@@ -130,8 +130,8 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("dlpAction", this.getDlpAction());
         writer.writeStringValue("justificationText", this.getJustificationText());
@@ -146,8 +146,8 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -155,8 +155,8 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the dlpAction property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDlpAction(@javax.annotation.Nullable final ChatMessagePolicyViolationDlpActionTypes value) {
+    @jakarta.annotation.Nonnull
+    public void setDlpAction(@jakarta.annotation.Nullable final ChatMessagePolicyViolationDlpActionTypes value) {
         this.dlpAction = value;
     }
     /**
@@ -164,8 +164,8 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the justificationText property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJustificationText(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setJustificationText(@jakarta.annotation.Nullable final String value) {
         this.justificationText = value;
     }
     /**
@@ -173,8 +173,8 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -182,8 +182,8 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the policyTip property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyTip(@javax.annotation.Nullable final ChatMessagePolicyViolationPolicyTip value) {
+    @jakarta.annotation.Nonnull
+    public void setPolicyTip(@jakarta.annotation.Nullable final ChatMessagePolicyViolationPolicyTip value) {
         this.policyTip = value;
     }
     /**
@@ -191,8 +191,8 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the userAction property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserAction(@javax.annotation.Nullable final ChatMessagePolicyViolationUserActionTypes value) {
+    @jakarta.annotation.Nonnull
+    public void setUserAction(@jakarta.annotation.Nullable final ChatMessagePolicyViolationUserActionTypes value) {
         this.userAction = value;
     }
     /**
@@ -200,8 +200,8 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the verdictDetails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVerdictDetails(@javax.annotation.Nullable final ChatMessagePolicyViolationVerdictDetailsTypes value) {
+    @jakarta.annotation.Nonnull
+    public void setVerdictDetails(@jakarta.annotation.Nullable final ChatMessagePolicyViolationVerdictDetailsTypes value) {
         this.verdictDetails = value;
     }
 }

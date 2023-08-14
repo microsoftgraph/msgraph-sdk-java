@@ -15,7 +15,7 @@ public class DirectoryRoleCollectionResponse extends BaseCollectionPaginationCou
      * Instantiates a new directoryRoleCollectionResponse and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DirectoryRoleCollectionResponse() {
         super();
     }
@@ -24,8 +24,8 @@ public class DirectoryRoleCollectionResponse extends BaseCollectionPaginationCou
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a directoryRoleCollectionResponse
      */
-    @javax.annotation.Nonnull
-    public static DirectoryRoleCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DirectoryRoleCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DirectoryRoleCollectionResponse();
     }
@@ -33,7 +33,7 @@ public class DirectoryRoleCollectionResponse extends BaseCollectionPaginationCou
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(DirectoryRole::createFromDiscriminatorValue)); });
@@ -43,7 +43,7 @@ public class DirectoryRoleCollectionResponse extends BaseCollectionPaginationCou
      * Gets the value property value. The value property
      * @return a directoryRole
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DirectoryRole> getValue() {
         return this.value;
     }
@@ -52,8 +52,8 @@ public class DirectoryRoleCollectionResponse extends BaseCollectionPaginationCou
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("value", this.getValue());
@@ -63,8 +63,8 @@ public class DirectoryRoleCollectionResponse extends BaseCollectionPaginationCou
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final java.util.List<DirectoryRole> value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final java.util.List<DirectoryRole> value) {
         this.value = value;
     }
 }

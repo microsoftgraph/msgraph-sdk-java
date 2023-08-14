@@ -44,7 +44,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * Instantiates a new sharingLink and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SharingLink() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +53,8 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a sharingLink
      */
-    @javax.annotation.Nonnull
-    public static SharingLink createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SharingLink createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SharingLink();
     }
@@ -62,7 +62,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +70,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * Gets the application property value. The app the link is associated with.
      * @return a identity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Identity getApplication() {
         return this.application;
     }
@@ -78,7 +78,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("application", (n) -> { this.setApplication(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
@@ -94,7 +94,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -102,7 +102,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * Gets the preventsDownload property value. If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPreventsDownload() {
         return this.preventsDownload;
     }
@@ -110,7 +110,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * Gets the scope property value. The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getScope() {
         return this.scope;
     }
@@ -118,7 +118,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * Gets the type property value. The type of the link created.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getType() {
         return this.type;
     }
@@ -126,7 +126,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * Gets the webHtml property value. For embed links, this property contains the HTML code for an <iframe> element that will embed the item in a webpage.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebHtml() {
         return this.webHtml;
     }
@@ -134,7 +134,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * Gets the webUrl property value. A URL that opens the item in the browser on the OneDrive website.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebUrl() {
         return this.webUrl;
     }
@@ -143,8 +143,8 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("application", this.getApplication());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -160,8 +160,8 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -169,8 +169,8 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the application property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplication(@javax.annotation.Nullable final Identity value) {
+    @jakarta.annotation.Nonnull
+    public void setApplication(@jakarta.annotation.Nullable final Identity value) {
         this.application = value;
     }
     /**
@@ -178,8 +178,8 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -187,8 +187,8 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the preventsDownload property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreventsDownload(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPreventsDownload(@jakarta.annotation.Nullable final Boolean value) {
         this.preventsDownload = value;
     }
     /**
@@ -196,8 +196,8 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the scope property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScope(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setScope(@jakarta.annotation.Nullable final String value) {
         this.scope = value;
     }
     /**
@@ -205,8 +205,8 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
     /**
@@ -214,8 +214,8 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the webHtml property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebHtml(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWebHtml(@jakarta.annotation.Nullable final String value) {
         this.webHtml = value;
     }
     /**
@@ -223,8 +223,8 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }
 }

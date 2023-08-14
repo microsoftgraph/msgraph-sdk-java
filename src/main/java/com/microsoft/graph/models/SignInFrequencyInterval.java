@@ -11,10 +11,10 @@ public enum SignInFrequencyInterval implements ValuedEnum {
     SignInFrequencyInterval(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static SignInFrequencyInterval forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static SignInFrequencyInterval forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "timeBased": return TimeBased;

@@ -31,56 +31,56 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the assignmentCategories property of the microsoft.graph.educationClass entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AssignmentCategoriesRequestBuilder assignmentCategories() {
         return new AssignmentCategoriesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the assignmentDefaults property of the microsoft.graph.educationClass entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AssignmentDefaultsRequestBuilder assignmentDefaults() {
         return new AssignmentDefaultsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.educationClass entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the assignmentSettings property of the microsoft.graph.educationClass entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AssignmentSettingsRequestBuilder assignmentSettings() {
         return new AssignmentSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the group property of the microsoft.graph.educationClass entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public GroupRequestBuilder group() {
         return new GroupRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.educationClass entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the schools property of the microsoft.graph.educationClass entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SchoolsRequestBuilder schools() {
         return new SchoolsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the teachers property of the microsoft.graph.educationClass entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TeachersRequestBuilder teachers() {
         return new TeachersRequestBuilder(pathParameters, requestAdapter);
     }
@@ -90,8 +90,8 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public EducationClassItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public EducationClassItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -100,16 +100,16 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public EducationClassItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public EducationClassItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -127,10 +127,10 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -146,9 +146,9 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @return a CompletableFuture of educationClass
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClass> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -166,10 +166,10 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationClass
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationClass> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<EducationClass> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -186,10 +186,10 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an educationClass object.
      * @param body The request body
      * @return a CompletableFuture of educationClass
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationClass> patch(@javax.annotation.Nonnull final EducationClass body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<EducationClass> patch(@jakarta.annotation.Nonnull final EducationClass body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -207,10 +207,10 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationClass
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EducationClass> patch(@javax.annotation.Nonnull final EducationClass body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<EducationClass> patch(@jakarta.annotation.Nonnull final EducationClass body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -228,7 +228,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -237,8 +237,8 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -255,7 +255,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -264,8 +264,8 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -285,8 +285,8 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final EducationClass body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationClass body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -295,8 +295,8 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final EducationClass body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationClass body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -325,13 +325,13 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -341,7 +341,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

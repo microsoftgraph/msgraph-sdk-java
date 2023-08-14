@@ -124,7 +124,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Instantiates a new device and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Device() {
         super();
         this.setOdataType("#microsoft.graph.device");
@@ -134,8 +134,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a device
      */
-    @javax.annotation.Nonnull
-    public static Device createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Device createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Device();
     }
@@ -143,7 +143,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the accountEnabled property value. true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAccountEnabled() {
         return this.accountEnabled;
     }
@@ -151,7 +151,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the alternativeSecurityIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le).
      * @return a alternativeSecurityId
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AlternativeSecurityId> getAlternativeSecurityIds() {
         return this.alternativeSecurityIds;
     }
@@ -159,7 +159,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the approximateLastSignInDateTime property value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderBy.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getApproximateLastSignInDateTime() {
         return this.approximateLastSignInDateTime;
     }
@@ -167,7 +167,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the complianceExpirationDateTime property value. The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getComplianceExpirationDateTime() {
         return this.complianceExpirationDateTime;
     }
@@ -175,7 +175,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the deviceCategory property value. User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceCategory() {
         return this.deviceCategory;
     }
@@ -183,7 +183,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -191,7 +191,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the deviceMetadata property value. For internal use only. Set to null.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceMetadata() {
         return this.deviceMetadata;
     }
@@ -199,7 +199,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the deviceOwnership property value. Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceOwnership() {
         return this.deviceOwnership;
     }
@@ -207,7 +207,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the deviceVersion property value. For internal use only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDeviceVersion() {
         return this.deviceVersion;
     }
@@ -215,7 +215,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the displayName property value. The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -223,7 +223,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the enrollmentProfileName property value. Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEnrollmentProfileName() {
         return this.enrollmentProfileName;
     }
@@ -231,7 +231,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the extensions property value. The collection of open extensions defined for the device. Read-only. Nullable.
      * @return a extension
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
         return this.extensions;
     }
@@ -239,7 +239,7 @@ public class Device extends DirectoryObject implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountEnabled", (n) -> { this.setAccountEnabled(n.getBooleanValue()); });
@@ -276,7 +276,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the isCompliant property value. true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsCompliant() {
         return this.isCompliant;
     }
@@ -284,7 +284,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the isManaged property value. true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsManaged() {
         return this.isManaged;
     }
@@ -292,7 +292,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the mdmAppId property value. Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, not, startsWith).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMdmAppId() {
         return this.mdmAppId;
     }
@@ -300,7 +300,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the memberOf property value. Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getMemberOf() {
         return this.memberOf;
     }
@@ -308,7 +308,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the onPremisesLastSyncDateTime property value. The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, not, ge, le, in).
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getOnPremisesLastSyncDateTime() {
         return this.onPremisesLastSyncDateTime;
     }
@@ -316,7 +316,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getOnPremisesSyncEnabled() {
         return this.onPremisesSyncEnabled;
     }
@@ -324,7 +324,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the operatingSystem property value. The type of operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOperatingSystem() {
         return this.operatingSystem;
     }
@@ -332,7 +332,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the operatingSystemVersion property value. The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOperatingSystemVersion() {
         return this.operatingSystemVersion;
     }
@@ -340,7 +340,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith,/$count eq 0, /$count ne 0).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getPhysicalIds() {
         return this.physicalIds;
     }
@@ -348,7 +348,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the profileType property value. The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProfileType() {
         return this.profileType;
     }
@@ -356,7 +356,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the registeredOwners property value. The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Read-only. Nullable. Supports $expand.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getRegisteredOwners() {
         return this.registeredOwners;
     }
@@ -364,7 +364,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the registeredUsers property value. Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getRegisteredUsers() {
         return this.registeredUsers;
     }
@@ -372,7 +372,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the registrationDateTime property value. Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRegistrationDateTime() {
         return this.registrationDateTime;
     }
@@ -380,7 +380,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSystemLabels() {
         return this.systemLabels;
     }
@@ -388,7 +388,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the transitiveMemberOf property value. Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveMemberOf() {
         return this.transitiveMemberOf;
     }
@@ -396,7 +396,7 @@ public class Device extends DirectoryObject implements Parsable {
      * Gets the trustType property value. Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTrustType() {
         return this.trustType;
     }
@@ -405,8 +405,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("accountEnabled", this.getAccountEnabled());
@@ -443,8 +443,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the accountEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccountEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAccountEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.accountEnabled = value;
     }
     /**
@@ -452,8 +452,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the alternativeSecurityIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlternativeSecurityIds(@javax.annotation.Nullable final java.util.List<AlternativeSecurityId> value) {
+    @jakarta.annotation.Nonnull
+    public void setAlternativeSecurityIds(@jakarta.annotation.Nullable final java.util.List<AlternativeSecurityId> value) {
         this.alternativeSecurityIds = value;
     }
     /**
@@ -461,8 +461,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the approximateLastSignInDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApproximateLastSignInDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setApproximateLastSignInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.approximateLastSignInDateTime = value;
     }
     /**
@@ -470,8 +470,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the complianceExpirationDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComplianceExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setComplianceExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.complianceExpirationDateTime = value;
     }
     /**
@@ -479,8 +479,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceCategory property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceCategory(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceCategory(@jakarta.annotation.Nullable final String value) {
         this.deviceCategory = value;
     }
     /**
@@ -488,8 +488,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
@@ -497,8 +497,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceMetadata property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceMetadata(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceMetadata(@jakarta.annotation.Nullable final String value) {
         this.deviceMetadata = value;
     }
     /**
@@ -506,8 +506,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceOwnership property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceOwnership(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceOwnership(@jakarta.annotation.Nullable final String value) {
         this.deviceOwnership = value;
     }
     /**
@@ -515,8 +515,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceVersion(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceVersion(@jakarta.annotation.Nullable final Integer value) {
         this.deviceVersion = value;
     }
     /**
@@ -524,8 +524,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -533,8 +533,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the enrollmentProfileName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentProfileName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEnrollmentProfileName(@jakarta.annotation.Nullable final String value) {
         this.enrollmentProfileName = value;
     }
     /**
@@ -542,8 +542,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
+    @jakarta.annotation.Nonnull
+    public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
         this.extensions = value;
     }
     /**
@@ -551,8 +551,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the isCompliant property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsCompliant(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsCompliant(@jakarta.annotation.Nullable final Boolean value) {
         this.isCompliant = value;
     }
     /**
@@ -560,8 +560,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the isManaged property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsManaged(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsManaged(@jakarta.annotation.Nullable final Boolean value) {
         this.isManaged = value;
     }
     /**
@@ -569,8 +569,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the mdmAppId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMdmAppId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMdmAppId(@jakarta.annotation.Nullable final String value) {
         this.mdmAppId = value;
     }
     /**
@@ -578,8 +578,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the memberOf property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
+    @jakarta.annotation.Nonnull
+    public void setMemberOf(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.memberOf = value;
     }
     /**
@@ -587,8 +587,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesLastSyncDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnPremisesLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setOnPremisesLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.onPremisesLastSyncDateTime = value;
     }
     /**
@@ -596,8 +596,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesSyncEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnPremisesSyncEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setOnPremisesSyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.onPremisesSyncEnabled = value;
     }
     /**
@@ -605,8 +605,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the operatingSystem property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperatingSystem(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.operatingSystem = value;
     }
     /**
@@ -614,8 +614,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the operatingSystemVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperatingSystemVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOperatingSystemVersion(@jakarta.annotation.Nullable final String value) {
         this.operatingSystemVersion = value;
     }
     /**
@@ -623,8 +623,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the physicalIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhysicalIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setPhysicalIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.physicalIds = value;
     }
     /**
@@ -632,8 +632,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the profileType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProfileType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProfileType(@jakarta.annotation.Nullable final String value) {
         this.profileType = value;
     }
     /**
@@ -641,8 +641,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the registeredOwners property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegisteredOwners(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
+    @jakarta.annotation.Nonnull
+    public void setRegisteredOwners(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.registeredOwners = value;
     }
     /**
@@ -650,8 +650,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the registeredUsers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegisteredUsers(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
+    @jakarta.annotation.Nonnull
+    public void setRegisteredUsers(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.registeredUsers = value;
     }
     /**
@@ -659,8 +659,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the registrationDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegistrationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setRegistrationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.registrationDateTime = value;
     }
     /**
@@ -668,8 +668,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the systemLabels property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSystemLabels(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSystemLabels(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.systemLabels = value;
     }
     /**
@@ -677,8 +677,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the transitiveMemberOf property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTransitiveMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
+    @jakarta.annotation.Nonnull
+    public void setTransitiveMemberOf(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.transitiveMemberOf = value;
     }
     /**
@@ -686,8 +686,8 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the trustType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrustType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTrustType(@jakarta.annotation.Nullable final String value) {
         this.trustType = value;
     }
 }
