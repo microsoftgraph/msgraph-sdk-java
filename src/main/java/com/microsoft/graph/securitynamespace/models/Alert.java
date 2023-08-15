@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.security.models.Dictionary;
 import com.microsoft.graph.security.models.AlertClassification;
 import com.microsoft.graph.security.models.AlertComment;
 import com.microsoft.graph.security.models.DetectionSource;
@@ -42,6 +43,24 @@ public class Alert extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String actorDisplayName;
+
+    /**
+     * The Additional Data.
+     * 
+     */
+    @SerializedName(value = "additionalData", alternate = {"AdditionalData"})
+    @Expose
+	@Nullable
+    public Dictionary additionalData;
+
+    /**
+     * The Alert Policy Id.
+     * 
+     */
+    @SerializedName(value = "alertPolicyId", alternate = {"AlertPolicyId"})
+    @Expose
+	@Nullable
+    public String alertPolicyId;
 
     /**
      * The Alert Web Url.
