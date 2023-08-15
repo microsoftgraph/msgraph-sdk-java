@@ -128,9 +128,9 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         }
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
+     * Read properties and relationships of the iosMobileAppConfiguration object.
      * @return a CompletableFuture of managedDeviceMobileAppConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> get() {
@@ -147,10 +147,10 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         }
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
+     * Read properties and relationships of the iosMobileAppConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDeviceMobileAppConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -236,7 +236,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
+     * Read properties and relationships of the iosMobileAppConfiguration object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -244,7 +244,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
+     * Read properties and relationships of the iosMobileAppConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -302,7 +302,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
+     * Read properties and relationships of the iosMobileAppConfiguration object.
      */
     public class GetQueryParameters {
         /**

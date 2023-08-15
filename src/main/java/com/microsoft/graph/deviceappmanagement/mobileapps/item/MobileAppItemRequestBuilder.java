@@ -81,9 +81,9 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a windowsUniversalAppX.
+     * Deletes a macOSLobApp.
      * @return a CompletableFuture of void
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsuniversalappx-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macoslobapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -100,10 +100,10 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Deletes a windowsUniversalAppX.
+     * Deletes a macOSLobApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsuniversalappx-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macoslobapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -120,9 +120,9 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the managedAndroidStoreApp object.
+     * Read properties and relationships of the macOSMicrosoftEdgeApp object.
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-managedandroidstoreapp-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macosmicrosoftedgeapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> get() {
@@ -139,10 +139,10 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the managedAndroidStoreApp object.
+     * Read properties and relationships of the macOSMicrosoftEdgeApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-managedandroidstoreapp-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macosmicrosoftedgeapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -159,10 +159,10 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a iosiPadOSWebClip object.
+     * Update the properties of a windowsMobileMSI object.
      * @param body The request body
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosipadoswebclip-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsmobilemsi-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> patch(@jakarta.annotation.Nonnull final MobileApp body) {
@@ -179,11 +179,11 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a iosiPadOSWebClip object.
+     * Update the properties of a windowsMobileMSI object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosipadoswebclip-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsmobilemsi-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> patch(@jakarta.annotation.Nonnull final MobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -201,7 +201,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Deletes a windowsUniversalAppX.
+     * Deletes a macOSLobApp.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -209,7 +209,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a windowsUniversalAppX.
+     * Deletes a macOSLobApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -228,7 +228,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the managedAndroidStoreApp object.
+     * Read properties and relationships of the macOSMicrosoftEdgeApp object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -236,7 +236,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the managedAndroidStoreApp object.
+     * Read properties and relationships of the macOSMicrosoftEdgeApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -257,7 +257,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a iosiPadOSWebClip object.
+     * Update the properties of a windowsMobileMSI object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -266,7 +266,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a iosiPadOSWebClip object.
+     * Update the properties of a windowsMobileMSI object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -294,7 +294,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the managedAndroidStoreApp object.
+     * Read properties and relationships of the macOSMicrosoftEdgeApp object.
      */
     public class GetQueryParameters {
         /**

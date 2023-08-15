@@ -13,6 +13,10 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
+     * The checkedOutBy property
+     */
+    private IdentitySet checkedOutBy;
+    /**
      * The state of publication for this document. Either published or checkout. Read-only.
      */
     private String level;
@@ -51,12 +55,21 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
+     * Gets the checkedOutBy property value. The checkedOutBy property
+     * @return a identitySet
+     */
+    @jakarta.annotation.Nullable
+    public IdentitySet getCheckedOutBy() {
+        return this.checkedOutBy;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("checkedOutBy", (n) -> { this.setCheckedOutBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("level", (n) -> { this.setLevel(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("versionId", (n) -> { this.setVersionId(n.getStringValue()); });
@@ -94,6 +107,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("checkedOutBy", this.getCheckedOutBy());
         writer.writeStringValue("level", this.getLevel());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("versionId", this.getVersionId());
@@ -107,6 +121,15 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
+    }
+    /**
+     * Sets the checkedOutBy property value. The checkedOutBy property
+     * @param value Value to set for the checkedOutBy property.
+     * @return a void
+     */
+    @jakarta.annotation.Nonnull
+    public void setCheckedOutBy(@jakarta.annotation.Nullable final IdentitySet value) {
+        this.checkedOutBy = value;
     }
     /**
      * Sets the level property value. The state of publication for this document. Either published or checkout. Read-only.

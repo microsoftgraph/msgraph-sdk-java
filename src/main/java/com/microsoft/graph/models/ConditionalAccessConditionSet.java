@@ -21,7 +21,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     private ConditionalAccessClientApplications clientApplications;
     /**
-     * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
+     * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync which includes EAS supported and unsupported platforms.
      */
     private java.util.List<ConditionalAccessClientApp> clientAppTypes;
     /**
@@ -99,7 +99,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
         return this.clientApplications;
     }
     /**
-     * Gets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
+     * Gets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync which includes EAS supported and unsupported platforms.
      * @return a conditionalAccessClientApp
      */
     @jakarta.annotation.Nullable
@@ -239,7 +239,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
         this.clientApplications = value;
     }
     /**
-     * Sets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
+     * Sets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync which includes EAS supported and unsupported platforms.
      * @param value Value to set for the clientAppTypes property.
      * @return a void
      */
