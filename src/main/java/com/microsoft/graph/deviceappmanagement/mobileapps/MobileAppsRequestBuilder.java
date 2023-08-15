@@ -79,9 +79,9 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the macOSLobApp objects.
+     * List properties and relationships of the androidLobApp objects.
      * @return a CompletableFuture of mobileAppCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macoslobapp-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-androidlobapp-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCollectionResponse> get() {
@@ -98,10 +98,10 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the macOSLobApp objects.
+     * List properties and relationships of the androidLobApp objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileAppCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macoslobapp-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-androidlobapp-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,10 +118,10 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new androidStoreApp object.
+     * Create a new windowsUniversalAppX object.
      * @param body The request body
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-androidstoreapp-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsuniversalappx-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> post(@jakarta.annotation.Nonnull final MobileApp body) {
@@ -138,11 +138,11 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new androidStoreApp object.
+     * Create a new windowsUniversalAppX object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-androidstoreapp-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsuniversalappx-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> post(@jakarta.annotation.Nonnull final MobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -160,7 +160,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the macOSLobApp objects.
+     * List properties and relationships of the androidLobApp objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -168,7 +168,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the macOSLobApp objects.
+     * List properties and relationships of the androidLobApp objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +189,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new androidStoreApp object.
+     * Create a new windowsUniversalAppX object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -198,7 +198,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new androidStoreApp object.
+     * Create a new windowsUniversalAppX object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -221,7 +221,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the macOSLobApp objects.
+     * List properties and relationships of the androidLobApp objects.
      */
     public class GetQueryParameters {
         /**

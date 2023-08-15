@@ -46,6 +46,10 @@ public class Incident extends Entity implements Parsable {
      */
     private String incidentWebUrl;
     /**
+     * The lastModifiedBy property
+     */
+    private String lastModifiedBy;
+    /**
      * Time when the incident was last updated.
      */
     private OffsetDateTime lastUpdateDateTime;
@@ -163,6 +167,7 @@ public class Incident extends Entity implements Parsable {
         deserializerMap.put("determination", (n) -> { this.setDetermination(n.getEnumValue(AlertDetermination.class)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("incidentWebUrl", (n) -> { this.setIncidentWebUrl(n.getStringValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getStringValue()); });
         deserializerMap.put("lastUpdateDateTime", (n) -> { this.setLastUpdateDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("redirectIncidentId", (n) -> { this.setRedirectIncidentId(n.getStringValue()); });
         deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertSeverity.class)); });
@@ -177,6 +182,14 @@ public class Incident extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getIncidentWebUrl() {
         return this.incidentWebUrl;
+    }
+    /**
+     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * @return a string
+     */
+    @jakarta.annotation.Nullable
+    public String getLastModifiedBy() {
+        return this.lastModifiedBy;
     }
     /**
      * Gets the lastUpdateDateTime property value. Time when the incident was last updated.
@@ -236,6 +249,7 @@ public class Incident extends Entity implements Parsable {
         writer.writeEnumValue("determination", this.getDetermination());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("incidentWebUrl", this.getIncidentWebUrl());
+        writer.writeStringValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastUpdateDateTime", this.getLastUpdateDateTime());
         writer.writeStringValue("redirectIncidentId", this.getRedirectIncidentId());
         writer.writeEnumValue("severity", this.getSeverity());
@@ -322,6 +336,15 @@ public class Incident extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public void setIncidentWebUrl(@jakarta.annotation.Nullable final String value) {
         this.incidentWebUrl = value;
+    }
+    /**
+     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * @param value Value to set for the lastModifiedBy property.
+     * @return a void
+     */
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final String value) {
+        this.lastModifiedBy = value;
     }
     /**
      * Sets the lastUpdateDateTime property value. Time when the incident was last updated.

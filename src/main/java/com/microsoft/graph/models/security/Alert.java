@@ -14,6 +14,10 @@ public class Alert extends Entity implements Parsable {
      */
     private String actorDisplayName;
     /**
+     * The alertPolicyId property
+     */
+    private String alertPolicyId;
+    /**
      * URL for the alert page in the Microsoft 365 Defender portal.
      */
     private String alertWebUrl;
@@ -148,6 +152,14 @@ public class Alert extends Entity implements Parsable {
         return this.actorDisplayName;
     }
     /**
+     * Gets the alertPolicyId property value. The alertPolicyId property
+     * @return a string
+     */
+    @jakarta.annotation.Nullable
+    public String getAlertPolicyId() {
+        return this.alertPolicyId;
+    }
+    /**
      * Gets the alertWebUrl property value. URL for the alert page in the Microsoft 365 Defender portal.
      * @return a string
      */
@@ -243,6 +255,7 @@ public class Alert extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("actorDisplayName", (n) -> { this.setActorDisplayName(n.getStringValue()); });
+        deserializerMap.put("alertPolicyId", (n) -> { this.setAlertPolicyId(n.getStringValue()); });
         deserializerMap.put("alertWebUrl", (n) -> { this.setAlertWebUrl(n.getStringValue()); });
         deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getStringValue()); });
         deserializerMap.put("category", (n) -> { this.setCategory(n.getStringValue()); });
@@ -410,6 +423,7 @@ public class Alert extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("actorDisplayName", this.getActorDisplayName());
+        writer.writeStringValue("alertPolicyId", this.getAlertPolicyId());
         writer.writeStringValue("alertWebUrl", this.getAlertWebUrl());
         writer.writeStringValue("assignedTo", this.getAssignedTo());
         writer.writeStringValue("category", this.getCategory());
@@ -446,6 +460,15 @@ public class Alert extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public void setActorDisplayName(@jakarta.annotation.Nullable final String value) {
         this.actorDisplayName = value;
+    }
+    /**
+     * Sets the alertPolicyId property value. The alertPolicyId property
+     * @param value Value to set for the alertPolicyId property.
+     * @return a void
+     */
+    @jakarta.annotation.Nonnull
+    public void setAlertPolicyId(@jakarta.annotation.Nullable final String value) {
+        this.alertPolicyId = value;
     }
     /**
      * Sets the alertWebUrl property value. URL for the alert page in the Microsoft 365 Defender portal.

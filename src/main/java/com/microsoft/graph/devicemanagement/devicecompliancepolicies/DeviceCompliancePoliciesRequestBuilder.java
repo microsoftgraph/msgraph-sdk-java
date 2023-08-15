@@ -63,9 +63,9 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the windows10MobileCompliancePolicy objects.
+     * List properties and relationships of the macOSCompliancePolicy objects.
      * @return a CompletableFuture of deviceCompliancePolicyCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10mobilecompliancepolicy-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-macoscompliancepolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyCollectionResponse> get() {
@@ -82,10 +82,10 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the windows10MobileCompliancePolicy objects.
+     * List properties and relationships of the macOSCompliancePolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCompliancePolicyCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10mobilecompliancepolicy-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-macoscompliancepolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -144,7 +144,7 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the windows10MobileCompliancePolicy objects.
+     * List properties and relationships of the macOSCompliancePolicy objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -152,7 +152,7 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the windows10MobileCompliancePolicy objects.
+     * List properties and relationships of the macOSCompliancePolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +205,7 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the windows10MobileCompliancePolicy objects.
+     * List properties and relationships of the macOSCompliancePolicy objects.
      */
     public class GetQueryParameters {
         /**

@@ -49,9 +49,9 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/roleDefinitions/{roleDefinition%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a roleDefinition.
+     * Deletes a deviceAndAppManagementRoleDefinition.
      * @return a CompletableFuture of void
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -68,10 +68,10 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Deletes a roleDefinition.
+     * Deletes a deviceAndAppManagementRoleDefinition.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Deletes a roleDefinition.
+     * Deletes a deviceAndAppManagementRoleDefinition.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -177,7 +177,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a roleDefinition.
+     * Deletes a deviceAndAppManagementRoleDefinition.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
