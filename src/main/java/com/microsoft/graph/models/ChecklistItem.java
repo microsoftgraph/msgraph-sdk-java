@@ -26,9 +26,7 @@ public class ChecklistItem extends Entity implements Parsable {
     private Boolean isChecked;
     /**
      * Instantiates a new checklistItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ChecklistItem() {
         super();
     }
@@ -90,9 +88,7 @@ public class ChecklistItem extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +100,28 @@ public class ChecklistItem extends Entity implements Parsable {
     /**
      * Sets the checkedDateTime property value. The date and time when the checklistItem was finished.
      * @param value Value to set for the checkedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCheckedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.checkedDateTime = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the checklistItem was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the displayName property value. Field indicating the title of checklistItem.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the isChecked property value. State indicating whether the item is checked off or not.
      * @param value Value to set for the isChecked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsChecked(@jakarta.annotation.Nullable final Boolean value) {
         this.isChecked = value;
     }

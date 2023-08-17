@@ -19,9 +19,7 @@ public class ProtectPostRequestBody implements AdditionalDataHolder, Parsable {
     private WorkbookWorksheetProtectionOptions options;
     /**
      * Instantiates a new protectPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ProtectPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,9 +62,7 @@ public class ProtectPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("options", this.getOptions());
@@ -75,18 +71,14 @@ public class ProtectPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the options property value. The options property
      * @param value Value to set for the options property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOptions(@jakarta.annotation.Nullable final WorkbookWorksheetProtectionOptions value) {
         this.options = value;
     }

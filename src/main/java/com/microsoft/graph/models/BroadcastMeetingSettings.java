@@ -42,9 +42,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     private String odataType;
     /**
      * Instantiates a new broadcastMeetingSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BroadcastMeetingSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +139,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("allowedAudience", this.getAllowedAudience());
@@ -158,72 +154,56 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowedAudience property value. Defines who can join the Teams live event. Possible values are listed in the following table.
      * @param value Value to set for the allowedAudience property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedAudience(@jakarta.annotation.Nullable final BroadcastMeetingAudience value) {
         this.allowedAudience = value;
     }
     /**
      * Sets the captions property value. Caption settings of a Teams live event.
      * @param value Value to set for the captions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCaptions(@jakarta.annotation.Nullable final BroadcastMeetingCaptionSettings value) {
         this.captions = value;
     }
     /**
      * Sets the isAttendeeReportEnabled property value. Indicates whether attendee report is enabled for this Teams live event. Default value is false.
      * @param value Value to set for the isAttendeeReportEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAttendeeReportEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isAttendeeReportEnabled = value;
     }
     /**
      * Sets the isQuestionAndAnswerEnabled property value. Indicates whether Q&A is enabled for this Teams live event. Default value is false.
      * @param value Value to set for the isQuestionAndAnswerEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsQuestionAndAnswerEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isQuestionAndAnswerEnabled = value;
     }
     /**
      * Sets the isRecordingEnabled property value. Indicates whether recording is enabled for this Teams live event. Default value is false.
      * @param value Value to set for the isRecordingEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsRecordingEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isRecordingEnabled = value;
     }
     /**
      * Sets the isVideoOnDemandEnabled property value. Indicates whether video on demand is enabled for this Teams live event. Default value is false.
      * @param value Value to set for the isVideoOnDemandEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsVideoOnDemandEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isVideoOnDemandEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

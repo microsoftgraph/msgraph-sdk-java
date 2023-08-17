@@ -13,9 +13,7 @@ public class AssociatedTeamInfoCollectionResponse extends BaseCollectionPaginati
     private java.util.List<AssociatedTeamInfo> value;
     /**
      * Instantiates a new associatedTeamInfoCollectionResponse and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AssociatedTeamInfoCollectionResponse() {
         super();
     }
@@ -50,9 +48,7 @@ public class AssociatedTeamInfoCollectionResponse extends BaseCollectionPaginati
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +57,7 @@ public class AssociatedTeamInfoCollectionResponse extends BaseCollectionPaginati
     /**
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AssociatedTeamInfo> value) {
         this.value = value;
     }

@@ -21,9 +21,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     private TeamsAppDefinition teamsAppDefinition;
     /**
      * Instantiates a new teamsAppInstallation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamsAppInstallation() {
         super();
     }
@@ -83,9 +81,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -96,27 +92,21 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     /**
      * Sets the consentedPermissionSet property value. The set of resource-specific permissions consented to while installing or upgrading the teamsApp.
      * @param value Value to set for the consentedPermissionSet property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConsentedPermissionSet(@jakarta.annotation.Nullable final TeamsAppPermissionSet value) {
         this.consentedPermissionSet = value;
     }
     /**
      * Sets the teamsApp property value. The app that is installed.
      * @param value Value to set for the teamsApp property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamsApp(@jakarta.annotation.Nullable final TeamsApp value) {
         this.teamsApp = value;
     }
     /**
      * Sets the teamsAppDefinition property value. The details of this version of the app.
      * @param value Value to set for the teamsAppDefinition property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamsAppDefinition(@jakarta.annotation.Nullable final TeamsAppDefinition value) {
         this.teamsAppDefinition = value;
     }

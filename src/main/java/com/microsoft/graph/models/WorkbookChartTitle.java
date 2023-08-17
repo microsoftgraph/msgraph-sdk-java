@@ -25,9 +25,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     private Boolean visible;
     /**
      * Instantiates a new workbookChartTitle and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookChartTitle() {
         super();
     }
@@ -89,9 +87,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -103,36 +99,28 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     /**
      * Sets the format property value. Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
      * @param value Value to set for the format property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFormat(@jakarta.annotation.Nullable final WorkbookChartTitleFormat value) {
         this.format = value;
     }
     /**
      * Sets the overlay property value. Boolean value representing if the chart title will overlay the chart or not.
      * @param value Value to set for the overlay property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOverlay(@jakarta.annotation.Nullable final Boolean value) {
         this.overlay = value;
     }
     /**
      * Sets the text property value. Represents the title text of a chart.
      * @param value Value to set for the text property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setText(@jakarta.annotation.Nullable final String value) {
         this.text = value;
     }
     /**
      * Sets the visible property value. A boolean value the represents the visibility of a chart title object.
      * @param value Value to set for the visible property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVisible(@jakarta.annotation.Nullable final Boolean value) {
         this.visible = value;
     }

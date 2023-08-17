@@ -38,9 +38,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
     private String termsOfServiceUrl;
     /**
      * Instantiates a new informationalUrl and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public InformationalUrl() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +126,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("logoUrl", this.getLogoUrl());
@@ -144,63 +140,49 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the logoUrl property value. CDN URL to the application's logo, Read-only.
      * @param value Value to set for the logoUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLogoUrl(@jakarta.annotation.Nullable final String value) {
         this.logoUrl = value;
     }
     /**
      * Sets the marketingUrl property value. Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
      * @param value Value to set for the marketingUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMarketingUrl(@jakarta.annotation.Nullable final String value) {
         this.marketingUrl = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the privacyStatementUrl property value. Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
      * @param value Value to set for the privacyStatementUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrivacyStatementUrl(@jakarta.annotation.Nullable final String value) {
         this.privacyStatementUrl = value;
     }
     /**
      * Sets the supportUrl property value. Link to the application's support page. For example, https://www.contoso.com/app/support
      * @param value Value to set for the supportUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSupportUrl(@jakarta.annotation.Nullable final String value) {
         this.supportUrl = value;
     }
     /**
      * Sets the termsOfServiceUrl property value. Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
      * @param value Value to set for the termsOfServiceUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTermsOfServiceUrl(@jakarta.annotation.Nullable final String value) {
         this.termsOfServiceUrl = value;
     }

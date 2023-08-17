@@ -19,9 +19,7 @@ public class ReplyPostRequestBody implements AdditionalDataHolder, Parsable {
     private Post post;
     /**
      * Instantiates a new replyPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ReplyPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,9 +62,7 @@ public class ReplyPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("Post", this.getPost());
@@ -75,18 +71,14 @@ public class ReplyPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the Post property value. The Post property
      * @param value Value to set for the Post property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPost(@jakarta.annotation.Nullable final Post value) {
         this.post = value;
     }

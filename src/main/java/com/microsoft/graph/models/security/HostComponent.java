@@ -34,9 +34,7 @@ public class HostComponent extends Artifact implements Parsable {
     private String version;
     /**
      * Instantiates a new hostComponent and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public HostComponent() {
         super();
         this.setOdataType("#microsoft.graph.security.hostComponent");
@@ -117,9 +115,7 @@ public class HostComponent extends Artifact implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -133,54 +129,42 @@ public class HostComponent extends Artifact implements Parsable {
     /**
      * Sets the category property value. The type of component that was detected (for example, Operating System, Framework, Remote Access, or Server).
      * @param value Value to set for the category property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory(@jakarta.annotation.Nullable final String value) {
         this.category = value;
     }
     /**
      * Sets the firstSeenDateTime property value. The first date and time when Microsoft Defender Threat Intelligence observed this web component. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstSeenDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstSeenDateTime = value;
     }
     /**
      * Sets the host property value. The host property
      * @param value Value to set for the host property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHost(@jakarta.annotation.Nullable final Host value) {
         this.host = value;
     }
     /**
      * Sets the lastSeenDateTime property value. The most recent date and time when Microsoft Defender Threat Intelligence observed this web component. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSeenDateTime = value;
     }
     /**
      * Sets the name property value. A name running on the artifact, for example, Microsoft IIS.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the version property value. The component version running on the artifact, for example, v8.5. This should not be assumed to be strictly numerical.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }

@@ -45,9 +45,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     private ServiceHealthStatus status;
     /**
      * Instantiates a new serviceHealthIssue and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ServiceHealthIssue() {
         super();
         this.setOdataType("#microsoft.graph.serviceHealthIssue");
@@ -155,9 +153,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -174,81 +170,63 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     /**
      * Sets the classification property value. The classification property
      * @param value Value to set for the classification property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClassification(@jakarta.annotation.Nullable final ServiceHealthClassificationType value) {
         this.classification = value;
     }
     /**
      * Sets the feature property value. The feature name of the service issue.
      * @param value Value to set for the feature property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFeature(@jakarta.annotation.Nullable final String value) {
         this.feature = value;
     }
     /**
      * Sets the featureGroup property value. The feature group name of the service issue.
      * @param value Value to set for the featureGroup property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFeatureGroup(@jakarta.annotation.Nullable final String value) {
         this.featureGroup = value;
     }
     /**
      * Sets the impactDescription property value. The description of the service issue impact.
      * @param value Value to set for the impactDescription property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImpactDescription(@jakarta.annotation.Nullable final String value) {
         this.impactDescription = value;
     }
     /**
      * Sets the isResolved property value. Indicates whether the issue is resolved.
      * @param value Value to set for the isResolved property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsResolved(@jakarta.annotation.Nullable final Boolean value) {
         this.isResolved = value;
     }
     /**
      * Sets the origin property value. The origin property
      * @param value Value to set for the origin property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrigin(@jakarta.annotation.Nullable final ServiceHealthOrigin value) {
         this.origin = value;
     }
     /**
      * Sets the posts property value. Collection of historical posts for the service issue.
      * @param value Value to set for the posts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPosts(@jakarta.annotation.Nullable final java.util.List<ServiceHealthIssuePost> value) {
         this.posts = value;
     }
     /**
      * Sets the service property value. Indicates the service affected by the issue.
      * @param value Value to set for the service property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setService(@jakarta.annotation.Nullable final String value) {
         this.service = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final ServiceHealthStatus value) {
         this.status = value;
     }

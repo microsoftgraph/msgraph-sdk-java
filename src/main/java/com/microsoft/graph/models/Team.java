@@ -122,9 +122,7 @@ public class Team extends Entity implements Parsable {
     private String webUrl;
     /**
      * Instantiates a new team and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Team() {
         super();
     }
@@ -402,9 +400,7 @@ public class Team extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -440,252 +436,196 @@ public class Team extends Entity implements Parsable {
     /**
      * Sets the allChannels property value. List of channels either hosted in or shared with the team (incoming channels).
      * @param value Value to set for the allChannels property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllChannels(@jakarta.annotation.Nullable final java.util.List<Channel> value) {
         this.allChannels = value;
     }
     /**
      * Sets the channels property value. The collection of channels and messages associated with the team.
      * @param value Value to set for the channels property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChannels(@jakarta.annotation.Nullable final java.util.List<Channel> value) {
         this.channels = value;
     }
     /**
      * Sets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
      * @param value Value to set for the classification property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClassification(@jakarta.annotation.Nullable final String value) {
         this.classification = value;
     }
     /**
      * Sets the createdDateTime property value. Timestamp at which the team was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. An optional description for the team. Maximum length: 1024 characters.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the team.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the funSettings property value. Settings to configure use of Giphy, memes, and stickers in the team.
      * @param value Value to set for the funSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFunSettings(@jakarta.annotation.Nullable final TeamFunSettings value) {
         this.funSettings = value;
     }
     /**
      * Sets the group property value. The group property
      * @param value Value to set for the group property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroup(@jakarta.annotation.Nullable final Group value) {
         this.group = value;
     }
     /**
      * Sets the guestSettings property value. Settings to configure whether guests can create, update, or delete channels in the team.
      * @param value Value to set for the guestSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGuestSettings(@jakarta.annotation.Nullable final TeamGuestSettings value) {
         this.guestSettings = value;
     }
     /**
      * Sets the incomingChannels property value. List of channels shared with the team.
      * @param value Value to set for the incomingChannels property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncomingChannels(@jakarta.annotation.Nullable final java.util.List<Channel> value) {
         this.incomingChannels = value;
     }
     /**
      * Sets the installedApps property value. The apps installed in this team.
      * @param value Value to set for the installedApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstalledApps(@jakarta.annotation.Nullable final java.util.List<TeamsAppInstallation> value) {
         this.installedApps = value;
     }
     /**
      * Sets the internalId property value. A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
      * @param value Value to set for the internalId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInternalId(@jakarta.annotation.Nullable final String value) {
         this.internalId = value;
     }
     /**
      * Sets the isArchived property value. Whether this team is in read-only mode.
      * @param value Value to set for the isArchived property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsArchived(@jakarta.annotation.Nullable final Boolean value) {
         this.isArchived = value;
     }
     /**
      * Sets the members property value. Members and owners of the team.
      * @param value Value to set for the members property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<ConversationMember> value) {
         this.members = value;
     }
     /**
      * Sets the memberSettings property value. Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team.
      * @param value Value to set for the memberSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMemberSettings(@jakarta.annotation.Nullable final TeamMemberSettings value) {
         this.memberSettings = value;
     }
     /**
      * Sets the messagingSettings property value. Settings to configure messaging and mentions in the team.
      * @param value Value to set for the messagingSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessagingSettings(@jakarta.annotation.Nullable final TeamMessagingSettings value) {
         this.messagingSettings = value;
     }
     /**
      * Sets the operations property value. The async operations that ran or are running on this team.
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<TeamsAsyncOperation> value) {
         this.operations = value;
     }
     /**
      * Sets the permissionGrants property value. The permissionGrants property
      * @param value Value to set for the permissionGrants property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPermissionGrants(@jakarta.annotation.Nullable final java.util.List<ResourceSpecificPermissionGrant> value) {
         this.permissionGrants = value;
     }
     /**
      * Sets the photo property value. The profile photo for the team.
      * @param value Value to set for the photo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPhoto(@jakarta.annotation.Nullable final ProfilePhoto value) {
         this.photo = value;
     }
     /**
      * Sets the primaryChannel property value. The general channel for the team.
      * @param value Value to set for the primaryChannel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrimaryChannel(@jakarta.annotation.Nullable final Channel value) {
         this.primaryChannel = value;
     }
     /**
      * Sets the schedule property value. The schedule of shifts for this team.
      * @param value Value to set for the schedule property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSchedule(@jakarta.annotation.Nullable final Schedule value) {
         this.schedule = value;
     }
     /**
      * Sets the specialization property value. Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
      * @param value Value to set for the specialization property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSpecialization(@jakarta.annotation.Nullable final TeamSpecialization value) {
         this.specialization = value;
     }
     /**
      * Sets the summary property value. Contains summary information about the team, including number of owners, members, and guests.
      * @param value Value to set for the summary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSummary(@jakarta.annotation.Nullable final TeamSummary value) {
         this.summary = value;
     }
     /**
      * Sets the tags property value. The tags associated with the team.
      * @param value Value to set for the tags property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTags(@jakarta.annotation.Nullable final java.util.List<TeamworkTag> value) {
         this.tags = value;
     }
     /**
      * Sets the template property value. The template this team was created from. See available templates.
      * @param value Value to set for the template property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTemplate(@jakarta.annotation.Nullable final TeamsTemplate value) {
         this.template = value;
     }
     /**
      * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
      * Sets the visibility property value. The visibility of the group and team. Defaults to Public.
      * @param value Value to set for the visibility property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVisibility(@jakarta.annotation.Nullable final TeamVisibilityType value) {
         this.visibility = value;
     }
     /**
      * Sets the webUrl property value. A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
      * @param value Value to set for the webUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }

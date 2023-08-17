@@ -23,9 +23,7 @@ public class ExactPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json text2;
     /**
      * Instantiates a new exactPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ExactPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,9 +75,7 @@ public class ExactPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("text1", this.getText1());
@@ -89,27 +85,21 @@ public class ExactPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the text1 property value. The text1 property
      * @param value Value to set for the text1 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setText1(@jakarta.annotation.Nullable final Json value) {
         this.text1 = value;
     }
     /**
      * Sets the text2 property value. The text2 property
      * @param value Value to set for the text2 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setText2(@jakarta.annotation.Nullable final Json value) {
         this.text2 = value;
     }

@@ -39,9 +39,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
     private Integer year;
     /**
      * Instantiates a new standardTimeZoneOffset and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public StandardTimeZoneOffset() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -136,9 +134,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("dayOccurrence", this.getDayOccurrence());
@@ -152,63 +148,49 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the dayOccurrence property value. Represents the nth occurrence of the day of week that the transition from daylight saving time to standard time occurs.
      * @param value Value to set for the dayOccurrence property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDayOccurrence(@jakarta.annotation.Nullable final Integer value) {
         this.dayOccurrence = value;
     }
     /**
      * Sets the dayOfWeek property value. Represents the day of the week when the transition from daylight saving time to standard time.
      * @param value Value to set for the dayOfWeek property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDayOfWeek(@jakarta.annotation.Nullable final DayOfWeek value) {
         this.dayOfWeek = value;
     }
     /**
      * Sets the month property value. Represents the month of the year when the transition from daylight saving time to standard time occurs.
      * @param value Value to set for the month property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMonth(@jakarta.annotation.Nullable final Integer value) {
         this.month = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the time property value. Represents the time of day when the transition from daylight saving time to standard time occurs.
      * @param value Value to set for the time property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.time = value;
     }
     /**
      * Sets the year property value. Represents how frequently in terms of years the change from daylight saving time to standard time occurs. For example, a value of 0 means every year.
      * @param value Value to set for the year property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setYear(@jakarta.annotation.Nullable final Integer value) {
         this.year = value;
     }

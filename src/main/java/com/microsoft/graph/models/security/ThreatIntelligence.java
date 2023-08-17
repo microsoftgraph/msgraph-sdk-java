@@ -50,9 +50,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     private java.util.List<Vulnerability> vulnerabilities;
     /**
      * Instantiates a new threatIntelligence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ThreatIntelligence() {
         super();
     }
@@ -168,9 +166,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -188,90 +184,70 @@ public class ThreatIntelligence extends Entity implements Parsable {
     /**
      * Sets the articleIndicators property value. Refers to indicators of threat or compromise highlighted in an microsoft.graph.security.article.Note: List retrieval is not yet supported.
      * @param value Value to set for the articleIndicators property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setArticleIndicators(@jakarta.annotation.Nullable final java.util.List<ArticleIndicator> value) {
         this.articleIndicators = value;
     }
     /**
      * Sets the articles property value. A list of article objects.
      * @param value Value to set for the articles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setArticles(@jakarta.annotation.Nullable final java.util.List<Article> value) {
         this.articles = value;
     }
     /**
      * Sets the hostComponents property value. Retrieve details about microsoft.graph.security.hostComponent objects.Note: List retrieval is not yet supported.
      * @param value Value to set for the hostComponents property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHostComponents(@jakarta.annotation.Nullable final java.util.List<HostComponent> value) {
         this.hostComponents = value;
     }
     /**
      * Sets the hostCookies property value. Retrieve details about microsoft.graph.security.hostCookie objects.Note: List retrieval is not yet supported.
      * @param value Value to set for the hostCookies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHostCookies(@jakarta.annotation.Nullable final java.util.List<HostCookie> value) {
         this.hostCookies = value;
     }
     /**
      * Sets the hosts property value. Refers to microsoft.graph.security.host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      * @param value Value to set for the hosts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHosts(@jakarta.annotation.Nullable final java.util.List<Host> value) {
         this.hosts = value;
     }
     /**
      * Sets the hostTrackers property value. Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
      * @param value Value to set for the hostTrackers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHostTrackers(@jakarta.annotation.Nullable final java.util.List<HostTracker> value) {
         this.hostTrackers = value;
     }
     /**
      * Sets the intelligenceProfileIndicators property value. The intelligenceProfileIndicators property
      * @param value Value to set for the intelligenceProfileIndicators property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIntelligenceProfileIndicators(@jakarta.annotation.Nullable final java.util.List<IntelligenceProfileIndicator> value) {
         this.intelligenceProfileIndicators = value;
     }
     /**
      * Sets the intelProfiles property value. A list of intelligenceProfile objects.
      * @param value Value to set for the intelProfiles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIntelProfiles(@jakarta.annotation.Nullable final java.util.List<IntelligenceProfile> value) {
         this.intelProfiles = value;
     }
     /**
      * Sets the passiveDnsRecords property value. Retrieve details about microsoft.graph.security.passiveDnsRecord objects.Note: List retrieval is not yet supported.
      * @param value Value to set for the passiveDnsRecords property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPassiveDnsRecords(@jakarta.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
         this.passiveDnsRecords = value;
     }
     /**
      * Sets the vulnerabilities property value. Retrieve details about microsoft.graph.security.vulnerabilities.Note: List retrieval is not yet supported.
      * @param value Value to set for the vulnerabilities property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVulnerabilities(@jakarta.annotation.Nullable final java.util.List<Vulnerability> value) {
         this.vulnerabilities = value;
     }

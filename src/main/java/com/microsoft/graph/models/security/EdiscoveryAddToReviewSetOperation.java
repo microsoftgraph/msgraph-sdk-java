@@ -17,9 +17,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
     private EdiscoverySearch search;
     /**
      * Instantiates a new ediscoveryAddToReviewSetOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EdiscoveryAddToReviewSetOperation() {
         super();
     }
@@ -63,9 +61,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +71,14 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
     /**
      * Sets the reviewSet property value. eDiscovery review set to which items matching source collection query gets added.
      * @param value Value to set for the reviewSet property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReviewSet(@jakarta.annotation.Nullable final EdiscoveryReviewSet value) {
         this.reviewSet = value;
     }
     /**
      * Sets the search property value. eDiscovery search that gets added to review set.
      * @param value Value to set for the search property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSearch(@jakarta.annotation.Nullable final EdiscoverySearch value) {
         this.search = value;
     }

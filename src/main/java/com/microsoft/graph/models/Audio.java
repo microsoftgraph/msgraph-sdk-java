@@ -82,9 +82,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     private Integer year;
     /**
      * Instantiates a new audio and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Audio() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -271,9 +269,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("album", this.getAlbum());
@@ -298,162 +294,126 @@ public class Audio implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the album property value. The title of the album for this audio file.
      * @param value Value to set for the album property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlbum(@jakarta.annotation.Nullable final String value) {
         this.album = value;
     }
     /**
      * Sets the albumArtist property value. The artist named on the album for the audio file.
      * @param value Value to set for the albumArtist property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlbumArtist(@jakarta.annotation.Nullable final String value) {
         this.albumArtist = value;
     }
     /**
      * Sets the artist property value. The performing artist for the audio file.
      * @param value Value to set for the artist property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setArtist(@jakarta.annotation.Nullable final String value) {
         this.artist = value;
     }
     /**
      * Sets the bitrate property value. Bitrate expressed in kbps.
      * @param value Value to set for the bitrate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBitrate(@jakarta.annotation.Nullable final Long value) {
         this.bitrate = value;
     }
     /**
      * Sets the composers property value. The name of the composer of the audio file.
      * @param value Value to set for the composers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComposers(@jakarta.annotation.Nullable final String value) {
         this.composers = value;
     }
     /**
      * Sets the copyright property value. Copyright information for the audio file.
      * @param value Value to set for the copyright property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCopyright(@jakarta.annotation.Nullable final String value) {
         this.copyright = value;
     }
     /**
      * Sets the disc property value. The number of the disc this audio file came from.
      * @param value Value to set for the disc property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisc(@jakarta.annotation.Nullable final Integer value) {
         this.disc = value;
     }
     /**
      * Sets the discCount property value. The total number of discs in this album.
      * @param value Value to set for the discCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDiscCount(@jakarta.annotation.Nullable final Integer value) {
         this.discCount = value;
     }
     /**
      * Sets the duration property value. Duration of the audio file, expressed in milliseconds
      * @param value Value to set for the duration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDuration(@jakarta.annotation.Nullable final Long value) {
         this.duration = value;
     }
     /**
      * Sets the genre property value. The genre of this audio file.
      * @param value Value to set for the genre property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGenre(@jakarta.annotation.Nullable final String value) {
         this.genre = value;
     }
     /**
      * Sets the hasDrm property value. Indicates if the file is protected with digital rights management.
      * @param value Value to set for the hasDrm property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHasDrm(@jakarta.annotation.Nullable final Boolean value) {
         this.hasDrm = value;
     }
     /**
      * Sets the isVariableBitrate property value. Indicates if the file is encoded with a variable bitrate.
      * @param value Value to set for the isVariableBitrate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsVariableBitrate(@jakarta.annotation.Nullable final Boolean value) {
         this.isVariableBitrate = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the title property value. The title of the audio file.
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
     /**
      * Sets the track property value. The number of the track on the original disc for this audio file.
      * @param value Value to set for the track property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTrack(@jakarta.annotation.Nullable final Integer value) {
         this.track = value;
     }
     /**
      * Sets the trackCount property value. The total number of tracks on the original disc for this audio file.
      * @param value Value to set for the trackCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTrackCount(@jakarta.annotation.Nullable final Integer value) {
         this.trackCount = value;
     }
     /**
      * Sets the year property value. The year the audio file was recorded.
      * @param value Value to set for the year property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setYear(@jakarta.annotation.Nullable final Integer value) {
         this.year = value;
     }

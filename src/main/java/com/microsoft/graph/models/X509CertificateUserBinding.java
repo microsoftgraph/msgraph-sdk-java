@@ -30,9 +30,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
     private String x509CertificateField;
     /**
      * Instantiates a new x509CertificateUserBinding and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public X509CertificateUserBinding() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -116,45 +112,35 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the priority property value. The priority of the binding. Azure AD uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
      * @param value Value to set for the priority property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.priority = value;
     }
     /**
      * Sets the userProperty property value. Defines the Azure AD user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, certificateUserIds. Required.
      * @param value Value to set for the userProperty property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserProperty(@jakarta.annotation.Nullable final String value) {
         this.userProperty = value;
     }
     /**
      * Sets the x509CertificateField property value. The field on the X.509 certificate to use for the binding. The possible values are: PrincipalName, RFC822Name, SubjectKeyIdentifier, SHA1PublicKey.
      * @param value Value to set for the x509CertificateField property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setX509CertificateField(@jakarta.annotation.Nullable final String value) {
         this.x509CertificateField = value;
     }

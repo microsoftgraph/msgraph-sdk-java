@@ -17,9 +17,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
     private String tenantId;
     /**
      * Instantiates a new azureActiveDirectoryTenant and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AzureActiveDirectoryTenant() {
         super();
         this.setOdataType("#microsoft.graph.azureActiveDirectoryTenant");
@@ -64,9 +62,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
     /**
      * Sets the displayName property value. The name of the Azure Active Directory tenant. Read only.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the tenantId property value. The ID of the Azure Active Directory tenant. Read only.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }

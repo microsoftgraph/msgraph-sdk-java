@@ -49,9 +49,7 @@ public class Authentication extends Entity implements Parsable {
     private java.util.List<WindowsHelloForBusinessAuthenticationMethod> windowsHelloForBusinessMethods;
     /**
      * Instantiates a new authentication and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Authentication() {
         super();
     }
@@ -167,9 +165,7 @@ public class Authentication extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -187,90 +183,70 @@ public class Authentication extends Entity implements Parsable {
     /**
      * Sets the emailMethods property value. The email address registered to a user for authentication.
      * @param value Value to set for the emailMethods property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmailMethods(@jakarta.annotation.Nullable final java.util.List<EmailAuthenticationMethod> value) {
         this.emailMethods = value;
     }
     /**
      * Sets the fido2Methods property value. Represents the FIDO2 security keys registered to a user for authentication.
      * @param value Value to set for the fido2Methods property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFido2Methods(@jakarta.annotation.Nullable final java.util.List<Fido2AuthenticationMethod> value) {
         this.fido2Methods = value;
     }
     /**
      * Sets the methods property value. Represents all authentication methods registered to a user.
      * @param value Value to set for the methods property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMethods(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethod> value) {
         this.methods = value;
     }
     /**
      * Sets the microsoftAuthenticatorMethods property value. The details of the Microsoft Authenticator app registered to a user for authentication.
      * @param value Value to set for the microsoftAuthenticatorMethods property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMicrosoftAuthenticatorMethods(@jakarta.annotation.Nullable final java.util.List<MicrosoftAuthenticatorAuthenticationMethod> value) {
         this.microsoftAuthenticatorMethods = value;
     }
     /**
      * Sets the operations property value. Represents the status of a long-running operation.
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<LongRunningOperation> value) {
         this.operations = value;
     }
     /**
      * Sets the passwordMethods property value. Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
      * @param value Value to set for the passwordMethods property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMethods(@jakarta.annotation.Nullable final java.util.List<PasswordAuthenticationMethod> value) {
         this.passwordMethods = value;
     }
     /**
      * Sets the phoneMethods property value. The phone numbers registered to a user for authentication.
      * @param value Value to set for the phoneMethods property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPhoneMethods(@jakarta.annotation.Nullable final java.util.List<PhoneAuthenticationMethod> value) {
         this.phoneMethods = value;
     }
     /**
      * Sets the softwareOathMethods property value. The software OATH TOTP applications registered to a user for authentication.
      * @param value Value to set for the softwareOathMethods property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSoftwareOathMethods(@jakarta.annotation.Nullable final java.util.List<SoftwareOathAuthenticationMethod> value) {
         this.softwareOathMethods = value;
     }
     /**
      * Sets the temporaryAccessPassMethods property value. Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      * @param value Value to set for the temporaryAccessPassMethods property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTemporaryAccessPassMethods(@jakarta.annotation.Nullable final java.util.List<TemporaryAccessPassAuthenticationMethod> value) {
         this.temporaryAccessPassMethods = value;
     }
     /**
      * Sets the windowsHelloForBusinessMethods property value. Represents the Windows Hello for Business authentication method registered to a user for authentication.
      * @param value Value to set for the windowsHelloForBusinessMethods property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsHelloForBusinessMethods(@jakarta.annotation.Nullable final java.util.List<WindowsHelloForBusinessAuthenticationMethod> value) {
         this.windowsHelloForBusinessMethods = value;
     }

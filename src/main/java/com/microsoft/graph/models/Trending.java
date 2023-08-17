@@ -30,9 +30,7 @@ public class Trending extends Entity implements Parsable {
     private Double weight;
     /**
      * Instantiates a new trending and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Trending() {
         super();
     }
@@ -103,9 +101,7 @@ public class Trending extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -116,45 +112,35 @@ public class Trending extends Entity implements Parsable {
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the resource property value. Used for navigating to the trending document.
      * @param value Value to set for the resource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResource(@jakarta.annotation.Nullable final Entity value) {
         this.resource = value;
     }
     /**
      * Sets the resourceReference property value. Reference properties of the trending document, such as the url and type of the document.
      * @param value Value to set for the resourceReference property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceReference(@jakarta.annotation.Nullable final ResourceReference value) {
         this.resourceReference = value;
     }
     /**
      * Sets the resourceVisualization property value. Properties that you can use to visualize the document in your experience.
      * @param value Value to set for the resourceVisualization property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceVisualization(@jakarta.annotation.Nullable final ResourceVisualization value) {
         this.resourceVisualization = value;
     }
     /**
      * Sets the weight property value. Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
      * @param value Value to set for the weight property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWeight(@jakarta.annotation.Nullable final Double value) {
         this.weight = value;
     }

@@ -21,9 +21,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     private String userId;
     /**
      * Instantiates a new timeOff and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TimeOff() {
         super();
         this.setOdataType("#microsoft.graph.timeOff");
@@ -77,9 +75,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     /**
      * Sets the draftTimeOff property value. The draft version of this timeOff that is viewable by managers. Required.
      * @param value Value to set for the draftTimeOff property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDraftTimeOff(@jakarta.annotation.Nullable final TimeOffItem value) {
         this.draftTimeOff = value;
     }
     /**
      * Sets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Required.
      * @param value Value to set for the sharedTimeOff property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharedTimeOff(@jakarta.annotation.Nullable final TimeOffItem value) {
         this.sharedTimeOff = value;
     }
     /**
      * Sets the userId property value. ID of the user assigned to the timeOff. Required.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }

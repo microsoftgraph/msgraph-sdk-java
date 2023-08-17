@@ -13,9 +13,7 @@ public class MediaPrompt extends Prompt implements Parsable {
     private MediaInfo mediaInfo;
     /**
      * Instantiates a new mediaPrompt and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MediaPrompt() {
         super();
         this.setOdataType("#microsoft.graph.mediaPrompt");
@@ -51,9 +49,7 @@ public class MediaPrompt extends Prompt implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class MediaPrompt extends Prompt implements Parsable {
     /**
      * Sets the mediaInfo property value. The mediaInfo property
      * @param value Value to set for the mediaInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMediaInfo(@jakarta.annotation.Nullable final MediaInfo value) {
         this.mediaInfo = value;
     }

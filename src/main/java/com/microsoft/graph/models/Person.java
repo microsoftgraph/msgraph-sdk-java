@@ -85,9 +85,7 @@ public class Person extends Entity implements Parsable {
     private String yomiCompany;
     /**
      * Instantiates a new person and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Person() {
         super();
     }
@@ -284,9 +282,7 @@ public class Person extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -313,171 +309,133 @@ public class Person extends Entity implements Parsable {
     /**
      * Sets the birthday property value. The person's birthday.
      * @param value Value to set for the birthday property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBirthday(@jakarta.annotation.Nullable final String value) {
         this.birthday = value;
     }
     /**
      * Sets the companyName property value. The name of the person's company.
      * @param value Value to set for the companyName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompanyName(@jakarta.annotation.Nullable final String value) {
         this.companyName = value;
     }
     /**
      * Sets the department property value. The person's department.
      * @param value Value to set for the department property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDepartment(@jakarta.annotation.Nullable final String value) {
         this.department = value;
     }
     /**
      * Sets the displayName property value. The person's display name.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the givenName property value. The person's given name.
      * @param value Value to set for the givenName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGivenName(@jakarta.annotation.Nullable final String value) {
         this.givenName = value;
     }
     /**
      * Sets the imAddress property value. The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only.
      * @param value Value to set for the imAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImAddress(@jakarta.annotation.Nullable final String value) {
         this.imAddress = value;
     }
     /**
      * Sets the isFavorite property value. True if the user has flagged this person as a favorite.
      * @param value Value to set for the isFavorite property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsFavorite(@jakarta.annotation.Nullable final Boolean value) {
         this.isFavorite = value;
     }
     /**
      * Sets the jobTitle property value. The person's job title.
      * @param value Value to set for the jobTitle property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setJobTitle(@jakarta.annotation.Nullable final String value) {
         this.jobTitle = value;
     }
     /**
      * Sets the officeLocation property value. The location of the person's office.
      * @param value Value to set for the officeLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOfficeLocation(@jakarta.annotation.Nullable final String value) {
         this.officeLocation = value;
     }
     /**
      * Sets the personNotes property value. Free-form notes that the user has taken about this person.
      * @param value Value to set for the personNotes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPersonNotes(@jakarta.annotation.Nullable final String value) {
         this.personNotes = value;
     }
     /**
      * Sets the personType property value. The type of person.
      * @param value Value to set for the personType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPersonType(@jakarta.annotation.Nullable final PersonType value) {
         this.personType = value;
     }
     /**
      * Sets the phones property value. The person's phone numbers.
      * @param value Value to set for the phones property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPhones(@jakarta.annotation.Nullable final java.util.List<Phone> value) {
         this.phones = value;
     }
     /**
      * Sets the postalAddresses property value. The person's addresses.
      * @param value Value to set for the postalAddresses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPostalAddresses(@jakarta.annotation.Nullable final java.util.List<Location> value) {
         this.postalAddresses = value;
     }
     /**
      * Sets the profession property value. The person's profession.
      * @param value Value to set for the profession property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProfession(@jakarta.annotation.Nullable final String value) {
         this.profession = value;
     }
     /**
      * Sets the scoredEmailAddresses property value. The person's email addresses.
      * @param value Value to set for the scoredEmailAddresses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScoredEmailAddresses(@jakarta.annotation.Nullable final java.util.List<ScoredEmailAddress> value) {
         this.scoredEmailAddresses = value;
     }
     /**
      * Sets the surname property value. The person's surname.
      * @param value Value to set for the surname property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSurname(@jakarta.annotation.Nullable final String value) {
         this.surname = value;
     }
     /**
      * Sets the userPrincipalName property value. The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
     /**
      * Sets the websites property value. The person's websites.
      * @param value Value to set for the websites property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebsites(@jakarta.annotation.Nullable final java.util.List<Website> value) {
         this.websites = value;
     }
     /**
      * Sets the yomiCompany property value. The phonetic Japanese name of the person's company.
      * @param value Value to set for the yomiCompany property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setYomiCompany(@jakarta.annotation.Nullable final String value) {
         this.yomiCompany = value;
     }

@@ -17,9 +17,7 @@ public class AccessReviewSet extends Entity implements Parsable {
     private java.util.List<AccessReviewHistoryDefinition> historyDefinitions;
     /**
      * Instantiates a new accessReviewSet and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessReviewSet() {
         super();
     }
@@ -63,9 +61,7 @@ public class AccessReviewSet extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +71,14 @@ public class AccessReviewSet extends Entity implements Parsable {
     /**
      * Sets the definitions property value. Represents the template and scheduling for an access review.
      * @param value Value to set for the definitions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefinitions(@jakarta.annotation.Nullable final java.util.List<AccessReviewScheduleDefinition> value) {
         this.definitions = value;
     }
     /**
      * Sets the historyDefinitions property value. Represents a collection of access review history data and the scopes used to collect that data.
      * @param value Value to set for the historyDefinitions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHistoryDefinitions(@jakarta.annotation.Nullable final java.util.List<AccessReviewHistoryDefinition> value) {
         this.historyDefinitions = value;
     }

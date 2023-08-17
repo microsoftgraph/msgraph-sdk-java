@@ -79,9 +79,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     private OnenoteUserRole userRole;
     /**
      * Instantiates a new CopyNotebookModel and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CopyNotebookModel() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -259,9 +257,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("createdBy", this.getCreatedBy());
@@ -285,153 +281,119 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final String value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdByIdentity property value. The createdByIdentity property
      * @param value Value to set for the createdByIdentity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedByIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdByIdentity = value;
     }
     /**
      * Sets the createdTime property value. The createdTime property
      * @param value Value to set for the createdTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdTime = value;
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the isDefault property value. The isDefault property
      * @param value Value to set for the isDefault property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefault = value;
     }
     /**
      * Sets the isShared property value. The isShared property
      * @param value Value to set for the isShared property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsShared(@jakarta.annotation.Nullable final Boolean value) {
         this.isShared = value;
     }
     /**
      * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedBy(@jakarta.annotation.Nullable final String value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedByIdentity property value. The lastModifiedByIdentity property
      * @param value Value to set for the lastModifiedByIdentity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedByIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedByIdentity = value;
     }
     /**
      * Sets the lastModifiedTime property value. The lastModifiedTime property
      * @param value Value to set for the lastModifiedTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedTime = value;
     }
     /**
      * Sets the links property value. The links property
      * @param value Value to set for the links property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLinks(@jakarta.annotation.Nullable final NotebookLinks value) {
         this.links = value;
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the sectionGroupsUrl property value. The sectionGroupsUrl property
      * @param value Value to set for the sectionGroupsUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSectionGroupsUrl(@jakarta.annotation.Nullable final String value) {
         this.sectionGroupsUrl = value;
     }
     /**
      * Sets the sectionsUrl property value. The sectionsUrl property
      * @param value Value to set for the sectionsUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSectionsUrl(@jakarta.annotation.Nullable final String value) {
         this.sectionsUrl = value;
     }
     /**
      * Sets the self property value. The self property
      * @param value Value to set for the self property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSelf(@jakarta.annotation.Nullable final String value) {
         this.self = value;
     }
     /**
      * Sets the userRole property value. The userRole property
      * @param value Value to set for the userRole property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserRole(@jakarta.annotation.Nullable final OnenoteUserRole value) {
         this.userRole = value;
     }

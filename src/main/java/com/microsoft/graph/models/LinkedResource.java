@@ -25,9 +25,7 @@ public class LinkedResource extends Entity implements Parsable {
     private String webUrl;
     /**
      * Instantiates a new linkedResource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LinkedResource() {
         super();
     }
@@ -89,9 +87,7 @@ public class LinkedResource extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -103,36 +99,28 @@ public class LinkedResource extends Entity implements Parsable {
     /**
      * Sets the applicationName property value. The app name of the source that sends the linkedResource.
      * @param value Value to set for the applicationName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationName(@jakarta.annotation.Nullable final String value) {
         this.applicationName = value;
     }
     /**
      * Sets the displayName property value. The title of the linkedResource.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the externalId property value. ID of the object that is associated with this task on the third-party/partner system.
      * @param value Value to set for the externalId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
      * Sets the webUrl property value. Deep link to the linkedResource.
      * @param value Value to set for the webUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }

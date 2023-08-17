@@ -9,9 +9,7 @@ import java.util.Objects;
 public class ClaimsMappingPolicy extends StsPolicy implements Parsable {
     /**
      * Instantiates a new claimsMappingPolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ClaimsMappingPolicy() {
         super();
         this.setOdataType("#microsoft.graph.claimsMappingPolicy");
@@ -38,9 +36,7 @@ public class ClaimsMappingPolicy extends StsPolicy implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

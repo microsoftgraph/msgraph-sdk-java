@@ -41,9 +41,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     private String visibility;
     /**
      * Instantiates a new workbookWorksheet and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookWorksheet() {
         super();
     }
@@ -141,9 +139,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,72 +155,56 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     /**
      * Sets the charts property value. Returns collection of charts that are part of the worksheet. Read-only.
      * @param value Value to set for the charts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCharts(@jakarta.annotation.Nullable final java.util.List<WorkbookChart> value) {
         this.charts = value;
     }
     /**
      * Sets the name property value. The display name of the worksheet.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the names property value. Returns collection of names that are associated with the worksheet. Read-only.
      * @param value Value to set for the names property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNames(@jakarta.annotation.Nullable final java.util.List<WorkbookNamedItem> value) {
         this.names = value;
     }
     /**
      * Sets the pivotTables property value. Collection of PivotTables that are part of the worksheet.
      * @param value Value to set for the pivotTables property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPivotTables(@jakarta.annotation.Nullable final java.util.List<WorkbookPivotTable> value) {
         this.pivotTables = value;
     }
     /**
      * Sets the position property value. The zero-based position of the worksheet within the workbook.
      * @param value Value to set for the position property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPosition(@jakarta.annotation.Nullable final Integer value) {
         this.position = value;
     }
     /**
      * Sets the protection property value. Returns sheet protection object for a worksheet. Read-only.
      * @param value Value to set for the protection property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProtection(@jakarta.annotation.Nullable final WorkbookWorksheetProtection value) {
         this.protection = value;
     }
     /**
      * Sets the tables property value. Collection of tables that are part of the worksheet. Read-only.
      * @param value Value to set for the tables property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTables(@jakarta.annotation.Nullable final java.util.List<WorkbookTable> value) {
         this.tables = value;
     }
     /**
      * Sets the visibility property value. The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
      * @param value Value to set for the visibility property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVisibility(@jakarta.annotation.Nullable final String value) {
         this.visibility = value;
     }

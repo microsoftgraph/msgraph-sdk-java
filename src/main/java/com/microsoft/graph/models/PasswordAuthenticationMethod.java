@@ -18,9 +18,7 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
     private String password;
     /**
      * Instantiates a new passwordAuthenticationMethod and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PasswordAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.passwordAuthenticationMethod");
@@ -65,9 +63,7 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -77,18 +73,14 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
     /**
      * Sets the createdDateTime property value. The date and time when this password was last updated. This property is currently not populated. Read-only. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the password property value. For security, the password is always returned as null from a LIST or GET operation.
      * @param value Value to set for the password property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPassword(@jakarta.annotation.Nullable final String value) {
         this.password = value;
     }

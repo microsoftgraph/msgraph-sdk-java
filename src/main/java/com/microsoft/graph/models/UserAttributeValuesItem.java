@@ -30,9 +30,7 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
     private String value;
     /**
      * Instantiates a new userAttributeValuesItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserAttributeValuesItem() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isDefault", this.getIsDefault());
@@ -116,45 +112,35 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the isDefault property value. Determines whether the value is set as the default.
      * @param value Value to set for the isDefault property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefault = value;
     }
     /**
      * Sets the name property value. The display name of the property displayed to the user in the user flow.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the value property value. The value that is set when this item is selected.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }

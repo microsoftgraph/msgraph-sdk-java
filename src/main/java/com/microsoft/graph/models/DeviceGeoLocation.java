@@ -54,9 +54,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     private Double verticalAccuracy;
     /**
      * Instantiates a new deviceGeoLocation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceGeoLocation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -171,9 +169,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeDoubleValue("altitude", this.getAltitude());
@@ -190,90 +186,70 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the altitude property value. Altitude, given in meters above sea level
      * @param value Value to set for the altitude property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAltitude(@jakarta.annotation.Nullable final Double value) {
         this.altitude = value;
     }
     /**
      * Sets the heading property value. Heading in degrees from true north
      * @param value Value to set for the heading property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHeading(@jakarta.annotation.Nullable final Double value) {
         this.heading = value;
     }
     /**
      * Sets the horizontalAccuracy property value. Accuracy of longitude and latitude in meters
      * @param value Value to set for the horizontalAccuracy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHorizontalAccuracy(@jakarta.annotation.Nullable final Double value) {
         this.horizontalAccuracy = value;
     }
     /**
      * Sets the lastCollectedDateTime property value. Time at which location was recorded, relative to UTC
      * @param value Value to set for the lastCollectedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastCollectedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastCollectedDateTime = value;
     }
     /**
      * Sets the latitude property value. Latitude coordinate of the device's location
      * @param value Value to set for the latitude property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLatitude(@jakarta.annotation.Nullable final Double value) {
         this.latitude = value;
     }
     /**
      * Sets the longitude property value. Longitude coordinate of the device's location
      * @param value Value to set for the longitude property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLongitude(@jakarta.annotation.Nullable final Double value) {
         this.longitude = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the speed property value. Speed the device is traveling in meters per second
      * @param value Value to set for the speed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSpeed(@jakarta.annotation.Nullable final Double value) {
         this.speed = value;
     }
     /**
      * Sets the verticalAccuracy property value. Accuracy of altitude in meters
      * @param value Value to set for the verticalAccuracy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVerticalAccuracy(@jakarta.annotation.Nullable final Double value) {
         this.verticalAccuracy = value;
     }

@@ -17,9 +17,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
     private String teamId;
     /**
      * Instantiates a new channelMembersNotificationRecipient and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ChannelMembersNotificationRecipient() {
         super();
         this.setOdataType("#microsoft.graph.channelMembersNotificationRecipient");
@@ -64,9 +62,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
     /**
      * Sets the channelId property value. The unique identifier for the channel whose members should receive the notification.
      * @param value Value to set for the channelId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChannelId(@jakarta.annotation.Nullable final String value) {
         this.channelId = value;
     }
     /**
      * Sets the teamId property value. The unique identifier for the team under which the channel resides.
      * @param value Value to set for the teamId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamId(@jakarta.annotation.Nullable final String value) {
         this.teamId = value;
     }

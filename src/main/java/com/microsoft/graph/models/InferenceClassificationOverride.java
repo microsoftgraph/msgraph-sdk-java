@@ -17,9 +17,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
     private EmailAddress senderEmailAddress;
     /**
      * Instantiates a new inferenceClassificationOverride and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public InferenceClassificationOverride() {
         super();
     }
@@ -63,9 +61,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +71,14 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
     /**
      * Sets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
      * @param value Value to set for the classifyAs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClassifyAs(@jakarta.annotation.Nullable final InferenceClassificationType value) {
         this.classifyAs = value;
     }
     /**
      * Sets the senderEmailAddress property value. The email address information of the sender for whom the override is created.
      * @param value Value to set for the senderEmailAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSenderEmailAddress(@jakarta.annotation.Nullable final EmailAddress value) {
         this.senderEmailAddress = value;
     }

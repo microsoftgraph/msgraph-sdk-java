@@ -13,9 +13,7 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
     private String userId;
     /**
      * Instantiates a new aadUserNotificationRecipient and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AadUserNotificationRecipient() {
         super();
         this.setOdataType("#microsoft.graph.aadUserNotificationRecipient");
@@ -51,9 +49,7 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
     /**
      * Sets the userId property value. Azure AD user identifier. Use the List users method to get this ID.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }

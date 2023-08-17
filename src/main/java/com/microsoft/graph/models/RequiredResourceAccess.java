@@ -26,9 +26,7 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
     private String resourceAppId;
     /**
      * Instantiates a new requiredResourceAccess and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RequiredResourceAccess() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -102,36 +98,28 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the resourceAccess property value. The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
      * @param value Value to set for the resourceAccess property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceAccess(@jakarta.annotation.Nullable final java.util.List<ResourceAccess> value) {
         this.resourceAccess = value;
     }
     /**
      * Sets the resourceAppId property value. The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
      * @param value Value to set for the resourceAppId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceAppId(@jakarta.annotation.Nullable final String value) {
         this.resourceAppId = value;
     }

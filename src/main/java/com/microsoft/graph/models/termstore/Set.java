@@ -44,9 +44,7 @@ public class Set extends Entity implements Parsable {
     private java.util.List<Term> terms;
     /**
      * Instantiates a new set and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Set() {
         super();
     }
@@ -144,9 +142,7 @@ public class Set extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -162,72 +158,56 @@ public class Set extends Entity implements Parsable {
     /**
      * Sets the children property value. Children terms of set in term [store].
      * @param value Value to set for the children property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChildren(@jakarta.annotation.Nullable final java.util.List<Term> value) {
         this.children = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time of set creation. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Description that gives details on the term usage.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the localizedNames property value. Name of the set for each languageTag.
      * @param value Value to set for the localizedNames property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocalizedNames(@jakarta.annotation.Nullable final java.util.List<LocalizedName> value) {
         this.localizedNames = value;
     }
     /**
      * Sets the parentGroup property value. The parentGroup property
      * @param value Value to set for the parentGroup property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentGroup(@jakarta.annotation.Nullable final Group value) {
         this.parentGroup = value;
     }
     /**
      * Sets the properties property value. Custom properties for the set.
      * @param value Value to set for the properties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProperties(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
         this.properties = value;
     }
     /**
      * Sets the relations property value. Indicates which terms have been pinned or reused directly under the set.
      * @param value Value to set for the relations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRelations(@jakarta.annotation.Nullable final java.util.List<Relation> value) {
         this.relations = value;
     }
     /**
      * Sets the terms property value. All the terms under the set.
      * @param value Value to set for the terms property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTerms(@jakarta.annotation.Nullable final java.util.List<Term> value) {
         this.terms = value;
     }

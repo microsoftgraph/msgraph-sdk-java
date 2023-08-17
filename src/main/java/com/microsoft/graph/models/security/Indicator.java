@@ -18,9 +18,7 @@ public class Indicator extends Entity implements Parsable {
     private IndicatorSource source;
     /**
      * Instantiates a new indicator and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Indicator() {
         super();
     }
@@ -72,9 +70,7 @@ public class Indicator extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -84,18 +80,14 @@ public class Indicator extends Entity implements Parsable {
     /**
      * Sets the artifact property value. The artifact property
      * @param value Value to set for the artifact property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setArtifact(@jakarta.annotation.Nullable final Artifact value) {
         this.artifact = value;
     }
     /**
      * Sets the source property value. The source property
      * @param value Value to set for the source property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSource(@jakarta.annotation.Nullable final IndicatorSource value) {
         this.source = value;
     }

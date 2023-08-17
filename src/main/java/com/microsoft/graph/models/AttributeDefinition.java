@@ -66,9 +66,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     private AttributeType type;
     /**
      * Instantiates a new attributeDefinition and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AttributeDefinition() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -219,9 +217,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("anchor", this.getAnchor());
@@ -242,126 +238,98 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the anchor property value. true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object's attributes must be designated as the anchor to support synchronization.
      * @param value Value to set for the anchor property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAnchor(@jakarta.annotation.Nullable final Boolean value) {
         this.anchor = value;
     }
     /**
      * Sets the apiExpressions property value. The apiExpressions property
      * @param value Value to set for the apiExpressions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApiExpressions(@jakarta.annotation.Nullable final java.util.List<StringKeyStringValuePair> value) {
         this.apiExpressions = value;
     }
     /**
      * Sets the caseExact property value. true if value of this attribute should be treated as case-sensitive. This setting affects how the synchronization engine detects changes for the attribute.
      * @param value Value to set for the caseExact property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCaseExact(@jakarta.annotation.Nullable final Boolean value) {
         this.caseExact = value;
     }
     /**
      * Sets the defaultValue property value. The defaultValue property
      * @param value Value to set for the defaultValue property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefaultValue(@jakarta.annotation.Nullable final String value) {
         this.defaultValue = value;
     }
     /**
      * Sets the flowNullValues property value. 'true' to allow null values for attributes.
      * @param value Value to set for the flowNullValues property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFlowNullValues(@jakarta.annotation.Nullable final Boolean value) {
         this.flowNullValues = value;
     }
     /**
      * Sets the metadata property value. Metadata for the given object.
      * @param value Value to set for the metadata property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMetadata(@jakarta.annotation.Nullable final java.util.List<AttributeDefinitionMetadataEntry> value) {
         this.metadata = value;
     }
     /**
      * Sets the multivalued property value. true if an attribute can have multiple values. Default is false.
      * @param value Value to set for the multivalued property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMultivalued(@jakarta.annotation.Nullable final Boolean value) {
         this.multivalued = value;
     }
     /**
      * Sets the mutability property value. The mutability property
      * @param value Value to set for the mutability property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMutability(@jakarta.annotation.Nullable final Mutability value) {
         this.mutability = value;
     }
     /**
      * Sets the name property value. Name of the attribute. Must be unique within the object definition. Not nullable.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the referencedObjects property value. For attributes with reference type, lists referenced objects (for example, the manager attribute would list User as the referenced object).
      * @param value Value to set for the referencedObjects property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReferencedObjects(@jakarta.annotation.Nullable final java.util.List<ReferencedObject> value) {
         this.referencedObjects = value;
     }
     /**
      * Sets the required property value. true if attribute is required. Object can not be created if any of the required attributes are missing. If during synchronization, the required attribute has no value, the default value will be used. If default the value was not set, synchronization will record an error.
      * @param value Value to set for the required property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.required = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final AttributeType value) {
         this.type = value;
     }

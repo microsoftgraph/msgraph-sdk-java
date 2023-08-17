@@ -39,9 +39,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     private Integer simulationCount;
     /**
      * Instantiates a new attackSimulationSimulationUserCoverage and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AttackSimulationSimulationUserCoverage() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -129,9 +127,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("attackSimulationUser", this.getAttackSimulationUser());
@@ -145,63 +141,49 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the attackSimulationUser property value. User in an attack simulation and training campaign.
      * @param value Value to set for the attackSimulationUser property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttackSimulationUser(@jakarta.annotation.Nullable final AttackSimulationUser value) {
         this.attackSimulationUser = value;
     }
     /**
      * Sets the clickCount property value. Number of link clicks in the received payloads by the user in attack simulation and training campaigns.
      * @param value Value to set for the clickCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClickCount(@jakarta.annotation.Nullable final Integer value) {
         this.clickCount = value;
     }
     /**
      * Sets the compromisedCount property value. Number of compromising actions by the user in attack simulation and training campaigns.
      * @param value Value to set for the compromisedCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompromisedCount(@jakarta.annotation.Nullable final Integer value) {
         this.compromisedCount = value;
     }
     /**
      * Sets the latestSimulationDateTime property value. Date and time of the latest attack simulation and training campaign that the user was included in.
      * @param value Value to set for the latestSimulationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLatestSimulationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.latestSimulationDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the simulationCount property value. Number of attack simulation and training campaigns that the user was included in.
      * @param value Value to set for the simulationCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSimulationCount(@jakarta.annotation.Nullable final Integer value) {
         this.simulationCount = value;
     }

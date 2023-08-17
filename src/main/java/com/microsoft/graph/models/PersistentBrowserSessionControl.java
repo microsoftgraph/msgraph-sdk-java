@@ -13,9 +13,7 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
     private PersistentBrowserSessionMode mode;
     /**
      * Instantiates a new persistentBrowserSessionControl and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PersistentBrowserSessionControl() {
         super();
         this.setOdataType("#microsoft.graph.persistentBrowserSessionControl");
@@ -51,9 +49,7 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
     /**
      * Sets the mode property value. Possible values are: always, never.
      * @param value Value to set for the mode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMode(@jakarta.annotation.Nullable final PersistentBrowserSessionMode value) {
         this.mode = value;
     }

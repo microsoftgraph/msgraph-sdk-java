@@ -34,9 +34,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
     private String sha256Hash;
     /**
      * Instantiates a new hashes and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Hashes() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("crc32Hash", this.getCrc32Hash());
@@ -130,54 +126,42 @@ public class Hashes implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the crc32Hash property value. The CRC32 value of the file in little endian (if available). Read-only.
      * @param value Value to set for the crc32Hash property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCrc32Hash(@jakarta.annotation.Nullable final String value) {
         this.crc32Hash = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the quickXorHash property value. A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
      * @param value Value to set for the quickXorHash property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQuickXorHash(@jakarta.annotation.Nullable final String value) {
         this.quickXorHash = value;
     }
     /**
      * Sets the sha1Hash property value. SHA1 hash for the contents of the file (if available). Read-only.
      * @param value Value to set for the sha1Hash property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSha1Hash(@jakarta.annotation.Nullable final String value) {
         this.sha1Hash = value;
     }
     /**
      * Sets the sha256Hash property value. SHA256 hash for the contents of the file (if available). Read-only.
      * @param value Value to set for the sha256Hash property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSha256Hash(@jakarta.annotation.Nullable final String value) {
         this.sha256Hash = value;
     }

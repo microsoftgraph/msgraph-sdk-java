@@ -25,9 +25,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
     private ImportedWindowsAutopilotDeviceIdentityUploadStatus status;
     /**
      * Instantiates a new importedWindowsAutopilotDeviceIdentityUpload and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityUpload() {
         super();
     }
@@ -80,9 +78,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -93,27 +89,21 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
     /**
      * Sets the createdDateTimeUtc property value. DateTime when the entity is created.
      * @param value Value to set for the createdDateTimeUtc property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTimeUtc(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTimeUtc = value;
     }
     /**
      * Sets the deviceIdentities property value. Collection of all Autopilot devices as a part of this upload.
      * @param value Value to set for the deviceIdentities property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceIdentities(@jakarta.annotation.Nullable final java.util.List<ImportedWindowsAutopilotDeviceIdentity> value) {
         this.deviceIdentities = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final ImportedWindowsAutopilotDeviceIdentityUploadStatus value) {
         this.status = value;
     }

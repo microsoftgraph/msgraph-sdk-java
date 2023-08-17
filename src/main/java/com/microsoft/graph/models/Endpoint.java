@@ -29,9 +29,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     private String uri;
     /**
      * Instantiates a new endpoint and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Endpoint() {
         super();
         this.setOdataType("#microsoft.graph.endpoint");
@@ -103,9 +101,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,45 +114,35 @@ public class Endpoint extends DirectoryObject implements Parsable {
     /**
      * Sets the capability property value. The capability property
      * @param value Value to set for the capability property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCapability(@jakarta.annotation.Nullable final String value) {
         this.capability = value;
     }
     /**
      * Sets the providerId property value. The providerId property
      * @param value Value to set for the providerId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProviderId(@jakarta.annotation.Nullable final String value) {
         this.providerId = value;
     }
     /**
      * Sets the providerName property value. The providerName property
      * @param value Value to set for the providerName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProviderName(@jakarta.annotation.Nullable final String value) {
         this.providerName = value;
     }
     /**
      * Sets the providerResourceId property value. The providerResourceId property
      * @param value Value to set for the providerResourceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProviderResourceId(@jakarta.annotation.Nullable final String value) {
         this.providerResourceId = value;
     }
     /**
      * Sets the uri property value. The uri property
      * @param value Value to set for the uri property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUri(@jakarta.annotation.Nullable final String value) {
         this.uri = value;
     }

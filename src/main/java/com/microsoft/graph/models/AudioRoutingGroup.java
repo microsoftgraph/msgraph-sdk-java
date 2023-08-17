@@ -21,9 +21,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
     private java.util.List<String> sources;
     /**
      * Instantiates a new audioRoutingGroup and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AudioRoutingGroup() {
         super();
     }
@@ -76,9 +74,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +85,21 @@ public class AudioRoutingGroup extends Entity implements Parsable {
     /**
      * Sets the receivers property value. List of receiving participant ids.
      * @param value Value to set for the receivers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReceivers(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.receivers = value;
     }
     /**
      * Sets the routingMode property value. The routingMode property
      * @param value Value to set for the routingMode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoutingMode(@jakarta.annotation.Nullable final RoutingMode value) {
         this.routingMode = value;
     }
     /**
      * Sets the sources property value. List of source participant ids.
      * @param value Value to set for the sources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSources(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.sources = value;
     }

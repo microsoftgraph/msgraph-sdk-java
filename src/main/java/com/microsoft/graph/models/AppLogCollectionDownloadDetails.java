@@ -30,9 +30,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
     private String odataType;
     /**
      * Instantiates a new appLogCollectionDownloadDetails and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AppLogCollectionDownloadDetails() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("appLogDecryptionAlgorithm", this.getAppLogDecryptionAlgorithm());
@@ -116,45 +112,35 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the appLogDecryptionAlgorithm property value. The appLogDecryptionAlgorithm property
      * @param value Value to set for the appLogDecryptionAlgorithm property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppLogDecryptionAlgorithm(@jakarta.annotation.Nullable final AppLogDecryptionAlgorithm value) {
         this.appLogDecryptionAlgorithm = value;
     }
     /**
      * Sets the decryptionKey property value. Decryption key that used to decrypt the log.
      * @param value Value to set for the decryptionKey property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDecryptionKey(@jakarta.annotation.Nullable final String value) {
         this.decryptionKey = value;
     }
     /**
      * Sets the downloadUrl property value. Download SAS (Shared Access Signature) Url for completed app log request.
      * @param value Value to set for the downloadUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDownloadUrl(@jakarta.annotation.Nullable final String value) {
         this.downloadUrl = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

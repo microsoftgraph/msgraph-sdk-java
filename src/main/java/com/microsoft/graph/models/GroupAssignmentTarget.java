@@ -16,9 +16,7 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
     private String groupId;
     /**
      * Instantiates a new groupAssignmentTarget and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public GroupAssignmentTarget() {
         super();
         this.setOdataType("#microsoft.graph.groupAssignmentTarget");
@@ -61,9 +59,7 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -72,9 +68,7 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
     /**
      * Sets the groupId property value. The group Id that is the target of the assignment.
      * @param value Value to set for the groupId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroupId(@jakarta.annotation.Nullable final String value) {
         this.groupId = value;
     }

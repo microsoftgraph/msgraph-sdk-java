@@ -41,9 +41,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     private OnenoteUserRole userRole;
     /**
      * Instantiates a new notebook and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Notebook() {
         super();
         this.setOdataType("#microsoft.graph.notebook");
@@ -142,9 +140,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,72 +156,56 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     /**
      * Sets the isDefault property value. Indicates whether this is the user's default notebook. Read-only.
      * @param value Value to set for the isDefault property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefault = value;
     }
     /**
      * Sets the isShared property value. Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.
      * @param value Value to set for the isShared property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsShared(@jakarta.annotation.Nullable final Boolean value) {
         this.isShared = value;
     }
     /**
      * Sets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
      * @param value Value to set for the links property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLinks(@jakarta.annotation.Nullable final NotebookLinks value) {
         this.links = value;
     }
     /**
      * Sets the sectionGroups property value. The section groups in the notebook. Read-only. Nullable.
      * @param value Value to set for the sectionGroups property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSectionGroups(@jakarta.annotation.Nullable final java.util.List<SectionGroup> value) {
         this.sectionGroups = value;
     }
     /**
      * Sets the sectionGroupsUrl property value. The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
      * @param value Value to set for the sectionGroupsUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSectionGroupsUrl(@jakarta.annotation.Nullable final String value) {
         this.sectionGroupsUrl = value;
     }
     /**
      * Sets the sections property value. The sections in the notebook. Read-only. Nullable.
      * @param value Value to set for the sections property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSections(@jakarta.annotation.Nullable final java.util.List<OnenoteSection> value) {
         this.sections = value;
     }
     /**
      * Sets the sectionsUrl property value. The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
      * @param value Value to set for the sectionsUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSectionsUrl(@jakarta.annotation.Nullable final String value) {
         this.sectionsUrl = value;
     }
     /**
      * Sets the userRole property value. Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
      * @param value Value to set for the userRole property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserRole(@jakarta.annotation.Nullable final OnenoteUserRole value) {
         this.userRole = value;
     }

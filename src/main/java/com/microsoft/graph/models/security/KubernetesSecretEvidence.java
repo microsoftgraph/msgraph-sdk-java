@@ -21,9 +21,7 @@ public class KubernetesSecretEvidence extends AlertEvidence implements Parsable 
     private String secretType;
     /**
      * Instantiates a new kubernetesSecretEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public KubernetesSecretEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.kubernetesSecretEvidence");
@@ -77,9 +75,7 @@ public class KubernetesSecretEvidence extends AlertEvidence implements Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class KubernetesSecretEvidence extends AlertEvidence implements Parsable 
     /**
      * Sets the name property value. The secret name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the namespace property value. The secret namespace.
      * @param value Value to set for the namespace property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNamespace(@jakarta.annotation.Nullable final KubernetesNamespaceEvidence value) {
         this.namespace = value;
     }
     /**
      * Sets the secretType property value. The secret type can include both built-in types and custom ones. Examples of built-in types are: Opaque, kubernetes.io/service-account-token, kubernetes.io/dockercfg, kubernetes.io/dockerconfigjson, kubernetes.io/basic-auth, kubernetes.io/ssh-auth, kubernetes.io/tls, bootstrap.kubernetes.io/token.
      * @param value Value to set for the secretType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecretType(@jakarta.annotation.Nullable final String value) {
         this.secretType = value;
     }

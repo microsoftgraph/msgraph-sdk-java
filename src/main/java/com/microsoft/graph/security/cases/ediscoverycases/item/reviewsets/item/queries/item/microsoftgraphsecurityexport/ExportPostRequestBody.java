@@ -32,9 +32,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
     private String outputName;
     /**
      * Instantiates a new exportPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ExportPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -104,9 +102,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -118,45 +114,35 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the exportOptions property value. The exportOptions property
      * @param value Value to set for the exportOptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExportOptions(@jakarta.annotation.Nullable final ExportOptions value) {
         this.exportOptions = value;
     }
     /**
      * Sets the exportStructure property value. The exportStructure property
      * @param value Value to set for the exportStructure property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExportStructure(@jakarta.annotation.Nullable final ExportFileStructure value) {
         this.exportStructure = value;
     }
     /**
      * Sets the outputName property value. The outputName property
      * @param value Value to set for the outputName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOutputName(@jakarta.annotation.Nullable final String value) {
         this.outputName = value;
     }

@@ -22,9 +22,7 @@ public class SynchronizationJobRestartCriteria implements AdditionalDataHolder, 
     private SynchronizationJobRestartScope resetScope;
     /**
      * Instantiates a new synchronizationJobRestartCriteria and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SynchronizationJobRestartCriteria() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -76,9 +74,7 @@ public class SynchronizationJobRestartCriteria implements AdditionalDataHolder, 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -88,27 +84,21 @@ public class SynchronizationJobRestartCriteria implements AdditionalDataHolder, 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the resetScope property value. Comma-separated combination of the following values: None, ConnectorDataStore, Escrows, Watermark, QuarantineState, Full, ForceDeletes. The property can also be empty.   None: Starts a paused or quarantined provisioning job. DO NOT USE. Use the Start synchronizationJob API instead.ConnectorDataStore - Clears the underlying cache for all users. DO NOT USE. Contact Microsoft Support for guidance.Escrows - Provisioning failures are marked as escrows and retried. Clearing escrows will stop the service from retrying failures.Watermark - Removing the watermark causes the service to re-evaluate all the users again, rather than just processing changes.QuarantineState - Temporarily lifts the quarantine.Use Full if you want all of the options.ForceDeletes - Forces the system to delete the pending deleted users when using the accidental deletions prevention feature and the deletion threshold is exceeded. Leaving this property empty emulates the Restart provisioning option in the Azure portal. It is similar to setting the resetScope to include QuarantineState, Watermark, and Escrows. This option meets most customer needs.
      * @param value Value to set for the resetScope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResetScope(@jakarta.annotation.Nullable final SynchronizationJobRestartScope value) {
         this.resetScope = value;
     }

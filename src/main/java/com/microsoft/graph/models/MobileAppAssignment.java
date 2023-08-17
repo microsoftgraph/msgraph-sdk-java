@@ -24,9 +24,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
     private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new mobileAppAssignment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MobileAppAssignment() {
         super();
     }
@@ -79,9 +77,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -92,27 +88,21 @@ public class MobileAppAssignment extends Entity implements Parsable {
     /**
      * Sets the intent property value. Possible values for the install intent chosen by the admin.
      * @param value Value to set for the intent property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIntent(@jakarta.annotation.Nullable final InstallIntent value) {
         this.intent = value;
     }
     /**
      * Sets the settings property value. The settings for target assignment defined by the admin.
      * @param value Value to set for the settings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettings(@jakarta.annotation.Nullable final MobileAppAssignmentSettings value) {
         this.settings = value;
     }
     /**
      * Sets the target property value. The target group assignment defined by the admin.
      * @param value Value to set for the target property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this.target = value;
     }

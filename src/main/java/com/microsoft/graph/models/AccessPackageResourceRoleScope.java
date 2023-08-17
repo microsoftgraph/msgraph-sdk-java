@@ -22,9 +22,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     private AccessPackageResourceScope scope;
     /**
      * Instantiates a new accessPackageResourceRoleScope and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageResourceRoleScope() {
         super();
     }
@@ -77,9 +75,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the role property value. The role property
      * @param value Value to set for the role property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRole(@jakarta.annotation.Nullable final AccessPackageResourceRole value) {
         this.role = value;
     }
     /**
      * Sets the scope property value. The scope property
      * @param value Value to set for the scope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScope(@jakarta.annotation.Nullable final AccessPackageResourceScope value) {
         this.scope = value;
     }

@@ -45,9 +45,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     private KubernetesServiceAccountEvidence serviceAccount;
     /**
      * Instantiates a new kubernetesPodEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public KubernetesPodEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.kubernetesPodEvidence");
@@ -155,9 +153,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -174,81 +170,63 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the containers property value. The list of pod containers which are not init or ephemeral containers.
      * @param value Value to set for the containers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContainers(@jakarta.annotation.Nullable final java.util.List<ContainerEvidence> value) {
         this.containers = value;
     }
     /**
      * Sets the controller property value. The pod controller.
      * @param value Value to set for the controller property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setController(@jakarta.annotation.Nullable final KubernetesControllerEvidence value) {
         this.controller = value;
     }
     /**
      * Sets the ephemeralContainers property value. The list of pod ephemeral containers.
      * @param value Value to set for the ephemeralContainers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEphemeralContainers(@jakarta.annotation.Nullable final java.util.List<ContainerEvidence> value) {
         this.ephemeralContainers = value;
     }
     /**
      * Sets the initContainers property value. The list of pod init containers.
      * @param value Value to set for the initContainers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitContainers(@jakarta.annotation.Nullable final java.util.List<ContainerEvidence> value) {
         this.initContainers = value;
     }
     /**
      * Sets the labels property value. The pod labels.
      * @param value Value to set for the labels property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLabels(@jakarta.annotation.Nullable final Dictionary value) {
         this.labels = value;
     }
     /**
      * Sets the name property value. The pod name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the namespace property value. The pod namespace.
      * @param value Value to set for the namespace property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNamespace(@jakarta.annotation.Nullable final KubernetesNamespaceEvidence value) {
         this.namespace = value;
     }
     /**
      * Sets the podIp property value. The pod IP.
      * @param value Value to set for the podIp property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPodIp(@jakarta.annotation.Nullable final IpEvidence value) {
         this.podIp = value;
     }
     /**
      * Sets the serviceAccount property value. The pod service account.
      * @param value Value to set for the serviceAccount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServiceAccount(@jakarta.annotation.Nullable final KubernetesServiceAccountEvidence value) {
         this.serviceAccount = value;
     }

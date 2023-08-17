@@ -38,9 +38,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     private String subjectName;
     /**
      * Instantiates a new windowsInformationProtectionDataRecoveryCertificate and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsInformationProtectionDataRecoveryCertificate() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -119,9 +117,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("certificate", this.getCertificate());
@@ -134,54 +130,42 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the certificate property value. Data recovery Certificate
      * @param value Value to set for the certificate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificate(@jakarta.annotation.Nullable final byte[] value) {
         this.certificate = value;
     }
     /**
      * Sets the description property value. Data recovery Certificate description
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the expirationDateTime property value. Data recovery Certificate expiration datetime
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the subjectName property value. Data recovery Certificate subject name
      * @param value Value to set for the subjectName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubjectName(@jakarta.annotation.Nullable final String value) {
         this.subjectName = value;
     }

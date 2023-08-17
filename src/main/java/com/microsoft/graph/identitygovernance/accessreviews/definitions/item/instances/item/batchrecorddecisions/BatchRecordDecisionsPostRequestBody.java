@@ -30,9 +30,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
     private String resourceId;
     /**
      * Instantiates a new batchRecordDecisionsPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BatchRecordDecisionsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("decision", this.getDecision());
@@ -116,45 +112,35 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the decision property value. The decision property
      * @param value Value to set for the decision property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDecision(@jakarta.annotation.Nullable final String value) {
         this.decision = value;
     }
     /**
      * Sets the justification property value. The justification property
      * @param value Value to set for the justification property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setJustification(@jakarta.annotation.Nullable final String value) {
         this.justification = value;
     }
     /**
      * Sets the principalId property value. The principalId property
      * @param value Value to set for the principalId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
         this.principalId = value;
     }
     /**
      * Sets the resourceId property value. The resourceId property
      * @param value Value to set for the resourceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.resourceId = value;
     }

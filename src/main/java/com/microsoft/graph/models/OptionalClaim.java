@@ -34,9 +34,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
     private String source;
     /**
      * Instantiates a new optionalClaim and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OptionalClaim() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("additionalProperties", this.getAdditionalProperties());
@@ -130,54 +126,42 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the additionalProperties property value. Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property.
      * @param value Value to set for the additionalProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalProperties(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.additionalProperties = value;
     }
     /**
      * Sets the essential property value. If the value is true, the claim specified by the client is necessary to ensure a smooth authorization experience for the specific task requested by the end user. The default value is false.
      * @param value Value to set for the essential property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEssential(@jakarta.annotation.Nullable final Boolean value) {
         this.essential = value;
     }
     /**
      * Sets the name property value. The name of the optional claim.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the source property value. The source (directory object) of the claim. There are predefined claims and user-defined claims from extension properties. If the source value is null, the claim is a predefined optional claim. If the source value is user, the value in the name property is the extension property from the user object.
      * @param value Value to set for the source property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSource(@jakarta.annotation.Nullable final String value) {
         this.source = value;
     }

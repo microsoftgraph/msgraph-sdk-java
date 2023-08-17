@@ -17,9 +17,7 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
     private OffsetDateTime startupDateTime;
     /**
      * Instantiates a new userExperienceAnalyticsScoreHistory and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsScoreHistory() {
         super();
     }
@@ -54,9 +52,7 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -65,9 +61,7 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
     /**
      * Sets the startupDateTime property value. The device startup date time. The value cannot be modified and is automatically populated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
      * @param value Value to set for the startupDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartupDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startupDateTime = value;
     }

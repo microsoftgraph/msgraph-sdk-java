@@ -21,9 +21,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
     private Boolean isOrganizationDefault;
     /**
      * Instantiates a new stsPolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public StsPolicy() {
         super();
         this.setOdataType("#microsoft.graph.stsPolicy");
@@ -88,9 +86,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -101,27 +97,21 @@ public class StsPolicy extends PolicyBase implements Parsable {
     /**
      * Sets the appliesTo property value. The appliesTo property
      * @param value Value to set for the appliesTo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppliesTo(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.appliesTo = value;
     }
     /**
      * Sets the definition property value. A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required.
      * @param value Value to set for the definition property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefinition(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.definition = value;
     }
     /**
      * Sets the isOrganizationDefault property value. If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.
      * @param value Value to set for the isOrganizationDefault property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsOrganizationDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isOrganizationDefault = value;
     }

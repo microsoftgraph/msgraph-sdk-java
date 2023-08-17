@@ -16,9 +16,7 @@ public class InsightValueDouble extends UserExperienceAnalyticsInsightValue impl
     private Double value;
     /**
      * Instantiates a new insightValueDouble and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public InsightValueDouble() {
         super();
         this.setOdataType("#microsoft.graph.insightValueDouble");
@@ -54,9 +52,7 @@ public class InsightValueDouble extends UserExperienceAnalyticsInsightValue impl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -65,9 +61,7 @@ public class InsightValueDouble extends UserExperienceAnalyticsInsightValue impl
     /**
      * Sets the value property value. The double value of the user experience analytics insight.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final Double value) {
         this.value = value;
     }

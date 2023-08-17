@@ -42,9 +42,7 @@ public class Media implements AdditionalDataHolder, Parsable {
     private java.util.List<MediaStream> streams;
     /**
      * Instantiates a new media and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Media() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +139,7 @@ public class Media implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("calleeDevice", this.getCalleeDevice());
@@ -158,72 +154,56 @@ public class Media implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the calleeDevice property value. Device information associated with the callee endpoint of this media.
      * @param value Value to set for the calleeDevice property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCalleeDevice(@jakarta.annotation.Nullable final DeviceInfo value) {
         this.calleeDevice = value;
     }
     /**
      * Sets the calleeNetwork property value. Network information associated with the callee endpoint of this media.
      * @param value Value to set for the calleeNetwork property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCalleeNetwork(@jakarta.annotation.Nullable final NetworkInfo value) {
         this.calleeNetwork = value;
     }
     /**
      * Sets the callerDevice property value. Device information associated with the caller endpoint of this media.
      * @param value Value to set for the callerDevice property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallerDevice(@jakarta.annotation.Nullable final DeviceInfo value) {
         this.callerDevice = value;
     }
     /**
      * Sets the callerNetwork property value. Network information associated with the caller endpoint of this media.
      * @param value Value to set for the callerNetwork property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallerNetwork(@jakarta.annotation.Nullable final NetworkInfo value) {
         this.callerNetwork = value;
     }
     /**
      * Sets the label property value. How the media was identified during media negotiation stage.
      * @param value Value to set for the label property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLabel(@jakarta.annotation.Nullable final String value) {
         this.label = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the streams property value. Network streams associated with this media.
      * @param value Value to set for the streams property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStreams(@jakarta.annotation.Nullable final java.util.List<MediaStream> value) {
         this.streams = value;
     }

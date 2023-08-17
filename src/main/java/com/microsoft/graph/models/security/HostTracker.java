@@ -30,9 +30,7 @@ public class HostTracker extends Artifact implements Parsable {
     private String value;
     /**
      * Instantiates a new hostTracker and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public HostTracker() {
         super();
         this.setOdataType("#microsoft.graph.security.hostTracker");
@@ -104,9 +102,7 @@ public class HostTracker extends Artifact implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -119,45 +115,35 @@ public class HostTracker extends Artifact implements Parsable {
     /**
      * Sets the firstSeenDateTime property value. The first date and time when this hostTracker was observed by Microsoft Defender Threat Intelligence. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstSeenDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstSeenDateTime = value;
     }
     /**
      * Sets the host property value. The host property
      * @param value Value to set for the host property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHost(@jakarta.annotation.Nullable final Host value) {
         this.host = value;
     }
     /**
      * Sets the kind property value. The kind of hostTracker that was detected. For example, GoogleAnalyticsID or JarmHash.
      * @param value Value to set for the kind property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKind(@jakarta.annotation.Nullable final String value) {
         this.kind = value;
     }
     /**
      * Sets the lastSeenDateTime property value. The most recent date and time when this hostTracker was observed by Microsoft Defender Threat Intelligence. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSeenDateTime = value;
     }
     /**
      * Sets the value property value. The identification value for the hostTracker.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }

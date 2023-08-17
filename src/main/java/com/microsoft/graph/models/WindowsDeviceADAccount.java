@@ -17,9 +17,7 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Pars
     private String userName;
     /**
      * Instantiates a new windowsDeviceADAccount and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsDeviceADAccount() {
         super();
         this.setOdataType("#microsoft.graph.windowsDeviceADAccount");
@@ -64,9 +62,7 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Pars
     /**
      * Sets the domainName property value. Not yet documented
      * @param value Value to set for the domainName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDomainName(@jakarta.annotation.Nullable final String value) {
         this.domainName = value;
     }
     /**
      * Sets the userName property value. Not yet documented
      * @param value Value to set for the userName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }

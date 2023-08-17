@@ -16,9 +16,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implem
     private java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> metricDevices;
     /**
      * Instantiates a new userExperienceAnalyticsWorkFromAnywhereMetric and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereMetric() {
         super();
     }
@@ -53,9 +51,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implem
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -64,9 +60,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implem
     /**
      * Sets the metricDevices property value. The work from anywhere metric devices. Read-only.
      * @param value Value to set for the metricDevices property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMetricDevices(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> value) {
         this.metricDevices = value;
     }

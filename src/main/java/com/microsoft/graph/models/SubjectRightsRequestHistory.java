@@ -39,9 +39,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
     private String type;
     /**
      * Instantiates a new subjectRightsRequestHistory and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SubjectRightsRequestHistory() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -129,9 +127,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("changedBy", this.getChangedBy());
@@ -145,63 +141,49 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the changedBy property value. Identity of the user who changed the  subject rights request.
      * @param value Value to set for the changedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChangedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.changedBy = value;
     }
     /**
      * Sets the eventDateTime property value. Data and time when the entity was changed.
      * @param value Value to set for the eventDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.eventDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
      * @param value Value to set for the stage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStage(@jakarta.annotation.Nullable final SubjectRightsRequestStage value) {
         this.stage = value;
     }
     /**
      * Sets the stageStatus property value. The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
      * @param value Value to set for the stageStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStageStatus(@jakarta.annotation.Nullable final SubjectRightsRequestStageStatus value) {
         this.stageStatus = value;
     }
     /**
      * Sets the type property value. Type of history.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }

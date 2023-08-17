@@ -17,9 +17,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
     private String contentType;
     /**
      * Instantiates a new workbookCommentReply and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookCommentReply() {
         super();
     }
@@ -63,9 +61,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +71,14 @@ public class WorkbookCommentReply extends Entity implements Parsable {
     /**
      * Sets the content property value. The content of a comment reply.
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContent(@jakarta.annotation.Nullable final String value) {
         this.content = value;
     }
     /**
      * Sets the contentType property value. Indicates the type for the comment reply.
      * @param value Value to set for the contentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentType(@jakarta.annotation.Nullable final String value) {
         this.contentType = value;
     }

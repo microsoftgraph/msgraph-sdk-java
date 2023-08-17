@@ -25,9 +25,7 @@ public class EducationOrganization extends Entity implements Parsable {
     private String externalSourceDetail;
     /**
      * Instantiates a new educationOrganization and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationOrganization() {
         super();
     }
@@ -96,9 +94,7 @@ public class EducationOrganization extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,36 +106,28 @@ public class EducationOrganization extends Entity implements Parsable {
     /**
      * Sets the description property value. Organization description.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Organization display name.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the externalSource property value. Source where this organization was created from. Possible values are: sis, manual.
      * @param value Value to set for the externalSource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalSource(@jakarta.annotation.Nullable final EducationExternalSource value) {
         this.externalSource = value;
     }
     /**
      * Sets the externalSourceDetail property value. The name of the external source this resources was generated from.
      * @param value Value to set for the externalSourceDetail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalSourceDetail(@jakarta.annotation.Nullable final String value) {
         this.externalSourceDetail = value;
     }

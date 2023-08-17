@@ -21,9 +21,7 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
     private String name;
     /**
      * Instantiates a new kubernetesNamespaceEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public KubernetesNamespaceEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.kubernetesNamespaceEvidence");
@@ -77,9 +75,7 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
     /**
      * Sets the cluster property value. The namespace cluster.
      * @param value Value to set for the cluster property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCluster(@jakarta.annotation.Nullable final KubernetesClusterEvidence value) {
         this.cluster = value;
     }
     /**
      * Sets the labels property value. The labels for the Kubernetes pod.
      * @param value Value to set for the labels property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLabels(@jakarta.annotation.Nullable final Dictionary value) {
         this.labels = value;
     }
     /**
      * Sets the name property value. The namespace name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }

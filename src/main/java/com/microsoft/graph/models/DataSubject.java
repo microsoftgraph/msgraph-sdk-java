@@ -34,9 +34,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
     private String residency;
     /**
      * Instantiates a new dataSubject and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DataSubject() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("email", this.getEmail());
@@ -130,54 +126,42 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the email property value. Email of the data subject.
      * @param value Value to set for the email property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
      * Sets the firstName property value. First name of the data subject.
      * @param value Value to set for the firstName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirstName(@jakarta.annotation.Nullable final String value) {
         this.firstName = value;
     }
     /**
      * Sets the lastName property value. Last Name of the data subject.
      * @param value Value to set for the lastName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastName(@jakarta.annotation.Nullable final String value) {
         this.lastName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the residency property value. The country/region of residency. The residency information is uesed only for internal reporting but not for the content search.
      * @param value Value to set for the residency property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResidency(@jakarta.annotation.Nullable final String value) {
         this.residency = value;
     }

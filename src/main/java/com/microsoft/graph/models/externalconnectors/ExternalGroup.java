@@ -22,9 +22,7 @@ public class ExternalGroup extends Entity implements Parsable {
     private java.util.List<Identity> members;
     /**
      * Instantiates a new externalGroup and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ExternalGroup() {
         super();
     }
@@ -77,9 +75,7 @@ public class ExternalGroup extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class ExternalGroup extends Entity implements Parsable {
     /**
      * Sets the description property value. The description of the external group. Optional.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The friendly name of the external group. Optional.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the members property value. A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
      * @param value Value to set for the members property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<Identity> value) {
         this.members = value;
     }

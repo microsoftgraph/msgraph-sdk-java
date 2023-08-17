@@ -21,9 +21,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements Pars
     private String identityProviderType;
     /**
      * Instantiates a new socialIdentityProvider and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SocialIdentityProvider() {
         super();
         this.setOdataType("#microsoft.graph.socialIdentityProvider");
@@ -77,9 +75,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class SocialIdentityProvider extends IdentityProviderBase implements Pars
     /**
      * Sets the clientId property value. The identifier for the client application obtained when registering the application with the identity provider. Required.
      * @param value Value to set for the clientId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClientId(@jakarta.annotation.Nullable final String value) {
         this.clientId = value;
     }
     /**
      * Sets the clientSecret property value. The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns . Required.
      * @param value Value to set for the clientSecret property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClientSecret(@jakarta.annotation.Nullable final String value) {
         this.clientSecret = value;
     }
     /**
      * Sets the identityProviderType property value. For a B2B scenario, possible values: Google, Facebook. For a B2C scenario, possible values: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat. Required.
      * @param value Value to set for the identityProviderType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentityProviderType(@jakarta.annotation.Nullable final String value) {
         this.identityProviderType = value;
     }

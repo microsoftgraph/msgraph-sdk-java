@@ -26,9 +26,7 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new userAgent and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserAgent() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -97,9 +95,7 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("applicationVersion", this.getApplicationVersion());
@@ -110,36 +106,28 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the applicationVersion property value. Identifies the version of application software used by this endpoint.
      * @param value Value to set for the applicationVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationVersion(@jakarta.annotation.Nullable final String value) {
         this.applicationVersion = value;
     }
     /**
      * Sets the headerValue property value. User-agent header value reported by this endpoint.
      * @param value Value to set for the headerValue property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHeaderValue(@jakarta.annotation.Nullable final String value) {
         this.headerValue = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

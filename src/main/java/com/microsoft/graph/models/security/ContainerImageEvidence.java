@@ -21,9 +21,7 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     private ContainerRegistryEvidence registry;
     /**
      * Instantiates a new containerImageEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ContainerImageEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.containerImageEvidence");
@@ -77,9 +75,7 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the digestImage property value. The digest image entity, in case this is a tag image.
      * @param value Value to set for the digestImage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDigestImage(@jakarta.annotation.Nullable final ContainerImageEvidence value) {
         this.digestImage = value;
     }
     /**
      * Sets the imageId property value. The unique identifier for the container image entity.
      * @param value Value to set for the imageId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImageId(@jakarta.annotation.Nullable final String value) {
         this.imageId = value;
     }
     /**
      * Sets the registry property value. The container registry for this image.
      * @param value Value to set for the registry property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRegistry(@jakarta.annotation.Nullable final ContainerRegistryEvidence value) {
         this.registry = value;
     }

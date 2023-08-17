@@ -34,9 +34,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
     private String odataType;
     /**
      * Instantiates a new driveItemUploadableProperties and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DriveItemUploadableProperties() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -130,54 +126,42 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the description property value. Provides a user-visible description of the item. Read-write. Only on OneDrive Personal.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the fileSize property value. Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.
      * @param value Value to set for the fileSize property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileSize(@jakarta.annotation.Nullable final Long value) {
         this.fileSize = value;
     }
     /**
      * Sets the fileSystemInfo property value. File system information on client. Read-write.
      * @param value Value to set for the fileSystemInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileSystemInfo(@jakarta.annotation.Nullable final FileSystemInfo value) {
         this.fileSystemInfo = value;
     }
     /**
      * Sets the name property value. The name of the item (filename and extension). Read-write.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

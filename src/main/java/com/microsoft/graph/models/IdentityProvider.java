@@ -25,9 +25,7 @@ public class IdentityProvider extends Entity implements Parsable {
     private String type;
     /**
      * Instantiates a new identityProvider and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IdentityProvider() {
         super();
     }
@@ -89,9 +87,7 @@ public class IdentityProvider extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -103,36 +99,28 @@ public class IdentityProvider extends Entity implements Parsable {
     /**
      * Sets the clientId property value. The client ID for the application. This is the client ID obtained when registering the application with the identity provider. Required. Not nullable.
      * @param value Value to set for the clientId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClientId(@jakarta.annotation.Nullable final String value) {
         this.clientId = value;
     }
     /**
      * Sets the clientSecret property value. The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return .  Required. Not nullable.
      * @param value Value to set for the clientSecret property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClientSecret(@jakarta.annotation.Nullable final String value) {
         this.clientSecret = value;
     }
     /**
      * Sets the name property value. The display name of the identity provider. Not nullable.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the type property value. The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat, OpenIDConnect. Not nullable.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }

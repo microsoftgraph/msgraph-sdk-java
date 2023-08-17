@@ -45,9 +45,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     private Boolean usePreDefinedValuesOnly;
     /**
      * Instantiates a new customSecurityAttributeDefinition and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CustomSecurityAttributeDefinition() {
         super();
     }
@@ -154,9 +152,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -173,81 +169,63 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
     /**
      * Sets the allowedValues property value. Values that are predefined for this custom security attribute. This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
      * @param value Value to set for the allowedValues property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedValues(@jakarta.annotation.Nullable final java.util.List<AllowedValue> value) {
         this.allowedValues = value;
     }
     /**
      * Sets the attributeSet property value. Name of the attribute set. Case insensitive.
      * @param value Value to set for the attributeSet property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttributeSet(@jakarta.annotation.Nullable final String value) {
         this.attributeSet = value;
     }
     /**
      * Sets the description property value. Description of the custom security attribute. Can be up to 128 characters long and include Unicode characters. Can be changed later.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the isCollection property value. Indicates whether multiple values can be assigned to the custom security attribute. Cannot be changed later. If type is set to Boolean, isCollection cannot be set to true.
      * @param value Value to set for the isCollection property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsCollection(@jakarta.annotation.Nullable final Boolean value) {
         this.isCollection = value;
     }
     /**
      * Sets the isSearchable property value. Indicates whether custom security attribute values are indexed for searching on objects that are assigned attribute values. Cannot be changed later.
      * @param value Value to set for the isSearchable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSearchable(@jakarta.annotation.Nullable final Boolean value) {
         this.isSearchable = value;
     }
     /**
      * Sets the name property value. Name of the custom security attribute. Must be unique within an attribute set. Can be up to 32 characters long and include Unicode characters. Cannot contain spaces or special characters. Cannot be changed later. Case insensitive.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the status property value. Specifies whether the custom security attribute is active or deactivated. Acceptable values are: Available and Deprecated. Can be changed later.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final String value) {
         this.status = value;
     }
     /**
      * Sets the type property value. Data type for the custom security attribute values. Supported types are: Boolean, Integer, and String. Cannot be changed later.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
     /**
      * Sets the usePreDefinedValuesOnly property value. Indicates whether only predefined values can be assigned to the custom security attribute. If set to false, free-form values are allowed. Can later be changed from true to false, but cannot be changed from false to true. If type is set to Boolean, usePreDefinedValuesOnly cannot be set to true.
      * @param value Value to set for the usePreDefinedValuesOnly property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUsePreDefinedValuesOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.usePreDefinedValuesOnly = value;
     }

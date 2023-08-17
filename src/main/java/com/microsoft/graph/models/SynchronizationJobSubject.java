@@ -30,9 +30,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
     private String odataType;
     /**
      * Instantiates a new synchronizationJobSubject and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SynchronizationJobSubject() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("links", this.getLinks());
@@ -116,45 +112,35 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the links property value. Principals that you would like to provision.
      * @param value Value to set for the links property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLinks(@jakarta.annotation.Nullable final SynchronizationLinkedObjects value) {
         this.links = value;
     }
     /**
      * Sets the objectId property value. The identifier of an object to which a synchronizationJob is to be applied. Can be one of the following: An onPremisesDistinguishedName for synchronization from Active Directory to Azure AD.The user ID for synchronization from Azure AD to a third-party.The Worker ID of the Workday worker for synchronization from Workday to either Active Directory or Azure AD.
      * @param value Value to set for the objectId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setObjectId(@jakarta.annotation.Nullable final String value) {
         this.objectId = value;
     }
     /**
      * Sets the objectTypeName property value. The type of the object to which a synchronizationJob is to be applied. Can be one of the following: user for synchronizing between Active Directory and Azure AD.User for synchronizing a user between Azure AD and a third-party application. Worker for synchronization a user between Workday and either Active Directory or Azure AD.Group for synchronizing a group between Azure AD and a third-party application.
      * @param value Value to set for the objectTypeName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setObjectTypeName(@jakarta.annotation.Nullable final String value) {
         this.objectTypeName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

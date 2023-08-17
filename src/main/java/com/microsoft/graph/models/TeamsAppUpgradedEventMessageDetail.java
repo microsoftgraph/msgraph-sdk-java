@@ -21,9 +21,7 @@ public class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail imple
     private String teamsAppId;
     /**
      * Instantiates a new teamsAppUpgradedEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamsAppUpgradedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.teamsAppUpgradedEventMessageDetail");
@@ -77,9 +75,7 @@ public class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail imple
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail imple
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
     /**
      * Sets the teamsAppDisplayName property value. Display name of the teamsApp.
      * @param value Value to set for the teamsAppDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamsAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.teamsAppDisplayName = value;
     }
     /**
      * Sets the teamsAppId property value. Unique identifier of the teamsApp.
      * @param value Value to set for the teamsAppId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamsAppId(@jakarta.annotation.Nullable final String value) {
         this.teamsAppId = value;
     }

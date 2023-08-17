@@ -17,9 +17,7 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
     private String regexPattern;
     /**
      * Instantiates a new accessPackageTextInputQuestion and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageTextInputQuestion() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageTextInputQuestion");
@@ -64,9 +62,7 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
     /**
      * Sets the isSingleLineQuestion property value. Indicates whether the answer will be in single or multiple line format.
      * @param value Value to set for the isSingleLineQuestion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSingleLineQuestion(@jakarta.annotation.Nullable final Boolean value) {
         this.isSingleLineQuestion = value;
     }
     /**
      * Sets the regexPattern property value. The regular expression pattern which any answer to this question must match.
      * @param value Value to set for the regexPattern property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRegexPattern(@jakarta.annotation.Nullable final String value) {
         this.regexPattern = value;
     }

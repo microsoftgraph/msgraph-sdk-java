@@ -49,9 +49,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     private String version;
     /**
      * Instantiates a new deviceManagementExchangeConnector and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceManagementExchangeConnector() {
         super();
     }
@@ -158,9 +156,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -177,81 +173,63 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     /**
      * Sets the connectorServerName property value. The name of the server hosting the Exchange Connector.
      * @param value Value to set for the connectorServerName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConnectorServerName(@jakarta.annotation.Nullable final String value) {
         this.connectorServerName = value;
     }
     /**
      * Sets the exchangeAlias property value. An alias assigned to the Exchange server
      * @param value Value to set for the exchangeAlias property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExchangeAlias(@jakarta.annotation.Nullable final String value) {
         this.exchangeAlias = value;
     }
     /**
      * Sets the exchangeConnectorType property value. The type of Exchange Connector.
      * @param value Value to set for the exchangeConnectorType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExchangeConnectorType(@jakarta.annotation.Nullable final DeviceManagementExchangeConnectorType value) {
         this.exchangeConnectorType = value;
     }
     /**
      * Sets the exchangeOrganization property value. Exchange Organization to the Exchange server
      * @param value Value to set for the exchangeOrganization property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExchangeOrganization(@jakarta.annotation.Nullable final String value) {
         this.exchangeOrganization = value;
     }
     /**
      * Sets the lastSyncDateTime property value. Last sync time for the Exchange Connector
      * @param value Value to set for the lastSyncDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSyncDateTime = value;
     }
     /**
      * Sets the primarySmtpAddress property value. Email address used to configure the Service To Service Exchange Connector.
      * @param value Value to set for the primarySmtpAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrimarySmtpAddress(@jakarta.annotation.Nullable final String value) {
         this.primarySmtpAddress = value;
     }
     /**
      * Sets the serverName property value. The name of the Exchange server.
      * @param value Value to set for the serverName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServerName(@jakarta.annotation.Nullable final String value) {
         this.serverName = value;
     }
     /**
      * Sets the status property value. The current status of the Exchange Connector.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final DeviceManagementExchangeConnectorStatus value) {
         this.status = value;
     }
     /**
      * Sets the version property value. The version of the ExchangeConnectorAgent
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }

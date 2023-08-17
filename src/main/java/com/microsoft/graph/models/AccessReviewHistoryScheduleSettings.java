@@ -26,9 +26,7 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
     private String reportRange;
     /**
      * Instantiates a new accessReviewHistoryScheduleSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessReviewHistoryScheduleSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -102,36 +98,28 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the recurrence property value. The recurrence property
      * @param value Value to set for the recurrence property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecurrence(@jakarta.annotation.Nullable final PatternedRecurrence value) {
         this.recurrence = value;
     }
     /**
      * Sets the reportRange property value. A duration string in ISO 8601 duration format specifying the lookback period of the generated review history data. For example, if a history definition is scheduled to run on the 1st of every month, the reportRange is P1M. In this case, on the first of every month, access review history data will be collected containing only the previous month's review data. Note: Only years, months, and days ISO 8601 properties are supported. Required.
      * @param value Value to set for the reportRange property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReportRange(@jakarta.annotation.Nullable final String value) {
         this.reportRange = value;
     }

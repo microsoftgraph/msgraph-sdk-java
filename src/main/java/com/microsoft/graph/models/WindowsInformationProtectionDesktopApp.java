@@ -24,9 +24,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
     private String binaryVersionLow;
     /**
      * Instantiates a new windowsInformationProtectionDesktopApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsInformationProtectionDesktopApp() {
         super();
         this.setOdataType("#microsoft.graph.windowsInformationProtectionDesktopApp");
@@ -80,9 +78,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -93,27 +89,21 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
     /**
      * Sets the binaryName property value. The binary name.
      * @param value Value to set for the binaryName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBinaryName(@jakarta.annotation.Nullable final String value) {
         this.binaryName = value;
     }
     /**
      * Sets the binaryVersionHigh property value. The high binary version.
      * @param value Value to set for the binaryVersionHigh property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBinaryVersionHigh(@jakarta.annotation.Nullable final String value) {
         this.binaryVersionHigh = value;
     }
     /**
      * Sets the binaryVersionLow property value. The lower binary version.
      * @param value Value to set for the binaryVersionLow property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBinaryVersionLow(@jakarta.annotation.Nullable final String value) {
         this.binaryVersionLow = value;
     }

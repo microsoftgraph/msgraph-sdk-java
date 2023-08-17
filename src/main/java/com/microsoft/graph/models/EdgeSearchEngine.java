@@ -16,9 +16,7 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
     private EdgeSearchEngineType edgeSearchEngineType;
     /**
      * Instantiates a new edgeSearchEngine and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EdgeSearchEngine() {
         super();
         this.setOdataType("#microsoft.graph.edgeSearchEngine");
@@ -54,9 +52,7 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -65,9 +61,7 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
     /**
      * Sets the edgeSearchEngineType property value. Allows IT admind to set a predefined default search engine for MDM-Controlled devices
      * @param value Value to set for the edgeSearchEngineType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeSearchEngineType(@jakarta.annotation.Nullable final EdgeSearchEngineType value) {
         this.edgeSearchEngineType = value;
     }

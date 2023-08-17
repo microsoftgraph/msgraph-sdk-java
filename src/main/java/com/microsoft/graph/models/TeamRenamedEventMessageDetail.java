@@ -21,9 +21,7 @@ public class TeamRenamedEventMessageDetail extends EventMessageDetail implements
     private String teamId;
     /**
      * Instantiates a new teamRenamedEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamRenamedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.teamRenamedEventMessageDetail");
@@ -77,9 +75,7 @@ public class TeamRenamedEventMessageDetail extends EventMessageDetail implements
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class TeamRenamedEventMessageDetail extends EventMessageDetail implements
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
     /**
      * Sets the teamDisplayName property value. The updated name of the team.
      * @param value Value to set for the teamDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamDisplayName(@jakarta.annotation.Nullable final String value) {
         this.teamDisplayName = value;
     }
     /**
      * Sets the teamId property value. Unique identifier of the team.
      * @param value Value to set for the teamId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamId(@jakarta.annotation.Nullable final String value) {
         this.teamId = value;
     }

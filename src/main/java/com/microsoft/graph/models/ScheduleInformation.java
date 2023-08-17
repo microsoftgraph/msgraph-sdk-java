@@ -38,9 +38,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
     private WorkingHours workingHours;
     /**
      * Instantiates a new scheduleInformation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ScheduleInformation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +126,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("availabilityView", this.getAvailabilityView());
@@ -144,63 +140,49 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the availabilityView property value. Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere.
      * @param value Value to set for the availabilityView property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAvailabilityView(@jakarta.annotation.Nullable final String value) {
         this.availabilityView = value;
     }
     /**
      * Sets the error property value. Error information from attempting to get the availability of the user, distribution list, or resource.
      * @param value Value to set for the error property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setError(@jakarta.annotation.Nullable final FreeBusyError value) {
         this.error = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the scheduleId property value. An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
      * @param value Value to set for the scheduleId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScheduleId(@jakarta.annotation.Nullable final String value) {
         this.scheduleId = value;
     }
     /**
      * Sets the scheduleItems property value. Contains the items that describe the availability of the user or resource.
      * @param value Value to set for the scheduleItems property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScheduleItems(@jakarta.annotation.Nullable final java.util.List<ScheduleItem> value) {
         this.scheduleItems = value;
     }
     /**
      * Sets the workingHours property value. The days of the week and hours in a specific time zone that the user works. These are set as part of the user's mailboxSettings.
      * @param value Value to set for the workingHours property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkingHours(@jakarta.annotation.Nullable final WorkingHours value) {
         this.workingHours = value;
     }

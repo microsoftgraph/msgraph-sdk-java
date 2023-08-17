@@ -35,9 +35,7 @@ public class Group extends Entity implements Parsable {
     private java.util.List<Set> sets;
     /**
      * Instantiates a new group and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Group() {
         super();
     }
@@ -117,9 +115,7 @@ public class Group extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -133,54 +129,42 @@ public class Group extends Entity implements Parsable {
     /**
      * Sets the createdDateTime property value. Date and time of the group creation. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Description that gives details on the term usage.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Name of the group.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the parentSiteId property value. ID of the parent site of this group.
      * @param value Value to set for the parentSiteId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentSiteId(@jakarta.annotation.Nullable final String value) {
         this.parentSiteId = value;
     }
     /**
      * Sets the scope property value. Returns the type of the group. Possible values are: global, system, and siteCollection.
      * @param value Value to set for the scope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScope(@jakarta.annotation.Nullable final TermGroupScope value) {
         this.scope = value;
     }
     /**
      * Sets the sets property value. All sets under the group in a term [store].
      * @param value Value to set for the sets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSets(@jakarta.annotation.Nullable final java.util.List<Set> value) {
         this.sets = value;
     }

@@ -39,9 +39,7 @@ public class BetaDistPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json x;
     /**
      * Instantiates a new BetaDistPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BetaDistPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -129,9 +127,7 @@ public class BetaDistPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("A", this.getA());
@@ -145,63 +141,49 @@ public class BetaDistPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the A property value. The A property
      * @param value Value to set for the A property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setA(@jakarta.annotation.Nullable final Json value) {
         this.a = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the alpha property value. The alpha property
      * @param value Value to set for the alpha property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlpha(@jakarta.annotation.Nullable final Json value) {
         this.alpha = value;
     }
     /**
      * Sets the B property value. The B property
      * @param value Value to set for the B property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setB(@jakarta.annotation.Nullable final Json value) {
         this.b = value;
     }
     /**
      * Sets the beta property value. The beta property
      * @param value Value to set for the beta property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBeta(@jakarta.annotation.Nullable final Json value) {
         this.beta = value;
     }
     /**
      * Sets the cumulative property value. The cumulative property
      * @param value Value to set for the cumulative property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCumulative(@jakarta.annotation.Nullable final Json value) {
         this.cumulative = value;
     }
     /**
      * Sets the x property value. The x property
      * @param value Value to set for the x property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setX(@jakarta.annotation.Nullable final Json value) {
         this.x = value;
     }

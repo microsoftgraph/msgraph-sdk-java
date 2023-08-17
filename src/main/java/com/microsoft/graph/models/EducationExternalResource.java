@@ -13,9 +13,7 @@ public class EducationExternalResource extends EducationResource implements Pars
     private String webUrl;
     /**
      * Instantiates a new educationExternalResource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationExternalResource() {
         super();
         this.setOdataType("#microsoft.graph.educationExternalResource");
@@ -51,9 +49,7 @@ public class EducationExternalResource extends EducationResource implements Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class EducationExternalResource extends EducationResource implements Pars
     /**
      * Sets the webUrl property value. Location of the resource. Required
      * @param value Value to set for the webUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }

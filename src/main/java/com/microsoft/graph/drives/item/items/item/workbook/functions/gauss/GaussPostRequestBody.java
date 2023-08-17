@@ -19,9 +19,7 @@ public class GaussPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json x;
     /**
      * Instantiates a new gaussPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public GaussPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,9 +62,7 @@ public class GaussPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("x", this.getX());
@@ -75,18 +71,14 @@ public class GaussPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the x property value. The x property
      * @param value Value to set for the x property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setX(@jakarta.annotation.Nullable final Json value) {
         this.x = value;
     }

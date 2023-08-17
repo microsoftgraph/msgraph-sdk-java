@@ -40,9 +40,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
     private TeamVisibilityType visibility;
     /**
      * Instantiates a new clonePostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ClonePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -130,9 +128,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("classification", this.getClassification());
@@ -146,63 +142,49 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the classification property value. The classification property
      * @param value Value to set for the classification property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClassification(@jakarta.annotation.Nullable final String value) {
         this.classification = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the mailNickname property value. The mailNickname property
      * @param value Value to set for the mailNickname property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMailNickname(@jakarta.annotation.Nullable final String value) {
         this.mailNickname = value;
     }
     /**
      * Sets the partsToClone property value. The partsToClone property
      * @param value Value to set for the partsToClone property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPartsToClone(@jakarta.annotation.Nullable final ClonableTeamParts value) {
         this.partsToClone = value;
     }
     /**
      * Sets the visibility property value. The visibility property
      * @param value Value to set for the visibility property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVisibility(@jakarta.annotation.Nullable final TeamVisibilityType value) {
         this.visibility = value;
     }

@@ -34,9 +34,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new rubricLevel and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RubricLevel() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("description", this.getDescription());
@@ -130,54 +126,42 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the description property value. The description of this rubric level.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final EducationItemBody value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The name of this rubric level.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the grading property value. Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric.
      * @param value Value to set for the grading property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGrading(@jakarta.annotation.Nullable final EducationAssignmentGradeType value) {
         this.grading = value;
     }
     /**
      * Sets the levelId property value. The ID of this resource.
      * @param value Value to set for the levelId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLevelId(@jakarta.annotation.Nullable final String value) {
         this.levelId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

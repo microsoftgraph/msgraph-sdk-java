@@ -28,9 +28,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
     private Long size;
     /**
      * Instantiates a new mobileLobApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MobileLobApp() {
         super();
         this.setOdataType("#microsoft.graph.mobileLobApp");
@@ -106,9 +104,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -120,36 +116,28 @@ public class MobileLobApp extends MobileApp implements Parsable {
     /**
      * Sets the committedContentVersion property value. The internal committed content version.
      * @param value Value to set for the committedContentVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCommittedContentVersion(@jakarta.annotation.Nullable final String value) {
         this.committedContentVersion = value;
     }
     /**
      * Sets the contentVersions property value. The list of content versions for this app.
      * @param value Value to set for the contentVersions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentVersions(@jakarta.annotation.Nullable final java.util.List<MobileAppContent> value) {
         this.contentVersions = value;
     }
     /**
      * Sets the fileName property value. The name of the main Lob application file.
      * @param value Value to set for the fileName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileName(@jakarta.annotation.Nullable final String value) {
         this.fileName = value;
     }
     /**
      * Sets the size property value. The total size, including all uploaded files.
      * @param value Value to set for the size property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSize(@jakarta.annotation.Nullable final Long value) {
         this.size = value;
     }

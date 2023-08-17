@@ -17,9 +17,7 @@ public class PlannerUser extends Entity implements Parsable {
     private java.util.List<PlannerTask> tasks;
     /**
      * Instantiates a new plannerUser and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PlannerUser() {
         super();
     }
@@ -63,9 +61,7 @@ public class PlannerUser extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +71,14 @@ public class PlannerUser extends Entity implements Parsable {
     /**
      * Sets the plans property value. Read-only. Nullable. Returns the plannerTasks assigned to the user.
      * @param value Value to set for the plans property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPlans(@jakarta.annotation.Nullable final java.util.List<PlannerPlan> value) {
         this.plans = value;
     }
     /**
      * Sets the tasks property value. Read-only. Nullable. Returns the plannerPlans shared with the user.
      * @param value Value to set for the tasks property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<PlannerTask> value) {
         this.tasks = value;
     }

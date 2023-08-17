@@ -31,9 +31,7 @@ public class AlertComment implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new alertComment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AlertComment() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,9 +101,7 @@ public class AlertComment implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("comment", this.getComment());
@@ -117,45 +113,35 @@ public class AlertComment implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the comment property value. The comment text.
      * @param value Value to set for the comment property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComment(@jakarta.annotation.Nullable final String value) {
         this.comment = value;
     }
     /**
      * Sets the createdByDisplayName property value. The person or app name that submitted the comment.
      * @param value Value to set for the createdByDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedByDisplayName(@jakarta.annotation.Nullable final String value) {
         this.createdByDisplayName = value;
     }
     /**
      * Sets the createdDateTime property value. The time when the comment was submitted.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

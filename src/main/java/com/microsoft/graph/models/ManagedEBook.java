@@ -65,9 +65,7 @@ public class ManagedEBook extends Entity implements Parsable {
     private java.util.List<UserInstallStateSummary> userStateSummary;
     /**
      * Instantiates a new managedEBook and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ManagedEBook() {
         super();
     }
@@ -217,9 +215,7 @@ public class ManagedEBook extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -240,117 +236,91 @@ public class ManagedEBook extends Entity implements Parsable {
     /**
      * Sets the assignments property value. The list of assignments for this eBook.
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<ManagedEBookAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the eBook file was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Description.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the deviceStates property value. The list of installation states for this eBook.
      * @param value Value to set for the deviceStates property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceStates(@jakarta.annotation.Nullable final java.util.List<DeviceInstallState> value) {
         this.deviceStates = value;
     }
     /**
      * Sets the displayName property value. Name of the eBook.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the informationUrl property value. The more information Url.
      * @param value Value to set for the informationUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInformationUrl(@jakarta.annotation.Nullable final String value) {
         this.informationUrl = value;
     }
     /**
      * Sets the installSummary property value. Mobile App Install Summary.
      * @param value Value to set for the installSummary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstallSummary(@jakarta.annotation.Nullable final EBookInstallSummary value) {
         this.installSummary = value;
     }
     /**
      * Sets the largeCover property value. Book cover.
      * @param value Value to set for the largeCover property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLargeCover(@jakarta.annotation.Nullable final MimeContent value) {
         this.largeCover = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the eBook was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the privacyInformationUrl property value. The privacy statement Url.
      * @param value Value to set for the privacyInformationUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrivacyInformationUrl(@jakarta.annotation.Nullable final String value) {
         this.privacyInformationUrl = value;
     }
     /**
      * Sets the publishedDateTime property value. The date and time when the eBook was published.
      * @param value Value to set for the publishedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublishedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.publishedDateTime = value;
     }
     /**
      * Sets the publisher property value. Publisher.
      * @param value Value to set for the publisher property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.publisher = value;
     }
     /**
      * Sets the userStateSummary property value. The list of installation states for this eBook.
      * @param value Value to set for the userStateSummary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserStateSummary(@jakarta.annotation.Nullable final java.util.List<UserInstallStateSummary> value) {
         this.userStateSummary = value;
     }

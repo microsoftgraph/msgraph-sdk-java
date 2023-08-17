@@ -20,9 +20,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
     private String value;
     /**
      * Instantiates a new omaSettingBase64 and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OmaSettingBase64() {
         super();
         this.setOdataType("#microsoft.graph.omaSettingBase64");
@@ -67,9 +65,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -79,18 +75,14 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
     /**
      * Sets the fileName property value. File name associated with the Value property (.cer
      * @param value Value to set for the fileName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileName(@jakarta.annotation.Nullable final String value) {
         this.fileName = value;
     }
     /**
      * Sets the value property value. Value. (Base64 encoded string)
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }

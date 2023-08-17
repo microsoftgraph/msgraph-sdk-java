@@ -15,9 +15,7 @@ public class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdR
     private java.util.List<AccessPackageAssignment> value;
     /**
      * Instantiates a new additionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdResponse and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdResponse() {
         super();
     }
@@ -52,9 +50,7 @@ public class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdR
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,9 +59,7 @@ public class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdR
     /**
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignment> value) {
         this.value = value;
     }

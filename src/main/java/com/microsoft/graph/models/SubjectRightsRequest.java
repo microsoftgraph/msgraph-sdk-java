@@ -86,9 +86,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     private SubjectRightsRequestType type;
     /**
      * Instantiates a new subjectRightsRequest and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SubjectRightsRequest() {
         super();
     }
@@ -285,9 +283,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -314,171 +310,133 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     /**
      * Sets the assignedTo property value. Identity that the request is assigned to.
      * @param value Value to set for the assignedTo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignedTo(@jakarta.annotation.Nullable final Identity value) {
         this.assignedTo = value;
     }
     /**
      * Sets the closedDateTime property value. The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the closedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClosedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.closedDateTime = value;
     }
     /**
      * Sets the createdBy property value. Identity information for the entity that created the request.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the dataSubject property value. Information about the data subject.
      * @param value Value to set for the dataSubject property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDataSubject(@jakarta.annotation.Nullable final DataSubject value) {
         this.dataSubject = value;
     }
     /**
      * Sets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
      * @param value Value to set for the dataSubjectType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDataSubjectType(@jakarta.annotation.Nullable final DataSubjectType value) {
         this.dataSubjectType = value;
     }
     /**
      * Sets the description property value. Description for the request.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the request.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the history property value. Collection of history change events.
      * @param value Value to set for the history property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHistory(@jakarta.annotation.Nullable final java.util.List<SubjectRightsRequestHistory> value) {
         this.history = value;
     }
     /**
      * Sets the insight property value. Insight about the request.
      * @param value Value to set for the insight property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInsight(@jakarta.annotation.Nullable final SubjectRightsRequestDetail value) {
         this.insight = value;
     }
     /**
      * Sets the internalDueDateTime property value. The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the internalDueDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInternalDueDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.internalDueDateTime = value;
     }
     /**
      * Sets the lastModifiedBy property value. Identity information for the entity that last modified the request.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the notes property value. List of notes associcated with the request.
      * @param value Value to set for the notes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotes(@jakarta.annotation.Nullable final java.util.List<AuthoredNote> value) {
         this.notes = value;
     }
     /**
      * Sets the regulations property value. List of regulations that this request will fulfill.
      * @param value Value to set for the regulations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRegulations(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.regulations = value;
     }
     /**
      * Sets the stages property value. Information about the different stages for the request.
      * @param value Value to set for the stages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStages(@jakarta.annotation.Nullable final java.util.List<SubjectRightsRequestStageDetail> value) {
         this.stages = value;
     }
     /**
      * Sets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final SubjectRightsRequestStatus value) {
         this.status = value;
     }
     /**
      * Sets the team property value. Information about the Microsoft Teams team that was created for the request.
      * @param value Value to set for the team property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeam(@jakarta.annotation.Nullable final Team value) {
         this.team = value;
     }
     /**
      * Sets the type property value. The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final SubjectRightsRequestType value) {
         this.type = value;
     }

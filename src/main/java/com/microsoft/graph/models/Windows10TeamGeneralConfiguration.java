@@ -93,9 +93,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     private WelcomeScreenMeetingInformation welcomeScreenMeetingInformation;
     /**
      * Instantiates a new windows10TeamGeneralConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Windows10TeamGeneralConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10TeamGeneralConfiguration");
@@ -302,9 +300,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -332,180 +328,140 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     /**
      * Sets the azureOperationalInsightsBlockTelemetry property value. Indicates whether or not to Block Azure Operational Insights.
      * @param value Value to set for the azureOperationalInsightsBlockTelemetry property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAzureOperationalInsightsBlockTelemetry(@jakarta.annotation.Nullable final Boolean value) {
         this.azureOperationalInsightsBlockTelemetry = value;
     }
     /**
      * Sets the azureOperationalInsightsWorkspaceId property value. The Azure Operational Insights workspace id.
      * @param value Value to set for the azureOperationalInsightsWorkspaceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAzureOperationalInsightsWorkspaceId(@jakarta.annotation.Nullable final String value) {
         this.azureOperationalInsightsWorkspaceId = value;
     }
     /**
      * Sets the azureOperationalInsightsWorkspaceKey property value. The Azure Operational Insights Workspace key.
      * @param value Value to set for the azureOperationalInsightsWorkspaceKey property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAzureOperationalInsightsWorkspaceKey(@jakarta.annotation.Nullable final String value) {
         this.azureOperationalInsightsWorkspaceKey = value;
     }
     /**
      * Sets the connectAppBlockAutoLaunch property value. Specifies whether to automatically launch the Connect app whenever a projection is initiated.
      * @param value Value to set for the connectAppBlockAutoLaunch property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConnectAppBlockAutoLaunch(@jakarta.annotation.Nullable final Boolean value) {
         this.connectAppBlockAutoLaunch = value;
     }
     /**
      * Sets the maintenanceWindowBlocked property value. Indicates whether or not to Block setting a maintenance window for device updates.
      * @param value Value to set for the maintenanceWindowBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaintenanceWindowBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.maintenanceWindowBlocked = value;
     }
     /**
      * Sets the maintenanceWindowDurationInHours property value. Maintenance window duration for device updates. Valid values 0 to 5
      * @param value Value to set for the maintenanceWindowDurationInHours property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaintenanceWindowDurationInHours(@jakarta.annotation.Nullable final Integer value) {
         this.maintenanceWindowDurationInHours = value;
     }
     /**
      * Sets the maintenanceWindowStartTime property value. Maintenance window start time for device updates.
      * @param value Value to set for the maintenanceWindowStartTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaintenanceWindowStartTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.maintenanceWindowStartTime = value;
     }
     /**
      * Sets the miracastBlocked property value. Indicates whether or not to Block wireless projection.
      * @param value Value to set for the miracastBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMiracastBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.miracastBlocked = value;
     }
     /**
      * Sets the miracastChannel property value. Possible values for Miracast channel.
      * @param value Value to set for the miracastChannel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMiracastChannel(@jakarta.annotation.Nullable final MiracastChannel value) {
         this.miracastChannel = value;
     }
     /**
      * Sets the miracastRequirePin property value. Indicates whether or not to require a pin for wireless projection.
      * @param value Value to set for the miracastRequirePin property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMiracastRequirePin(@jakarta.annotation.Nullable final Boolean value) {
         this.miracastRequirePin = value;
     }
     /**
      * Sets the settingsBlockMyMeetingsAndFiles property value. Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
      * @param value Value to set for the settingsBlockMyMeetingsAndFiles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockMyMeetingsAndFiles(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockMyMeetingsAndFiles = value;
     }
     /**
      * Sets the settingsBlockSessionResume property value. Specifies whether to allow the ability to resume a session when the session times out.
      * @param value Value to set for the settingsBlockSessionResume property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockSessionResume(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockSessionResume = value;
     }
     /**
      * Sets the settingsBlockSigninSuggestions property value. Specifies whether to disable auto-populating of the sign-in dialog with invitees from scheduled meetings.
      * @param value Value to set for the settingsBlockSigninSuggestions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockSigninSuggestions(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockSigninSuggestions = value;
     }
     /**
      * Sets the settingsDefaultVolume property value. Specifies the default volume value for a new session. Permitted values are 0-100. The default is 45. Valid values 0 to 100
      * @param value Value to set for the settingsDefaultVolume property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsDefaultVolume(@jakarta.annotation.Nullable final Integer value) {
         this.settingsDefaultVolume = value;
     }
     /**
      * Sets the settingsScreenTimeoutInMinutes property value. Specifies the number of minutes until the Hub screen turns off.
      * @param value Value to set for the settingsScreenTimeoutInMinutes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsScreenTimeoutInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.settingsScreenTimeoutInMinutes = value;
     }
     /**
      * Sets the settingsSessionTimeoutInMinutes property value. Specifies the number of minutes until the session times out.
      * @param value Value to set for the settingsSessionTimeoutInMinutes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsSessionTimeoutInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.settingsSessionTimeoutInMinutes = value;
     }
     /**
      * Sets the settingsSleepTimeoutInMinutes property value. Specifies the number of minutes until the Hub enters sleep mode.
      * @param value Value to set for the settingsSleepTimeoutInMinutes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsSleepTimeoutInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.settingsSleepTimeoutInMinutes = value;
     }
     /**
      * Sets the welcomeScreenBackgroundImageUrl property value. The welcome screen background image URL. The URL must use the HTTPS protocol and return a PNG image.
      * @param value Value to set for the welcomeScreenBackgroundImageUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWelcomeScreenBackgroundImageUrl(@jakarta.annotation.Nullable final String value) {
         this.welcomeScreenBackgroundImageUrl = value;
     }
     /**
      * Sets the welcomeScreenBlockAutomaticWakeUp property value. Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
      * @param value Value to set for the welcomeScreenBlockAutomaticWakeUp property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWelcomeScreenBlockAutomaticWakeUp(@jakarta.annotation.Nullable final Boolean value) {
         this.welcomeScreenBlockAutomaticWakeUp = value;
     }
     /**
      * Sets the welcomeScreenMeetingInformation property value. Possible values for welcome screen meeting information.
      * @param value Value to set for the welcomeScreenMeetingInformation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWelcomeScreenMeetingInformation(@jakarta.annotation.Nullable final WelcomeScreenMeetingInformation value) {
         this.welcomeScreenMeetingInformation = value;
     }

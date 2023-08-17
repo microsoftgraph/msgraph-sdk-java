@@ -59,9 +59,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     private UUID participantId;
     /**
      * Instantiates a new teleconferenceDeviceQuality and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeleconferenceDeviceQuality() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -194,9 +192,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeUUIDValue("callChainId", this.getCallChainId());
@@ -215,108 +211,84 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the callChainId property value. A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId.
      * @param value Value to set for the callChainId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallChainId(@jakarta.annotation.Nullable final UUID value) {
         this.callChainId = value;
     }
     /**
      * Sets the cloudServiceDeploymentEnvironment property value. A geo-region where the service is deployed, such as ProdNoam.
      * @param value Value to set for the cloudServiceDeploymentEnvironment property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudServiceDeploymentEnvironment(@jakarta.annotation.Nullable final String value) {
         this.cloudServiceDeploymentEnvironment = value;
     }
     /**
      * Sets the cloudServiceDeploymentId property value. A unique deployment identifier assigned by Azure.
      * @param value Value to set for the cloudServiceDeploymentId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudServiceDeploymentId(@jakarta.annotation.Nullable final String value) {
         this.cloudServiceDeploymentId = value;
     }
     /**
      * Sets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEndIN3.
      * @param value Value to set for the cloudServiceInstanceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudServiceInstanceName(@jakarta.annotation.Nullable final String value) {
         this.cloudServiceInstanceName = value;
     }
     /**
      * Sets the cloudServiceName property value. The Azure deployed cloud service name, such as contoso.cloudapp.net.
      * @param value Value to set for the cloudServiceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudServiceName(@jakarta.annotation.Nullable final String value) {
         this.cloudServiceName = value;
     }
     /**
      * Sets the deviceDescription property value. Any additional description, such as VTC Bldg 30/21.
      * @param value Value to set for the deviceDescription property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceDescription(@jakarta.annotation.Nullable final String value) {
         this.deviceDescription = value;
     }
     /**
      * Sets the deviceName property value. The user media agent name, such as Cisco SX80.
      * @param value Value to set for the deviceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
      * Sets the mediaLegId property value. A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
      * @param value Value to set for the mediaLegId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMediaLegId(@jakarta.annotation.Nullable final UUID value) {
         this.mediaLegId = value;
     }
     /**
      * Sets the mediaQualityList property value. The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.
      * @param value Value to set for the mediaQualityList property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMediaQualityList(@jakarta.annotation.Nullable final java.util.List<TeleconferenceDeviceMediaQuality> value) {
         this.mediaQualityList = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the participantId property value. A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
      * @param value Value to set for the participantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParticipantId(@jakarta.annotation.Nullable final UUID value) {
         this.participantId = value;
     }

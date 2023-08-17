@@ -50,9 +50,7 @@ public class ItemActivityStat extends Entity implements Parsable {
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new itemActivityStat and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ItemActivityStat() {
         super();
     }
@@ -168,9 +166,7 @@ public class ItemActivityStat extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -188,90 +184,70 @@ public class ItemActivityStat extends Entity implements Parsable {
     /**
      * Sets the access property value. Statistics about the access actions in this interval. Read-only.
      * @param value Value to set for the access property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccess(@jakarta.annotation.Nullable final ItemActionStat value) {
         this.access = value;
     }
     /**
      * Sets the activities property value. Exposes the itemActivities represented in this itemActivityStat resource.
      * @param value Value to set for the activities property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivities(@jakarta.annotation.Nullable final java.util.List<ItemActivity> value) {
         this.activities = value;
     }
     /**
      * Sets the create property value. Statistics about the create actions in this interval. Read-only.
      * @param value Value to set for the create property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreate(@jakarta.annotation.Nullable final ItemActionStat value) {
         this.create = value;
     }
     /**
      * Sets the delete property value. Statistics about the delete actions in this interval. Read-only.
      * @param value Value to set for the delete property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDelete(@jakarta.annotation.Nullable final ItemActionStat value) {
         this.delete = value;
     }
     /**
      * Sets the edit property value. Statistics about the edit actions in this interval. Read-only.
      * @param value Value to set for the edit property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdit(@jakarta.annotation.Nullable final ItemActionStat value) {
         this.edit = value;
     }
     /**
      * Sets the endDateTime property value. When the interval ends. Read-only.
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
      * Sets the incompleteData property value. Indicates that the statistics in this interval are based on incomplete data. Read-only.
      * @param value Value to set for the incompleteData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncompleteData(@jakarta.annotation.Nullable final IncompleteData value) {
         this.incompleteData = value;
     }
     /**
      * Sets the isTrending property value. Indicates whether the item is 'trending.' Read-only.
      * @param value Value to set for the isTrending property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsTrending(@jakarta.annotation.Nullable final Boolean value) {
         this.isTrending = value;
     }
     /**
      * Sets the move property value. Statistics about the move actions in this interval. Read-only.
      * @param value Value to set for the move property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMove(@jakarta.annotation.Nullable final ItemActionStat value) {
         this.move = value;
     }
     /**
      * Sets the startDateTime property value. When the interval starts. Read-only.
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }

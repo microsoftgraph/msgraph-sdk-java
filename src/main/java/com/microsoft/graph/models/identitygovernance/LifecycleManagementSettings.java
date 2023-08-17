@@ -19,9 +19,7 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
     private Integer workflowScheduleIntervalInHours;
     /**
      * Instantiates a new lifecycleManagementSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LifecycleManagementSettings() {
         super();
     }
@@ -65,9 +63,7 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -77,18 +73,14 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
     /**
      * Sets the emailSettings property value. The emailSettings property
      * @param value Value to set for the emailSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmailSettings(@jakarta.annotation.Nullable final EmailSettings value) {
         this.emailSettings = value;
     }
     /**
      * Sets the workflowScheduleIntervalInHours property value. The interval in hours at which all workflows running in the tenant should be scheduled for execution. This interval has a minimum value of 1 and a maximum value of 24. The default value is 3 hours.
      * @param value Value to set for the workflowScheduleIntervalInHours property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkflowScheduleIntervalInHours(@jakarta.annotation.Nullable final Integer value) {
         this.workflowScheduleIntervalInHours = value;
     }

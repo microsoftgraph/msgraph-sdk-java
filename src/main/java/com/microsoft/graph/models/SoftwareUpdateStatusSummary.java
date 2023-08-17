@@ -69,9 +69,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     private Integer unknownUserCount;
     /**
      * Instantiates a new softwareUpdateStatusSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SoftwareUpdateStatusSummary() {
         super();
     }
@@ -232,9 +230,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -257,135 +253,105 @@ public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
     /**
      * Sets the compliantDeviceCount property value. Number of compliant devices.
      * @param value Value to set for the compliantDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.compliantDeviceCount = value;
     }
     /**
      * Sets the compliantUserCount property value. Number of compliant users.
      * @param value Value to set for the compliantUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompliantUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.compliantUserCount = value;
     }
     /**
      * Sets the conflictDeviceCount property value. Number of conflict devices.
      * @param value Value to set for the conflictDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConflictDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.conflictDeviceCount = value;
     }
     /**
      * Sets the conflictUserCount property value. Number of conflict users.
      * @param value Value to set for the conflictUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConflictUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.conflictUserCount = value;
     }
     /**
      * Sets the displayName property value. The name of the policy.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the errorDeviceCount property value. Number of devices had error.
      * @param value Value to set for the errorDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setErrorDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.errorDeviceCount = value;
     }
     /**
      * Sets the errorUserCount property value. Number of users had error.
      * @param value Value to set for the errorUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setErrorUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.errorUserCount = value;
     }
     /**
      * Sets the nonCompliantDeviceCount property value. Number of non compliant devices.
      * @param value Value to set for the nonCompliantDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNonCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.nonCompliantDeviceCount = value;
     }
     /**
      * Sets the nonCompliantUserCount property value. Number of non compliant users.
      * @param value Value to set for the nonCompliantUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNonCompliantUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.nonCompliantUserCount = value;
     }
     /**
      * Sets the notApplicableDeviceCount property value. Number of not applicable devices.
      * @param value Value to set for the notApplicableDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotApplicableDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.notApplicableDeviceCount = value;
     }
     /**
      * Sets the notApplicableUserCount property value. Number of not applicable users.
      * @param value Value to set for the notApplicableUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotApplicableUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.notApplicableUserCount = value;
     }
     /**
      * Sets the remediatedDeviceCount property value. Number of remediated devices.
      * @param value Value to set for the remediatedDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRemediatedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.remediatedDeviceCount = value;
     }
     /**
      * Sets the remediatedUserCount property value. Number of remediated users.
      * @param value Value to set for the remediatedUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRemediatedUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.remediatedUserCount = value;
     }
     /**
      * Sets the unknownDeviceCount property value. Number of unknown devices.
      * @param value Value to set for the unknownDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnknownDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.unknownDeviceCount = value;
     }
     /**
      * Sets the unknownUserCount property value. Number of unknown users.
      * @param value Value to set for the unknownUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnknownUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.unknownUserCount = value;
     }

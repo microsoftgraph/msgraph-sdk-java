@@ -49,9 +49,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     private String upgradeCode;
     /**
      * Instantiates a new win32LobAppMsiInformation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Win32LobAppMsiInformation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -157,9 +155,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -175,81 +171,63 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the packageType property value. Indicates the package type of an MSI Win32LobApp.
      * @param value Value to set for the packageType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPackageType(@jakarta.annotation.Nullable final Win32LobAppMsiPackageType value) {
         this.packageType = value;
     }
     /**
      * Sets the productCode property value. The MSI product code.
      * @param value Value to set for the productCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProductCode(@jakarta.annotation.Nullable final String value) {
         this.productCode = value;
     }
     /**
      * Sets the productName property value. The MSI product name.
      * @param value Value to set for the productName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProductName(@jakarta.annotation.Nullable final String value) {
         this.productName = value;
     }
     /**
      * Sets the productVersion property value. The MSI product version.
      * @param value Value to set for the productVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProductVersion(@jakarta.annotation.Nullable final String value) {
         this.productVersion = value;
     }
     /**
      * Sets the publisher property value. The MSI publisher.
      * @param value Value to set for the publisher property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.publisher = value;
     }
     /**
      * Sets the requiresReboot property value. Whether the MSI app requires the machine to reboot to complete installation.
      * @param value Value to set for the requiresReboot property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRequiresReboot(@jakarta.annotation.Nullable final Boolean value) {
         this.requiresReboot = value;
     }
     /**
      * Sets the upgradeCode property value. The MSI upgrade code.
      * @param value Value to set for the upgradeCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUpgradeCode(@jakarta.annotation.Nullable final String value) {
         this.upgradeCode = value;
     }

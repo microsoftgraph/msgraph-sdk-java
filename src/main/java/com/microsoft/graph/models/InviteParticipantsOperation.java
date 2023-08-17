@@ -13,9 +13,7 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
     private java.util.List<InvitationParticipantInfo> participants;
     /**
      * Instantiates a new inviteParticipantsOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public InviteParticipantsOperation() {
         super();
     }
@@ -50,9 +48,7 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +57,7 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
     /**
      * Sets the participants property value. The participants to invite.
      * @param value Value to set for the participants property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParticipants(@jakarta.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
         this.participants = value;
     }

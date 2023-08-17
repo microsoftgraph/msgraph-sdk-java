@@ -14,9 +14,7 @@ public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel imple
     private OffsetDateTime createdDateTime;
     /**
      * Instantiates a new onenoteEntitySchemaObjectModel and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OnenoteEntitySchemaObjectModel() {
         super();
         this.setOdataType("#microsoft.graph.onenoteEntitySchemaObjectModel");
@@ -63,9 +61,7 @@ public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel imple
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,9 +70,7 @@ public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel imple
     /**
      * Sets the createdDateTime property value. The date and time when the page was created. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }

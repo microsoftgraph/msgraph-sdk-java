@@ -38,9 +38,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     private ContactRelationship relationship;
     /**
      * Instantiates a new relatedContact and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RelatedContact() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +126,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("accessConsent", this.getAccessConsent());
@@ -144,63 +140,49 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     /**
      * Sets the accessConsent property value. Indicates whether the user has been consented to access student data.
      * @param value Value to set for the accessConsent property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccessConsent(@jakarta.annotation.Nullable final Boolean value) {
         this.accessConsent = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the displayName property value. Name of the contact. Required.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the emailAddress property value. Primary email address of the contact. Required.
      * @param value Value to set for the emailAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.emailAddress = value;
     }
     /**
      * Sets the mobilePhone property value. Mobile phone number of the contact.
      * @param value Value to set for the mobilePhone property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMobilePhone(@jakarta.annotation.Nullable final String value) {
         this.mobilePhone = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the relationship property value. The relationship property
      * @param value Value to set for the relationship property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRelationship(@jakarta.annotation.Nullable final ContactRelationship value) {
         this.relationship = value;
     }

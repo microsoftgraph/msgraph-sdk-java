@@ -34,9 +34,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
     private IncludedUserTypes userTypes;
     /**
      * Instantiates a new userRegistrationFeatureSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserRegistrationFeatureSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -130,54 +126,42 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the totalUserCount property value. Total number of users accounts, excluding those that are blocked.
      * @param value Value to set for the totalUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalUserCount(@jakarta.annotation.Nullable final Long value) {
         this.totalUserCount = value;
     }
     /**
      * Sets the userRegistrationFeatureCounts property value. Number of users registered or capable for multi-factor authentication, self-service password reset, and passwordless authentication.
      * @param value Value to set for the userRegistrationFeatureCounts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserRegistrationFeatureCounts(@jakarta.annotation.Nullable final java.util.List<UserRegistrationFeatureCount> value) {
         this.userRegistrationFeatureCounts = value;
     }
     /**
      * Sets the userRoles property value. The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
      * @param value Value to set for the userRoles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserRoles(@jakarta.annotation.Nullable final IncludedUserRoles value) {
         this.userRoles = value;
     }
     /**
      * Sets the userTypes property value. User type. Possible values are: all, member, guest, unknownFutureValue.
      * @param value Value to set for the userTypes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserTypes(@jakarta.annotation.Nullable final IncludedUserTypes value) {
         this.userTypes = value;
     }

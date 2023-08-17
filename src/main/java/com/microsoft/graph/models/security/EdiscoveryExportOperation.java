@@ -37,9 +37,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
     private EdiscoveryReviewSetQuery reviewSetQuery;
     /**
      * Instantiates a new ediscoveryExportOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EdiscoveryExportOperation() {
         super();
     }
@@ -128,9 +126,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -145,63 +141,49 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
     /**
      * Sets the description property value. The description provided for the export.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the exportFileMetadata property value. The exportFileMetadata property
      * @param value Value to set for the exportFileMetadata property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExportFileMetadata(@jakarta.annotation.Nullable final java.util.List<ExportFileMetadata> value) {
         this.exportFileMetadata = value;
     }
     /**
      * Sets the exportOptions property value. The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement,  tags.
      * @param value Value to set for the exportOptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExportOptions(@jakarta.annotation.Nullable final ExportOptions value) {
         this.exportOptions = value;
     }
     /**
      * Sets the exportStructure property value. The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
      * @param value Value to set for the exportStructure property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExportStructure(@jakarta.annotation.Nullable final ExportFileStructure value) {
         this.exportStructure = value;
     }
     /**
      * Sets the outputName property value. The name provided for the export.
      * @param value Value to set for the outputName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOutputName(@jakarta.annotation.Nullable final String value) {
         this.outputName = value;
     }
     /**
      * Sets the reviewSet property value. Review set from where documents are exported.
      * @param value Value to set for the reviewSet property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReviewSet(@jakarta.annotation.Nullable final EdiscoveryReviewSet value) {
         this.reviewSet = value;
     }
     /**
      * Sets the reviewSetQuery property value. The review set query which is used to filter the documents for export.
      * @param value Value to set for the reviewSetQuery property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReviewSetQuery(@jakarta.annotation.Nullable final EdiscoveryReviewSetQuery value) {
         this.reviewSetQuery = value;
     }

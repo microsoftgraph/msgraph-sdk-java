@@ -26,9 +26,7 @@ public class CalendarGroup extends Entity implements Parsable {
     private String name;
     /**
      * Instantiates a new calendarGroup and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CalendarGroup() {
         super();
     }
@@ -90,9 +88,7 @@ public class CalendarGroup extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +100,28 @@ public class CalendarGroup extends Entity implements Parsable {
     /**
      * Sets the calendars property value. The calendars in the calendar group. Navigation property. Read-only. Nullable.
      * @param value Value to set for the calendars property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCalendars(@jakarta.annotation.Nullable final java.util.List<Calendar> value) {
         this.calendars = value;
     }
     /**
      * Sets the changeKey property value. Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
      * @param value Value to set for the changeKey property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChangeKey(@jakarta.annotation.Nullable final String value) {
         this.changeKey = value;
     }
     /**
      * Sets the classId property value. The class identifier. Read-only.
      * @param value Value to set for the classId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClassId(@jakarta.annotation.Nullable final UUID value) {
         this.classId = value;
     }
     /**
      * Sets the name property value. The group name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }

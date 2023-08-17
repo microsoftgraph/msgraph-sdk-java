@@ -50,9 +50,7 @@ public class SubscribedSku extends Entity implements Parsable {
     private java.util.List<String> subscriptionIds;
     /**
      * Instantiates a new subscribedSku and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SubscribedSku() {
         super();
     }
@@ -168,9 +166,7 @@ public class SubscribedSku extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -188,90 +184,70 @@ public class SubscribedSku extends Entity implements Parsable {
     /**
      * Sets the accountId property value. The unique ID of the account this SKU belongs to.
      * @param value Value to set for the accountId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccountId(@jakarta.annotation.Nullable final String value) {
         this.accountId = value;
     }
     /**
      * Sets the accountName property value. The name of the account this SKU belongs to.
      * @param value Value to set for the accountName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccountName(@jakarta.annotation.Nullable final String value) {
         this.accountName = value;
     }
     /**
      * Sets the appliesTo property value. The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: 'User', 'Company'.
      * @param value Value to set for the appliesTo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppliesTo(@jakarta.annotation.Nullable final String value) {
         this.appliesTo = value;
     }
     /**
      * Sets the capabilityStatus property value. Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer cancelled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
      * @param value Value to set for the capabilityStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCapabilityStatus(@jakarta.annotation.Nullable final String value) {
         this.capabilityStatus = value;
     }
     /**
      * Sets the consumedUnits property value. The number of licenses that have been assigned.
      * @param value Value to set for the consumedUnits property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConsumedUnits(@jakarta.annotation.Nullable final Integer value) {
         this.consumedUnits = value;
     }
     /**
      * Sets the prepaidUnits property value. Information about the number and status of prepaid licenses.
      * @param value Value to set for the prepaidUnits property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrepaidUnits(@jakarta.annotation.Nullable final LicenseUnitsDetail value) {
         this.prepaidUnits = value;
     }
     /**
      * Sets the servicePlans property value. Information about the service plans that are available with the SKU. Not nullable.
      * @param value Value to set for the servicePlans property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServicePlans(@jakarta.annotation.Nullable final java.util.List<ServicePlanInfo> value) {
         this.servicePlans = value;
     }
     /**
      * Sets the skuId property value. The unique identifier (GUID) for the service SKU.
      * @param value Value to set for the skuId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSkuId(@jakarta.annotation.Nullable final UUID value) {
         this.skuId = value;
     }
     /**
      * Sets the skuPartNumber property value. The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
      * @param value Value to set for the skuPartNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSkuPartNumber(@jakarta.annotation.Nullable final String value) {
         this.skuPartNumber = value;
     }
     /**
      * Sets the subscriptionIds property value. The subscriptionIds property
      * @param value Value to set for the subscriptionIds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubscriptionIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.subscriptionIds = value;
     }

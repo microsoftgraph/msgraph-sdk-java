@@ -37,9 +37,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     private AccessPackageSubjectType subjectType;
     /**
      * Instantiates a new accessPackageSubject and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageSubject() {
         super();
     }
@@ -128,9 +126,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -145,63 +141,49 @@ public class AccessPackageSubject extends Entity implements Parsable {
     /**
      * Sets the connectedOrganization property value. The connected organization of the subject. Read-only. Nullable.
      * @param value Value to set for the connectedOrganization property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConnectedOrganization(@jakarta.annotation.Nullable final ConnectedOrganization value) {
         this.connectedOrganization = value;
     }
     /**
      * Sets the displayName property value. The display name of the subject.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the email property value. The email address of the subject.
      * @param value Value to set for the email property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
      * Sets the objectId property value. The object identifier of the subject. null if the subject is not yet a user in the tenant.
      * @param value Value to set for the objectId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setObjectId(@jakarta.annotation.Nullable final String value) {
         this.objectId = value;
     }
     /**
      * Sets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
      * @param value Value to set for the onPremisesSecurityIdentifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnPremisesSecurityIdentifier(@jakarta.annotation.Nullable final String value) {
         this.onPremisesSecurityIdentifier = value;
     }
     /**
      * Sets the principalName property value. The principal name, if known, of the subject.
      * @param value Value to set for the principalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.principalName = value;
     }
     /**
      * Sets the subjectType property value. The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
      * @param value Value to set for the subjectType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubjectType(@jakarta.annotation.Nullable final AccessPackageSubjectType value) {
         this.subjectType = value;
     }

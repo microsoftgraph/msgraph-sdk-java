@@ -26,9 +26,7 @@ public class AuthenticationStrengthUsage implements AdditionalDataHolder, Parsab
     private String odataType;
     /**
      * Instantiates a new authenticationStrengthUsage and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AuthenticationStrengthUsage() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class AuthenticationStrengthUsage implements AdditionalDataHolder, Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("mfa", this.getMfa());
@@ -102,36 +98,28 @@ public class AuthenticationStrengthUsage implements AdditionalDataHolder, Parsab
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the mfa property value. The mfa property
      * @param value Value to set for the mfa property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMfa(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
         this.mfa = value;
     }
     /**
      * Sets the none property value. The none property
      * @param value Value to set for the none property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNone(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
         this.none = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

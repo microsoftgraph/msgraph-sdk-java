@@ -27,9 +27,7 @@ public class PoissonDistPostRequestBody implements AdditionalDataHolder, Parsabl
     private Json x;
     /**
      * Instantiates a new PoissonDistPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PoissonDistPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +88,7 @@ public class PoissonDistPostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("cumulative", this.getCumulative());
@@ -103,36 +99,28 @@ public class PoissonDistPostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the cumulative property value. The cumulative property
      * @param value Value to set for the cumulative property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCumulative(@jakarta.annotation.Nullable final Json value) {
         this.cumulative = value;
     }
     /**
      * Sets the mean property value. The mean property
      * @param value Value to set for the mean property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMean(@jakarta.annotation.Nullable final Json value) {
         this.mean = value;
     }
     /**
      * Sets the x property value. The x property
      * @param value Value to set for the x property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setX(@jakarta.annotation.Nullable final Json value) {
         this.x = value;
     }

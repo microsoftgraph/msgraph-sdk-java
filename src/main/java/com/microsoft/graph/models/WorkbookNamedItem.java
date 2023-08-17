@@ -37,9 +37,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
     private WorkbookWorksheet worksheet;
     /**
      * Instantiates a new workbookNamedItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookNamedItem() {
         super();
     }
@@ -128,9 +126,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -145,63 +141,49 @@ public class WorkbookNamedItem extends Entity implements Parsable {
     /**
      * Sets the comment property value. Represents the comment associated with this name.
      * @param value Value to set for the comment property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComment(@jakarta.annotation.Nullable final String value) {
         this.comment = value;
     }
     /**
      * Sets the name property value. The name of the object. Read-only.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the scope property value. Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only.
      * @param value Value to set for the scope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScope(@jakarta.annotation.Nullable final String value) {
         this.scope = value;
     }
     /**
      * Sets the type property value. Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
     /**
      * Sets the value property value. Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final Json value) {
         this.value = value;
     }
     /**
      * Sets the visible property value. Specifies whether the object is visible or not.
      * @param value Value to set for the visible property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVisible(@jakarta.annotation.Nullable final Boolean value) {
         this.visible = value;
     }
     /**
      * Sets the worksheet property value. Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
      * @param value Value to set for the worksheet property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorksheet(@jakarta.annotation.Nullable final WorkbookWorksheet value) {
         this.worksheet = value;
     }

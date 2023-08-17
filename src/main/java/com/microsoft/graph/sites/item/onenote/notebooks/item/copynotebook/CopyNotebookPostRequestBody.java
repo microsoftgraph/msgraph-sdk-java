@@ -34,9 +34,7 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
     private String siteId;
     /**
      * Instantiates a new copyNotebookPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CopyNotebookPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("groupId", this.getGroupId());
@@ -130,54 +126,42 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the groupId property value. The groupId property
      * @param value Value to set for the groupId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroupId(@jakarta.annotation.Nullable final String value) {
         this.groupId = value;
     }
     /**
      * Sets the notebookFolder property value. The notebookFolder property
      * @param value Value to set for the notebookFolder property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotebookFolder(@jakarta.annotation.Nullable final String value) {
         this.notebookFolder = value;
     }
     /**
      * Sets the renameAs property value. The renameAs property
      * @param value Value to set for the renameAs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRenameAs(@jakarta.annotation.Nullable final String value) {
         this.renameAs = value;
     }
     /**
      * Sets the siteCollectionId property value. The siteCollectionId property
      * @param value Value to set for the siteCollectionId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSiteCollectionId(@jakarta.annotation.Nullable final String value) {
         this.siteCollectionId = value;
     }
     /**
      * Sets the siteId property value. The siteId property
      * @param value Value to set for the siteId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSiteId(@jakarta.annotation.Nullable final String value) {
         this.siteId = value;
     }

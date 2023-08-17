@@ -23,9 +23,7 @@ public class CopyPostRequestBody implements AdditionalDataHolder, Parsable {
     private ItemReference parentReference;
     /**
      * Instantiates a new copyPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CopyPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,9 +75,7 @@ public class CopyPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("name", this.getName());
@@ -89,27 +85,21 @@ public class CopyPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the parentReference property value. The parentReference property
      * @param value Value to set for the parentReference property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentReference(@jakarta.annotation.Nullable final ItemReference value) {
         this.parentReference = value;
     }

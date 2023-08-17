@@ -13,9 +13,7 @@ public class EducationFileResource extends EducationResource implements Parsable
     private String fileUrl;
     /**
      * Instantiates a new educationFileResource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationFileResource() {
         super();
         this.setOdataType("#microsoft.graph.educationFileResource");
@@ -51,9 +49,7 @@ public class EducationFileResource extends EducationResource implements Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class EducationFileResource extends EducationResource implements Parsable
     /**
      * Sets the fileUrl property value. Location on disk of the file resource.
      * @param value Value to set for the fileUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileUrl(@jakarta.annotation.Nullable final String value) {
         this.fileUrl = value;
     }

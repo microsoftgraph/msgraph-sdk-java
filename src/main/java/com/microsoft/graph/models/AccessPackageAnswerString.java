@@ -13,9 +13,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
     private String value;
     /**
      * Instantiates a new accessPackageAnswerString and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageAnswerString() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageAnswerString");
@@ -51,9 +49,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
     /**
      * Sets the value property value. The value stored on the requestor's user profile, if this answer is configured to be stored as a specific attribute.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }

@@ -21,9 +21,7 @@ public class CommsOperation extends Entity implements Parsable {
     private OperationStatus status;
     /**
      * Instantiates a new commsOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CommsOperation() {
         super();
     }
@@ -93,9 +91,7 @@ public class CommsOperation extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -106,27 +102,21 @@ public class CommsOperation extends Entity implements Parsable {
     /**
      * Sets the clientContext property value. Unique Client Context string. Max limit is 256 chars.
      * @param value Value to set for the clientContext property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClientContext(@jakarta.annotation.Nullable final String value) {
         this.clientContext = value;
     }
     /**
      * Sets the resultInfo property value. The result information. Read-only.
      * @param value Value to set for the resultInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResultInfo(@jakarta.annotation.Nullable final ResultInfo value) {
         this.resultInfo = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final OperationStatus value) {
         this.status = value;
     }

@@ -37,9 +37,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
     private String versionNumber;
     /**
      * Instantiates a new iosLobApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosLobApp() {
         super();
         this.setOdataType("#microsoft.graph.iosLobApp");
@@ -120,9 +118,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -136,54 +132,42 @@ public class IosLobApp extends MobileLobApp implements Parsable {
     /**
      * Sets the applicableDeviceType property value. Contains properties of the possible iOS device types the mobile app can run on.
      * @param value Value to set for the applicableDeviceType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicableDeviceType(@jakarta.annotation.Nullable final IosDeviceType value) {
         this.applicableDeviceType = value;
     }
     /**
      * Sets the buildNumber property value. The build number of iOS Line of Business (LoB) app.
      * @param value Value to set for the buildNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBuildNumber(@jakarta.annotation.Nullable final String value) {
         this.buildNumber = value;
     }
     /**
      * Sets the bundleId property value. The Identity Name.
      * @param value Value to set for the bundleId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBundleId(@jakarta.annotation.Nullable final String value) {
         this.bundleId = value;
     }
     /**
      * Sets the expirationDateTime property value. The expiration time.
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final IosMinimumOperatingSystem value) {
         this.minimumSupportedOperatingSystem = value;
     }
     /**
      * Sets the versionNumber property value. The version number of iOS Line of Business (LoB) app.
      * @param value Value to set for the versionNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersionNumber(@jakarta.annotation.Nullable final String value) {
         this.versionNumber = value;
     }

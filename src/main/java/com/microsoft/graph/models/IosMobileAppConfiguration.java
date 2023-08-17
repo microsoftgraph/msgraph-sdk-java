@@ -20,9 +20,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
     private java.util.List<AppConfigurationSettingItem> settings;
     /**
      * Instantiates a new iosMobileAppConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosMobileAppConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosMobileAppConfiguration");
@@ -67,9 +65,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -79,18 +75,14 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
     /**
      * Sets the encodedSettingXml property value. mdm app configuration Base64 binary.
      * @param value Value to set for the encodedSettingXml property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEncodedSettingXml(@jakarta.annotation.Nullable final byte[] value) {
         this.encodedSettingXml = value;
     }
     /**
      * Sets the settings property value. app configuration setting items.
      * @param value Value to set for the settings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettings(@jakarta.annotation.Nullable final java.util.List<AppConfigurationSettingItem> value) {
         this.settings = value;
     }

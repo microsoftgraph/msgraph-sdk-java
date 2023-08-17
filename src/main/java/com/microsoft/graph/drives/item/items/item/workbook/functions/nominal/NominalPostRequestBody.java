@@ -23,9 +23,7 @@ public class NominalPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json npery;
     /**
      * Instantiates a new nominalPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public NominalPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,9 +75,7 @@ public class NominalPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("effectRate", this.getEffectRate());
@@ -89,27 +85,21 @@ public class NominalPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the effectRate property value. The effectRate property
      * @param value Value to set for the effectRate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEffectRate(@jakarta.annotation.Nullable final Json value) {
         this.effectRate = value;
     }
     /**
      * Sets the npery property value. The npery property
      * @param value Value to set for the npery property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNpery(@jakarta.annotation.Nullable final Json value) {
         this.npery = value;
     }

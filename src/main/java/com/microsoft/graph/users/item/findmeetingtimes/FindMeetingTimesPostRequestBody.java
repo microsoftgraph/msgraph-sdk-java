@@ -50,9 +50,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
     private TimeConstraint timeConstraint;
     /**
      * Instantiates a new findMeetingTimesPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public FindMeetingTimesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -158,9 +156,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("attendees", this.getAttendees());
@@ -176,81 +172,63 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the attendees property value. The attendees property
      * @param value Value to set for the attendees property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttendees(@jakarta.annotation.Nullable final java.util.List<AttendeeBase> value) {
         this.attendees = value;
     }
     /**
      * Sets the isOrganizerOptional property value. The isOrganizerOptional property
      * @param value Value to set for the isOrganizerOptional property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsOrganizerOptional(@jakarta.annotation.Nullable final Boolean value) {
         this.isOrganizerOptional = value;
     }
     /**
      * Sets the locationConstraint property value. The locationConstraint property
      * @param value Value to set for the locationConstraint property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocationConstraint(@jakarta.annotation.Nullable final LocationConstraint value) {
         this.locationConstraint = value;
     }
     /**
      * Sets the maxCandidates property value. The maxCandidates property
      * @param value Value to set for the maxCandidates property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaxCandidates(@jakarta.annotation.Nullable final Integer value) {
         this.maxCandidates = value;
     }
     /**
      * Sets the meetingDuration property value. The meetingDuration property
      * @param value Value to set for the meetingDuration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMeetingDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.meetingDuration = value;
     }
     /**
      * Sets the minimumAttendeePercentage property value. The minimumAttendeePercentage property
      * @param value Value to set for the minimumAttendeePercentage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumAttendeePercentage(@jakarta.annotation.Nullable final Double value) {
         this.minimumAttendeePercentage = value;
     }
     /**
      * Sets the returnSuggestionReasons property value. The returnSuggestionReasons property
      * @param value Value to set for the returnSuggestionReasons property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReturnSuggestionReasons(@jakarta.annotation.Nullable final Boolean value) {
         this.returnSuggestionReasons = value;
     }
     /**
      * Sets the timeConstraint property value. The timeConstraint property
      * @param value Value to set for the timeConstraint property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeConstraint(@jakarta.annotation.Nullable final TimeConstraint value) {
         this.timeConstraint = value;
     }

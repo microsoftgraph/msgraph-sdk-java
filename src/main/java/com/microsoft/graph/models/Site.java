@@ -86,9 +86,7 @@ public class Site extends BaseItem implements Parsable {
     private java.util.List<Store> termStores;
     /**
      * Instantiates a new site and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Site() {
         super();
         this.setOdataType("#microsoft.graph.site");
@@ -286,9 +284,7 @@ public class Site extends BaseItem implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -315,171 +311,133 @@ public class Site extends BaseItem implements Parsable {
     /**
      * Sets the analytics property value. Analytics about the view activities that took place in this site.
      * @param value Value to set for the analytics property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAnalytics(@jakarta.annotation.Nullable final ItemAnalytics value) {
         this.analytics = value;
     }
     /**
      * Sets the columns property value. The collection of column definitions reusable across lists under this site.
      * @param value Value to set for the columns property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColumns(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
         this.columns = value;
     }
     /**
      * Sets the contentTypes property value. The collection of content types defined for this site.
      * @param value Value to set for the contentTypes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentTypes(@jakarta.annotation.Nullable final java.util.List<ContentType> value) {
         this.contentTypes = value;
     }
     /**
      * Sets the displayName property value. The full title for the site. Read-only.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the drive property value. The default drive (document library) for this site.
      * @param value Value to set for the drive property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDrive(@jakarta.annotation.Nullable final Drive value) {
         this.drive = value;
     }
     /**
      * Sets the drives property value. The collection of drives (document libraries) under this site.
      * @param value Value to set for the drives property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDrives(@jakarta.annotation.Nullable final java.util.List<Drive> value) {
         this.drives = value;
     }
     /**
      * Sets the error property value. The error property
      * @param value Value to set for the error property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setError(@jakarta.annotation.Nullable final PublicError value) {
         this.error = value;
     }
     /**
      * Sets the externalColumns property value. The externalColumns property
      * @param value Value to set for the externalColumns property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalColumns(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
         this.externalColumns = value;
     }
     /**
      * Sets the items property value. Used to address any item contained in this site. This collection can't be enumerated.
      * @param value Value to set for the items property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setItems(@jakarta.annotation.Nullable final java.util.List<BaseItem> value) {
         this.items = value;
     }
     /**
      * Sets the lists property value. The collection of lists under this site.
      * @param value Value to set for the lists property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLists(@jakarta.annotation.Nullable final java.util.List<List> value) {
         this.lists = value;
     }
     /**
      * Sets the onenote property value. Calls the OneNote service for notebook related operations.
      * @param value Value to set for the onenote property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnenote(@jakarta.annotation.Nullable final Onenote value) {
         this.onenote = value;
     }
     /**
      * Sets the operations property value. The collection of long-running operations on the site.
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<RichLongRunningOperation> value) {
         this.operations = value;
     }
     /**
      * Sets the permissions property value. The permissions associated with the site. Nullable.
      * @param value Value to set for the permissions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPermissions(@jakarta.annotation.Nullable final java.util.List<Permission> value) {
         this.permissions = value;
     }
     /**
      * Sets the root property value. If present, indicates that this is the root site in the site collection. Read-only.
      * @param value Value to set for the root property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoot(@jakarta.annotation.Nullable final Root value) {
         this.root = value;
     }
     /**
      * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
      * @param value Value to set for the sharepointIds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharepointIds(@jakarta.annotation.Nullable final SharepointIds value) {
         this.sharepointIds = value;
     }
     /**
      * Sets the siteCollection property value. Provides details about the site's site collection. Available only on the root site. Read-only.
      * @param value Value to set for the siteCollection property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSiteCollection(@jakarta.annotation.Nullable final SiteCollection value) {
         this.siteCollection = value;
     }
     /**
      * Sets the sites property value. The collection of the sub-sites under this site.
      * @param value Value to set for the sites property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSites(@jakarta.annotation.Nullable final java.util.List<Site> value) {
         this.sites = value;
     }
     /**
      * Sets the termStore property value. The default termStore under this site.
      * @param value Value to set for the termStore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTermStore(@jakarta.annotation.Nullable final Store value) {
         this.termStore = value;
     }
     /**
      * Sets the termStores property value. The collection of termStores under this site.
      * @param value Value to set for the termStores property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTermStores(@jakarta.annotation.Nullable final java.util.List<Store> value) {
         this.termStores = value;
     }

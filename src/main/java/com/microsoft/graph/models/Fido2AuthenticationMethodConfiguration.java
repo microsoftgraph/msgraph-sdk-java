@@ -25,9 +25,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     private Fido2KeyRestrictions keyRestrictions;
     /**
      * Instantiates a new fido2AuthenticationMethodConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Fido2AuthenticationMethodConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.fido2AuthenticationMethodConfiguration");
@@ -90,9 +88,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +100,28 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
      * @param value Value to set for the includeTargets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
         this.includeTargets = value;
     }
     /**
      * Sets the isAttestationEnforced property value. Determines whether attestation must be enforced for FIDO2 security key registration.
      * @param value Value to set for the isAttestationEnforced property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAttestationEnforced(@jakarta.annotation.Nullable final Boolean value) {
         this.isAttestationEnforced = value;
     }
     /**
      * Sets the isSelfServiceRegistrationAllowed property value. Determines if users can register new FIDO2 security keys.
      * @param value Value to set for the isSelfServiceRegistrationAllowed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSelfServiceRegistrationAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.isSelfServiceRegistrationAllowed = value;
     }
     /**
      * Sets the keyRestrictions property value. Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator.
      * @param value Value to set for the keyRestrictions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKeyRestrictions(@jakarta.annotation.Nullable final Fido2KeyRestrictions value) {
         this.keyRestrictions = value;
     }

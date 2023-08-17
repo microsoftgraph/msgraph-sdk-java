@@ -27,9 +27,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
     private Integer timeout;
     /**
      * Instantiates a new redirectPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RedirectPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +88,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("callbackUri", this.getCallbackUri());
@@ -103,36 +99,28 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the callbackUri property value. The callbackUri property
      * @param value Value to set for the callbackUri property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallbackUri(@jakarta.annotation.Nullable final String value) {
         this.callbackUri = value;
     }
     /**
      * Sets the targets property value. The targets property
      * @param value Value to set for the targets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargets(@jakarta.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
         this.targets = value;
     }
     /**
      * Sets the timeout property value. The timeout property
      * @param value Value to set for the timeout property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeout(@jakarta.annotation.Nullable final Integer value) {
         this.timeout = value;
     }

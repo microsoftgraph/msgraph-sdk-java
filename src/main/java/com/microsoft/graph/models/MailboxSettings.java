@@ -54,9 +54,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     private WorkingHours workingHours;
     /**
      * Instantiates a new mailboxSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MailboxSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -180,9 +178,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("archiveFolder", this.getArchiveFolder());
@@ -200,99 +196,77 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the archiveFolder property value. Folder ID of an archive folder for the user.
      * @param value Value to set for the archiveFolder property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setArchiveFolder(@jakarta.annotation.Nullable final String value) {
         this.archiveFolder = value;
     }
     /**
      * Sets the automaticRepliesSetting property value. Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
      * @param value Value to set for the automaticRepliesSetting property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAutomaticRepliesSetting(@jakarta.annotation.Nullable final AutomaticRepliesSetting value) {
         this.automaticRepliesSetting = value;
     }
     /**
      * Sets the dateFormat property value. The date format for the user's mailbox.
      * @param value Value to set for the dateFormat property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDateFormat(@jakarta.annotation.Nullable final String value) {
         this.dateFormat = value;
     }
     /**
      * Sets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
      * @param value Value to set for the delegateMeetingMessageDeliveryOptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDelegateMeetingMessageDeliveryOptions(@jakarta.annotation.Nullable final DelegateMeetingMessageDeliveryOptions value) {
         this.delegateMeetingMessageDeliveryOptions = value;
     }
     /**
      * Sets the language property value. The locale information for the user, including the preferred language and country/region.
      * @param value Value to set for the language property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLanguage(@jakarta.annotation.Nullable final LocaleInfo value) {
         this.language = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the timeFormat property value. The time format for the user's mailbox.
      * @param value Value to set for the timeFormat property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeFormat(@jakarta.annotation.Nullable final String value) {
         this.timeFormat = value;
     }
     /**
      * Sets the timeZone property value. The default time zone for the user's mailbox.
      * @param value Value to set for the timeZone property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeZone(@jakarta.annotation.Nullable final String value) {
         this.timeZone = value;
     }
     /**
      * Sets the userPurpose property value. The purpose of the mailbox. Differentiates a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Possible values are: user, linked, shared, room, equipment, others, unknownFutureValue. Read-only.
      * @param value Value to set for the userPurpose property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPurpose(@jakarta.annotation.Nullable final UserPurpose value) {
         this.userPurpose = value;
     }
     /**
      * Sets the workingHours property value. The days of the week and hours in a specific time zone that the user works.
      * @param value Value to set for the workingHours property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkingHours(@jakarta.annotation.Nullable final WorkingHours value) {
         this.workingHours = value;
     }

@@ -30,9 +30,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     private String service;
     /**
      * Instantiates a new provisionedPlan and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ProvisionedPlan() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("capabilityStatus", this.getCapabilityStatus());
@@ -116,45 +112,35 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the capabilityStatus property value. For example, 'Enabled'.
      * @param value Value to set for the capabilityStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCapabilityStatus(@jakarta.annotation.Nullable final String value) {
         this.capabilityStatus = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the provisioningStatus property value. For example, 'Success'.
      * @param value Value to set for the provisioningStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProvisioningStatus(@jakarta.annotation.Nullable final String value) {
         this.provisioningStatus = value;
     }
     /**
      * Sets the service property value. The name of the service; for example, 'AccessControlS2S'
      * @param value Value to set for the service property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setService(@jakarta.annotation.Nullable final String value) {
         this.service = value;
     }

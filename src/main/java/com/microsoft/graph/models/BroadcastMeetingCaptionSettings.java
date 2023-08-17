@@ -30,9 +30,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
     private java.util.List<String> translationLanguages;
     /**
      * Instantiates a new broadcastMeetingCaptionSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BroadcastMeetingCaptionSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isCaptionEnabled", this.getIsCaptionEnabled());
@@ -116,45 +112,35 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the isCaptionEnabled property value. Indicates whether captions are enabled for this Teams live event.
      * @param value Value to set for the isCaptionEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsCaptionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isCaptionEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the spokenLanguage property value. The spoken language.
      * @param value Value to set for the spokenLanguage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSpokenLanguage(@jakarta.annotation.Nullable final String value) {
         this.spokenLanguage = value;
     }
     /**
      * Sets the translationLanguages property value. The translation languages (choose up to 6).
      * @param value Value to set for the translationLanguages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTranslationLanguages(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.translationLanguages = value;
     }

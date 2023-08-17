@@ -30,9 +30,7 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
     private FeedbackTokenSet tokens;
     /**
      * Instantiates a new userFeedback and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserFeedback() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -116,45 +112,35 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the rating property value. The rating property
      * @param value Value to set for the rating property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRating(@jakarta.annotation.Nullable final UserFeedbackRating value) {
         this.rating = value;
     }
     /**
      * Sets the text property value. The feedback text provided by the user of this endpoint for the session.
      * @param value Value to set for the text property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setText(@jakarta.annotation.Nullable final String value) {
         this.text = value;
     }
     /**
      * Sets the tokens property value. The set of feedback tokens provided by the user of this endpoint for the session. This is a set of Boolean properties. The property names should not be relied upon since they may change depending on what tokens are offered to the user.
      * @param value Value to set for the tokens property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTokens(@jakarta.annotation.Nullable final FeedbackTokenSet value) {
         this.tokens = value;
     }

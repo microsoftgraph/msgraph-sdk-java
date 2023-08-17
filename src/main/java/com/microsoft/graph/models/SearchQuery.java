@@ -26,9 +26,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
     private String queryTemplate;
     /**
      * Instantiates a new searchQuery and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SearchQuery() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -102,36 +98,28 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the queryString property value. The search query containing the search terms. Required.
      * @param value Value to set for the queryString property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQueryString(@jakarta.annotation.Nullable final String value) {
         this.queryString = value;
     }
     /**
      * Sets the queryTemplate property value. Provides a way to decorate the query string. Supports both KQL and query variables. Optional.
      * @param value Value to set for the queryTemplate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQueryTemplate(@jakarta.annotation.Nullable final String value) {
         this.queryTemplate = value;
     }

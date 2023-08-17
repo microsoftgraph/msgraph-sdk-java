@@ -30,9 +30,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new driveRecipient and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DriveRecipient() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("alias", this.getAlias());
@@ -116,45 +112,35 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the alias property value. The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
      * @param value Value to set for the alias property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlias(@jakarta.annotation.Nullable final String value) {
         this.alias = value;
     }
     /**
      * Sets the email property value. The email address for the recipient, if the recipient has an associated email address.
      * @param value Value to set for the email property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
      * Sets the objectId property value. The unique identifier for the recipient in the directory.
      * @param value Value to set for the objectId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setObjectId(@jakarta.annotation.Nullable final String value) {
         this.objectId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

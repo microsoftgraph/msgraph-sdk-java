@@ -49,9 +49,7 @@ public class List extends BaseItem implements Parsable {
     private SystemFacet system;
     /**
      * Instantiates a new list and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public List() {
         super();
         this.setOdataType("#microsoft.graph.list");
@@ -168,9 +166,7 @@ public class List extends BaseItem implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -188,90 +184,70 @@ public class List extends BaseItem implements Parsable {
     /**
      * Sets the columns property value. The collection of field definitions for this list.
      * @param value Value to set for the columns property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColumns(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
         this.columns = value;
     }
     /**
      * Sets the contentTypes property value. The collection of content types present in this list.
      * @param value Value to set for the contentTypes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentTypes(@jakarta.annotation.Nullable final java.util.List<ContentType> value) {
         this.contentTypes = value;
     }
     /**
      * Sets the displayName property value. The displayable title of the list.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the drive property value. Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
      * @param value Value to set for the drive property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDrive(@jakarta.annotation.Nullable final Drive value) {
         this.drive = value;
     }
     /**
      * Sets the items property value. All items contained in the list.
      * @param value Value to set for the items property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setItems(@jakarta.annotation.Nullable final java.util.List<ListItem> value) {
         this.items = value;
     }
     /**
      * Sets the list property value. Provides additional details about the list.
      * @param value Value to set for the list property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setList(@jakarta.annotation.Nullable final ListInfo value) {
         this.list = value;
     }
     /**
      * Sets the operations property value. The collection of long-running operations on the list.
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<RichLongRunningOperation> value) {
         this.operations = value;
     }
     /**
      * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
      * @param value Value to set for the sharepointIds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharepointIds(@jakarta.annotation.Nullable final SharepointIds value) {
         this.sharepointIds = value;
     }
     /**
      * Sets the subscriptions property value. The set of subscriptions on the list.
      * @param value Value to set for the subscriptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubscriptions(@jakarta.annotation.Nullable final java.util.List<Subscription> value) {
         this.subscriptions = value;
     }
     /**
      * Sets the system property value. If present, indicates that this is a system-managed list. Read-only.
      * @param value Value to set for the system property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSystem(@jakarta.annotation.Nullable final SystemFacet value) {
         this.system = value;
     }

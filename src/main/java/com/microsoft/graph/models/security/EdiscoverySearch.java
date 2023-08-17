@@ -33,9 +33,7 @@ public class EdiscoverySearch extends Search implements Parsable {
     private java.util.List<EdiscoveryNoncustodialDataSource> noncustodialSources;
     /**
      * Instantiates a new ediscoverySearch and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EdiscoverySearch() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoverySearch");
@@ -116,9 +114,7 @@ public class EdiscoverySearch extends Search implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -132,54 +128,42 @@ public class EdiscoverySearch extends Search implements Parsable {
     /**
      * Sets the additionalSources property value. Adds an additional source to the eDiscovery search.
      * @param value Value to set for the additionalSources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalSources(@jakarta.annotation.Nullable final java.util.List<DataSource> value) {
         this.additionalSources = value;
     }
     /**
      * Sets the addToReviewSetOperation property value. Adds the results of the eDiscovery search to the specified reviewSet.
      * @param value Value to set for the addToReviewSetOperation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAddToReviewSetOperation(@jakarta.annotation.Nullable final EdiscoveryAddToReviewSetOperation value) {
         this.addToReviewSetOperation = value;
     }
     /**
      * Sets the custodianSources property value. Custodian sources that are included in the eDiscovery search.
      * @param value Value to set for the custodianSources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustodianSources(@jakarta.annotation.Nullable final java.util.List<DataSource> value) {
         this.custodianSources = value;
     }
     /**
      * Sets the dataSourceScopes property value. When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
      * @param value Value to set for the dataSourceScopes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDataSourceScopes(@jakarta.annotation.Nullable final DataSourceScopes value) {
         this.dataSourceScopes = value;
     }
     /**
      * Sets the lastEstimateStatisticsOperation property value. The last estimate operation associated with the eDiscovery search.
      * @param value Value to set for the lastEstimateStatisticsOperation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastEstimateStatisticsOperation(@jakarta.annotation.Nullable final EdiscoveryEstimateOperation value) {
         this.lastEstimateStatisticsOperation = value;
     }
     /**
      * Sets the noncustodialSources property value. noncustodialDataSource sources that are included in the eDiscovery search
      * @param value Value to set for the noncustodialSources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNoncustodialSources(@jakarta.annotation.Nullable final java.util.List<EdiscoveryNoncustodialDataSource> value) {
         this.noncustodialSources = value;
     }

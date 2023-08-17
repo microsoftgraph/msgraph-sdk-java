@@ -137,9 +137,7 @@ public class DriveItem extends BaseItem implements Parsable {
     private Workbook workbook;
     /**
      * Instantiates a new driveItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DriveItem() {
         super();
         this.setOdataType("#microsoft.graph.driveItem");
@@ -454,9 +452,7 @@ public class DriveItem extends BaseItem implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -496,288 +492,224 @@ public class DriveItem extends BaseItem implements Parsable {
     /**
      * Sets the analytics property value. Analytics about the view activities that took place on this item.
      * @param value Value to set for the analytics property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAnalytics(@jakarta.annotation.Nullable final ItemAnalytics value) {
         this.analytics = value;
     }
     /**
      * Sets the audio property value. Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
      * @param value Value to set for the audio property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAudio(@jakarta.annotation.Nullable final Audio value) {
         this.audio = value;
     }
     /**
      * Sets the bundle property value. Bundle metadata, if the item is a bundle. Read-only.
      * @param value Value to set for the bundle property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBundle(@jakarta.annotation.Nullable final Bundle value) {
         this.bundle = value;
     }
     /**
      * Sets the children property value. Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
      * @param value Value to set for the children property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChildren(@jakarta.annotation.Nullable final java.util.List<DriveItem> value) {
         this.children = value;
     }
     /**
      * Sets the content property value. The content stream, if the item represents a file.
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
         this.content = value;
     }
     /**
      * Sets the cTag property value. An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
      * @param value Value to set for the cTag property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCTag(@jakarta.annotation.Nullable final String value) {
         this.cTag = value;
     }
     /**
      * Sets the deleted property value. Information about the deleted state of the item. Read-only.
      * @param value Value to set for the deleted property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeleted(@jakarta.annotation.Nullable final Deleted value) {
         this.deleted = value;
     }
     /**
      * Sets the file property value. File metadata, if the item is a file. Read-only.
      * @param value Value to set for the file property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFile(@jakarta.annotation.Nullable final File value) {
         this.file = value;
     }
     /**
      * Sets the fileSystemInfo property value. File system information on client. Read-write.
      * @param value Value to set for the fileSystemInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileSystemInfo(@jakarta.annotation.Nullable final FileSystemInfo value) {
         this.fileSystemInfo = value;
     }
     /**
      * Sets the folder property value. Folder metadata, if the item is a folder. Read-only.
      * @param value Value to set for the folder property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFolder(@jakarta.annotation.Nullable final Folder value) {
         this.folder = value;
     }
     /**
      * Sets the image property value. Image metadata, if the item is an image. Read-only.
      * @param value Value to set for the image property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImage(@jakarta.annotation.Nullable final Image value) {
         this.image = value;
     }
     /**
      * Sets the listItem property value. For drives in SharePoint, the associated document library list item. Read-only. Nullable.
      * @param value Value to set for the listItem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setListItem(@jakarta.annotation.Nullable final ListItem value) {
         this.listItem = value;
     }
     /**
      * Sets the location property value. Location metadata, if the item has location data. Read-only.
      * @param value Value to set for the location property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocation(@jakarta.annotation.Nullable final GeoCoordinates value) {
         this.location = value;
     }
     /**
      * Sets the malware property value. Malware metadata, if the item was detected to contain malware. Read-only.
      * @param value Value to set for the malware property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMalware(@jakarta.annotation.Nullable final Malware value) {
         this.malware = value;
     }
     /**
      * Sets the package property value. If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
      * @param value Value to set for the package property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPackage(@jakarta.annotation.Nullable final PackageEscaped value) {
         this.packageEscaped = value;
     }
     /**
      * Sets the pendingOperations property value. If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
      * @param value Value to set for the pendingOperations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPendingOperations(@jakarta.annotation.Nullable final PendingOperations value) {
         this.pendingOperations = value;
     }
     /**
      * Sets the permissions property value. The set of permissions for the item. Read-only. Nullable.
      * @param value Value to set for the permissions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPermissions(@jakarta.annotation.Nullable final java.util.List<Permission> value) {
         this.permissions = value;
     }
     /**
      * Sets the photo property value. Photo metadata, if the item is a photo. Read-only.
      * @param value Value to set for the photo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPhoto(@jakarta.annotation.Nullable final Photo value) {
         this.photo = value;
     }
     /**
      * Sets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
      * @param value Value to set for the publication property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublication(@jakarta.annotation.Nullable final PublicationFacet value) {
         this.publication = value;
     }
     /**
      * Sets the remoteItem property value. Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
      * @param value Value to set for the remoteItem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRemoteItem(@jakarta.annotation.Nullable final RemoteItem value) {
         this.remoteItem = value;
     }
     /**
      * Sets the root property value. If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive.
      * @param value Value to set for the root property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoot(@jakarta.annotation.Nullable final Root value) {
         this.root = value;
     }
     /**
      * Sets the searchResult property value. Search metadata, if the item is from a search result. Read-only.
      * @param value Value to set for the searchResult property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSearchResult(@jakarta.annotation.Nullable final SearchResult value) {
         this.searchResult = value;
     }
     /**
      * Sets the shared property value. Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
      * @param value Value to set for the shared property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShared(@jakarta.annotation.Nullable final Shared value) {
         this.shared = value;
     }
     /**
      * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
      * @param value Value to set for the sharepointIds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharepointIds(@jakarta.annotation.Nullable final SharepointIds value) {
         this.sharepointIds = value;
     }
     /**
      * Sets the size property value. Size of the item in bytes. Read-only.
      * @param value Value to set for the size property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSize(@jakarta.annotation.Nullable final Long value) {
         this.size = value;
     }
     /**
      * Sets the specialFolder property value. If the current item is also available as a special folder, this facet is returned. Read-only.
      * @param value Value to set for the specialFolder property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSpecialFolder(@jakarta.annotation.Nullable final SpecialFolder value) {
         this.specialFolder = value;
     }
     /**
      * Sets the subscriptions property value. The set of subscriptions on the item. Only supported on the root of a drive.
      * @param value Value to set for the subscriptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubscriptions(@jakarta.annotation.Nullable final java.util.List<Subscription> value) {
         this.subscriptions = value;
     }
     /**
      * Sets the thumbnails property value. Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
      * @param value Value to set for the thumbnails property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setThumbnails(@jakarta.annotation.Nullable final java.util.List<ThumbnailSet> value) {
         this.thumbnails = value;
     }
     /**
      * Sets the versions property value. The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
      * @param value Value to set for the versions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersions(@jakarta.annotation.Nullable final java.util.List<DriveItemVersion> value) {
         this.versions = value;
     }
     /**
      * Sets the video property value. Video metadata, if the item is a video. Read-only.
      * @param value Value to set for the video property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVideo(@jakarta.annotation.Nullable final Video value) {
         this.video = value;
     }
     /**
      * Sets the webDavUrl property value. WebDAV compatible URL for the item.
      * @param value Value to set for the webDavUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebDavUrl(@jakarta.annotation.Nullable final String value) {
         this.webDavUrl = value;
     }
     /**
      * Sets the workbook property value. For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
      * @param value Value to set for the workbook property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkbook(@jakarta.annotation.Nullable final Workbook value) {
         this.workbook = value;
     }

@@ -17,9 +17,7 @@ public class UnclassifiedArtifact extends Artifact implements Parsable {
     private String value;
     /**
      * Instantiates a new unclassifiedArtifact and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnclassifiedArtifact() {
         super();
         this.setOdataType("#microsoft.graph.security.unclassifiedArtifact");
@@ -64,9 +62,7 @@ public class UnclassifiedArtifact extends Artifact implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class UnclassifiedArtifact extends Artifact implements Parsable {
     /**
      * Sets the kind property value. The kind for this unclassifiedArtifact resource, describing what this value means.
      * @param value Value to set for the kind property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKind(@jakarta.annotation.Nullable final String value) {
         this.kind = value;
     }
     /**
      * Sets the value property value. The value for this unclassifiedArtifact.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }

@@ -38,9 +38,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
     private ProvisioningResult status;
     /**
      * Instantiates a new provisioningStep and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ProvisioningStep() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +126,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -144,63 +140,49 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the description property value. Summary of what occurred during the step.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the details property value. Details of what occurred during the step.
      * @param value Value to set for the details property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDetails(@jakarta.annotation.Nullable final DetailsInfo value) {
         this.details = value;
     }
     /**
      * Sets the name property value. Name of the step.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the provisioningStepType property value. Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
      * @param value Value to set for the provisioningStepType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProvisioningStepType(@jakarta.annotation.Nullable final ProvisioningStepType value) {
         this.provisioningStepType = value;
     }
     /**
      * Sets the status property value. Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final ProvisioningResult value) {
         this.status = value;
     }

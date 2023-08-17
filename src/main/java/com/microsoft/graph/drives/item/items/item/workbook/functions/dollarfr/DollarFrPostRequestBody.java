@@ -23,9 +23,7 @@ public class DollarFrPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json fraction;
     /**
      * Instantiates a new dollarFrPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DollarFrPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,9 +75,7 @@ public class DollarFrPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("decimalDollar", this.getDecimalDollar());
@@ -89,27 +85,21 @@ public class DollarFrPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the decimalDollar property value. The decimalDollar property
      * @param value Value to set for the decimalDollar property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDecimalDollar(@jakarta.annotation.Nullable final Json value) {
         this.decimalDollar = value;
     }
     /**
      * Sets the fraction property value. The fraction property
      * @param value Value to set for the fraction property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFraction(@jakarta.annotation.Nullable final Json value) {
         this.fraction = value;
     }

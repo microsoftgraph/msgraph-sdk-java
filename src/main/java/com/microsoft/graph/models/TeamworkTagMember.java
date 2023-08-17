@@ -21,9 +21,7 @@ public class TeamworkTagMember extends Entity implements Parsable {
     private String userId;
     /**
      * Instantiates a new teamworkTagMember and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamworkTagMember() {
         super();
     }
@@ -76,9 +74,7 @@ public class TeamworkTagMember extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +85,21 @@ public class TeamworkTagMember extends Entity implements Parsable {
     /**
      * Sets the displayName property value. The member's display name.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the tenantId property value. The ID of the tenant that the tag member is a part of.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
      * Sets the userId property value. The user ID of the member.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }

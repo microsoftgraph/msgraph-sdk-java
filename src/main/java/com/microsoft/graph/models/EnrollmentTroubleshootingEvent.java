@@ -44,9 +44,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     private String userId;
     /**
      * Instantiates a new enrollmentTroubleshootingEvent and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EnrollmentTroubleshootingEvent() {
         super();
     }
@@ -144,9 +142,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -162,72 +158,56 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     /**
      * Sets the deviceId property value. Azure AD device identifier.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the enrollmentType property value. Possible ways of adding a mobile device to management.
      * @param value Value to set for the enrollmentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnrollmentType(@jakarta.annotation.Nullable final DeviceEnrollmentType value) {
         this.enrollmentType = value;
     }
     /**
      * Sets the failureCategory property value. Top level failure categories for enrollment.
      * @param value Value to set for the failureCategory property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailureCategory(@jakarta.annotation.Nullable final DeviceEnrollmentFailureReason value) {
         this.failureCategory = value;
     }
     /**
      * Sets the failureReason property value. Detailed failure reason.
      * @param value Value to set for the failureReason property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailureReason(@jakarta.annotation.Nullable final String value) {
         this.failureReason = value;
     }
     /**
      * Sets the managedDeviceIdentifier property value. Device identifier created or collected by Intune.
      * @param value Value to set for the managedDeviceIdentifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagedDeviceIdentifier(@jakarta.annotation.Nullable final String value) {
         this.managedDeviceIdentifier = value;
     }
     /**
      * Sets the operatingSystem property value. Operating System.
      * @param value Value to set for the operatingSystem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.operatingSystem = value;
     }
     /**
      * Sets the osVersion property value. OS Version.
      * @param value Value to set for the osVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
         this.osVersion = value;
     }
     /**
      * Sets the userId property value. Identifier for the user that tried to enroll the device.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }

@@ -249,9 +249,7 @@ public class ManagedDevice extends Entity implements Parsable {
     private WindowsProtectionState windowsProtectionState;
     /**
      * Instantiates a new managedDevice and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ManagedDevice() {
         super();
     }
@@ -808,9 +806,7 @@ public class ManagedDevice extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -834,531 +830,413 @@ public class ManagedDevice extends Entity implements Parsable {
     /**
      * Sets the activationLockBypassCode property value. The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param value Value to set for the activationLockBypassCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivationLockBypassCode(@jakarta.annotation.Nullable final String value) {
         this.activationLockBypassCode = value;
     }
     /**
      * Sets the androidSecurityPatchLevel property value. Android security patch level. This property is read-only.
      * @param value Value to set for the androidSecurityPatchLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAndroidSecurityPatchLevel(@jakarta.annotation.Nullable final String value) {
         this.androidSecurityPatchLevel = value;
     }
     /**
      * Sets the azureADDeviceId property value. The unique identifier for the Azure Active Directory device. Read only. This property is read-only.
      * @param value Value to set for the azureADDeviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAzureADDeviceId(@jakarta.annotation.Nullable final String value) {
         this.azureADDeviceId = value;
     }
     /**
      * Sets the azureADRegistered property value. Whether the device is Azure Active Directory registered. This property is read-only.
      * @param value Value to set for the azureADRegistered property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAzureADRegistered(@jakarta.annotation.Nullable final Boolean value) {
         this.azureADRegistered = value;
     }
     /**
      * Sets the complianceGracePeriodExpirationDateTime property value. The DateTime when device compliance grace period expires. This property is read-only.
      * @param value Value to set for the complianceGracePeriodExpirationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComplianceGracePeriodExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.complianceGracePeriodExpirationDateTime = value;
     }
     /**
      * Sets the complianceState property value. Compliance state.
      * @param value Value to set for the complianceState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComplianceState(@jakarta.annotation.Nullable final ComplianceState value) {
         this.complianceState = value;
     }
     /**
      * Sets the configurationManagerClientEnabledFeatures property value. ConfigrMgr client enabled features. This property is read-only.
      * @param value Value to set for the configurationManagerClientEnabledFeatures property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConfigurationManagerClientEnabledFeatures(@jakarta.annotation.Nullable final ConfigurationManagerClientEnabledFeatures value) {
         this.configurationManagerClientEnabledFeatures = value;
     }
     /**
      * Sets the deviceActionResults property value. List of ComplexType deviceActionResult objects. This property is read-only.
      * @param value Value to set for the deviceActionResults property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceActionResults(@jakarta.annotation.Nullable final java.util.List<DeviceActionResult> value) {
         this.deviceActionResults = value;
     }
     /**
      * Sets the deviceCategory property value. Device category
      * @param value Value to set for the deviceCategory property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceCategory(@jakarta.annotation.Nullable final DeviceCategory value) {
         this.deviceCategory = value;
     }
     /**
      * Sets the deviceCategoryDisplayName property value. Device category display name. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      * @param value Value to set for the deviceCategoryDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceCategoryDisplayName(@jakarta.annotation.Nullable final String value) {
         this.deviceCategoryDisplayName = value;
     }
     /**
      * Sets the deviceCompliancePolicyStates property value. Device compliance policy states for this device.
      * @param value Value to set for the deviceCompliancePolicyStates property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceCompliancePolicyStates(@jakarta.annotation.Nullable final java.util.List<DeviceCompliancePolicyState> value) {
         this.deviceCompliancePolicyStates = value;
     }
     /**
      * Sets the deviceConfigurationStates property value. Device configuration states for this device.
      * @param value Value to set for the deviceConfigurationStates property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceConfigurationStates(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationState> value) {
         this.deviceConfigurationStates = value;
     }
     /**
      * Sets the deviceEnrollmentType property value. Possible ways of adding a mobile device to management.
      * @param value Value to set for the deviceEnrollmentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceEnrollmentType(@jakarta.annotation.Nullable final DeviceEnrollmentType value) {
         this.deviceEnrollmentType = value;
     }
     /**
      * Sets the deviceHealthAttestationState property value. The device health attestation state. This property is read-only.
      * @param value Value to set for the deviceHealthAttestationState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceHealthAttestationState(@jakarta.annotation.Nullable final DeviceHealthAttestationState value) {
         this.deviceHealthAttestationState = value;
     }
     /**
      * Sets the deviceName property value. Name of the device. This property is read-only.
      * @param value Value to set for the deviceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
      * Sets the deviceRegistrationState property value. Device registration status.
      * @param value Value to set for the deviceRegistrationState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceRegistrationState(@jakarta.annotation.Nullable final DeviceRegistrationState value) {
         this.deviceRegistrationState = value;
     }
     /**
      * Sets the easActivated property value. Whether the device is Exchange ActiveSync activated. This property is read-only.
      * @param value Value to set for the easActivated property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEasActivated(@jakarta.annotation.Nullable final Boolean value) {
         this.easActivated = value;
     }
     /**
      * Sets the easActivationDateTime property value. Exchange ActivationSync activation time of the device. This property is read-only.
      * @param value Value to set for the easActivationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEasActivationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.easActivationDateTime = value;
     }
     /**
      * Sets the easDeviceId property value. Exchange ActiveSync Id of the device. This property is read-only.
      * @param value Value to set for the easDeviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEasDeviceId(@jakarta.annotation.Nullable final String value) {
         this.easDeviceId = value;
     }
     /**
      * Sets the emailAddress property value. Email(s) for the user associated with the device. This property is read-only.
      * @param value Value to set for the emailAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.emailAddress = value;
     }
     /**
      * Sets the enrolledDateTime property value. Enrollment time of the device. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      * @param value Value to set for the enrolledDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnrolledDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.enrolledDateTime = value;
     }
     /**
      * Sets the ethernetMacAddress property value. Indicates Ethernet MAC Address of the device. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param value Value to set for the ethernetMacAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEthernetMacAddress(@jakarta.annotation.Nullable final String value) {
         this.ethernetMacAddress = value;
     }
     /**
      * Sets the exchangeAccessState property value. Device Exchange Access State.
      * @param value Value to set for the exchangeAccessState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExchangeAccessState(@jakarta.annotation.Nullable final DeviceManagementExchangeAccessState value) {
         this.exchangeAccessState = value;
     }
     /**
      * Sets the exchangeAccessStateReason property value. Device Exchange Access State Reason.
      * @param value Value to set for the exchangeAccessStateReason property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExchangeAccessStateReason(@jakarta.annotation.Nullable final DeviceManagementExchangeAccessStateReason value) {
         this.exchangeAccessStateReason = value;
     }
     /**
      * Sets the exchangeLastSuccessfulSyncDateTime property value. Last time the device contacted Exchange. This property is read-only.
      * @param value Value to set for the exchangeLastSuccessfulSyncDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExchangeLastSuccessfulSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.exchangeLastSuccessfulSyncDateTime = value;
     }
     /**
      * Sets the freeStorageSpaceInBytes property value. Free Storage in Bytes. Default value is 0. Read-only. This property is read-only.
      * @param value Value to set for the freeStorageSpaceInBytes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFreeStorageSpaceInBytes(@jakarta.annotation.Nullable final Long value) {
         this.freeStorageSpaceInBytes = value;
     }
     /**
      * Sets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param value Value to set for the iccid property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIccid(@jakarta.annotation.Nullable final String value) {
         this.iccid = value;
     }
     /**
      * Sets the imei property value. IMEI. This property is read-only.
      * @param value Value to set for the imei property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImei(@jakarta.annotation.Nullable final String value) {
         this.imei = value;
     }
     /**
      * Sets the isEncrypted property value. Device encryption status. This property is read-only.
      * @param value Value to set for the isEncrypted property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsEncrypted(@jakarta.annotation.Nullable final Boolean value) {
         this.isEncrypted = value;
     }
     /**
      * Sets the isSupervised property value. Device supervised status. This property is read-only.
      * @param value Value to set for the isSupervised property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSupervised(@jakarta.annotation.Nullable final Boolean value) {
         this.isSupervised = value;
     }
     /**
      * Sets the jailBroken property value. Whether the device is jail broken or rooted. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      * @param value Value to set for the jailBroken property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setJailBroken(@jakarta.annotation.Nullable final String value) {
         this.jailBroken = value;
     }
     /**
      * Sets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      * @param value Value to set for the lastSyncDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSyncDateTime = value;
     }
     /**
      * Sets the logCollectionRequests property value. List of log collection requests
      * @param value Value to set for the logCollectionRequests property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLogCollectionRequests(@jakarta.annotation.Nullable final java.util.List<DeviceLogCollectionResponse> value) {
         this.logCollectionRequests = value;
     }
     /**
      * Sets the managedDeviceName property value. Automatically generated name to identify a device. Can be overwritten to a user friendly name.
      * @param value Value to set for the managedDeviceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagedDeviceName(@jakarta.annotation.Nullable final String value) {
         this.managedDeviceName = value;
     }
     /**
      * Sets the managedDeviceOwnerType property value. Owner type of device.
      * @param value Value to set for the managedDeviceOwnerType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagedDeviceOwnerType(@jakarta.annotation.Nullable final ManagedDeviceOwnerType value) {
         this.managedDeviceOwnerType = value;
     }
     /**
      * Sets the managementAgent property value. The managementAgent property
      * @param value Value to set for the managementAgent property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagementAgent(@jakarta.annotation.Nullable final ManagementAgentType value) {
         this.managementAgent = value;
     }
     /**
      * Sets the managementCertificateExpirationDate property value. Reports device management certificate expiration date. This property is read-only.
      * @param value Value to set for the managementCertificateExpirationDate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagementCertificateExpirationDate(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.managementCertificateExpirationDate = value;
     }
     /**
      * Sets the manufacturer property value. Manufacturer of the device. This property is read-only.
      * @param value Value to set for the manufacturer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
      * Sets the meid property value. MEID. This property is read-only.
      * @param value Value to set for the meid property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMeid(@jakarta.annotation.Nullable final String value) {
         this.meid = value;
     }
     /**
      * Sets the model property value. Model of the device. This property is read-only.
      * @param value Value to set for the model property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
      * Sets the notes property value. Notes on the device created by IT Admin. Default is null. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported.
      * @param value Value to set for the notes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotes(@jakarta.annotation.Nullable final String value) {
         this.notes = value;
     }
     /**
      * Sets the operatingSystem property value. Operating system of the device. Windows, iOS, etc. This property is read-only.
      * @param value Value to set for the operatingSystem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.operatingSystem = value;
     }
     /**
      * Sets the osVersion property value. Operating system version of the device. This property is read-only.
      * @param value Value to set for the osVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
         this.osVersion = value;
     }
     /**
      * Sets the partnerReportedThreatState property value. Available health states for the Device Health API
      * @param value Value to set for the partnerReportedThreatState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPartnerReportedThreatState(@jakarta.annotation.Nullable final ManagedDevicePartnerReportedHealthState value) {
         this.partnerReportedThreatState = value;
     }
     /**
      * Sets the phoneNumber property value. Phone number of the device. This property is read-only.
      * @param value Value to set for the phoneNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPhoneNumber(@jakarta.annotation.Nullable final String value) {
         this.phoneNumber = value;
     }
     /**
      * Sets the physicalMemoryInBytes property value. Total Memory in Bytes. Default is 0. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. Read-only. This property is read-only.
      * @param value Value to set for the physicalMemoryInBytes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPhysicalMemoryInBytes(@jakarta.annotation.Nullable final Long value) {
         this.physicalMemoryInBytes = value;
     }
     /**
      * Sets the remoteAssistanceSessionErrorDetails property value. An error string that identifies issues when creating Remote Assistance session objects. This property is read-only.
      * @param value Value to set for the remoteAssistanceSessionErrorDetails property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRemoteAssistanceSessionErrorDetails(@jakarta.annotation.Nullable final String value) {
         this.remoteAssistanceSessionErrorDetails = value;
     }
     /**
      * Sets the remoteAssistanceSessionUrl property value. Url that allows a Remote Assistance session to be established with the device. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. This property is read-only.
      * @param value Value to set for the remoteAssistanceSessionUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRemoteAssistanceSessionUrl(@jakarta.annotation.Nullable final String value) {
         this.remoteAssistanceSessionUrl = value;
     }
     /**
      * Sets the requireUserEnrollmentApproval property value. Reports if the managed iOS device is user approval enrollment. This property is read-only.
      * @param value Value to set for the requireUserEnrollmentApproval property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRequireUserEnrollmentApproval(@jakarta.annotation.Nullable final Boolean value) {
         this.requireUserEnrollmentApproval = value;
     }
     /**
      * Sets the serialNumber property value. SerialNumber. This property is read-only.
      * @param value Value to set for the serialNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
         this.serialNumber = value;
     }
     /**
      * Sets the subscriberCarrier property value. Subscriber Carrier. This property is read-only.
      * @param value Value to set for the subscriberCarrier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubscriberCarrier(@jakarta.annotation.Nullable final String value) {
         this.subscriberCarrier = value;
     }
     /**
      * Sets the totalStorageSpaceInBytes property value. Total Storage in Bytes. This property is read-only.
      * @param value Value to set for the totalStorageSpaceInBytes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalStorageSpaceInBytes(@jakarta.annotation.Nullable final Long value) {
         this.totalStorageSpaceInBytes = value;
     }
     /**
      * Sets the udid property value. Unique Device Identifier for iOS and macOS devices. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param value Value to set for the udid property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUdid(@jakarta.annotation.Nullable final String value) {
         this.udid = value;
     }
     /**
      * Sets the userDisplayName property value. User display name. This property is read-only.
      * @param value Value to set for the userDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
      * Sets the userId property value. Unique Identifier for the user associated with the device. This property is read-only.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
      * Sets the userPrincipalName property value. Device user principal name. This property is read-only.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
     /**
      * Sets the users property value. The primary users associated with the managed device.
      * @param value Value to set for the users property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUsers(@jakarta.annotation.Nullable final java.util.List<User> value) {
         this.users = value;
     }
     /**
      * Sets the wiFiMacAddress property value. Wi-Fi MAC. This property is read-only.
      * @param value Value to set for the wiFiMacAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWiFiMacAddress(@jakarta.annotation.Nullable final String value) {
         this.wiFiMacAddress = value;
     }
     /**
      * Sets the windowsProtectionState property value. The device protection status. This property is read-only.
      * @param value Value to set for the windowsProtectionState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsProtectionState(@jakarta.annotation.Nullable final WindowsProtectionState value) {
         this.windowsProtectionState = value;
     }

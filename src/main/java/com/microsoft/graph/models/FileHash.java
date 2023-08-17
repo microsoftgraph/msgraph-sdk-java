@@ -26,9 +26,7 @@ public class FileHash implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new fileHash and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public FileHash() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class FileHash implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("hashType", this.getHashType());
@@ -102,36 +98,28 @@ public class FileHash implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the hashType property value. File hash type. Possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
      * @param value Value to set for the hashType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHashType(@jakarta.annotation.Nullable final FileHashType value) {
         this.hashType = value;
     }
     /**
      * Sets the hashValue property value. Value of the file hash.
      * @param value Value to set for the hashValue property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHashValue(@jakarta.annotation.Nullable final String value) {
         this.hashValue = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

@@ -21,9 +21,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
     private java.util.List<ServiceUpdateMessage> messages;
     /**
      * Instantiates a new serviceAnnouncement and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ServiceAnnouncement() {
         super();
     }
@@ -76,9 +74,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +85,21 @@ public class ServiceAnnouncement extends Entity implements Parsable {
     /**
      * Sets the healthOverviews property value. A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
      * @param value Value to set for the healthOverviews property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHealthOverviews(@jakarta.annotation.Nullable final java.util.List<ServiceHealth> value) {
         this.healthOverviews = value;
     }
     /**
      * Sets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
      * @param value Value to set for the issues property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIssues(@jakarta.annotation.Nullable final java.util.List<ServiceHealthIssue> value) {
         this.issues = value;
     }
     /**
      * Sets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
      * @param value Value to set for the messages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessages(@jakarta.annotation.Nullable final java.util.List<ServiceUpdateMessage> value) {
         this.messages = value;
     }

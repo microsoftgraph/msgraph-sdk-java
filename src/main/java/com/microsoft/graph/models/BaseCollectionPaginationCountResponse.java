@@ -22,9 +22,7 @@ public class BaseCollectionPaginationCountResponse implements AdditionalDataHold
     private String odataNextLink;
     /**
      * Instantiates a new BaseCollectionPaginationCountResponse and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BaseCollectionPaginationCountResponse() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -76,9 +74,7 @@ public class BaseCollectionPaginationCountResponse implements AdditionalDataHold
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLongValue("@odata.count", this.getOdataCount());
@@ -88,27 +84,21 @@ public class BaseCollectionPaginationCountResponse implements AdditionalDataHold
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.count property value. The OdataCount property
      * @param value Value to set for the @odata.count property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataCount(@jakarta.annotation.Nullable final Long value) {
         this.odataCount = value;
     }
     /**
      * Sets the @odata.nextLink property value. The OdataNextLink property
      * @param value Value to set for the @odata.nextLink property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataNextLink(@jakarta.annotation.Nullable final String value) {
         this.odataNextLink = value;
     }

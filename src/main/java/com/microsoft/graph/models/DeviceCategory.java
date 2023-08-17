@@ -20,9 +20,7 @@ public class DeviceCategory extends Entity implements Parsable {
     private String displayName;
     /**
      * Instantiates a new deviceCategory and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceCategory() {
         super();
     }
@@ -66,9 +64,7 @@ public class DeviceCategory extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -78,18 +74,14 @@ public class DeviceCategory extends Entity implements Parsable {
     /**
      * Sets the description property value. Optional description for the device category.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Display name for the device category.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }

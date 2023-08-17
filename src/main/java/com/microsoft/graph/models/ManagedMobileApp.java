@@ -20,9 +20,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
     private String version;
     /**
      * Instantiates a new managedMobileApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ManagedMobileApp() {
         super();
     }
@@ -66,9 +64,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -78,18 +74,14 @@ public class ManagedMobileApp extends Entity implements Parsable {
     /**
      * Sets the mobileAppIdentifier property value. The identifier for an app with it's operating system type.
      * @param value Value to set for the mobileAppIdentifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMobileAppIdentifier(@jakarta.annotation.Nullable final MobileAppIdentifier value) {
         this.mobileAppIdentifier = value;
     }
     /**
      * Sets the version property value. Version of the entity.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }

@@ -66,9 +66,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
     private Integer totalMemberCount;
     /**
      * Instantiates a new mailTips and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MailTips() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -219,9 +217,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("automaticReplies", this.getAutomaticReplies());
@@ -242,126 +238,98 @@ public class MailTips implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the automaticReplies property value. Mail tips for automatic reply if it has been set up by the recipient.
      * @param value Value to set for the automaticReplies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAutomaticReplies(@jakarta.annotation.Nullable final AutomaticRepliesMailTips value) {
         this.automaticReplies = value;
     }
     /**
      * Sets the customMailTip property value. A custom mail tip that can be set on the recipient's mailbox.
      * @param value Value to set for the customMailTip property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomMailTip(@jakarta.annotation.Nullable final String value) {
         this.customMailTip = value;
     }
     /**
      * Sets the deliveryRestricted property value. Whether the recipient's mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders.
      * @param value Value to set for the deliveryRestricted property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeliveryRestricted(@jakarta.annotation.Nullable final Boolean value) {
         this.deliveryRestricted = value;
     }
     /**
      * Sets the emailAddress property value. The email address of the recipient to get mailtips for.
      * @param value Value to set for the emailAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmailAddress(@jakarta.annotation.Nullable final EmailAddress value) {
         this.emailAddress = value;
     }
     /**
      * Sets the error property value. Errors that occur during the getMailTips action.
      * @param value Value to set for the error property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setError(@jakarta.annotation.Nullable final MailTipsError value) {
         this.error = value;
     }
     /**
      * Sets the externalMemberCount property value. The number of external members if the recipient is a distribution list.
      * @param value Value to set for the externalMemberCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalMemberCount(@jakarta.annotation.Nullable final Integer value) {
         this.externalMemberCount = value;
     }
     /**
      * Sets the isModerated property value. Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient's manager.
      * @param value Value to set for the isModerated property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsModerated(@jakarta.annotation.Nullable final Boolean value) {
         this.isModerated = value;
     }
     /**
      * Sets the mailboxFull property value. The mailbox full status of the recipient.
      * @param value Value to set for the mailboxFull property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMailboxFull(@jakarta.annotation.Nullable final Boolean value) {
         this.mailboxFull = value;
     }
     /**
      * Sets the maxMessageSize property value. The maximum message size that has been configured for the recipient's organization or mailbox.
      * @param value Value to set for the maxMessageSize property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaxMessageSize(@jakarta.annotation.Nullable final Integer value) {
         this.maxMessageSize = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
      * @param value Value to set for the recipientScope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecipientScope(@jakarta.annotation.Nullable final RecipientScopeType value) {
         this.recipientScope = value;
     }
     /**
      * Sets the recipientSuggestions property value. Recipients suggested based on previous contexts where they appear in the same message.
      * @param value Value to set for the recipientSuggestions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecipientSuggestions(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.recipientSuggestions = value;
     }
     /**
      * Sets the totalMemberCount property value. The number of members if the recipient is a distribution list.
      * @param value Value to set for the totalMemberCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalMemberCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalMemberCount = value;
     }

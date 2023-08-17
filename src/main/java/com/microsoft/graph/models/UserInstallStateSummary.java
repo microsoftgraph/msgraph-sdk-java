@@ -32,9 +32,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
     private String userName;
     /**
      * Instantiates a new userInstallStateSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserInstallStateSummary() {
         super();
     }
@@ -105,9 +103,7 @@ public class UserInstallStateSummary extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -120,45 +116,35 @@ public class UserInstallStateSummary extends Entity implements Parsable {
     /**
      * Sets the deviceStates property value. The install state of the eBook.
      * @param value Value to set for the deviceStates property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceStates(@jakarta.annotation.Nullable final java.util.List<DeviceInstallState> value) {
         this.deviceStates = value;
     }
     /**
      * Sets the failedDeviceCount property value. Failed Device Count.
      * @param value Value to set for the failedDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedDeviceCount = value;
     }
     /**
      * Sets the installedDeviceCount property value. Installed Device Count.
      * @param value Value to set for the installedDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstalledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.installedDeviceCount = value;
     }
     /**
      * Sets the notInstalledDeviceCount property value. Not installed device count.
      * @param value Value to set for the notInstalledDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotInstalledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.notInstalledDeviceCount = value;
     }
     /**
      * Sets the userName property value. User name.
      * @param value Value to set for the userName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }

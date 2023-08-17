@@ -65,9 +65,7 @@ public class WorkbookTable extends Entity implements Parsable {
     private WorkbookWorksheet worksheet;
     /**
      * Instantiates a new workbookTable and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookTable() {
         super();
     }
@@ -219,9 +217,7 @@ public class WorkbookTable extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -243,126 +239,98 @@ public class WorkbookTable extends Entity implements Parsable {
     /**
      * Sets the columns property value. Represents a collection of all the columns in the table. Read-only.
      * @param value Value to set for the columns property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColumns(@jakarta.annotation.Nullable final java.util.List<WorkbookTableColumn> value) {
         this.columns = value;
     }
     /**
      * Sets the highlightFirstColumn property value. Indicates whether the first column contains special formatting.
      * @param value Value to set for the highlightFirstColumn property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHighlightFirstColumn(@jakarta.annotation.Nullable final Boolean value) {
         this.highlightFirstColumn = value;
     }
     /**
      * Sets the highlightLastColumn property value. Indicates whether the last column contains special formatting.
      * @param value Value to set for the highlightLastColumn property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHighlightLastColumn(@jakarta.annotation.Nullable final Boolean value) {
         this.highlightLastColumn = value;
     }
     /**
      * Sets the legacyId property value. Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
      * @param value Value to set for the legacyId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLegacyId(@jakarta.annotation.Nullable final String value) {
         this.legacyId = value;
     }
     /**
      * Sets the name property value. Name of the table.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the rows property value. Represents a collection of all the rows in the table. Read-only.
      * @param value Value to set for the rows property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRows(@jakarta.annotation.Nullable final java.util.List<WorkbookTableRow> value) {
         this.rows = value;
     }
     /**
      * Sets the showBandedColumns property value. Indicates whether the columns show banded formatting in which odd columns are highlighted differently from even ones to make reading the table easier.
      * @param value Value to set for the showBandedColumns property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShowBandedColumns(@jakarta.annotation.Nullable final Boolean value) {
         this.showBandedColumns = value;
     }
     /**
      * Sets the showBandedRows property value. Indicates whether the rows show banded formatting in which odd rows are highlighted differently from even ones to make reading the table easier.
      * @param value Value to set for the showBandedRows property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShowBandedRows(@jakarta.annotation.Nullable final Boolean value) {
         this.showBandedRows = value;
     }
     /**
      * Sets the showFilterButton property value. Indicates whether the filter buttons are visible at the top of each column header. Setting this is only allowed if the table contains a header row.
      * @param value Value to set for the showFilterButton property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShowFilterButton(@jakarta.annotation.Nullable final Boolean value) {
         this.showFilterButton = value;
     }
     /**
      * Sets the showHeaders property value. Indicates whether the header row is visible or not. This value can be set to show or remove the header row.
      * @param value Value to set for the showHeaders property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShowHeaders(@jakarta.annotation.Nullable final Boolean value) {
         this.showHeaders = value;
     }
     /**
      * Sets the showTotals property value. Indicates whether the total row is visible or not. This value can be set to show or remove the total row.
      * @param value Value to set for the showTotals property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShowTotals(@jakarta.annotation.Nullable final Boolean value) {
         this.showTotals = value;
     }
     /**
      * Sets the sort property value. Represents the sorting for the table. Read-only.
      * @param value Value to set for the sort property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSort(@jakarta.annotation.Nullable final WorkbookTableSort value) {
         this.sort = value;
     }
     /**
      * Sets the style property value. Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      * @param value Value to set for the style property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStyle(@jakarta.annotation.Nullable final String value) {
         this.style = value;
     }
     /**
      * Sets the worksheet property value. The worksheet containing the current table. Read-only.
      * @param value Value to set for the worksheet property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorksheet(@jakarta.annotation.Nullable final WorkbookWorksheet value) {
         this.worksheet = value;
     }

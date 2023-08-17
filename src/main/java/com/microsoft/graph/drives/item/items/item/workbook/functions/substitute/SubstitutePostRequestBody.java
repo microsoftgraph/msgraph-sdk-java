@@ -31,9 +31,7 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, Parsable
     private Json text;
     /**
      * Instantiates a new substitutePostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SubstitutePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,9 +101,7 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("instanceNum", this.getInstanceNum());
@@ -117,45 +113,35 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, Parsable
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the instanceNum property value. The instanceNum property
      * @param value Value to set for the instanceNum property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstanceNum(@jakarta.annotation.Nullable final Json value) {
         this.instanceNum = value;
     }
     /**
      * Sets the newText property value. The newText property
      * @param value Value to set for the newText property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNewText(@jakarta.annotation.Nullable final Json value) {
         this.newText = value;
     }
     /**
      * Sets the oldText property value. The oldText property
      * @param value Value to set for the oldText property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOldText(@jakarta.annotation.Nullable final Json value) {
         this.oldText = value;
     }
     /**
      * Sets the text property value. The text property
      * @param value Value to set for the text property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setText(@jakarta.annotation.Nullable final Json value) {
         this.text = value;
     }

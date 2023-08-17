@@ -39,9 +39,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
     private String osPlatformDeviceDetails;
     /**
      * Instantiates a new userSimulationEventInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserSimulationEventInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -129,9 +127,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("browser", this.getBrowser());
@@ -145,63 +141,49 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the browser property value. Browser information from where the simulation event was initiated by a user in an attack simulation and training campaign.
      * @param value Value to set for the browser property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowser(@jakarta.annotation.Nullable final String value) {
         this.browser = value;
     }
     /**
      * Sets the eventDateTime property value. Date and time of the simulation event by a user in an attack simulation and training campaign.
      * @param value Value to set for the eventDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.eventDateTime = value;
     }
     /**
      * Sets the eventName property value. Name of the simulation event by a user in an attack simulation and training campaign.
      * @param value Value to set for the eventName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEventName(@jakarta.annotation.Nullable final String value) {
         this.eventName = value;
     }
     /**
      * Sets the ipAddress property value. IP address from where the simulation event was initiated by a user in an attack simulation and training campaign.
      * @param value Value to set for the ipAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
         this.ipAddress = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the osPlatformDeviceDetails property value. The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign.
      * @param value Value to set for the osPlatformDeviceDetails property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsPlatformDeviceDetails(@jakarta.annotation.Nullable final String value) {
         this.osPlatformDeviceDetails = value;
     }

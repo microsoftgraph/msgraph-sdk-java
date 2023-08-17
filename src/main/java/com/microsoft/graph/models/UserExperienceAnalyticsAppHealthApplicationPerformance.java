@@ -48,9 +48,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     private Integer meanTimeToFailureInMinutes;
     /**
      * Instantiates a new userExperienceAnalyticsAppHealthApplicationPerformance and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAppHealthApplicationPerformance() {
         super();
     }
@@ -157,9 +155,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -176,81 +172,63 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     /**
      * Sets the activeDeviceCount property value. The health score of the application. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the activeDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActiveDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.activeDeviceCount = value;
     }
     /**
      * Sets the appCrashCount property value. The number of crashes for the application. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the appCrashCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppCrashCount(@jakarta.annotation.Nullable final Integer value) {
         this.appCrashCount = value;
     }
     /**
      * Sets the appDisplayName property value. The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.appDisplayName = value;
     }
     /**
      * Sets the appHangCount property value. The number of hangs for the application. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the appHangCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppHangCount(@jakarta.annotation.Nullable final Integer value) {
         this.appHangCount = value;
     }
     /**
      * Sets the appHealthScore property value. The health score of the application. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the appHealthScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppHealthScore(@jakarta.annotation.Nullable final Double value) {
         this.appHealthScore = value;
     }
     /**
      * Sets the appName property value. The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppName(@jakarta.annotation.Nullable final String value) {
         this.appName = value;
     }
     /**
      * Sets the appPublisher property value. The publisher of the application. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appPublisher property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppPublisher(@jakarta.annotation.Nullable final String value) {
         this.appPublisher = value;
     }
     /**
      * Sets the appUsageDuration property value. The total usage time of the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the appUsageDuration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppUsageDuration(@jakarta.annotation.Nullable final Integer value) {
         this.appUsageDuration = value;
     }
     /**
      * Sets the meanTimeToFailureInMinutes property value. The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the meanTimeToFailureInMinutes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMeanTimeToFailureInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.meanTimeToFailureInMinutes = value;
     }

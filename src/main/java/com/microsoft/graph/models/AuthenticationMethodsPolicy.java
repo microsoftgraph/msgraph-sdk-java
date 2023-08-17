@@ -42,9 +42,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     private RegistrationEnforcement registrationEnforcement;
     /**
      * Instantiates a new authenticationMethodsPolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AuthenticationMethodsPolicy() {
         super();
     }
@@ -142,9 +140,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,72 +156,56 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     /**
      * Sets the authenticationMethodConfigurations property value. Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
      * @param value Value to set for the authenticationMethodConfigurations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthenticationMethodConfigurations(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodConfiguration> value) {
         this.authenticationMethodConfigurations = value;
     }
     /**
      * Sets the description property value. A description of the policy. Read-only.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the policy. Read-only.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time of the last update to the policy. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authentication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
      * @param value Value to set for the policyMigrationState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPolicyMigrationState(@jakarta.annotation.Nullable final AuthenticationMethodsPolicyMigrationState value) {
         this.policyMigrationState = value;
     }
     /**
      * Sets the policyVersion property value. The version of the policy in use. Read-only.
      * @param value Value to set for the policyVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPolicyVersion(@jakarta.annotation.Nullable final String value) {
         this.policyVersion = value;
     }
     /**
      * Sets the reconfirmationInDays property value. The reconfirmationInDays property
      * @param value Value to set for the reconfirmationInDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReconfirmationInDays(@jakarta.annotation.Nullable final Integer value) {
         this.reconfirmationInDays = value;
     }
     /**
      * Sets the registrationEnforcement property value. Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
      * @param value Value to set for the registrationEnforcement property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRegistrationEnforcement(@jakarta.annotation.Nullable final RegistrationEnforcement value) {
         this.registrationEnforcement = value;
     }

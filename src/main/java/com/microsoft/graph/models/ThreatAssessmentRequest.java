@@ -42,9 +42,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     private ThreatAssessmentStatus status;
     /**
      * Instantiates a new threatAssessmentRequest and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ThreatAssessmentRequest() {
         super();
     }
@@ -152,9 +150,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -170,72 +166,56 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     /**
      * Sets the category property value. The category property
      * @param value Value to set for the category property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory(@jakarta.annotation.Nullable final ThreatCategory value) {
         this.category = value;
     }
     /**
      * Sets the contentType property value. The content type of threat assessment. Possible values are: mail, url, file.
      * @param value Value to set for the contentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentType(@jakarta.annotation.Nullable final ThreatAssessmentContentType value) {
         this.contentType = value;
     }
     /**
      * Sets the createdBy property value. The threat assessment request creator.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the expectedAssessment property value. The expectedAssessment property
      * @param value Value to set for the expectedAssessment property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpectedAssessment(@jakarta.annotation.Nullable final ThreatExpectedAssessment value) {
         this.expectedAssessment = value;
     }
     /**
      * Sets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
      * @param value Value to set for the requestSource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRequestSource(@jakarta.annotation.Nullable final ThreatAssessmentRequestSource value) {
         this.requestSource = value;
     }
     /**
      * Sets the results property value. A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
      * @param value Value to set for the results property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResults(@jakarta.annotation.Nullable final java.util.List<ThreatAssessmentResult> value) {
         this.results = value;
     }
     /**
      * Sets the status property value. The assessment process status. Possible values are: pending, completed.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final ThreatAssessmentStatus value) {
         this.status = value;
     }

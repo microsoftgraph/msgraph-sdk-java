@@ -13,9 +13,7 @@ public class RoleDefinitionCollectionResponse extends BaseCollectionPaginationCo
     private java.util.List<RoleDefinition> value;
     /**
      * Instantiates a new roleDefinitionCollectionResponse and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RoleDefinitionCollectionResponse() {
         super();
     }
@@ -50,9 +48,7 @@ public class RoleDefinitionCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +57,7 @@ public class RoleDefinitionCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final java.util.List<RoleDefinition> value) {
         this.value = value;
     }

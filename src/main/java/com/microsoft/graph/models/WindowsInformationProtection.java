@@ -113,9 +113,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     private java.util.List<WindowsInformationProtectionResourceCollection> smbAutoEncryptedFileExtensions;
     /**
      * Instantiates a new windowsInformationProtection and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsInformationProtection() {
         super();
         this.setOdataType("#microsoft.graph.windowsInformationProtection");
@@ -375,9 +373,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -410,225 +406,175 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     /**
      * Sets the assignments property value. Navigation property to list of security groups targeted for policy.
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<TargetedManagedAppPolicyAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the azureRightsManagementServicesAllowed property value. Specifies whether to allow Azure RMS encryption for WIP
      * @param value Value to set for the azureRightsManagementServicesAllowed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAzureRightsManagementServicesAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.azureRightsManagementServicesAllowed = value;
     }
     /**
      * Sets the dataRecoveryCertificate property value. Specifies a recovery certificate that can be used for data recovery of encrypted files. This is the same as the data recovery agent(DRA) certificate for encrypting file system(EFS)
      * @param value Value to set for the dataRecoveryCertificate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDataRecoveryCertificate(@jakarta.annotation.Nullable final WindowsInformationProtectionDataRecoveryCertificate value) {
         this.dataRecoveryCertificate = value;
     }
     /**
      * Sets the enforcementLevel property value. Possible values for WIP Protection enforcement levels
      * @param value Value to set for the enforcementLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnforcementLevel(@jakarta.annotation.Nullable final WindowsInformationProtectionEnforcementLevel value) {
         this.enforcementLevel = value;
     }
     /**
      * Sets the enterpriseDomain property value. Primary enterprise domain
      * @param value Value to set for the enterpriseDomain property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnterpriseDomain(@jakarta.annotation.Nullable final String value) {
         this.enterpriseDomain = value;
     }
     /**
      * Sets the enterpriseInternalProxyServers property value. This is the comma-separated list of internal proxy servers. For example, '157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59'. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies
      * @param value Value to set for the enterpriseInternalProxyServers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnterpriseInternalProxyServers(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionResourceCollection> value) {
         this.enterpriseInternalProxyServers = value;
     }
     /**
      * Sets the enterpriseIPRanges property value. Sets the enterprise IP ranges that define the computers in the enterprise network. Data that comes from those computers will be considered part of the enterprise and protected. These locations will be considered a safe destination for enterprise data to be shared to
      * @param value Value to set for the enterpriseIPRanges property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnterpriseIPRanges(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionIPRangeCollection> value) {
         this.enterpriseIPRanges = value;
     }
     /**
      * Sets the enterpriseIPRangesAreAuthoritative property value. Boolean value that tells the client to accept the configured list and not to use heuristics to attempt to find other subnets. Default is false
      * @param value Value to set for the enterpriseIPRangesAreAuthoritative property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnterpriseIPRangesAreAuthoritative(@jakarta.annotation.Nullable final Boolean value) {
         this.enterpriseIPRangesAreAuthoritative = value;
     }
     /**
      * Sets the enterpriseNetworkDomainNames property value. This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected These locations will be considered a safe destination for enterprise data to be shared to
      * @param value Value to set for the enterpriseNetworkDomainNames property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnterpriseNetworkDomainNames(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionResourceCollection> value) {
         this.enterpriseNetworkDomainNames = value;
     }
     /**
      * Sets the enterpriseProtectedDomainNames property value. List of enterprise domains to be protected
      * @param value Value to set for the enterpriseProtectedDomainNames property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnterpriseProtectedDomainNames(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionResourceCollection> value) {
         this.enterpriseProtectedDomainNames = value;
     }
     /**
      * Sets the enterpriseProxiedDomains property value. Contains a list of Enterprise resource domains hosted in the cloud that need to be protected. Connections to these resources are considered enterprise data. If a proxy is paired with a cloud resource, traffic to the cloud resource will be routed through the enterprise network via the denoted proxy server (on Port 80). A proxy server used for this purpose must also be configured using the EnterpriseInternalProxyServers policy
      * @param value Value to set for the enterpriseProxiedDomains property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnterpriseProxiedDomains(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionProxiedDomainCollection> value) {
         this.enterpriseProxiedDomains = value;
     }
     /**
      * Sets the enterpriseProxyServers property value. This is a list of proxy servers. Any server not on this list is considered non-enterprise
      * @param value Value to set for the enterpriseProxyServers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnterpriseProxyServers(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionResourceCollection> value) {
         this.enterpriseProxyServers = value;
     }
     /**
      * Sets the enterpriseProxyServersAreAuthoritative property value. Boolean value that tells the client to accept the configured list of proxies and not try to detect other work proxies. Default is false
      * @param value Value to set for the enterpriseProxyServersAreAuthoritative property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnterpriseProxyServersAreAuthoritative(@jakarta.annotation.Nullable final Boolean value) {
         this.enterpriseProxyServersAreAuthoritative = value;
     }
     /**
      * Sets the exemptAppLockerFiles property value. Another way to input exempt apps through xml files
      * @param value Value to set for the exemptAppLockerFiles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExemptAppLockerFiles(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionAppLockerFile> value) {
         this.exemptAppLockerFiles = value;
     }
     /**
      * Sets the exemptApps property value. Exempt applications can also access enterprise data, but the data handled by those applications are not protected. This is because some critical enterprise applications may have compatibility problems with encrypted data.
      * @param value Value to set for the exemptApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExemptApps(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionApp> value) {
         this.exemptApps = value;
     }
     /**
      * Sets the iconsVisible property value. Determines whether overlays are added to icons for WIP protected files in Explorer and enterprise only app tiles in the Start menu. Starting in Windows 10, version 1703 this setting also configures the visibility of the WIP icon in the title bar of a WIP-protected app
      * @param value Value to set for the iconsVisible property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIconsVisible(@jakarta.annotation.Nullable final Boolean value) {
         this.iconsVisible = value;
     }
     /**
      * Sets the indexingEncryptedStoresOrItemsBlocked property value. This switch is for the Windows Search Indexer, to allow or disallow indexing of items
      * @param value Value to set for the indexingEncryptedStoresOrItemsBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIndexingEncryptedStoresOrItemsBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.indexingEncryptedStoresOrItemsBlocked = value;
     }
     /**
      * Sets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
      * @param value Value to set for the isAssigned property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAssigned(@jakarta.annotation.Nullable final Boolean value) {
         this.isAssigned = value;
     }
     /**
      * Sets the neutralDomainResources property value. List of domain names that can used for work or personal resource
      * @param value Value to set for the neutralDomainResources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNeutralDomainResources(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionResourceCollection> value) {
         this.neutralDomainResources = value;
     }
     /**
      * Sets the protectedAppLockerFiles property value. Another way to input protected apps through xml files
      * @param value Value to set for the protectedAppLockerFiles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProtectedAppLockerFiles(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionAppLockerFile> value) {
         this.protectedAppLockerFiles = value;
     }
     /**
      * Sets the protectedApps property value. Protected applications can access enterprise data and the data handled by those applications are protected with encryption
      * @param value Value to set for the protectedApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProtectedApps(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionApp> value) {
         this.protectedApps = value;
     }
     /**
      * Sets the protectionUnderLockConfigRequired property value. Specifies whether the protection under lock feature (also known as encrypt under pin) should be configured
      * @param value Value to set for the protectionUnderLockConfigRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProtectionUnderLockConfigRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.protectionUnderLockConfigRequired = value;
     }
     /**
      * Sets the revokeOnUnenrollDisabled property value. This policy controls whether to revoke the WIP keys when a device unenrolls from the management service. If set to 1 (Don't revoke keys), the keys will not be revoked and the user will continue to have access to protected files after unenrollment. If the keys are not revoked, there will be no revoked file cleanup subsequently.
      * @param value Value to set for the revokeOnUnenrollDisabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRevokeOnUnenrollDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.revokeOnUnenrollDisabled = value;
     }
     /**
      * Sets the rightsManagementServicesTemplateId property value. TemplateID GUID to use for RMS encryption. The RMS template allows the IT admin to configure the details about who has access to RMS-protected file and how long they have access
      * @param value Value to set for the rightsManagementServicesTemplateId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRightsManagementServicesTemplateId(@jakarta.annotation.Nullable final UUID value) {
         this.rightsManagementServicesTemplateId = value;
     }
     /**
      * Sets the smbAutoEncryptedFileExtensions property value. Specifies a list of file extensions, so that files with these extensions are encrypted when copying from an SMB share within the corporate boundary
      * @param value Value to set for the smbAutoEncryptedFileExtensions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSmbAutoEncryptedFileExtensions(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionResourceCollection> value) {
         this.smbAutoEncryptedFileExtensions = value;
     }

@@ -30,9 +30,7 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
     private Integer subcode;
     /**
      * Instantiates a new resultInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ResultInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("code", this.getCode());
@@ -116,45 +112,35 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the code property value. The result code.
      * @param value Value to set for the code property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCode(@jakarta.annotation.Nullable final Integer value) {
         this.code = value;
     }
     /**
      * Sets the message property value. The message.
      * @param value Value to set for the message property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessage(@jakarta.annotation.Nullable final String value) {
         this.message = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the subcode property value. The result sub-code.
      * @param value Value to set for the subcode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubcode(@jakarta.annotation.Nullable final Integer value) {
         this.subcode = value;
     }

@@ -17,9 +17,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
     private java.util.List<PermissionGrantConditionSet> includes;
     /**
      * Instantiates a new permissionGrantPolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PermissionGrantPolicy() {
         super();
         this.setOdataType("#microsoft.graph.permissionGrantPolicy");
@@ -64,9 +62,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
     /**
      * Sets the excludes property value. Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
      * @param value Value to set for the excludes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExcludes(@jakarta.annotation.Nullable final java.util.List<PermissionGrantConditionSet> value) {
         this.excludes = value;
     }
     /**
      * Sets the includes property value. Condition sets which are included in this permission grant policy. Automatically expanded on GET.
      * @param value Value to set for the includes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludes(@jakarta.annotation.Nullable final java.util.List<PermissionGrantConditionSet> value) {
         this.includes = value;
     }

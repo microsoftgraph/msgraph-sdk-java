@@ -13,9 +13,7 @@ public class Sharepoint extends Entity implements Parsable {
     private SharepointSettings settings;
     /**
      * Instantiates a new sharepoint and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Sharepoint() {
         super();
     }
@@ -50,9 +48,7 @@ public class Sharepoint extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +57,7 @@ public class Sharepoint extends Entity implements Parsable {
     /**
      * Sets the settings property value. The settings property
      * @param value Value to set for the settings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettings(@jakarta.annotation.Nullable final SharepointSettings value) {
         this.settings = value;
     }

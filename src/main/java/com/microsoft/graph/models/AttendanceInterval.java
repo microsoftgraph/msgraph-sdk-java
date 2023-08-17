@@ -31,9 +31,7 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new attendanceInterval and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AttendanceInterval() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,9 +101,7 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("durationInSeconds", this.getDurationInSeconds());
@@ -117,45 +113,35 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the durationInSeconds property value. Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime.
      * @param value Value to set for the durationInSeconds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDurationInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.durationInSeconds = value;
     }
     /**
      * Sets the joinDateTime property value. The time the attendee joined in UTC.
      * @param value Value to set for the joinDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setJoinDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.joinDateTime = value;
     }
     /**
      * Sets the leaveDateTime property value. The time the attendee left in UTC.
      * @param value Value to set for the leaveDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLeaveDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.leaveDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

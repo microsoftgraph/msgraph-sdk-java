@@ -27,9 +27,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
     private Boolean sendResponse;
     /**
      * Instantiates a new declinePostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeclinePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +88,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("Comment", this.getComment());
@@ -103,36 +99,28 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the Comment property value. The Comment property
      * @param value Value to set for the Comment property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComment(@jakarta.annotation.Nullable final String value) {
         this.comment = value;
     }
     /**
      * Sets the ProposedNewTime property value. The ProposedNewTime property
      * @param value Value to set for the ProposedNewTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProposedNewTime(@jakarta.annotation.Nullable final TimeSlot value) {
         this.proposedNewTime = value;
     }
     /**
      * Sets the SendResponse property value. The SendResponse property
      * @param value Value to set for the SendResponse property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSendResponse(@jakarta.annotation.Nullable final Boolean value) {
         this.sendResponse = value;
     }

@@ -13,9 +13,7 @@ public class LocationConstraintItem extends Location implements Parsable {
     private Boolean resolveAvailability;
     /**
      * Instantiates a new locationConstraintItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LocationConstraintItem() {
         super();
         this.setOdataType("#microsoft.graph.locationConstraintItem");
@@ -51,9 +49,7 @@ public class LocationConstraintItem extends Location implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class LocationConstraintItem extends Location implements Parsable {
     /**
      * Sets the resolveAvailability property value. If set to true and the specified resource is busy, findMeetingTimes looks for another resource that is free. If set to false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user's cache without checking if it's free. Default is true.
      * @param value Value to set for the resolveAvailability property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResolveAvailability(@jakarta.annotation.Nullable final Boolean value) {
         this.resolveAvailability = value;
     }

@@ -30,9 +30,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
     private String template;
     /**
      * Instantiates a new listInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ListInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("contentTypesEnabled", this.getContentTypesEnabled());
@@ -116,45 +112,35 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the contentTypesEnabled property value. If true, indicates that content types are enabled for this list.
      * @param value Value to set for the contentTypesEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentTypesEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.contentTypesEnabled = value;
     }
     /**
      * Sets the hidden property value. If true, indicates that the list is not normally visible in the SharePoint user experience.
      * @param value Value to set for the hidden property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.hidden = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the template property value. An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
      * @param value Value to set for the template property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTemplate(@jakarta.annotation.Nullable final String value) {
         this.template = value;
     }

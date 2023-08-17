@@ -23,9 +23,7 @@ public class GrantPostRequestBody implements AdditionalDataHolder, Parsable {
     private java.util.List<String> roles;
     /**
      * Instantiates a new grantPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public GrantPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,9 +75,7 @@ public class GrantPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("recipients", this.getRecipients());
@@ -89,27 +85,21 @@ public class GrantPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the recipients property value. The recipients property
      * @param value Value to set for the recipients property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecipients(@jakarta.annotation.Nullable final java.util.List<DriveRecipient> value) {
         this.recipients = value;
     }
     /**
      * Sets the roles property value. The roles property
      * @param value Value to set for the roles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roles = value;
     }

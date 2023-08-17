@@ -13,9 +13,7 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
     private java.util.List<AuthenticationMethodModes> appliesToCombinations;
     /**
      * Instantiates a new authenticationCombinationConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AuthenticationCombinationConfiguration() {
         super();
     }
@@ -57,9 +55,7 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -68,9 +64,7 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
     /**
      * Sets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object that's defined for the authenticationStrengthPolicy. The only possible value for fido2combinationConfigurations is 'fido2'.
      * @param value Value to set for the appliesToCombinations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppliesToCombinations(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodModes> value) {
         this.appliesToCombinations = value;
     }

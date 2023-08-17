@@ -128,9 +128,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
     private Boolean windowsStoreBlocked;
     /**
      * Instantiates a new windowsPhone81GeneralConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsPhone81GeneralConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsPhone81GeneralConfiguration");
@@ -418,9 +416,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -456,261 +452,203 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
     /**
      * Sets the applyOnlyToWindowsPhone81 property value. Value indicating whether this policy only applies to Windows Phone 8.1. This property is read-only.
      * @param value Value to set for the applyOnlyToWindowsPhone81 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplyOnlyToWindowsPhone81(@jakarta.annotation.Nullable final Boolean value) {
         this.applyOnlyToWindowsPhone81 = value;
     }
     /**
      * Sets the appsBlockCopyPaste property value. Indicates whether or not to block copy paste.
      * @param value Value to set for the appsBlockCopyPaste property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppsBlockCopyPaste(@jakarta.annotation.Nullable final Boolean value) {
         this.appsBlockCopyPaste = value;
     }
     /**
      * Sets the bluetoothBlocked property value. Indicates whether or not to block bluetooth.
      * @param value Value to set for the bluetoothBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBluetoothBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.bluetoothBlocked = value;
     }
     /**
      * Sets the cameraBlocked property value. Indicates whether or not to block camera.
      * @param value Value to set for the cameraBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCameraBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.cameraBlocked = value;
     }
     /**
      * Sets the cellularBlockWifiTethering property value. Indicates whether or not to block Wi-Fi tethering. Has no impact if Wi-Fi is blocked.
      * @param value Value to set for the cellularBlockWifiTethering property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCellularBlockWifiTethering(@jakarta.annotation.Nullable final Boolean value) {
         this.cellularBlockWifiTethering = value;
     }
     /**
      * Sets the compliantAppListType property value. Possible values of the compliance app list.
      * @param value Value to set for the compliantAppListType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompliantAppListType(@jakarta.annotation.Nullable final AppListType value) {
         this.compliantAppListType = value;
     }
     /**
      * Sets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      * @param value Value to set for the compliantAppsList property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompliantAppsList(@jakarta.annotation.Nullable final java.util.List<AppListItem> value) {
         this.compliantAppsList = value;
     }
     /**
      * Sets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
      * @param value Value to set for the diagnosticDataBlockSubmission property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDiagnosticDataBlockSubmission(@jakarta.annotation.Nullable final Boolean value) {
         this.diagnosticDataBlockSubmission = value;
     }
     /**
      * Sets the emailBlockAddingAccounts property value. Indicates whether or not to block custom email accounts.
      * @param value Value to set for the emailBlockAddingAccounts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmailBlockAddingAccounts(@jakarta.annotation.Nullable final Boolean value) {
         this.emailBlockAddingAccounts = value;
     }
     /**
      * Sets the locationServicesBlocked property value. Indicates whether or not to block location services.
      * @param value Value to set for the locationServicesBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocationServicesBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.locationServicesBlocked = value;
     }
     /**
      * Sets the microsoftAccountBlocked property value. Indicates whether or not to block using a Microsoft Account.
      * @param value Value to set for the microsoftAccountBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMicrosoftAccountBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.microsoftAccountBlocked = value;
     }
     /**
      * Sets the nfcBlocked property value. Indicates whether or not to block Near-Field Communication.
      * @param value Value to set for the nfcBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNfcBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.nfcBlocked = value;
     }
     /**
      * Sets the passwordBlockSimple property value. Indicates whether or not to block syncing the calendar.
      * @param value Value to set for the passwordBlockSimple property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordBlockSimple = value;
     }
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires.
      * @param value Value to set for the passwordExpirationDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.passwordExpirationDays = value;
     }
     /**
      * Sets the passwordMinimumCharacterSetCount property value. Number of character sets a password must contain.
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumCharacterSetCount = value;
     }
     /**
      * Sets the passwordMinimumLength property value. Minimum length of passwords.
      * @param value Value to set for the passwordMinimumLength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumLength = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before screen timeout.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the passwordRequired property value. Indicates whether or not to require a password.
      * @param value Value to set for the passwordRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordRequired = value;
     }
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
         this.passwordRequiredType = value;
     }
     /**
      * Sets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before factory reset.
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@jakarta.annotation.Nullable final Integer value) {
         this.passwordSignInFailureCountBeforeFactoryReset = value;
     }
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether or not to block screenshots.
      * @param value Value to set for the screenCaptureBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScreenCaptureBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.screenCaptureBlocked = value;
     }
     /**
      * Sets the storageBlockRemovableStorage property value. Indicates whether or not to block removable storage.
      * @param value Value to set for the storageBlockRemovableStorage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStorageBlockRemovableStorage(@jakarta.annotation.Nullable final Boolean value) {
         this.storageBlockRemovableStorage = value;
     }
     /**
      * Sets the storageRequireEncryption property value. Indicates whether or not to require encryption.
      * @param value Value to set for the storageRequireEncryption property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStorageRequireEncryption(@jakarta.annotation.Nullable final Boolean value) {
         this.storageRequireEncryption = value;
     }
     /**
      * Sets the webBrowserBlocked property value. Indicates whether or not to block the web browser.
      * @param value Value to set for the webBrowserBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebBrowserBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.webBrowserBlocked = value;
     }
     /**
      * Sets the wifiBlockAutomaticConnectHotspots property value. Indicates whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
      * @param value Value to set for the wifiBlockAutomaticConnectHotspots property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWifiBlockAutomaticConnectHotspots(@jakarta.annotation.Nullable final Boolean value) {
         this.wifiBlockAutomaticConnectHotspots = value;
     }
     /**
      * Sets the wifiBlocked property value. Indicates whether or not to block Wi-Fi.
      * @param value Value to set for the wifiBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWifiBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.wifiBlocked = value;
     }
     /**
      * Sets the wifiBlockHotspotReporting property value. Indicates whether or not to block Wi-Fi hotspot reporting. Has no impact if Wi-Fi is blocked.
      * @param value Value to set for the wifiBlockHotspotReporting property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWifiBlockHotspotReporting(@jakarta.annotation.Nullable final Boolean value) {
         this.wifiBlockHotspotReporting = value;
     }
     /**
      * Sets the windowsStoreBlocked property value. Indicates whether or not to block the Windows Store.
      * @param value Value to set for the windowsStoreBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsStoreBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.windowsStoreBlocked = value;
     }

@@ -23,9 +23,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
     private MailTipsType mailTipsOptions;
     /**
      * Instantiates a new getMailTipsPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public GetMailTipsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,9 +75,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("EmailAddresses", this.getEmailAddresses());
@@ -89,27 +85,21 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the EmailAddresses property value. The EmailAddresses property
      * @param value Value to set for the EmailAddresses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmailAddresses(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.emailAddresses = value;
     }
     /**
      * Sets the MailTipsOptions property value. The MailTipsOptions property
      * @param value Value to set for the MailTipsOptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMailTipsOptions(@jakarta.annotation.Nullable final MailTipsType value) {
         this.mailTipsOptions = value;
     }

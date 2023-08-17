@@ -30,9 +30,7 @@ public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
     private String riskScore;
     /**
      * Instantiates a new cloudAppSecurityState and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CloudAppSecurityState() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("destinationServiceIp", this.getDestinationServiceIp());
@@ -116,45 +112,35 @@ public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the destinationServiceIp property value. Destination IP Address of the connection to the cloud application/service.
      * @param value Value to set for the destinationServiceIp property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDestinationServiceIp(@jakarta.annotation.Nullable final String value) {
         this.destinationServiceIp = value;
     }
     /**
      * Sets the destinationServiceName property value. Cloud application/service name (for example 'Salesforce', 'DropBox', etc.).
      * @param value Value to set for the destinationServiceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDestinationServiceName(@jakarta.annotation.Nullable final String value) {
         this.destinationServiceName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the riskScore property value. Provider-generated/calculated risk score of the Cloud Application/Service. Recommended value range of 0-1, which equates to a percentage.
      * @param value Value to set for the riskScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskScore(@jakarta.annotation.Nullable final String value) {
         this.riskScore = value;
     }

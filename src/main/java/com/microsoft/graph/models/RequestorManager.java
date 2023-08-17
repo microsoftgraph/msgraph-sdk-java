@@ -13,9 +13,7 @@ public class RequestorManager extends SubjectSet implements Parsable {
     private Integer managerLevel;
     /**
      * Instantiates a new requestorManager and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RequestorManager() {
         super();
         this.setOdataType("#microsoft.graph.requestorManager");
@@ -51,9 +49,7 @@ public class RequestorManager extends SubjectSet implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class RequestorManager extends SubjectSet implements Parsable {
     /**
      * Sets the managerLevel property value. The hierarchical level of the manager with respect to the requestor. For example, the direct manager of a requestor would have a managerLevel of 1, while the manager of the requestor's manager would have a managerLevel of 2. Default value for managerLevel is 1. Possible values for this property range from 1 to 2.
      * @param value Value to set for the managerLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagerLevel(@jakarta.annotation.Nullable final Integer value) {
         this.managerLevel = value;
     }

@@ -69,9 +69,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     private TicketInfo ticketInfo;
     /**
      * Instantiates a new unifiedRoleEligibilityScheduleRequest and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleRequest() {
         super();
     }
@@ -232,9 +230,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -257,135 +253,105 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     /**
      * Sets the action property value. Represents the type of operation on the role eligibility request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew, selfExtend, selfRenew, unknownFutureValue. adminAssign: For administrators to assign eligible roles to principals.adminRemove: For administrators to remove eligible roles from principals. adminUpdate: For administrators to change existing role eligibilities.adminExtend: For administrators to extend expiring role eligibilities.adminRenew: For administrators to renew expired eligibilities.selfActivate: For users to activate their assignments.selfDeactivate: For users to deactivate their active assignments.selfExtend: For users to request to extend their expiring assignments.selfRenew: For users to request to renew their expired assignments.
      * @param value Value to set for the action property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAction(@jakarta.annotation.Nullable final UnifiedRoleScheduleRequestActions value) {
         this.action = value;
     }
     /**
      * Sets the appScope property value. Read-only property with details of the app-specific scope when the role eligibility is scoped to an app. Nullable. Supports $expand.
      * @param value Value to set for the appScope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppScope(@jakarta.annotation.Nullable final AppScope value) {
         this.appScope = value;
     }
     /**
      * Sets the appScopeId property value. Identifier of the app-specific scope when the role eligibility is scoped to an app. The scope of a role eligibility determines the set of resources for which the principal is eligible to access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, ne, and on null values).
      * @param value Value to set for the appScopeId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppScopeId(@jakarta.annotation.Nullable final String value) {
         this.appScopeId = value;
     }
     /**
      * Sets the directoryScope property value. The directory object that is the scope of the role eligibility. Read-only. Supports $expand.
      * @param value Value to set for the directoryScope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDirectoryScope(@jakarta.annotation.Nullable final DirectoryObject value) {
         this.directoryScope = value;
     }
     /**
      * Sets the directoryScopeId property value. Identifier of the directory object representing the scope of the role eligibility. The scope of a role eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, ne, and on null values).
      * @param value Value to set for the directoryScopeId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDirectoryScopeId(@jakarta.annotation.Nullable final String value) {
         this.directoryScopeId = value;
     }
     /**
      * Sets the isValidationOnly property value. Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
      * @param value Value to set for the isValidationOnly property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsValidationOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.isValidationOnly = value;
     }
     /**
      * Sets the justification property value. A message provided by users and administrators when create they create the unifiedRoleEligibilityScheduleRequest object.
      * @param value Value to set for the justification property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setJustification(@jakarta.annotation.Nullable final String value) {
         this.justification = value;
     }
     /**
      * Sets the principal property value. The principal that's getting a role eligibility through the request. Supports $expand.
      * @param value Value to set for the principal property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
         this.principal = value;
     }
     /**
      * Sets the principalId property value. Identifier of the principal that has been granted the role eligibility. Can be a user or a role-assignable group. You can grant only active assignments service principals.Supports $filter (eq, ne).
      * @param value Value to set for the principalId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
         this.principalId = value;
     }
     /**
      * Sets the roleDefinition property value. Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
      * @param value Value to set for the roleDefinition property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleDefinition(@jakarta.annotation.Nullable final UnifiedRoleDefinition value) {
         this.roleDefinition = value;
     }
     /**
      * Sets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition object that is being assigned to the principal. Supports $filter (eq, ne).
      * @param value Value to set for the roleDefinitionId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.roleDefinitionId = value;
     }
     /**
      * Sets the scheduleInfo property value. The period of the role eligibility. Recurring schedules are currently unsupported.
      * @param value Value to set for the scheduleInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScheduleInfo(@jakarta.annotation.Nullable final RequestSchedule value) {
         this.scheduleInfo = value;
     }
     /**
      * Sets the targetSchedule property value. The schedule for a role eligibility that is referenced through the targetScheduleId property. Supports $expand.
      * @param value Value to set for the targetSchedule property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetSchedule(@jakarta.annotation.Nullable final UnifiedRoleEligibilitySchedule value) {
         this.targetSchedule = value;
     }
     /**
      * Sets the targetScheduleId property value. Identifier of the schedule object that's linked to the eligibility request. Supports $filter (eq, ne).
      * @param value Value to set for the targetScheduleId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetScheduleId(@jakarta.annotation.Nullable final String value) {
         this.targetScheduleId = value;
     }
     /**
      * Sets the ticketInfo property value. Ticket details linked to the role eligibility request including details of the ticket number and ticket system. Optional.
      * @param value Value to set for the ticketInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTicketInfo(@jakarta.annotation.Nullable final TicketInfo value) {
         this.ticketInfo = value;
     }

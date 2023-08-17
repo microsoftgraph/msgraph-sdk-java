@@ -26,9 +26,7 @@ public class Contract extends DirectoryObject implements Parsable {
     private String displayName;
     /**
      * Instantiates a new contract and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Contract() {
         super();
         this.setOdataType("#microsoft.graph.contract");
@@ -91,9 +89,7 @@ public class Contract extends DirectoryObject implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -105,36 +101,28 @@ public class Contract extends DirectoryObject implements Parsable {
     /**
      * Sets the contractType property value. Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
      * @param value Value to set for the contractType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContractType(@jakarta.annotation.Nullable final String value) {
         this.contractType = value;
     }
     /**
      * Sets the customerId property value. The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource.
      * @param value Value to set for the customerId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomerId(@jakarta.annotation.Nullable final UUID value) {
         this.customerId = value;
     }
     /**
      * Sets the defaultDomainName property value. A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
      * @param value Value to set for the defaultDomainName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefaultDomainName(@jakarta.annotation.Nullable final String value) {
         this.defaultDomainName = value;
     }
     /**
      * Sets the displayName property value. A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }

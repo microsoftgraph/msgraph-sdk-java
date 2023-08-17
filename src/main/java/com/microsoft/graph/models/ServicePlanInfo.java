@@ -35,9 +35,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     private String servicePlanName;
     /**
      * Instantiates a new servicePlanInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ServicePlanInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -116,9 +114,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appliesTo", this.getAppliesTo());
@@ -131,54 +127,42 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the appliesTo property value. The object the service plan can be assigned to. The possible values are:User - service plan can be assigned to individual users.Company - service plan can be assigned to the entire tenant.
      * @param value Value to set for the appliesTo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppliesTo(@jakarta.annotation.Nullable final String value) {
         this.appliesTo = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the provisioningStatus property value. The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet.
      * @param value Value to set for the provisioningStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProvisioningStatus(@jakarta.annotation.Nullable final String value) {
         this.provisioningStatus = value;
     }
     /**
      * Sets the servicePlanId property value. The unique identifier of the service plan.
      * @param value Value to set for the servicePlanId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServicePlanId(@jakarta.annotation.Nullable final UUID value) {
         this.servicePlanId = value;
     }
     /**
      * Sets the servicePlanName property value. The name of the service plan.
      * @param value Value to set for the servicePlanName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServicePlanName(@jakarta.annotation.Nullable final String value) {
         this.servicePlanName = value;
     }

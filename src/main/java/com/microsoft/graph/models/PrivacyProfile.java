@@ -26,9 +26,7 @@ public class PrivacyProfile implements AdditionalDataHolder, Parsable {
     private String statementUrl;
     /**
      * Instantiates a new privacyProfile and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PrivacyProfile() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class PrivacyProfile implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("contactEmail", this.getContactEmail());
@@ -102,36 +98,28 @@ public class PrivacyProfile implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the contactEmail property value. A valid smtp email address for the privacy statement contact. Not required.
      * @param value Value to set for the contactEmail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContactEmail(@jakarta.annotation.Nullable final String value) {
         this.contactEmail = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the statementUrl property value. A valid URL format that begins with http:// or https://. Maximum length is 255 characters. The URL that directs to the company's privacy statement. Not required.
      * @param value Value to set for the statementUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatementUrl(@jakarta.annotation.Nullable final String value) {
         this.statementUrl = value;
     }

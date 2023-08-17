@@ -84,9 +84,7 @@ public class BookingBusiness extends Entity implements Parsable {
     private String webSiteUrl;
     /**
      * Instantiates a new bookingBusiness and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BookingBusiness() {
         super();
     }
@@ -274,9 +272,7 @@ public class BookingBusiness extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -300,162 +296,126 @@ public class BookingBusiness extends Entity implements Parsable {
     /**
      * Sets the address property value. The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
      * @param value Value to set for the address property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.address = value;
     }
     /**
      * Sets the appointments property value. All the appointments of this business. Read-only. Nullable.
      * @param value Value to set for the appointments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppointments(@jakarta.annotation.Nullable final java.util.List<BookingAppointment> value) {
         this.appointments = value;
     }
     /**
      * Sets the businessHours property value. The hours of operation for the business.
      * @param value Value to set for the businessHours property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBusinessHours(@jakarta.annotation.Nullable final java.util.List<BookingWorkHours> value) {
         this.businessHours = value;
     }
     /**
      * Sets the businessType property value. The type of business.
      * @param value Value to set for the businessType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBusinessType(@jakarta.annotation.Nullable final String value) {
         this.businessType = value;
     }
     /**
      * Sets the calendarView property value. The set of appointments of this business in a specified date range. Read-only. Nullable.
      * @param value Value to set for the calendarView property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCalendarView(@jakarta.annotation.Nullable final java.util.List<BookingAppointment> value) {
         this.calendarView = value;
     }
     /**
      * Sets the customers property value. All the customers of this business. Read-only. Nullable.
      * @param value Value to set for the customers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomers(@jakarta.annotation.Nullable final java.util.List<BookingCustomerBase> value) {
         this.customers = value;
     }
     /**
      * Sets the customQuestions property value. All the custom questions of this business. Read-only. Nullable.
      * @param value Value to set for the customQuestions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomQuestions(@jakarta.annotation.Nullable final java.util.List<BookingCustomQuestion> value) {
         this.customQuestions = value;
     }
     /**
      * Sets the defaultCurrencyIso property value. The code for the currency that the business operates in on Microsoft Bookings.
      * @param value Value to set for the defaultCurrencyIso property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefaultCurrencyIso(@jakarta.annotation.Nullable final String value) {
         this.defaultCurrencyIso = value;
     }
     /**
      * Sets the displayName property value. The name of the business, which interfaces with customers. This name appears at the top of the business scheduling page.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the email property value. The email address for the business.
      * @param value Value to set for the email property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
      * Sets the isPublished property value. The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
      * @param value Value to set for the isPublished property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsPublished(@jakarta.annotation.Nullable final Boolean value) {
         this.isPublished = value;
     }
     /**
      * Sets the languageTag property value. The language of the self-service booking page.
      * @param value Value to set for the languageTag property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
         this.languageTag = value;
     }
     /**
      * Sets the phone property value. The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
      * @param value Value to set for the phone property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPhone(@jakarta.annotation.Nullable final String value) {
         this.phone = value;
     }
     /**
      * Sets the publicUrl property value. The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
      * @param value Value to set for the publicUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublicUrl(@jakarta.annotation.Nullable final String value) {
         this.publicUrl = value;
     }
     /**
      * Sets the schedulingPolicy property value. Specifies how bookings can be created for this business.
      * @param value Value to set for the schedulingPolicy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSchedulingPolicy(@jakarta.annotation.Nullable final BookingSchedulingPolicy value) {
         this.schedulingPolicy = value;
     }
     /**
      * Sets the services property value. All the services offered by this business. Read-only. Nullable.
      * @param value Value to set for the services property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServices(@jakarta.annotation.Nullable final java.util.List<BookingService> value) {
         this.services = value;
     }
     /**
      * Sets the staffMembers property value. All the staff members that provide services in this business. Read-only. Nullable.
      * @param value Value to set for the staffMembers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStaffMembers(@jakarta.annotation.Nullable final java.util.List<BookingStaffMemberBase> value) {
         this.staffMembers = value;
     }
     /**
      * Sets the webSiteUrl property value. The URL of the business web site. The webSiteUrl property, together with address, phone, appear in the footer of a business scheduling page.
      * @param value Value to set for the webSiteUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebSiteUrl(@jakarta.annotation.Nullable final String value) {
         this.webSiteUrl = value;
     }

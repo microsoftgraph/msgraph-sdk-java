@@ -44,9 +44,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
     private Boolean isMostUsedVersion;
     /**
      * Instantiates a new userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails() {
         super();
     }
@@ -144,9 +142,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -162,72 +158,56 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
     /**
      * Sets the appCrashCount property value. The number of crashes for the app. Valid values -2147483648 to 2147483647
      * @param value Value to set for the appCrashCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppCrashCount(@jakarta.annotation.Nullable final Integer value) {
         this.appCrashCount = value;
     }
     /**
      * Sets the appDisplayName property value. The friendly name of the application.
      * @param value Value to set for the appDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.appDisplayName = value;
     }
     /**
      * Sets the appName property value. The name of the application.
      * @param value Value to set for the appName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppName(@jakarta.annotation.Nullable final String value) {
         this.appName = value;
     }
     /**
      * Sets the appPublisher property value. The publisher of the application.
      * @param value Value to set for the appPublisher property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppPublisher(@jakarta.annotation.Nullable final String value) {
         this.appPublisher = value;
     }
     /**
      * Sets the appVersion property value. The version of the application.
      * @param value Value to set for the appVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppVersion(@jakarta.annotation.Nullable final String value) {
         this.appVersion = value;
     }
     /**
      * Sets the deviceCountWithCrashes property value. The total number of devices that have reported one or more application crashes for this application and version. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the deviceCountWithCrashes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceCountWithCrashes(@jakarta.annotation.Nullable final Integer value) {
         this.deviceCountWithCrashes = value;
     }
     /**
      * Sets the isLatestUsedVersion property value. When TRUE, indicates the version of application is the latest version for that application that is in use. When FALSE, indicates the version is not the latest version. FALSE by default. Supports: $select, $OrderBy.
      * @param value Value to set for the isLatestUsedVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsLatestUsedVersion(@jakarta.annotation.Nullable final Boolean value) {
         this.isLatestUsedVersion = value;
     }
     /**
      * Sets the isMostUsedVersion property value. When TRUE, indicates the version of application is the most used version for that application. When FALSE, indicates the version is not the most used version. FALSE by default. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the isMostUsedVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsMostUsedVersion(@jakarta.annotation.Nullable final Boolean value) {
         this.isMostUsedVersion = value;
     }

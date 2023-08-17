@@ -9,9 +9,7 @@ import java.util.Objects;
 public class EdiscoveryHoldOperation extends CaseOperation implements Parsable {
     /**
      * Instantiates a new ediscoveryHoldOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EdiscoveryHoldOperation() {
         super();
     }
@@ -37,9 +35,7 @@ public class EdiscoveryHoldOperation extends CaseOperation implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

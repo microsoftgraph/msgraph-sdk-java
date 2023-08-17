@@ -31,9 +31,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new requestSchedule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RequestSchedule() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,9 +101,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("expiration", this.getExpiration());
@@ -117,45 +113,35 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the expiration property value. When the eligible or active assignment expires.
      * @param value Value to set for the expiration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpiration(@jakarta.annotation.Nullable final ExpirationPattern value) {
         this.expiration = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the recurrence property value. The frequency of the  eligible or active assignment. This property is currently unsupported in PIM.
      * @param value Value to set for the recurrence property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecurrence(@jakarta.annotation.Nullable final PatternedRecurrence value) {
         this.recurrence = value;
     }
     /**
      * Sets the startDateTime property value. When the  eligible or active assignment becomes active.
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }

@@ -26,9 +26,7 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
     private java.util.List<UserTrainingStatusInfo> userTrainings;
     /**
      * Instantiates a new attackSimulationTrainingUserCoverage and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AttackSimulationTrainingUserCoverage() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("attackSimulationUser", this.getAttackSimulationUser());
@@ -102,36 +98,28 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the attackSimulationUser property value. User in an attack simulation and training campaign.
      * @param value Value to set for the attackSimulationUser property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttackSimulationUser(@jakarta.annotation.Nullable final AttackSimulationUser value) {
         this.attackSimulationUser = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the userTrainings property value. List of assigned trainings and their statuses for the user.
      * @param value Value to set for the userTrainings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserTrainings(@jakarta.annotation.Nullable final java.util.List<UserTrainingStatusInfo> value) {
         this.userTrainings = value;
     }

@@ -31,9 +31,7 @@ public class HlookupPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json tableArray;
     /**
      * Instantiates a new hlookupPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public HlookupPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,9 +101,7 @@ public class HlookupPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("lookupValue", this.getLookupValue());
@@ -117,45 +113,35 @@ public class HlookupPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the lookupValue property value. The lookupValue property
      * @param value Value to set for the lookupValue property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLookupValue(@jakarta.annotation.Nullable final Json value) {
         this.lookupValue = value;
     }
     /**
      * Sets the rangeLookup property value. The rangeLookup property
      * @param value Value to set for the rangeLookup property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRangeLookup(@jakarta.annotation.Nullable final Json value) {
         this.rangeLookup = value;
     }
     /**
      * Sets the rowIndexNum property value. The rowIndexNum property
      * @param value Value to set for the rowIndexNum property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRowIndexNum(@jakarta.annotation.Nullable final Json value) {
         this.rowIndexNum = value;
     }
     /**
      * Sets the tableArray property value. The tableArray property
      * @param value Value to set for the tableArray property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTableArray(@jakarta.annotation.Nullable final Json value) {
         this.tableArray = value;
     }

@@ -20,9 +20,7 @@ public class MobileAppContent extends Entity implements Parsable {
     private java.util.List<MobileAppContentFile> files;
     /**
      * Instantiates a new mobileAppContent and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MobileAppContent() {
         super();
     }
@@ -66,9 +64,7 @@ public class MobileAppContent extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -78,18 +74,14 @@ public class MobileAppContent extends Entity implements Parsable {
     /**
      * Sets the containedApps property value. The collection of contained apps in a MobileLobApp acting as a package.
      * @param value Value to set for the containedApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContainedApps(@jakarta.annotation.Nullable final java.util.List<MobileContainedApp> value) {
         this.containedApps = value;
     }
     /**
      * Sets the files property value. The list of files for this app content version.
      * @param value Value to set for the files property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFiles(@jakarta.annotation.Nullable final java.util.List<MobileAppContentFile> value) {
         this.files = value;
     }

@@ -30,9 +30,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
     private FilterOperand targetOperand;
     /**
      * Instantiates a new filterClause and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public FilterClause() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -116,45 +112,35 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the operatorName property value. Name of the operator to be applied to the source and target operands. Must be one of the supported operators. Supported operators can be discovered.
      * @param value Value to set for the operatorName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperatorName(@jakarta.annotation.Nullable final String value) {
         this.operatorName = value;
     }
     /**
      * Sets the sourceOperandName property value. Name of source operand (the operand being tested). The source operand name must match one of the attribute names on the source object.
      * @param value Value to set for the sourceOperandName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceOperandName(@jakarta.annotation.Nullable final String value) {
         this.sourceOperandName = value;
     }
     /**
      * Sets the targetOperand property value. Values that the source operand will be tested against.
      * @param value Value to set for the targetOperand property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetOperand(@jakarta.annotation.Nullable final FilterOperand value) {
         this.targetOperand = value;
     }

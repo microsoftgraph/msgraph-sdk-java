@@ -23,9 +23,7 @@ public class DaysPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json startDate;
     /**
      * Instantiates a new daysPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DaysPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,9 +75,7 @@ public class DaysPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("endDate", this.getEndDate());
@@ -89,27 +85,21 @@ public class DaysPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the endDate property value. The endDate property
      * @param value Value to set for the endDate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndDate(@jakarta.annotation.Nullable final Json value) {
         this.endDate = value;
     }
     /**
      * Sets the startDate property value. The startDate property
      * @param value Value to set for the startDate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDate(@jakarta.annotation.Nullable final Json value) {
         this.startDate = value;
     }

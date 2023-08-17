@@ -13,9 +13,7 @@ public class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManage
     private java.util.List<String> enabledRules;
     /**
      * Instantiates a new unifiedRoleManagementPolicyEnablementRule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyEnablementRule() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyEnablementRule");
@@ -51,9 +49,7 @@ public class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManage
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManage
     /**
      * Sets the enabledRules property value. The collection of rules that are enabled for this policy rule. For example, MultiFactorAuthentication, Ticketing, and Justification.
      * @param value Value to set for the enabledRules property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnabledRules(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.enabledRules = value;
     }

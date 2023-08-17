@@ -13,9 +13,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
     private java.util.List<String> recipients;
     /**
      * Instantiates a new educationAssignmentIndividualRecipient and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationAssignmentIndividualRecipient() {
         super();
         this.setOdataType("#microsoft.graph.educationAssignmentIndividualRecipient");
@@ -51,9 +49,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
     /**
      * Sets the recipients property value. A collection of IDs of the recipients.
      * @param value Value to set for the recipients property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecipients(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.recipients = value;
     }

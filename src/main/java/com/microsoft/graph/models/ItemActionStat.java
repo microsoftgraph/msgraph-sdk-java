@@ -26,9 +26,7 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new itemActionStat and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ItemActionStat() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("actionCount", this.getActionCount());
@@ -102,36 +98,28 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
     /**
      * Sets the actionCount property value. The number of times the action took place. Read-only.
      * @param value Value to set for the actionCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActionCount(@jakarta.annotation.Nullable final Integer value) {
         this.actionCount = value;
     }
     /**
      * Sets the actorCount property value. The number of distinct actors that performed the action. Read-only.
      * @param value Value to set for the actorCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActorCount(@jakarta.annotation.Nullable final Integer value) {
         this.actorCount = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

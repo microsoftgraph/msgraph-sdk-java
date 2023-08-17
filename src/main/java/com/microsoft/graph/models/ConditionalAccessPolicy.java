@@ -42,9 +42,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     private ConditionalAccessPolicyState state;
     /**
      * Instantiates a new conditionalAccessPolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConditionalAccessPolicy() {
         super();
     }
@@ -142,9 +140,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,72 +156,56 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     /**
      * Sets the conditions property value. The conditions property
      * @param value Value to set for the conditions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConditions(@jakarta.annotation.Nullable final ConditionalAccessConditionSet value) {
         this.conditions = value;
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Specifies a display name for the conditionalAccessPolicy object.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the grantControls property value. Specifies the grant controls that must be fulfilled to pass the policy.
      * @param value Value to set for the grantControls property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGrantControls(@jakarta.annotation.Nullable final ConditionalAccessGrantControls value) {
         this.grantControls = value;
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
      * @param value Value to set for the modifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
     }
     /**
      * Sets the sessionControls property value. Specifies the session controls that are enforced after sign-in.
      * @param value Value to set for the sessionControls property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSessionControls(@jakarta.annotation.Nullable final ConditionalAccessSessionControls value) {
         this.sessionControls = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final ConditionalAccessPolicyState value) {
         this.state = value;
     }

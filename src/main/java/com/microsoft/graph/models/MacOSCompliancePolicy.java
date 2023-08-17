@@ -80,9 +80,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     private Boolean systemIntegrityProtectionEnabled;
     /**
      * Instantiates a new macOSCompliancePolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MacOSCompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.macOSCompliancePolicy");
@@ -262,9 +260,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -289,153 +285,119 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     /**
      * Sets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection.
      * @param value Value to set for the deviceThreatProtectionEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceThreatProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.deviceThreatProtectionEnabled = value;
     }
     /**
      * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceThreatProtectionRequiredSecurityLevel(@jakarta.annotation.Nullable final DeviceThreatProtectionLevel value) {
         this.deviceThreatProtectionRequiredSecurityLevel = value;
     }
     /**
      * Sets the firewallBlockAllIncoming property value. Corresponds to the 'Block all incoming connections' option.
      * @param value Value to set for the firewallBlockAllIncoming property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirewallBlockAllIncoming(@jakarta.annotation.Nullable final Boolean value) {
         this.firewallBlockAllIncoming = value;
     }
     /**
      * Sets the firewallEnabled property value. Whether the firewall should be enabled or not.
      * @param value Value to set for the firewallEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirewallEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.firewallEnabled = value;
     }
     /**
      * Sets the firewallEnableStealthMode property value. Corresponds to 'Enable stealth mode.'
      * @param value Value to set for the firewallEnableStealthMode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirewallEnableStealthMode(@jakarta.annotation.Nullable final Boolean value) {
         this.firewallEnableStealthMode = value;
     }
     /**
      * Sets the osMaximumVersion property value. Maximum MacOS version.
      * @param value Value to set for the osMaximumVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMaximumVersion = value;
     }
     /**
      * Sets the osMinimumVersion property value. Minimum MacOS version.
      * @param value Value to set for the osMinimumVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMinimumVersion = value;
     }
     /**
      * Sets the passwordBlockSimple property value. Indicates whether or not to block simple passwords.
      * @param value Value to set for the passwordBlockSimple property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordBlockSimple = value;
     }
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 65535
      * @param value Value to set for the passwordExpirationDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.passwordExpirationDays = value;
     }
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumCharacterSetCount = value;
     }
     /**
      * Sets the passwordMinimumLength property value. Minimum length of password. Valid values 4 to 14
      * @param value Value to set for the passwordMinimumLength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumLength = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeLock(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinutesOfInactivityBeforeLock = value;
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 1 to 24
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the passwordRequired property value. Whether or not to require a password.
      * @param value Value to set for the passwordRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordRequired = value;
     }
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
         this.passwordRequiredType = value;
     }
     /**
      * Sets the storageRequireEncryption property value. Require encryption on Mac OS devices.
      * @param value Value to set for the storageRequireEncryption property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStorageRequireEncryption(@jakarta.annotation.Nullable final Boolean value) {
         this.storageRequireEncryption = value;
     }
     /**
      * Sets the systemIntegrityProtectionEnabled property value. Require that devices have enabled system integrity protection.
      * @param value Value to set for the systemIntegrityProtectionEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSystemIntegrityProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.systemIntegrityProtectionEnabled = value;
     }

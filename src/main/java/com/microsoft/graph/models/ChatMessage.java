@@ -106,9 +106,7 @@ public class ChatMessage extends Entity implements Parsable {
     private String webUrl;
     /**
      * Instantiates a new chatMessage and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ChatMessage() {
         super();
     }
@@ -350,9 +348,7 @@ public class ChatMessage extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -384,216 +380,168 @@ public class ChatMessage extends Entity implements Parsable {
     /**
      * Sets the attachments property value. References to attached objects like files, tabs, meetings etc.
      * @param value Value to set for the attachments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttachments(@jakarta.annotation.Nullable final java.util.List<ChatMessageAttachment> value) {
         this.attachments = value;
     }
     /**
      * Sets the body property value. The body property
      * @param value Value to set for the body property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
         this.body = value;
     }
     /**
      * Sets the channelIdentity property value. If the message was sent in a channel, represents identity of the channel.
      * @param value Value to set for the channelIdentity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChannelIdentity(@jakarta.annotation.Nullable final ChannelIdentity value) {
         this.channelIdentity = value;
     }
     /**
      * Sets the chatId property value. If the message was sent in a chat, represents the identity of the chat.
      * @param value Value to set for the chatId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChatId(@jakarta.annotation.Nullable final String value) {
         this.chatId = value;
     }
     /**
      * Sets the createdDateTime property value. Timestamp of when the chat message was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the deletedDateTime property value. Read only. Timestamp at which the chat message was deleted, or null if not deleted.
      * @param value Value to set for the deletedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.deletedDateTime = value;
     }
     /**
      * Sets the etag property value. Read-only. Version number of the chat message.
      * @param value Value to set for the etag property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEtag(@jakarta.annotation.Nullable final String value) {
         this.etag = value;
     }
     /**
      * Sets the eventDetail property value. Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
      * @param value Value to set for the eventDetail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEventDetail(@jakarta.annotation.Nullable final EventMessageDetail value) {
         this.eventDetail = value;
     }
     /**
      * Sets the from property value. Details of the sender of the chat message. Can only be set during migration.
      * @param value Value to set for the from property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFrom(@jakarta.annotation.Nullable final ChatMessageFromIdentitySet value) {
         this.from = value;
     }
     /**
      * Sets the hostedContents property value. Content in a message hosted by Microsoft Teams - for example, images or code snippets.
      * @param value Value to set for the hostedContents property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHostedContents(@jakarta.annotation.Nullable final java.util.List<ChatMessageHostedContent> value) {
         this.hostedContents = value;
     }
     /**
      * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImportance(@jakarta.annotation.Nullable final ChatMessageImportance value) {
         this.importance = value;
     }
     /**
      * Sets the lastEditedDateTime property value. Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
      * @param value Value to set for the lastEditedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastEditedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastEditedDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the locale property value. Locale of the chat message set by the client. Always set to en-us.
      * @param value Value to set for the locale property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocale(@jakarta.annotation.Nullable final String value) {
         this.locale = value;
     }
     /**
      * Sets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
      * @param value Value to set for the mentions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMentions(@jakarta.annotation.Nullable final java.util.List<ChatMessageMention> value) {
         this.mentions = value;
     }
     /**
      * Sets the messageHistory property value. List of activity history of a message item, including modification time and actions, such as reactionAdded, reactionRemoved, or reaction changes, on the message.
      * @param value Value to set for the messageHistory property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessageHistory(@jakarta.annotation.Nullable final java.util.List<ChatMessageHistoryItem> value) {
         this.messageHistory = value;
     }
     /**
      * Sets the messageType property value. The messageType property
      * @param value Value to set for the messageType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessageType(@jakarta.annotation.Nullable final ChatMessageType value) {
         this.messageType = value;
     }
     /**
      * Sets the policyViolation property value. Defines the properties of a policy violation set by a data loss prevention (DLP) application.
      * @param value Value to set for the policyViolation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPolicyViolation(@jakarta.annotation.Nullable final ChatMessagePolicyViolation value) {
         this.policyViolation = value;
     }
     /**
      * Sets the reactions property value. Reactions for this chat message (for example, Like).
      * @param value Value to set for the reactions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReactions(@jakarta.annotation.Nullable final java.util.List<ChatMessageReaction> value) {
         this.reactions = value;
     }
     /**
      * Sets the replies property value. Replies for a specified message. Supports $expand for channel messages.
      * @param value Value to set for the replies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReplies(@jakarta.annotation.Nullable final java.util.List<ChatMessage> value) {
         this.replies = value;
     }
     /**
      * Sets the replyToId property value. Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
      * @param value Value to set for the replyToId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReplyToId(@jakarta.annotation.Nullable final String value) {
         this.replyToId = value;
     }
     /**
      * Sets the subject property value. The subject of the chat message, in plaintext.
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
     /**
      * Sets the summary property value. Summary text of the chat message that could be used for push notifications and summary views or fall back views. Only applies to channel chat messages, not chat messages in a chat.
      * @param value Value to set for the summary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSummary(@jakarta.annotation.Nullable final String value) {
         this.summary = value;
     }
     /**
      * Sets the webUrl property value. Read-only. Link to the message in Microsoft Teams.
      * @param value Value to set for the webUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }

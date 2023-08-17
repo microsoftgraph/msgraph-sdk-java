@@ -35,9 +35,7 @@ public class DisplayTemplate implements AdditionalDataHolder, Parsable {
     private java.util.List<PropertyRule> rules;
     /**
      * Instantiates a new displayTemplate and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DisplayTemplate() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -116,9 +114,7 @@ public class DisplayTemplate implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
@@ -131,54 +127,42 @@ public class DisplayTemplate implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the id property value. The text identifier for the display template; for example, contosoTickets. Maximum 16 characters. Only alphanumeric characters allowed.
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the layout property value. The layout property
      * @param value Value to set for the layout property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLayout(@jakarta.annotation.Nullable final Json value) {
         this.layout = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the priority property value. Defines the priority of a display template. A display template with priority 1 is evaluated before a template with priority 4. Gaps in priority values are supported. Must be positive value.
      * @param value Value to set for the priority property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.priority = value;
     }
     /**
      * Sets the rules property value. Specifies additional rules for selecting this display template based on the item schema. Optional.
      * @param value Value to set for the rules property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRules(@jakarta.annotation.Nullable final java.util.List<PropertyRule> value) {
         this.rules = value;
     }

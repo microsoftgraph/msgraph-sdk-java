@@ -21,9 +21,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
     private OpenShiftItem sharedOpenShift;
     /**
      * Instantiates a new openShift and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OpenShift() {
         super();
         this.setOdataType("#microsoft.graph.openShift");
@@ -77,9 +75,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
     /**
      * Sets the draftOpenShift property value. An unpublished open shift.
      * @param value Value to set for the draftOpenShift property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDraftOpenShift(@jakarta.annotation.Nullable final OpenShiftItem value) {
         this.draftOpenShift = value;
     }
     /**
      * Sets the schedulingGroupId property value. ID for the scheduling group that the open shift belongs to.
      * @param value Value to set for the schedulingGroupId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSchedulingGroupId(@jakarta.annotation.Nullable final String value) {
         this.schedulingGroupId = value;
     }
     /**
      * Sets the sharedOpenShift property value. A published open shift.
      * @param value Value to set for the sharedOpenShift property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharedOpenShift(@jakarta.annotation.Nullable final OpenShiftItem value) {
         this.sharedOpenShift = value;
     }

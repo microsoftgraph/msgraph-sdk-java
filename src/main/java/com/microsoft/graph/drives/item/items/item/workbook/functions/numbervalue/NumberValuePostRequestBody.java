@@ -27,9 +27,7 @@ public class NumberValuePostRequestBody implements AdditionalDataHolder, Parsabl
     private Json text;
     /**
      * Instantiates a new numberValuePostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public NumberValuePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +88,7 @@ public class NumberValuePostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("decimalSeparator", this.getDecimalSeparator());
@@ -103,36 +99,28 @@ public class NumberValuePostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the decimalSeparator property value. The decimalSeparator property
      * @param value Value to set for the decimalSeparator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDecimalSeparator(@jakarta.annotation.Nullable final Json value) {
         this.decimalSeparator = value;
     }
     /**
      * Sets the groupSeparator property value. The groupSeparator property
      * @param value Value to set for the groupSeparator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroupSeparator(@jakarta.annotation.Nullable final Json value) {
         this.groupSeparator = value;
     }
     /**
      * Sets the text property value. The text property
      * @param value Value to set for the text property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setText(@jakarta.annotation.Nullable final Json value) {
         this.text = value;
     }

@@ -38,9 +38,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     private String temporaryAccessPass;
     /**
      * Instantiates a new temporaryAccessPassAuthenticationMethod and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TemporaryAccessPassAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.temporaryAccessPassAuthenticationMethod");
@@ -130,9 +128,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -147,63 +143,49 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     /**
      * Sets the createdDateTime property value. The date and time when the Temporary Access Pass was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the isUsable property value. The state of the authentication method that indicates whether it's currently usable by the user.
      * @param value Value to set for the isUsable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsUsable(@jakarta.annotation.Nullable final Boolean value) {
         this.isUsable = value;
     }
     /**
      * Sets the isUsableOnce property value. Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime.
      * @param value Value to set for the isUsableOnce property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsUsableOnce(@jakarta.annotation.Nullable final Boolean value) {
         this.isUsableOnce = value;
     }
     /**
      * Sets the lifetimeInMinutes property value. The lifetime of the Temporary Access Pass in minutes starting at startDateTime. Must be between 10 and 43200 inclusive (equivalent to 30 days).
      * @param value Value to set for the lifetimeInMinutes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLifetimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.lifetimeInMinutes = value;
     }
     /**
      * Sets the methodUsabilityReason property value. Details about the usability state (isUsable). Reasons can include: EnabledByPolicy, DisabledByPolicy, Expired, NotYetValid, OneTimeUsed.
      * @param value Value to set for the methodUsabilityReason property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMethodUsabilityReason(@jakarta.annotation.Nullable final String value) {
         this.methodUsabilityReason = value;
     }
     /**
      * Sets the startDateTime property value. The date and time when the Temporary Access Pass becomes available to use and when isUsable is true is enforced.
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
      * Sets the temporaryAccessPass property value. The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET.
      * @param value Value to set for the temporaryAccessPass property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTemporaryAccessPass(@jakarta.annotation.Nullable final String value) {
         this.temporaryAccessPass = value;
     }

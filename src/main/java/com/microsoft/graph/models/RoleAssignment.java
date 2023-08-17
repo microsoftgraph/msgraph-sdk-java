@@ -28,9 +28,7 @@ public class RoleAssignment extends Entity implements Parsable {
     private RoleDefinition roleDefinition;
     /**
      * Instantiates a new roleAssignment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RoleAssignment() {
         super();
     }
@@ -99,9 +97,7 @@ public class RoleAssignment extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -113,36 +109,28 @@ public class RoleAssignment extends Entity implements Parsable {
     /**
      * Sets the description property value. Description of the Role Assignment.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The display or friendly name of the role Assignment.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the resourceScopes property value. List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
      * @param value Value to set for the resourceScopes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceScopes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.resourceScopes = value;
     }
     /**
      * Sets the roleDefinition property value. Role definition this assignment is part of.
      * @param value Value to set for the roleDefinition property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleDefinition(@jakarta.annotation.Nullable final RoleDefinition value) {
         this.roleDefinition = value;
     }

@@ -19,9 +19,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
     private AttachmentItem attachmentItem;
     /**
      * Instantiates a new createUploadSessionPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CreateUploadSessionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,9 +62,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("AttachmentItem", this.getAttachmentItem());
@@ -75,18 +71,14 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the AttachmentItem property value. The AttachmentItem property
      * @param value Value to set for the AttachmentItem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttachmentItem(@jakarta.annotation.Nullable final AttachmentItem value) {
         this.attachmentItem = value;
     }

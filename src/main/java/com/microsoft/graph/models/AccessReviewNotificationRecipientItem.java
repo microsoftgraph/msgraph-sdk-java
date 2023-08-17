@@ -26,9 +26,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
     private String odataType;
     /**
      * Instantiates a new accessReviewNotificationRecipientItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessReviewNotificationRecipientItem() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("notificationRecipientScope", this.getNotificationRecipientScope());
@@ -102,36 +98,28 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the notificationRecipientScope property value. Determines the recipient of the notification email.
      * @param value Value to set for the notificationRecipientScope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotificationRecipientScope(@jakarta.annotation.Nullable final AccessReviewNotificationRecipientScope value) {
         this.notificationRecipientScope = value;
     }
     /**
      * Sets the notificationTemplateType property value. Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients, which sends review completion notifications to the recipients.
      * @param value Value to set for the notificationTemplateType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotificationTemplateType(@jakarta.annotation.Nullable final String value) {
         this.notificationTemplateType = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

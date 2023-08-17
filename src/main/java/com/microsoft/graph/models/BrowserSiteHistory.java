@@ -50,9 +50,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, Parsable {
     private BrowserSiteTargetEnvironment targetEnvironment;
     /**
      * Instantiates a new browserSiteHistory and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BrowserSiteHistory() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -158,9 +156,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowRedirect", this.getAllowRedirect());
@@ -176,81 +172,63 @@ public class BrowserSiteHistory implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowRedirect property value. Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain.
      * @param value Value to set for the allowRedirect property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowRedirect(@jakarta.annotation.Nullable final Boolean value) {
         this.allowRedirect = value;
     }
     /**
      * Sets the comment property value. The comment for the site.
      * @param value Value to set for the comment property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComment(@jakarta.annotation.Nullable final String value) {
         this.comment = value;
     }
     /**
      * Sets the compatibilityMode property value. Controls what compatibility setting is used for specific sites or domains. The possible values are: default, internetExplorer8Enterprise, internetExplorer7Enterprise, internetExplorer11, internetExplorer10, internetExplorer9, internetExplorer8, internetExplorer7, internetExplorer5, unknownFutureValue.
      * @param value Value to set for the compatibilityMode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompatibilityMode(@jakarta.annotation.Nullable final BrowserSiteCompatibilityMode value) {
         this.compatibilityMode = value;
     }
     /**
      * Sets the lastModifiedBy property value. The user who last modified the site.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the mergeType property value. The merge type of the site. The possible values are: noMerge, default, unknownFutureValue.
      * @param value Value to set for the mergeType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMergeType(@jakarta.annotation.Nullable final BrowserSiteMergeType value) {
         this.mergeType = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the publishedDateTime property value. The date and time when the site was last published.
      * @param value Value to set for the publishedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublishedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.publishedDateTime = value;
     }
     /**
      * Sets the targetEnvironment property value. The target environment that the site should open in. The possible values are: internetExplorerMode, internetExplorer11, microsoftEdge, configurable, none, unknownFutureValue.Prior to June 15, 2022, the internetExplorer11 option would allow opening a site in the Internet Explorer 11 (IE11) desktop application. Following the retirement of IE11 on June 15, 2022, the internetExplorer11 option will no longer open an IE11 window and will instead behave the same as the internetExplorerMode option.
      * @param value Value to set for the targetEnvironment property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetEnvironment(@jakarta.annotation.Nullable final BrowserSiteTargetEnvironment value) {
         this.targetEnvironment = value;
     }

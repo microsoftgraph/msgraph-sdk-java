@@ -16,9 +16,7 @@ public class AndroidMobileAppIdentifier extends MobileAppIdentifier implements P
     private String packageId;
     /**
      * Instantiates a new androidMobileAppIdentifier and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AndroidMobileAppIdentifier() {
         super();
         this.setOdataType("#microsoft.graph.androidMobileAppIdentifier");
@@ -54,9 +52,7 @@ public class AndroidMobileAppIdentifier extends MobileAppIdentifier implements P
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -65,9 +61,7 @@ public class AndroidMobileAppIdentifier extends MobileAppIdentifier implements P
     /**
      * Sets the packageId property value. The identifier for an app, as specified in the play store.
      * @param value Value to set for the packageId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPackageId(@jakarta.annotation.Nullable final String value) {
         this.packageId = value;
     }

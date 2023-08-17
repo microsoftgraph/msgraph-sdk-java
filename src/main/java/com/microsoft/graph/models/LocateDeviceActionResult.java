@@ -16,9 +16,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
     private DeviceGeoLocation deviceLocation;
     /**
      * Instantiates a new locateDeviceActionResult and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LocateDeviceActionResult() {
         super();
     }
@@ -53,9 +51,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -64,9 +60,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
     /**
      * Sets the deviceLocation property value. device location
      * @param value Value to set for the deviceLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceLocation(@jakarta.annotation.Nullable final DeviceGeoLocation value) {
         this.deviceLocation = value;
     }

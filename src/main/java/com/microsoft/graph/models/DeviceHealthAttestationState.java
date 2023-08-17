@@ -147,9 +147,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     private String windowsPE;
     /**
      * Instantiates a new deviceHealthAttestationState and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceHealthAttestationState() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -480,9 +478,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("attestationIdentityKey", this.getAttestationIdentityKey());
@@ -523,306 +519,238 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the attestationIdentityKey property value. TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
      * @param value Value to set for the attestationIdentityKey property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttestationIdentityKey(@jakarta.annotation.Nullable final String value) {
         this.attestationIdentityKey = value;
     }
     /**
      * Sets the bitLockerStatus property value. On or Off of BitLocker Drive Encryption
      * @param value Value to set for the bitLockerStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBitLockerStatus(@jakarta.annotation.Nullable final String value) {
         this.bitLockerStatus = value;
     }
     /**
      * Sets the bootAppSecurityVersion property value. The security version number of the Boot Application
      * @param value Value to set for the bootAppSecurityVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBootAppSecurityVersion(@jakarta.annotation.Nullable final String value) {
         this.bootAppSecurityVersion = value;
     }
     /**
      * Sets the bootDebugging property value. When bootDebugging is enabled, the device is used in development and testing
      * @param value Value to set for the bootDebugging property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBootDebugging(@jakarta.annotation.Nullable final String value) {
         this.bootDebugging = value;
     }
     /**
      * Sets the bootManagerSecurityVersion property value. The security version number of the Boot Application
      * @param value Value to set for the bootManagerSecurityVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBootManagerSecurityVersion(@jakarta.annotation.Nullable final String value) {
         this.bootManagerSecurityVersion = value;
     }
     /**
      * Sets the bootManagerVersion property value. The version of the Boot Manager
      * @param value Value to set for the bootManagerVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBootManagerVersion(@jakarta.annotation.Nullable final String value) {
         this.bootManagerVersion = value;
     }
     /**
      * Sets the bootRevisionListInfo property value. The Boot Revision List that was loaded during initial boot on the attested device
      * @param value Value to set for the bootRevisionListInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBootRevisionListInfo(@jakarta.annotation.Nullable final String value) {
         this.bootRevisionListInfo = value;
     }
     /**
      * Sets the codeIntegrity property value. When code integrity is enabled, code execution is restricted to integrity verified code
      * @param value Value to set for the codeIntegrity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCodeIntegrity(@jakarta.annotation.Nullable final String value) {
         this.codeIntegrity = value;
     }
     /**
      * Sets the codeIntegrityCheckVersion property value. The version of the Boot Manager
      * @param value Value to set for the codeIntegrityCheckVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCodeIntegrityCheckVersion(@jakarta.annotation.Nullable final String value) {
         this.codeIntegrityCheckVersion = value;
     }
     /**
      * Sets the codeIntegrityPolicy property value. The Code Integrity policy that is controlling the security of the boot environment
      * @param value Value to set for the codeIntegrityPolicy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCodeIntegrityPolicy(@jakarta.annotation.Nullable final String value) {
         this.codeIntegrityPolicy = value;
     }
     /**
      * Sets the contentNamespaceUrl property value. The DHA report version. (Namespace version)
      * @param value Value to set for the contentNamespaceUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentNamespaceUrl(@jakarta.annotation.Nullable final String value) {
         this.contentNamespaceUrl = value;
     }
     /**
      * Sets the contentVersion property value. The HealthAttestation state schema version
      * @param value Value to set for the contentVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentVersion(@jakarta.annotation.Nullable final String value) {
         this.contentVersion = value;
     }
     /**
      * Sets the dataExcutionPolicy property value. DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
      * @param value Value to set for the dataExcutionPolicy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDataExcutionPolicy(@jakarta.annotation.Nullable final String value) {
         this.dataExcutionPolicy = value;
     }
     /**
      * Sets the deviceHealthAttestationStatus property value. The DHA report version. (Namespace version)
      * @param value Value to set for the deviceHealthAttestationStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceHealthAttestationStatus(@jakarta.annotation.Nullable final String value) {
         this.deviceHealthAttestationStatus = value;
     }
     /**
      * Sets the earlyLaunchAntiMalwareDriverProtection property value. ELAM provides protection for the computers in your network when they start up
      * @param value Value to set for the earlyLaunchAntiMalwareDriverProtection property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEarlyLaunchAntiMalwareDriverProtection(@jakarta.annotation.Nullable final String value) {
         this.earlyLaunchAntiMalwareDriverProtection = value;
     }
     /**
      * Sets the healthAttestationSupportedStatus property value. This attribute indicates if DHA is supported for the device
      * @param value Value to set for the healthAttestationSupportedStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHealthAttestationSupportedStatus(@jakarta.annotation.Nullable final String value) {
         this.healthAttestationSupportedStatus = value;
     }
     /**
      * Sets the healthStatusMismatchInfo property value. This attribute appears if DHA-Service detects an integrity issue
      * @param value Value to set for the healthStatusMismatchInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHealthStatusMismatchInfo(@jakarta.annotation.Nullable final String value) {
         this.healthStatusMismatchInfo = value;
     }
     /**
      * Sets the issuedDateTime property value. The DateTime when device was evaluated or issued to MDM
      * @param value Value to set for the issuedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIssuedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.issuedDateTime = value;
     }
     /**
      * Sets the lastUpdateDateTime property value. The Timestamp of the last update.
      * @param value Value to set for the lastUpdateDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastUpdateDateTime(@jakarta.annotation.Nullable final String value) {
         this.lastUpdateDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the operatingSystemKernelDebugging property value. When operatingSystemKernelDebugging is enabled, the device is used in development and testing
      * @param value Value to set for the operatingSystemKernelDebugging property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperatingSystemKernelDebugging(@jakarta.annotation.Nullable final String value) {
         this.operatingSystemKernelDebugging = value;
     }
     /**
      * Sets the operatingSystemRevListInfo property value. The Operating System Revision List that was loaded during initial boot on the attested device
      * @param value Value to set for the operatingSystemRevListInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperatingSystemRevListInfo(@jakarta.annotation.Nullable final String value) {
         this.operatingSystemRevListInfo = value;
     }
     /**
      * Sets the pcr0 property value. The measurement that is captured in PCR[0]
      * @param value Value to set for the pcr0 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPcr0(@jakarta.annotation.Nullable final String value) {
         this.pcr0 = value;
     }
     /**
      * Sets the pcrHashAlgorithm property value. Informational attribute that identifies the HASH algorithm that was used by TPM
      * @param value Value to set for the pcrHashAlgorithm property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPcrHashAlgorithm(@jakarta.annotation.Nullable final String value) {
         this.pcrHashAlgorithm = value;
     }
     /**
      * Sets the resetCount property value. The number of times a PC device has hibernated or resumed
      * @param value Value to set for the resetCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResetCount(@jakarta.annotation.Nullable final Long value) {
         this.resetCount = value;
     }
     /**
      * Sets the restartCount property value. The number of times a PC device has rebooted
      * @param value Value to set for the restartCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRestartCount(@jakarta.annotation.Nullable final Long value) {
         this.restartCount = value;
     }
     /**
      * Sets the safeMode property value. Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
      * @param value Value to set for the safeMode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSafeMode(@jakarta.annotation.Nullable final String value) {
         this.safeMode = value;
     }
     /**
      * Sets the secureBoot property value. When Secure Boot is enabled, the core components must have the correct cryptographic signatures
      * @param value Value to set for the secureBoot property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecureBoot(@jakarta.annotation.Nullable final String value) {
         this.secureBoot = value;
     }
     /**
      * Sets the secureBootConfigurationPolicyFingerPrint property value. Fingerprint of the Custom Secure Boot Configuration Policy
      * @param value Value to set for the secureBootConfigurationPolicyFingerPrint property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecureBootConfigurationPolicyFingerPrint(@jakarta.annotation.Nullable final String value) {
         this.secureBootConfigurationPolicyFingerPrint = value;
     }
     /**
      * Sets the testSigning property value. When test signing is allowed, the device does not enforce signature validation during boot
      * @param value Value to set for the testSigning property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTestSigning(@jakarta.annotation.Nullable final String value) {
         this.testSigning = value;
     }
     /**
      * Sets the tpmVersion property value. The security version number of the Boot Application
      * @param value Value to set for the tpmVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTpmVersion(@jakarta.annotation.Nullable final String value) {
         this.tpmVersion = value;
     }
     /**
      * Sets the virtualSecureMode property value. VSM is a container that protects high value assets from a compromised kernel
      * @param value Value to set for the virtualSecureMode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVirtualSecureMode(@jakarta.annotation.Nullable final String value) {
         this.virtualSecureMode = value;
     }
     /**
      * Sets the windowsPE property value. Operating system running with limited services that is used to prepare a computer for Windows
      * @param value Value to set for the windowsPE property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsPE(@jakarta.annotation.Nullable final String value) {
         this.windowsPE = value;
     }

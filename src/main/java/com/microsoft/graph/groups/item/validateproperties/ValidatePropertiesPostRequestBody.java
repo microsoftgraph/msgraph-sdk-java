@@ -27,9 +27,7 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
     private UUID onBehalfOfUserId;
     /**
      * Instantiates a new validatePropertiesPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ValidatePropertiesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +88,7 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -103,36 +99,28 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the mailNickname property value. The mailNickname property
      * @param value Value to set for the mailNickname property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMailNickname(@jakarta.annotation.Nullable final String value) {
         this.mailNickname = value;
     }
     /**
      * Sets the onBehalfOfUserId property value. The onBehalfOfUserId property
      * @param value Value to set for the onBehalfOfUserId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnBehalfOfUserId(@jakarta.annotation.Nullable final UUID value) {
         this.onBehalfOfUserId = value;
     }

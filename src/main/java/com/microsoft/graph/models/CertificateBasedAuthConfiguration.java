@@ -13,9 +13,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
     private java.util.List<CertificateAuthority> certificateAuthorities;
     /**
      * Instantiates a new certificateBasedAuthConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CertificateBasedAuthConfiguration() {
         super();
     }
@@ -50,9 +48,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +57,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
     /**
      * Sets the certificateAuthorities property value. Collection of certificate authorities which creates a trusted certificate chain.
      * @param value Value to set for the certificateAuthorities property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificateAuthorities(@jakarta.annotation.Nullable final java.util.List<CertificateAuthority> value) {
         this.certificateAuthorities = value;
     }

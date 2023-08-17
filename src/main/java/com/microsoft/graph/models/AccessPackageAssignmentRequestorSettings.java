@@ -50,9 +50,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     private java.util.List<SubjectSet> onBehalfRequestors;
     /**
      * Instantiates a new accessPackageAssignmentRequestorSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageAssignmentRequestorSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -167,9 +165,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowCustomAssignmentSchedule", this.getAllowCustomAssignmentSchedule());
@@ -186,90 +182,70 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowCustomAssignmentSchedule property value. False indicates that the requestor is not permitted to include a schedule in their request.
      * @param value Value to set for the allowCustomAssignmentSchedule property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowCustomAssignmentSchedule(@jakarta.annotation.Nullable final Boolean value) {
         this.allowCustomAssignmentSchedule = value;
     }
     /**
      * Sets the enableOnBehalfRequestorsToAddAccess property value. True allows on-behalf-of requestors to create a request to add access for another principal.
      * @param value Value to set for the enableOnBehalfRequestorsToAddAccess property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnableOnBehalfRequestorsToAddAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.enableOnBehalfRequestorsToAddAccess = value;
     }
     /**
      * Sets the enableOnBehalfRequestorsToRemoveAccess property value. True allows on-behalf-of requestors to create a request to remove access for another principal.
      * @param value Value to set for the enableOnBehalfRequestorsToRemoveAccess property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnableOnBehalfRequestorsToRemoveAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.enableOnBehalfRequestorsToRemoveAccess = value;
     }
     /**
      * Sets the enableOnBehalfRequestorsToUpdateAccess property value. True allows on-behalf-of requestors to create a request to update access for another principal.
      * @param value Value to set for the enableOnBehalfRequestorsToUpdateAccess property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnableOnBehalfRequestorsToUpdateAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.enableOnBehalfRequestorsToUpdateAccess = value;
     }
     /**
      * Sets the enableTargetsToSelfAddAccess property value. True allows requestors to create a request to add access for themselves.
      * @param value Value to set for the enableTargetsToSelfAddAccess property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnableTargetsToSelfAddAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.enableTargetsToSelfAddAccess = value;
     }
     /**
      * Sets the enableTargetsToSelfRemoveAccess property value. True allows requestors to create a request to remove their access.
      * @param value Value to set for the enableTargetsToSelfRemoveAccess property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnableTargetsToSelfRemoveAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.enableTargetsToSelfRemoveAccess = value;
     }
     /**
      * Sets the enableTargetsToSelfUpdateAccess property value. True allows requestors to create a request to update their access.
      * @param value Value to set for the enableTargetsToSelfUpdateAccess property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnableTargetsToSelfUpdateAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.enableTargetsToSelfUpdateAccess = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the onBehalfRequestors property value. The principals who can request on-behalf-of others.
      * @param value Value to set for the onBehalfRequestors property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnBehalfRequestors(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
         this.onBehalfRequestors = value;
     }

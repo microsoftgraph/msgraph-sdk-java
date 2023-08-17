@@ -57,9 +57,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new deviceComplianceSettingState and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceComplianceSettingState() {
         super();
     }
@@ -184,9 +182,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -205,99 +201,77 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     /**
      * Sets the complianceGracePeriodExpirationDateTime property value. The DateTime when device compliance grace period expires
      * @param value Value to set for the complianceGracePeriodExpirationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComplianceGracePeriodExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.complianceGracePeriodExpirationDateTime = value;
     }
     /**
      * Sets the deviceId property value. The Device Id that is being reported
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the deviceModel property value. The device model that is being reported
      * @param value Value to set for the deviceModel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
         this.deviceModel = value;
     }
     /**
      * Sets the deviceName property value. The Device Name that is being reported
      * @param value Value to set for the deviceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
      * Sets the setting property value. The setting class name and property name.
      * @param value Value to set for the setting property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSetting(@jakarta.annotation.Nullable final String value) {
         this.setting = value;
     }
     /**
      * Sets the settingName property value. The Setting Name that is being reported
      * @param value Value to set for the settingName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingName(@jakarta.annotation.Nullable final String value) {
         this.settingName = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final ComplianceStatus value) {
         this.state = value;
     }
     /**
      * Sets the userEmail property value. The User email address that is being reported
      * @param value Value to set for the userEmail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserEmail(@jakarta.annotation.Nullable final String value) {
         this.userEmail = value;
     }
     /**
      * Sets the userId property value. The user Id that is being reported
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
      * Sets the userName property value. The User Name that is being reported
      * @param value Value to set for the userName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
     /**
      * Sets the userPrincipalName property value. The User PrincipalName that is being reported
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }

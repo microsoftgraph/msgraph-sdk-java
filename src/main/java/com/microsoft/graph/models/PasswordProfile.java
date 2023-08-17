@@ -30,9 +30,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
     private String password;
     /**
      * Instantiates a new passwordProfile and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PasswordProfile() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("forceChangePasswordNextSignIn", this.getForceChangePasswordNextSignIn());
@@ -116,45 +112,35 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the forceChangePasswordNextSignIn property value. true if the user must change her password on the next login; otherwise false.
      * @param value Value to set for the forceChangePasswordNextSignIn property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setForceChangePasswordNextSignIn(@jakarta.annotation.Nullable final Boolean value) {
         this.forceChangePasswordNextSignIn = value;
     }
     /**
      * Sets the forceChangePasswordNextSignInWithMfa property value. If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
      * @param value Value to set for the forceChangePasswordNextSignInWithMfa property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setForceChangePasswordNextSignInWithMfa(@jakarta.annotation.Nullable final Boolean value) {
         this.forceChangePasswordNextSignInWithMfa = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user's passwordPolicies property. By default, a strong password is required.
      * @param value Value to set for the password property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPassword(@jakarta.annotation.Nullable final String value) {
         this.password = value;
     }

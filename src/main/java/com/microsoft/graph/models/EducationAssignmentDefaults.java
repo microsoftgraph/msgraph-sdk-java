@@ -26,9 +26,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     private String notificationChannelUrl;
     /**
      * Instantiates a new educationAssignmentDefaults and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationAssignmentDefaults() {
         super();
     }
@@ -90,9 +88,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +100,28 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     /**
      * Sets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
      * @param value Value to set for the addedStudentAction property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAddedStudentAction(@jakarta.annotation.Nullable final EducationAddedStudentAction value) {
         this.addedStudentAction = value;
     }
     /**
      * Sets the addToCalendarAction property value. Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
      * @param value Value to set for the addToCalendarAction property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAddToCalendarAction(@jakarta.annotation.Nullable final EducationAddToCalendarOptions value) {
         this.addToCalendarAction = value;
     }
     /**
      * Sets the dueTime property value. Class-level default value for due time field. Default value is 23:59:00.
      * @param value Value to set for the dueTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDueTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.dueTime = value;
     }
     /**
      * Sets the notificationChannelUrl property value. Default Teams channel to which notifications will be sent. Default value is null.
      * @param value Value to set for the notificationChannelUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotificationChannelUrl(@jakarta.annotation.Nullable final String value) {
         this.notificationChannelUrl = value;
     }

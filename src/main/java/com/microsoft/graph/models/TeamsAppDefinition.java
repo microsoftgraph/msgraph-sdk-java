@@ -50,9 +50,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     private String version;
     /**
      * Instantiates a new teamsAppDefinition and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamsAppDefinition() {
         super();
     }
@@ -168,9 +166,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -188,90 +184,70 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     /**
      * Sets the authorization property value. Authorization requirements specified in the Teams app manifest.
      * @param value Value to set for the authorization property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthorization(@jakarta.annotation.Nullable final TeamsAppAuthorization value) {
         this.authorization = value;
     }
     /**
      * Sets the bot property value. The details of the bot specified in the Teams app manifest.
      * @param value Value to set for the bot property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBot(@jakarta.annotation.Nullable final TeamworkBot value) {
         this.bot = value;
     }
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the description property value. Verbose description of the application.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the app provided by the app developer.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
      * @param value Value to set for the publishingState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublishingState(@jakarta.annotation.Nullable final TeamsAppPublishingState value) {
         this.publishingState = value;
     }
     /**
      * Sets the shortDescription property value. Short description of the application.
      * @param value Value to set for the shortDescription property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShortDescription(@jakarta.annotation.Nullable final String value) {
         this.shortDescription = value;
     }
     /**
      * Sets the teamsAppId property value. The ID from the Teams app manifest.
      * @param value Value to set for the teamsAppId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamsAppId(@jakarta.annotation.Nullable final String value) {
         this.teamsAppId = value;
     }
     /**
      * Sets the version property value. The version number of the application.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }

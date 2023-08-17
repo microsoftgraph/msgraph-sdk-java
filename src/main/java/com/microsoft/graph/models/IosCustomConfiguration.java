@@ -24,9 +24,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     private String payloadName;
     /**
      * Instantiates a new iosCustomConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosCustomConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosCustomConfiguration");
@@ -80,9 +78,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -93,27 +89,21 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     /**
      * Sets the payload property value. Payload. (UTF8 encoded byte array)
      * @param value Value to set for the payload property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPayload(@jakarta.annotation.Nullable final byte[] value) {
         this.payload = value;
     }
     /**
      * Sets the payloadFileName property value. Payload file name (.mobileconfig
      * @param value Value to set for the payloadFileName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPayloadFileName(@jakarta.annotation.Nullable final String value) {
         this.payloadFileName = value;
     }
     /**
      * Sets the payloadName property value. Name that is displayed to the user.
      * @param value Value to set for the payloadName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPayloadName(@jakarta.annotation.Nullable final String value) {
         this.payloadName = value;
     }

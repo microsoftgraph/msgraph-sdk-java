@@ -58,9 +58,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     private String targetDirectoryName;
     /**
      * Instantiates a new synchronizationRule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SynchronizationRule() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -193,9 +191,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("containerFilter", this.getContainerFilter());
@@ -214,108 +210,84 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the containerFilter property value. The containerFilter property
      * @param value Value to set for the containerFilter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContainerFilter(@jakarta.annotation.Nullable final ContainerFilter value) {
         this.containerFilter = value;
     }
     /**
      * Sets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
      * @param value Value to set for the editable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEditable(@jakarta.annotation.Nullable final Boolean value) {
         this.editable = value;
     }
     /**
      * Sets the groupFilter property value. The groupFilter property
      * @param value Value to set for the groupFilter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroupFilter(@jakarta.annotation.Nullable final GroupFilter value) {
         this.groupFilter = value;
     }
     /**
      * Sets the id property value. Synchronization rule identifier. Must be one of the identifiers recognized by the synchronization engine. Supported rule identifiers can be found in the synchronization template returned by the API.
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
      * @param value Value to set for the metadata property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMetadata(@jakarta.annotation.Nullable final java.util.List<StringKeyStringValuePair> value) {
         this.metadata = value;
     }
     /**
      * Sets the name property value. Human-readable name of the synchronization rule. Not nullable.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the objectMappings property value. Collection of object mappings supported by the rule. Tells the synchronization engine which objects should be synchronized.
      * @param value Value to set for the objectMappings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setObjectMappings(@jakarta.annotation.Nullable final java.util.List<ObjectMapping> value) {
         this.objectMappings = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the priority property value. Priority relative to other rules in the synchronizationSchema. Rules with the lowest priority number will be processed first.
      * @param value Value to set for the priority property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.priority = value;
     }
     /**
      * Sets the sourceDirectoryName property value. Name of the source directory. Must match one of the directory definitions in synchronizationSchema.
      * @param value Value to set for the sourceDirectoryName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceDirectoryName(@jakarta.annotation.Nullable final String value) {
         this.sourceDirectoryName = value;
     }
     /**
      * Sets the targetDirectoryName property value. Name of the target directory. Must match one of the directory definitions in synchronizationSchema.
      * @param value Value to set for the targetDirectoryName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetDirectoryName(@jakarta.annotation.Nullable final String value) {
         this.targetDirectoryName = value;
     }

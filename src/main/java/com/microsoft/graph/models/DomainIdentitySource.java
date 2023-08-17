@@ -17,9 +17,7 @@ public class DomainIdentitySource extends IdentitySource implements Parsable {
     private String domainName;
     /**
      * Instantiates a new domainIdentitySource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DomainIdentitySource() {
         super();
         this.setOdataType("#microsoft.graph.domainIdentitySource");
@@ -64,9 +62,7 @@ public class DomainIdentitySource extends IdentitySource implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class DomainIdentitySource extends IdentitySource implements Parsable {
     /**
      * Sets the displayName property value. The name of the identity source, typically also the domain name. Read only.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the domainName property value. The domain name. Read only.
      * @param value Value to set for the domainName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDomainName(@jakarta.annotation.Nullable final String value) {
         this.domainName = value;
     }

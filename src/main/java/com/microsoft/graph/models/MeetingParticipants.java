@@ -26,9 +26,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
     private MeetingParticipantInfo organizer;
     /**
      * Instantiates a new meetingParticipants and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MeetingParticipants() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("attendees", this.getAttendees());
@@ -102,36 +98,28 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the attendees property value. The attendees property
      * @param value Value to set for the attendees property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttendees(@jakarta.annotation.Nullable final java.util.List<MeetingParticipantInfo> value) {
         this.attendees = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the organizer property value. The organizer property
      * @param value Value to set for the organizer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrganizer(@jakarta.annotation.Nullable final MeetingParticipantInfo value) {
         this.organizer = value;
     }

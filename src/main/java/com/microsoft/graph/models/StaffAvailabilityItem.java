@@ -26,9 +26,7 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
     private String staffId;
     /**
      * Instantiates a new staffAvailabilityItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public StaffAvailabilityItem() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("availabilityItems", this.getAvailabilityItems());
@@ -102,36 +98,28 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the availabilityItems property value. Each item in this collection indicates a slot and the status of the staff member.
      * @param value Value to set for the availabilityItems property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAvailabilityItems(@jakarta.annotation.Nullable final java.util.List<AvailabilityItem> value) {
         this.availabilityItems = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the staffId property value. The ID of the staff member.
      * @param value Value to set for the staffId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStaffId(@jakarta.annotation.Nullable final String value) {
         this.staffId = value;
     }

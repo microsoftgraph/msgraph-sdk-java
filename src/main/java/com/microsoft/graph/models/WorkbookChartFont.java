@@ -33,9 +33,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
     private String underline;
     /**
      * Instantiates a new workbookChartFont and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookChartFont() {
         super();
     }
@@ -115,9 +113,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -131,54 +127,42 @@ public class WorkbookChartFont extends Entity implements Parsable {
     /**
      * Sets the bold property value. Represents the bold status of font.
      * @param value Value to set for the bold property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBold(@jakarta.annotation.Nullable final Boolean value) {
         this.bold = value;
     }
     /**
      * Sets the color property value. HTML color code representation of the text color. E.g. #FF0000 represents Red.
      * @param value Value to set for the color property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColor(@jakarta.annotation.Nullable final String value) {
         this.color = value;
     }
     /**
      * Sets the italic property value. Represents the italic status of the font.
      * @param value Value to set for the italic property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setItalic(@jakarta.annotation.Nullable final Boolean value) {
         this.italic = value;
     }
     /**
      * Sets the name property value. Font name (e.g. 'Calibri')
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the size property value. Size of the font (e.g. 11)
      * @param value Value to set for the size property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSize(@jakarta.annotation.Nullable final Double value) {
         this.size = value;
     }
     /**
      * Sets the underline property value. Type of underline applied to the font. The possible values are: None, Single.
      * @param value Value to set for the underline property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnderline(@jakarta.annotation.Nullable final String value) {
         this.underline = value;
     }

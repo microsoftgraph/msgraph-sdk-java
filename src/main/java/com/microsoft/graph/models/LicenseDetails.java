@@ -22,9 +22,7 @@ public class LicenseDetails extends Entity implements Parsable {
     private String skuPartNumber;
     /**
      * Instantiates a new licenseDetails and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LicenseDetails() {
         super();
     }
@@ -77,9 +75,7 @@ public class LicenseDetails extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class LicenseDetails extends Entity implements Parsable {
     /**
      * Sets the servicePlans property value. Information about the service plans assigned with the license. Read-only, Not nullable
      * @param value Value to set for the servicePlans property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServicePlans(@jakarta.annotation.Nullable final java.util.List<ServicePlanInfo> value) {
         this.servicePlans = value;
     }
     /**
      * Sets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
      * @param value Value to set for the skuId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSkuId(@jakarta.annotation.Nullable final UUID value) {
         this.skuId = value;
     }
     /**
      * Sets the skuPartNumber property value. Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
      * @param value Value to set for the skuPartNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSkuPartNumber(@jakarta.annotation.Nullable final String value) {
         this.skuPartNumber = value;
     }

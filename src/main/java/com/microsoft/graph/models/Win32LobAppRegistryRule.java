@@ -36,9 +36,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     private String valueName;
     /**
      * Instantiates a new win32LobAppRegistryRule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Win32LobAppRegistryRule() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppRegistryRule");
@@ -119,9 +117,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,54 +131,42 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     /**
      * Sets the check32BitOn64System property value. A value indicating whether to search the 32-bit registry on 64-bit systems.
      * @param value Value to set for the check32BitOn64System property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCheck32BitOn64System(@jakarta.annotation.Nullable final Boolean value) {
         this.check32BitOn64System = value;
     }
     /**
      * Sets the comparisonValue property value. The registry comparison value.
      * @param value Value to set for the comparisonValue property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComparisonValue(@jakarta.annotation.Nullable final String value) {
         this.comparisonValue = value;
     }
     /**
      * Sets the keyPath property value. The full path of the registry entry containing the value to detect.
      * @param value Value to set for the keyPath property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKeyPath(@jakarta.annotation.Nullable final String value) {
         this.keyPath = value;
     }
     /**
      * Sets the operationType property value. Contains all supported registry data detection type.
      * @param value Value to set for the operationType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperationType(@jakarta.annotation.Nullable final Win32LobAppRegistryRuleOperationType value) {
         this.operationType = value;
     }
     /**
      * Sets the operator property value. Contains properties for detection operator.
      * @param value Value to set for the operator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperator(@jakarta.annotation.Nullable final Win32LobAppRuleOperator value) {
         this.operator = value;
     }
     /**
      * Sets the valueName property value. The name of the registry value to detect.
      * @param value Value to set for the valueName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValueName(@jakarta.annotation.Nullable final String value) {
         this.valueName = value;
     }

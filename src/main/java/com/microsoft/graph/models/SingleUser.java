@@ -17,9 +17,7 @@ public class SingleUser extends SubjectSet implements Parsable {
     private String userId;
     /**
      * Instantiates a new singleUser and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SingleUser() {
         super();
         this.setOdataType("#microsoft.graph.singleUser");
@@ -64,9 +62,7 @@ public class SingleUser extends SubjectSet implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class SingleUser extends SubjectSet implements Parsable {
     /**
      * Sets the description property value. The name of the user in Azure AD. Read only.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the userId property value. The ID of the user in Azure AD.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }

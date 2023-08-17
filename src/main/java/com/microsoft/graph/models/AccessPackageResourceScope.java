@@ -33,9 +33,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
     private AccessPackageResource resource;
     /**
      * Instantiates a new accessPackageResourceScope and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageResourceScope() {
         super();
     }
@@ -115,9 +113,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -131,54 +127,42 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
     /**
      * Sets the description property value. The description of the scope.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of the scope.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the isRootScope property value. True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
      * @param value Value to set for the isRootScope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsRootScope(@jakarta.annotation.Nullable final Boolean value) {
         this.isRootScope = value;
     }
     /**
      * Sets the originId property value. The unique identifier for the scope in the resource as defined in the origin system.
      * @param value Value to set for the originId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOriginId(@jakarta.annotation.Nullable final String value) {
         this.originId = value;
     }
     /**
      * Sets the originSystem property value. The origin system for the scope.
      * @param value Value to set for the originSystem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOriginSystem(@jakarta.annotation.Nullable final String value) {
         this.originSystem = value;
     }
     /**
      * Sets the resource property value. The resource property
      * @param value Value to set for the resource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResource(@jakarta.annotation.Nullable final AccessPackageResource value) {
         this.resource = value;
     }

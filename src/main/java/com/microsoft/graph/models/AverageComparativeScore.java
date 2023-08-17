@@ -26,9 +26,7 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new averageComparativeScore and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AverageComparativeScore() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeDoubleValue("averageScore", this.getAverageScore());
@@ -102,36 +98,28 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the averageScore property value. Average score within specified basis.
      * @param value Value to set for the averageScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAverageScore(@jakarta.annotation.Nullable final Double value) {
         this.averageScore = value;
     }
     /**
      * Sets the basis property value. Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes.
      * @param value Value to set for the basis property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBasis(@jakarta.annotation.Nullable final String value) {
         this.basis = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

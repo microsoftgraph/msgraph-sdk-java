@@ -45,9 +45,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
     private String topicIdentifier;
     /**
      * Instantiates a new applePushNotificationCertificate and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ApplePushNotificationCertificate() {
         super();
     }
@@ -145,9 +143,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -162,72 +158,56 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
     /**
      * Sets the appleIdentifier property value. Apple Id of the account used to create the MDM push certificate.
      * @param value Value to set for the appleIdentifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppleIdentifier(@jakarta.annotation.Nullable final String value) {
         this.appleIdentifier = value;
     }
     /**
      * Sets the certificate property value. Not yet documented
      * @param value Value to set for the certificate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificate(@jakarta.annotation.Nullable final String value) {
         this.certificate = value;
     }
     /**
      * Sets the certificateSerialNumber property value. Certificate serial number. This property is read-only.
      * @param value Value to set for the certificateSerialNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificateSerialNumber(@jakarta.annotation.Nullable final String value) {
         this.certificateSerialNumber = value;
     }
     /**
      * Sets the certificateUploadFailureReason property value. The reason the certificate upload failed.
      * @param value Value to set for the certificateUploadFailureReason property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificateUploadFailureReason(@jakarta.annotation.Nullable final String value) {
         this.certificateUploadFailureReason = value;
     }
     /**
      * Sets the certificateUploadStatus property value. The certificate upload status.
      * @param value Value to set for the certificateUploadStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificateUploadStatus(@jakarta.annotation.Nullable final String value) {
         this.certificateUploadStatus = value;
     }
     /**
      * Sets the expirationDateTime property value. The expiration date and time for Apple push notification certificate.
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Last modified date and time for Apple push notification certificate.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the topicIdentifier property value. Topic Id.
      * @param value Value to set for the topicIdentifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTopicIdentifier(@jakarta.annotation.Nullable final String value) {
         this.topicIdentifier = value;
     }

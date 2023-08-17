@@ -46,9 +46,7 @@ public class EducationRubric extends Entity implements Parsable {
     private java.util.List<RubricQuality> qualities;
     /**
      * Instantiates a new educationRubric and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationRubric() {
         super();
     }
@@ -155,9 +153,7 @@ public class EducationRubric extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -170,81 +166,63 @@ public class EducationRubric extends Entity implements Parsable {
     /**
      * Sets the createdBy property value. The user who created this resource.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description of this rubric.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final EducationItemBody value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The name of this rubric.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the grading property value. The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
      * @param value Value to set for the grading property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGrading(@jakarta.annotation.Nullable final EducationAssignmentGradeType value) {
         this.grading = value;
     }
     /**
      * Sets the lastModifiedBy property value. The last user to modify the resource.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the levels property value. The collection of levels making up this rubric.
      * @param value Value to set for the levels property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLevels(@jakarta.annotation.Nullable final java.util.List<RubricLevel> value) {
         this.levels = value;
     }
     /**
      * Sets the qualities property value. The collection of qualities making up this rubric.
      * @param value Value to set for the qualities property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQualities(@jakarta.annotation.Nullable final java.util.List<RubricQuality> value) {
         this.qualities = value;
     }

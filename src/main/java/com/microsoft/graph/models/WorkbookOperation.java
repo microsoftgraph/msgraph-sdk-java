@@ -21,9 +21,7 @@ public class WorkbookOperation extends Entity implements Parsable {
     private WorkbookOperationStatus status;
     /**
      * Instantiates a new workbookOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookOperation() {
         super();
     }
@@ -76,9 +74,7 @@ public class WorkbookOperation extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +85,21 @@ public class WorkbookOperation extends Entity implements Parsable {
     /**
      * Sets the error property value. The error returned by the operation.
      * @param value Value to set for the error property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setError(@jakarta.annotation.Nullable final WorkbookOperationError value) {
         this.error = value;
     }
     /**
      * Sets the resourceLocation property value. The resource URI for the result.
      * @param value Value to set for the resourceLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceLocation(@jakarta.annotation.Nullable final String value) {
         this.resourceLocation = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final WorkbookOperationStatus value) {
         this.status = value;
     }

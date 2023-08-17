@@ -21,9 +21,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
     private String meetingChatId;
     /**
      * Instantiates a new meetingPolicyUpdatedEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MeetingPolicyUpdatedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.meetingPolicyUpdatedEventMessageDetail");
@@ -77,9 +75,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
     /**
      * Sets the meetingChatEnabled property value. Represents whether the meeting chat is enabled or not.
      * @param value Value to set for the meetingChatEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMeetingChatEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.meetingChatEnabled = value;
     }
     /**
      * Sets the meetingChatId property value. Unique identifier of the meeting chat.
      * @param value Value to set for the meetingChatId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMeetingChatId(@jakarta.annotation.Nullable final String value) {
         this.meetingChatId = value;
     }

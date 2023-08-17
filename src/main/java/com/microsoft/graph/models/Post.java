@@ -62,9 +62,7 @@ public class Post extends OutlookItem implements Parsable {
     private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
     /**
      * Instantiates a new post and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Post() {
         super();
         this.setOdataType("#microsoft.graph.post");
@@ -208,9 +206,7 @@ public class Post extends OutlookItem implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -231,117 +227,91 @@ public class Post extends OutlookItem implements Parsable {
     /**
      * Sets the attachments property value. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the attachments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttachments(@jakarta.annotation.Nullable final java.util.List<Attachment> value) {
         this.attachments = value;
     }
     /**
      * Sets the body property value. The contents of the post. This is a default property. This property can be null.
      * @param value Value to set for the body property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
         this.body = value;
     }
     /**
      * Sets the conversationId property value. Unique ID of the conversation. Read-only.
      * @param value Value to set for the conversationId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConversationId(@jakarta.annotation.Nullable final String value) {
         this.conversationId = value;
     }
     /**
      * Sets the conversationThreadId property value. Unique ID of the conversation thread. Read-only.
      * @param value Value to set for the conversationThreadId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConversationThreadId(@jakarta.annotation.Nullable final String value) {
         this.conversationThreadId = value;
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the extensions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
         this.extensions = value;
     }
     /**
      * Sets the from property value. The from property
      * @param value Value to set for the from property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFrom(@jakarta.annotation.Nullable final Recipient value) {
         this.from = value;
     }
     /**
      * Sets the hasAttachments property value. Indicates whether the post has at least one attachment. This is a default property.
      * @param value Value to set for the hasAttachments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
         this.hasAttachments = value;
     }
     /**
      * Sets the inReplyTo property value. Read-only. Supports $expand.
      * @param value Value to set for the inReplyTo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInReplyTo(@jakarta.annotation.Nullable final Post value) {
         this.inReplyTo = value;
     }
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the post. Read-only. Nullable.
      * @param value Value to set for the multiValueExtendedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this.multiValueExtendedProperties = value;
     }
     /**
      * Sets the newParticipants property value. Conversation participants that were added to the thread as part of this post.
      * @param value Value to set for the newParticipants property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNewParticipants(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.newParticipants = value;
     }
     /**
      * Sets the receivedDateTime property value. Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the receivedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReceivedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.receivedDateTime = value;
     }
     /**
      * Sets the sender property value. Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
      * @param value Value to set for the sender property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSender(@jakarta.annotation.Nullable final Recipient value) {
         this.sender = value;
     }
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the post. Read-only. Nullable.
      * @param value Value to set for the singleValueExtendedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this.singleValueExtendedProperties = value;
     }

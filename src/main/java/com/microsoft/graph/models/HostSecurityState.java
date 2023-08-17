@@ -54,9 +54,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     private String riskScore;
     /**
      * Instantiates a new hostSecurityState and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public HostSecurityState() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -180,9 +178,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("fqdn", this.getFqdn());
@@ -200,99 +196,77 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the fqdn property value. Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com).
      * @param value Value to set for the fqdn property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFqdn(@jakarta.annotation.Nullable final String value) {
         this.fqdn = value;
     }
     /**
      * Sets the isAzureAdJoined property value. The isAzureAdJoined property
      * @param value Value to set for the isAzureAdJoined property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAzureAdJoined(@jakarta.annotation.Nullable final Boolean value) {
         this.isAzureAdJoined = value;
     }
     /**
      * Sets the isAzureAdRegistered property value. The isAzureAdRegistered property
      * @param value Value to set for the isAzureAdRegistered property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAzureAdRegistered(@jakarta.annotation.Nullable final Boolean value) {
         this.isAzureAdRegistered = value;
     }
     /**
      * Sets the isHybridAzureDomainJoined property value. True if the host is domain joined to an on-premises Active Directory domain.
      * @param value Value to set for the isHybridAzureDomainJoined property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsHybridAzureDomainJoined(@jakarta.annotation.Nullable final Boolean value) {
         this.isHybridAzureDomainJoined = value;
     }
     /**
      * Sets the netBiosName property value. The local host name, without the DNS domain name.
      * @param value Value to set for the netBiosName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNetBiosName(@jakarta.annotation.Nullable final String value) {
         this.netBiosName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the os property value. Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
      * @param value Value to set for the os property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOs(@jakarta.annotation.Nullable final String value) {
         this.os = value;
     }
     /**
      * Sets the privateIpAddress property value. Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert.
      * @param value Value to set for the privateIpAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrivateIpAddress(@jakarta.annotation.Nullable final String value) {
         this.privateIpAddress = value;
     }
     /**
      * Sets the publicIpAddress property value. Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert.
      * @param value Value to set for the publicIpAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublicIpAddress(@jakarta.annotation.Nullable final String value) {
         this.publicIpAddress = value;
     }
     /**
      * Sets the riskScore property value. Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage.
      * @param value Value to set for the riskScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskScore(@jakarta.annotation.Nullable final String value) {
         this.riskScore = value;
     }

@@ -26,9 +26,7 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new tenantRelationship and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TenantRelationship() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("delegatedAdminCustomers", this.getDelegatedAdminCustomers());
@@ -102,36 +98,28 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the delegatedAdminCustomers property value. The customer who has a delegated admin relationship with a Microsoft partner.
      * @param value Value to set for the delegatedAdminCustomers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDelegatedAdminCustomers(@jakarta.annotation.Nullable final java.util.List<DelegatedAdminCustomer> value) {
         this.delegatedAdminCustomers = value;
     }
     /**
      * Sets the delegatedAdminRelationships property value. The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
      * @param value Value to set for the delegatedAdminRelationships property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDelegatedAdminRelationships(@jakarta.annotation.Nullable final java.util.List<DelegatedAdminRelationship> value) {
         this.delegatedAdminRelationships = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

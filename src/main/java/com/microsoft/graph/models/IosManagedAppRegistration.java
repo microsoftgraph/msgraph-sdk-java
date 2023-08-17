@@ -12,9 +12,7 @@ import java.util.Objects;
 public class IosManagedAppRegistration extends ManagedAppRegistration implements Parsable {
     /**
      * Instantiates a new iosManagedAppRegistration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosManagedAppRegistration() {
         super();
         this.setOdataType("#microsoft.graph.iosManagedAppRegistration");
@@ -41,9 +39,7 @@ public class IosManagedAppRegistration extends ManagedAppRegistration implements
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

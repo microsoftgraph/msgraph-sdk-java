@@ -54,9 +54,7 @@ public class Permission extends Entity implements Parsable {
     private String shareId;
     /**
      * Instantiates a new permission and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Permission() {
         super();
     }
@@ -181,9 +179,7 @@ public class Permission extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -202,99 +198,77 @@ public class Permission extends Entity implements Parsable {
     /**
      * Sets the expirationDateTime property value. A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the grantedTo property value. The grantedTo property
      * @param value Value to set for the grantedTo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGrantedTo(@jakarta.annotation.Nullable final IdentitySet value) {
         this.grantedTo = value;
     }
     /**
      * Sets the grantedToIdentities property value. The grantedToIdentities property
      * @param value Value to set for the grantedToIdentities property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGrantedToIdentities(@jakarta.annotation.Nullable final java.util.List<IdentitySet> value) {
         this.grantedToIdentities = value;
     }
     /**
      * Sets the grantedToIdentitiesV2 property value. For link type permissions, the details of the users to whom permission was granted. Read-only.
      * @param value Value to set for the grantedToIdentitiesV2 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGrantedToIdentitiesV2(@jakarta.annotation.Nullable final java.util.List<SharePointIdentitySet> value) {
         this.grantedToIdentitiesV2 = value;
     }
     /**
      * Sets the grantedToV2 property value. For user type permissions, the details of the users and applications for this permission. Read-only.
      * @param value Value to set for the grantedToV2 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGrantedToV2(@jakarta.annotation.Nullable final SharePointIdentitySet value) {
         this.grantedToV2 = value;
     }
     /**
      * Sets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only..
      * @param value Value to set for the hasPassword property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHasPassword(@jakarta.annotation.Nullable final Boolean value) {
         this.hasPassword = value;
     }
     /**
      * Sets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
      * @param value Value to set for the inheritedFrom property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInheritedFrom(@jakarta.annotation.Nullable final ItemReference value) {
         this.inheritedFrom = value;
     }
     /**
      * Sets the invitation property value. Details of any associated sharing invitation for this permission. Read-only.
      * @param value Value to set for the invitation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInvitation(@jakarta.annotation.Nullable final SharingInvitation value) {
         this.invitation = value;
     }
     /**
      * Sets the link property value. Provides the link details of the current permission, if it is a link type permissions. Read-only.
      * @param value Value to set for the link property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLink(@jakarta.annotation.Nullable final SharingLink value) {
         this.link = value;
     }
     /**
      * Sets the roles property value. The type of permission, for example, read. See below for the full list of roles. Read-only.
      * @param value Value to set for the roles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roles = value;
     }
     /**
      * Sets the shareId property value. A unique token that can be used to access this shared item via the shares API. Read-only.
      * @param value Value to set for the shareId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShareId(@jakarta.annotation.Nullable final String value) {
         this.shareId = value;
     }

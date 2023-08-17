@@ -29,9 +29,7 @@ public class DirectoryRole extends DirectoryObject implements Parsable {
     private java.util.List<ScopedRoleMembership> scopedMembers;
     /**
      * Instantiates a new directoryRole and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DirectoryRole() {
         super();
         this.setOdataType("#microsoft.graph.directoryRole");
@@ -103,9 +101,7 @@ public class DirectoryRole extends DirectoryObject implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,45 +114,35 @@ public class DirectoryRole extends DirectoryObject implements Parsable {
     /**
      * Sets the description property value. The description for the directory role. Read-only. Supports $filter (eq), $search, $select.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The display name for the directory role. Read-only. Supports $filter (eq), $search, $select.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the members property value. Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the members property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.members = value;
     }
     /**
      * Sets the roleTemplateId property value. The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only. Supports $filter (eq), $select.
      * @param value Value to set for the roleTemplateId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleTemplateId(@jakarta.annotation.Nullable final String value) {
         this.roleTemplateId = value;
     }
     /**
      * Sets the scopedMembers property value. Members of this directory role that are scoped to administrative units. Read-only. Nullable.
      * @param value Value to set for the scopedMembers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScopedMembers(@jakarta.annotation.Nullable final java.util.List<ScopedRoleMembership> value) {
         this.scopedMembers = value;
     }

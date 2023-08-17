@@ -33,9 +33,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
     private Boolean isEnabled;
     /**
      * Instantiates a new featureRolloutPolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public FeatureRolloutPolicy() {
         super();
     }
@@ -115,9 +113,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -131,54 +127,42 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
     /**
      * Sets the appliesTo property value. Nullable. Specifies a list of directoryObjects that feature is enabled for.
      * @param value Value to set for the appliesTo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppliesTo(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.appliesTo = value;
     }
     /**
      * Sets the description property value. A description for this feature rollout policy.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The display name for this  feature rollout policy.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the feature property value. The feature property
      * @param value Value to set for the feature property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFeature(@jakarta.annotation.Nullable final StagedFeatureName value) {
         this.feature = value;
     }
     /**
      * Sets the isAppliedToOrganization property value. Indicates whether this feature rollout policy should be applied to the entire organization.
      * @param value Value to set for the isAppliedToOrganization property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAppliedToOrganization(@jakarta.annotation.Nullable final Boolean value) {
         this.isAppliedToOrganization = value;
     }
     /**
      * Sets the isEnabled property value. Indicates whether the feature rollout is enabled.
      * @param value Value to set for the isEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }

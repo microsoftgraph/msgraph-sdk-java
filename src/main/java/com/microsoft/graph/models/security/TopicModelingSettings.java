@@ -34,9 +34,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
     private Integer topicCount;
     /**
      * Instantiates a new topicModelingSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TopicModelingSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("dynamicallyAdjustTopicCount", this.getDynamicallyAdjustTopicCount());
@@ -130,54 +126,42 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the dynamicallyAdjustTopicCount property value. Indicates whether the themes model should dynamically optimize the number of generated topics. To learn more, see Adjust maximum number of themes dynamically.
      * @param value Value to set for the dynamicallyAdjustTopicCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDynamicallyAdjustTopicCount(@jakarta.annotation.Nullable final Boolean value) {
         this.dynamicallyAdjustTopicCount = value;
     }
     /**
      * Sets the ignoreNumbers property value. Indicates whether the themes model should exclude numbers while parsing document texts. To learn more, see Include numbers in themes.
      * @param value Value to set for the ignoreNumbers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIgnoreNumbers(@jakarta.annotation.Nullable final Boolean value) {
         this.ignoreNumbers = value;
     }
     /**
      * Sets the isEnabled property value. Indicates whether themes model is enabled for the case.
      * @param value Value to set for the isEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the topicCount property value. The total number of topics that the themes model will generate for a review set. To learn more, see Maximum number of themes.
      * @param value Value to set for the topicCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTopicCount(@jakarta.annotation.Nullable final Integer value) {
         this.topicCount = value;
     }

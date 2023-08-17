@@ -33,9 +33,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
     private Boolean useForLocalAddresses;
     /**
      * Instantiates a new windows10NetworkProxyServer and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Windows10NetworkProxyServer() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -105,9 +103,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("address", this.getAddress());
@@ -119,45 +115,35 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the address property value. Address to the proxy server. Specify an address in the format [':']
      * @param value Value to set for the address property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAddress(@jakarta.annotation.Nullable final String value) {
         this.address = value;
     }
     /**
      * Sets the exceptions property value. Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node.
      * @param value Value to set for the exceptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExceptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.exceptions = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the useForLocalAddresses property value. Specifies whether the proxy server should be used for local (intranet) addresses.
      * @param value Value to set for the useForLocalAddresses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUseForLocalAddresses(@jakarta.annotation.Nullable final Boolean value) {
         this.useForLocalAddresses = value;
     }

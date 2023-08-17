@@ -22,9 +22,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
     private String timeOffReasonId;
     /**
      * Instantiates a new timeOffRequest and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TimeOffRequest() {
         super();
         this.setOdataType("#microsoft.graph.timeOffRequest");
@@ -78,9 +76,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -91,27 +87,21 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
     /**
      * Sets the endDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
      * Sets the startDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
      * Sets the timeOffReasonId property value. The reason for the time off.
      * @param value Value to set for the timeOffReasonId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeOffReasonId(@jakarta.annotation.Nullable final String value) {
         this.timeOffReasonId = value;
     }

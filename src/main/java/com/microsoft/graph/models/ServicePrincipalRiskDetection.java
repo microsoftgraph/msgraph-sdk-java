@@ -90,9 +90,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     private TokenIssuerType tokenIssuerType;
     /**
      * Instantiates a new servicePrincipalRiskDetection and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ServicePrincipalRiskDetection() {
         super();
     }
@@ -298,9 +296,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -328,180 +324,140 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     /**
      * Sets the activity property value. Indicates the activity type the detected risk is linked to.  The possible values are: signin, servicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: servicePrincipal.
      * @param value Value to set for the activity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivity(@jakarta.annotation.Nullable final ActivityType value) {
         this.activity = value;
     }
     /**
      * Sets the activityDateTime property value. Date and time when the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the activityDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.activityDateTime = value;
     }
     /**
      * Sets the additionalInfo property value. Additional information associated with the risk detection. This string value is represented as a JSON object with the quotations escaped.
      * @param value Value to set for the additionalInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalInfo(@jakarta.annotation.Nullable final String value) {
         this.additionalInfo = value;
     }
     /**
      * Sets the appId property value. The unique identifier for the associated application.
      * @param value Value to set for the appId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
      * Sets the correlationId property value. Correlation ID of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity.
      * @param value Value to set for the correlationId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
         this.correlationId = value;
     }
     /**
      * Sets the detectedDateTime property value. Date and time when the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the detectedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDetectedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.detectedDateTime = value;
     }
     /**
      * Sets the detectionTimingType property value. Timing of the detected risk , whether real-time or offline. The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
      * @param value Value to set for the detectionTimingType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDetectionTimingType(@jakarta.annotation.Nullable final RiskDetectionTimingType value) {
         this.detectionTimingType = value;
     }
     /**
      * Sets the ipAddress property value. Provides the IP address of the client from where the risk occurred.
      * @param value Value to set for the ipAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
         this.ipAddress = value;
     }
     /**
      * Sets the keyIds property value. The unique identifier for the key credential associated with the risk detection.
      * @param value Value to set for the keyIds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKeyIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.keyIds = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. Date and time when the risk detection was last updated.
      * @param value Value to set for the lastUpdatedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the location property value. Location from where the sign-in was initiated.
      * @param value Value to set for the location property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocation(@jakarta.annotation.Nullable final SignInLocation value) {
         this.location = value;
     }
     /**
      * Sets the requestId property value. Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity. Supports $filter (eq).
      * @param value Value to set for the requestId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRequestId(@jakarta.annotation.Nullable final String value) {
         this.requestId = value;
     }
     /**
      * Sets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
      * @param value Value to set for the riskDetail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
         this.riskDetail = value;
     }
     /**
      * Sets the riskEventType property value. The type of risk event detected. The possible values are: investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, anomalousServicePrincipalActivity, maliciousApplication, suspiciousApplication.
      * @param value Value to set for the riskEventType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskEventType(@jakarta.annotation.Nullable final String value) {
         this.riskEventType = value;
     }
     /**
      * Sets the riskLevel property value. Level of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: low, medium, high, hidden, none.
      * @param value Value to set for the riskLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {
         this.riskLevel = value;
     }
     /**
      * Sets the riskState property value. The state of a detected risky service principal or sign-in activity. The possible values are: none, dismissed, atRisk, confirmedCompromised.
      * @param value Value to set for the riskState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {
         this.riskState = value;
     }
     /**
      * Sets the servicePrincipalDisplayName property value. The display name for the service principal.
      * @param value Value to set for the servicePrincipalDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServicePrincipalDisplayName(@jakarta.annotation.Nullable final String value) {
         this.servicePrincipalDisplayName = value;
     }
     /**
      * Sets the servicePrincipalId property value. The unique identifier for the service principal. Supports $filter (eq).
      * @param value Value to set for the servicePrincipalId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServicePrincipalId(@jakarta.annotation.Nullable final String value) {
         this.servicePrincipalId = value;
     }
     /**
      * Sets the source property value. Source of the risk detection. For example, identityProtection.
      * @param value Value to set for the source property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSource(@jakarta.annotation.Nullable final String value) {
         this.source = value;
     }
     /**
      * Sets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD.
      * @param value Value to set for the tokenIssuerType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTokenIssuerType(@jakarta.annotation.Nullable final TokenIssuerType value) {
         this.tokenIssuerType = value;
     }

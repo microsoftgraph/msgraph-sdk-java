@@ -42,9 +42,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     private AccessPackageSubject target;
     /**
      * Instantiates a new accessPackageAssignment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageAssignment() {
         super();
     }
@@ -142,9 +140,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,72 +156,56 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     /**
      * Sets the accessPackage property value. Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
      * @param value Value to set for the accessPackage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccessPackage(@jakarta.annotation.Nullable final AccessPackage value) {
         this.accessPackage = value;
     }
     /**
      * Sets the assignmentPolicy property value. Read-only. Supports $filter (eq) on the id property and $expand query parameters.
      * @param value Value to set for the assignmentPolicy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignmentPolicy(@jakarta.annotation.Nullable final AccessPackageAssignmentPolicy value) {
         this.assignmentPolicy = value;
     }
     /**
      * Sets the customExtensionCalloutInstances property value. Information about all the custom extension calls that were made during the access package assignment workflow.
      * @param value Value to set for the customExtensionCalloutInstances property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomExtensionCalloutInstances(@jakarta.annotation.Nullable final java.util.List<CustomExtensionCalloutInstance> value) {
         this.customExtensionCalloutInstances = value;
     }
     /**
      * Sets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the expiredDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpiredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expiredDateTime = value;
     }
     /**
      * Sets the schedule property value. When the access assignment is to be in place. Read-only.
      * @param value Value to set for the schedule property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSchedule(@jakarta.annotation.Nullable final EntitlementManagementSchedule value) {
         this.schedule = value;
     }
     /**
      * Sets the state property value. The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq).
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final AccessPackageAssignmentState value) {
         this.state = value;
     }
     /**
      * Sets the status property value. More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final String value) {
         this.status = value;
     }
     /**
      * Sets the target property value. The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
      * @param value Value to set for the target property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTarget(@jakarta.annotation.Nullable final AccessPackageSubject value) {
         this.target = value;
     }

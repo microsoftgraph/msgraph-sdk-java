@@ -31,9 +31,7 @@ public class FileSystemInfo implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new fileSystemInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public FileSystemInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,9 +101,7 @@ public class FileSystemInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -117,45 +113,35 @@ public class FileSystemInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the createdDateTime property value. The UTC date and time the file was created on a client.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the lastAccessedDateTime property value. The UTC date and time the file was last accessed. Available for the recent file list only.
      * @param value Value to set for the lastAccessedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastAccessedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastAccessedDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The UTC date and time the file was last modified on a client.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

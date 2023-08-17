@@ -17,9 +17,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
     private String membershipRule;
     /**
      * Instantiates a new attributeRuleMembers and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AttributeRuleMembers() {
         super();
         this.setOdataType("#microsoft.graph.attributeRuleMembers");
@@ -64,9 +62,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
     /**
      * Sets the description property value. A description of the membership rule.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the membershipRule property value. Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax.
      * @param value Value to set for the membershipRule property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMembershipRule(@jakarta.annotation.Nullable final String value) {
         this.membershipRule = value;
     }

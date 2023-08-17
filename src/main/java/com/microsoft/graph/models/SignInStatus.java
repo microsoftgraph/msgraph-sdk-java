@@ -30,9 +30,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new signInStatus and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SignInStatus() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("additionalDetails", this.getAdditionalDetails());
@@ -116,45 +112,35 @@ public class SignInStatus implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the additionalDetails property value. Provides additional details on the sign-in activity
      * @param value Value to set for the additionalDetails property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalDetails(@jakarta.annotation.Nullable final String value) {
         this.additionalDetails = value;
     }
     /**
      * Sets the errorCode property value. Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
      * @param value Value to set for the errorCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setErrorCode(@jakarta.annotation.Nullable final Integer value) {
         this.errorCode = value;
     }
     /**
      * Sets the failureReason property value. Provides the error message or the reason for failure for the corresponding sign-in activity. Check out the list of error codes and messages.
      * @param value Value to set for the failureReason property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailureReason(@jakarta.annotation.Nullable final String value) {
         this.failureReason = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

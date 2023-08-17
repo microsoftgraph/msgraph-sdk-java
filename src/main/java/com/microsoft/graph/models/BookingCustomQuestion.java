@@ -24,9 +24,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
     private String displayName;
     /**
      * Instantiates a new bookingCustomQuestion and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BookingCustomQuestion() {
         super();
     }
@@ -79,9 +77,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -92,27 +88,21 @@ public class BookingCustomQuestion extends Entity implements Parsable {
     /**
      * Sets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
      * @param value Value to set for the answerInputType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAnswerInputType(@jakarta.annotation.Nullable final AnswerInputType value) {
         this.answerInputType = value;
     }
     /**
      * Sets the answerOptions property value. List of possible answer values.
      * @param value Value to set for the answerOptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAnswerOptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.answerOptions = value;
     }
     /**
      * Sets the displayName property value. The question.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }

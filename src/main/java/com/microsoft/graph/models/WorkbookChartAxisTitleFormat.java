@@ -13,9 +13,7 @@ public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
     private WorkbookChartFont font;
     /**
      * Instantiates a new workbookChartAxisTitleFormat and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookChartAxisTitleFormat() {
         super();
     }
@@ -50,9 +48,7 @@ public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +57,7 @@ public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
     /**
      * Sets the font property value. Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
      * @param value Value to set for the font property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFont(@jakarta.annotation.Nullable final WorkbookChartFont value) {
         this.font = value;
     }

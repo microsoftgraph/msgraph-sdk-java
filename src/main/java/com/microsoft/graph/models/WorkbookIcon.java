@@ -26,9 +26,7 @@ public class WorkbookIcon implements AdditionalDataHolder, Parsable {
     private String set;
     /**
      * Instantiates a new workbookIcon and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookIcon() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class WorkbookIcon implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("index", this.getIndex());
@@ -102,36 +98,28 @@ public class WorkbookIcon implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the index property value. Represents the index of the icon in the given set.
      * @param value Value to set for the index property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIndex(@jakarta.annotation.Nullable final Integer value) {
         this.index = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the set property value. Represents the set that the icon is part of. The possible values are: Invalid, ThreeArrows, ThreeArrowsGray, ThreeFlags, ThreeTrafficLights1, ThreeTrafficLights2, ThreeSigns, ThreeSymbols, ThreeSymbols2, FourArrows, FourArrowsGray, FourRedToBlack, FourRating, FourTrafficLights, FiveArrows, FiveArrowsGray, FiveRating, FiveQuarters, ThreeStars, ThreeTriangles, FiveBoxes.
      * @param value Value to set for the set property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSet(@jakarta.annotation.Nullable final String value) {
         this.set = value;
     }

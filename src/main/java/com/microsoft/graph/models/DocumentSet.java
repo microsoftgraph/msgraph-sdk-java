@@ -46,9 +46,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
     private String welcomePageUrl;
     /**
      * Instantiates a new documentSet and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DocumentSet() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -154,9 +152,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("allowedContentTypes", this.getAllowedContentTypes());
@@ -172,81 +168,63 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowedContentTypes property value. Content types allowed in document set.
      * @param value Value to set for the allowedContentTypes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedContentTypes(@jakarta.annotation.Nullable final java.util.List<ContentTypeInfo> value) {
         this.allowedContentTypes = value;
     }
     /**
      * Sets the defaultContents property value. Default contents of document set.
      * @param value Value to set for the defaultContents property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefaultContents(@jakarta.annotation.Nullable final java.util.List<DocumentSetContent> value) {
         this.defaultContents = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the propagateWelcomePageChanges property value. Specifies whether to push welcome page changes to inherited content types.
      * @param value Value to set for the propagateWelcomePageChanges property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPropagateWelcomePageChanges(@jakarta.annotation.Nullable final Boolean value) {
         this.propagateWelcomePageChanges = value;
     }
     /**
      * Sets the sharedColumns property value. The sharedColumns property
      * @param value Value to set for the sharedColumns property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharedColumns(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
         this.sharedColumns = value;
     }
     /**
      * Sets the shouldPrefixNameToFile property value. Indicates whether to add the name of the document set to each file name.
      * @param value Value to set for the shouldPrefixNameToFile property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShouldPrefixNameToFile(@jakarta.annotation.Nullable final Boolean value) {
         this.shouldPrefixNameToFile = value;
     }
     /**
      * Sets the welcomePageColumns property value. The welcomePageColumns property
      * @param value Value to set for the welcomePageColumns property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWelcomePageColumns(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
         this.welcomePageColumns = value;
     }
     /**
      * Sets the welcomePageUrl property value. Welcome page absolute URL.
      * @param value Value to set for the welcomePageUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWelcomePageUrl(@jakarta.annotation.Nullable final String value) {
         this.welcomePageUrl = value;
     }

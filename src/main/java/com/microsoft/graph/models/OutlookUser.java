@@ -13,9 +13,7 @@ public class OutlookUser extends Entity implements Parsable {
     private java.util.List<OutlookCategory> masterCategories;
     /**
      * Instantiates a new outlookUser and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OutlookUser() {
         super();
     }
@@ -50,9 +48,7 @@ public class OutlookUser extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +57,7 @@ public class OutlookUser extends Entity implements Parsable {
     /**
      * Sets the masterCategories property value. A list of categories defined for the user.
      * @param value Value to set for the masterCategories property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMasterCategories(@jakarta.annotation.Nullable final java.util.List<OutlookCategory> value) {
         this.masterCategories = value;
     }

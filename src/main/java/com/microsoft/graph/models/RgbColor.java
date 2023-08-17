@@ -33,9 +33,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
     private Byte r;
     /**
      * Instantiates a new rgbColor and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RgbColor() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -105,9 +103,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteValue("b", this.getB());
@@ -119,45 +115,35 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the b property value. Blue value
      * @param value Value to set for the b property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setB(@jakarta.annotation.Nullable final Byte value) {
         this.b = value;
     }
     /**
      * Sets the g property value. Green value
      * @param value Value to set for the g property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setG(@jakarta.annotation.Nullable final Byte value) {
         this.g = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the r property value. Red value
      * @param value Value to set for the r property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setR(@jakarta.annotation.Nullable final Byte value) {
         this.r = value;
     }

@@ -60,9 +60,7 @@ public class RetentionEvent extends Entity implements Parsable {
     private RetentionEventType retentionEventType;
     /**
      * Instantiates a new retentionEvent and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RetentionEvent() {
         super();
     }
@@ -196,9 +194,7 @@ public class RetentionEvent extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -218,108 +214,84 @@ public class RetentionEvent extends Entity implements Parsable {
     /**
      * Sets the createdBy property value. The user who created the retentionEvent.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The date time when the retentionEvent was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Optional information about the event.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Name of the event.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the eventPropagationResults property value. The eventPropagationResults property
      * @param value Value to set for the eventPropagationResults property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEventPropagationResults(@jakarta.annotation.Nullable final java.util.List<EventPropagationResult> value) {
         this.eventPropagationResults = value;
     }
     /**
      * Sets the eventQueries property value. Represents the workload (SharePoint Online, OneDrive for Business, Exchange Online) and identification information associated with a retention event.
      * @param value Value to set for the eventQueries property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEventQueries(@jakarta.annotation.Nullable final java.util.List<EventQuery> value) {
         this.eventQueries = value;
     }
     /**
      * Sets the eventStatus property value. The eventStatus property
      * @param value Value to set for the eventStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEventStatus(@jakarta.annotation.Nullable final RetentionEventStatus value) {
         this.eventStatus = value;
     }
     /**
      * Sets the eventTriggerDateTime property value. Optional time when the event should be triggered.
      * @param value Value to set for the eventTriggerDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEventTriggerDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.eventTriggerDateTime = value;
     }
     /**
      * Sets the lastModifiedBy property value. The user who last modified the retentionEvent.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The latest date time when the retentionEvent was modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the lastStatusUpdateDateTime property value. Last time the status of the event was updated.
      * @param value Value to set for the lastStatusUpdateDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastStatusUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastStatusUpdateDateTime = value;
     }
     /**
      * Sets the retentionEventType property value. Specifies the event that will start the retention period for labels that use this event type when an event is created.
      * @param value Value to set for the retentionEventType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRetentionEventType(@jakarta.annotation.Nullable final RetentionEventType value) {
         this.retentionEventType = value;
     }

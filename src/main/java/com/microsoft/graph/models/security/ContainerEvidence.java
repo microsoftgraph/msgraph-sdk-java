@@ -37,9 +37,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
     private KubernetesPodEvidence pod;
     /**
      * Instantiates a new containerEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ContainerEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.containerEvidence");
@@ -129,9 +127,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,63 +142,49 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the args property value. The list of arguments.
      * @param value Value to set for the args property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setArgs(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.args = value;
     }
     /**
      * Sets the command property value. The list of commands.
      * @param value Value to set for the command property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCommand(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.command = value;
     }
     /**
      * Sets the containerId property value. The container ID.
      * @param value Value to set for the containerId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContainerId(@jakarta.annotation.Nullable final String value) {
         this.containerId = value;
     }
     /**
      * Sets the image property value. The image used to run the container.
      * @param value Value to set for the image property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImage(@jakarta.annotation.Nullable final ContainerImageEvidence value) {
         this.image = value;
     }
     /**
      * Sets the isPrivileged property value. The privileged status.
      * @param value Value to set for the isPrivileged property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsPrivileged(@jakarta.annotation.Nullable final Boolean value) {
         this.isPrivileged = value;
     }
     /**
      * Sets the name property value. The container name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the pod property value. The pod this container belongs to.
      * @param value Value to set for the pod property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPod(@jakarta.annotation.Nullable final KubernetesPodEvidence value) {
         this.pod = value;
     }

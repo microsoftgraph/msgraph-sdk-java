@@ -21,9 +21,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     private java.util.List<String> userIds;
     /**
      * Instantiates a new schedulingGroup and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SchedulingGroup() {
         super();
         this.setOdataType("#microsoft.graph.schedulingGroup");
@@ -77,9 +75,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +85,21 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     /**
      * Sets the displayName property value. The display name for the schedulingGroup. Required.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the isActive property value. Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required.
      * @param value Value to set for the isActive property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
         this.isActive = value;
     }
     /**
      * Sets the userIds property value. The list of user IDs that are a member of the schedulingGroup. Required.
      * @param value Value to set for the userIds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.userIds = value;
     }

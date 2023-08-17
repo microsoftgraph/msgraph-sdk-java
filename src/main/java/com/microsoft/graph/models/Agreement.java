@@ -42,9 +42,7 @@ public class Agreement extends Entity implements Parsable {
     private PeriodAndDuration userReacceptRequiredFrequency;
     /**
      * Instantiates a new agreement and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Agreement() {
         super();
     }
@@ -142,9 +140,7 @@ public class Agreement extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,72 +156,56 @@ public class Agreement extends Entity implements Parsable {
     /**
      * Sets the acceptances property value. Read-only. Information about acceptances of this agreement.
      * @param value Value to set for the acceptances property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAcceptances(@jakarta.annotation.Nullable final java.util.List<AgreementAcceptance> value) {
         this.acceptances = value;
     }
     /**
      * Sets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement. Supports $filter (eq).
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the file property value. Default PDF linked to this agreement.
      * @param value Value to set for the file property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFile(@jakarta.annotation.Nullable final AgreementFile value) {
         this.file = value;
     }
     /**
      * Sets the files property value. PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      * @param value Value to set for the files property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFiles(@jakarta.annotation.Nullable final java.util.List<AgreementFileLocalization> value) {
         this.files = value;
     }
     /**
      * Sets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
      * @param value Value to set for the isPerDeviceAcceptanceRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsPerDeviceAcceptanceRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isPerDeviceAcceptanceRequired = value;
     }
     /**
      * Sets the isViewingBeforeAcceptanceRequired property value. Indicates whether the user has to expand the agreement before accepting. Supports $filter (eq).
      * @param value Value to set for the isViewingBeforeAcceptanceRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsViewingBeforeAcceptanceRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isViewingBeforeAcceptanceRequired = value;
     }
     /**
      * Sets the termsExpiration property value. Expiration schedule and frequency of agreement for all users. Supports $filter (eq).
      * @param value Value to set for the termsExpiration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTermsExpiration(@jakarta.annotation.Nullable final TermsExpiration value) {
         this.termsExpiration = value;
     }
     /**
      * Sets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
      * @param value Value to set for the userReacceptRequiredFrequency property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserReacceptRequiredFrequency(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.userReacceptRequiredFrequency = value;
     }

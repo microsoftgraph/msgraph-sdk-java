@@ -47,9 +47,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
     private java.util.List<String> stopTones;
     /**
      * Instantiates a new recordResponsePostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RecordResponsePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -155,9 +153,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("bargeInAllowed", this.getBargeInAllowed());
@@ -173,81 +169,63 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the bargeInAllowed property value. The bargeInAllowed property
      * @param value Value to set for the bargeInAllowed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBargeInAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.bargeInAllowed = value;
     }
     /**
      * Sets the clientContext property value. The clientContext property
      * @param value Value to set for the clientContext property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClientContext(@jakarta.annotation.Nullable final String value) {
         this.clientContext = value;
     }
     /**
      * Sets the initialSilenceTimeoutInSeconds property value. The initialSilenceTimeoutInSeconds property
      * @param value Value to set for the initialSilenceTimeoutInSeconds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitialSilenceTimeoutInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.initialSilenceTimeoutInSeconds = value;
     }
     /**
      * Sets the maxRecordDurationInSeconds property value. The maxRecordDurationInSeconds property
      * @param value Value to set for the maxRecordDurationInSeconds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaxRecordDurationInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.maxRecordDurationInSeconds = value;
     }
     /**
      * Sets the maxSilenceTimeoutInSeconds property value. The maxSilenceTimeoutInSeconds property
      * @param value Value to set for the maxSilenceTimeoutInSeconds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaxSilenceTimeoutInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.maxSilenceTimeoutInSeconds = value;
     }
     /**
      * Sets the playBeep property value. The playBeep property
      * @param value Value to set for the playBeep property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPlayBeep(@jakarta.annotation.Nullable final Boolean value) {
         this.playBeep = value;
     }
     /**
      * Sets the prompts property value. The prompts property
      * @param value Value to set for the prompts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrompts(@jakarta.annotation.Nullable final java.util.List<Prompt> value) {
         this.prompts = value;
     }
     /**
      * Sets the stopTones property value. The stopTones property
      * @param value Value to set for the stopTones property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStopTones(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.stopTones = value;
     }

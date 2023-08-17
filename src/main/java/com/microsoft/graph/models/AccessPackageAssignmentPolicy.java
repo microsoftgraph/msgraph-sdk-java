@@ -70,9 +70,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     private java.util.List<SubjectSet> specificAllowedTargets;
     /**
      * Instantiates a new accessPackageAssignmentPolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageAssignmentPolicy() {
         super();
     }
@@ -233,9 +231,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -258,135 +254,105 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     /**
      * Sets the accessPackage property value. Access package containing this policy. Read-only.  Supports $expand.
      * @param value Value to set for the accessPackage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccessPackage(@jakarta.annotation.Nullable final AccessPackage value) {
         this.accessPackage = value;
     }
     /**
      * Sets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
      * @param value Value to set for the allowedTargetScope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedTargetScope(@jakarta.annotation.Nullable final AllowedTargetScope value) {
         this.allowedTargetScope = value;
     }
     /**
      * Sets the automaticRequestSettings property value. This property is only present for an auto assignment policy; if absent, this is a request-based policy.
      * @param value Value to set for the automaticRequestSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAutomaticRequestSettings(@jakarta.annotation.Nullable final AccessPackageAutomaticRequestSettings value) {
         this.automaticRequestSettings = value;
     }
     /**
      * Sets the catalog property value. Catalog of the access package containing this policy. Read-only.
      * @param value Value to set for the catalog property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCatalog(@jakarta.annotation.Nullable final AccessPackageCatalog value) {
         this.catalog = value;
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the customExtensionStageSettings property value. The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @param value Value to set for the customExtensionStageSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomExtensionStageSettings(@jakarta.annotation.Nullable final java.util.List<CustomExtensionStageSetting> value) {
         this.customExtensionStageSettings = value;
     }
     /**
      * Sets the description property value. The description of the policy.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of the policy.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the expiration property value. The expiration date for assignments created in this policy.
      * @param value Value to set for the expiration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpiration(@jakarta.annotation.Nullable final ExpirationPattern value) {
         this.expiration = value;
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the modifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
     }
     /**
      * Sets the questions property value. Questions that are posed to the  requestor.
      * @param value Value to set for the questions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQuestions(@jakarta.annotation.Nullable final java.util.List<AccessPackageQuestion> value) {
         this.questions = value;
     }
     /**
      * Sets the requestApprovalSettings property value. Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
      * @param value Value to set for the requestApprovalSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRequestApprovalSettings(@jakarta.annotation.Nullable final AccessPackageAssignmentApprovalSettings value) {
         this.requestApprovalSettings = value;
     }
     /**
      * Sets the requestorSettings property value. Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
      * @param value Value to set for the requestorSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRequestorSettings(@jakarta.annotation.Nullable final AccessPackageAssignmentRequestorSettings value) {
         this.requestorSettings = value;
     }
     /**
      * Sets the reviewSettings property value. Settings for access reviews of assignments through this policy.
      * @param value Value to set for the reviewSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReviewSettings(@jakarta.annotation.Nullable final AccessPackageAssignmentReviewSettings value) {
         this.reviewSettings = value;
     }
     /**
      * Sets the specificAllowedTargets property value. The principals that can be assigned access from an access package through this policy.
      * @param value Value to set for the specificAllowedTargets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSpecificAllowedTargets(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
         this.specificAllowedTargets = value;
     }

@@ -37,9 +37,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
     private java.util.List<UserExperienceAnalyticsInsightValue> values;
     /**
      * Instantiates a new userExperienceAnalyticsInsight and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsInsight() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -118,9 +116,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("insightId", this.getInsightId());
@@ -133,54 +129,42 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the insightId property value. The unique identifier of the user experience analytics insight.
      * @param value Value to set for the insightId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInsightId(@jakarta.annotation.Nullable final String value) {
         this.insightId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the severity property value. Indicates severity of insights. Possible values are: None, Informational, Warning, Error.
      * @param value Value to set for the severity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSeverity(@jakarta.annotation.Nullable final UserExperienceAnalyticsInsightSeverity value) {
         this.severity = value;
     }
     /**
      * Sets the userExperienceAnalyticsMetricId property value. The unique identifier of the user experience analytics metric.
      * @param value Value to set for the userExperienceAnalyticsMetricId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsMetricId(@jakarta.annotation.Nullable final String value) {
         this.userExperienceAnalyticsMetricId = value;
     }
     /**
      * Sets the values property value. The value of the user experience analytics insight.
      * @param value Value to set for the values property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValues(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsInsightValue> value) {
         this.values = value;
     }

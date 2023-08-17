@@ -27,9 +27,7 @@ public class SigningCertificateUpdateStatus implements AdditionalDataHolder, Par
     private String odataType;
     /**
      * Instantiates a new signingCertificateUpdateStatus and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SigningCertificateUpdateStatus() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +88,7 @@ public class SigningCertificateUpdateStatus implements AdditionalDataHolder, Par
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("certificateUpdateResult", this.getCertificateUpdateResult());
@@ -103,36 +99,28 @@ public class SigningCertificateUpdateStatus implements AdditionalDataHolder, Par
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the certificateUpdateResult property value. Status of the last certificate update. Read-only. For a list of statuses, see certificateUpdateResult status.
      * @param value Value to set for the certificateUpdateResult property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificateUpdateResult(@jakarta.annotation.Nullable final String value) {
         this.certificateUpdateResult = value;
     }
     /**
      * Sets the lastRunDateTime property value. Date and time in ISO 8601 format and in UTC time when the certificate was last updated. Read-only.
      * @param value Value to set for the lastRunDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastRunDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastRunDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

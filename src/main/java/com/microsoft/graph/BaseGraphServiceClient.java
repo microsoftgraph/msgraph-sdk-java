@@ -571,9 +571,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Instantiates a new BaseGraphServiceClient and sets the default values.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BaseGraphServiceClient(@jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}");
         this.pathParameters = new HashMap<>();

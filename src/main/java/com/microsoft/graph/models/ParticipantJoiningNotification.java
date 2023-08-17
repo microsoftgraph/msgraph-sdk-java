@@ -13,9 +13,7 @@ public class ParticipantJoiningNotification extends Entity implements Parsable {
     private Call call;
     /**
      * Instantiates a new participantJoiningNotification and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ParticipantJoiningNotification() {
         super();
     }
@@ -50,9 +48,7 @@ public class ParticipantJoiningNotification extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +57,7 @@ public class ParticipantJoiningNotification extends Entity implements Parsable {
     /**
      * Sets the call property value. The call property
      * @param value Value to set for the call property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCall(@jakarta.annotation.Nullable final Call value) {
         this.call = value;
     }

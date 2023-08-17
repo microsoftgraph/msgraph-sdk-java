@@ -21,9 +21,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
     private UserAccount userAccount;
     /**
      * Instantiates a new mailboxEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MailboxEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.mailboxEvidence");
@@ -77,9 +75,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the displayName property value. The name associated with the mailbox.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the primaryAddress property value. The primary email address of the mailbox.
      * @param value Value to set for the primaryAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrimaryAddress(@jakarta.annotation.Nullable final String value) {
         this.primaryAddress = value;
     }
     /**
      * Sets the userAccount property value. The user account of the mailbox.
      * @param value Value to set for the userAccount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserAccount(@jakarta.annotation.Nullable final UserAccount value) {
         this.userAccount = value;
     }

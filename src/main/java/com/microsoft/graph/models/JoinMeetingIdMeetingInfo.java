@@ -17,9 +17,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
     private String passcode;
     /**
      * Instantiates a new joinMeetingIdMeetingInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public JoinMeetingIdMeetingInfo() {
         super();
         this.setOdataType("#microsoft.graph.joinMeetingIdMeetingInfo");
@@ -64,9 +62,7 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
     /**
      * Sets the joinMeetingId property value. The ID used to join the meeting.
      * @param value Value to set for the joinMeetingId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setJoinMeetingId(@jakarta.annotation.Nullable final String value) {
         this.joinMeetingId = value;
     }
     /**
      * Sets the passcode property value. The passcode used to join the meeting. Optional.
      * @param value Value to set for the passcode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasscode(@jakarta.annotation.Nullable final String value) {
         this.passcode = value;
     }

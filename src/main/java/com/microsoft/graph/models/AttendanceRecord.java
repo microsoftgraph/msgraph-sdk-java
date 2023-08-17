@@ -29,9 +29,7 @@ public class AttendanceRecord extends Entity implements Parsable {
     private Integer totalAttendanceInSeconds;
     /**
      * Instantiates a new attendanceRecord and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AttendanceRecord() {
         super();
     }
@@ -102,9 +100,7 @@ public class AttendanceRecord extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -117,45 +113,35 @@ public class AttendanceRecord extends Entity implements Parsable {
     /**
      * Sets the attendanceIntervals property value. List of time periods between joining and leaving a meeting.
      * @param value Value to set for the attendanceIntervals property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttendanceIntervals(@jakarta.annotation.Nullable final java.util.List<AttendanceInterval> value) {
         this.attendanceIntervals = value;
     }
     /**
      * Sets the emailAddress property value. Email address of the user associated with this attendance record.
      * @param value Value to set for the emailAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.emailAddress = value;
     }
     /**
      * Sets the identity property value. Identity of the user associated with this attendance record.
      * @param value Value to set for the identity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentity(@jakarta.annotation.Nullable final Identity value) {
         this.identity = value;
     }
     /**
      * Sets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
      * @param value Value to set for the role property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRole(@jakarta.annotation.Nullable final String value) {
         this.role = value;
     }
     /**
      * Sets the totalAttendanceInSeconds property value. Total duration of the attendances in seconds.
      * @param value Value to set for the totalAttendanceInSeconds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalAttendanceInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.totalAttendanceInSeconds = value;
     }

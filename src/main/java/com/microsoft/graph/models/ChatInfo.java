@@ -30,9 +30,7 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     private String threadId;
     /**
      * Instantiates a new chatInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ChatInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("messageId", this.getMessageId());
@@ -116,45 +112,35 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the messageId property value. The unique identifier of a message in a Microsoft Teams channel.
      * @param value Value to set for the messageId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessageId(@jakarta.annotation.Nullable final String value) {
         this.messageId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the replyChainMessageId property value. The ID of the reply message.
      * @param value Value to set for the replyChainMessageId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReplyChainMessageId(@jakarta.annotation.Nullable final String value) {
         this.replyChainMessageId = value;
     }
     /**
      * Sets the threadId property value. The unique identifier for a thread in Microsoft Teams.
      * @param value Value to set for the threadId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setThreadId(@jakarta.annotation.Nullable final String value) {
         this.threadId = value;
     }

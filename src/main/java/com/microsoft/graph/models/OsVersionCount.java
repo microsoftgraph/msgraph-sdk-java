@@ -34,9 +34,7 @@ public class OsVersionCount implements AdditionalDataHolder, Parsable {
     private String osVersion;
     /**
      * Instantiates a new osVersionCount and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OsVersionCount() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -106,9 +104,7 @@ public class OsVersionCount implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("deviceCount", this.getDeviceCount());
@@ -120,45 +116,35 @@ public class OsVersionCount implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the deviceCount property value. Count of devices with malware for the OS version
      * @param value Value to set for the deviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.deviceCount = value;
     }
     /**
      * Sets the lastUpdateDateTime property value. The Timestamp of the last update for the device count in UTC
      * @param value Value to set for the lastUpdateDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdateDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the osVersion property value. OS version
      * @param value Value to set for the osVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
         this.osVersion = value;
     }

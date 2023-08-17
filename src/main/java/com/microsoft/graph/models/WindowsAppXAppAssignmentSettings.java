@@ -16,9 +16,7 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
     private Boolean useDeviceContext;
     /**
      * Instantiates a new windowsAppXAppAssignmentSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsAppXAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.windowsAppXAppAssignmentSettings");
@@ -54,9 +52,7 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -65,9 +61,7 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
     /**
      * Sets the useDeviceContext property value. When TRUE, indicates that device execution context will be used for the AppX mobile app. When FALSE, indicates that user context will be used for the AppX mobile app. By default, this property is set to FALSE. Once this property has been set to TRUE it cannot be changed.
      * @param value Value to set for the useDeviceContext property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUseDeviceContext(@jakarta.annotation.Nullable final Boolean value) {
         this.useDeviceContext = value;
     }

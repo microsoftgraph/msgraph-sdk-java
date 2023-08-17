@@ -26,9 +26,7 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
     private java.util.List<StringKeyObjectValuePair> properties;
     /**
      * Instantiates a new expressionInputObject and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ExpressionInputObject() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("definition", this.getDefinition());
@@ -102,36 +98,28 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the definition property value. Definition of the test object.
      * @param value Value to set for the definition property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefinition(@jakarta.annotation.Nullable final ObjectDefinition value) {
         this.definition = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the properties property value. Property values of the test object.
      * @param value Value to set for the properties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProperties(@jakarta.annotation.Nullable final java.util.List<StringKeyObjectValuePair> value) {
         this.properties = value;
     }

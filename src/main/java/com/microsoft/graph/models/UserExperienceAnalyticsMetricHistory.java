@@ -25,9 +25,7 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements Pars
     private String metricType;
     /**
      * Instantiates a new userExperienceAnalyticsMetricHistory and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsMetricHistory() {
         super();
     }
@@ -80,9 +78,7 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -93,27 +89,21 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements Pars
     /**
      * Sets the deviceId property value. The Intune device id of the device.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the metricDateTime property value. The metric date time. The value cannot be modified and is automatically populated when the metric is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
      * @param value Value to set for the metricDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMetricDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.metricDateTime = value;
     }
     /**
      * Sets the metricType property value. The user experience analytics metric type.
      * @param value Value to set for the metricType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMetricType(@jakarta.annotation.Nullable final String value) {
         this.metricType = value;
     }

@@ -112,9 +112,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new pstnCallLogRow and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PstnCallLogRow() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -364,9 +362,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("callDurationSource", this.getCallDurationSource());
@@ -398,225 +394,175 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator may provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
      * @param value Value to set for the callDurationSource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallDurationSource(@jakarta.annotation.Nullable final PstnCallDurationSource value) {
         this.callDurationSource = value;
     }
     /**
      * Sets the calleeNumber property value. Number dialed in E.164 format.
      * @param value Value to set for the calleeNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCalleeNumber(@jakarta.annotation.Nullable final String value) {
         this.calleeNumber = value;
     }
     /**
      * Sets the callerNumber property value. Number that received the call for inbound calls or the number dialed for outbound calls. E.164 format.
      * @param value Value to set for the callerNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallerNumber(@jakarta.annotation.Nullable final String value) {
         this.callerNumber = value;
     }
     /**
      * Sets the callId property value. Call identifier. Not guaranteed to be unique.
      * @param value Value to set for the callId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallId(@jakarta.annotation.Nullable final String value) {
         this.callId = value;
     }
     /**
      * Sets the callType property value. Whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference.
      * @param value Value to set for the callType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallType(@jakarta.annotation.Nullable final String value) {
         this.callType = value;
     }
     /**
      * Sets the charge property value. Amount of money or cost of the call that is charged to your account.
      * @param value Value to set for the charge property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCharge(@jakarta.annotation.Nullable final BigDecimal value) {
         this.charge = value;
     }
     /**
      * Sets the conferenceId property value. ID of the audio conference.
      * @param value Value to set for the conferenceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConferenceId(@jakarta.annotation.Nullable final String value) {
         this.conferenceId = value;
     }
     /**
      * Sets the connectionCharge property value. Connection fee price.
      * @param value Value to set for the connectionCharge property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConnectionCharge(@jakarta.annotation.Nullable final BigDecimal value) {
         this.connectionCharge = value;
     }
     /**
      * Sets the currency property value. Type of currency used to calculate the cost of the call. For details, see (ISO 4217.
      * @param value Value to set for the currency property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCurrency(@jakarta.annotation.Nullable final String value) {
         this.currency = value;
     }
     /**
      * Sets the destinationContext property value. Whether the call was domestic (within a country or region) or international (outside a country or region) based on the user's location.
      * @param value Value to set for the destinationContext property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDestinationContext(@jakarta.annotation.Nullable final String value) {
         this.destinationContext = value;
     }
     /**
      * Sets the destinationName property value. Country or region dialed.
      * @param value Value to set for the destinationName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDestinationName(@jakarta.annotation.Nullable final String value) {
         this.destinationName = value;
     }
     /**
      * Sets the duration property value. How long the call was connected, in seconds.
      * @param value Value to set for the duration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDuration(@jakarta.annotation.Nullable final Integer value) {
         this.duration = value;
     }
     /**
      * Sets the endDateTime property value. Call end time.
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
      * Sets the id property value. Unique call identifier. GUID.
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the inventoryType property value. User's phone number type, such as a service of toll-free number.
      * @param value Value to set for the inventoryType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInventoryType(@jakarta.annotation.Nullable final String value) {
         this.inventoryType = value;
     }
     /**
      * Sets the licenseCapability property value. The license used for the call.
      * @param value Value to set for the licenseCapability property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLicenseCapability(@jakarta.annotation.Nullable final String value) {
         this.licenseCapability = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the operator property value. The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
      * @param value Value to set for the operator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperator(@jakarta.annotation.Nullable final String value) {
         this.operator = value;
     }
     /**
      * Sets the startDateTime property value. Call start time.
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
      * Sets the tenantCountryCode property value. Country code of the tenant. For details, see ISO 3166-1 alpha-2.
      * @param value Value to set for the tenantCountryCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantCountryCode(@jakarta.annotation.Nullable final String value) {
         this.tenantCountryCode = value;
     }
     /**
      * Sets the usageCountryCode property value. Country code of the user. For details, see ISO 3166-1 alpha-2.
      * @param value Value to set for the usageCountryCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUsageCountryCode(@jakarta.annotation.Nullable final String value) {
         this.usageCountryCode = value;
     }
     /**
      * Sets the userDisplayName property value. Display name of the user.
      * @param value Value to set for the userDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
      * Sets the userId property value. Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
      * Sets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }

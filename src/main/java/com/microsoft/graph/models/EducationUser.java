@@ -162,9 +162,7 @@ public class EducationUser extends Entity implements Parsable {
     private String userType;
     /**
      * Instantiates a new educationUser and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationUser() {
         super();
     }
@@ -532,9 +530,7 @@ public class EducationUser extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -580,342 +576,266 @@ public class EducationUser extends Entity implements Parsable {
     /**
      * Sets the accountEnabled property value. True if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.
      * @param value Value to set for the accountEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccountEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.accountEnabled = value;
     }
     /**
      * Sets the assignedLicenses property value. The licenses that are assigned to the user. Not nullable.
      * @param value Value to set for the assignedLicenses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignedLicenses(@jakarta.annotation.Nullable final java.util.List<AssignedLicense> value) {
         this.assignedLicenses = value;
     }
     /**
      * Sets the assignedPlans property value. The plans that are assigned to the user. Read-only. Not nullable.
      * @param value Value to set for the assignedPlans property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignedPlans(@jakarta.annotation.Nullable final java.util.List<AssignedPlan> value) {
         this.assignedPlans = value;
     }
     /**
      * Sets the assignments property value. Assignments belonging to the user.
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<EducationAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the businessPhones property value. The telephone numbers for the user. Note: Although this is a string collection, only one number can be set for this property.
      * @param value Value to set for the businessPhones property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBusinessPhones(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.businessPhones = value;
     }
     /**
      * Sets the classes property value. Classes to which the user belongs. Nullable.
      * @param value Value to set for the classes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClasses(@jakarta.annotation.Nullable final java.util.List<EducationClass> value) {
         this.classes = value;
     }
     /**
      * Sets the createdBy property value. The entity who created the user.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the department property value. The name for the department in which the user works. Supports $filter.
      * @param value Value to set for the department property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDepartment(@jakarta.annotation.Nullable final String value) {
         this.department = value;
     }
     /**
      * Sets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the externalSource property value. Where this user was created from. Possible values are: sis, manual.
      * @param value Value to set for the externalSource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalSource(@jakarta.annotation.Nullable final EducationExternalSource value) {
         this.externalSource = value;
     }
     /**
      * Sets the externalSourceDetail property value. The name of the external source this resource was generated from.
      * @param value Value to set for the externalSourceDetail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalSourceDetail(@jakarta.annotation.Nullable final String value) {
         this.externalSourceDetail = value;
     }
     /**
      * Sets the givenName property value. The given name (first name) of the user. Supports $filter.
      * @param value Value to set for the givenName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGivenName(@jakarta.annotation.Nullable final String value) {
         this.givenName = value;
     }
     /**
      * Sets the mail property value. The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.
      * @param value Value to set for the mail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMail(@jakarta.annotation.Nullable final String value) {
         this.mail = value;
     }
     /**
      * Sets the mailingAddress property value. The mail address of the user.
      * @param value Value to set for the mailingAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMailingAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.mailingAddress = value;
     }
     /**
      * Sets the mailNickname property value. The mail alias for the user. This property must be specified when a user is created. Supports $filter.
      * @param value Value to set for the mailNickname property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMailNickname(@jakarta.annotation.Nullable final String value) {
         this.mailNickname = value;
     }
     /**
      * Sets the middleName property value. The middle name of the user.
      * @param value Value to set for the middleName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMiddleName(@jakarta.annotation.Nullable final String value) {
         this.middleName = value;
     }
     /**
      * Sets the mobilePhone property value. The primary cellular telephone number for the user.
      * @param value Value to set for the mobilePhone property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMobilePhone(@jakarta.annotation.Nullable final String value) {
         this.mobilePhone = value;
     }
     /**
      * Sets the officeLocation property value. The officeLocation property
      * @param value Value to set for the officeLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOfficeLocation(@jakarta.annotation.Nullable final String value) {
         this.officeLocation = value;
     }
     /**
      * Sets the onPremisesInfo property value. Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
      * @param value Value to set for the onPremisesInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnPremisesInfo(@jakarta.annotation.Nullable final EducationOnPremisesInfo value) {
         this.onPremisesInfo = value;
     }
     /**
      * Sets the passwordPolicies property value. Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two can be specified together; for example: DisablePasswordExpiration, DisableStrongPassword.
      * @param value Value to set for the passwordPolicies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordPolicies(@jakarta.annotation.Nullable final String value) {
         this.passwordPolicies = value;
     }
     /**
      * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
      * @param value Value to set for the passwordProfile property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordProfile(@jakarta.annotation.Nullable final PasswordProfile value) {
         this.passwordProfile = value;
     }
     /**
      * Sets the preferredLanguage property value. The preferred language for the user that should follow the ISO 639-1 code, for example, en-US.
      * @param value Value to set for the preferredLanguage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPreferredLanguage(@jakarta.annotation.Nullable final String value) {
         this.preferredLanguage = value;
     }
     /**
      * Sets the primaryRole property value. The primaryRole property
      * @param value Value to set for the primaryRole property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrimaryRole(@jakarta.annotation.Nullable final EducationUserRole value) {
         this.primaryRole = value;
     }
     /**
      * Sets the provisionedPlans property value. The plans that are provisioned for the user. Read-only. Not nullable.
      * @param value Value to set for the provisionedPlans property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProvisionedPlans(@jakarta.annotation.Nullable final java.util.List<ProvisionedPlan> value) {
         this.provisionedPlans = value;
     }
     /**
      * Sets the refreshTokensValidFromDateTime property value. The refreshTokensValidFromDateTime property
      * @param value Value to set for the refreshTokensValidFromDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRefreshTokensValidFromDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.refreshTokensValidFromDateTime = value;
     }
     /**
      * Sets the relatedContacts property value. Related records associated with the user. Read-only.
      * @param value Value to set for the relatedContacts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRelatedContacts(@jakarta.annotation.Nullable final java.util.List<RelatedContact> value) {
         this.relatedContacts = value;
     }
     /**
      * Sets the residenceAddress property value. The address where the user lives.
      * @param value Value to set for the residenceAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResidenceAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.residenceAddress = value;
     }
     /**
      * Sets the rubrics property value. When set, the grading rubric attached to the assignment.
      * @param value Value to set for the rubrics property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRubrics(@jakarta.annotation.Nullable final java.util.List<EducationRubric> value) {
         this.rubrics = value;
     }
     /**
      * Sets the schools property value. Schools to which the user belongs. Nullable.
      * @param value Value to set for the schools property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSchools(@jakarta.annotation.Nullable final java.util.List<EducationSchool> value) {
         this.schools = value;
     }
     /**
      * Sets the showInAddressList property value. True if the Outlook Global Address List should contain this user; otherwise, false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
      * @param value Value to set for the showInAddressList property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShowInAddressList(@jakarta.annotation.Nullable final Boolean value) {
         this.showInAddressList = value;
     }
     /**
      * Sets the student property value. If the primary role is student, this block will contain student specific data.
      * @param value Value to set for the student property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStudent(@jakarta.annotation.Nullable final EducationStudent value) {
         this.student = value;
     }
     /**
      * Sets the surname property value. The user's surname (family name or last name). Supports $filter.
      * @param value Value to set for the surname property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSurname(@jakarta.annotation.Nullable final String value) {
         this.surname = value;
     }
     /**
      * Sets the taughtClasses property value. Classes for which the user is a teacher.
      * @param value Value to set for the taughtClasses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTaughtClasses(@jakarta.annotation.Nullable final java.util.List<EducationClass> value) {
         this.taughtClasses = value;
     }
     /**
      * Sets the teacher property value. If the primary role is teacher, this block will contain teacher specific data.
      * @param value Value to set for the teacher property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeacher(@jakarta.annotation.Nullable final EducationTeacher value) {
         this.teacher = value;
     }
     /**
      * Sets the usageLocation property value. A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: US, JP, and GB. Not nullable. Supports $filter.
      * @param value Value to set for the usageLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUsageLocation(@jakarta.annotation.Nullable final String value) {
         this.usageLocation = value;
     }
     /**
      * Sets the user property value. The directory user that corresponds to this user.
      * @param value Value to set for the user property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUser(@jakarta.annotation.Nullable final User value) {
         this.user = value;
     }
     /**
      * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an internet-style login name for the user based on the internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of the organization. Supports $filter and $orderby.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
     /**
      * Sets the userType property value. A string value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter.
      * @param value Value to set for the userType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserType(@jakarta.annotation.Nullable final String value) {
         this.userType = value;
     }

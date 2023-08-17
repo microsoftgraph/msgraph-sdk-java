@@ -44,9 +44,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     private String state;
     /**
      * Instantiates a new licenseAssignmentState and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LicenseAssignmentState() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -143,9 +141,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("assignedByGroup", this.getAssignedByGroup());
@@ -160,72 +156,56 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the assignedByGroup property value. The assignedByGroup property
      * @param value Value to set for the assignedByGroup property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignedByGroup(@jakarta.annotation.Nullable final String value) {
         this.assignedByGroup = value;
     }
     /**
      * Sets the disabledPlans property value. The disabledPlans property
      * @param value Value to set for the disabledPlans property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisabledPlans(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
         this.disabledPlans = value;
     }
     /**
      * Sets the error property value. The error property
      * @param value Value to set for the error property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setError(@jakarta.annotation.Nullable final String value) {
         this.error = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
      * @param value Value to set for the lastUpdatedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the skuId property value. The skuId property
      * @param value Value to set for the skuId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSkuId(@jakarta.annotation.Nullable final UUID value) {
         this.skuId = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final String value) {
         this.state = value;
     }

@@ -26,9 +26,7 @@ public class ExternalItem extends Entity implements Parsable {
     private Properties properties;
     /**
      * Instantiates a new externalItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ExternalItem() {
         super();
     }
@@ -90,9 +88,7 @@ public class ExternalItem extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +100,28 @@ public class ExternalItem extends Entity implements Parsable {
     /**
      * Sets the acl property value. An array of access control entries. Each entry specifies the access granted to a user or group. Required.
      * @param value Value to set for the acl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAcl(@jakarta.annotation.Nullable final java.util.List<Acl> value) {
         this.acl = value;
     }
     /**
      * Sets the activities property value. Returns a list of activities performed on the item. Write-only.
      * @param value Value to set for the activities property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivities(@jakarta.annotation.Nullable final java.util.List<ExternalActivity> value) {
         this.activities = value;
     }
     /**
      * Sets the content property value. A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContent(@jakarta.annotation.Nullable final ExternalItemContent value) {
         this.content = value;
     }
     /**
      * Sets the properties property value. A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.
      * @param value Value to set for the properties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProperties(@jakarta.annotation.Nullable final Properties value) {
         this.properties = value;
     }

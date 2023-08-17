@@ -19,9 +19,7 @@ public class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHol
     private ScreenSharingRole role;
     /**
      * Instantiates a new changeScreenSharingRolePostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ChangeScreenSharingRolePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,9 +62,7 @@ public class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHol
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("role", this.getRole());
@@ -75,18 +71,14 @@ public class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHol
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the role property value. The role property
      * @param value Value to set for the role property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRole(@jakarta.annotation.Nullable final ScreenSharingRole value) {
         this.role = value;
     }

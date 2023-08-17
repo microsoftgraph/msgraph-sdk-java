@@ -38,9 +38,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     private java.util.List<RedirectUriSettings> redirectUriSettings;
     /**
      * Instantiates a new webApplication and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WebApplication() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +126,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("homePageUrl", this.getHomePageUrl());
@@ -144,63 +140,49 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the homePageUrl property value. Home page or landing page of the application.
      * @param value Value to set for the homePageUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHomePageUrl(@jakarta.annotation.Nullable final String value) {
         this.homePageUrl = value;
     }
     /**
      * Sets the implicitGrantSettings property value. Specifies whether this web application can request tokens using the OAuth 2.0 implicit flow.
      * @param value Value to set for the implicitGrantSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImplicitGrantSettings(@jakarta.annotation.Nullable final ImplicitGrantSettings value) {
         this.implicitGrantSettings = value;
     }
     /**
      * Sets the logoutUrl property value. Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols.
      * @param value Value to set for the logoutUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLogoutUrl(@jakarta.annotation.Nullable final String value) {
         this.logoutUrl = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the redirectUris property value. Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
      * @param value Value to set for the redirectUris property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRedirectUris(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.redirectUris = value;
     }
     /**
      * Sets the redirectUriSettings property value. The redirectUriSettings property
      * @param value Value to set for the redirectUriSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRedirectUriSettings(@jakarta.annotation.Nullable final java.util.List<RedirectUriSettings> value) {
         this.redirectUriSettings = value;
     }

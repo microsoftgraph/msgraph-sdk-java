@@ -34,9 +34,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     private Integer warning;
     /**
      * Instantiates a new licenseUnitsDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LicenseUnitsDetail() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("enabled", this.getEnabled());
@@ -130,54 +126,42 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the enabled property value. The number of units that are enabled for the active subscription of the service SKU.
      * @param value Value to set for the enabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnabled(@jakarta.annotation.Nullable final Integer value) {
         this.enabled = value;
     }
     /**
      * Sets the lockedOut property value. The number of units that are locked out because the customer cancelled their subscription of the service SKU.
      * @param value Value to set for the lockedOut property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLockedOut(@jakarta.annotation.Nullable final Integer value) {
         this.lockedOut = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
      * @param value Value to set for the suspended property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSuspended(@jakarta.annotation.Nullable final Integer value) {
         this.suspended = value;
     }
     /**
      * Sets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state).
      * @param value Value to set for the warning property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWarning(@jakarta.annotation.Nullable final Integer value) {
         this.warning = value;
     }

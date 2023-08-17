@@ -13,9 +13,7 @@ public class Approval extends Entity implements Parsable {
     private java.util.List<ApprovalStage> stages;
     /**
      * Instantiates a new approval and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Approval() {
         super();
     }
@@ -50,9 +48,7 @@ public class Approval extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +57,7 @@ public class Approval extends Entity implements Parsable {
     /**
      * Sets the stages property value. A collection of stages in the approval decision.
      * @param value Value to set for the stages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStages(@jakarta.annotation.Nullable final java.util.List<ApprovalStage> value) {
         this.stages = value;
     }

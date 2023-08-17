@@ -35,9 +35,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
     private String units;
     /**
      * Instantiates a new synchronizationProgress and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SynchronizationProgress() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -116,9 +114,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLongValue("completedUnits", this.getCompletedUnits());
@@ -131,54 +127,42 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the completedUnits property value. The numerator of a progress ratio; the number of units of changes already processed.
      * @param value Value to set for the completedUnits property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompletedUnits(@jakarta.annotation.Nullable final Long value) {
         this.completedUnits = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the progressObservationDateTime property value. The time of a progress observation as an offset in minutes from UTC.
      * @param value Value to set for the progressObservationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProgressObservationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.progressObservationDateTime = value;
     }
     /**
      * Sets the totalUnits property value. The denominator of a progress ratio; a number of units of changes to be processed to accomplish synchronization.
      * @param value Value to set for the totalUnits property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalUnits(@jakarta.annotation.Nullable final Long value) {
         this.totalUnits = value;
     }
     /**
      * Sets the units property value. An optional description of the units.
      * @param value Value to set for the units property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnits(@jakarta.annotation.Nullable final String value) {
         this.units = value;
     }

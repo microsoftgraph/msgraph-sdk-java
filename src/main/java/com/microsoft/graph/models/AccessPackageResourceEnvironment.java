@@ -42,9 +42,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     private java.util.List<AccessPackageResource> resources;
     /**
      * Instantiates a new accessPackageResourceEnvironment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageResourceEnvironment() {
         super();
     }
@@ -142,9 +140,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,72 +156,56 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     /**
      * Sets the createdDateTime property value. The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description of this object.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of this object.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
      * @param value Value to set for the isDefaultEnvironment property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsDefaultEnvironment(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefaultEnvironment = value;
     }
     /**
      * Sets the modifiedDateTime property value. The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the modifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
     }
     /**
      * Sets the originId property value. The unique identifier of this environment in the origin system.
      * @param value Value to set for the originId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOriginId(@jakarta.annotation.Nullable final String value) {
         this.originId = value;
     }
     /**
      * Sets the originSystem property value. The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
      * @param value Value to set for the originSystem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOriginSystem(@jakarta.annotation.Nullable final String value) {
         this.originSystem = value;
     }
     /**
      * Sets the resources property value. Read-only. Required.
      * @param value Value to set for the resources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResources(@jakarta.annotation.Nullable final java.util.List<AccessPackageResource> value) {
         this.resources = value;
     }

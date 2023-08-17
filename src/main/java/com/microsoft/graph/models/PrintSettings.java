@@ -22,9 +22,7 @@ public class PrintSettings implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new printSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PrintSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -76,9 +74,7 @@ public class PrintSettings implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("documentConversionEnabled", this.getDocumentConversionEnabled());
@@ -88,27 +84,21 @@ public class PrintSettings implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the documentConversionEnabled property value. Specifies whether document conversion is enabled for the tenant. If document conversion is enabled, Universal Print service will automatically convert documents into a format compatible with the printer (xps to pdf) when needed.
      * @param value Value to set for the documentConversionEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDocumentConversionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.documentConversionEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

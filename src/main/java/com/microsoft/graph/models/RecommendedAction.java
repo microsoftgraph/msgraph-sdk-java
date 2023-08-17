@@ -30,9 +30,7 @@ public class RecommendedAction implements AdditionalDataHolder, Parsable {
     private String title;
     /**
      * Instantiates a new recommendedAction and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RecommendedAction() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class RecommendedAction implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("actionWebUrl", this.getActionWebUrl());
@@ -116,45 +112,35 @@ public class RecommendedAction implements AdditionalDataHolder, Parsable {
     /**
      * Sets the actionWebUrl property value. Web URL to the recommended action.
      * @param value Value to set for the actionWebUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActionWebUrl(@jakarta.annotation.Nullable final String value) {
         this.actionWebUrl = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the potentialScoreImpact property value. Potential improvement in the tenant security score from the recommended action.
      * @param value Value to set for the potentialScoreImpact property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPotentialScoreImpact(@jakarta.annotation.Nullable final Double value) {
         this.potentialScoreImpact = value;
     }
     /**
      * Sets the title property value. Title of the recommended action.
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }

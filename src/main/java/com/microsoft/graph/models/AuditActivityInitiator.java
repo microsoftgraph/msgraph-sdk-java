@@ -26,9 +26,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
     private UserIdentity user;
     /**
      * Instantiates a new auditActivityInitiator and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AuditActivityInitiator() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("app", this.getApp());
@@ -102,36 +98,28 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the app property value. If the resource initiating the activity is an app, this property indicates all the app related information like appId, Name, servicePrincipalId, Name.
      * @param value Value to set for the app property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApp(@jakarta.annotation.Nullable final AppIdentity value) {
         this.app = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the user property value. If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName.
      * @param value Value to set for the user property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUser(@jakarta.annotation.Nullable final UserIdentity value) {
         this.user = value;
     }

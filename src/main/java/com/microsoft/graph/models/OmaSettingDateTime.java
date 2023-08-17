@@ -17,9 +17,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
     private OffsetDateTime value;
     /**
      * Instantiates a new omaSettingDateTime and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OmaSettingDateTime() {
         super();
         this.setOdataType("#microsoft.graph.omaSettingDateTime");
@@ -55,9 +53,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -66,9 +62,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
     /**
      * Sets the value property value. Value.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.value = value;
     }

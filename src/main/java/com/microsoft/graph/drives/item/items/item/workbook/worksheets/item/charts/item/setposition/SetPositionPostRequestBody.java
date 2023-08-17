@@ -23,9 +23,7 @@ public class SetPositionPostRequestBody implements AdditionalDataHolder, Parsabl
     private Json startCell;
     /**
      * Instantiates a new setPositionPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SetPositionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,9 +75,7 @@ public class SetPositionPostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("endCell", this.getEndCell());
@@ -89,27 +85,21 @@ public class SetPositionPostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the endCell property value. The endCell property
      * @param value Value to set for the endCell property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndCell(@jakarta.annotation.Nullable final Json value) {
         this.endCell = value;
     }
     /**
      * Sets the startCell property value. The startCell property
      * @param value Value to set for the startCell property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartCell(@jakarta.annotation.Nullable final Json value) {
         this.startCell = value;
     }

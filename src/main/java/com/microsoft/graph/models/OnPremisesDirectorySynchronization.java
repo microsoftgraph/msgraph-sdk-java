@@ -17,9 +17,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
     private OnPremisesDirectorySynchronizationFeature features;
     /**
      * Instantiates a new onPremisesDirectorySynchronization and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronization() {
         super();
     }
@@ -63,9 +61,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +71,14 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
     /**
      * Sets the configuration property value. Consists of configurations that can be fine-tuned and impact the on-premises directory synchronization process for a tenant.
      * @param value Value to set for the configuration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConfiguration(@jakarta.annotation.Nullable final OnPremisesDirectorySynchronizationConfiguration value) {
         this.configuration = value;
     }
     /**
      * Sets the features property value. The features property
      * @param value Value to set for the features property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFeatures(@jakarta.annotation.Nullable final OnPremisesDirectorySynchronizationFeature value) {
         this.features = value;
     }

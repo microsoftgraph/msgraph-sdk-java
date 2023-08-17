@@ -26,9 +26,7 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
     private String to;
     /**
      * Instantiates a new bucketAggregationRange and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BucketAggregationRange() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("from", this.getFrom());
@@ -102,36 +98,28 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the from property value. Defines the lower bound from which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.
      * @param value Value to set for the from property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFrom(@jakarta.annotation.Nullable final String value) {
         this.from = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the to property value. Defines the upper bound up to which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.
      * @param value Value to set for the to property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTo(@jakarta.annotation.Nullable final String value) {
         this.to = value;
     }

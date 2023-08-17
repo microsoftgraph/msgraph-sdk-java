@@ -18,9 +18,7 @@ public class ConfirmCompromisedPostRequestBody implements AdditionalDataHolder, 
     private java.util.List<String> userIds;
     /**
      * Instantiates a new confirmCompromisedPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConfirmCompromisedPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -63,9 +61,7 @@ public class ConfirmCompromisedPostRequestBody implements AdditionalDataHolder, 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("userIds", this.getUserIds());
@@ -74,18 +70,14 @@ public class ConfirmCompromisedPostRequestBody implements AdditionalDataHolder, 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the userIds property value. The userIds property
      * @param value Value to set for the userIds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.userIds = value;
     }

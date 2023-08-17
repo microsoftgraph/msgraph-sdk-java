@@ -85,9 +85,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     private Boolean v90;
     /**
      * Instantiates a new androidMinimumOperatingSystem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AndroidMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -274,9 +272,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -301,162 +297,126 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the v10_0 property value. When TRUE, only Version 10.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v10_0 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV100(@jakarta.annotation.Nullable final Boolean value) {
         this.v100 = value;
     }
     /**
      * Sets the v11_0 property value. When TRUE, only Version 11.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v11_0 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV110(@jakarta.annotation.Nullable final Boolean value) {
         this.v110 = value;
     }
     /**
      * Sets the v4_0 property value. When TRUE, only Version 4.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v4_0 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV40(@jakarta.annotation.Nullable final Boolean value) {
         this.v40 = value;
     }
     /**
      * Sets the v4_0_3 property value. When TRUE, only Version 4.0.3 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v4_0_3 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV403(@jakarta.annotation.Nullable final Boolean value) {
         this.v403 = value;
     }
     /**
      * Sets the v4_1 property value. When TRUE, only Version 4.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v4_1 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV41(@jakarta.annotation.Nullable final Boolean value) {
         this.v41 = value;
     }
     /**
      * Sets the v4_2 property value. When TRUE, only Version 4.2 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v4_2 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV42(@jakarta.annotation.Nullable final Boolean value) {
         this.v42 = value;
     }
     /**
      * Sets the v4_3 property value. When TRUE, only Version 4.3 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v4_3 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV43(@jakarta.annotation.Nullable final Boolean value) {
         this.v43 = value;
     }
     /**
      * Sets the v4_4 property value. When TRUE, only Version 4.4 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v4_4 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV44(@jakarta.annotation.Nullable final Boolean value) {
         this.v44 = value;
     }
     /**
      * Sets the v5_0 property value. When TRUE, only Version 5.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v5_0 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV50(@jakarta.annotation.Nullable final Boolean value) {
         this.v50 = value;
     }
     /**
      * Sets the v5_1 property value. When TRUE, only Version 5.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v5_1 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV51(@jakarta.annotation.Nullable final Boolean value) {
         this.v51 = value;
     }
     /**
      * Sets the v6_0 property value. When TRUE, only Version 6.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v6_0 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV60(@jakarta.annotation.Nullable final Boolean value) {
         this.v60 = value;
     }
     /**
      * Sets the v7_0 property value. When TRUE, only Version 7.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v7_0 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV70(@jakarta.annotation.Nullable final Boolean value) {
         this.v70 = value;
     }
     /**
      * Sets the v7_1 property value. When TRUE, only Version 7.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v7_1 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV71(@jakarta.annotation.Nullable final Boolean value) {
         this.v71 = value;
     }
     /**
      * Sets the v8_0 property value. When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v8_0 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV80(@jakarta.annotation.Nullable final Boolean value) {
         this.v80 = value;
     }
     /**
      * Sets the v8_1 property value. When TRUE, only Version 8.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v8_1 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV81(@jakarta.annotation.Nullable final Boolean value) {
         this.v81 = value;
     }
     /**
      * Sets the v9_0 property value. When TRUE, only Version 9.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v9_0 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV90(@jakarta.annotation.Nullable final Boolean value) {
         this.v90 = value;
     }

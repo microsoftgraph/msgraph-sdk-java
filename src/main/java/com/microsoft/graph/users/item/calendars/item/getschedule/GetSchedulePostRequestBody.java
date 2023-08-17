@@ -31,9 +31,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
     private DateTimeTimeZone startTime;
     /**
      * Instantiates a new getSchedulePostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public GetSchedulePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,9 +101,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("AvailabilityViewInterval", this.getAvailabilityViewInterval());
@@ -117,45 +113,35 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the AvailabilityViewInterval property value. The AvailabilityViewInterval property
      * @param value Value to set for the AvailabilityViewInterval property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAvailabilityViewInterval(@jakarta.annotation.Nullable final Integer value) {
         this.availabilityViewInterval = value;
     }
     /**
      * Sets the EndTime property value. The EndTime property
      * @param value Value to set for the EndTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.endTime = value;
     }
     /**
      * Sets the Schedules property value. The Schedules property
      * @param value Value to set for the Schedules property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSchedules(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.schedules = value;
     }
     /**
      * Sets the StartTime property value. The StartTime property
      * @param value Value to set for the StartTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.startTime = value;
     }

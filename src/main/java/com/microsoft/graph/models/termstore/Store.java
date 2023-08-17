@@ -26,9 +26,7 @@ public class Store extends Entity implements Parsable {
     private java.util.List<Set> sets;
     /**
      * Instantiates a new store and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Store() {
         super();
     }
@@ -90,9 +88,7 @@ public class Store extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +100,28 @@ public class Store extends Entity implements Parsable {
     /**
      * Sets the defaultLanguageTag property value. Default language of the term store.
      * @param value Value to set for the defaultLanguageTag property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefaultLanguageTag(@jakarta.annotation.Nullable final String value) {
         this.defaultLanguageTag = value;
     }
     /**
      * Sets the groups property value. Collection of all groups available in the term store.
      * @param value Value to set for the groups property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroups(@jakarta.annotation.Nullable final java.util.List<Group> value) {
         this.groups = value;
     }
     /**
      * Sets the languageTags property value. List of languages for the term store.
      * @param value Value to set for the languageTags property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLanguageTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.languageTags = value;
     }
     /**
      * Sets the sets property value. Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
      * @param value Value to set for the sets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSets(@jakarta.annotation.Nullable final java.util.List<Set> value) {
         this.sets = value;
     }

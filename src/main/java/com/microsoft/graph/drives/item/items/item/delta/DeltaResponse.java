@@ -15,9 +15,7 @@ public class DeltaResponse extends BaseDeltaFunctionResponse implements Parsable
     private java.util.List<DriveItem> value;
     /**
      * Instantiates a new deltaResponse and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeltaResponse() {
         super();
     }
@@ -52,9 +50,7 @@ public class DeltaResponse extends BaseDeltaFunctionResponse implements Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,9 +59,7 @@ public class DeltaResponse extends BaseDeltaFunctionResponse implements Parsable
     /**
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DriveItem> value) {
         this.value = value;
     }

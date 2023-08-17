@@ -66,9 +66,7 @@ public class UserActivity extends Entity implements Parsable {
     private VisualInfo visualElements;
     /**
      * Instantiates a new userActivity and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserActivity() {
         super();
     }
@@ -220,9 +218,7 @@ public class UserActivity extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -244,126 +240,98 @@ public class UserActivity extends Entity implements Parsable {
     /**
      * Sets the activationUrl property value. Required. URL used to launch the activity in the best native experience represented by the appId. Might launch a web-based app if no native app exists.
      * @param value Value to set for the activationUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivationUrl(@jakarta.annotation.Nullable final String value) {
         this.activationUrl = value;
     }
     /**
      * Sets the activitySourceHost property value. Required. URL for the domain representing the cross-platform identity mapping for the app. Mapping is stored either as a JSON file hosted on the domain or configurable via Windows Dev Center. The JSON file is named cross-platform-app-identifiers and is hosted at root of your HTTPS domain, either at the top level domain or include a sub domain. For example: https://contoso.com or https://myapp.contoso.com but NOT https://myapp.contoso.com/somepath. You must have a unique file and domain (or sub domain) per cross-platform app identity. For example, a separate file and domain is needed for Word vs. PowerPoint.
      * @param value Value to set for the activitySourceHost property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivitySourceHost(@jakarta.annotation.Nullable final String value) {
         this.activitySourceHost = value;
     }
     /**
      * Sets the appActivityId property value. Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter.
      * @param value Value to set for the appActivityId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppActivityId(@jakarta.annotation.Nullable final String value) {
         this.appActivityId = value;
     }
     /**
      * Sets the appDisplayName property value. Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the users local device.
      * @param value Value to set for the appDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.appDisplayName = value;
     }
     /**
      * Sets the contentInfo property value. Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
      * @param value Value to set for the contentInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentInfo(@jakarta.annotation.Nullable final Json value) {
         this.contentInfo = value;
     }
     /**
      * Sets the contentUrl property value. Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).
      * @param value Value to set for the contentUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentUrl(@jakarta.annotation.Nullable final String value) {
         this.contentUrl = value;
     }
     /**
      * Sets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the expirationDateTime property value. Set by the server. DateTime in UTC when the object expired on the server.
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the fallbackUrl property value. Optional. URL used to launch the activity in a web-based app, if available.
      * @param value Value to set for the fallbackUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFallbackUrl(@jakarta.annotation.Nullable final String value) {
         this.fallbackUrl = value;
     }
     /**
      * Sets the historyItems property value. Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
      * @param value Value to set for the historyItems property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHistoryItems(@jakarta.annotation.Nullable final java.util.List<ActivityHistoryItem> value) {
         this.historyItems = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Set by the server. DateTime in UTC when the object was modified on the server.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final Status value) {
         this.status = value;
     }
     /**
      * Sets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
      * @param value Value to set for the userTimezone property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserTimezone(@jakarta.annotation.Nullable final String value) {
         this.userTimezone = value;
     }
     /**
      * Sets the visualElements property value. The visualElements property
      * @param value Value to set for the visualElements property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVisualElements(@jakarta.annotation.Nullable final VisualInfo value) {
         this.visualElements = value;
     }

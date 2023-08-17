@@ -43,9 +43,7 @@ public class Session extends Entity implements Parsable {
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new session and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Session() {
         super();
     }
@@ -143,9 +141,7 @@ public class Session extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -161,72 +157,56 @@ public class Session extends Entity implements Parsable {
     /**
      * Sets the callee property value. Endpoint that answered the session.
      * @param value Value to set for the callee property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallee(@jakarta.annotation.Nullable final Endpoint value) {
         this.callee = value;
     }
     /**
      * Sets the caller property value. Endpoint that initiated the session.
      * @param value Value to set for the caller property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCaller(@jakarta.annotation.Nullable final Endpoint value) {
         this.caller = value;
     }
     /**
      * Sets the endDateTime property value. UTC time when the last user left the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
      * Sets the failureInfo property value. Failure information associated with the session if the session failed.
      * @param value Value to set for the failureInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailureInfo(@jakarta.annotation.Nullable final FailureInfo value) {
         this.failureInfo = value;
     }
     /**
      * Sets the isTest property value. Specifies whether the session is a test.
      * @param value Value to set for the isTest property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsTest(@jakarta.annotation.Nullable final Boolean value) {
         this.isTest = value;
     }
     /**
      * Sets the modalities property value. List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      * @param value Value to set for the modalities property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {
         this.modalities = value;
     }
     /**
      * Sets the segments property value. The list of segments involved in the session. Read-only. Nullable.
      * @param value Value to set for the segments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSegments(@jakarta.annotation.Nullable final java.util.List<Segment> value) {
         this.segments = value;
     }
     /**
      * Sets the startDateTime property value. UTC time when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }

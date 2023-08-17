@@ -28,9 +28,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     private Windows10EditionType targetEdition;
     /**
      * Instantiates a new editionUpgradeConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EditionUpgradeConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.editionUpgradeConfiguration");
@@ -93,9 +91,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -107,36 +103,28 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     /**
      * Sets the license property value. Edition Upgrade License File Content.
      * @param value Value to set for the license property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLicense(@jakarta.annotation.Nullable final String value) {
         this.license = value;
     }
     /**
      * Sets the licenseType property value. Edition Upgrade License type
      * @param value Value to set for the licenseType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLicenseType(@jakarta.annotation.Nullable final EditionUpgradeLicenseType value) {
         this.licenseType = value;
     }
     /**
      * Sets the productKey property value. Edition Upgrade Product Key.
      * @param value Value to set for the productKey property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProductKey(@jakarta.annotation.Nullable final String value) {
         this.productKey = value;
     }
     /**
      * Sets the targetEdition property value. Windows 10 Edition type.
      * @param value Value to set for the targetEdition property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetEdition(@jakarta.annotation.Nullable final Windows10EditionType value) {
         this.targetEdition = value;
     }

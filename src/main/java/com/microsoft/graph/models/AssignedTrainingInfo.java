@@ -30,9 +30,7 @@ public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new assignedTrainingInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AssignedTrainingInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("assignedUserCount", this.getAssignedUserCount());
@@ -116,45 +112,35 @@ public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the assignedUserCount property value. Number of users who were assigned the training in an attack simulation and training campaign.
      * @param value Value to set for the assignedUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignedUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.assignedUserCount = value;
     }
     /**
      * Sets the completedUserCount property value. Number of users who completed the training in an attack simulation and training campaign.
      * @param value Value to set for the completedUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompletedUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.completedUserCount = value;
     }
     /**
      * Sets the displayName property value. Display name of the training in an attack simulation and training campaign.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

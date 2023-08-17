@@ -25,9 +25,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
     private String publisher;
     /**
      * Instantiates a new oauthApplicationEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OauthApplicationEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.oauthApplicationEvidence");
@@ -90,9 +88,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +100,28 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
     /**
      * Sets the appId property value. Unique identifier of the application.
      * @param value Value to set for the appId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
      * Sets the displayName property value. Name of the application.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the objectId property value. The unique identifier of the application object in Azure AD.
      * @param value Value to set for the objectId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setObjectId(@jakarta.annotation.Nullable final String value) {
         this.objectId = value;
     }
     /**
      * Sets the publisher property value. The name of the application publisher.
      * @param value Value to set for the publisher property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.publisher = value;
     }

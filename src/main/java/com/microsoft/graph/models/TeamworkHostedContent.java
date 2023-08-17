@@ -17,9 +17,7 @@ public class TeamworkHostedContent extends Entity implements Parsable {
     private String contentType;
     /**
      * Instantiates a new teamworkHostedContent and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamworkHostedContent() {
         super();
     }
@@ -70,9 +68,7 @@ public class TeamworkHostedContent extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -82,18 +78,14 @@ public class TeamworkHostedContent extends Entity implements Parsable {
     /**
      * Sets the contentBytes property value. Write only. Bytes for the hosted content (such as images).
      * @param value Value to set for the contentBytes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentBytes(@jakarta.annotation.Nullable final byte[] value) {
         this.contentBytes = value;
     }
     /**
      * Sets the contentType property value. Write only. Content type. sicj as image/png, image/jpg.
      * @param value Value to set for the contentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentType(@jakarta.annotation.Nullable final String value) {
         this.contentType = value;
     }

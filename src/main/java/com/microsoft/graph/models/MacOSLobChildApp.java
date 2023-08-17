@@ -33,9 +33,7 @@ public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
     private String versionNumber;
     /**
      * Instantiates a new macOSLobChildApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MacOSLobChildApp() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -105,9 +103,7 @@ public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("buildNumber", this.getBuildNumber());
@@ -119,45 +115,35 @@ public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the buildNumber property value. The build number of the app.
      * @param value Value to set for the buildNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBuildNumber(@jakarta.annotation.Nullable final String value) {
         this.buildNumber = value;
     }
     /**
      * Sets the bundleId property value. The bundleId of the app.
      * @param value Value to set for the bundleId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBundleId(@jakarta.annotation.Nullable final String value) {
         this.bundleId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the versionNumber property value. The version number of the app.
      * @param value Value to set for the versionNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersionNumber(@jakarta.annotation.Nullable final String value) {
         this.versionNumber = value;
     }

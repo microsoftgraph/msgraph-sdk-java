@@ -26,9 +26,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new simulationEvent and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SimulationEvent() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("count", this.getCount());
@@ -102,36 +98,28 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the count property value. Count of the simulation event occurrence in an attack simulation and training campaign.
      * @param value Value to set for the count property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCount(@jakarta.annotation.Nullable final Integer value) {
         this.count = value;
     }
     /**
      * Sets the eventName property value. Name of the simulation event in an attack simulation and training campaign.
      * @param value Value to set for the eventName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEventName(@jakarta.annotation.Nullable final String value) {
         this.eventName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

@@ -33,9 +33,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
     private String url;
     /**
      * Instantiates a new telecomExpenseManagementPartner and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TelecomExpenseManagementPartner() {
         super();
     }
@@ -106,9 +104,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -121,45 +117,35 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
     /**
      * Sets the appAuthorized property value. Whether the partner's AAD app has been authorized to access Intune.
      * @param value Value to set for the appAuthorized property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppAuthorized(@jakarta.annotation.Nullable final Boolean value) {
         this.appAuthorized = value;
     }
     /**
      * Sets the displayName property value. Display name of the TEM partner.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the enabled property value. Whether Intune's connection to the TEM service is currently enabled or disabled.
      * @param value Value to set for the enabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.enabled = value;
     }
     /**
      * Sets the lastConnectionDateTime property value. Timestamp of the last request sent to Intune by the TEM partner.
      * @param value Value to set for the lastConnectionDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastConnectionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastConnectionDateTime = value;
     }
     /**
      * Sets the url property value. URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
      * @param value Value to set for the url property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUrl(@jakarta.annotation.Nullable final String value) {
         this.url = value;
     }

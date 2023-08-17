@@ -20,9 +20,7 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
     private String vpnConfigurationId;
     /**
      * Instantiates a new iosVppAppAssignmentSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosVppAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.iosVppAppAssignmentSettings");
@@ -67,9 +65,7 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -79,18 +75,14 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
     /**
      * Sets the useDeviceLicensing property value. Whether or not to use device licensing.
      * @param value Value to set for the useDeviceLicensing property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUseDeviceLicensing(@jakarta.annotation.Nullable final Boolean value) {
         this.useDeviceLicensing = value;
     }
     /**
      * Sets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
      * @param value Value to set for the vpnConfigurationId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVpnConfigurationId(@jakarta.annotation.Nullable final String value) {
         this.vpnConfigurationId = value;
     }

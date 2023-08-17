@@ -30,9 +30,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
     private Integer type;
     /**
      * Instantiates a new alternativeSecurityId and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AlternativeSecurityId() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("identityProvider", this.getIdentityProvider());
@@ -116,45 +112,35 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the identityProvider property value. For internal use only.
      * @param value Value to set for the identityProvider property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentityProvider(@jakarta.annotation.Nullable final String value) {
         this.identityProvider = value;
     }
     /**
      * Sets the key property value. For internal use only.
      * @param value Value to set for the key property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKey(@jakarta.annotation.Nullable final byte[] value) {
         this.key = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the type property value. For internal use only.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final Integer value) {
         this.type = value;
     }

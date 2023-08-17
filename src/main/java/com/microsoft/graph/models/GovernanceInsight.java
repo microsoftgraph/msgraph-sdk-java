@@ -14,9 +14,7 @@ public class GovernanceInsight extends Entity implements Parsable {
     private OffsetDateTime insightCreatedDateTime;
     /**
      * Instantiates a new governanceInsight and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public GovernanceInsight() {
         super();
     }
@@ -59,9 +57,7 @@ public class GovernanceInsight extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -70,9 +66,7 @@ public class GovernanceInsight extends Entity implements Parsable {
     /**
      * Sets the insightCreatedDateTime property value. Indicates when the insight was created.
      * @param value Value to set for the insightCreatedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInsightCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.insightCreatedDateTime = value;
     }

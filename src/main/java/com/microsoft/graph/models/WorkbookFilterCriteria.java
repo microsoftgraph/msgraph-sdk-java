@@ -50,9 +50,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
     private Json values;
     /**
      * Instantiates a new workbookFilterCriteria and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookFilterCriteria() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -167,9 +165,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("color", this.getColor());
@@ -186,90 +182,70 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the color property value. The color property
      * @param value Value to set for the color property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColor(@jakarta.annotation.Nullable final String value) {
         this.color = value;
     }
     /**
      * Sets the criterion1 property value. The criterion1 property
      * @param value Value to set for the criterion1 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCriterion1(@jakarta.annotation.Nullable final String value) {
         this.criterion1 = value;
     }
     /**
      * Sets the criterion2 property value. The criterion2 property
      * @param value Value to set for the criterion2 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCriterion2(@jakarta.annotation.Nullable final String value) {
         this.criterion2 = value;
     }
     /**
      * Sets the dynamicCriteria property value. The dynamicCriteria property
      * @param value Value to set for the dynamicCriteria property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDynamicCriteria(@jakarta.annotation.Nullable final String value) {
         this.dynamicCriteria = value;
     }
     /**
      * Sets the filterOn property value. The filterOn property
      * @param value Value to set for the filterOn property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFilterOn(@jakarta.annotation.Nullable final String value) {
         this.filterOn = value;
     }
     /**
      * Sets the icon property value. The icon property
      * @param value Value to set for the icon property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIcon(@jakarta.annotation.Nullable final WorkbookIcon value) {
         this.icon = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the operator property value. The operator property
      * @param value Value to set for the operator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperator(@jakarta.annotation.Nullable final String value) {
         this.operator = value;
     }
     /**
      * Sets the values property value. The values property
      * @param value Value to set for the values property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValues(@jakarta.annotation.Nullable final Json value) {
         this.values = value;
     }

@@ -42,9 +42,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new certificateAuthority and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CertificateAuthority() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +139,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("certificate", this.getCertificate());
@@ -158,72 +154,56 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the certificate property value. Required. The base64 encoded string representing the public certificate.
      * @param value Value to set for the certificate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificate(@jakarta.annotation.Nullable final byte[] value) {
         this.certificate = value;
     }
     /**
      * Sets the certificateRevocationListUrl property value. The URL of the certificate revocation list.
      * @param value Value to set for the certificateRevocationListUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificateRevocationListUrl(@jakarta.annotation.Nullable final String value) {
         this.certificateRevocationListUrl = value;
     }
     /**
      * Sets the deltaCertificateRevocationListUrl property value. The URL contains the list of all revoked certificates since the last time a full certificate revocaton list was created.
      * @param value Value to set for the deltaCertificateRevocationListUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeltaCertificateRevocationListUrl(@jakarta.annotation.Nullable final String value) {
         this.deltaCertificateRevocationListUrl = value;
     }
     /**
      * Sets the isRootAuthority property value. Required. true if the trusted certificate is a root authority, false if the trusted certificate is an intermediate authority.
      * @param value Value to set for the isRootAuthority property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsRootAuthority(@jakarta.annotation.Nullable final Boolean value) {
         this.isRootAuthority = value;
     }
     /**
      * Sets the issuer property value. The issuer of the certificate, calculated from the certificate value. Read-only.
      * @param value Value to set for the issuer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIssuer(@jakarta.annotation.Nullable final String value) {
         this.issuer = value;
     }
     /**
      * Sets the issuerSki property value. The subject key identifier of the certificate, calculated from the certificate value. Read-only.
      * @param value Value to set for the issuerSki property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIssuerSki(@jakarta.annotation.Nullable final String value) {
         this.issuerSki = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

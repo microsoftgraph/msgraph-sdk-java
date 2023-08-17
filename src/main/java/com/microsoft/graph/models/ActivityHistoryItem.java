@@ -46,9 +46,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     private String userTimezone;
     /**
      * Instantiates a new activityHistoryItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ActivityHistoryItem() {
         super();
     }
@@ -155,9 +153,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -174,81 +170,63 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     /**
      * Sets the activeDurationSeconds property value. Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime.
      * @param value Value to set for the activeDurationSeconds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActiveDurationSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.activeDurationSeconds = value;
     }
     /**
      * Sets the activity property value. The activity property
      * @param value Value to set for the activity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivity(@jakarta.annotation.Nullable final UserActivity value) {
         this.activity = value;
     }
     /**
      * Sets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the expirationDateTime property value. Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the lastActiveDateTime property value. Optional. UTC DateTime when the historyItem (activity session) was last understood as active or finished - if null, historyItem status should be Ongoing.
      * @param value Value to set for the lastActiveDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastActiveDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastActiveDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Set by the server. DateTime in UTC when the object was modified on the server.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the startedDateTime property value. Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
      * @param value Value to set for the startedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startedDateTime = value;
     }
     /**
      * Sets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final Status value) {
         this.status = value;
     }
     /**
      * Sets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
      * @param value Value to set for the userTimezone property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserTimezone(@jakarta.annotation.Nullable final String value) {
         this.userTimezone = value;
     }

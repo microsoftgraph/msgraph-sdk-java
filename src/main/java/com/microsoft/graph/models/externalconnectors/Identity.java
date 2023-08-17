@@ -14,9 +14,7 @@ public class Identity extends Entity implements Parsable {
     private IdentityType type;
     /**
      * Instantiates a new identity and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Identity() {
         super();
     }
@@ -51,9 +49,7 @@ public class Identity extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class Identity extends Entity implements Parsable {
     /**
      * Sets the type property value. The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final IdentityType value) {
         this.type = value;
     }

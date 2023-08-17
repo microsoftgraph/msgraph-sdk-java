@@ -49,9 +49,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     private MobileAppContentFileUploadState uploadState;
     /**
      * Instantiates a new mobileAppContentFile and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MobileAppContentFile() {
         super();
     }
@@ -158,9 +156,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -177,81 +173,63 @@ public class MobileAppContentFile extends Entity implements Parsable {
     /**
      * Sets the azureStorageUri property value. The Azure Storage URI.
      * @param value Value to set for the azureStorageUri property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAzureStorageUri(@jakarta.annotation.Nullable final String value) {
         this.azureStorageUri = value;
     }
     /**
      * Sets the azureStorageUriExpirationDateTime property value. The time the Azure storage Uri expires.
      * @param value Value to set for the azureStorageUriExpirationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAzureStorageUriExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.azureStorageUriExpirationDateTime = value;
     }
     /**
      * Sets the createdDateTime property value. The time the file was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the isCommitted property value. A value indicating whether the file is committed.
      * @param value Value to set for the isCommitted property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsCommitted(@jakarta.annotation.Nullable final Boolean value) {
         this.isCommitted = value;
     }
     /**
      * Sets the manifest property value. The manifest information.
      * @param value Value to set for the manifest property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManifest(@jakarta.annotation.Nullable final byte[] value) {
         this.manifest = value;
     }
     /**
      * Sets the name property value. the file name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the size property value. The size of the file prior to encryption.
      * @param value Value to set for the size property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSize(@jakarta.annotation.Nullable final Long value) {
         this.size = value;
     }
     /**
      * Sets the sizeEncrypted property value. The size of the file after encryption.
      * @param value Value to set for the sizeEncrypted property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSizeEncrypted(@jakarta.annotation.Nullable final Long value) {
         this.sizeEncrypted = value;
     }
     /**
      * Sets the uploadState property value. Contains properties for upload request states.
      * @param value Value to set for the uploadState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUploadState(@jakarta.annotation.Nullable final MobileAppContentFileUploadState value) {
         this.uploadState = value;
     }

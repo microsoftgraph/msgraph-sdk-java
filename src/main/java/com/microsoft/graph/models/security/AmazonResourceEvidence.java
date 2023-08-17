@@ -25,9 +25,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
     private String resourceType;
     /**
      * Instantiates a new amazonResourceEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AmazonResourceEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.amazonResourceEvidence");
@@ -90,9 +88,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +100,28 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the amazonAccountId property value. The unique identifier for the Amazon account.
      * @param value Value to set for the amazonAccountId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAmazonAccountId(@jakarta.annotation.Nullable final String value) {
         this.amazonAccountId = value;
     }
     /**
      * Sets the amazonResourceId property value. The Amazon resource identifier (ARN) for the cloud resource.
      * @param value Value to set for the amazonResourceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAmazonResourceId(@jakarta.annotation.Nullable final String value) {
         this.amazonResourceId = value;
     }
     /**
      * Sets the resourceName property value. The name of the resource.
      * @param value Value to set for the resourceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceName(@jakarta.annotation.Nullable final String value) {
         this.resourceName = value;
     }
     /**
      * Sets the resourceType property value. The type of the resource.
      * @param value Value to set for the resourceType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceType(@jakarta.annotation.Nullable final String value) {
         this.resourceType = value;
     }

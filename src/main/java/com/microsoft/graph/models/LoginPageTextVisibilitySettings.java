@@ -42,9 +42,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
     private String odataType;
     /**
      * Instantiates a new loginPageTextVisibilitySettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LoginPageTextVisibilitySettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +139,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("hideAccountResetCredentials", this.getHideAccountResetCredentials());
@@ -158,72 +154,56 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the hideAccountResetCredentials property value. Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
      * @param value Value to set for the hideAccountResetCredentials property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHideAccountResetCredentials(@jakarta.annotation.Nullable final Boolean value) {
         this.hideAccountResetCredentials = value;
     }
     /**
      * Sets the hideCannotAccessYourAccount property value. Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
      * @param value Value to set for the hideCannotAccessYourAccount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHideCannotAccessYourAccount(@jakarta.annotation.Nullable final Boolean value) {
         this.hideCannotAccessYourAccount = value;
     }
     /**
      * Sets the hideForgotMyPassword property value. Option to hide the self-service password reset (SSPR) 'Forgot my password' hyperlink on the sign-in form.
      * @param value Value to set for the hideForgotMyPassword property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHideForgotMyPassword(@jakarta.annotation.Nullable final Boolean value) {
         this.hideForgotMyPassword = value;
     }
     /**
      * Sets the hidePrivacyAndCookies property value. Option to hide the 'Privacy & Cookies' hyperlink in the footer.
      * @param value Value to set for the hidePrivacyAndCookies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHidePrivacyAndCookies(@jakarta.annotation.Nullable final Boolean value) {
         this.hidePrivacyAndCookies = value;
     }
     /**
      * Sets the hideResetItNow property value. Option to hide the self-service password reset (SSPR) 'reset it now' hyperlink on the sign-in form.
      * @param value Value to set for the hideResetItNow property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHideResetItNow(@jakarta.annotation.Nullable final Boolean value) {
         this.hideResetItNow = value;
     }
     /**
      * Sets the hideTermsOfUse property value. Option to hide the 'Terms of Use' hyperlink in the footer.
      * @param value Value to set for the hideTermsOfUse property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHideTermsOfUse(@jakarta.annotation.Nullable final Boolean value) {
         this.hideTermsOfUse = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

@@ -30,9 +30,7 @@ public class PrintDocumentUploadProperties implements AdditionalDataHolder, Pars
     private Long size;
     /**
      * Instantiates a new printDocumentUploadProperties and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PrintDocumentUploadProperties() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class PrintDocumentUploadProperties implements AdditionalDataHolder, Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("contentType", this.getContentType());
@@ -116,45 +112,35 @@ public class PrintDocumentUploadProperties implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the contentType property value. The document's content (MIME) type.
      * @param value Value to set for the contentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentType(@jakarta.annotation.Nullable final String value) {
         this.contentType = value;
     }
     /**
      * Sets the documentName property value. The document's name.
      * @param value Value to set for the documentName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDocumentName(@jakarta.annotation.Nullable final String value) {
         this.documentName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the size property value. The document's size in bytes.
      * @param value Value to set for the size property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSize(@jakarta.annotation.Nullable final Long value) {
         this.size = value;
     }

@@ -21,9 +21,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     private OffsetDateTime eventDateTime;
     /**
      * Instantiates a new deviceManagementTroubleshootingEvent and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceManagementTroubleshootingEvent() {
         super();
     }
@@ -74,9 +72,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,18 +82,14 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     /**
      * Sets the correlationId property value. Id used for tracing the failure in the service.
      * @param value Value to set for the correlationId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
         this.correlationId = value;
     }
     /**
      * Sets the eventDateTime property value. Time when the event occurred .
      * @param value Value to set for the eventDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.eventDateTime = value;
     }

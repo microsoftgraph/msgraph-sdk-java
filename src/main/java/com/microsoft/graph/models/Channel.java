@@ -62,9 +62,7 @@ public class Channel extends Entity implements Parsable {
     private String webUrl;
     /**
      * Instantiates a new channel and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Channel() {
         super();
     }
@@ -207,9 +205,7 @@ public class Channel extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -230,117 +226,91 @@ public class Channel extends Entity implements Parsable {
     /**
      * Sets the createdDateTime property value. Read only. Timestamp at which the channel was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Optional textual description for the channel.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the email property value. The email address for sending messages to the channel. Read-only.
      * @param value Value to set for the email property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
      * Sets the filesFolder property value. Metadata for the location where the channel's files are stored.
      * @param value Value to set for the filesFolder property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFilesFolder(@jakarta.annotation.Nullable final DriveItem value) {
         this.filesFolder = value;
     }
     /**
      * Sets the isFavoriteByDefault property value. Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
      * @param value Value to set for the isFavoriteByDefault property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsFavoriteByDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isFavoriteByDefault = value;
     }
     /**
      * Sets the members property value. A collection of membership records associated with the channel.
      * @param value Value to set for the members property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<ConversationMember> value) {
         this.members = value;
     }
     /**
      * Sets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
      * @param value Value to set for the membershipType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMembershipType(@jakarta.annotation.Nullable final ChannelMembershipType value) {
         this.membershipType = value;
     }
     /**
      * Sets the messages property value. A collection of all the messages in the channel. A navigation property. Nullable.
      * @param value Value to set for the messages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessages(@jakarta.annotation.Nullable final java.util.List<ChatMessage> value) {
         this.messages = value;
     }
     /**
      * Sets the sharedWithTeams property value. A collection of teams with which a channel is shared.
      * @param value Value to set for the sharedWithTeams property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharedWithTeams(@jakarta.annotation.Nullable final java.util.List<SharedWithChannelTeamInfo> value) {
         this.sharedWithTeams = value;
     }
     /**
      * Sets the tabs property value. A collection of all the tabs in the channel. A navigation property.
      * @param value Value to set for the tabs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTabs(@jakarta.annotation.Nullable final java.util.List<TeamsTab> value) {
         this.tabs = value;
     }
     /**
      * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
      * Sets the webUrl property value. A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
      * @param value Value to set for the webUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }

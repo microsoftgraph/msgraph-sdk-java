@@ -13,9 +13,7 @@ public class Initiator extends Identity implements Parsable {
     private InitiatorType initiatorType;
     /**
      * Instantiates a new initiator and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Initiator() {
         super();
         this.setOdataType("#microsoft.graph.initiator");
@@ -51,9 +49,7 @@ public class Initiator extends Identity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class Initiator extends Identity implements Parsable {
     /**
      * Sets the initiatorType property value. Type of initiator. Possible values are: user, application, system, unknownFutureValue.
      * @param value Value to set for the initiatorType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiatorType(@jakarta.annotation.Nullable final InitiatorType value) {
         this.initiatorType = value;
     }

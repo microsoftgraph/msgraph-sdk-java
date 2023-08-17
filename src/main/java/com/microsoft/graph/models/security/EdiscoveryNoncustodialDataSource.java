@@ -17,9 +17,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
     private EdiscoveryIndexOperation lastIndexOperation;
     /**
      * Instantiates a new ediscoveryNoncustodialDataSource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EdiscoveryNoncustodialDataSource() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoveryNoncustodialDataSource");
@@ -64,9 +62,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
     /**
      * Sets the dataSource property value. User source or SharePoint site data source as non-custodial data source.
      * @param value Value to set for the dataSource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDataSource(@jakarta.annotation.Nullable final DataSource value) {
         this.dataSource = value;
     }
     /**
      * Sets the lastIndexOperation property value. Operation entity that represents the latest indexing for the non-custodial data source.
      * @param value Value to set for the lastIndexOperation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastIndexOperation(@jakarta.annotation.Nullable final EdiscoveryIndexOperation value) {
         this.lastIndexOperation = value;
     }

@@ -17,9 +17,7 @@ public class OutlookCategory extends Entity implements Parsable {
     private String displayName;
     /**
      * Instantiates a new outlookCategory and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OutlookCategory() {
         super();
     }
@@ -63,9 +61,7 @@ public class OutlookCategory extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +71,14 @@ public class OutlookCategory extends Entity implements Parsable {
     /**
      * Sets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note.
      * @param value Value to set for the color property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColor(@jakarta.annotation.Nullable final CategoryColor value) {
         this.color = value;
     }
     /**
      * Sets the displayName property value. A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }

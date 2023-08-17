@@ -20,9 +20,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
     private String url;
     /**
      * Instantiates a new windowsInformationProtectionNetworkLearningSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsInformationProtectionNetworkLearningSummary() {
         super();
     }
@@ -66,9 +64,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -78,18 +74,14 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
     /**
      * Sets the deviceCount property value. Device Count
      * @param value Value to set for the deviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.deviceCount = value;
     }
     /**
      * Sets the url property value. Website url
      * @param value Value to set for the url property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUrl(@jakarta.annotation.Nullable final String value) {
         this.url = value;
     }

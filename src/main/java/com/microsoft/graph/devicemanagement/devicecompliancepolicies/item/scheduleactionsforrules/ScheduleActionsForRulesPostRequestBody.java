@@ -19,9 +19,7 @@ public class ScheduleActionsForRulesPostRequestBody implements AdditionalDataHol
     private java.util.List<DeviceComplianceScheduledActionForRule> deviceComplianceScheduledActionForRules;
     /**
      * Instantiates a new scheduleActionsForRulesPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ScheduleActionsForRulesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,9 +62,7 @@ public class ScheduleActionsForRulesPostRequestBody implements AdditionalDataHol
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("deviceComplianceScheduledActionForRules", this.getDeviceComplianceScheduledActionForRules());
@@ -75,18 +71,14 @@ public class ScheduleActionsForRulesPostRequestBody implements AdditionalDataHol
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the deviceComplianceScheduledActionForRules property value. The deviceComplianceScheduledActionForRules property
      * @param value Value to set for the deviceComplianceScheduledActionForRules property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceComplianceScheduledActionForRules(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceScheduledActionForRule> value) {
         this.deviceComplianceScheduledActionForRules = value;
     }

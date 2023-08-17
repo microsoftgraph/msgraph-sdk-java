@@ -34,9 +34,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
     private Long size;
     /**
      * Instantiates a new attachmentInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AttachmentInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("attachmentType", this.getAttachmentType());
@@ -130,54 +126,42 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the attachmentType property value. The type of the attachment. The possible values are: file, item, reference. Required.
      * @param value Value to set for the attachmentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttachmentType(@jakarta.annotation.Nullable final AttachmentType value) {
         this.attachmentType = value;
     }
     /**
      * Sets the contentType property value. The nature of the data in the attachment. Optional.
      * @param value Value to set for the contentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentType(@jakarta.annotation.Nullable final String value) {
         this.contentType = value;
     }
     /**
      * Sets the name property value. The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the size property value. The length of the attachment in bytes. Required.
      * @param value Value to set for the size property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSize(@jakarta.annotation.Nullable final Long value) {
         this.size = value;
     }

@@ -21,9 +21,7 @@ public class ChannelRenamedEventMessageDetail extends EventMessageDetail impleme
     private IdentitySet initiator;
     /**
      * Instantiates a new channelRenamedEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ChannelRenamedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.channelRenamedEventMessageDetail");
@@ -77,9 +75,7 @@ public class ChannelRenamedEventMessageDetail extends EventMessageDetail impleme
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class ChannelRenamedEventMessageDetail extends EventMessageDetail impleme
     /**
      * Sets the channelDisplayName property value. The updated name of the channel.
      * @param value Value to set for the channelDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChannelDisplayName(@jakarta.annotation.Nullable final String value) {
         this.channelDisplayName = value;
     }
     /**
      * Sets the channelId property value. Unique identifier of the channel.
      * @param value Value to set for the channelId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChannelId(@jakarta.annotation.Nullable final String value) {
         this.channelId = value;
     }
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }

@@ -26,9 +26,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new complianceInformation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ComplianceInformation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("certificationControls", this.getCertificationControls());
@@ -102,36 +98,28 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the certificationControls property value. Collection of the certification controls associated with the certification.
      * @param value Value to set for the certificationControls property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificationControls(@jakarta.annotation.Nullable final java.util.List<CertificationControl> value) {
         this.certificationControls = value;
     }
     /**
      * Sets the certificationName property value. The name of the compliance certification, for example, ISO 27018:2014, GDPR, FedRAMP, and NIST 800-171.
      * @param value Value to set for the certificationName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificationName(@jakarta.annotation.Nullable final String value) {
         this.certificationName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

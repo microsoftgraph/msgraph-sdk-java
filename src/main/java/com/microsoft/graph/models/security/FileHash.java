@@ -26,9 +26,7 @@ public class FileHash implements AdditionalDataHolder, Parsable {
     private String value;
     /**
      * Instantiates a new fileHash and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public FileHash() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class FileHash implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("algorithm", this.getAlgorithm());
@@ -102,36 +98,28 @@ public class FileHash implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the algorithm property value. The algorithm property
      * @param value Value to set for the algorithm property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlgorithm(@jakarta.annotation.Nullable final FileHashAlgorithm value) {
         this.algorithm = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the value property value. The hash value.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }

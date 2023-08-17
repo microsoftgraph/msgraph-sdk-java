@@ -13,9 +13,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
     private UnifiedRoleManagementPolicyRuleTarget target;
     /**
      * Instantiates a new unifiedRoleManagementPolicyRule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyRule() {
         super();
     }
@@ -61,9 +59,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -72,9 +68,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
     /**
      * Sets the target property value. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
      * @param value Value to set for the target property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTarget(@jakarta.annotation.Nullable final UnifiedRoleManagementPolicyRuleTarget value) {
         this.target = value;
     }

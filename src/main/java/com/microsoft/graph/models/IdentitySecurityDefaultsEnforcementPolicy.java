@@ -13,9 +13,7 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
     private Boolean isEnabled;
     /**
      * Instantiates a new identitySecurityDefaultsEnforcementPolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IdentitySecurityDefaultsEnforcementPolicy() {
         super();
         this.setOdataType("#microsoft.graph.identitySecurityDefaultsEnforcementPolicy");
@@ -51,9 +49,7 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
     /**
      * Sets the isEnabled property value. If set to true, Azure Active Directory security defaults is enabled for the tenant.
      * @param value Value to set for the isEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }

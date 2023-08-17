@@ -95,9 +95,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     private String webUrl;
     /**
      * Instantiates a new remoteItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RemoteItem() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -311,9 +309,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("createdBy", this.getCreatedBy());
@@ -341,189 +337,147 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the createdBy property value. Identity of the user, device, and application which created the item. Read-only.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time of item creation. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the file property value. Indicates that the remote item is a file. Read-only.
      * @param value Value to set for the file property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFile(@jakarta.annotation.Nullable final File value) {
         this.file = value;
     }
     /**
      * Sets the fileSystemInfo property value. Information about the remote item from the local file system. Read-only.
      * @param value Value to set for the fileSystemInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileSystemInfo(@jakarta.annotation.Nullable final FileSystemInfo value) {
         this.fileSystemInfo = value;
     }
     /**
      * Sets the folder property value. Indicates that the remote item is a folder. Read-only.
      * @param value Value to set for the folder property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFolder(@jakarta.annotation.Nullable final Folder value) {
         this.folder = value;
     }
     /**
      * Sets the id property value. Unique identifier for the remote item in its drive. Read-only.
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the image property value. Image metadata, if the item is an image. Read-only.
      * @param value Value to set for the image property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImage(@jakarta.annotation.Nullable final Image value) {
         this.image = value;
     }
     /**
      * Sets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Date and time the item was last modified. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the name property value. Optional. Filename of the remote item. Read-only.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the package property value. If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
      * @param value Value to set for the package property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPackage(@jakarta.annotation.Nullable final PackageEscaped value) {
         this.packageEscaped = value;
     }
     /**
      * Sets the parentReference property value. Properties of the parent of the remote item. Read-only.
      * @param value Value to set for the parentReference property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentReference(@jakarta.annotation.Nullable final ItemReference value) {
         this.parentReference = value;
     }
     /**
      * Sets the shared property value. Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
      * @param value Value to set for the shared property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShared(@jakarta.annotation.Nullable final Shared value) {
         this.shared = value;
     }
     /**
      * Sets the sharepointIds property value. Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only.
      * @param value Value to set for the sharepointIds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharepointIds(@jakarta.annotation.Nullable final SharepointIds value) {
         this.sharepointIds = value;
     }
     /**
      * Sets the size property value. Size of the remote item. Read-only.
      * @param value Value to set for the size property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSize(@jakarta.annotation.Nullable final Long value) {
         this.size = value;
     }
     /**
      * Sets the specialFolder property value. If the current item is also available as a special folder, this facet is returned. Read-only.
      * @param value Value to set for the specialFolder property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSpecialFolder(@jakarta.annotation.Nullable final SpecialFolder value) {
         this.specialFolder = value;
     }
     /**
      * Sets the video property value. Video metadata, if the item is a video. Read-only.
      * @param value Value to set for the video property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVideo(@jakarta.annotation.Nullable final Video value) {
         this.video = value;
     }
     /**
      * Sets the webDavUrl property value. DAV compatible URL for the item.
      * @param value Value to set for the webDavUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebDavUrl(@jakarta.annotation.Nullable final String value) {
         this.webDavUrl = value;
     }
     /**
      * Sets the webUrl property value. URL that displays the resource in the browser. Read-only.
      * @param value Value to set for the webUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }

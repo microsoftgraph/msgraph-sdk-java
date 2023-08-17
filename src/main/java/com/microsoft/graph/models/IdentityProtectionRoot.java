@@ -34,9 +34,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
     private java.util.List<ServicePrincipalRiskDetection> servicePrincipalRiskDetections;
     /**
      * Instantiates a new identityProtectionRoot and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IdentityProtectionRoot() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -130,54 +126,42 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the riskDetections property value. Risk detection in Azure AD Identity Protection and the associated information about the detection.
      * @param value Value to set for the riskDetections property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskDetections(@jakarta.annotation.Nullable final java.util.List<RiskDetection> value) {
         this.riskDetections = value;
     }
     /**
      * Sets the riskyServicePrincipals property value. Azure AD service principals that are at risk.
      * @param value Value to set for the riskyServicePrincipals property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskyServicePrincipals(@jakarta.annotation.Nullable final java.util.List<RiskyServicePrincipal> value) {
         this.riskyServicePrincipals = value;
     }
     /**
      * Sets the riskyUsers property value. Users that are flagged as at-risk by Azure AD Identity Protection.
      * @param value Value to set for the riskyUsers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskyUsers(@jakarta.annotation.Nullable final java.util.List<RiskyUser> value) {
         this.riskyUsers = value;
     }
     /**
      * Sets the servicePrincipalRiskDetections property value. Represents information about detected at-risk service principals in an Azure AD tenant.
      * @param value Value to set for the servicePrincipalRiskDetections property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServicePrincipalRiskDetections(@jakarta.annotation.Nullable final java.util.List<ServicePrincipalRiskDetection> value) {
         this.servicePrincipalRiskDetections = value;
     }

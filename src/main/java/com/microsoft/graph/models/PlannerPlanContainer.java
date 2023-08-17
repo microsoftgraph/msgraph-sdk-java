@@ -30,9 +30,7 @@ public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
     private String url;
     /**
      * Instantiates a new plannerPlanContainer and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PlannerPlanContainer() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("containerId", this.getContainerId());
@@ -116,45 +112,35 @@ public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the containerId property value. The identifier of the resource that contains the plan. Optional.
      * @param value Value to set for the containerId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContainerId(@jakarta.annotation.Nullable final String value) {
         this.containerId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. Optional.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final PlannerContainerType value) {
         this.type = value;
     }
     /**
      * Sets the url property value. The full canonical URL of the container. Optional.
      * @param value Value to set for the url property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUrl(@jakarta.annotation.Nullable final String value) {
         this.url = value;
     }

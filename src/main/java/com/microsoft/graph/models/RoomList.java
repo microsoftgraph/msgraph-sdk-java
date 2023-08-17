@@ -17,9 +17,7 @@ public class RoomList extends Place implements Parsable {
     private java.util.List<Room> rooms;
     /**
      * Instantiates a new roomList and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RoomList() {
         super();
         this.setOdataType("#microsoft.graph.roomList");
@@ -64,9 +62,7 @@ public class RoomList extends Place implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class RoomList extends Place implements Parsable {
     /**
      * Sets the emailAddress property value. The email address of the room list.
      * @param value Value to set for the emailAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.emailAddress = value;
     }
     /**
      * Sets the rooms property value. The rooms property
      * @param value Value to set for the rooms property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRooms(@jakarta.annotation.Nullable final java.util.List<Room> value) {
         this.rooms = value;
     }

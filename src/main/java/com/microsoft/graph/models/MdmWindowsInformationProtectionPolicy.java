@@ -12,9 +12,7 @@ import java.util.Objects;
 public class MdmWindowsInformationProtectionPolicy extends WindowsInformationProtection implements Parsable {
     /**
      * Instantiates a new mdmWindowsInformationProtectionPolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MdmWindowsInformationProtectionPolicy() {
         super();
         this.setOdataType("#microsoft.graph.mdmWindowsInformationProtectionPolicy");
@@ -41,9 +39,7 @@ public class MdmWindowsInformationProtectionPolicy extends WindowsInformationPro
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

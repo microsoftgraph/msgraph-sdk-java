@@ -16,9 +16,7 @@ public class WindowsPhone81CustomConfiguration extends DeviceConfiguration imple
     private java.util.List<OmaSetting> omaSettings;
     /**
      * Instantiates a new windowsPhone81CustomConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsPhone81CustomConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsPhone81CustomConfiguration");
@@ -54,9 +52,7 @@ public class WindowsPhone81CustomConfiguration extends DeviceConfiguration imple
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -65,9 +61,7 @@ public class WindowsPhone81CustomConfiguration extends DeviceConfiguration imple
     /**
      * Sets the omaSettings property value. OMA settings. This collection can contain a maximum of 1000 elements.
      * @param value Value to set for the omaSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOmaSettings(@jakarta.annotation.Nullable final java.util.List<OmaSetting> value) {
         this.omaSettings = value;
     }

@@ -12,9 +12,7 @@ import java.util.Objects;
 public class IosCertificateProfile extends DeviceConfiguration implements Parsable {
     /**
      * Instantiates a new iosCertificateProfile and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.iosCertificateProfile");
@@ -41,9 +39,7 @@ public class IosCertificateProfile extends DeviceConfiguration implements Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

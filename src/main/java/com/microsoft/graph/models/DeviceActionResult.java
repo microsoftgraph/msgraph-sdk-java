@@ -38,9 +38,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new deviceActionResult and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceActionResult() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -130,9 +128,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("actionName", this.getActionName());
@@ -145,54 +141,42 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
     /**
      * Sets the actionName property value. Action name
      * @param value Value to set for the actionName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActionName(@jakarta.annotation.Nullable final String value) {
         this.actionName = value;
     }
     /**
      * Sets the actionState property value. State of the action on the device
      * @param value Value to set for the actionState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActionState(@jakarta.annotation.Nullable final ActionState value) {
         this.actionState = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. Time the action state was last updated
      * @param value Value to set for the lastUpdatedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the startDateTime property value. Time the action was initiated
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }

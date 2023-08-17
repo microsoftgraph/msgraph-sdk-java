@@ -20,9 +20,7 @@ public class ManagedApp extends MobileApp implements Parsable {
     private String version;
     /**
      * Instantiates a new managedApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ManagedApp() {
         super();
         this.setOdataType("#microsoft.graph.managedApp");
@@ -78,9 +76,7 @@ public class ManagedApp extends MobileApp implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,18 +86,14 @@ public class ManagedApp extends MobileApp implements Parsable {
     /**
      * Sets the appAvailability property value. A managed (MAM) application's availability.
      * @param value Value to set for the appAvailability property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppAvailability(@jakarta.annotation.Nullable final ManagedAppAvailability value) {
         this.appAvailability = value;
     }
     /**
      * Sets the version property value. The Application's version.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }

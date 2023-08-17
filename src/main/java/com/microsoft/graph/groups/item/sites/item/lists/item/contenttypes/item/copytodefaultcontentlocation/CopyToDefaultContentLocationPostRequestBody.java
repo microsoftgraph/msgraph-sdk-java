@@ -23,9 +23,7 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
     private ItemReference sourceFile;
     /**
      * Instantiates a new copyToDefaultContentLocationPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CopyToDefaultContentLocationPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,9 +75,7 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("destinationFileName", this.getDestinationFileName());
@@ -89,27 +85,21 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the destinationFileName property value. The destinationFileName property
      * @param value Value to set for the destinationFileName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDestinationFileName(@jakarta.annotation.Nullable final String value) {
         this.destinationFileName = value;
     }
     /**
      * Sets the sourceFile property value. The sourceFile property
      * @param value Value to set for the sourceFile property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceFile(@jakarta.annotation.Nullable final ItemReference value) {
         this.sourceFile = value;
     }

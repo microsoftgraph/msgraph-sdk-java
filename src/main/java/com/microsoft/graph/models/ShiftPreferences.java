@@ -13,9 +13,7 @@ public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
     private java.util.List<ShiftAvailability> availability;
     /**
      * Instantiates a new shiftPreferences and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ShiftPreferences() {
         super();
         this.setOdataType("#microsoft.graph.shiftPreferences");
@@ -51,9 +49,7 @@ public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
     /**
      * Sets the availability property value. Availability of the user to be scheduled for work and its recurrence pattern.
      * @param value Value to set for the availability property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAvailability(@jakarta.annotation.Nullable final java.util.List<ShiftAvailability> value) {
         this.availability = value;
     }

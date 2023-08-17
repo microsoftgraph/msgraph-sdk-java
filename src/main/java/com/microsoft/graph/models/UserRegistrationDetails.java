@@ -70,9 +70,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     private SignInUserType userType;
     /**
      * Instantiates a new userRegistrationDetails and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserRegistrationDetails() {
         super();
     }
@@ -233,9 +231,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -258,135 +254,105 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     /**
      * Sets the isAdmin property value. Indicates whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
      * @param value Value to set for the isAdmin property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAdmin(@jakarta.annotation.Nullable final Boolean value) {
         this.isAdmin = value;
     }
     /**
      * Sets the isMfaCapable property value. Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
      * @param value Value to set for the isMfaCapable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsMfaCapable(@jakarta.annotation.Nullable final Boolean value) {
         this.isMfaCapable = value;
     }
     /**
      * Sets the isMfaRegistered property value. Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy. Supports $filter (eq).
      * @param value Value to set for the isMfaRegistered property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsMfaRegistered(@jakarta.annotation.Nullable final Boolean value) {
         this.isMfaRegistered = value;
     }
     /**
      * Sets the isPasswordlessCapable property value. Indicates whether the user has registered a passwordless strong authentication method (including FIDO2, Windows Hello for Business, and Microsoft Authenticator (Passwordless)) that is allowed by the authentication methods policy. Supports $filter (eq).
      * @param value Value to set for the isPasswordlessCapable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsPasswordlessCapable(@jakarta.annotation.Nullable final Boolean value) {
         this.isPasswordlessCapable = value;
     }
     /**
      * Sets the isSsprCapable property value. Indicates whether the user has registered the required number of authentication methods for self-service password reset and the user is allowed to perform self-service password reset by policy. Supports $filter (eq).
      * @param value Value to set for the isSsprCapable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSsprCapable(@jakarta.annotation.Nullable final Boolean value) {
         this.isSsprCapable = value;
     }
     /**
      * Sets the isSsprEnabled property value. Indicates whether the user is allowed to perform self-service password reset by policy. The user may not necessarily have registered the required number of authentication methods for self-service password reset. Supports $filter (eq).
      * @param value Value to set for the isSsprEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSsprEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isSsprEnabled = value;
     }
     /**
      * Sets the isSsprRegistered property value. Indicates whether the user has registered the required number of authentication methods for self-service password reset. The user may not necessarily be allowed to perform self-service password reset by policy. Supports $filter (eq).
      * @param value Value to set for the isSsprRegistered property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSsprRegistered(@jakarta.annotation.Nullable final Boolean value) {
         this.isSsprRegistered = value;
     }
     /**
      * Sets the isSystemPreferredAuthenticationMethodEnabled property value. Indicates whether system preferred authentication method is enabled. If enabled, the system dynamically determines the most secure authentication method among the methods registered by the user. Supports $filter (eq).
      * @param value Value to set for the isSystemPreferredAuthenticationMethodEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSystemPreferredAuthenticationMethodEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isSystemPreferredAuthenticationMethodEnabled = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. The date and time (UTC) when the record was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastUpdatedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the methodsRegistered property value. Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
      * @param value Value to set for the methodsRegistered property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMethodsRegistered(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.methodsRegistered = value;
     }
     /**
      * Sets the systemPreferredAuthenticationMethods property value. Collection of authentication methods that the system determined to be the most secure authentication methods among the registered methods for second factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. Supports $filter (any with eq).
      * @param value Value to set for the systemPreferredAuthenticationMethods property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSystemPreferredAuthenticationMethods(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.systemPreferredAuthenticationMethods = value;
     }
     /**
      * Sets the userDisplayName property value. The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
      * @param value Value to set for the userDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
      * Sets the userPreferredMethodForSecondaryAuthentication property value. The method the user selected as the default second-factor for performing multi-factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. This property is used as preferred MFA method when isSystemPreferredAuthenticationMethodEnabled is false. Supports $filter (any with eq).
      * @param value Value to set for the userPreferredMethodForSecondaryAuthentication property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPreferredMethodForSecondaryAuthentication(@jakarta.annotation.Nullable final UserDefaultAuthenticationMethod value) {
         this.userPreferredMethodForSecondaryAuthentication = value;
     }
     /**
      * Sets the userPrincipalName property value. The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
     /**
      * Sets the userType property value. Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
      * @param value Value to set for the userType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserType(@jakarta.annotation.Nullable final SignInUserType value) {
         this.userType = value;
     }

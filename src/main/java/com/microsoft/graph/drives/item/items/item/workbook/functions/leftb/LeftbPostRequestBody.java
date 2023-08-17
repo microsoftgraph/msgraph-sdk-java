@@ -23,9 +23,7 @@ public class LeftbPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json text;
     /**
      * Instantiates a new leftbPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LeftbPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,9 +75,7 @@ public class LeftbPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("numBytes", this.getNumBytes());
@@ -89,27 +85,21 @@ public class LeftbPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the numBytes property value. The numBytes property
      * @param value Value to set for the numBytes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNumBytes(@jakarta.annotation.Nullable final Json value) {
         this.numBytes = value;
     }
     /**
      * Sets the text property value. The text property
      * @param value Value to set for the text property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setText(@jakarta.annotation.Nullable final Json value) {
         this.text = value;
     }

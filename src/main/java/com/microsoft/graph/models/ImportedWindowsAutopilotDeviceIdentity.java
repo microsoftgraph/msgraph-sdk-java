@@ -40,9 +40,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
     private ImportedWindowsAutopilotDeviceIdentityState state;
     /**
      * Instantiates a new importedWindowsAutopilotDeviceIdentity and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentity() {
         super();
     }
@@ -131,9 +129,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -148,63 +144,49 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
     /**
      * Sets the assignedUserPrincipalName property value. UPN of the user the device will be assigned
      * @param value Value to set for the assignedUserPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignedUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.assignedUserPrincipalName = value;
     }
     /**
      * Sets the groupTag property value. Group Tag of the Windows autopilot device.
      * @param value Value to set for the groupTag property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroupTag(@jakarta.annotation.Nullable final String value) {
         this.groupTag = value;
     }
     /**
      * Sets the hardwareIdentifier property value. Hardware Blob of the Windows autopilot device.
      * @param value Value to set for the hardwareIdentifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHardwareIdentifier(@jakarta.annotation.Nullable final byte[] value) {
         this.hardwareIdentifier = value;
     }
     /**
      * Sets the importId property value. The Import Id of the Windows autopilot device.
      * @param value Value to set for the importId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImportId(@jakarta.annotation.Nullable final String value) {
         this.importId = value;
     }
     /**
      * Sets the productKey property value. Product Key of the Windows autopilot device.
      * @param value Value to set for the productKey property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProductKey(@jakarta.annotation.Nullable final String value) {
         this.productKey = value;
     }
     /**
      * Sets the serialNumber property value. Serial number of the Windows autopilot device.
      * @param value Value to set for the serialNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
         this.serialNumber = value;
     }
     /**
      * Sets the state property value. Current state of the imported device.
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final ImportedWindowsAutopilotDeviceIdentityState value) {
         this.state = value;
     }

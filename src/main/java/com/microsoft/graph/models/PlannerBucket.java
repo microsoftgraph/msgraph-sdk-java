@@ -25,9 +25,7 @@ public class PlannerBucket extends Entity implements Parsable {
     private java.util.List<PlannerTask> tasks;
     /**
      * Instantiates a new plannerBucket and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PlannerBucket() {
         super();
     }
@@ -89,9 +87,7 @@ public class PlannerBucket extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -103,36 +99,28 @@ public class PlannerBucket extends Entity implements Parsable {
     /**
      * Sets the name property value. Name of the bucket.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the orderHint property value. Hint used to order items of this type in a list view. For details about the supported format, see Using order hints in Planner.
      * @param value Value to set for the orderHint property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrderHint(@jakarta.annotation.Nullable final String value) {
         this.orderHint = value;
     }
     /**
      * Sets the planId property value. Plan ID to which the bucket belongs.
      * @param value Value to set for the planId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPlanId(@jakarta.annotation.Nullable final String value) {
         this.planId = value;
     }
     /**
      * Sets the tasks property value. Read-only. Nullable. The collection of tasks in the bucket.
      * @param value Value to set for the tasks property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<PlannerTask> value) {
         this.tasks = value;
     }

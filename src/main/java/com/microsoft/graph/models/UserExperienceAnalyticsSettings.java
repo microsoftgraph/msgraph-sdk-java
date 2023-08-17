@@ -25,9 +25,7 @@ public class UserExperienceAnalyticsSettings implements AdditionalDataHolder, Pa
     private String odataType;
     /**
      * Instantiates a new userExperienceAnalyticsSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -79,9 +77,7 @@ public class UserExperienceAnalyticsSettings implements AdditionalDataHolder, Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("configurationManagerDataConnectorConfigured", this.getConfigurationManagerDataConnectorConfigured());
@@ -91,27 +87,21 @@ public class UserExperienceAnalyticsSettings implements AdditionalDataHolder, Pa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the configurationManagerDataConnectorConfigured property value. When TRUE, indicates Tenant attach is configured properly and System Center Configuration Manager (SCCM) tenant attached devices will show up in endpoint analytics reporting. When FALSE, indicates Tenant attach is not configured. FALSE by default.
      * @param value Value to set for the configurationManagerDataConnectorConfigured property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConfigurationManagerDataConnectorConfigured(@jakarta.annotation.Nullable final Boolean value) {
         this.configurationManagerDataConnectorConfigured = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

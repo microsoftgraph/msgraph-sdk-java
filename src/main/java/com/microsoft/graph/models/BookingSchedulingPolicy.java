@@ -42,9 +42,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
     private PeriodAndDuration timeSlotInterval;
     /**
      * Instantiates a new bookingSchedulingPolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BookingSchedulingPolicy() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -132,9 +130,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowStaffSelection", this.getAllowStaffSelection());
@@ -148,63 +144,49 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowStaffSelection property value. True if to allow customers to choose a specific person for the booking.
      * @param value Value to set for the allowStaffSelection property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowStaffSelection(@jakarta.annotation.Nullable final Boolean value) {
         this.allowStaffSelection = value;
     }
     /**
      * Sets the maximumAdvance property value. Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
      * @param value Value to set for the maximumAdvance property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaximumAdvance(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.maximumAdvance = value;
     }
     /**
      * Sets the minimumLeadTime property value. The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format.
      * @param value Value to set for the minimumLeadTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumLeadTime(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.minimumLeadTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the sendConfirmationsToOwner property value. True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
      * @param value Value to set for the sendConfirmationsToOwner property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSendConfirmationsToOwner(@jakarta.annotation.Nullable final Boolean value) {
         this.sendConfirmationsToOwner = value;
     }
     /**
      * Sets the timeSlotInterval property value. Duration of each time slot, denoted in ISO 8601 format.
      * @param value Value to set for the timeSlotInterval property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeSlotInterval(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.timeSlotInterval = value;
     }

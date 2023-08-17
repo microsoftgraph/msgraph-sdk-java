@@ -21,9 +21,7 @@ public class ServiceHealth extends Entity implements Parsable {
     private ServiceHealthStatus status;
     /**
      * Instantiates a new serviceHealth and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ServiceHealth() {
         super();
     }
@@ -76,9 +74,7 @@ public class ServiceHealth extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +85,21 @@ public class ServiceHealth extends Entity implements Parsable {
     /**
      * Sets the issues property value. A collection of issues that happened on the service, with detailed information for each issue.
      * @param value Value to set for the issues property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIssues(@jakarta.annotation.Nullable final java.util.List<ServiceHealthIssue> value) {
         this.issues = value;
     }
     /**
      * Sets the service property value. The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant.
      * @param value Value to set for the service property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setService(@jakarta.annotation.Nullable final String value) {
         this.service = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final ServiceHealthStatus value) {
         this.status = value;
     }

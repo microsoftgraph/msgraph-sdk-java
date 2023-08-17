@@ -29,9 +29,7 @@ public class ResourceAction implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new resourceAction and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ResourceAction() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -92,9 +90,7 @@ public class ResourceAction implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("allowedResourceActions", this.getAllowedResourceActions());
@@ -105,36 +101,28 @@ public class ResourceAction implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowedResourceActions property value. Allowed Actions
      * @param value Value to set for the allowedResourceActions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedResourceActions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.allowedResourceActions = value;
     }
     /**
      * Sets the notAllowedResourceActions property value. Not Allowed Actions.
      * @param value Value to set for the notAllowedResourceActions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotAllowedResourceActions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.notAllowedResourceActions = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

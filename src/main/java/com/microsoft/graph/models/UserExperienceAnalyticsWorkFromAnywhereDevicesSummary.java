@@ -77,9 +77,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     private Integer windows10DevicesWithoutTenantAttach;
     /**
      * Instantiates a new userExperienceAnalyticsWorkFromAnywhereDevicesSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -248,9 +246,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("autopilotDevicesSummary", this.getAutopilotDevicesSummary());
@@ -273,144 +269,112 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the autopilotDevicesSummary property value. The user experience analytics work from anywhere Autopilot devices summary. Read-only.
      * @param value Value to set for the autopilotDevicesSummary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAutopilotDevicesSummary(@jakarta.annotation.Nullable final UserExperienceAnalyticsAutopilotDevicesSummary value) {
         this.autopilotDevicesSummary = value;
     }
     /**
      * Sets the cloudIdentityDevicesSummary property value. The user experience analytics work from anywhere Cloud Identity devices summary. Read-only.
      * @param value Value to set for the cloudIdentityDevicesSummary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudIdentityDevicesSummary(@jakarta.annotation.Nullable final UserExperienceAnalyticsCloudIdentityDevicesSummary value) {
         this.cloudIdentityDevicesSummary = value;
     }
     /**
      * Sets the cloudManagementDevicesSummary property value. The user experience analytics work from anywhere Cloud management devices summary. Read-only.
      * @param value Value to set for the cloudManagementDevicesSummary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudManagementDevicesSummary(@jakarta.annotation.Nullable final UserExperienceAnalyticsCloudManagementDevicesSummary value) {
         this.cloudManagementDevicesSummary = value;
     }
     /**
      * Sets the coManagedDevices property value. Total number of co-managed devices. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the coManagedDevices property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCoManagedDevices(@jakarta.annotation.Nullable final Integer value) {
         this.coManagedDevices = value;
     }
     /**
      * Sets the devicesNotAutopilotRegistered property value. The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the devicesNotAutopilotRegistered property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDevicesNotAutopilotRegistered(@jakarta.annotation.Nullable final Integer value) {
         this.devicesNotAutopilotRegistered = value;
     }
     /**
      * Sets the devicesWithoutAutopilotProfileAssigned property value. The count of intune devices not autopilot profile assigned. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the devicesWithoutAutopilotProfileAssigned property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDevicesWithoutAutopilotProfileAssigned(@jakarta.annotation.Nullable final Integer value) {
         this.devicesWithoutAutopilotProfileAssigned = value;
     }
     /**
      * Sets the devicesWithoutCloudIdentity property value. The count of devices that are not cloud identity. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the devicesWithoutCloudIdentity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDevicesWithoutCloudIdentity(@jakarta.annotation.Nullable final Integer value) {
         this.devicesWithoutCloudIdentity = value;
     }
     /**
      * Sets the intuneDevices property value. The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the intuneDevices property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIntuneDevices(@jakarta.annotation.Nullable final Integer value) {
         this.intuneDevices = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the tenantAttachDevices property value. Total count of tenant attach devices. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the tenantAttachDevices property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantAttachDevices(@jakarta.annotation.Nullable final Integer value) {
         this.tenantAttachDevices = value;
     }
     /**
      * Sets the totalDevices property value. The total count of devices. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the totalDevices property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalDevices(@jakarta.annotation.Nullable final Integer value) {
         this.totalDevices = value;
     }
     /**
      * Sets the unsupportedOSversionDevices property value. The count of Windows 10 devices that have unsupported OS versions. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the unsupportedOSversionDevices property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnsupportedOSversionDevices(@jakarta.annotation.Nullable final Integer value) {
         this.unsupportedOSversionDevices = value;
     }
     /**
      * Sets the windows10Devices property value. The count of windows 10 devices. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the windows10Devices property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindows10Devices(@jakarta.annotation.Nullable final Integer value) {
         this.windows10Devices = value;
     }
     /**
      * Sets the windows10DevicesSummary property value. The user experience analytics work from anywhere Windows 10 devices summary. Read-only.
      * @param value Value to set for the windows10DevicesSummary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindows10DevicesSummary(@jakarta.annotation.Nullable final UserExperienceAnalyticsWindows10DevicesSummary value) {
         this.windows10DevicesSummary = value;
     }
     /**
      * Sets the windows10DevicesWithoutTenantAttach property value. The count of windows 10 devices that are Intune and co-managed. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the windows10DevicesWithoutTenantAttach property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindows10DevicesWithoutTenantAttach(@jakarta.annotation.Nullable final Integer value) {
         this.windows10DevicesWithoutTenantAttach = value;
     }

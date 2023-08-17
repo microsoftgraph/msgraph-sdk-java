@@ -13,9 +13,7 @@ public class WorkflowVersion extends WorkflowBase implements Parsable {
     private Integer versionNumber;
     /**
      * Instantiates a new workflowVersion and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkflowVersion() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.workflowVersion");
@@ -51,9 +49,7 @@ public class WorkflowVersion extends WorkflowBase implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class WorkflowVersion extends WorkflowBase implements Parsable {
     /**
      * Sets the versionNumber property value. The version of the workflow.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the versionNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersionNumber(@jakarta.annotation.Nullable final Integer value) {
         this.versionNumber = value;
     }

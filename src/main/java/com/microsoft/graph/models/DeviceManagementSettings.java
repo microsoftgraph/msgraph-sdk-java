@@ -30,9 +30,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     private Boolean secureByDefault;
     /**
      * Instantiates a new deviceManagementSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceManagementSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("deviceComplianceCheckinThresholdDays", this.getDeviceComplianceCheckinThresholdDays());
@@ -116,45 +112,35 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the deviceComplianceCheckinThresholdDays property value. The number of days a device is allowed to go without checking in to remain compliant.
      * @param value Value to set for the deviceComplianceCheckinThresholdDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceComplianceCheckinThresholdDays(@jakarta.annotation.Nullable final Integer value) {
         this.deviceComplianceCheckinThresholdDays = value;
     }
     /**
      * Sets the isScheduledActionEnabled property value. Is feature enabled or not for scheduled action for rule.
      * @param value Value to set for the isScheduledActionEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsScheduledActionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isScheduledActionEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the secureByDefault property value. Device should be noncompliant when there is no compliance policy targeted when this is true
      * @param value Value to set for the secureByDefault property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecureByDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.secureByDefault = value;
     }

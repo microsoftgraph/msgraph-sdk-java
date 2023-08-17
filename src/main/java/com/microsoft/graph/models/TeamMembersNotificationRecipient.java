@@ -13,9 +13,7 @@ public class TeamMembersNotificationRecipient extends TeamworkNotificationRecipi
     private String teamId;
     /**
      * Instantiates a new teamMembersNotificationRecipient and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamMembersNotificationRecipient() {
         super();
         this.setOdataType("#microsoft.graph.teamMembersNotificationRecipient");
@@ -51,9 +49,7 @@ public class TeamMembersNotificationRecipient extends TeamworkNotificationRecipi
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class TeamMembersNotificationRecipient extends TeamworkNotificationRecipi
     /**
      * Sets the teamId property value. The unique identifier for the team whose members should receive the notification.
      * @param value Value to set for the teamId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamId(@jakarta.annotation.Nullable final String value) {
         this.teamId = value;
     }

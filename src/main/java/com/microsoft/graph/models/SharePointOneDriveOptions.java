@@ -22,9 +22,7 @@ public class SharePointOneDriveOptions implements AdditionalDataHolder, Parsable
     private String odataType;
     /**
      * Instantiates a new sharePointOneDriveOptions and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SharePointOneDriveOptions() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -76,9 +74,7 @@ public class SharePointOneDriveOptions implements AdditionalDataHolder, Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("includeContent", this.getIncludeContent());
@@ -88,27 +84,21 @@ public class SharePointOneDriveOptions implements AdditionalDataHolder, Parsable
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the includeContent property value. The type of search content. The possible values are: sharedContent, privateContent, unknownFutureValue. Read-only.
      * @param value Value to set for the includeContent property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeContent(@jakarta.annotation.Nullable final SearchContent value) {
         this.includeContent = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

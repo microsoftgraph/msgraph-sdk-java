@@ -34,9 +34,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     private String odataType;
     /**
      * Instantiates a new importedWindowsAutopilotDeviceIdentityState and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityState() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("deviceErrorCode", this.getDeviceErrorCode());
@@ -130,54 +126,42 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the deviceErrorCode property value. Device error code reported by Device Directory Service(DDS).
      * @param value Value to set for the deviceErrorCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceErrorCode(@jakarta.annotation.Nullable final Integer value) {
         this.deviceErrorCode = value;
     }
     /**
      * Sets the deviceErrorName property value. Device error name reported by Device Directory Service(DDS).
      * @param value Value to set for the deviceErrorName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceErrorName(@jakarta.annotation.Nullable final String value) {
         this.deviceErrorName = value;
     }
     /**
      * Sets the deviceImportStatus property value. The deviceImportStatus property
      * @param value Value to set for the deviceImportStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceImportStatus(@jakarta.annotation.Nullable final ImportedWindowsAutopilotDeviceIdentityImportStatus value) {
         this.deviceImportStatus = value;
     }
     /**
      * Sets the deviceRegistrationId property value. Device Registration ID for successfully added device reported by Device Directory Service(DDS).
      * @param value Value to set for the deviceRegistrationId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceRegistrationId(@jakarta.annotation.Nullable final String value) {
         this.deviceRegistrationId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

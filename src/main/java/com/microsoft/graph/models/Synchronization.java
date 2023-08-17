@@ -21,9 +21,7 @@ public class Synchronization extends Entity implements Parsable {
     private java.util.List<SynchronizationTemplate> templates;
     /**
      * Instantiates a new synchronization and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Synchronization() {
         super();
     }
@@ -76,9 +74,7 @@ public class Synchronization extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +85,21 @@ public class Synchronization extends Entity implements Parsable {
     /**
      * Sets the jobs property value. Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
      * @param value Value to set for the jobs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setJobs(@jakarta.annotation.Nullable final java.util.List<SynchronizationJob> value) {
         this.jobs = value;
     }
     /**
      * Sets the secrets property value. Represents a collection of credentials to access provisioned cloud applications.
      * @param value Value to set for the secrets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecrets(@jakarta.annotation.Nullable final java.util.List<SynchronizationSecretKeyStringValuePair> value) {
         this.secrets = value;
     }
     /**
      * Sets the templates property value. Pre-configured synchronization settings for a particular application.
      * @param value Value to set for the templates property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTemplates(@jakarta.annotation.Nullable final java.util.List<SynchronizationTemplate> value) {
         this.templates = value;
     }

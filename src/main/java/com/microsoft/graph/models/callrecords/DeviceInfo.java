@@ -102,9 +102,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     private Float speakerGlitchRate;
     /**
      * Instantiates a new deviceInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -336,9 +334,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("captureDeviceDriver", this.getCaptureDeviceDriver());
@@ -368,207 +364,161 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the captureDeviceDriver property value. Name of the capture device driver used by the media endpoint.
      * @param value Value to set for the captureDeviceDriver property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCaptureDeviceDriver(@jakarta.annotation.Nullable final String value) {
         this.captureDeviceDriver = value;
     }
     /**
      * Sets the captureDeviceName property value. Name of the capture device used by the media endpoint.
      * @param value Value to set for the captureDeviceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCaptureDeviceName(@jakarta.annotation.Nullable final String value) {
         this.captureDeviceName = value;
     }
     /**
      * Sets the captureNotFunctioningEventRatio property value. Fraction of the call that the media endpoint detected the capture device was not working properly.
      * @param value Value to set for the captureNotFunctioningEventRatio property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCaptureNotFunctioningEventRatio(@jakarta.annotation.Nullable final Float value) {
         this.captureNotFunctioningEventRatio = value;
     }
     /**
      * Sets the cpuInsufficentEventRatio property value. Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received.
      * @param value Value to set for the cpuInsufficentEventRatio property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCpuInsufficentEventRatio(@jakarta.annotation.Nullable final Float value) {
         this.cpuInsufficentEventRatio = value;
     }
     /**
      * Sets the deviceClippingEventRatio property value. Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.
      * @param value Value to set for the deviceClippingEventRatio property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceClippingEventRatio(@jakarta.annotation.Nullable final Float value) {
         this.deviceClippingEventRatio = value;
     }
     /**
      * Sets the deviceGlitchEventRatio property value. Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received.
      * @param value Value to set for the deviceGlitchEventRatio property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceGlitchEventRatio(@jakarta.annotation.Nullable final Float value) {
         this.deviceGlitchEventRatio = value;
     }
     /**
      * Sets the howlingEventCount property value. Number of times during the call that the media endpoint detected howling or screeching audio.
      * @param value Value to set for the howlingEventCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHowlingEventCount(@jakarta.annotation.Nullable final Integer value) {
         this.howlingEventCount = value;
     }
     /**
      * Sets the initialSignalLevelRootMeanSquare property value. The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
      * @param value Value to set for the initialSignalLevelRootMeanSquare property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitialSignalLevelRootMeanSquare(@jakarta.annotation.Nullable final Float value) {
         this.initialSignalLevelRootMeanSquare = value;
     }
     /**
      * Sets the lowSpeechLevelEventRatio property value. Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent.
      * @param value Value to set for the lowSpeechLevelEventRatio property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLowSpeechLevelEventRatio(@jakarta.annotation.Nullable final Float value) {
         this.lowSpeechLevelEventRatio = value;
     }
     /**
      * Sets the lowSpeechToNoiseEventRatio property value. Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
      * @param value Value to set for the lowSpeechToNoiseEventRatio property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLowSpeechToNoiseEventRatio(@jakarta.annotation.Nullable final Float value) {
         this.lowSpeechToNoiseEventRatio = value;
     }
     /**
      * Sets the micGlitchRate property value. Glitches per 5 minute interval for the media endpoint's microphone.
      * @param value Value to set for the micGlitchRate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMicGlitchRate(@jakarta.annotation.Nullable final Float value) {
         this.micGlitchRate = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the receivedNoiseLevel property value. Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
      * @param value Value to set for the receivedNoiseLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReceivedNoiseLevel(@jakarta.annotation.Nullable final Integer value) {
         this.receivedNoiseLevel = value;
     }
     /**
      * Sets the receivedSignalLevel property value. Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
      * @param value Value to set for the receivedSignalLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReceivedSignalLevel(@jakarta.annotation.Nullable final Integer value) {
         this.receivedSignalLevel = value;
     }
     /**
      * Sets the renderDeviceDriver property value. Name of the render device driver used by the media endpoint.
      * @param value Value to set for the renderDeviceDriver property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRenderDeviceDriver(@jakarta.annotation.Nullable final String value) {
         this.renderDeviceDriver = value;
     }
     /**
      * Sets the renderDeviceName property value. Name of the render device used by the media endpoint.
      * @param value Value to set for the renderDeviceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRenderDeviceName(@jakarta.annotation.Nullable final String value) {
         this.renderDeviceName = value;
     }
     /**
      * Sets the renderMuteEventRatio property value. Fraction of the call that media endpoint detected device render is muted.
      * @param value Value to set for the renderMuteEventRatio property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRenderMuteEventRatio(@jakarta.annotation.Nullable final Float value) {
         this.renderMuteEventRatio = value;
     }
     /**
      * Sets the renderNotFunctioningEventRatio property value. Fraction of the call that the media endpoint detected the render device was not working properly.
      * @param value Value to set for the renderNotFunctioningEventRatio property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRenderNotFunctioningEventRatio(@jakarta.annotation.Nullable final Float value) {
         this.renderNotFunctioningEventRatio = value;
     }
     /**
      * Sets the renderZeroVolumeEventRatio property value. Fraction of the call that media endpoint detected device render volume is set to 0.
      * @param value Value to set for the renderZeroVolumeEventRatio property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRenderZeroVolumeEventRatio(@jakarta.annotation.Nullable final Float value) {
         this.renderZeroVolumeEventRatio = value;
     }
     /**
      * Sets the sentNoiseLevel property value. Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
      * @param value Value to set for the sentNoiseLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSentNoiseLevel(@jakarta.annotation.Nullable final Integer value) {
         this.sentNoiseLevel = value;
     }
     /**
      * Sets the sentSignalLevel property value. Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
      * @param value Value to set for the sentSignalLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSentSignalLevel(@jakarta.annotation.Nullable final Integer value) {
         this.sentSignalLevel = value;
     }
     /**
      * Sets the speakerGlitchRate property value. Glitches per 5 minute internal for the media endpoint's loudspeaker.
      * @param value Value to set for the speakerGlitchRate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSpeakerGlitchRate(@jakarta.annotation.Nullable final Float value) {
         this.speakerGlitchRate = value;
     }

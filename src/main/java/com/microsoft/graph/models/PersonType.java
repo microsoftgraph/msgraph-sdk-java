@@ -26,9 +26,7 @@ public class PersonType implements AdditionalDataHolder, Parsable {
     private String subclass;
     /**
      * Instantiates a new personType and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PersonType() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class PersonType implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("class", this.getClassEscaped());
@@ -102,36 +98,28 @@ public class PersonType implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the class property value. The type of data source, such as Person.
      * @param value Value to set for the class property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClass(@jakarta.annotation.Nullable final String value) {
         this.classEscaped = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the subclass property value. The secondary type of data source, such as OrganizationUser.
      * @param value Value to set for the subclass property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubclass(@jakarta.annotation.Nullable final String value) {
         this.subclass = value;
     }

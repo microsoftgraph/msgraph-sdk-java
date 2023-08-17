@@ -13,9 +13,7 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
     private String userId;
     /**
      * Instantiates a new microsoftAccountUserConversationMember and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MicrosoftAccountUserConversationMember() {
         super();
         this.setOdataType("#microsoft.graph.microsoftAccountUserConversationMember");
@@ -51,9 +49,7 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
     /**
      * Sets the userId property value. Microsoft Account ID of the user.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }

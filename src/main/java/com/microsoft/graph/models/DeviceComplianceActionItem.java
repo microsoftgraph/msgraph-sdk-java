@@ -28,9 +28,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
     private String notificationTemplateId;
     /**
      * Instantiates a new deviceComplianceActionItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceComplianceActionItem() {
         super();
     }
@@ -92,9 +90,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -106,36 +102,28 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
     /**
      * Sets the actionType property value. Scheduled Action Type Enum
      * @param value Value to set for the actionType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActionType(@jakarta.annotation.Nullable final DeviceComplianceActionType value) {
         this.actionType = value;
     }
     /**
      * Sets the gracePeriodHours property value. Number of hours to wait till the action will be enforced. Valid values 0 to 8760
      * @param value Value to set for the gracePeriodHours property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGracePeriodHours(@jakarta.annotation.Nullable final Integer value) {
         this.gracePeriodHours = value;
     }
     /**
      * Sets the notificationMessageCCList property value. A list of group IDs to speicify who to CC this notification message to.
      * @param value Value to set for the notificationMessageCCList property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotificationMessageCCList(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.notificationMessageCCList = value;
     }
     /**
      * Sets the notificationTemplateId property value. What notification Message template to use
      * @param value Value to set for the notificationTemplateId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotificationTemplateId(@jakarta.annotation.Nullable final String value) {
         this.notificationTemplateId = value;
     }

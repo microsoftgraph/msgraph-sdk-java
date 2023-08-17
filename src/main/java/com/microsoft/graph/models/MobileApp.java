@@ -73,9 +73,7 @@ public class MobileApp extends Entity implements Parsable {
     private MobileAppPublishingState publishingState;
     /**
      * Instantiates a new mobileApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MobileApp() {
         super();
     }
@@ -267,9 +265,7 @@ public class MobileApp extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -292,135 +288,105 @@ public class MobileApp extends Entity implements Parsable {
     /**
      * Sets the assignments property value. The list of group assignments for this mobile app.
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<MobileAppAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the categories property value. The list of categories for this app.
      * @param value Value to set for the categories property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<MobileAppCategory> value) {
         this.categories = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time the app was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description of the app.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the developer property value. The developer of the app.
      * @param value Value to set for the developer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeveloper(@jakarta.annotation.Nullable final String value) {
         this.developer = value;
     }
     /**
      * Sets the displayName property value. The admin provided or imported title of the app.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the informationUrl property value. The more information Url.
      * @param value Value to set for the informationUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInformationUrl(@jakarta.annotation.Nullable final String value) {
         this.informationUrl = value;
     }
     /**
      * Sets the isFeatured property value. The value indicating whether the app is marked as featured by the admin.
      * @param value Value to set for the isFeatured property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsFeatured(@jakarta.annotation.Nullable final Boolean value) {
         this.isFeatured = value;
     }
     /**
      * Sets the largeIcon property value. The large icon, to be displayed in the app details and used for upload of the icon.
      * @param value Value to set for the largeIcon property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLargeIcon(@jakarta.annotation.Nullable final MimeContent value) {
         this.largeIcon = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the app was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the notes property value. Notes for the app.
      * @param value Value to set for the notes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotes(@jakarta.annotation.Nullable final String value) {
         this.notes = value;
     }
     /**
      * Sets the owner property value. The owner of the app.
      * @param value Value to set for the owner property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOwner(@jakarta.annotation.Nullable final String value) {
         this.owner = value;
     }
     /**
      * Sets the privacyInformationUrl property value. The privacy statement Url.
      * @param value Value to set for the privacyInformationUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrivacyInformationUrl(@jakarta.annotation.Nullable final String value) {
         this.privacyInformationUrl = value;
     }
     /**
      * Sets the publisher property value. The publisher of the app.
      * @param value Value to set for the publisher property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.publisher = value;
     }
     /**
      * Sets the publishingState property value. Indicates the publishing state of an app.
      * @param value Value to set for the publishingState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublishingState(@jakarta.annotation.Nullable final MobileAppPublishingState value) {
         this.publishingState = value;
     }

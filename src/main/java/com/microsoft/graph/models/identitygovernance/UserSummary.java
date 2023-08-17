@@ -38,9 +38,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
     private Integer totalUsers;
     /**
      * Instantiates a new userSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +126,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("failedTasks", this.getFailedTasks());
@@ -144,63 +140,49 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the failedTasks property value. The number of failed tasks for users in a user summary.
      * @param value Value to set for the failedTasks property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailedTasks(@jakarta.annotation.Nullable final Integer value) {
         this.failedTasks = value;
     }
     /**
      * Sets the failedUsers property value. The number of failed users in a user summary.
      * @param value Value to set for the failedUsers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailedUsers(@jakarta.annotation.Nullable final Integer value) {
         this.failedUsers = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the successfulUsers property value. The number of successful users in a user summary.
      * @param value Value to set for the successfulUsers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSuccessfulUsers(@jakarta.annotation.Nullable final Integer value) {
         this.successfulUsers = value;
     }
     /**
      * Sets the totalTasks property value. The total tasks of users in a user summary.
      * @param value Value to set for the totalTasks property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalTasks(@jakarta.annotation.Nullable final Integer value) {
         this.totalTasks = value;
     }
     /**
      * Sets the totalUsers property value. The total number of users in a user summary
      * @param value Value to set for the totalUsers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalUsers(@jakarta.annotation.Nullable final Integer value) {
         this.totalUsers = value;
     }

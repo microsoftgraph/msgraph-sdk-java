@@ -103,9 +103,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new directRoutingLogRow and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DirectRoutingLogRow() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -337,9 +335,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("calleeNumber", this.getCalleeNumber());
@@ -369,207 +365,161 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but may include additional data.
      * @param value Value to set for the calleeNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCalleeNumber(@jakarta.annotation.Nullable final String value) {
         this.calleeNumber = value;
     }
     /**
      * Sets the callEndSubReason property value. In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.
      * @param value Value to set for the callEndSubReason property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallEndSubReason(@jakarta.annotation.Nullable final Integer value) {
         this.callEndSubReason = value;
     }
     /**
      * Sets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but may include additional data.
      * @param value Value to set for the callerNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallerNumber(@jakarta.annotation.Nullable final String value) {
         this.callerNumber = value;
     }
     /**
      * Sets the callType property value. Call type and direction.
      * @param value Value to set for the callType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallType(@jakarta.annotation.Nullable final String value) {
         this.callType = value;
     }
     /**
      * Sets the correlationId property value. Identifier for the call that you can use when calling Microsoft Support. GUID.
      * @param value Value to set for the correlationId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
         this.correlationId = value;
     }
     /**
      * Sets the duration property value. Duration of the call in seconds.
      * @param value Value to set for the duration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDuration(@jakarta.annotation.Nullable final Integer value) {
         this.duration = value;
     }
     /**
      * Sets the endDateTime property value. Only exists for successful (fully established) calls. Time when call ended.
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
      * Sets the failureDateTime property value. Only exists for failed (not fully established) calls.
      * @param value Value to set for the failureDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailureDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.failureDateTime = value;
     }
     /**
      * Sets the finalSipCode property value. The code with which the call ended, RFC 3261.
      * @param value Value to set for the finalSipCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFinalSipCode(@jakarta.annotation.Nullable final Integer value) {
         this.finalSipCode = value;
     }
     /**
      * Sets the finalSipCodePhrase property value. Description of the SIP code and Microsoft subcode.
      * @param value Value to set for the finalSipCodePhrase property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFinalSipCodePhrase(@jakarta.annotation.Nullable final String value) {
         this.finalSipCodePhrase = value;
     }
     /**
      * Sets the id property value. Unique call identifier. GUID.
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the inviteDateTime property value. When the initial invite was sent.
      * @param value Value to set for the inviteDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInviteDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.inviteDateTime = value;
     }
     /**
      * Sets the mediaBypassEnabled property value. Indicates if the trunk was enabled for media bypass or not.
      * @param value Value to set for the mediaBypassEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMediaBypassEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.mediaBypassEnabled = value;
     }
     /**
      * Sets the mediaPathLocation property value. The datacenter used for media path in non-bypass call.
      * @param value Value to set for the mediaPathLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMediaPathLocation(@jakarta.annotation.Nullable final String value) {
         this.mediaPathLocation = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the signalingLocation property value. The datacenter used for signaling for both bypass and non-bypass calls.
      * @param value Value to set for the signalingLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSignalingLocation(@jakarta.annotation.Nullable final String value) {
         this.signalingLocation = value;
     }
     /**
      * Sets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to invite or failure time.
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
      * Sets the successfulCall property value. Success or attempt.
      * @param value Value to set for the successfulCall property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSuccessfulCall(@jakarta.annotation.Nullable final Boolean value) {
         this.successfulCall = value;
     }
     /**
      * Sets the trunkFullyQualifiedDomainName property value. Fully qualified domain name of the session border controller.
      * @param value Value to set for the trunkFullyQualifiedDomainName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTrunkFullyQualifiedDomainName(@jakarta.annotation.Nullable final String value) {
         this.trunkFullyQualifiedDomainName = value;
     }
     /**
      * Sets the userDisplayName property value. Display name of the user.
      * @param value Value to set for the userDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
      * Sets the userId property value. Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
      * Sets the userPrincipalName property value. UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }

@@ -30,9 +30,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new invitedUserMessageInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public InvitedUserMessageInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("ccRecipients", this.getCcRecipients());
@@ -116,45 +112,35 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
      * @param value Value to set for the ccRecipients property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCcRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.ccRecipients = value;
     }
     /**
      * Sets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message.
      * @param value Value to set for the customizedMessageBody property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomizedMessageBody(@jakarta.annotation.Nullable final String value) {
         this.customizedMessageBody = value;
     }
     /**
      * Sets the messageLanguage property value. The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
      * @param value Value to set for the messageLanguage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessageLanguage(@jakarta.annotation.Nullable final String value) {
         this.messageLanguage = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

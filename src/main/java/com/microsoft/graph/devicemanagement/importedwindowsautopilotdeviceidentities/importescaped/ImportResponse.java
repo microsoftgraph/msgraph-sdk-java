@@ -15,9 +15,7 @@ public class ImportResponse extends BaseCollectionPaginationCountResponse implem
     private java.util.List<ImportedWindowsAutopilotDeviceIdentity> value;
     /**
      * Instantiates a new importResponse and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ImportResponse() {
         super();
     }
@@ -52,9 +50,7 @@ public class ImportResponse extends BaseCollectionPaginationCountResponse implem
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,9 +59,7 @@ public class ImportResponse extends BaseCollectionPaginationCountResponse implem
     /**
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final java.util.List<ImportedWindowsAutopilotDeviceIdentity> value) {
         this.value = value;
     }

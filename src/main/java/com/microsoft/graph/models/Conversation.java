@@ -34,9 +34,7 @@ public class Conversation extends Entity implements Parsable {
     private java.util.List<String> uniqueSenders;
     /**
      * Instantiates a new conversation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Conversation() {
         super();
     }
@@ -116,9 +114,7 @@ public class Conversation extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -132,54 +128,42 @@ public class Conversation extends Entity implements Parsable {
     /**
      * Sets the hasAttachments property value. Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search.
      * @param value Value to set for the hasAttachments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
         this.hasAttachments = value;
     }
     /**
      * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastDeliveredDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastDeliveredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastDeliveredDateTime = value;
     }
     /**
      * Sets the preview property value. A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
      * @param value Value to set for the preview property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPreview(@jakarta.annotation.Nullable final String value) {
         this.preview = value;
     }
     /**
      * Sets the threads property value. A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
      * @param value Value to set for the threads property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setThreads(@jakarta.annotation.Nullable final java.util.List<ConversationThread> value) {
         this.threads = value;
     }
     /**
      * Sets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
      * @param value Value to set for the topic property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTopic(@jakarta.annotation.Nullable final String value) {
         this.topic = value;
     }
     /**
      * Sets the uniqueSenders property value. All the users that sent a message to this Conversation.
      * @param value Value to set for the uniqueSenders property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUniqueSenders(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.uniqueSenders = value;
     }

@@ -19,9 +19,7 @@ public class CreateNewVersionPostRequestBody implements AdditionalDataHolder, Pa
     private Workflow workflow;
     /**
      * Instantiates a new createNewVersionPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CreateNewVersionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,9 +62,7 @@ public class CreateNewVersionPostRequestBody implements AdditionalDataHolder, Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("workflow", this.getWorkflow());
@@ -75,18 +71,14 @@ public class CreateNewVersionPostRequestBody implements AdditionalDataHolder, Pa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the workflow property value. The workflow property
      * @param value Value to set for the workflow property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkflow(@jakarta.annotation.Nullable final Workflow value) {
         this.workflow = value;
     }

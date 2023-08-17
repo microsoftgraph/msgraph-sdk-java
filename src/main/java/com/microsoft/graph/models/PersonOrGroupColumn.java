@@ -30,9 +30,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new personOrGroupColumn and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PersonOrGroupColumn() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowMultipleSelection", this.getAllowMultipleSelection());
@@ -116,45 +112,35 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowMultipleSelection property value. Indicates whether multiple values can be selected from the source.
      * @param value Value to set for the allowMultipleSelection property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowMultipleSelection(@jakarta.annotation.Nullable final Boolean value) {
         this.allowMultipleSelection = value;
     }
     /**
      * Sets the chooseFromType property value. Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly.
      * @param value Value to set for the chooseFromType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChooseFromType(@jakarta.annotation.Nullable final String value) {
         this.chooseFromType = value;
     }
     /**
      * Sets the displayAs property value. How to display the information about the person or group chosen. See below.
      * @param value Value to set for the displayAs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayAs(@jakarta.annotation.Nullable final String value) {
         this.displayAs = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

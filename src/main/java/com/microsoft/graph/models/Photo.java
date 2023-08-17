@@ -55,9 +55,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
     private OffsetDateTime takenDateTime;
     /**
      * Instantiates a new photo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Photo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -181,9 +179,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("cameraMake", this.getCameraMake());
@@ -201,99 +197,77 @@ public class Photo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the cameraMake property value. Camera manufacturer. Read-only.
      * @param value Value to set for the cameraMake property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCameraMake(@jakarta.annotation.Nullable final String value) {
         this.cameraMake = value;
     }
     /**
      * Sets the cameraModel property value. Camera model. Read-only.
      * @param value Value to set for the cameraModel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCameraModel(@jakarta.annotation.Nullable final String value) {
         this.cameraModel = value;
     }
     /**
      * Sets the exposureDenominator property value. The denominator for the exposure time fraction from the camera. Read-only.
      * @param value Value to set for the exposureDenominator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExposureDenominator(@jakarta.annotation.Nullable final Double value) {
         this.exposureDenominator = value;
     }
     /**
      * Sets the exposureNumerator property value. The numerator for the exposure time fraction from the camera. Read-only.
      * @param value Value to set for the exposureNumerator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExposureNumerator(@jakarta.annotation.Nullable final Double value) {
         this.exposureNumerator = value;
     }
     /**
      * Sets the fNumber property value. The F-stop value from the camera. Read-only.
      * @param value Value to set for the fNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFNumber(@jakarta.annotation.Nullable final Double value) {
         this.fNumber = value;
     }
     /**
      * Sets the focalLength property value. The focal length from the camera. Read-only.
      * @param value Value to set for the focalLength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFocalLength(@jakarta.annotation.Nullable final Double value) {
         this.focalLength = value;
     }
     /**
      * Sets the iso property value. The ISO value from the camera. Read-only.
      * @param value Value to set for the iso property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIso(@jakarta.annotation.Nullable final Integer value) {
         this.iso = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the orientation property value. The orientation value from the camera. Writable on OneDrive Personal.
      * @param value Value to set for the orientation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrientation(@jakarta.annotation.Nullable final Integer value) {
         this.orientation = value;
     }
     /**
      * Sets the takenDateTime property value. Represents the date and time the photo was taken. Read-only.
      * @param value Value to set for the takenDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTakenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.takenDateTime = value;
     }

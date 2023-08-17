@@ -13,9 +13,7 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
     private String self;
     /**
      * Instantiates a new onenoteEntityBaseModel and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OnenoteEntityBaseModel() {
         super();
     }
@@ -63,9 +61,7 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,9 +70,7 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
     /**
      * Sets the self property value. The endpoint where you can get details about the page. Read-only.
      * @param value Value to set for the self property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSelf(@jakarta.annotation.Nullable final String value) {
         this.self = value;
     }

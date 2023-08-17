@@ -50,9 +50,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
     private DateTimeTimeZone reminderFireTime;
     /**
      * Instantiates a new reminder and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Reminder() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -167,9 +165,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("changeKey", this.getChangeKey());
@@ -186,90 +182,70 @@ public class Reminder implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the changeKey property value. Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object.
      * @param value Value to set for the changeKey property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChangeKey(@jakarta.annotation.Nullable final String value) {
         this.changeKey = value;
     }
     /**
      * Sets the eventEndTime property value. The date, time and time zone that the event ends.
      * @param value Value to set for the eventEndTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEventEndTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.eventEndTime = value;
     }
     /**
      * Sets the eventId property value. The unique ID of the event. Read only.
      * @param value Value to set for the eventId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEventId(@jakarta.annotation.Nullable final String value) {
         this.eventId = value;
     }
     /**
      * Sets the eventLocation property value. The location of the event.
      * @param value Value to set for the eventLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEventLocation(@jakarta.annotation.Nullable final Location value) {
         this.eventLocation = value;
     }
     /**
      * Sets the eventStartTime property value. The date, time, and time zone that the event starts.
      * @param value Value to set for the eventStartTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEventStartTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.eventStartTime = value;
     }
     /**
      * Sets the eventSubject property value. The text of the event's subject line.
      * @param value Value to set for the eventSubject property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEventSubject(@jakarta.annotation.Nullable final String value) {
         this.eventSubject = value;
     }
     /**
      * Sets the eventWebLink property value. The URL to open the event in Outlook on the web.The event will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL cannot be accessed from within an iFrame.
      * @param value Value to set for the eventWebLink property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEventWebLink(@jakarta.annotation.Nullable final String value) {
         this.eventWebLink = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the reminderFireTime property value. The date, time, and time zone that the reminder is set to occur.
      * @param value Value to set for the reminderFireTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReminderFireTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.reminderFireTime = value;
     }

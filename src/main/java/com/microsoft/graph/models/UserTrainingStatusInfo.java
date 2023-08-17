@@ -35,9 +35,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
     private TrainingStatus trainingStatus;
     /**
      * Instantiates a new userTrainingStatusInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserTrainingStatusInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -116,9 +114,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("assignedDateTime", this.getAssignedDateTime());
@@ -131,54 +127,42 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the assignedDateTime property value. Date and time of assignment of the training to the user.
      * @param value Value to set for the assignedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.assignedDateTime = value;
     }
     /**
      * Sets the completionDateTime property value. Date and time of completion of the training by the user.
      * @param value Value to set for the completionDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completionDateTime = value;
     }
     /**
      * Sets the displayName property value. Display name of the assigned training.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @param value Value to set for the trainingStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTrainingStatus(@jakarta.annotation.Nullable final TrainingStatus value) {
         this.trainingStatus = value;
     }

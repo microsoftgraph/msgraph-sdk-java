@@ -23,9 +23,7 @@ public class QuotientPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json numerator;
     /**
      * Instantiates a new quotientPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public QuotientPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,9 +75,7 @@ public class QuotientPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("denominator", this.getDenominator());
@@ -89,27 +85,21 @@ public class QuotientPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the denominator property value. The denominator property
      * @param value Value to set for the denominator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDenominator(@jakarta.annotation.Nullable final Json value) {
         this.denominator = value;
     }
     /**
      * Sets the numerator property value. The numerator property
      * @param value Value to set for the numerator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNumerator(@jakarta.annotation.Nullable final Json value) {
         this.numerator = value;
     }

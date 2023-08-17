@@ -17,9 +17,7 @@ public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Pars
     private String unassignedOrderHint;
     /**
      * Instantiates a new plannerAssignedToTaskBoardTaskFormat and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PlannerAssignedToTaskBoardTaskFormat() {
         super();
     }
@@ -63,9 +61,7 @@ public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +71,14 @@ public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Pars
     /**
      * Sets the orderHintsByAssignee property value. Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.
      * @param value Value to set for the orderHintsByAssignee property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrderHintsByAssignee(@jakarta.annotation.Nullable final PlannerOrderHintsByAssignee value) {
         this.orderHintsByAssignee = value;
     }
     /**
      * Sets the unassignedOrderHint property value. Hint value used to order the task on the AssignedTo view of the Task Board when the task is not assigned to anyone, or if the orderHintsByAssignee dictionary does not provide an order hint for the user the task is assigned to. The format is defined as outlined here.
      * @param value Value to set for the unassignedOrderHint property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnassignedOrderHint(@jakarta.annotation.Nullable final String value) {
         this.unassignedOrderHint = value;
     }

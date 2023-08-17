@@ -59,9 +59,7 @@ public class TaskReport extends Entity implements Parsable {
     private Integer unprocessedUsersCount;
     /**
      * Instantiates a new taskReport and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TaskReport() {
         super();
     }
@@ -195,9 +193,7 @@ public class TaskReport extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -217,108 +213,84 @@ public class TaskReport extends Entity implements Parsable {
     /**
      * Sets the completedDateTime property value. The date time that the associated run completed. Value is null if the run has not completed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the completedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completedDateTime = value;
     }
     /**
      * Sets the failedUsersCount property value. The number of users in the run execution for which the associated task failed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the failedUsersCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailedUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedUsersCount = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. The date and time that the task report was last updated.
      * @param value Value to set for the lastUpdatedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the processingStatus property value. The processingStatus property
      * @param value Value to set for the processingStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProcessingStatus(@jakarta.annotation.Nullable final LifecycleWorkflowProcessingStatus value) {
         this.processingStatus = value;
     }
     /**
      * Sets the runId property value. The unique identifier of the associated run.
      * @param value Value to set for the runId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRunId(@jakarta.annotation.Nullable final String value) {
         this.runId = value;
     }
     /**
      * Sets the startedDateTime property value. The date time that the associated run started. Value is null if the run has not started.
      * @param value Value to set for the startedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startedDateTime = value;
     }
     /**
      * Sets the successfulUsersCount property value. The number of users in the run execution for which the associated task succeeded.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the successfulUsersCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSuccessfulUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.successfulUsersCount = value;
     }
     /**
      * Sets the task property value. The task property
      * @param value Value to set for the task property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTask(@jakarta.annotation.Nullable final Task value) {
         this.task = value;
     }
     /**
      * Sets the taskDefinition property value. The taskDefinition property
      * @param value Value to set for the taskDefinition property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTaskDefinition(@jakarta.annotation.Nullable final TaskDefinition value) {
         this.taskDefinition = value;
     }
     /**
      * Sets the taskProcessingResults property value. The related lifecycle workflow taskProcessingResults.
      * @param value Value to set for the taskProcessingResults property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTaskProcessingResults(@jakarta.annotation.Nullable final java.util.List<TaskProcessingResult> value) {
         this.taskProcessingResults = value;
     }
     /**
      * Sets the totalUsersCount property value. The total number of users in the run execution for which the associated task was scheduled to execute.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the totalUsersCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalUsersCount = value;
     }
     /**
      * Sets the unprocessedUsersCount property value. The number of users in the run execution for which the associated task is queued, in progress, or canceled.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the unprocessedUsersCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnprocessedUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.unprocessedUsersCount = value;
     }

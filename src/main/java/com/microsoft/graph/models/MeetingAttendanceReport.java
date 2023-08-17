@@ -26,9 +26,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
     private Integer totalParticipantCount;
     /**
      * Instantiates a new meetingAttendanceReport and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MeetingAttendanceReport() {
         super();
     }
@@ -90,9 +88,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +100,28 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
     /**
      * Sets the attendanceRecords property value. List of attendance records of an attendance report. Read-only.
      * @param value Value to set for the attendanceRecords property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttendanceRecords(@jakarta.annotation.Nullable final java.util.List<AttendanceRecord> value) {
         this.attendanceRecords = value;
     }
     /**
      * Sets the meetingEndDateTime property value. UTC time when the meeting ended. Read-only.
      * @param value Value to set for the meetingEndDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMeetingEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.meetingEndDateTime = value;
     }
     /**
      * Sets the meetingStartDateTime property value. UTC time when the meeting started. Read-only.
      * @param value Value to set for the meetingStartDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMeetingStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.meetingStartDateTime = value;
     }
     /**
      * Sets the totalParticipantCount property value. Total number of participants. Read-only.
      * @param value Value to set for the totalParticipantCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalParticipantCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalParticipantCount = value;
     }

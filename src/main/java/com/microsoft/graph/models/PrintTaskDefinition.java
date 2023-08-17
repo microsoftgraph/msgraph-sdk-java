@@ -21,9 +21,7 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     private java.util.List<PrintTask> tasks;
     /**
      * Instantiates a new printTaskDefinition and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PrintTaskDefinition() {
         super();
     }
@@ -76,9 +74,7 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +85,21 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final AppIdentity value) {
         this.createdBy = value;
     }
     /**
      * Sets the displayName property value. The name of the printTaskDefinition.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the tasks property value. A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
      * @param value Value to set for the tasks property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<PrintTask> value) {
         this.tasks = value;
     }

@@ -17,9 +17,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
     private EducationFeedback publishedFeedback;
     /**
      * Instantiates a new educationFeedbackOutcome and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationFeedbackOutcome() {
         super();
         this.setOdataType("#microsoft.graph.educationFeedbackOutcome");
@@ -64,9 +62,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
     /**
      * Sets the feedback property value. Teacher's written feedback to the student.
      * @param value Value to set for the feedback property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFeedback(@jakarta.annotation.Nullable final EducationFeedback value) {
         this.feedback = value;
     }
     /**
      * Sets the publishedFeedback property value. A copy of the feedback property that is made when the grade is released to the student.
      * @param value Value to set for the publishedFeedback property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublishedFeedback(@jakarta.annotation.Nullable final EducationFeedback value) {
         this.publishedFeedback = value;
     }

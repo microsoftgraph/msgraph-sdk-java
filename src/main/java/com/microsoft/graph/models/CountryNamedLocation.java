@@ -21,9 +21,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
     private Boolean includeUnknownCountriesAndRegions;
     /**
      * Instantiates a new countryNamedLocation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CountryNamedLocation() {
         super();
     }
@@ -76,9 +74,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +85,21 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
     /**
      * Sets the countriesAndRegions property value. List of countries and/or regions in two-letter format specified by ISO 3166-2. Required.
      * @param value Value to set for the countriesAndRegions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountriesAndRegions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.countriesAndRegions = value;
     }
     /**
      * Sets the countryLookupMethod property value. Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
      * @param value Value to set for the countryLookupMethod property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountryLookupMethod(@jakarta.annotation.Nullable final CountryLookupMethodType value) {
         this.countryLookupMethod = value;
     }
     /**
      * Sets the includeUnknownCountriesAndRegions property value. true if IP addresses that don't map to a country or region should be included in the named location. Optional. Default value is false.
      * @param value Value to set for the includeUnknownCountriesAndRegions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeUnknownCountriesAndRegions(@jakarta.annotation.Nullable final Boolean value) {
         this.includeUnknownCountriesAndRegions = value;
     }

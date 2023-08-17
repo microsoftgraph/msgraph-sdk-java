@@ -20,9 +20,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     private Boolean isAssigned;
     /**
      * Instantiates a new targetedManagedAppProtection and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TargetedManagedAppProtection() {
         super();
         this.setOdataType("#microsoft.graph.targetedManagedAppProtection");
@@ -75,9 +73,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,18 +83,14 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     /**
      * Sets the assignments property value. Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<TargetedManagedAppPolicyAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
      * @param value Value to set for the isAssigned property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAssigned(@jakarta.annotation.Nullable final Boolean value) {
         this.isAssigned = value;
     }

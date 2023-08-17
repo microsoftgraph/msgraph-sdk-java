@@ -22,9 +22,7 @@ public class BaseItemVersion extends Entity implements Parsable {
     private PublicationFacet publication;
     /**
      * Instantiates a new baseItemVersion and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BaseItemVersion() {
         super();
     }
@@ -86,9 +84,7 @@ public class BaseItemVersion extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,27 +95,21 @@ public class BaseItemVersion extends Entity implements Parsable {
     /**
      * Sets the lastModifiedBy property value. Identity of the user which last modified the version. Read-only.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Date and time the version was last modified. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the publication property value. Indicates the publication status of this particular version. Read-only.
      * @param value Value to set for the publication property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublication(@jakarta.annotation.Nullable final PublicationFacet value) {
         this.publication = value;
     }

@@ -38,9 +38,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
     private String language;
     /**
      * Instantiates a new agreementFileProperties and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AgreementFileProperties() {
         super();
     }
@@ -138,9 +136,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -155,63 +151,49 @@ public class AgreementFileProperties extends Entity implements Parsable {
     /**
      * Sets the createdDateTime property value. The date time representing when the file was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the displayName property value. Localized display name of the policy file of an agreement. The localized display name is shown to end users who view the agreement.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the fileData property value. Data that represents the terms of use PDF document. Read-only.
      * @param value Value to set for the fileData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileData(@jakarta.annotation.Nullable final AgreementFileData value) {
         this.fileData = value;
     }
     /**
      * Sets the fileName property value. Name of the agreement file (for example, TOU.pdf). Read-only.
      * @param value Value to set for the fileName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileName(@jakarta.annotation.Nullable final String value) {
         this.fileName = value;
     }
     /**
      * Sets the isDefault property value. If none of the languages matches the client preference, indicates whether this is the default agreement file . If none of the files are marked as default, the first one is treated as the default. Read-only.
      * @param value Value to set for the isDefault property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefault = value;
     }
     /**
      * Sets the isMajorVersion property value. Indicates whether the agreement file is a major version update. Major version updates invalidate the agreement's acceptances on the corresponding language.
      * @param value Value to set for the isMajorVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsMajorVersion(@jakarta.annotation.Nullable final Boolean value) {
         this.isMajorVersion = value;
     }
     /**
      * Sets the language property value. The language of the agreement file in the format 'languagecode2-country/regioncode2'. 'languagecode2' is a lowercase two-letter code derived from ISO 639-1, while 'country/regioncode2' is derived from ISO 3166 and usually consists of two uppercase letters, or a BCP-47 language tag. For example, U.S. English is en-US. Read-only.
      * @param value Value to set for the language property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLanguage(@jakarta.annotation.Nullable final String value) {
         this.language = value;
     }

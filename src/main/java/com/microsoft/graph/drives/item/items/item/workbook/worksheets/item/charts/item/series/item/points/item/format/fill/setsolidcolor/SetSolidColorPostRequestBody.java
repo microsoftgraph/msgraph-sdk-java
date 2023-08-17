@@ -18,9 +18,7 @@ public class SetSolidColorPostRequestBody implements AdditionalDataHolder, Parsa
     private String color;
     /**
      * Instantiates a new setSolidColorPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SetSolidColorPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -63,9 +61,7 @@ public class SetSolidColorPostRequestBody implements AdditionalDataHolder, Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("color", this.getColor());
@@ -74,18 +70,14 @@ public class SetSolidColorPostRequestBody implements AdditionalDataHolder, Parsa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the color property value. The color property
      * @param value Value to set for the color property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColor(@jakarta.annotation.Nullable final String value) {
         this.color = value;
     }

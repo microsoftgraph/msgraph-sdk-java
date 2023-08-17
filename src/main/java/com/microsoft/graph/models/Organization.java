@@ -118,9 +118,7 @@ public class Organization extends DirectoryObject implements Parsable {
     private java.util.List<VerifiedDomain> verifiedDomains;
     /**
      * Instantiates a new organization and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Organization() {
         super();
         this.setOdataType("#microsoft.graph.organization");
@@ -390,9 +388,7 @@ public class Organization extends DirectoryObject implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -427,243 +423,189 @@ public class Organization extends DirectoryObject implements Parsable {
     /**
      * Sets the assignedPlans property value. The collection of service plans associated with the tenant. Not nullable.
      * @param value Value to set for the assignedPlans property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignedPlans(@jakarta.annotation.Nullable final java.util.List<AssignedPlan> value) {
         this.assignedPlans = value;
     }
     /**
      * Sets the branding property value. Branding for the organization. Nullable.
      * @param value Value to set for the branding property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBranding(@jakarta.annotation.Nullable final OrganizationalBranding value) {
         this.branding = value;
     }
     /**
      * Sets the businessPhones property value. Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
      * @param value Value to set for the businessPhones property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBusinessPhones(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.businessPhones = value;
     }
     /**
      * Sets the certificateBasedAuthConfiguration property value. Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      * @param value Value to set for the certificateBasedAuthConfiguration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificateBasedAuthConfiguration(@jakarta.annotation.Nullable final java.util.List<CertificateBasedAuthConfiguration> value) {
         this.certificateBasedAuthConfiguration = value;
     }
     /**
      * Sets the city property value. City name of the address for the organization.
      * @param value Value to set for the city property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCity(@jakarta.annotation.Nullable final String value) {
         this.city = value;
     }
     /**
      * Sets the country property value. Country/region name of the address for the organization.
      * @param value Value to set for the country property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountry(@jakarta.annotation.Nullable final String value) {
         this.country = value;
     }
     /**
      * Sets the countryLetterCode property value. Country or region abbreviation for the organization in ISO 3166-2 format.
      * @param value Value to set for the countryLetterCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountryLetterCode(@jakarta.annotation.Nullable final String value) {
         this.countryLetterCode = value;
     }
     /**
      * Sets the createdDateTime property value. Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the defaultUsageLocation property value. Two-letter ISO 3166 country code indicating the default service usage location of an organization.
      * @param value Value to set for the defaultUsageLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefaultUsageLocation(@jakarta.annotation.Nullable final String value) {
         this.defaultUsageLocation = value;
     }
     /**
      * Sets the displayName property value. The display name for the tenant.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the organization. Read-only. Nullable.
      * @param value Value to set for the extensions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
         this.extensions = value;
     }
     /**
      * Sets the marketingNotificationEmails property value. Not nullable.
      * @param value Value to set for the marketingNotificationEmails property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMarketingNotificationEmails(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.marketingNotificationEmails = value;
     }
     /**
      * Sets the mobileDeviceManagementAuthority property value. Mobile device management authority.
      * @param value Value to set for the mobileDeviceManagementAuthority property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMobileDeviceManagementAuthority(@jakarta.annotation.Nullable final MdmAuthority value) {
         this.mobileDeviceManagementAuthority = value;
     }
     /**
      * Sets the onPremisesLastSyncDateTime property value. The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the onPremisesLastSyncDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnPremisesLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.onPremisesLastSyncDateTime = value;
     }
     /**
      * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
      * @param value Value to set for the onPremisesSyncEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnPremisesSyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.onPremisesSyncEnabled = value;
     }
     /**
      * Sets the partnerTenantType property value. The type of partnership this tenant has with Microsoft. The possible values are: microsoftSupport, syndicatePartner, breadthPartner, breadthPartnerDelegatedAdmin, resellerPartnerDelegatedAdmin, valueAddedResellerPartnerDelegatedAdmin, unknownFutureValue. Nullable. For more information about the possible types, see partnerTenantType values.
      * @param value Value to set for the partnerTenantType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPartnerTenantType(@jakarta.annotation.Nullable final PartnerTenantType value) {
         this.partnerTenantType = value;
     }
     /**
      * Sets the postalCode property value. Postal code of the address for the organization.
      * @param value Value to set for the postalCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPostalCode(@jakarta.annotation.Nullable final String value) {
         this.postalCode = value;
     }
     /**
      * Sets the preferredLanguage property value. The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.
      * @param value Value to set for the preferredLanguage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPreferredLanguage(@jakarta.annotation.Nullable final String value) {
         this.preferredLanguage = value;
     }
     /**
      * Sets the privacyProfile property value. The privacy profile of an organization.
      * @param value Value to set for the privacyProfile property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrivacyProfile(@jakarta.annotation.Nullable final PrivacyProfile value) {
         this.privacyProfile = value;
     }
     /**
      * Sets the provisionedPlans property value. Not nullable.
      * @param value Value to set for the provisionedPlans property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProvisionedPlans(@jakarta.annotation.Nullable final java.util.List<ProvisionedPlan> value) {
         this.provisionedPlans = value;
     }
     /**
      * Sets the securityComplianceNotificationMails property value. Not nullable.
      * @param value Value to set for the securityComplianceNotificationMails property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecurityComplianceNotificationMails(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.securityComplianceNotificationMails = value;
     }
     /**
      * Sets the securityComplianceNotificationPhones property value. Not nullable.
      * @param value Value to set for the securityComplianceNotificationPhones property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecurityComplianceNotificationPhones(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.securityComplianceNotificationPhones = value;
     }
     /**
      * Sets the state property value. State name of the address for the organization.
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final String value) {
         this.state = value;
     }
     /**
      * Sets the street property value. Street name of the address for organization.
      * @param value Value to set for the street property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStreet(@jakarta.annotation.Nullable final String value) {
         this.street = value;
     }
     /**
      * Sets the technicalNotificationMails property value. Not nullable.
      * @param value Value to set for the technicalNotificationMails property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTechnicalNotificationMails(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.technicalNotificationMails = value;
     }
     /**
      * Sets the tenantType property value. Not nullable. The tenant type option that was selected when the tenant was created. The possible values are:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C A customer identity access management (CIAM) service that serves business-to-consumer (B2C) scenarios.
      * @param value Value to set for the tenantType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantType(@jakarta.annotation.Nullable final String value) {
         this.tenantType = value;
     }
     /**
      * Sets the verifiedDomains property value. The collection of domains associated with this tenant. Not nullable.
      * @param value Value to set for the verifiedDomains property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVerifiedDomains(@jakarta.annotation.Nullable final java.util.List<VerifiedDomain> value) {
         this.verifiedDomains = value;
     }

@@ -13,9 +13,7 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
     private java.util.List<String> allowedAAGUIDs;
     /**
      * Instantiates a new fido2CombinationConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Fido2CombinationConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.fido2CombinationConfiguration");
@@ -51,9 +49,7 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
     /**
      * Sets the allowedAAGUIDs property value. A list of AAGUIDs allowed to be used as part of the specified authentication method combinations.
      * @param value Value to set for the allowedAAGUIDs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedAAGUIDs(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.allowedAAGUIDs = value;
     }

@@ -34,9 +34,7 @@ public class TaskDefinition extends Entity implements Parsable {
     private Integer version;
     /**
      * Instantiates a new taskDefinition and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TaskDefinition() {
         super();
     }
@@ -116,9 +114,7 @@ public class TaskDefinition extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -132,54 +128,42 @@ public class TaskDefinition extends Entity implements Parsable {
     /**
      * Sets the category property value. The category property
      * @param value Value to set for the category property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory(@jakarta.annotation.Nullable final LifecycleTaskCategory value) {
         this.category = value;
     }
     /**
      * Sets the continueOnError property value. The continueOnError property
      * @param value Value to set for the continueOnError property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContinueOnError(@jakarta.annotation.Nullable final Boolean value) {
         this.continueOnError = value;
     }
     /**
      * Sets the description property value. The description of the taskDefinition.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of the taskDefinition.Supports $filter(eq, ne) and $orderby.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the parameters property value. The parameters that must be supplied when creating a workflow task object.Supports $filter(any).
      * @param value Value to set for the parameters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParameters(@jakarta.annotation.Nullable final java.util.List<Parameter> value) {
         this.parameters = value;
     }
     /**
      * Sets the version property value. The version number of the taskDefinition. New records are pushed when we add support for new parameters.Supports $filter(ge, gt, le, lt, eq, ne) and $orderby.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
         this.version = value;
     }

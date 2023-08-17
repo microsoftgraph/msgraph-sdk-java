@@ -43,9 +43,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
     private String studentNumber;
     /**
      * Instantiates a new educationStudent and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationStudent() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -142,9 +140,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLocalDateValue("birthDate", this.getBirthDate());
@@ -159,72 +155,56 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the birthDate property value. Birth date of the student.
      * @param value Value to set for the birthDate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBirthDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.birthDate = value;
     }
     /**
      * Sets the externalId property value. ID of the student in the source system.
      * @param value Value to set for the externalId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
      * Sets the gender property value. The possible values are: female, male, other, unknownFutureValue.
      * @param value Value to set for the gender property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGender(@jakarta.annotation.Nullable final EducationGender value) {
         this.gender = value;
     }
     /**
      * Sets the grade property value. Current grade level of the student.
      * @param value Value to set for the grade property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGrade(@jakarta.annotation.Nullable final String value) {
         this.grade = value;
     }
     /**
      * Sets the graduationYear property value. Year the student is graduating from the school.
      * @param value Value to set for the graduationYear property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGraduationYear(@jakarta.annotation.Nullable final String value) {
         this.graduationYear = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the studentNumber property value. Student Number.
      * @param value Value to set for the studentNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStudentNumber(@jakarta.annotation.Nullable final String value) {
         this.studentNumber = value;
     }

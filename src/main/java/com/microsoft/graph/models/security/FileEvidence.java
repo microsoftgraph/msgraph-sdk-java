@@ -21,9 +21,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
     private String mdeDeviceId;
     /**
      * Instantiates a new fileEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public FileEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.fileEvidence");
@@ -77,9 +75,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class FileEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the detectionStatus property value. The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
      * @param value Value to set for the detectionStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDetectionStatus(@jakarta.annotation.Nullable final DetectionStatus value) {
         this.detectionStatus = value;
     }
     /**
      * Sets the fileDetails property value. The file details.
      * @param value Value to set for the fileDetails property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileDetails(@jakarta.annotation.Nullable final FileDetails value) {
         this.fileDetails = value;
     }
     /**
      * Sets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      * @param value Value to set for the mdeDeviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMdeDeviceId(@jakarta.annotation.Nullable final String value) {
         this.mdeDeviceId = value;
     }

@@ -52,9 +52,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     private Boolean screenCaptureBlocked;
     /**
      * Instantiates a new androidManagedAppProtection and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AndroidManagedAppProtection() {
         super();
         this.setOdataType("#microsoft.graph.androidManagedAppProtection");
@@ -171,9 +169,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -191,90 +187,70 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
      * @param value Value to set for the apps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApps(@jakarta.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
         this.apps = value;
     }
     /**
      * Sets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @param value Value to set for the customBrowserDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomBrowserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.customBrowserDisplayName = value;
     }
     /**
      * Sets the customBrowserPackageId property value. Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @param value Value to set for the customBrowserPackageId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomBrowserPackageId(@jakarta.annotation.Nullable final String value) {
         this.customBrowserPackageId = value;
     }
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
      * @param value Value to set for the deployedAppCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeployedAppCount(@jakarta.annotation.Nullable final Integer value) {
         this.deployedAppCount = value;
     }
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
      * @param value Value to set for the deploymentSummary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeploymentSummary(@jakarta.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
         this.deploymentSummary = value;
     }
     /**
      * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled
      * @param value Value to set for the disableAppEncryptionIfDeviceEncryptionIsEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisableAppEncryptionIfDeviceEncryptionIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.disableAppEncryptionIfDeviceEncryptionIsEnabled = value;
     }
     /**
      * Sets the encryptAppData property value. Indicates whether application data for managed apps should be encrypted
      * @param value Value to set for the encryptAppData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEncryptAppData(@jakarta.annotation.Nullable final Boolean value) {
         this.encryptAppData = value;
     }
     /**
      * Sets the minimumRequiredPatchVersion property value. Define the oldest required Android security patch level a user can have to gain secure access to the app.
      * @param value Value to set for the minimumRequiredPatchVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumRequiredPatchVersion(@jakarta.annotation.Nullable final String value) {
         this.minimumRequiredPatchVersion = value;
     }
     /**
      * Sets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app.
      * @param value Value to set for the minimumWarningPatchVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumWarningPatchVersion(@jakarta.annotation.Nullable final String value) {
         this.minimumWarningPatchVersion = value;
     }
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether a managed user can take screen captures of managed apps
      * @param value Value to set for the screenCaptureBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScreenCaptureBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.screenCaptureBlocked = value;
     }

@@ -40,9 +40,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     private String minimumRequiredSdkVersion;
     /**
      * Instantiates a new iosManagedAppProtection and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosManagedAppProtection() {
         super();
         this.setOdataType("#microsoft.graph.iosManagedAppProtection");
@@ -132,9 +130,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -149,63 +145,49 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     /**
      * Sets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
      * @param value Value to set for the appDataEncryptionType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppDataEncryptionType(@jakarta.annotation.Nullable final ManagedAppDataEncryptionType value) {
         this.appDataEncryptionType = value;
     }
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
      * @param value Value to set for the apps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApps(@jakarta.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
         this.apps = value;
     }
     /**
      * Sets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @param value Value to set for the customBrowserProtocol property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomBrowserProtocol(@jakarta.annotation.Nullable final String value) {
         this.customBrowserProtocol = value;
     }
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
      * @param value Value to set for the deployedAppCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeployedAppCount(@jakarta.annotation.Nullable final Integer value) {
         this.deployedAppCount = value;
     }
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
      * @param value Value to set for the deploymentSummary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeploymentSummary(@jakarta.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
         this.deploymentSummary = value;
     }
     /**
      * Sets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
      * @param value Value to set for the faceIdBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFaceIdBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.faceIdBlocked = value;
     }
     /**
      * Sets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data.
      * @param value Value to set for the minimumRequiredSdkVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumRequiredSdkVersion(@jakarta.annotation.Nullable final String value) {
         this.minimumRequiredSdkVersion = value;
     }

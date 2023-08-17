@@ -34,9 +34,7 @@ public class PrintConnector extends Entity implements Parsable {
     private OffsetDateTime registeredDateTime;
     /**
      * Instantiates a new printConnector and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PrintConnector() {
         super();
     }
@@ -116,9 +114,7 @@ public class PrintConnector extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -132,54 +128,42 @@ public class PrintConnector extends Entity implements Parsable {
     /**
      * Sets the appVersion property value. The connector's version.
      * @param value Value to set for the appVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppVersion(@jakarta.annotation.Nullable final String value) {
         this.appVersion = value;
     }
     /**
      * Sets the displayName property value. The name of the connector.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the fullyQualifiedDomainName property value. The connector machine's hostname.
      * @param value Value to set for the fullyQualifiedDomainName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFullyQualifiedDomainName(@jakarta.annotation.Nullable final String value) {
         this.fullyQualifiedDomainName = value;
     }
     /**
      * Sets the location property value. The physical and/or organizational location of the connector.
      * @param value Value to set for the location property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocation(@jakarta.annotation.Nullable final PrinterLocation value) {
         this.location = value;
     }
     /**
      * Sets the operatingSystem property value. The connector machine's operating system version.
      * @param value Value to set for the operatingSystem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.operatingSystem = value;
     }
     /**
      * Sets the registeredDateTime property value. The DateTimeOffset when the connector was registered.
      * @param value Value to set for the registeredDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRegisteredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.registeredDateTime = value;
     }

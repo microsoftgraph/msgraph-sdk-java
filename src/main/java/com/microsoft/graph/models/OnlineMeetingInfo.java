@@ -42,9 +42,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     private String tollNumber;
     /**
      * Instantiates a new onlineMeetingInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OnlineMeetingInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +139,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("conferenceId", this.getConferenceId());
@@ -158,72 +154,56 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the conferenceId property value. The ID of the conference.
      * @param value Value to set for the conferenceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConferenceId(@jakarta.annotation.Nullable final String value) {
         this.conferenceId = value;
     }
     /**
      * Sets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
      * @param value Value to set for the joinUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setJoinUrl(@jakarta.annotation.Nullable final String value) {
         this.joinUrl = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the phones property value. All of the phone numbers associated with this conference.
      * @param value Value to set for the phones property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPhones(@jakarta.annotation.Nullable final java.util.List<Phone> value) {
         this.phones = value;
     }
     /**
      * Sets the quickDial property value. The pre-formatted quickdial for this call.
      * @param value Value to set for the quickDial property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQuickDial(@jakarta.annotation.Nullable final String value) {
         this.quickDial = value;
     }
     /**
      * Sets the tollFreeNumbers property value. The toll free numbers that can be used to join the conference.
      * @param value Value to set for the tollFreeNumbers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTollFreeNumbers(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.tollFreeNumbers = value;
     }
     /**
      * Sets the tollNumber property value. The toll number that can be used to join the conference.
      * @param value Value to set for the tollNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTollNumber(@jakarta.annotation.Nullable final String value) {
         this.tollNumber = value;
     }

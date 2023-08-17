@@ -34,9 +34,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
     private String model;
     /**
      * Instantiates a new fido2AuthenticationMethod and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Fido2AuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.fido2AuthenticationMethod");
@@ -117,9 +115,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -133,54 +129,42 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
     /**
      * Sets the aaGuid property value. Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator.
      * @param value Value to set for the aaGuid property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAaGuid(@jakarta.annotation.Nullable final String value) {
         this.aaGuid = value;
     }
     /**
      * Sets the attestationCertificates property value. The attestation certificate(s) attached to this security key.
      * @param value Value to set for the attestationCertificates property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttestationCertificates(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.attestationCertificates = value;
     }
     /**
      * Sets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
      * @param value Value to set for the attestationLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttestationLevel(@jakarta.annotation.Nullable final AttestationLevel value) {
         this.attestationLevel = value;
     }
     /**
      * Sets the createdDateTime property value. The timestamp when this key was registered to the user.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the displayName property value. The display name of the key as given by the user.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the model property value. The manufacturer-assigned model of the FIDO2 security key.
      * @param value Value to set for the model property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }

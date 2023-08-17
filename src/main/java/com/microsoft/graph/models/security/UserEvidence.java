@@ -13,9 +13,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
     private UserAccount userAccount;
     /**
      * Instantiates a new userEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.userEvidence");
@@ -51,9 +49,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the userAccount property value. The user account details.
      * @param value Value to set for the userAccount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserAccount(@jakarta.annotation.Nullable final UserAccount value) {
         this.userAccount = value;
     }

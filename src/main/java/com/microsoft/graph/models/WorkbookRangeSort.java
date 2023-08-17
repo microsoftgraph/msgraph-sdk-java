@@ -9,9 +9,7 @@ import java.util.Objects;
 public class WorkbookRangeSort extends Entity implements Parsable {
     /**
      * Instantiates a new workbookRangeSort and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookRangeSort() {
         super();
     }
@@ -37,9 +35,7 @@ public class WorkbookRangeSort extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

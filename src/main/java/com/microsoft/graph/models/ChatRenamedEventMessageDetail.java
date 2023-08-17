@@ -21,9 +21,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
     private IdentitySet initiator;
     /**
      * Instantiates a new chatRenamedEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ChatRenamedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.chatRenamedEventMessageDetail");
@@ -77,9 +75,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
     /**
      * Sets the chatDisplayName property value. The updated name of the chat.
      * @param value Value to set for the chatDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChatDisplayName(@jakarta.annotation.Nullable final String value) {
         this.chatDisplayName = value;
     }
     /**
      * Sets the chatId property value. Unique identifier of the chat.
      * @param value Value to set for the chatId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChatId(@jakarta.annotation.Nullable final String value) {
         this.chatId = value;
     }
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }

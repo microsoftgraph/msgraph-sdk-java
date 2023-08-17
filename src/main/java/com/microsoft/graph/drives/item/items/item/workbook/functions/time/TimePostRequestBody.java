@@ -27,9 +27,7 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
     private Json second;
     /**
      * Instantiates a new timePostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TimePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +88,7 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("hour", this.getHour());
@@ -103,36 +99,28 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the hour property value. The hour property
      * @param value Value to set for the hour property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHour(@jakarta.annotation.Nullable final Json value) {
         this.hour = value;
     }
     /**
      * Sets the minute property value. The minute property
      * @param value Value to set for the minute property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinute(@jakarta.annotation.Nullable final Json value) {
         this.minute = value;
     }
     /**
      * Sets the second property value. The second property
      * @param value Value to set for the second property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecond(@jakarta.annotation.Nullable final Json value) {
         this.second = value;
     }

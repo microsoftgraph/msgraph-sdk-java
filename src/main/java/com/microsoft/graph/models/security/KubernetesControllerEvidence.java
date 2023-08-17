@@ -25,9 +25,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
     private String type;
     /**
      * Instantiates a new kubernetesControllerEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public KubernetesControllerEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.kubernetesControllerEvidence");
@@ -90,9 +88,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +100,28 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
     /**
      * Sets the labels property value. The labels for the Kubernetes pod.
      * @param value Value to set for the labels property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLabels(@jakarta.annotation.Nullable final Dictionary value) {
         this.labels = value;
     }
     /**
      * Sets the name property value. The controller name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the namespace property value. The service account namespace.
      * @param value Value to set for the namespace property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNamespace(@jakarta.annotation.Nullable final KubernetesNamespaceEvidence value) {
         this.namespace = value;
     }
     /**
      * Sets the type property value. The controller type.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }

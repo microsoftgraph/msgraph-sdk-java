@@ -53,9 +53,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     private Integer version;
     /**
      * Instantiates a new termsAndConditions and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TermsAndConditions() {
         super();
     }
@@ -171,9 +169,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -191,90 +187,70 @@ public class TermsAndConditions extends Entity implements Parsable {
     /**
      * Sets the acceptanceStatement property value. Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&C policy. This is shown to the user on prompts to accept the T&C policy.
      * @param value Value to set for the acceptanceStatement property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAcceptanceStatement(@jakarta.annotation.Nullable final String value) {
         this.acceptanceStatement = value;
     }
     /**
      * Sets the acceptanceStatuses property value. The list of acceptance statuses for this T&C policy.
      * @param value Value to set for the acceptanceStatuses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAcceptanceStatuses(@jakarta.annotation.Nullable final java.util.List<TermsAndConditionsAcceptanceStatus> value) {
         this.acceptanceStatuses = value;
     }
     /**
      * Sets the assignments property value. The list of assignments for this T&C policy.
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<TermsAndConditionsAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the bodyText property value. Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy.
      * @param value Value to set for the bodyText property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBodyText(@jakarta.annotation.Nullable final String value) {
         this.bodyText = value;
     }
     /**
      * Sets the createdDateTime property value. DateTime the object was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Administrator-supplied description of the T&C policy.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Administrator-supplied name for the T&C policy.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the title property value. Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy.
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
     /**
      * Sets the version property value. Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
         this.version = value;
     }

@@ -13,9 +13,7 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
     private String orderHint;
     /**
      * Instantiates a new plannerProgressTaskBoardTaskFormat and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PlannerProgressTaskBoardTaskFormat() {
         super();
     }
@@ -50,9 +48,7 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +57,7 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
     /**
      * Sets the orderHint property value. Hint value used to order the task on the progress view of the task board. For details about the supported format, see Using order hints in Planner.
      * @param value Value to set for the orderHint property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrderHint(@jakarta.annotation.Nullable final String value) {
         this.orderHint = value;
     }

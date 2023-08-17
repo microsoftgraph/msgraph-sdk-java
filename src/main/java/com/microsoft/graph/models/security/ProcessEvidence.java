@@ -50,9 +50,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
     private UserAccount userAccount;
     /**
      * Instantiates a new processEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ProcessEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.processEvidence");
@@ -169,9 +167,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -189,90 +185,70 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the detectionStatus property value. The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
      * @param value Value to set for the detectionStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDetectionStatus(@jakarta.annotation.Nullable final DetectionStatus value) {
         this.detectionStatus = value;
     }
     /**
      * Sets the imageFile property value. Image file details.
      * @param value Value to set for the imageFile property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImageFile(@jakarta.annotation.Nullable final FileDetails value) {
         this.imageFile = value;
     }
     /**
      * Sets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      * @param value Value to set for the mdeDeviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMdeDeviceId(@jakarta.annotation.Nullable final String value) {
         this.mdeDeviceId = value;
     }
     /**
      * Sets the parentProcessCreationDateTime property value. Date and time when the parent of the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the parentProcessCreationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentProcessCreationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.parentProcessCreationDateTime = value;
     }
     /**
      * Sets the parentProcessId property value. Process ID (PID) of the parent process that spawned the process.
      * @param value Value to set for the parentProcessId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentProcessId(@jakarta.annotation.Nullable final Long value) {
         this.parentProcessId = value;
     }
     /**
      * Sets the parentProcessImageFile property value. Parent process image file details.
      * @param value Value to set for the parentProcessImageFile property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentProcessImageFile(@jakarta.annotation.Nullable final FileDetails value) {
         this.parentProcessImageFile = value;
     }
     /**
      * Sets the processCommandLine property value. Command line used to create the new process.
      * @param value Value to set for the processCommandLine property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProcessCommandLine(@jakarta.annotation.Nullable final String value) {
         this.processCommandLine = value;
     }
     /**
      * Sets the processCreationDateTime property value. Date and time when the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the processCreationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProcessCreationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.processCreationDateTime = value;
     }
     /**
      * Sets the processId property value. Process ID (PID) of the newly created process.
      * @param value Value to set for the processId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProcessId(@jakarta.annotation.Nullable final Long value) {
         this.processId = value;
     }
     /**
      * Sets the userAccount property value. User details of the user that ran the process.
      * @param value Value to set for the userAccount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserAccount(@jakarta.annotation.Nullable final UserAccount value) {
         this.userAccount = value;
     }

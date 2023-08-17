@@ -25,9 +25,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     private String webUrl;
     /**
      * Instantiates a new educationTeamsAppResource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationTeamsAppResource() {
         super();
         this.setOdataType("#microsoft.graph.educationTeamsAppResource");
@@ -90,9 +88,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +100,28 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     /**
      * Sets the appIconWebUrl property value. URL that points to the icon of the app.
      * @param value Value to set for the appIconWebUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppIconWebUrl(@jakarta.annotation.Nullable final String value) {
         this.appIconWebUrl = value;
     }
     /**
      * Sets the appId property value. Teams app ID of the application.
      * @param value Value to set for the appId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
      * Sets the teamsEmbeddedContentUrl property value. URL for the app resource that will be opened by Teams.
      * @param value Value to set for the teamsEmbeddedContentUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamsEmbeddedContentUrl(@jakarta.annotation.Nullable final String value) {
         this.teamsEmbeddedContentUrl = value;
     }
     /**
      * Sets the webUrl property value. URL for the app resource that can be opened in the browser.
      * @param value Value to set for the webUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }

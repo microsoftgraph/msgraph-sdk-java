@@ -13,9 +13,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
     private java.util.List<ExternalDomainName> domains;
     /**
      * Instantiates a new samlOrWsFedExternalDomainFederation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SamlOrWsFedExternalDomainFederation() {
         super();
         this.setOdataType("#microsoft.graph.samlOrWsFedExternalDomainFederation");
@@ -51,9 +49,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
     /**
      * Sets the domains property value. Collection of domain names of the external organizations that the tenant is federating with. Supports $filter (eq).
      * @param value Value to set for the domains property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDomains(@jakarta.annotation.Nullable final java.util.List<ExternalDomainName> value) {
         this.domains = value;
     }

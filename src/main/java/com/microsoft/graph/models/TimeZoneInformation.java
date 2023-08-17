@@ -26,9 +26,7 @@ public class TimeZoneInformation implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new timeZoneInformation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TimeZoneInformation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class TimeZoneInformation implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("alias", this.getAlias());
@@ -102,36 +98,28 @@ public class TimeZoneInformation implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the alias property value. An identifier for the time zone.
      * @param value Value to set for the alias property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlias(@jakarta.annotation.Nullable final String value) {
         this.alias = value;
     }
     /**
      * Sets the displayName property value. A display string that represents the time zone.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

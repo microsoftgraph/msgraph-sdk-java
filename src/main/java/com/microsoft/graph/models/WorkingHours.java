@@ -35,9 +35,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
     private TimeZoneBase timeZone;
     /**
      * Instantiates a new workingHours and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkingHours() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -116,9 +114,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfEnumValues("daysOfWeek", this.getDaysOfWeek());
@@ -131,54 +127,42 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the daysOfWeek property value. The days of the week on which the user works.
      * @param value Value to set for the daysOfWeek property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDaysOfWeek(@jakarta.annotation.Nullable final java.util.List<DayOfWeek> value) {
         this.daysOfWeek = value;
     }
     /**
      * Sets the endTime property value. The time of the day that the user stops working.
      * @param value Value to set for the endTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.endTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the startTime property value. The time of the day that the user starts working.
      * @param value Value to set for the startTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.startTime = value;
     }
     /**
      * Sets the timeZone property value. The time zone to which the working hours apply.
      * @param value Value to set for the timeZone property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeZone(@jakarta.annotation.Nullable final TimeZoneBase value) {
         this.timeZone = value;
     }

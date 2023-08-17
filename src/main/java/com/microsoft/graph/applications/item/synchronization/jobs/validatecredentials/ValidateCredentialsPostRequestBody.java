@@ -31,9 +31,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     private Boolean useSavedCredentials;
     /**
      * Instantiates a new validateCredentialsPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ValidateCredentialsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,9 +101,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("applicationIdentifier", this.getApplicationIdentifier());
@@ -117,45 +113,35 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the applicationIdentifier property value. The applicationIdentifier property
      * @param value Value to set for the applicationIdentifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationIdentifier(@jakarta.annotation.Nullable final String value) {
         this.applicationIdentifier = value;
     }
     /**
      * Sets the credentials property value. The credentials property
      * @param value Value to set for the credentials property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCredentials(@jakarta.annotation.Nullable final java.util.List<SynchronizationSecretKeyStringValuePair> value) {
         this.credentials = value;
     }
     /**
      * Sets the templateId property value. The templateId property
      * @param value Value to set for the templateId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTemplateId(@jakarta.annotation.Nullable final String value) {
         this.templateId = value;
     }
     /**
      * Sets the useSavedCredentials property value. The useSavedCredentials property
      * @param value Value to set for the useSavedCredentials property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUseSavedCredentials(@jakarta.annotation.Nullable final Boolean value) {
         this.useSavedCredentials = value;
     }

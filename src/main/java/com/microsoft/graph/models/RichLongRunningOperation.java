@@ -25,9 +25,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
     private String type;
     /**
      * Instantiates a new richLongRunningOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RichLongRunningOperation() {
         super();
     }
@@ -89,9 +87,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -103,36 +99,28 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
     /**
      * Sets the error property value. Error that caused the operation to fail.
      * @param value Value to set for the error property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setError(@jakarta.annotation.Nullable final PublicError value) {
         this.error = value;
     }
     /**
      * Sets the percentageComplete property value. A value between 0 and 100 that indicates the progress of the operation.
      * @param value Value to set for the percentageComplete property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPercentageComplete(@jakarta.annotation.Nullable final Integer value) {
         this.percentageComplete = value;
     }
     /**
      * Sets the resourceId property value. The unique identifier for the result.
      * @param value Value to set for the resourceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.resourceId = value;
     }
     /**
      * Sets the type property value. The type of the operation.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }

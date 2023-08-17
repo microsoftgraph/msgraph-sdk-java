@@ -33,9 +33,7 @@ public class SharedInsight extends Entity implements Parsable {
     private java.util.List<SharingDetail> sharingHistory;
     /**
      * Instantiates a new sharedInsight and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SharedInsight() {
         super();
     }
@@ -115,9 +113,7 @@ public class SharedInsight extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -129,54 +125,42 @@ public class SharedInsight extends Entity implements Parsable {
     /**
      * Sets the lastShared property value. Details about the shared item. Read only.
      * @param value Value to set for the lastShared property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastShared(@jakarta.annotation.Nullable final SharingDetail value) {
         this.lastShared = value;
     }
     /**
      * Sets the lastSharedMethod property value. The lastSharedMethod property
      * @param value Value to set for the lastSharedMethod property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastSharedMethod(@jakarta.annotation.Nullable final Entity value) {
         this.lastSharedMethod = value;
     }
     /**
      * Sets the resource property value. Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
      * @param value Value to set for the resource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResource(@jakarta.annotation.Nullable final Entity value) {
         this.resource = value;
     }
     /**
      * Sets the resourceReference property value. Reference properties of the shared document, such as the url and type of the document. Read-only
      * @param value Value to set for the resourceReference property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceReference(@jakarta.annotation.Nullable final ResourceReference value) {
         this.resourceReference = value;
     }
     /**
      * Sets the resourceVisualization property value. Properties that you can use to visualize the document in your experience. Read-only
      * @param value Value to set for the resourceVisualization property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceVisualization(@jakarta.annotation.Nullable final ResourceVisualization value) {
         this.resourceVisualization = value;
     }
     /**
      * Sets the sharingHistory property value. The sharingHistory property
      * @param value Value to set for the sharingHistory property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharingHistory(@jakarta.annotation.Nullable final java.util.List<SharingDetail> value) {
         this.sharingHistory = value;
     }

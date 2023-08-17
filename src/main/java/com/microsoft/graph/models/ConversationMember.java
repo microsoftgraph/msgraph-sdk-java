@@ -22,9 +22,7 @@ public class ConversationMember extends Entity implements Parsable {
     private OffsetDateTime visibleHistoryStartDateTime;
     /**
      * Instantiates a new conversationMember and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConversationMember() {
         super();
     }
@@ -89,9 +87,7 @@ public class ConversationMember extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -102,27 +98,21 @@ public class ConversationMember extends Entity implements Parsable {
     /**
      * Sets the displayName property value. The display name of the user.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the roles property value. The roles for that user. This property contains additional qualifiers only when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is an in-tenant guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property. An Out-of-tenant external member is assigned the owner role.
      * @param value Value to set for the roles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roles = value;
     }
     /**
      * Sets the visibleHistoryStartDateTime property value. The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.
      * @param value Value to set for the visibleHistoryStartDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVisibleHistoryStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.visibleHistoryStartDateTime = value;
     }

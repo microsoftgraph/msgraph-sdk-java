@@ -26,9 +26,7 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
     private LobbyBypassScope scope;
     /**
      * Instantiates a new lobbyBypassSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LobbyBypassSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +87,7 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isDialInBypassEnabled", this.getIsDialInBypassEnabled());
@@ -102,36 +98,28 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the isDialInBypassEnabled property value. Specifies whether or not to always let dial-in callers bypass the lobby. Optional.
      * @param value Value to set for the isDialInBypassEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsDialInBypassEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isDialInBypassEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the scope property value. Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
      * @param value Value to set for the scope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScope(@jakarta.annotation.Nullable final LobbyBypassScope value) {
         this.scope = value;
     }

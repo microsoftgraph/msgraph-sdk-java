@@ -16,9 +16,7 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
     private java.util.List<IosHomeScreenFolderPage> pages;
     /**
      * Instantiates a new iosHomeScreenFolder and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosHomeScreenFolder() {
         super();
         this.setOdataType("#microsoft.graph.iosHomeScreenFolder");
@@ -54,9 +52,7 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -65,9 +61,7 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
     /**
      * Sets the pages property value. Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the pages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPages(@jakarta.annotation.Nullable final java.util.List<IosHomeScreenFolderPage> value) {
         this.pages = value;
     }

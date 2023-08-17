@@ -33,9 +33,7 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
     private String validationName;
     /**
      * Instantiates a new managedAppDiagnosticStatus and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ManagedAppDiagnosticStatus() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -105,9 +103,7 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("mitigationInstruction", this.getMitigationInstruction());
@@ -119,45 +115,35 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the mitigationInstruction property value. Instruction on how to mitigate a failed validation
      * @param value Value to set for the mitigationInstruction property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMitigationInstruction(@jakarta.annotation.Nullable final String value) {
         this.mitigationInstruction = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the state property value. The state of the operation
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final String value) {
         this.state = value;
     }
     /**
      * Sets the validationName property value. The validation friendly name
      * @param value Value to set for the validationName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValidationName(@jakarta.annotation.Nullable final String value) {
         this.validationName = value;
     }

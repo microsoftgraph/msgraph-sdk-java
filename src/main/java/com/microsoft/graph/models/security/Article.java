@@ -47,9 +47,7 @@ public class Article extends Entity implements Parsable {
     private String title;
     /**
      * Instantiates a new article and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Article() {
         super();
     }
@@ -156,9 +154,7 @@ public class Article extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -175,81 +171,63 @@ public class Article extends Entity implements Parsable {
     /**
      * Sets the body property value. The body property
      * @param value Value to set for the body property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBody(@jakarta.annotation.Nullable final FormattedContent value) {
         this.body = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when this article was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the imageUrl property value. URL of the header image for this article, used for display purposes.
      * @param value Value to set for the imageUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImageUrl(@jakarta.annotation.Nullable final String value) {
         this.imageUrl = value;
     }
     /**
      * Sets the indicators property value. Indicators related to this article.
      * @param value Value to set for the indicators property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIndicators(@jakarta.annotation.Nullable final java.util.List<ArticleIndicator> value) {
         this.indicators = value;
     }
     /**
      * Sets the isFeatured property value. Indicates whether this article is currently featured by Microsoft.
      * @param value Value to set for the isFeatured property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsFeatured(@jakarta.annotation.Nullable final Boolean value) {
         this.isFeatured = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. The most recent date and time when this article was updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastUpdatedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the summary property value. The summary property
      * @param value Value to set for the summary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSummary(@jakarta.annotation.Nullable final FormattedContent value) {
         this.summary = value;
     }
     /**
      * Sets the tags property value. Tags for this article, communicating keywords, or key concepts.
      * @param value Value to set for the tags property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.tags = value;
     }
     /**
      * Sets the title property value. The title of this article.
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }

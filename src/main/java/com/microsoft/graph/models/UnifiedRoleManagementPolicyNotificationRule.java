@@ -29,9 +29,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
     private String recipientType;
     /**
      * Instantiates a new unifiedRoleManagementPolicyNotificationRule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyNotificationRule() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyNotificationRule");
@@ -103,9 +101,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,45 +114,35 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
     /**
      * Sets the isDefaultRecipientsEnabled property value. Indicates whether a default recipient will receive the notification email.
      * @param value Value to set for the isDefaultRecipientsEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsDefaultRecipientsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefaultRecipientsEnabled = value;
     }
     /**
      * Sets the notificationLevel property value. The level of notification. The possible values are None, Critical, All.
      * @param value Value to set for the notificationLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotificationLevel(@jakarta.annotation.Nullable final String value) {
         this.notificationLevel = value;
     }
     /**
      * Sets the notificationRecipients property value. The list of recipients of the email notifications.
      * @param value Value to set for the notificationRecipients property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotificationRecipients(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.notificationRecipients = value;
     }
     /**
      * Sets the notificationType property value. The type of notification. Only Email is supported.
      * @param value Value to set for the notificationType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotificationType(@jakarta.annotation.Nullable final String value) {
         this.notificationType = value;
     }
     /**
      * Sets the recipientType property value. The type of recipient of the notification. The possible values are Requestor, Approver, Admin.
      * @param value Value to set for the recipientType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecipientType(@jakarta.annotation.Nullable final String value) {
         this.recipientType = value;
     }

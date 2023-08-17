@@ -46,9 +46,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     private String summary;
     /**
      * Instantiates a new searchHit and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SearchHit() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -154,9 +152,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("contentSource", this.getContentSource());
@@ -172,81 +168,63 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the contentSource property value. The name of the content source that the externalItem is part of.
      * @param value Value to set for the contentSource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentSource(@jakarta.annotation.Nullable final String value) {
         this.contentSource = value;
     }
     /**
      * Sets the hitId property value. The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format.
      * @param value Value to set for the hitId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHitId(@jakarta.annotation.Nullable final String value) {
         this.hitId = value;
     }
     /**
      * Sets the isCollapsed property value. Indicates whether the current result is collapsed when the collapseProperties property in the searchRequest is used.
      * @param value Value to set for the isCollapsed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsCollapsed(@jakarta.annotation.Nullable final Boolean value) {
         this.isCollapsed = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the rank property value. The rank or the order of the result.
      * @param value Value to set for the rank property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRank(@jakarta.annotation.Nullable final Integer value) {
         this.rank = value;
     }
     /**
      * Sets the resource property value. The resource property
      * @param value Value to set for the resource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResource(@jakarta.annotation.Nullable final Entity value) {
         this.resource = value;
     }
     /**
      * Sets the resultTemplateId property value. ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse.
      * @param value Value to set for the resultTemplateId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResultTemplateId(@jakarta.annotation.Nullable final String value) {
         this.resultTemplateId = value;
     }
     /**
      * Sets the summary property value. A summary of the result, if a summary is available.
      * @param value Value to set for the summary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSummary(@jakarta.annotation.Nullable final String value) {
         this.summary = value;
     }

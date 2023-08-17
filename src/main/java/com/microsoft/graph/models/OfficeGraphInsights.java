@@ -21,9 +21,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
     private java.util.List<UsedInsight> used;
     /**
      * Instantiates a new officeGraphInsights and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OfficeGraphInsights() {
         super();
     }
@@ -76,9 +74,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +85,21 @@ public class OfficeGraphInsights extends Entity implements Parsable {
     /**
      * Sets the shared property value. Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      * @param value Value to set for the shared property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShared(@jakarta.annotation.Nullable final java.util.List<SharedInsight> value) {
         this.shared = value;
     }
     /**
      * Sets the trending property value. Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
      * @param value Value to set for the trending property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTrending(@jakarta.annotation.Nullable final java.util.List<Trending> value) {
         this.trending = value;
     }
     /**
      * Sets the used property value. Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
      * @param value Value to set for the used property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUsed(@jakarta.annotation.Nullable final java.util.List<UsedInsight> value) {
         this.used = value;
     }

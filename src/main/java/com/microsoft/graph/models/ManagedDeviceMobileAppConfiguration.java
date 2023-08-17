@@ -57,9 +57,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     private Integer version;
     /**
      * Instantiates a new managedDeviceMobileAppConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfiguration() {
         super();
     }
@@ -191,9 +189,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -212,99 +208,77 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     /**
      * Sets the assignments property value. The list of group assignemenets for app configration.
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the createdDateTime property value. DateTime the object was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Admin provided description of the Device Configuration.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the deviceStatuses property value. List of ManagedDeviceMobileAppConfigurationDeviceStatus.
      * @param value Value to set for the deviceStatuses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceStatuses(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> value) {
         this.deviceStatuses = value;
     }
     /**
      * Sets the deviceStatusSummary property value. App configuration device status summary.
      * @param value Value to set for the deviceStatusSummary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceStatusSummary(@jakarta.annotation.Nullable final ManagedDeviceMobileAppConfigurationDeviceSummary value) {
         this.deviceStatusSummary = value;
     }
     /**
      * Sets the displayName property value. Admin provided name of the device configuration.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the targetedMobileApps property value. the associated app.
      * @param value Value to set for the targetedMobileApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetedMobileApps(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.targetedMobileApps = value;
     }
     /**
      * Sets the userStatuses property value. List of ManagedDeviceMobileAppConfigurationUserStatus.
      * @param value Value to set for the userStatuses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserStatuses(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> value) {
         this.userStatuses = value;
     }
     /**
      * Sets the userStatusSummary property value. App configuration user status summary.
      * @param value Value to set for the userStatusSummary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserStatusSummary(@jakarta.annotation.Nullable final ManagedDeviceMobileAppConfigurationUserSummary value) {
         this.userStatusSummary = value;
     }
     /**
      * Sets the version property value. Version of the device configuration.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
         this.version = value;
     }

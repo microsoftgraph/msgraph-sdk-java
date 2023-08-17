@@ -61,9 +61,7 @@ public class BrowserSite extends Entity implements Parsable {
     private String webUrl;
     /**
      * Instantiates a new browserSite and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BrowserSite() {
         super();
     }
@@ -197,9 +195,7 @@ public class BrowserSite extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -219,108 +215,84 @@ public class BrowserSite extends Entity implements Parsable {
     /**
      * Sets the allowRedirect property value. Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain.
      * @param value Value to set for the allowRedirect property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowRedirect(@jakarta.annotation.Nullable final Boolean value) {
         this.allowRedirect = value;
     }
     /**
      * Sets the comment property value. The comment for the site.
      * @param value Value to set for the comment property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComment(@jakarta.annotation.Nullable final String value) {
         this.comment = value;
     }
     /**
      * Sets the compatibilityMode property value. The compatibilityMode property
      * @param value Value to set for the compatibilityMode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompatibilityMode(@jakarta.annotation.Nullable final BrowserSiteCompatibilityMode value) {
         this.compatibilityMode = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the site was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the deletedDateTime property value. The date and time when the site was deleted.
      * @param value Value to set for the deletedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.deletedDateTime = value;
     }
     /**
      * Sets the history property value. The history of modifications applied to the site.
      * @param value Value to set for the history property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHistory(@jakarta.annotation.Nullable final java.util.List<BrowserSiteHistory> value) {
         this.history = value;
     }
     /**
      * Sets the lastModifiedBy property value. The user who last modified the site.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the site was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the mergeType property value. The mergeType property
      * @param value Value to set for the mergeType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMergeType(@jakarta.annotation.Nullable final BrowserSiteMergeType value) {
         this.mergeType = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final BrowserSiteStatus value) {
         this.status = value;
     }
     /**
      * Sets the targetEnvironment property value. The targetEnvironment property
      * @param value Value to set for the targetEnvironment property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetEnvironment(@jakarta.annotation.Nullable final BrowserSiteTargetEnvironment value) {
         this.targetEnvironment = value;
     }
     /**
      * Sets the webUrl property value. The URL of the site.
      * @param value Value to set for the webUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }

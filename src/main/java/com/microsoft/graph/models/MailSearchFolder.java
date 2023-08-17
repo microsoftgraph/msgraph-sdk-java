@@ -25,9 +25,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
     private java.util.List<String> sourceFolderIds;
     /**
      * Instantiates a new mailSearchFolder and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MailSearchFolder() {
         super();
         this.setOdataType("#microsoft.graph.mailSearchFolder");
@@ -90,9 +88,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +100,28 @@ public class MailSearchFolder extends MailFolder implements Parsable {
     /**
      * Sets the filterQuery property value. The OData query to filter the messages.
      * @param value Value to set for the filterQuery property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFilterQuery(@jakarta.annotation.Nullable final String value) {
         this.filterQuery = value;
     }
     /**
      * Sets the includeNestedFolders property value. Indicates how the mailbox folder hierarchy should be traversed in the search. true means that a deep search should be done to include child folders in the hierarchy of each folder explicitly specified in sourceFolderIds. false means a shallow search of only each of the folders explicitly specified in sourceFolderIds.
      * @param value Value to set for the includeNestedFolders property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeNestedFolders(@jakarta.annotation.Nullable final Boolean value) {
         this.includeNestedFolders = value;
     }
     /**
      * Sets the isSupported property value. Indicates whether a search folder is editable using REST APIs.
      * @param value Value to set for the isSupported property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSupported(@jakarta.annotation.Nullable final Boolean value) {
         this.isSupported = value;
     }
     /**
      * Sets the sourceFolderIds property value. The mailbox folders that should be mined.
      * @param value Value to set for the sourceFolderIds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceFolderIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.sourceFolderIds = value;
     }

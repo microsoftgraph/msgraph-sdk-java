@@ -33,9 +33,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     private String resourceType;
     /**
      * Instantiates a new googleCloudResourceEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public GoogleCloudResourceEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.googleCloudResourceEvidence");
@@ -116,9 +114,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -132,54 +128,42 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     /**
      * Sets the location property value. The zone or region where the resource is located.
      * @param value Value to set for the location property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocation(@jakarta.annotation.Nullable final String value) {
         this.location = value;
     }
     /**
      * Sets the locationType property value. The type of location. Possible values are: unknown, regional, zonal, global, unknownFutureValue.
      * @param value Value to set for the locationType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocationType(@jakarta.annotation.Nullable final GoogleCloudLocationType value) {
         this.locationType = value;
     }
     /**
      * Sets the projectId property value. The Google project ID as defined by the user.
      * @param value Value to set for the projectId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProjectId(@jakarta.annotation.Nullable final String value) {
         this.projectId = value;
     }
     /**
      * Sets the projectNumber property value. The project number assigned by Google.
      * @param value Value to set for the projectNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProjectNumber(@jakarta.annotation.Nullable final Long value) {
         this.projectNumber = value;
     }
     /**
      * Sets the resourceName property value. The name of the resource.
      * @param value Value to set for the resourceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceName(@jakarta.annotation.Nullable final String value) {
         this.resourceName = value;
     }
     /**
      * Sets the resourceType property value. The type of the resource.
      * @param value Value to set for the resourceType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceType(@jakarta.annotation.Nullable final String value) {
         this.resourceType = value;
     }

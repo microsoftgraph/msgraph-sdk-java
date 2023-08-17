@@ -34,9 +34,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
     private String statusInformation;
     /**
      * Instantiates a new eventPropagationResult and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EventPropagationResult() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("location", this.getLocation());
@@ -130,54 +126,42 @@ public class EventPropagationResult implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the location property value. The name of the specific location in the workload associated with the event.
      * @param value Value to set for the location property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocation(@jakarta.annotation.Nullable final String value) {
         this.location = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the serviceName property value. The name of the workload associated with the event.
      * @param value Value to set for the serviceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServiceName(@jakarta.annotation.Nullable final String value) {
         this.serviceName = value;
     }
     /**
      * Sets the status property value. Indicates the status of the event creation request. The possible values are: none, inProcessing, failed, success, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final EventPropagationStatus value) {
         this.status = value;
     }
     /**
      * Sets the statusInformation property value. Additional information about the status of the event creation request.
      * @param value Value to set for the statusInformation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatusInformation(@jakarta.annotation.Nullable final String value) {
         this.statusInformation = value;
     }

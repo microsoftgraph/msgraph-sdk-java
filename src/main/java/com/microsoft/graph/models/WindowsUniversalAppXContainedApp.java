@@ -16,9 +16,7 @@ public class WindowsUniversalAppXContainedApp extends MobileContainedApp impleme
     private String appUserModelId;
     /**
      * Instantiates a new windowsUniversalAppXContainedApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsUniversalAppXContainedApp() {
         super();
         this.setOdataType("#microsoft.graph.windowsUniversalAppXContainedApp");
@@ -54,9 +52,7 @@ public class WindowsUniversalAppXContainedApp extends MobileContainedApp impleme
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -65,9 +61,7 @@ public class WindowsUniversalAppXContainedApp extends MobileContainedApp impleme
     /**
      * Sets the appUserModelId property value. The app user model ID of the contained app of a WindowsUniversalAppX app.
      * @param value Value to set for the appUserModelId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppUserModelId(@jakarta.annotation.Nullable final String value) {
         this.appUserModelId = value;
     }

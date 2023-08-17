@@ -46,9 +46,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     private java.util.List<String> selectedOptions;
     /**
      * Instantiates a new bookingQuestionAnswer and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BookingQuestionAnswer() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -154,9 +152,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("answer", this.getAnswer());
@@ -172,81 +168,63 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the answer property value. The answer given by the user in case the answerInputType is text.
      * @param value Value to set for the answer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAnswer(@jakarta.annotation.Nullable final String value) {
         this.answer = value;
     }
     /**
      * Sets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
      * @param value Value to set for the answerInputType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAnswerInputType(@jakarta.annotation.Nullable final AnswerInputType value) {
         this.answerInputType = value;
     }
     /**
      * Sets the answerOptions property value. In case the answerInputType is radioButton, this will consists of a list of possible answer values.
      * @param value Value to set for the answerOptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAnswerOptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.answerOptions = value;
     }
     /**
      * Sets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
      * @param value Value to set for the isRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isRequired = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the question property value. The question.
      * @param value Value to set for the question property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQuestion(@jakarta.annotation.Nullable final String value) {
         this.question = value;
     }
     /**
      * Sets the questionId property value. The ID of the custom question.
      * @param value Value to set for the questionId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQuestionId(@jakarta.annotation.Nullable final String value) {
         this.questionId = value;
     }
     /**
      * Sets the selectedOptions property value. The answers selected by the user.
      * @param value Value to set for the selectedOptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSelectedOptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.selectedOptions = value;
     }

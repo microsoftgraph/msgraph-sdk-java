@@ -48,9 +48,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     private String versionNumber;
     /**
      * Instantiates a new macOSLobApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MacOSLobApp() {
         super();
         this.setOdataType("#microsoft.graph.macOSLobApp");
@@ -158,9 +156,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -177,81 +173,63 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     /**
      * Sets the buildNumber property value. The build number of the package. This should match the package CFBundleShortVersionString of the .pkg file.
      * @param value Value to set for the buildNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBuildNumber(@jakarta.annotation.Nullable final String value) {
         this.buildNumber = value;
     }
     /**
      * Sets the bundleId property value. The primary bundleId of the package.
      * @param value Value to set for the bundleId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBundleId(@jakarta.annotation.Nullable final String value) {
         this.bundleId = value;
     }
     /**
      * Sets the childApps property value. List of ComplexType macOSLobChildApp objects. Represents the apps expected to be installed by the package.
      * @param value Value to set for the childApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChildApps(@jakarta.annotation.Nullable final java.util.List<MacOSLobChildApp> value) {
         this.childApps = value;
     }
     /**
      * Sets the ignoreVersionDetection property value. When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.
      * @param value Value to set for the ignoreVersionDetection property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIgnoreVersionDetection(@jakarta.annotation.Nullable final Boolean value) {
         this.ignoreVersionDetection = value;
     }
     /**
      * Sets the installAsManaged property value. When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged.
      * @param value Value to set for the installAsManaged property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstallAsManaged(@jakarta.annotation.Nullable final Boolean value) {
         this.installAsManaged = value;
     }
     /**
      * Sets the md5Hash property value. The MD5 hash codes. This is empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
      * @param value Value to set for the md5Hash property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMd5Hash(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.md5Hash = value;
     }
     /**
      * Sets the md5HashChunkSize property value. The chunk size for MD5 hash. This is '0' or empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
      * @param value Value to set for the md5HashChunkSize property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMd5HashChunkSize(@jakarta.annotation.Nullable final Integer value) {
         this.md5HashChunkSize = value;
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final MacOSMinimumOperatingSystem value) {
         this.minimumSupportedOperatingSystem = value;
     }
     /**
      * Sets the versionNumber property value. The version number of the package. This should match the package CFBundleVersion in the packageinfo file.
      * @param value Value to set for the versionNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersionNumber(@jakarta.annotation.Nullable final String value) {
         this.versionNumber = value;
     }

@@ -78,9 +78,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     private String odataType;
     /**
      * Instantiates a new onPremisesExtensionAttributes and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OnPremisesExtensionAttributes() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -258,9 +256,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("extensionAttribute1", this.getExtensionAttribute1());
@@ -284,153 +280,119 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the extensionAttribute1 property value. First customizable extension attribute.
      * @param value Value to set for the extensionAttribute1 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensionAttribute1(@jakarta.annotation.Nullable final String value) {
         this.extensionAttribute1 = value;
     }
     /**
      * Sets the extensionAttribute10 property value. Tenth customizable extension attribute.
      * @param value Value to set for the extensionAttribute10 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensionAttribute10(@jakarta.annotation.Nullable final String value) {
         this.extensionAttribute10 = value;
     }
     /**
      * Sets the extensionAttribute11 property value. Eleventh customizable extension attribute.
      * @param value Value to set for the extensionAttribute11 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensionAttribute11(@jakarta.annotation.Nullable final String value) {
         this.extensionAttribute11 = value;
     }
     /**
      * Sets the extensionAttribute12 property value. Twelfth customizable extension attribute.
      * @param value Value to set for the extensionAttribute12 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensionAttribute12(@jakarta.annotation.Nullable final String value) {
         this.extensionAttribute12 = value;
     }
     /**
      * Sets the extensionAttribute13 property value. Thirteenth customizable extension attribute.
      * @param value Value to set for the extensionAttribute13 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensionAttribute13(@jakarta.annotation.Nullable final String value) {
         this.extensionAttribute13 = value;
     }
     /**
      * Sets the extensionAttribute14 property value. Fourteenth customizable extension attribute.
      * @param value Value to set for the extensionAttribute14 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensionAttribute14(@jakarta.annotation.Nullable final String value) {
         this.extensionAttribute14 = value;
     }
     /**
      * Sets the extensionAttribute15 property value. Fifteenth customizable extension attribute.
      * @param value Value to set for the extensionAttribute15 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensionAttribute15(@jakarta.annotation.Nullable final String value) {
         this.extensionAttribute15 = value;
     }
     /**
      * Sets the extensionAttribute2 property value. Second customizable extension attribute.
      * @param value Value to set for the extensionAttribute2 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensionAttribute2(@jakarta.annotation.Nullable final String value) {
         this.extensionAttribute2 = value;
     }
     /**
      * Sets the extensionAttribute3 property value. Third customizable extension attribute.
      * @param value Value to set for the extensionAttribute3 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensionAttribute3(@jakarta.annotation.Nullable final String value) {
         this.extensionAttribute3 = value;
     }
     /**
      * Sets the extensionAttribute4 property value. Fourth customizable extension attribute.
      * @param value Value to set for the extensionAttribute4 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensionAttribute4(@jakarta.annotation.Nullable final String value) {
         this.extensionAttribute4 = value;
     }
     /**
      * Sets the extensionAttribute5 property value. Fifth customizable extension attribute.
      * @param value Value to set for the extensionAttribute5 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensionAttribute5(@jakarta.annotation.Nullable final String value) {
         this.extensionAttribute5 = value;
     }
     /**
      * Sets the extensionAttribute6 property value. Sixth customizable extension attribute.
      * @param value Value to set for the extensionAttribute6 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensionAttribute6(@jakarta.annotation.Nullable final String value) {
         this.extensionAttribute6 = value;
     }
     /**
      * Sets the extensionAttribute7 property value. Seventh customizable extension attribute.
      * @param value Value to set for the extensionAttribute7 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensionAttribute7(@jakarta.annotation.Nullable final String value) {
         this.extensionAttribute7 = value;
     }
     /**
      * Sets the extensionAttribute8 property value. Eighth customizable extension attribute.
      * @param value Value to set for the extensionAttribute8 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensionAttribute8(@jakarta.annotation.Nullable final String value) {
         this.extensionAttribute8 = value;
     }
     /**
      * Sets the extensionAttribute9 property value. Ninth customizable extension attribute.
      * @param value Value to set for the extensionAttribute9 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensionAttribute9(@jakarta.annotation.Nullable final String value) {
         this.extensionAttribute9 = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

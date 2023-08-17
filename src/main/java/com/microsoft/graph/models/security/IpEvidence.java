@@ -17,9 +17,7 @@ public class IpEvidence extends AlertEvidence implements Parsable {
     private String ipAddress;
     /**
      * Instantiates a new ipEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IpEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.ipEvidence");
@@ -64,9 +62,7 @@ public class IpEvidence extends AlertEvidence implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class IpEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the countryLetterCode property value. The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc..).
      * @param value Value to set for the countryLetterCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountryLetterCode(@jakarta.annotation.Nullable final String value) {
         this.countryLetterCode = value;
     }
     /**
      * Sets the ipAddress property value. The value of the IP Address, can be either in V4 address or V6 address format.
      * @param value Value to set for the ipAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
         this.ipAddress = value;
     }

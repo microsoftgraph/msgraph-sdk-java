@@ -18,9 +18,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
     private LocalTime scheduledInstallTime;
     /**
      * Instantiates a new windowsUpdateScheduledInstall and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsUpdateScheduledInstall() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdateScheduledInstall");
@@ -65,9 +63,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -77,18 +73,14 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
     /**
      * Sets the scheduledInstallDay property value. Possible values for a weekly schedule.
      * @param value Value to set for the scheduledInstallDay property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScheduledInstallDay(@jakarta.annotation.Nullable final WeeklySchedule value) {
         this.scheduledInstallDay = value;
     }
     /**
      * Sets the scheduledInstallTime property value. Scheduled Install Time during day
      * @param value Value to set for the scheduledInstallTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScheduledInstallTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.scheduledInstallTime = value;
     }

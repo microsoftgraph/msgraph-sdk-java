@@ -21,9 +21,7 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
     private String notes;
     /**
      * Instantiates a new shiftItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ShiftItem() {
         super();
     }
@@ -83,9 +81,7 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -96,27 +92,21 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
     /**
      * Sets the activities property value. An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required.
      * @param value Value to set for the activities property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivities(@jakarta.annotation.Nullable final java.util.List<ShiftActivity> value) {
         this.activities = value;
     }
     /**
      * Sets the displayName property value. The shift label of the shiftItem.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the notes property value. The shift notes for the shiftItem.
      * @param value Value to set for the notes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotes(@jakarta.annotation.Nullable final String value) {
         this.notes = value;
     }

@@ -30,9 +30,7 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new deviceComplianceUserStatus and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceComplianceUserStatus() {
         super();
     }
@@ -103,9 +101,7 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,45 +114,35 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
     /**
      * Sets the devicesCount property value. Devices count for that user.
      * @param value Value to set for the devicesCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDevicesCount(@jakarta.annotation.Nullable final Integer value) {
         this.devicesCount = value;
     }
     /**
      * Sets the lastReportedDateTime property value. Last modified date time of the policy report.
      * @param value Value to set for the lastReportedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastReportedDateTime = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final ComplianceStatus value) {
         this.status = value;
     }
     /**
      * Sets the userDisplayName property value. User name of the DevicePolicyStatus.
      * @param value Value to set for the userDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
      * Sets the userPrincipalName property value. UserPrincipalName.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }

@@ -33,9 +33,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
     private Integer minimumLifetimeInMinutes;
     /**
      * Instantiates a new temporaryAccessPassAuthenticationMethodConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TemporaryAccessPassAuthenticationMethodConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration");
@@ -116,9 +114,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -132,54 +128,42 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
     /**
      * Sets the defaultLength property value. Default length in characters of a Temporary Access Pass object. Must be between 8 and 48 characters.
      * @param value Value to set for the defaultLength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefaultLength(@jakarta.annotation.Nullable final Integer value) {
         this.defaultLength = value;
     }
     /**
      * Sets the defaultLifetimeInMinutes property value. Default lifetime in minutes for a Temporary Access Pass. Value can be any integer between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
      * @param value Value to set for the defaultLifetimeInMinutes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefaultLifetimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.defaultLifetimeInMinutes = value;
     }
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
      * @param value Value to set for the includeTargets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
         this.includeTargets = value;
     }
     /**
      * Sets the isUsableOnce property value. If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or reusable.
      * @param value Value to set for the isUsableOnce property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsUsableOnce(@jakarta.annotation.Nullable final Boolean value) {
         this.isUsableOnce = value;
     }
     /**
      * Sets the maximumLifetimeInMinutes property value. Maximum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
      * @param value Value to set for the maximumLifetimeInMinutes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaximumLifetimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.maximumLifetimeInMinutes = value;
     }
     /**
      * Sets the minimumLifetimeInMinutes property value. Minimum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
      * @param value Value to set for the minimumLifetimeInMinutes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumLifetimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.minimumLifetimeInMinutes = value;
     }

@@ -24,9 +24,7 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
     private String vpnConfigurationId;
     /**
      * Instantiates a new iosStoreAppAssignmentSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosStoreAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.iosStoreAppAssignmentSettings");
@@ -80,9 +78,7 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -93,27 +89,21 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
     /**
      * Sets the isRemovable property value. When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE.
      * @param value Value to set for the isRemovable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsRemovable(@jakarta.annotation.Nullable final Boolean value) {
         this.isRemovable = value;
     }
     /**
      * Sets the uninstallOnDeviceRemoval property value. When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
      * @param value Value to set for the uninstallOnDeviceRemoval property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUninstallOnDeviceRemoval(@jakarta.annotation.Nullable final Boolean value) {
         this.uninstallOnDeviceRemoval = value;
     }
     /**
      * Sets the vpnConfigurationId property value. This is the unique identifier (Id) of the VPN Configuration to apply to the app.
      * @param value Value to set for the vpnConfigurationId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVpnConfigurationId(@jakarta.annotation.Nullable final String value) {
         this.vpnConfigurationId = value;
     }

@@ -27,9 +27,7 @@ public class AverageIfPostRequestBody implements AdditionalDataHolder, Parsable 
     private Json range;
     /**
      * Instantiates a new averageIfPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AverageIfPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +88,7 @@ public class AverageIfPostRequestBody implements AdditionalDataHolder, Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("averageRange", this.getAverageRange());
@@ -103,36 +99,28 @@ public class AverageIfPostRequestBody implements AdditionalDataHolder, Parsable 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the averageRange property value. The averageRange property
      * @param value Value to set for the averageRange property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAverageRange(@jakarta.annotation.Nullable final Json value) {
         this.averageRange = value;
     }
     /**
      * Sets the criteria property value. The criteria property
      * @param value Value to set for the criteria property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCriteria(@jakarta.annotation.Nullable final Json value) {
         this.criteria = value;
     }
     /**
      * Sets the range property value. The range property
      * @param value Value to set for the range property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRange(@jakarta.annotation.Nullable final Json value) {
         this.range = value;
     }

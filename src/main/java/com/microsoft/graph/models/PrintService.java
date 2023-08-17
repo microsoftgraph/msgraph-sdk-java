@@ -13,9 +13,7 @@ public class PrintService extends Entity implements Parsable {
     private java.util.List<PrintServiceEndpoint> endpoints;
     /**
      * Instantiates a new printService and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PrintService() {
         super();
     }
@@ -50,9 +48,7 @@ public class PrintService extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +57,7 @@ public class PrintService extends Entity implements Parsable {
     /**
      * Sets the endpoints property value. Endpoints that can be used to access the service. Read-only. Nullable.
      * @param value Value to set for the endpoints property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndpoints(@jakarta.annotation.Nullable final java.util.List<PrintServiceEndpoint> value) {
         this.endpoints = value;
     }

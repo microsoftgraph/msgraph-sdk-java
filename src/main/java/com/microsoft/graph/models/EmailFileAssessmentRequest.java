@@ -21,9 +21,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     private String recipientEmail;
     /**
      * Instantiates a new emailFileAssessmentRequest and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EmailFileAssessmentRequest() {
         super();
         this.setOdataType("#microsoft.graph.emailFileAssessmentRequest");
@@ -77,9 +75,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     /**
      * Sets the contentData property value. Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
      * @param value Value to set for the contentData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentData(@jakarta.annotation.Nullable final String value) {
         this.contentData = value;
     }
     /**
      * Sets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
      * @param value Value to set for the destinationRoutingReason property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDestinationRoutingReason(@jakarta.annotation.Nullable final MailDestinationRoutingReason value) {
         this.destinationRoutingReason = value;
     }
     /**
      * Sets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
      * @param value Value to set for the recipientEmail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecipientEmail(@jakarta.annotation.Nullable final String value) {
         this.recipientEmail = value;
     }

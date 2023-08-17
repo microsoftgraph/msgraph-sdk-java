@@ -85,9 +85,7 @@ public class Schedule extends Entity implements Parsable {
     private java.util.List<String> workforceIntegrationIds;
     /**
      * Instantiates a new schedule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Schedule() {
         super();
     }
@@ -284,9 +282,7 @@ public class Schedule extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -311,171 +307,133 @@ public class Schedule extends Entity implements Parsable {
     /**
      * Sets the enabled property value. Indicates whether the schedule is enabled for the team. Required.
      * @param value Value to set for the enabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.enabled = value;
     }
     /**
      * Sets the offerShiftRequests property value. The offer requests for shifts in the schedule.
      * @param value Value to set for the offerShiftRequests property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOfferShiftRequests(@jakarta.annotation.Nullable final java.util.List<OfferShiftRequest> value) {
         this.offerShiftRequests = value;
     }
     /**
      * Sets the offerShiftRequestsEnabled property value. Indicates whether offer shift requests are enabled for the schedule.
      * @param value Value to set for the offerShiftRequestsEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOfferShiftRequestsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.offerShiftRequestsEnabled = value;
     }
     /**
      * Sets the openShiftChangeRequests property value. The open shift requests in the schedule.
      * @param value Value to set for the openShiftChangeRequests property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOpenShiftChangeRequests(@jakarta.annotation.Nullable final java.util.List<OpenShiftChangeRequest> value) {
         this.openShiftChangeRequests = value;
     }
     /**
      * Sets the openShifts property value. The set of open shifts in a scheduling group in the schedule.
      * @param value Value to set for the openShifts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOpenShifts(@jakarta.annotation.Nullable final java.util.List<OpenShift> value) {
         this.openShifts = value;
     }
     /**
      * Sets the openShiftsEnabled property value. Indicates whether open shifts are enabled for the schedule.
      * @param value Value to set for the openShiftsEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOpenShiftsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.openShiftsEnabled = value;
     }
     /**
      * Sets the provisionStatus property value. The status of the schedule provisioning. The possible values are notStarted, running, completed, failed.
      * @param value Value to set for the provisionStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProvisionStatus(@jakarta.annotation.Nullable final OperationStatus value) {
         this.provisionStatus = value;
     }
     /**
      * Sets the provisionStatusCode property value. Additional information about why schedule provisioning failed.
      * @param value Value to set for the provisionStatusCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProvisionStatusCode(@jakarta.annotation.Nullable final String value) {
         this.provisionStatusCode = value;
     }
     /**
      * Sets the schedulingGroups property value. The logical grouping of users in the schedule (usually by role).
      * @param value Value to set for the schedulingGroups property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSchedulingGroups(@jakarta.annotation.Nullable final java.util.List<SchedulingGroup> value) {
         this.schedulingGroups = value;
     }
     /**
      * Sets the shifts property value. The shifts in the schedule.
      * @param value Value to set for the shifts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShifts(@jakarta.annotation.Nullable final java.util.List<Shift> value) {
         this.shifts = value;
     }
     /**
      * Sets the swapShiftsChangeRequests property value. The swap requests for shifts in the schedule.
      * @param value Value to set for the swapShiftsChangeRequests property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSwapShiftsChangeRequests(@jakarta.annotation.Nullable final java.util.List<SwapShiftsChangeRequest> value) {
         this.swapShiftsChangeRequests = value;
     }
     /**
      * Sets the swapShiftsRequestsEnabled property value. Indicates whether swap shifts requests are enabled for the schedule.
      * @param value Value to set for the swapShiftsRequestsEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSwapShiftsRequestsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.swapShiftsRequestsEnabled = value;
     }
     /**
      * Sets the timeClockEnabled property value. Indicates whether time clock is enabled for the schedule.
      * @param value Value to set for the timeClockEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeClockEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.timeClockEnabled = value;
     }
     /**
      * Sets the timeOffReasons property value. The set of reasons for a time off in the schedule.
      * @param value Value to set for the timeOffReasons property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeOffReasons(@jakarta.annotation.Nullable final java.util.List<TimeOffReason> value) {
         this.timeOffReasons = value;
     }
     /**
      * Sets the timeOffRequests property value. The time off requests in the schedule.
      * @param value Value to set for the timeOffRequests property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeOffRequests(@jakarta.annotation.Nullable final java.util.List<TimeOffRequest> value) {
         this.timeOffRequests = value;
     }
     /**
      * Sets the timeOffRequestsEnabled property value. Indicates whether time off requests are enabled for the schedule.
      * @param value Value to set for the timeOffRequestsEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeOffRequestsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.timeOffRequestsEnabled = value;
     }
     /**
      * Sets the timesOff property value. The instances of times off in the schedule.
      * @param value Value to set for the timesOff property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimesOff(@jakarta.annotation.Nullable final java.util.List<TimeOff> value) {
         this.timesOff = value;
     }
     /**
      * Sets the timeZone property value. Indicates the time zone of the schedule team using tz database format. Required.
      * @param value Value to set for the timeZone property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeZone(@jakarta.annotation.Nullable final String value) {
         this.timeZone = value;
     }
     /**
      * Sets the workforceIntegrationIds property value. The workforceIntegrationIds property
      * @param value Value to set for the workforceIntegrationIds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkforceIntegrationIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.workforceIntegrationIds = value;
     }

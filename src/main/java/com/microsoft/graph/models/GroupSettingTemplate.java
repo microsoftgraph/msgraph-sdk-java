@@ -21,9 +21,7 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
     private java.util.List<SettingTemplateValue> values;
     /**
      * Instantiates a new groupSettingTemplate and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public GroupSettingTemplate() {
         super();
         this.setOdataType("#microsoft.graph.groupSettingTemplate");
@@ -77,9 +75,7 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
     /**
      * Sets the description property value. Description of the template.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Display name of the template. The template named Group.Unified can be used to configure tenant-wide Microsoft 365 group settings, while the template named Group.Unified.Guest can be used to configure group-specific settings.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the values property value. Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
      * @param value Value to set for the values property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValues(@jakarta.annotation.Nullable final java.util.List<SettingTemplateValue> value) {
         this.values = value;
     }

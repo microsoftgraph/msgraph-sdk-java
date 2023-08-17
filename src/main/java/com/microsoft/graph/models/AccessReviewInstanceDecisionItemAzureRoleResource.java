@@ -13,9 +13,7 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
     private AccessReviewInstanceDecisionItemResource scope;
     /**
      * Instantiates a new accessReviewInstanceDecisionItemAzureRoleResource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessReviewInstanceDecisionItemAzureRoleResource() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemAzureRoleResource");
@@ -51,9 +49,7 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
     /**
      * Sets the scope property value. Details of the scope this role is associated with.
      * @param value Value to set for the scope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScope(@jakarta.annotation.Nullable final AccessReviewInstanceDecisionItemResource value) {
         this.scope = value;
     }

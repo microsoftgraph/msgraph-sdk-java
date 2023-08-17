@@ -39,9 +39,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     private TermsOfUseContainer termsOfUse;
     /**
      * Instantiates a new identityGovernance and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IdentityGovernance() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -129,9 +127,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("accessReviews", this.getAccessReviews());
@@ -145,63 +141,49 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     /**
      * Sets the accessReviews property value. The accessReviews property
      * @param value Value to set for the accessReviews property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccessReviews(@jakarta.annotation.Nullable final AccessReviewSet value) {
         this.accessReviews = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the appConsent property value. The appConsent property
      * @param value Value to set for the appConsent property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppConsent(@jakarta.annotation.Nullable final AppConsentApprovalRoute value) {
         this.appConsent = value;
     }
     /**
      * Sets the entitlementManagement property value. The entitlementManagement property
      * @param value Value to set for the entitlementManagement property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEntitlementManagement(@jakarta.annotation.Nullable final EntitlementManagement value) {
         this.entitlementManagement = value;
     }
     /**
      * Sets the lifecycleWorkflows property value. The lifecycleWorkflows property
      * @param value Value to set for the lifecycleWorkflows property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLifecycleWorkflows(@jakarta.annotation.Nullable final LifecycleWorkflowsContainer value) {
         this.lifecycleWorkflows = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the termsOfUse property value. The termsOfUse property
      * @param value Value to set for the termsOfUse property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTermsOfUse(@jakarta.annotation.Nullable final TermsOfUseContainer value) {
         this.termsOfUse = value;
     }

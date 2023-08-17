@@ -30,9 +30,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
     private AuthenticationMethodTargetType targetType;
     /**
      * Instantiates a new authenticationMethodsRegistrationCampaignIncludeTarget and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AuthenticationMethodsRegistrationCampaignIncludeTarget() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
@@ -116,45 +112,35 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the id property value. The object identifier of an Azure Active Directory user or group.
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the targetedAuthenticationMethod property value. The authentication method that the user is prompted to register. The value must be microsoftAuthenticator.
      * @param value Value to set for the targetedAuthenticationMethod property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetedAuthenticationMethod(@jakarta.annotation.Nullable final String value) {
         this.targetedAuthenticationMethod = value;
     }
     /**
      * Sets the targetType property value. The targetType property
      * @param value Value to set for the targetType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetType(@jakarta.annotation.Nullable final AuthenticationMethodTargetType value) {
         this.targetType = value;
     }

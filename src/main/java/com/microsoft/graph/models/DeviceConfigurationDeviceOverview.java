@@ -38,9 +38,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
     private Integer successCount;
     /**
      * Instantiates a new deviceConfigurationDeviceOverview and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceConfigurationDeviceOverview() {
         super();
     }
@@ -129,9 +127,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,63 +142,49 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
     /**
      * Sets the configurationVersion property value. Version of the policy for that overview
      * @param value Value to set for the configurationVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConfigurationVersion(@jakarta.annotation.Nullable final Integer value) {
         this.configurationVersion = value;
     }
     /**
      * Sets the errorCount property value. Number of error devices
      * @param value Value to set for the errorCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setErrorCount(@jakarta.annotation.Nullable final Integer value) {
         this.errorCount = value;
     }
     /**
      * Sets the failedCount property value. Number of failed devices
      * @param value Value to set for the failedCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailedCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedCount = value;
     }
     /**
      * Sets the lastUpdateDateTime property value. Last update time
      * @param value Value to set for the lastUpdateDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdateDateTime = value;
     }
     /**
      * Sets the notApplicableCount property value. Number of not applicable devices
      * @param value Value to set for the notApplicableCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotApplicableCount(@jakarta.annotation.Nullable final Integer value) {
         this.notApplicableCount = value;
     }
     /**
      * Sets the pendingCount property value. Number of pending devices
      * @param value Value to set for the pendingCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPendingCount(@jakarta.annotation.Nullable final Integer value) {
         this.pendingCount = value;
     }
     /**
      * Sets the successCount property value. Number of succeeded devices
      * @param value Value to set for the successCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSuccessCount(@jakarta.annotation.Nullable final Integer value) {
         this.successCount = value;
     }

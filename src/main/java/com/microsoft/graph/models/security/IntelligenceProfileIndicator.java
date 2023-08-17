@@ -18,9 +18,7 @@ public class IntelligenceProfileIndicator extends Indicator implements Parsable 
     private OffsetDateTime lastSeenDateTime;
     /**
      * Instantiates a new intelligenceProfileIndicator and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IntelligenceProfileIndicator() {
         super();
         this.setOdataType("#microsoft.graph.security.intelligenceProfileIndicator");
@@ -65,9 +63,7 @@ public class IntelligenceProfileIndicator extends Indicator implements Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -77,18 +73,14 @@ public class IntelligenceProfileIndicator extends Indicator implements Parsable 
     /**
      * Sets the firstSeenDateTime property value. Designate when an artifact was first used actively in an attack, when a particular sample was compiled, or if neither of those could be ascertained when the file was first seen in public repositories (for example, VirusTotal, ANY.RUN, Hybrid Analysis) or reported publicly.
      * @param value Value to set for the firstSeenDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstSeenDateTime = value;
     }
     /**
      * Sets the lastSeenDateTime property value. Designate when an artifact was most recently used actively in an attack, when a particular sample was compiled, or if neither of those could be ascertained when the file was first seen in public repositories (for example, VirusTotal, ANY.RUN, Hybrid Analysis) or reported publicly.
      * @param value Value to set for the lastSeenDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSeenDateTime = value;
     }

@@ -28,9 +28,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
     private String productVersion;
     /**
      * Instantiates a new windowsMobileMSI and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsMobileMSI() {
         super();
         this.setOdataType("#microsoft.graph.windowsMobileMSI");
@@ -93,9 +91,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -107,36 +103,28 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
     /**
      * Sets the commandLine property value. The command line.
      * @param value Value to set for the commandLine property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCommandLine(@jakarta.annotation.Nullable final String value) {
         this.commandLine = value;
     }
     /**
      * Sets the ignoreVersionDetection property value. A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
      * @param value Value to set for the ignoreVersionDetection property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIgnoreVersionDetection(@jakarta.annotation.Nullable final Boolean value) {
         this.ignoreVersionDetection = value;
     }
     /**
      * Sets the productCode property value. The product code.
      * @param value Value to set for the productCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProductCode(@jakarta.annotation.Nullable final String value) {
         this.productCode = value;
     }
     /**
      * Sets the productVersion property value. The product version of Windows Mobile MSI Line of Business (LoB) app.
      * @param value Value to set for the productVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProductVersion(@jakarta.annotation.Nullable final String value) {
         this.productVersion = value;
     }

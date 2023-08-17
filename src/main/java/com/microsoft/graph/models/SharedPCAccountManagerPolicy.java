@@ -37,9 +37,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     private Integer removeAccountsBelowDiskFreePercentage;
     /**
      * Instantiates a new sharedPCAccountManagerPolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SharedPCAccountManagerPolicy() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -118,9 +116,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("accountDeletionPolicy", this.getAccountDeletionPolicy());
@@ -133,54 +129,42 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     /**
      * Sets the accountDeletionPolicy property value. Possible values for when accounts are deleted on a shared PC.
      * @param value Value to set for the accountDeletionPolicy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccountDeletionPolicy(@jakarta.annotation.Nullable final SharedPCAccountDeletionPolicyType value) {
         this.accountDeletionPolicy = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the cacheAccountsAboveDiskFreePercentage property value. Sets the percentage of available disk space a PC should have before it stops deleting cached shared PC accounts. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
      * @param value Value to set for the cacheAccountsAboveDiskFreePercentage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCacheAccountsAboveDiskFreePercentage(@jakarta.annotation.Nullable final Integer value) {
         this.cacheAccountsAboveDiskFreePercentage = value;
     }
     /**
      * Sets the inactiveThresholdDays property value. Specifies when the accounts will start being deleted when they have not been logged on during the specified period, given as number of days. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold.
      * @param value Value to set for the inactiveThresholdDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInactiveThresholdDays(@jakarta.annotation.Nullable final Integer value) {
         this.inactiveThresholdDays = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the removeAccountsBelowDiskFreePercentage property value. Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
      * @param value Value to set for the removeAccountsBelowDiskFreePercentage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRemoveAccountsBelowDiskFreePercentage(@jakarta.annotation.Nullable final Integer value) {
         this.removeAccountsBelowDiskFreePercentage = value;
     }

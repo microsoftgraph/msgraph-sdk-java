@@ -42,9 +42,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
     private Integer totalUsers;
     /**
      * Instantiates a new runSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RunSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +139,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("failedRuns", this.getFailedRuns());
@@ -158,72 +154,56 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the failedRuns property value. The number of failed workflow runs.
      * @param value Value to set for the failedRuns property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailedRuns(@jakarta.annotation.Nullable final Integer value) {
         this.failedRuns = value;
     }
     /**
      * Sets the failedTasks property value. The number of failed tasks of a workflow.
      * @param value Value to set for the failedTasks property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailedTasks(@jakarta.annotation.Nullable final Integer value) {
         this.failedTasks = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the successfulRuns property value. The number of successful workflow runs.
      * @param value Value to set for the successfulRuns property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSuccessfulRuns(@jakarta.annotation.Nullable final Integer value) {
         this.successfulRuns = value;
     }
     /**
      * Sets the totalRuns property value. The total number of runs for a workflow.
      * @param value Value to set for the totalRuns property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalRuns(@jakarta.annotation.Nullable final Integer value) {
         this.totalRuns = value;
     }
     /**
      * Sets the totalTasks property value. The total number of tasks processed by a workflow.
      * @param value Value to set for the totalTasks property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalTasks(@jakarta.annotation.Nullable final Integer value) {
         this.totalTasks = value;
     }
     /**
      * Sets the totalUsers property value. The total number of users processed by a workflow.
      * @param value Value to set for the totalUsers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalUsers(@jakarta.annotation.Nullable final Integer value) {
         this.totalUsers = value;
     }

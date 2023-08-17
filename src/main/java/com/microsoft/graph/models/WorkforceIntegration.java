@@ -33,9 +33,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
     private String url;
     /**
      * Instantiates a new workforceIntegration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkforceIntegration() {
         super();
         this.setOdataType("#microsoft.graph.workforceIntegration");
@@ -116,9 +114,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -132,54 +128,42 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
     /**
      * Sets the apiVersion property value. API version for the call back URL. Start with 1.
      * @param value Value to set for the apiVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApiVersion(@jakarta.annotation.Nullable final Integer value) {
         this.apiVersion = value;
     }
     /**
      * Sets the displayName property value. Name of the workforce integration.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the encryption property value. The workforce integration encryption resource.
      * @param value Value to set for the encryption property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEncryption(@jakarta.annotation.Nullable final WorkforceIntegrationEncryption value) {
         this.encryption = value;
     }
     /**
      * Sets the isActive property value. Indicates whether this workforce integration is currently active and available.
      * @param value Value to set for the isActive property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
         this.isActive = value;
     }
     /**
      * Sets the supportedEntities property value. The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, userShiftPreferences, openshift, openShiftRequest, offerShiftRequest, unknownFutureValue.
      * @param value Value to set for the supportedEntities property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSupportedEntities(@jakarta.annotation.Nullable final WorkforceIntegrationSupportedEntities value) {
         this.supportedEntities = value;
     }
     /**
      * Sets the url property value. Workforce Integration URL for callbacks from the Shifts service.
      * @param value Value to set for the url property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUrl(@jakarta.annotation.Nullable final String value) {
         this.url = value;
     }

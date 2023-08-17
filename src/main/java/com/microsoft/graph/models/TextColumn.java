@@ -38,9 +38,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     private String textType;
     /**
      * Instantiates a new textColumn and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TextColumn() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +126,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowMultipleLines", this.getAllowMultipleLines());
@@ -144,63 +140,49 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowMultipleLines property value. Whether to allow multiple lines of text.
      * @param value Value to set for the allowMultipleLines property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowMultipleLines(@jakarta.annotation.Nullable final Boolean value) {
         this.allowMultipleLines = value;
     }
     /**
      * Sets the appendChangesToExistingText property value. Whether updates to this column should replace existing text, or append to it.
      * @param value Value to set for the appendChangesToExistingText property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppendChangesToExistingText(@jakarta.annotation.Nullable final Boolean value) {
         this.appendChangesToExistingText = value;
     }
     /**
      * Sets the linesForEditing property value. The size of the text box.
      * @param value Value to set for the linesForEditing property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLinesForEditing(@jakarta.annotation.Nullable final Integer value) {
         this.linesForEditing = value;
     }
     /**
      * Sets the maxLength property value. The maximum number of characters for the value.
      * @param value Value to set for the maxLength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaxLength(@jakarta.annotation.Nullable final Integer value) {
         this.maxLength = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the textType property value. The type of text being stored. Must be one of plain or richText
      * @param value Value to set for the textType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTextType(@jakarta.annotation.Nullable final String value) {
         this.textType = value;
     }

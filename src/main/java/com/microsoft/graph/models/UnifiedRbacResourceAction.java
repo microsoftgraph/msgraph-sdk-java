@@ -33,9 +33,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     private String resourceScopeId;
     /**
      * Instantiates a new unifiedRbacResourceAction and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRbacResourceAction() {
         super();
     }
@@ -115,9 +113,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -131,54 +127,42 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     /**
      * Sets the actionVerb property value. The actionVerb property
      * @param value Value to set for the actionVerb property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActionVerb(@jakarta.annotation.Nullable final String value) {
         this.actionVerb = value;
     }
     /**
      * Sets the authenticationContextId property value. The authenticationContextId property
      * @param value Value to set for the authenticationContextId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthenticationContextId(@jakarta.annotation.Nullable final String value) {
         this.authenticationContextId = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the isAuthenticationContextSettable property value. The isAuthenticationContextSettable property
      * @param value Value to set for the isAuthenticationContextSettable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAuthenticationContextSettable(@jakarta.annotation.Nullable final Boolean value) {
         this.isAuthenticationContextSettable = value;
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the resourceScopeId property value. The resourceScopeId property
      * @param value Value to set for the resourceScopeId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceScopeId(@jakarta.annotation.Nullable final String value) {
         this.resourceScopeId = value;
     }

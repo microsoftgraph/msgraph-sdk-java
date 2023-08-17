@@ -34,9 +34,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
     private String target;
     /**
      * Instantiates a new onenotePatchContentCommand and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OnenotePatchContentCommand() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("action", this.getAction());
@@ -130,54 +126,42 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
     /**
      * Sets the action property value. The action property
      * @param value Value to set for the action property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAction(@jakarta.annotation.Nullable final OnenotePatchActionType value) {
         this.action = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the content property value. A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContent(@jakarta.annotation.Nullable final String value) {
         this.content = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
      * @param value Value to set for the position property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPosition(@jakarta.annotation.Nullable final OnenotePatchInsertPosition value) {
         this.position = value;
     }
     /**
      * Sets the target property value. The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
      * @param value Value to set for the target property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTarget(@jakarta.annotation.Nullable final String value) {
         this.target = value;
     }

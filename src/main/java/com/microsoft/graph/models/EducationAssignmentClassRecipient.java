@@ -9,9 +9,7 @@ import java.util.Objects;
 public class EducationAssignmentClassRecipient extends EducationAssignmentRecipient implements Parsable {
     /**
      * Instantiates a new educationAssignmentClassRecipient and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationAssignmentClassRecipient() {
         super();
         this.setOdataType("#microsoft.graph.educationAssignmentClassRecipient");
@@ -38,9 +36,7 @@ public class EducationAssignmentClassRecipient extends EducationAssignmentRecipi
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

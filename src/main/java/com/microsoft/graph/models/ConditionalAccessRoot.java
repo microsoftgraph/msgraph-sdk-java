@@ -29,9 +29,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     private java.util.List<ConditionalAccessTemplate> templates;
     /**
      * Instantiates a new conditionalAccessRoot and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConditionalAccessRoot() {
         super();
     }
@@ -102,9 +100,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -117,45 +113,35 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     /**
      * Sets the authenticationContextClassReferences property value. Read-only. Nullable. Returns a collection of the specified authentication context class references.
      * @param value Value to set for the authenticationContextClassReferences property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthenticationContextClassReferences(@jakarta.annotation.Nullable final java.util.List<AuthenticationContextClassReference> value) {
         this.authenticationContextClassReferences = value;
     }
     /**
      * Sets the authenticationStrength property value. The authenticationStrength property
      * @param value Value to set for the authenticationStrength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthenticationStrength(@jakarta.annotation.Nullable final AuthenticationStrengthRoot value) {
         this.authenticationStrength = value;
     }
     /**
      * Sets the namedLocations property value. Read-only. Nullable. Returns a collection of the specified named locations.
      * @param value Value to set for the namedLocations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNamedLocations(@jakarta.annotation.Nullable final java.util.List<NamedLocation> value) {
         this.namedLocations = value;
     }
     /**
      * Sets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @param value Value to set for the policies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPolicies(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
         this.policies = value;
     }
     /**
      * Sets the templates property value. Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
      * @param value Value to set for the templates property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTemplates(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessTemplate> value) {
         this.templates = value;
     }

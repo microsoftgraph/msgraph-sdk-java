@@ -35,9 +35,7 @@ public class Segment extends Entity implements Parsable {
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new segment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Segment() {
         super();
     }
@@ -117,9 +115,7 @@ public class Segment extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -133,54 +129,42 @@ public class Segment extends Entity implements Parsable {
     /**
      * Sets the callee property value. Endpoint that answered this segment.
      * @param value Value to set for the callee property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallee(@jakarta.annotation.Nullable final Endpoint value) {
         this.callee = value;
     }
     /**
      * Sets the caller property value. Endpoint that initiated this segment.
      * @param value Value to set for the caller property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCaller(@jakarta.annotation.Nullable final Endpoint value) {
         this.caller = value;
     }
     /**
      * Sets the endDateTime property value. UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
      * Sets the failureInfo property value. Failure information associated with the segment if it failed.
      * @param value Value to set for the failureInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailureInfo(@jakarta.annotation.Nullable final FailureInfo value) {
         this.failureInfo = value;
     }
     /**
      * Sets the media property value. Media associated with this segment.
      * @param value Value to set for the media property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMedia(@jakarta.annotation.Nullable final java.util.List<Media> value) {
         this.media = value;
     }
     /**
      * Sets the startDateTime property value. UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }

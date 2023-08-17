@@ -35,9 +35,7 @@ public class DbPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json salvage;
     /**
      * Instantiates a new dbPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DbPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -116,9 +114,7 @@ public class DbPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("cost", this.getCost());
@@ -131,54 +127,42 @@ public class DbPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the cost property value. The cost property
      * @param value Value to set for the cost property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCost(@jakarta.annotation.Nullable final Json value) {
         this.cost = value;
     }
     /**
      * Sets the life property value. The life property
      * @param value Value to set for the life property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLife(@jakarta.annotation.Nullable final Json value) {
         this.life = value;
     }
     /**
      * Sets the month property value. The month property
      * @param value Value to set for the month property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMonth(@jakarta.annotation.Nullable final Json value) {
         this.month = value;
     }
     /**
      * Sets the period property value. The period property
      * @param value Value to set for the period property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPeriod(@jakarta.annotation.Nullable final Json value) {
         this.period = value;
     }
     /**
      * Sets the salvage property value. The salvage property
      * @param value Value to set for the salvage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSalvage(@jakarta.annotation.Nullable final Json value) {
         this.salvage = value;
     }

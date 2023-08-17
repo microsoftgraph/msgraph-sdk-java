@@ -50,9 +50,7 @@ public class Location implements AdditionalDataHolder, Parsable {
     private LocationUniqueIdType uniqueIdType;
     /**
      * Instantiates a new location and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Location() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -174,9 +172,7 @@ public class Location implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("address", this.getAddress());
@@ -193,90 +189,70 @@ public class Location implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the address property value. The street address of the location.
      * @param value Value to set for the address property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.address = value;
     }
     /**
      * Sets the coordinates property value. The geographic coordinates and elevation of the location.
      * @param value Value to set for the coordinates property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCoordinates(@jakarta.annotation.Nullable final OutlookGeoCoordinates value) {
         this.coordinates = value;
     }
     /**
      * Sets the displayName property value. The name associated with the location.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the locationEmailAddress property value. Optional email address of the location.
      * @param value Value to set for the locationEmailAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocationEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.locationEmailAddress = value;
     }
     /**
      * Sets the locationType property value. The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
      * @param value Value to set for the locationType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocationType(@jakarta.annotation.Nullable final LocationType value) {
         this.locationType = value;
     }
     /**
      * Sets the locationUri property value. Optional URI representing the location.
      * @param value Value to set for the locationUri property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocationUri(@jakarta.annotation.Nullable final String value) {
         this.locationUri = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the uniqueId property value. For internal use only.
      * @param value Value to set for the uniqueId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUniqueId(@jakarta.annotation.Nullable final String value) {
         this.uniqueId = value;
     }
     /**
      * Sets the uniqueIdType property value. For internal use only.
      * @param value Value to set for the uniqueIdType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUniqueIdType(@jakarta.annotation.Nullable final LocationUniqueIdType value) {
         this.uniqueIdType = value;
     }

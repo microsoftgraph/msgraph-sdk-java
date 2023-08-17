@@ -17,9 +17,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     private AuthenticationMethodState state;
     /**
      * Instantiates a new authenticationMethodConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AuthenticationMethodConfiguration() {
         super();
     }
@@ -77,9 +75,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,18 +85,14 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     /**
      * Sets the excludeTargets property value. Groups of users that are excluded from a policy.
      * @param value Value to set for the excludeTargets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExcludeTargets(@jakarta.annotation.Nullable final java.util.List<ExcludeTarget> value) {
         this.excludeTargets = value;
     }
     /**
      * Sets the state property value. The state of the policy. Possible values are: enabled, disabled.
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final AuthenticationMethodState value) {
         this.state = value;
     }

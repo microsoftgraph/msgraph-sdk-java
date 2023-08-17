@@ -19,9 +19,7 @@ public class RowsPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json array;
     /**
      * Instantiates a new rowsPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RowsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,9 +62,7 @@ public class RowsPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("array", this.getArray());
@@ -75,18 +71,14 @@ public class RowsPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the array property value. The array property
      * @param value Value to set for the array property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setArray(@jakarta.annotation.Nullable final Json value) {
         this.array = value;
     }

@@ -817,9 +817,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean wirelessDisplayRequirePinForPairing;
     /**
      * Instantiates a new windows10GeneralConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Windows10GeneralConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10GeneralConfiguration");
@@ -2655,9 +2653,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -2866,1809 +2862,1407 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     /**
      * Sets the accountsBlockAddingNonMicrosoftAccountEmail property value. Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
      * @param value Value to set for the accountsBlockAddingNonMicrosoftAccountEmail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccountsBlockAddingNonMicrosoftAccountEmail(@jakarta.annotation.Nullable final Boolean value) {
         this.accountsBlockAddingNonMicrosoftAccountEmail = value;
     }
     /**
      * Sets the antiTheftModeBlocked property value. Indicates whether or not to block the user from selecting an AntiTheft mode preference (Windows 10 Mobile only).
      * @param value Value to set for the antiTheftModeBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAntiTheftModeBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.antiTheftModeBlocked = value;
     }
     /**
      * Sets the appsAllowTrustedAppsSideloading property value. State Management Setting.
      * @param value Value to set for the appsAllowTrustedAppsSideloading property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppsAllowTrustedAppsSideloading(@jakarta.annotation.Nullable final StateManagementSetting value) {
         this.appsAllowTrustedAppsSideloading = value;
     }
     /**
      * Sets the appsBlockWindowsStoreOriginatedApps property value. Indicates whether or not to disable the launch of all apps from Windows Store that came pre-installed or were downloaded.
      * @param value Value to set for the appsBlockWindowsStoreOriginatedApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppsBlockWindowsStoreOriginatedApps(@jakarta.annotation.Nullable final Boolean value) {
         this.appsBlockWindowsStoreOriginatedApps = value;
     }
     /**
      * Sets the bluetoothAllowedServices property value. Specify a list of allowed Bluetooth services and profiles in hex formatted strings.
      * @param value Value to set for the bluetoothAllowedServices property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBluetoothAllowedServices(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.bluetoothAllowedServices = value;
     }
     /**
      * Sets the bluetoothBlockAdvertising property value. Whether or not to Block the user from using bluetooth advertising.
      * @param value Value to set for the bluetoothBlockAdvertising property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBluetoothBlockAdvertising(@jakarta.annotation.Nullable final Boolean value) {
         this.bluetoothBlockAdvertising = value;
     }
     /**
      * Sets the bluetoothBlockDiscoverableMode property value. Whether or not to Block the user from using bluetooth discoverable mode.
      * @param value Value to set for the bluetoothBlockDiscoverableMode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBluetoothBlockDiscoverableMode(@jakarta.annotation.Nullable final Boolean value) {
         this.bluetoothBlockDiscoverableMode = value;
     }
     /**
      * Sets the bluetoothBlocked property value. Whether or not to Block the user from using bluetooth.
      * @param value Value to set for the bluetoothBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBluetoothBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.bluetoothBlocked = value;
     }
     /**
      * Sets the bluetoothBlockPrePairing property value. Whether or not to block specific bundled Bluetooth peripherals to automatically pair with the host device.
      * @param value Value to set for the bluetoothBlockPrePairing property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBluetoothBlockPrePairing(@jakarta.annotation.Nullable final Boolean value) {
         this.bluetoothBlockPrePairing = value;
     }
     /**
      * Sets the cameraBlocked property value. Whether or not to Block the user from accessing the camera of the device.
      * @param value Value to set for the cameraBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCameraBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.cameraBlocked = value;
     }
     /**
      * Sets the cellularBlockDataWhenRoaming property value. Whether or not to Block the user from using data over cellular while roaming.
      * @param value Value to set for the cellularBlockDataWhenRoaming property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCellularBlockDataWhenRoaming(@jakarta.annotation.Nullable final Boolean value) {
         this.cellularBlockDataWhenRoaming = value;
     }
     /**
      * Sets the cellularBlockVpn property value. Whether or not to Block the user from using VPN over cellular.
      * @param value Value to set for the cellularBlockVpn property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCellularBlockVpn(@jakarta.annotation.Nullable final Boolean value) {
         this.cellularBlockVpn = value;
     }
     /**
      * Sets the cellularBlockVpnWhenRoaming property value. Whether or not to Block the user from using VPN when roaming over cellular.
      * @param value Value to set for the cellularBlockVpnWhenRoaming property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCellularBlockVpnWhenRoaming(@jakarta.annotation.Nullable final Boolean value) {
         this.cellularBlockVpnWhenRoaming = value;
     }
     /**
      * Sets the certificatesBlockManualRootCertificateInstallation property value. Whether or not to Block the user from doing manual root certificate installation.
      * @param value Value to set for the certificatesBlockManualRootCertificateInstallation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificatesBlockManualRootCertificateInstallation(@jakarta.annotation.Nullable final Boolean value) {
         this.certificatesBlockManualRootCertificateInstallation = value;
     }
     /**
      * Sets the connectedDevicesServiceBlocked property value. Whether or not to block Connected Devices Service which enables discovery and connection to other devices, remote messaging, remote app sessions and other cross-device experiences.
      * @param value Value to set for the connectedDevicesServiceBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConnectedDevicesServiceBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.connectedDevicesServiceBlocked = value;
     }
     /**
      * Sets the copyPasteBlocked property value. Whether or not to Block the user from using copy paste.
      * @param value Value to set for the copyPasteBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCopyPasteBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.copyPasteBlocked = value;
     }
     /**
      * Sets the cortanaBlocked property value. Whether or not to Block the user from using Cortana.
      * @param value Value to set for the cortanaBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCortanaBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.cortanaBlocked = value;
     }
     /**
      * Sets the defenderBlockEndUserAccess property value. Whether or not to block end user access to Defender.
      * @param value Value to set for the defenderBlockEndUserAccess property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderBlockEndUserAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.defenderBlockEndUserAccess = value;
     }
     /**
      * Sets the defenderCloudBlockLevel property value. Possible values of Cloud Block Level
      * @param value Value to set for the defenderCloudBlockLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderCloudBlockLevel(@jakarta.annotation.Nullable final DefenderCloudBlockLevelType value) {
         this.defenderCloudBlockLevel = value;
     }
     /**
      * Sets the defenderDaysBeforeDeletingQuarantinedMalware property value. Number of days before deleting quarantined malware. Valid values 0 to 90
      * @param value Value to set for the defenderDaysBeforeDeletingQuarantinedMalware property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderDaysBeforeDeletingQuarantinedMalware(@jakarta.annotation.Nullable final Integer value) {
         this.defenderDaysBeforeDeletingQuarantinedMalware = value;
     }
     /**
      * Sets the defenderDetectedMalwareActions property value. Gets or sets Defenders actions to take on detected Malware per threat level.
      * @param value Value to set for the defenderDetectedMalwareActions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderDetectedMalwareActions(@jakarta.annotation.Nullable final DefenderDetectedMalwareActions value) {
         this.defenderDetectedMalwareActions = value;
     }
     /**
      * Sets the defenderFileExtensionsToExclude property value. File extensions to exclude from scans and real time protection.
      * @param value Value to set for the defenderFileExtensionsToExclude property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderFileExtensionsToExclude(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.defenderFileExtensionsToExclude = value;
     }
     /**
      * Sets the defenderFilesAndFoldersToExclude property value. Files and folder to exclude from scans and real time protection.
      * @param value Value to set for the defenderFilesAndFoldersToExclude property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderFilesAndFoldersToExclude(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.defenderFilesAndFoldersToExclude = value;
     }
     /**
      * Sets the defenderMonitorFileActivity property value. Possible values for monitoring file activity.
      * @param value Value to set for the defenderMonitorFileActivity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderMonitorFileActivity(@jakarta.annotation.Nullable final DefenderMonitorFileActivity value) {
         this.defenderMonitorFileActivity = value;
     }
     /**
      * Sets the defenderProcessesToExclude property value. Processes to exclude from scans and real time protection.
      * @param value Value to set for the defenderProcessesToExclude property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderProcessesToExclude(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.defenderProcessesToExclude = value;
     }
     /**
      * Sets the defenderPromptForSampleSubmission property value. Possible values for prompting user for samples submission.
      * @param value Value to set for the defenderPromptForSampleSubmission property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderPromptForSampleSubmission(@jakarta.annotation.Nullable final DefenderPromptForSampleSubmission value) {
         this.defenderPromptForSampleSubmission = value;
     }
     /**
      * Sets the defenderRequireBehaviorMonitoring property value. Indicates whether or not to require behavior monitoring.
      * @param value Value to set for the defenderRequireBehaviorMonitoring property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderRequireBehaviorMonitoring(@jakarta.annotation.Nullable final Boolean value) {
         this.defenderRequireBehaviorMonitoring = value;
     }
     /**
      * Sets the defenderRequireCloudProtection property value. Indicates whether or not to require cloud protection.
      * @param value Value to set for the defenderRequireCloudProtection property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderRequireCloudProtection(@jakarta.annotation.Nullable final Boolean value) {
         this.defenderRequireCloudProtection = value;
     }
     /**
      * Sets the defenderRequireNetworkInspectionSystem property value. Indicates whether or not to require network inspection system.
      * @param value Value to set for the defenderRequireNetworkInspectionSystem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderRequireNetworkInspectionSystem(@jakarta.annotation.Nullable final Boolean value) {
         this.defenderRequireNetworkInspectionSystem = value;
     }
     /**
      * Sets the defenderRequireRealTimeMonitoring property value. Indicates whether or not to require real time monitoring.
      * @param value Value to set for the defenderRequireRealTimeMonitoring property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderRequireRealTimeMonitoring(@jakarta.annotation.Nullable final Boolean value) {
         this.defenderRequireRealTimeMonitoring = value;
     }
     /**
      * Sets the defenderScanArchiveFiles property value. Indicates whether or not to scan archive files.
      * @param value Value to set for the defenderScanArchiveFiles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderScanArchiveFiles(@jakarta.annotation.Nullable final Boolean value) {
         this.defenderScanArchiveFiles = value;
     }
     /**
      * Sets the defenderScanDownloads property value. Indicates whether or not to scan downloads.
      * @param value Value to set for the defenderScanDownloads property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderScanDownloads(@jakarta.annotation.Nullable final Boolean value) {
         this.defenderScanDownloads = value;
     }
     /**
      * Sets the defenderScanIncomingMail property value. Indicates whether or not to scan incoming mail messages.
      * @param value Value to set for the defenderScanIncomingMail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderScanIncomingMail(@jakarta.annotation.Nullable final Boolean value) {
         this.defenderScanIncomingMail = value;
     }
     /**
      * Sets the defenderScanMappedNetworkDrivesDuringFullScan property value. Indicates whether or not to scan mapped network drives during full scan.
      * @param value Value to set for the defenderScanMappedNetworkDrivesDuringFullScan property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderScanMappedNetworkDrivesDuringFullScan(@jakarta.annotation.Nullable final Boolean value) {
         this.defenderScanMappedNetworkDrivesDuringFullScan = value;
     }
     /**
      * Sets the defenderScanMaxCpu property value. Max CPU usage percentage during scan. Valid values 0 to 100
      * @param value Value to set for the defenderScanMaxCpu property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderScanMaxCpu(@jakarta.annotation.Nullable final Integer value) {
         this.defenderScanMaxCpu = value;
     }
     /**
      * Sets the defenderScanNetworkFiles property value. Indicates whether or not to scan files opened from a network folder.
      * @param value Value to set for the defenderScanNetworkFiles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderScanNetworkFiles(@jakarta.annotation.Nullable final Boolean value) {
         this.defenderScanNetworkFiles = value;
     }
     /**
      * Sets the defenderScanRemovableDrivesDuringFullScan property value. Indicates whether or not to scan removable drives during full scan.
      * @param value Value to set for the defenderScanRemovableDrivesDuringFullScan property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderScanRemovableDrivesDuringFullScan(@jakarta.annotation.Nullable final Boolean value) {
         this.defenderScanRemovableDrivesDuringFullScan = value;
     }
     /**
      * Sets the defenderScanScriptsLoadedInInternetExplorer property value. Indicates whether or not to scan scripts loaded in Internet Explorer browser.
      * @param value Value to set for the defenderScanScriptsLoadedInInternetExplorer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderScanScriptsLoadedInInternetExplorer(@jakarta.annotation.Nullable final Boolean value) {
         this.defenderScanScriptsLoadedInInternetExplorer = value;
     }
     /**
      * Sets the defenderScanType property value. Possible values for system scan type.
      * @param value Value to set for the defenderScanType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderScanType(@jakarta.annotation.Nullable final DefenderScanType value) {
         this.defenderScanType = value;
     }
     /**
      * Sets the defenderScheduledQuickScanTime property value. The time to perform a daily quick scan.
      * @param value Value to set for the defenderScheduledQuickScanTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderScheduledQuickScanTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.defenderScheduledQuickScanTime = value;
     }
     /**
      * Sets the defenderScheduledScanTime property value. The defender time for the system scan.
      * @param value Value to set for the defenderScheduledScanTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderScheduledScanTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.defenderScheduledScanTime = value;
     }
     /**
      * Sets the defenderSignatureUpdateIntervalInHours property value. The signature update interval in hours. Specify 0 not to check. Valid values 0 to 24
      * @param value Value to set for the defenderSignatureUpdateIntervalInHours property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderSignatureUpdateIntervalInHours(@jakarta.annotation.Nullable final Integer value) {
         this.defenderSignatureUpdateIntervalInHours = value;
     }
     /**
      * Sets the defenderSystemScanSchedule property value. Possible values for a weekly schedule.
      * @param value Value to set for the defenderSystemScanSchedule property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderSystemScanSchedule(@jakarta.annotation.Nullable final WeeklySchedule value) {
         this.defenderSystemScanSchedule = value;
     }
     /**
      * Sets the developerUnlockSetting property value. State Management Setting.
      * @param value Value to set for the developerUnlockSetting property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeveloperUnlockSetting(@jakarta.annotation.Nullable final StateManagementSetting value) {
         this.developerUnlockSetting = value;
     }
     /**
      * Sets the deviceManagementBlockFactoryResetOnMobile property value. Indicates whether or not to Block the user from resetting their phone.
      * @param value Value to set for the deviceManagementBlockFactoryResetOnMobile property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceManagementBlockFactoryResetOnMobile(@jakarta.annotation.Nullable final Boolean value) {
         this.deviceManagementBlockFactoryResetOnMobile = value;
     }
     /**
      * Sets the deviceManagementBlockManualUnenroll property value. Indicates whether or not to Block the user from doing manual un-enrollment from device management.
      * @param value Value to set for the deviceManagementBlockManualUnenroll property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceManagementBlockManualUnenroll(@jakarta.annotation.Nullable final Boolean value) {
         this.deviceManagementBlockManualUnenroll = value;
     }
     /**
      * Sets the diagnosticsDataSubmissionMode property value. Allow the device to send diagnostic and usage telemetry data, such as Watson.
      * @param value Value to set for the diagnosticsDataSubmissionMode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDiagnosticsDataSubmissionMode(@jakarta.annotation.Nullable final DiagnosticDataSubmissionMode value) {
         this.diagnosticsDataSubmissionMode = value;
     }
     /**
      * Sets the edgeAllowStartPagesModification property value. Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge.
      * @param value Value to set for the edgeAllowStartPagesModification property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeAllowStartPagesModification(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeAllowStartPagesModification = value;
     }
     /**
      * Sets the edgeBlockAccessToAboutFlags property value. Indicates whether or not to prevent access to about flags on Edge browser.
      * @param value Value to set for the edgeBlockAccessToAboutFlags property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeBlockAccessToAboutFlags(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeBlockAccessToAboutFlags = value;
     }
     /**
      * Sets the edgeBlockAddressBarDropdown property value. Block the address bar dropdown functionality in Microsoft Edge. Disable this settings to minimize network connections from Microsoft Edge to Microsoft services.
      * @param value Value to set for the edgeBlockAddressBarDropdown property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeBlockAddressBarDropdown(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeBlockAddressBarDropdown = value;
     }
     /**
      * Sets the edgeBlockAutofill property value. Indicates whether or not to block auto fill.
      * @param value Value to set for the edgeBlockAutofill property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeBlockAutofill(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeBlockAutofill = value;
     }
     /**
      * Sets the edgeBlockCompatibilityList property value. Block Microsoft compatibility list in Microsoft Edge. This list from Microsoft helps Edge properly display sites with known compatibility issues.
      * @param value Value to set for the edgeBlockCompatibilityList property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeBlockCompatibilityList(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeBlockCompatibilityList = value;
     }
     /**
      * Sets the edgeBlockDeveloperTools property value. Indicates whether or not to block developer tools in the Edge browser.
      * @param value Value to set for the edgeBlockDeveloperTools property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeBlockDeveloperTools(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeBlockDeveloperTools = value;
     }
     /**
      * Sets the edgeBlocked property value. Indicates whether or not to Block the user from using the Edge browser.
      * @param value Value to set for the edgeBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeBlocked = value;
     }
     /**
      * Sets the edgeBlockExtensions property value. Indicates whether or not to block extensions in the Edge browser.
      * @param value Value to set for the edgeBlockExtensions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeBlockExtensions(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeBlockExtensions = value;
     }
     /**
      * Sets the edgeBlockInPrivateBrowsing property value. Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser.
      * @param value Value to set for the edgeBlockInPrivateBrowsing property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeBlockInPrivateBrowsing(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeBlockInPrivateBrowsing = value;
     }
     /**
      * Sets the edgeBlockJavaScript property value. Indicates whether or not to Block the user from using JavaScript.
      * @param value Value to set for the edgeBlockJavaScript property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeBlockJavaScript(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeBlockJavaScript = value;
     }
     /**
      * Sets the edgeBlockLiveTileDataCollection property value. Block the collection of information by Microsoft for live tile creation when users pin a site to Start from Microsoft Edge.
      * @param value Value to set for the edgeBlockLiveTileDataCollection property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeBlockLiveTileDataCollection(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeBlockLiveTileDataCollection = value;
     }
     /**
      * Sets the edgeBlockPasswordManager property value. Indicates whether or not to Block password manager.
      * @param value Value to set for the edgeBlockPasswordManager property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeBlockPasswordManager(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeBlockPasswordManager = value;
     }
     /**
      * Sets the edgeBlockPopups property value. Indicates whether or not to block popups.
      * @param value Value to set for the edgeBlockPopups property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeBlockPopups(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeBlockPopups = value;
     }
     /**
      * Sets the edgeBlockSearchSuggestions property value. Indicates whether or not to block the user from using the search suggestions in the address bar.
      * @param value Value to set for the edgeBlockSearchSuggestions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeBlockSearchSuggestions(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeBlockSearchSuggestions = value;
     }
     /**
      * Sets the edgeBlockSendingDoNotTrackHeader property value. Indicates whether or not to Block the user from sending the do not track header.
      * @param value Value to set for the edgeBlockSendingDoNotTrackHeader property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeBlockSendingDoNotTrackHeader(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeBlockSendingDoNotTrackHeader = value;
     }
     /**
      * Sets the edgeBlockSendingIntranetTrafficToInternetExplorer property value. Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer. Note: the name of this property is misleading; the property is obsolete, use EdgeSendIntranetTrafficToInternetExplorer instead.
      * @param value Value to set for the edgeBlockSendingIntranetTrafficToInternetExplorer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeBlockSendingIntranetTrafficToInternetExplorer(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeBlockSendingIntranetTrafficToInternetExplorer = value;
     }
     /**
      * Sets the edgeClearBrowsingDataOnExit property value. Clear browsing data on exiting Microsoft Edge.
      * @param value Value to set for the edgeClearBrowsingDataOnExit property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeClearBrowsingDataOnExit(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeClearBrowsingDataOnExit = value;
     }
     /**
      * Sets the edgeCookiePolicy property value. Possible values to specify which cookies are allowed in Microsoft Edge.
      * @param value Value to set for the edgeCookiePolicy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeCookiePolicy(@jakarta.annotation.Nullable final EdgeCookiePolicy value) {
         this.edgeCookiePolicy = value;
     }
     /**
      * Sets the edgeDisableFirstRunPage property value. Block the Microsoft web page that opens on the first use of Microsoft Edge. This policy allows enterprises, like those enrolled in zero emissions configurations, to block this page.
      * @param value Value to set for the edgeDisableFirstRunPage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeDisableFirstRunPage(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeDisableFirstRunPage = value;
     }
     /**
      * Sets the edgeEnterpriseModeSiteListLocation property value. Indicates the enterprise mode site list location. Could be a local file, local network or http location.
      * @param value Value to set for the edgeEnterpriseModeSiteListLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeEnterpriseModeSiteListLocation(@jakarta.annotation.Nullable final String value) {
         this.edgeEnterpriseModeSiteListLocation = value;
     }
     /**
      * Sets the edgeFirstRunUrl property value. The first run URL for when Edge browser is opened for the first time.
      * @param value Value to set for the edgeFirstRunUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeFirstRunUrl(@jakarta.annotation.Nullable final String value) {
         this.edgeFirstRunUrl = value;
     }
     /**
      * Sets the edgeHomepageUrls property value. The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.
      * @param value Value to set for the edgeHomepageUrls property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeHomepageUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.edgeHomepageUrls = value;
     }
     /**
      * Sets the edgeRequireSmartScreen property value. Indicates whether or not to Require the user to use the smart screen filter.
      * @param value Value to set for the edgeRequireSmartScreen property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeRequireSmartScreen(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeRequireSmartScreen = value;
     }
     /**
      * Sets the edgeSearchEngine property value. Allows IT admins to set a default search engine for MDM-Controlled devices. Users can override this and change their default search engine provided the AllowSearchEngineCustomization policy is not set.
      * @param value Value to set for the edgeSearchEngine property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeSearchEngine(@jakarta.annotation.Nullable final EdgeSearchEngineBase value) {
         this.edgeSearchEngine = value;
     }
     /**
      * Sets the edgeSendIntranetTrafficToInternetExplorer property value. Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer.
      * @param value Value to set for the edgeSendIntranetTrafficToInternetExplorer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeSendIntranetTrafficToInternetExplorer(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeSendIntranetTrafficToInternetExplorer = value;
     }
     /**
      * Sets the edgeSyncFavoritesWithInternetExplorer property value. Enable favorites sync between Internet Explorer and Microsoft Edge. Additions, deletions, modifications and order changes to favorites are shared between browsers.
      * @param value Value to set for the edgeSyncFavoritesWithInternetExplorer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdgeSyncFavoritesWithInternetExplorer(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeSyncFavoritesWithInternetExplorer = value;
     }
     /**
      * Sets the enterpriseCloudPrintDiscoveryEndPoint property value. Endpoint for discovering cloud printers.
      * @param value Value to set for the enterpriseCloudPrintDiscoveryEndPoint property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnterpriseCloudPrintDiscoveryEndPoint(@jakarta.annotation.Nullable final String value) {
         this.enterpriseCloudPrintDiscoveryEndPoint = value;
     }
     /**
      * Sets the enterpriseCloudPrintDiscoveryMaxLimit property value. Maximum number of printers that should be queried from a discovery endpoint. This is a mobile only setting. Valid values 1 to 65535
      * @param value Value to set for the enterpriseCloudPrintDiscoveryMaxLimit property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnterpriseCloudPrintDiscoveryMaxLimit(@jakarta.annotation.Nullable final Integer value) {
         this.enterpriseCloudPrintDiscoveryMaxLimit = value;
     }
     /**
      * Sets the enterpriseCloudPrintMopriaDiscoveryResourceIdentifier property value. OAuth resource URI for printer discovery service as configured in Azure portal.
      * @param value Value to set for the enterpriseCloudPrintMopriaDiscoveryResourceIdentifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnterpriseCloudPrintMopriaDiscoveryResourceIdentifier(@jakarta.annotation.Nullable final String value) {
         this.enterpriseCloudPrintMopriaDiscoveryResourceIdentifier = value;
     }
     /**
      * Sets the enterpriseCloudPrintOAuthAuthority property value. Authentication endpoint for acquiring OAuth tokens.
      * @param value Value to set for the enterpriseCloudPrintOAuthAuthority property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnterpriseCloudPrintOAuthAuthority(@jakarta.annotation.Nullable final String value) {
         this.enterpriseCloudPrintOAuthAuthority = value;
     }
     /**
      * Sets the enterpriseCloudPrintOAuthClientIdentifier property value. GUID of a client application authorized to retrieve OAuth tokens from the OAuth Authority.
      * @param value Value to set for the enterpriseCloudPrintOAuthClientIdentifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnterpriseCloudPrintOAuthClientIdentifier(@jakarta.annotation.Nullable final String value) {
         this.enterpriseCloudPrintOAuthClientIdentifier = value;
     }
     /**
      * Sets the enterpriseCloudPrintResourceIdentifier property value. OAuth resource URI for print service as configured in the Azure portal.
      * @param value Value to set for the enterpriseCloudPrintResourceIdentifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnterpriseCloudPrintResourceIdentifier(@jakarta.annotation.Nullable final String value) {
         this.enterpriseCloudPrintResourceIdentifier = value;
     }
     /**
      * Sets the experienceBlockDeviceDiscovery property value. Indicates whether or not to enable device discovery UX.
      * @param value Value to set for the experienceBlockDeviceDiscovery property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExperienceBlockDeviceDiscovery(@jakarta.annotation.Nullable final Boolean value) {
         this.experienceBlockDeviceDiscovery = value;
     }
     /**
      * Sets the experienceBlockErrorDialogWhenNoSIM property value. Indicates whether or not to allow the error dialog from displaying if no SIM card is detected.
      * @param value Value to set for the experienceBlockErrorDialogWhenNoSIM property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExperienceBlockErrorDialogWhenNoSIM(@jakarta.annotation.Nullable final Boolean value) {
         this.experienceBlockErrorDialogWhenNoSIM = value;
     }
     /**
      * Sets the experienceBlockTaskSwitcher property value. Indicates whether or not to enable task switching on the device.
      * @param value Value to set for the experienceBlockTaskSwitcher property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExperienceBlockTaskSwitcher(@jakarta.annotation.Nullable final Boolean value) {
         this.experienceBlockTaskSwitcher = value;
     }
     /**
      * Sets the gameDvrBlocked property value. Indicates whether or not to block DVR and broadcasting.
      * @param value Value to set for the gameDvrBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGameDvrBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.gameDvrBlocked = value;
     }
     /**
      * Sets the internetSharingBlocked property value. Indicates whether or not to Block the user from using internet sharing.
      * @param value Value to set for the internetSharingBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInternetSharingBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.internetSharingBlocked = value;
     }
     /**
      * Sets the locationServicesBlocked property value. Indicates whether or not to Block the user from location services.
      * @param value Value to set for the locationServicesBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocationServicesBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.locationServicesBlocked = value;
     }
     /**
      * Sets the lockScreenAllowTimeoutConfiguration property value. Specify whether to show a user-configurable setting to control the screen timeout while on the lock screen of Windows 10 Mobile devices. If this policy is set to Allow, the value set by lockScreenTimeoutInSeconds is ignored.
      * @param value Value to set for the lockScreenAllowTimeoutConfiguration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLockScreenAllowTimeoutConfiguration(@jakarta.annotation.Nullable final Boolean value) {
         this.lockScreenAllowTimeoutConfiguration = value;
     }
     /**
      * Sets the lockScreenBlockActionCenterNotifications property value. Indicates whether or not to block action center notifications over lock screen.
      * @param value Value to set for the lockScreenBlockActionCenterNotifications property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLockScreenBlockActionCenterNotifications(@jakarta.annotation.Nullable final Boolean value) {
         this.lockScreenBlockActionCenterNotifications = value;
     }
     /**
      * Sets the lockScreenBlockCortana property value. Indicates whether or not the user can interact with Cortana using speech while the system is locked.
      * @param value Value to set for the lockScreenBlockCortana property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLockScreenBlockCortana(@jakarta.annotation.Nullable final Boolean value) {
         this.lockScreenBlockCortana = value;
     }
     /**
      * Sets the lockScreenBlockToastNotifications property value. Indicates whether to allow toast notifications above the device lock screen.
      * @param value Value to set for the lockScreenBlockToastNotifications property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLockScreenBlockToastNotifications(@jakarta.annotation.Nullable final Boolean value) {
         this.lockScreenBlockToastNotifications = value;
     }
     /**
      * Sets the lockScreenTimeoutInSeconds property value. Set the duration (in seconds) from the screen locking to the screen turning off for Windows 10 Mobile devices. Supported values are 11-1800. Valid values 11 to 1800
      * @param value Value to set for the lockScreenTimeoutInSeconds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLockScreenTimeoutInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.lockScreenTimeoutInSeconds = value;
     }
     /**
      * Sets the logonBlockFastUserSwitching property value. Disables the ability to quickly switch between users that are logged on simultaneously without logging off.
      * @param value Value to set for the logonBlockFastUserSwitching property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLogonBlockFastUserSwitching(@jakarta.annotation.Nullable final Boolean value) {
         this.logonBlockFastUserSwitching = value;
     }
     /**
      * Sets the microsoftAccountBlocked property value. Indicates whether or not to Block a Microsoft account.
      * @param value Value to set for the microsoftAccountBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMicrosoftAccountBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.microsoftAccountBlocked = value;
     }
     /**
      * Sets the microsoftAccountBlockSettingsSync property value. Indicates whether or not to Block Microsoft account settings sync.
      * @param value Value to set for the microsoftAccountBlockSettingsSync property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMicrosoftAccountBlockSettingsSync(@jakarta.annotation.Nullable final Boolean value) {
         this.microsoftAccountBlockSettingsSync = value;
     }
     /**
      * Sets the networkProxyApplySettingsDeviceWide property value. If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account thats enrolled into MDM.
      * @param value Value to set for the networkProxyApplySettingsDeviceWide property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNetworkProxyApplySettingsDeviceWide(@jakarta.annotation.Nullable final Boolean value) {
         this.networkProxyApplySettingsDeviceWide = value;
     }
     /**
      * Sets the networkProxyAutomaticConfigurationUrl property value. Address to the proxy auto-config (PAC) script you want to use.
      * @param value Value to set for the networkProxyAutomaticConfigurationUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNetworkProxyAutomaticConfigurationUrl(@jakarta.annotation.Nullable final String value) {
         this.networkProxyAutomaticConfigurationUrl = value;
     }
     /**
      * Sets the networkProxyDisableAutoDetect property value. Disable automatic detection of settings. If enabled, the system will try to find the path to a proxy auto-config (PAC) script.
      * @param value Value to set for the networkProxyDisableAutoDetect property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNetworkProxyDisableAutoDetect(@jakarta.annotation.Nullable final Boolean value) {
         this.networkProxyDisableAutoDetect = value;
     }
     /**
      * Sets the networkProxyServer property value. Specifies manual proxy server settings.
      * @param value Value to set for the networkProxyServer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNetworkProxyServer(@jakarta.annotation.Nullable final Windows10NetworkProxyServer value) {
         this.networkProxyServer = value;
     }
     /**
      * Sets the nfcBlocked property value. Indicates whether or not to Block the user from using near field communication.
      * @param value Value to set for the nfcBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNfcBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.nfcBlocked = value;
     }
     /**
      * Sets the oneDriveDisableFileSync property value. Gets or sets a value allowing IT admins to prevent apps and features from working with files on OneDrive.
      * @param value Value to set for the oneDriveDisableFileSync property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOneDriveDisableFileSync(@jakarta.annotation.Nullable final Boolean value) {
         this.oneDriveDisableFileSync = value;
     }
     /**
      * Sets the passwordBlockSimple property value. Specify whether PINs or passwords such as '1111' or '1234' are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
      * @param value Value to set for the passwordBlockSimple property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordBlockSimple = value;
     }
     /**
      * Sets the passwordExpirationDays property value. The password expiration in days. Valid values 0 to 730
      * @param value Value to set for the passwordExpirationDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.passwordExpirationDays = value;
     }
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumCharacterSetCount = value;
     }
     /**
      * Sets the passwordMinimumLength property value. The minimum password length. Valid values 4 to 16
      * @param value Value to set for the passwordMinimumLength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumLength = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. The minutes of inactivity before the screen times out.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent reuse of. Valid values 0 to 50
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the passwordRequired property value. Indicates whether or not to require the user to have a password.
      * @param value Value to set for the passwordRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordRequired = value;
     }
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
         this.passwordRequiredType = value;
     }
     /**
      * Sets the passwordRequireWhenResumeFromIdleState property value. Indicates whether or not to require a password upon resuming from an idle state.
      * @param value Value to set for the passwordRequireWhenResumeFromIdleState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordRequireWhenResumeFromIdleState(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordRequireWhenResumeFromIdleState = value;
     }
     /**
      * Sets the passwordSignInFailureCountBeforeFactoryReset property value. The number of sign in failures before factory reset. Valid values 0 to 999
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@jakarta.annotation.Nullable final Integer value) {
         this.passwordSignInFailureCountBeforeFactoryReset = value;
     }
     /**
      * Sets the personalizationDesktopImageUrl property value. A http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Desktop Image or a file Url to a local image on the file system that needs to used as the Desktop Image.
      * @param value Value to set for the personalizationDesktopImageUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPersonalizationDesktopImageUrl(@jakarta.annotation.Nullable final String value) {
         this.personalizationDesktopImageUrl = value;
     }
     /**
      * Sets the personalizationLockScreenImageUrl property value. A http or https Url to a jpg, jpeg or png image that neeeds to be downloaded and used as the Lock Screen Image or a file Url to a local image on the file system that needs to be used as the Lock Screen Image.
      * @param value Value to set for the personalizationLockScreenImageUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPersonalizationLockScreenImageUrl(@jakarta.annotation.Nullable final String value) {
         this.personalizationLockScreenImageUrl = value;
     }
     /**
      * Sets the privacyAdvertisingId property value. State Management Setting.
      * @param value Value to set for the privacyAdvertisingId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrivacyAdvertisingId(@jakarta.annotation.Nullable final StateManagementSetting value) {
         this.privacyAdvertisingId = value;
     }
     /**
      * Sets the privacyAutoAcceptPairingAndConsentPrompts property value. Indicates whether or not to allow the automatic acceptance of the pairing and privacy user consent dialog when launching apps.
      * @param value Value to set for the privacyAutoAcceptPairingAndConsentPrompts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrivacyAutoAcceptPairingAndConsentPrompts(@jakarta.annotation.Nullable final Boolean value) {
         this.privacyAutoAcceptPairingAndConsentPrompts = value;
     }
     /**
      * Sets the privacyBlockInputPersonalization property value. Indicates whether or not to block the usage of cloud based speech services for Cortana, Dictation, or Store applications.
      * @param value Value to set for the privacyBlockInputPersonalization property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrivacyBlockInputPersonalization(@jakarta.annotation.Nullable final Boolean value) {
         this.privacyBlockInputPersonalization = value;
     }
     /**
      * Sets the resetProtectionModeBlocked property value. Indicates whether or not to Block the user from reset protection mode.
      * @param value Value to set for the resetProtectionModeBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResetProtectionModeBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.resetProtectionModeBlocked = value;
     }
     /**
      * Sets the safeSearchFilter property value. Specifies what level of safe search (filtering adult content) is required
      * @param value Value to set for the safeSearchFilter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSafeSearchFilter(@jakarta.annotation.Nullable final SafeSearchFilterType value) {
         this.safeSearchFilter = value;
     }
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether or not to Block the user from taking Screenshots.
      * @param value Value to set for the screenCaptureBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScreenCaptureBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.screenCaptureBlocked = value;
     }
     /**
      * Sets the searchBlockDiacritics property value. Specifies if search can use diacritics.
      * @param value Value to set for the searchBlockDiacritics property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSearchBlockDiacritics(@jakarta.annotation.Nullable final Boolean value) {
         this.searchBlockDiacritics = value;
     }
     /**
      * Sets the searchDisableAutoLanguageDetection property value. Specifies whether to use automatic language detection when indexing content and properties.
      * @param value Value to set for the searchDisableAutoLanguageDetection property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSearchDisableAutoLanguageDetection(@jakarta.annotation.Nullable final Boolean value) {
         this.searchDisableAutoLanguageDetection = value;
     }
     /**
      * Sets the searchDisableIndexerBackoff property value. Indicates whether or not to disable the search indexer backoff feature.
      * @param value Value to set for the searchDisableIndexerBackoff property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSearchDisableIndexerBackoff(@jakarta.annotation.Nullable final Boolean value) {
         this.searchDisableIndexerBackoff = value;
     }
     /**
      * Sets the searchDisableIndexingEncryptedItems property value. Indicates whether or not to block indexing of WIP-protected items to prevent them from appearing in search results for Cortana or Explorer.
      * @param value Value to set for the searchDisableIndexingEncryptedItems property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSearchDisableIndexingEncryptedItems(@jakarta.annotation.Nullable final Boolean value) {
         this.searchDisableIndexingEncryptedItems = value;
     }
     /**
      * Sets the searchDisableIndexingRemovableDrive property value. Indicates whether or not to allow users to add locations on removable drives to libraries and to be indexed.
      * @param value Value to set for the searchDisableIndexingRemovableDrive property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSearchDisableIndexingRemovableDrive(@jakarta.annotation.Nullable final Boolean value) {
         this.searchDisableIndexingRemovableDrive = value;
     }
     /**
      * Sets the searchEnableAutomaticIndexSizeManangement property value. Specifies minimum amount of hard drive space on the same drive as the index location before indexing stops.
      * @param value Value to set for the searchEnableAutomaticIndexSizeManangement property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSearchEnableAutomaticIndexSizeManangement(@jakarta.annotation.Nullable final Boolean value) {
         this.searchEnableAutomaticIndexSizeManangement = value;
     }
     /**
      * Sets the searchEnableRemoteQueries property value. Indicates whether or not to block remote queries of this computers index.
      * @param value Value to set for the searchEnableRemoteQueries property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSearchEnableRemoteQueries(@jakarta.annotation.Nullable final Boolean value) {
         this.searchEnableRemoteQueries = value;
     }
     /**
      * Sets the settingsBlockAccountsPage property value. Indicates whether or not to block access to Accounts in Settings app.
      * @param value Value to set for the settingsBlockAccountsPage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockAccountsPage(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockAccountsPage = value;
     }
     /**
      * Sets the settingsBlockAddProvisioningPackage property value. Indicates whether or not to block the user from installing provisioning packages.
      * @param value Value to set for the settingsBlockAddProvisioningPackage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockAddProvisioningPackage(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockAddProvisioningPackage = value;
     }
     /**
      * Sets the settingsBlockAppsPage property value. Indicates whether or not to block access to Apps in Settings app.
      * @param value Value to set for the settingsBlockAppsPage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockAppsPage(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockAppsPage = value;
     }
     /**
      * Sets the settingsBlockChangeLanguage property value. Indicates whether or not to block the user from changing the language settings.
      * @param value Value to set for the settingsBlockChangeLanguage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockChangeLanguage(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockChangeLanguage = value;
     }
     /**
      * Sets the settingsBlockChangePowerSleep property value. Indicates whether or not to block the user from changing power and sleep settings.
      * @param value Value to set for the settingsBlockChangePowerSleep property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockChangePowerSleep(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockChangePowerSleep = value;
     }
     /**
      * Sets the settingsBlockChangeRegion property value. Indicates whether or not to block the user from changing the region settings.
      * @param value Value to set for the settingsBlockChangeRegion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockChangeRegion(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockChangeRegion = value;
     }
     /**
      * Sets the settingsBlockChangeSystemTime property value. Indicates whether or not to block the user from changing date and time settings.
      * @param value Value to set for the settingsBlockChangeSystemTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockChangeSystemTime(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockChangeSystemTime = value;
     }
     /**
      * Sets the settingsBlockDevicesPage property value. Indicates whether or not to block access to Devices in Settings app.
      * @param value Value to set for the settingsBlockDevicesPage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockDevicesPage(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockDevicesPage = value;
     }
     /**
      * Sets the settingsBlockEaseOfAccessPage property value. Indicates whether or not to block access to Ease of Access in Settings app.
      * @param value Value to set for the settingsBlockEaseOfAccessPage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockEaseOfAccessPage(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockEaseOfAccessPage = value;
     }
     /**
      * Sets the settingsBlockEditDeviceName property value. Indicates whether or not to block the user from editing the device name.
      * @param value Value to set for the settingsBlockEditDeviceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockEditDeviceName(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockEditDeviceName = value;
     }
     /**
      * Sets the settingsBlockGamingPage property value. Indicates whether or not to block access to Gaming in Settings app.
      * @param value Value to set for the settingsBlockGamingPage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockGamingPage(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockGamingPage = value;
     }
     /**
      * Sets the settingsBlockNetworkInternetPage property value. Indicates whether or not to block access to Network & Internet in Settings app.
      * @param value Value to set for the settingsBlockNetworkInternetPage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockNetworkInternetPage(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockNetworkInternetPage = value;
     }
     /**
      * Sets the settingsBlockPersonalizationPage property value. Indicates whether or not to block access to Personalization in Settings app.
      * @param value Value to set for the settingsBlockPersonalizationPage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockPersonalizationPage(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockPersonalizationPage = value;
     }
     /**
      * Sets the settingsBlockPrivacyPage property value. Indicates whether or not to block access to Privacy in Settings app.
      * @param value Value to set for the settingsBlockPrivacyPage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockPrivacyPage(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockPrivacyPage = value;
     }
     /**
      * Sets the settingsBlockRemoveProvisioningPackage property value. Indicates whether or not to block the runtime configuration agent from removing provisioning packages.
      * @param value Value to set for the settingsBlockRemoveProvisioningPackage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockRemoveProvisioningPackage(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockRemoveProvisioningPackage = value;
     }
     /**
      * Sets the settingsBlockSettingsApp property value. Indicates whether or not to block access to Settings app.
      * @param value Value to set for the settingsBlockSettingsApp property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockSettingsApp(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockSettingsApp = value;
     }
     /**
      * Sets the settingsBlockSystemPage property value. Indicates whether or not to block access to System in Settings app.
      * @param value Value to set for the settingsBlockSystemPage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockSystemPage(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockSystemPage = value;
     }
     /**
      * Sets the settingsBlockTimeLanguagePage property value. Indicates whether or not to block access to Time & Language in Settings app.
      * @param value Value to set for the settingsBlockTimeLanguagePage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockTimeLanguagePage(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockTimeLanguagePage = value;
     }
     /**
      * Sets the settingsBlockUpdateSecurityPage property value. Indicates whether or not to block access to Update & Security in Settings app.
      * @param value Value to set for the settingsBlockUpdateSecurityPage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingsBlockUpdateSecurityPage(@jakarta.annotation.Nullable final Boolean value) {
         this.settingsBlockUpdateSecurityPage = value;
     }
     /**
      * Sets the sharedUserAppDataAllowed property value. Indicates whether or not to block multiple users of the same app to share data.
      * @param value Value to set for the sharedUserAppDataAllowed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharedUserAppDataAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.sharedUserAppDataAllowed = value;
     }
     /**
      * Sets the smartScreenBlockPromptOverride property value. Indicates whether or not users can override SmartScreen Filter warnings about potentially malicious websites.
      * @param value Value to set for the smartScreenBlockPromptOverride property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSmartScreenBlockPromptOverride(@jakarta.annotation.Nullable final Boolean value) {
         this.smartScreenBlockPromptOverride = value;
     }
     /**
      * Sets the smartScreenBlockPromptOverrideForFiles property value. Indicates whether or not users can override the SmartScreen Filter warnings about downloading unverified files
      * @param value Value to set for the smartScreenBlockPromptOverrideForFiles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSmartScreenBlockPromptOverrideForFiles(@jakarta.annotation.Nullable final Boolean value) {
         this.smartScreenBlockPromptOverrideForFiles = value;
     }
     /**
      * Sets the smartScreenEnableAppInstallControl property value. This property will be deprecated in July 2019 and will be replaced by property SmartScreenAppInstallControl. Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
      * @param value Value to set for the smartScreenEnableAppInstallControl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSmartScreenEnableAppInstallControl(@jakarta.annotation.Nullable final Boolean value) {
         this.smartScreenEnableAppInstallControl = value;
     }
     /**
      * Sets the startBlockUnpinningAppsFromTaskbar property value. Indicates whether or not to block the user from unpinning apps from taskbar.
      * @param value Value to set for the startBlockUnpinningAppsFromTaskbar property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartBlockUnpinningAppsFromTaskbar(@jakarta.annotation.Nullable final Boolean value) {
         this.startBlockUnpinningAppsFromTaskbar = value;
     }
     /**
      * Sets the startMenuAppListVisibility property value. Type of start menu app list visibility.
      * @param value Value to set for the startMenuAppListVisibility property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuAppListVisibility(@jakarta.annotation.Nullable final WindowsStartMenuAppListVisibilityType value) {
         this.startMenuAppListVisibility = value;
     }
     /**
      * Sets the startMenuHideChangeAccountSettings property value. Enabling this policy hides the change account setting from appearing in the user tile in the start menu.
      * @param value Value to set for the startMenuHideChangeAccountSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuHideChangeAccountSettings(@jakarta.annotation.Nullable final Boolean value) {
         this.startMenuHideChangeAccountSettings = value;
     }
     /**
      * Sets the startMenuHideFrequentlyUsedApps property value. Enabling this policy hides the most used apps from appearing on the start menu and disables the corresponding toggle in the Settings app.
      * @param value Value to set for the startMenuHideFrequentlyUsedApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuHideFrequentlyUsedApps(@jakarta.annotation.Nullable final Boolean value) {
         this.startMenuHideFrequentlyUsedApps = value;
     }
     /**
      * Sets the startMenuHideHibernate property value. Enabling this policy hides hibernate from appearing in the power button in the start menu.
      * @param value Value to set for the startMenuHideHibernate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuHideHibernate(@jakarta.annotation.Nullable final Boolean value) {
         this.startMenuHideHibernate = value;
     }
     /**
      * Sets the startMenuHideLock property value. Enabling this policy hides lock from appearing in the user tile in the start menu.
      * @param value Value to set for the startMenuHideLock property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuHideLock(@jakarta.annotation.Nullable final Boolean value) {
         this.startMenuHideLock = value;
     }
     /**
      * Sets the startMenuHidePowerButton property value. Enabling this policy hides the power button from appearing in the start menu.
      * @param value Value to set for the startMenuHidePowerButton property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuHidePowerButton(@jakarta.annotation.Nullable final Boolean value) {
         this.startMenuHidePowerButton = value;
     }
     /**
      * Sets the startMenuHideRecentJumpLists property value. Enabling this policy hides recent jump lists from appearing on the start menu/taskbar and disables the corresponding toggle in the Settings app.
      * @param value Value to set for the startMenuHideRecentJumpLists property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuHideRecentJumpLists(@jakarta.annotation.Nullable final Boolean value) {
         this.startMenuHideRecentJumpLists = value;
     }
     /**
      * Sets the startMenuHideRecentlyAddedApps property value. Enabling this policy hides recently added apps from appearing on the start menu and disables the corresponding toggle in the Settings app.
      * @param value Value to set for the startMenuHideRecentlyAddedApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuHideRecentlyAddedApps(@jakarta.annotation.Nullable final Boolean value) {
         this.startMenuHideRecentlyAddedApps = value;
     }
     /**
      * Sets the startMenuHideRestartOptions property value. Enabling this policy hides 'Restart/Update and Restart' from appearing in the power button in the start menu.
      * @param value Value to set for the startMenuHideRestartOptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuHideRestartOptions(@jakarta.annotation.Nullable final Boolean value) {
         this.startMenuHideRestartOptions = value;
     }
     /**
      * Sets the startMenuHideShutDown property value. Enabling this policy hides shut down/update and shut down from appearing in the power button in the start menu.
      * @param value Value to set for the startMenuHideShutDown property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuHideShutDown(@jakarta.annotation.Nullable final Boolean value) {
         this.startMenuHideShutDown = value;
     }
     /**
      * Sets the startMenuHideSignOut property value. Enabling this policy hides sign out from appearing in the user tile in the start menu.
      * @param value Value to set for the startMenuHideSignOut property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuHideSignOut(@jakarta.annotation.Nullable final Boolean value) {
         this.startMenuHideSignOut = value;
     }
     /**
      * Sets the startMenuHideSleep property value. Enabling this policy hides sleep from appearing in the power button in the start menu.
      * @param value Value to set for the startMenuHideSleep property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuHideSleep(@jakarta.annotation.Nullable final Boolean value) {
         this.startMenuHideSleep = value;
     }
     /**
      * Sets the startMenuHideSwitchAccount property value. Enabling this policy hides switch account from appearing in the user tile in the start menu.
      * @param value Value to set for the startMenuHideSwitchAccount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuHideSwitchAccount(@jakarta.annotation.Nullable final Boolean value) {
         this.startMenuHideSwitchAccount = value;
     }
     /**
      * Sets the startMenuHideUserTile property value. Enabling this policy hides the user tile from appearing in the start menu.
      * @param value Value to set for the startMenuHideUserTile property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuHideUserTile(@jakarta.annotation.Nullable final Boolean value) {
         this.startMenuHideUserTile = value;
     }
     /**
      * Sets the startMenuLayoutEdgeAssetsXml property value. This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
      * @param value Value to set for the startMenuLayoutEdgeAssetsXml property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuLayoutEdgeAssetsXml(@jakarta.annotation.Nullable final byte[] value) {
         this.startMenuLayoutEdgeAssetsXml = value;
     }
     /**
      * Sets the startMenuLayoutXml property value. Allows admins to override the default Start menu layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in a UTF8 encoded byte array format.
      * @param value Value to set for the startMenuLayoutXml property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuLayoutXml(@jakarta.annotation.Nullable final byte[] value) {
         this.startMenuLayoutXml = value;
     }
     /**
      * Sets the startMenuMode property value. Type of display modes for the start menu.
      * @param value Value to set for the startMenuMode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuMode(@jakarta.annotation.Nullable final WindowsStartMenuModeType value) {
         this.startMenuMode = value;
     }
     /**
      * Sets the startMenuPinnedFolderDocuments property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderDocuments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuPinnedFolderDocuments(@jakarta.annotation.Nullable final VisibilitySetting value) {
         this.startMenuPinnedFolderDocuments = value;
     }
     /**
      * Sets the startMenuPinnedFolderDownloads property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderDownloads property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuPinnedFolderDownloads(@jakarta.annotation.Nullable final VisibilitySetting value) {
         this.startMenuPinnedFolderDownloads = value;
     }
     /**
      * Sets the startMenuPinnedFolderFileExplorer property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderFileExplorer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuPinnedFolderFileExplorer(@jakarta.annotation.Nullable final VisibilitySetting value) {
         this.startMenuPinnedFolderFileExplorer = value;
     }
     /**
      * Sets the startMenuPinnedFolderHomeGroup property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderHomeGroup property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuPinnedFolderHomeGroup(@jakarta.annotation.Nullable final VisibilitySetting value) {
         this.startMenuPinnedFolderHomeGroup = value;
     }
     /**
      * Sets the startMenuPinnedFolderMusic property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderMusic property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuPinnedFolderMusic(@jakarta.annotation.Nullable final VisibilitySetting value) {
         this.startMenuPinnedFolderMusic = value;
     }
     /**
      * Sets the startMenuPinnedFolderNetwork property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderNetwork property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuPinnedFolderNetwork(@jakarta.annotation.Nullable final VisibilitySetting value) {
         this.startMenuPinnedFolderNetwork = value;
     }
     /**
      * Sets the startMenuPinnedFolderPersonalFolder property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderPersonalFolder property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuPinnedFolderPersonalFolder(@jakarta.annotation.Nullable final VisibilitySetting value) {
         this.startMenuPinnedFolderPersonalFolder = value;
     }
     /**
      * Sets the startMenuPinnedFolderPictures property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderPictures property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuPinnedFolderPictures(@jakarta.annotation.Nullable final VisibilitySetting value) {
         this.startMenuPinnedFolderPictures = value;
     }
     /**
      * Sets the startMenuPinnedFolderSettings property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuPinnedFolderSettings(@jakarta.annotation.Nullable final VisibilitySetting value) {
         this.startMenuPinnedFolderSettings = value;
     }
     /**
      * Sets the startMenuPinnedFolderVideos property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderVideos property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartMenuPinnedFolderVideos(@jakarta.annotation.Nullable final VisibilitySetting value) {
         this.startMenuPinnedFolderVideos = value;
     }
     /**
      * Sets the storageBlockRemovableStorage property value. Indicates whether or not to Block the user from using removable storage.
      * @param value Value to set for the storageBlockRemovableStorage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStorageBlockRemovableStorage(@jakarta.annotation.Nullable final Boolean value) {
         this.storageBlockRemovableStorage = value;
     }
     /**
      * Sets the storageRequireMobileDeviceEncryption property value. Indicating whether or not to require encryption on a mobile device.
      * @param value Value to set for the storageRequireMobileDeviceEncryption property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStorageRequireMobileDeviceEncryption(@jakarta.annotation.Nullable final Boolean value) {
         this.storageRequireMobileDeviceEncryption = value;
     }
     /**
      * Sets the storageRestrictAppDataToSystemVolume property value. Indicates whether application data is restricted to the system drive.
      * @param value Value to set for the storageRestrictAppDataToSystemVolume property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStorageRestrictAppDataToSystemVolume(@jakarta.annotation.Nullable final Boolean value) {
         this.storageRestrictAppDataToSystemVolume = value;
     }
     /**
      * Sets the storageRestrictAppInstallToSystemVolume property value. Indicates whether the installation of applications is restricted to the system drive.
      * @param value Value to set for the storageRestrictAppInstallToSystemVolume property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStorageRestrictAppInstallToSystemVolume(@jakarta.annotation.Nullable final Boolean value) {
         this.storageRestrictAppInstallToSystemVolume = value;
     }
     /**
      * Sets the tenantLockdownRequireNetworkDuringOutOfBoxExperience property value. Whether the device is required to connect to the network.
      * @param value Value to set for the tenantLockdownRequireNetworkDuringOutOfBoxExperience property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantLockdownRequireNetworkDuringOutOfBoxExperience(@jakarta.annotation.Nullable final Boolean value) {
         this.tenantLockdownRequireNetworkDuringOutOfBoxExperience = value;
     }
     /**
      * Sets the usbBlocked property value. Indicates whether or not to Block the user from USB connection.
      * @param value Value to set for the usbBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUsbBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.usbBlocked = value;
     }
     /**
      * Sets the voiceRecordingBlocked property value. Indicates whether or not to Block the user from voice recording.
      * @param value Value to set for the voiceRecordingBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVoiceRecordingBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.voiceRecordingBlocked = value;
     }
     /**
      * Sets the webRtcBlockLocalhostIpAddress property value. Indicates whether or not user's localhost IP address is displayed while making phone calls using the WebRTC
      * @param value Value to set for the webRtcBlockLocalhostIpAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebRtcBlockLocalhostIpAddress(@jakarta.annotation.Nullable final Boolean value) {
         this.webRtcBlockLocalhostIpAddress = value;
     }
     /**
      * Sets the wiFiBlockAutomaticConnectHotspots property value. Indicating whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
      * @param value Value to set for the wiFiBlockAutomaticConnectHotspots property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWiFiBlockAutomaticConnectHotspots(@jakarta.annotation.Nullable final Boolean value) {
         this.wiFiBlockAutomaticConnectHotspots = value;
     }
     /**
      * Sets the wiFiBlocked property value. Indicates whether or not to Block the user from using Wi-Fi.
      * @param value Value to set for the wiFiBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWiFiBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.wiFiBlocked = value;
     }
     /**
      * Sets the wiFiBlockManualConfiguration property value. Indicates whether or not to Block the user from using Wi-Fi manual configuration.
      * @param value Value to set for the wiFiBlockManualConfiguration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWiFiBlockManualConfiguration(@jakarta.annotation.Nullable final Boolean value) {
         this.wiFiBlockManualConfiguration = value;
     }
     /**
      * Sets the wiFiScanInterval property value. Specify how often devices scan for Wi-Fi networks. Supported values are 1-500, where 100 = default, and 500 = low frequency. Valid values 1 to 500
      * @param value Value to set for the wiFiScanInterval property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWiFiScanInterval(@jakarta.annotation.Nullable final Integer value) {
         this.wiFiScanInterval = value;
     }
     /**
      * Sets the windowsSpotlightBlockConsumerSpecificFeatures property value. Allows IT admins to block experiences that are typically for consumers only, such as Start suggestions, Membership notifications, Post-OOBE app install and redirect tiles.
      * @param value Value to set for the windowsSpotlightBlockConsumerSpecificFeatures property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsSpotlightBlockConsumerSpecificFeatures(@jakarta.annotation.Nullable final Boolean value) {
         this.windowsSpotlightBlockConsumerSpecificFeatures = value;
     }
     /**
      * Sets the windowsSpotlightBlocked property value. Allows IT admins to turn off all Windows Spotlight features
      * @param value Value to set for the windowsSpotlightBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsSpotlightBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.windowsSpotlightBlocked = value;
     }
     /**
      * Sets the windowsSpotlightBlockOnActionCenter property value. Block suggestions from Microsoft that show after each OS clean install, upgrade or in an on-going basis to introduce users to what is new or changed
      * @param value Value to set for the windowsSpotlightBlockOnActionCenter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsSpotlightBlockOnActionCenter(@jakarta.annotation.Nullable final Boolean value) {
         this.windowsSpotlightBlockOnActionCenter = value;
     }
     /**
      * Sets the windowsSpotlightBlockTailoredExperiences property value. Block personalized content in Windows spotlight based on users device usage.
      * @param value Value to set for the windowsSpotlightBlockTailoredExperiences property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsSpotlightBlockTailoredExperiences(@jakarta.annotation.Nullable final Boolean value) {
         this.windowsSpotlightBlockTailoredExperiences = value;
     }
     /**
      * Sets the windowsSpotlightBlockThirdPartyNotifications property value. Block third party content delivered via Windows Spotlight
      * @param value Value to set for the windowsSpotlightBlockThirdPartyNotifications property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsSpotlightBlockThirdPartyNotifications(@jakarta.annotation.Nullable final Boolean value) {
         this.windowsSpotlightBlockThirdPartyNotifications = value;
     }
     /**
      * Sets the windowsSpotlightBlockWelcomeExperience property value. Block Windows Spotlight Windows welcome experience
      * @param value Value to set for the windowsSpotlightBlockWelcomeExperience property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsSpotlightBlockWelcomeExperience(@jakarta.annotation.Nullable final Boolean value) {
         this.windowsSpotlightBlockWelcomeExperience = value;
     }
     /**
      * Sets the windowsSpotlightBlockWindowsTips property value. Allows IT admins to turn off the popup of Windows Tips.
      * @param value Value to set for the windowsSpotlightBlockWindowsTips property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsSpotlightBlockWindowsTips(@jakarta.annotation.Nullable final Boolean value) {
         this.windowsSpotlightBlockWindowsTips = value;
     }
     /**
      * Sets the windowsSpotlightConfigureOnLockScreen property value. Allows IT admind to set a predefined default search engine for MDM-Controlled devices
      * @param value Value to set for the windowsSpotlightConfigureOnLockScreen property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsSpotlightConfigureOnLockScreen(@jakarta.annotation.Nullable final WindowsSpotlightEnablementSettings value) {
         this.windowsSpotlightConfigureOnLockScreen = value;
     }
     /**
      * Sets the windowsStoreBlockAutoUpdate property value. Indicates whether or not to block automatic update of apps from Windows Store.
      * @param value Value to set for the windowsStoreBlockAutoUpdate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsStoreBlockAutoUpdate(@jakarta.annotation.Nullable final Boolean value) {
         this.windowsStoreBlockAutoUpdate = value;
     }
     /**
      * Sets the windowsStoreBlocked property value. Indicates whether or not to Block the user from using the Windows store.
      * @param value Value to set for the windowsStoreBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsStoreBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.windowsStoreBlocked = value;
     }
     /**
      * Sets the windowsStoreEnablePrivateStoreOnly property value. Indicates whether or not to enable Private Store Only.
      * @param value Value to set for the windowsStoreEnablePrivateStoreOnly property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsStoreEnablePrivateStoreOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.windowsStoreEnablePrivateStoreOnly = value;
     }
     /**
      * Sets the wirelessDisplayBlockProjectionToThisDevice property value. Indicates whether or not to allow other devices from discovering this PC for projection.
      * @param value Value to set for the wirelessDisplayBlockProjectionToThisDevice property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWirelessDisplayBlockProjectionToThisDevice(@jakarta.annotation.Nullable final Boolean value) {
         this.wirelessDisplayBlockProjectionToThisDevice = value;
     }
     /**
      * Sets the wirelessDisplayBlockUserInputFromReceiver property value. Indicates whether or not to allow user input from wireless display receiver.
      * @param value Value to set for the wirelessDisplayBlockUserInputFromReceiver property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWirelessDisplayBlockUserInputFromReceiver(@jakarta.annotation.Nullable final Boolean value) {
         this.wirelessDisplayBlockUserInputFromReceiver = value;
     }
     /**
      * Sets the wirelessDisplayRequirePinForPairing property value. Indicates whether or not to require a PIN for new devices to initiate pairing.
      * @param value Value to set for the wirelessDisplayRequirePinForPairing property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWirelessDisplayRequirePinForPairing(@jakarta.annotation.Nullable final Boolean value) {
         this.wirelessDisplayRequirePinForPairing = value;
     }

@@ -16,9 +16,7 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
     private Integer limit;
     /**
      * Instantiates a new deviceEnrollmentLimitConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceEnrollmentLimitConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.deviceEnrollmentLimitConfiguration");
@@ -54,9 +52,7 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -65,9 +61,7 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
     /**
      * Sets the limit property value. The maximum number of devices that a user can enroll
      * @param value Value to set for the limit property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLimit(@jakarta.annotation.Nullable final Integer value) {
         this.limit = value;
     }

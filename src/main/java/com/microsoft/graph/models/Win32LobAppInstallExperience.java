@@ -29,9 +29,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
     private RunAsAccountType runAsAccount;
     /**
      * Instantiates a new win32LobAppInstallExperience and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Win32LobAppInstallExperience() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -92,9 +90,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("deviceRestartBehavior", this.getDeviceRestartBehavior());
@@ -105,36 +101,28 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the deviceRestartBehavior property value. Indicates the type of restart action.
      * @param value Value to set for the deviceRestartBehavior property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceRestartBehavior(@jakarta.annotation.Nullable final Win32LobAppRestartBehavior value) {
         this.deviceRestartBehavior = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @param value Value to set for the runAsAccount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRunAsAccount(@jakarta.annotation.Nullable final RunAsAccountType value) {
         this.runAsAccount = value;
     }

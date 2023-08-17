@@ -26,9 +26,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     private String senderShiftId;
     /**
      * Instantiates a new offerShiftRequest and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OfferShiftRequest() {
         super();
         this.setOdataType("#microsoft.graph.offerShiftRequest");
@@ -98,9 +96,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,36 +107,28 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     /**
      * Sets the recipientActionDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the recipientActionDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecipientActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.recipientActionDateTime = value;
     }
     /**
      * Sets the recipientActionMessage property value. Custom message sent by recipient of the offer shift request.
      * @param value Value to set for the recipientActionMessage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecipientActionMessage(@jakarta.annotation.Nullable final String value) {
         this.recipientActionMessage = value;
     }
     /**
      * Sets the recipientUserId property value. User ID of the recipient of the offer shift request.
      * @param value Value to set for the recipientUserId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecipientUserId(@jakarta.annotation.Nullable final String value) {
         this.recipientUserId = value;
     }
     /**
      * Sets the senderShiftId property value. User ID of the sender of the offer shift request.
      * @param value Value to set for the senderShiftId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSenderShiftId(@jakarta.annotation.Nullable final String value) {
         this.senderShiftId = value;
     }

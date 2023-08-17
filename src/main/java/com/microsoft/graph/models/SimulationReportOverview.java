@@ -34,9 +34,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
     private TrainingEventsContent trainingEventsContent;
     /**
      * Instantiates a new simulationReportOverview and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SimulationReportOverview() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -130,54 +126,42 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the recommendedActions property value. List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
      * @param value Value to set for the recommendedActions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecommendedActions(@jakarta.annotation.Nullable final java.util.List<RecommendedAction> value) {
         this.recommendedActions = value;
     }
     /**
      * Sets the resolvedTargetsCount property value. Number of valid users in the attack simulation and training campaign.
      * @param value Value to set for the resolvedTargetsCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResolvedTargetsCount(@jakarta.annotation.Nullable final Integer value) {
         this.resolvedTargetsCount = value;
     }
     /**
      * Sets the simulationEventsContent property value. Summary of simulation events in the attack simulation and training campaign.
      * @param value Value to set for the simulationEventsContent property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSimulationEventsContent(@jakarta.annotation.Nullable final SimulationEventsContent value) {
         this.simulationEventsContent = value;
     }
     /**
      * Sets the trainingEventsContent property value. Summary of assigned trainings in the attack simulation and training campaign.
      * @param value Value to set for the trainingEventsContent property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTrainingEventsContent(@jakarta.annotation.Nullable final TrainingEventsContent value) {
         this.trainingEventsContent = value;
     }

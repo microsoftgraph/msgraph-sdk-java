@@ -21,9 +21,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     private String userId;
     /**
      * Instantiates a new riskyUserHistoryItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RiskyUserHistoryItem() {
         super();
     }
@@ -76,9 +74,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +85,21 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     /**
      * Sets the activity property value. The activity related to user risk level change.
      * @param value Value to set for the activity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivity(@jakarta.annotation.Nullable final RiskUserActivity value) {
         this.activity = value;
     }
     /**
      * Sets the initiatedBy property value. The ID of actor that does the operation.
      * @param value Value to set for the initiatedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiatedBy(@jakarta.annotation.Nullable final String value) {
         this.initiatedBy = value;
     }
     /**
      * Sets the userId property value. The ID of the user.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }

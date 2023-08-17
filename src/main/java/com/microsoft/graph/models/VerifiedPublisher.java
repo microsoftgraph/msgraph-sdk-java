@@ -31,9 +31,7 @@ public class VerifiedPublisher implements AdditionalDataHolder, Parsable {
     private String verifiedPublisherId;
     /**
      * Instantiates a new verifiedPublisher and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public VerifiedPublisher() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,9 +101,7 @@ public class VerifiedPublisher implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("addedDateTime", this.getAddedDateTime());
@@ -117,45 +113,35 @@ public class VerifiedPublisher implements AdditionalDataHolder, Parsable {
     /**
      * Sets the addedDateTime property value. The timestamp when the verified publisher was first added or most recently updated.
      * @param value Value to set for the addedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAddedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.addedDateTime = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the displayName property value. The verified publisher name from the app publisher's Partner Center account.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the verifiedPublisherId property value. The ID of the verified publisher from the app publisher's Partner Center account.
      * @param value Value to set for the verifiedPublisherId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVerifiedPublisherId(@jakarta.annotation.Nullable final String value) {
         this.verifiedPublisherId = value;
     }

@@ -58,9 +58,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     private AccessPackageCatalogState state;
     /**
      * Instantiates a new accessPackageCatalog and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageCatalog() {
         super();
     }
@@ -194,9 +192,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -216,108 +212,84 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     /**
      * Sets the accessPackages property value. The access packages in this catalog. Read-only. Nullable.
      * @param value Value to set for the accessPackages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccessPackages(@jakarta.annotation.Nullable final java.util.List<AccessPackage> value) {
         this.accessPackages = value;
     }
     /**
      * Sets the catalogType property value. Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
      * @param value Value to set for the catalogType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCatalogType(@jakarta.annotation.Nullable final AccessPackageCatalogType value) {
         this.catalogType = value;
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the customWorkflowExtensions property value. The customWorkflowExtensions property
      * @param value Value to set for the customWorkflowExtensions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomWorkflowExtensions(@jakarta.annotation.Nullable final java.util.List<CustomCalloutExtension> value) {
         this.customWorkflowExtensions = value;
     }
     /**
      * Sets the description property value. The description of the access package catalog.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of the access package catalog.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the isExternallyVisible property value. Whether the access packages in this catalog can be requested by users outside of the tenant.
      * @param value Value to set for the isExternallyVisible property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsExternallyVisible(@jakarta.annotation.Nullable final Boolean value) {
         this.isExternallyVisible = value;
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the modifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
     }
     /**
      * Sets the resourceRoles property value. The resourceRoles property
      * @param value Value to set for the resourceRoles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceRoles(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceRole> value) {
         this.resourceRoles = value;
     }
     /**
      * Sets the resources property value. Access package resources in this catalog.
      * @param value Value to set for the resources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResources(@jakarta.annotation.Nullable final java.util.List<AccessPackageResource> value) {
         this.resources = value;
     }
     /**
      * Sets the resourceScopes property value. The resourceScopes property
      * @param value Value to set for the resourceScopes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceScopes(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceScope> value) {
         this.resourceScopes = value;
     }
     /**
      * Sets the state property value. Has the value published if the access packages are available for management. The possible values are: unpublished, published, unknownFutureValue.
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final AccessPackageCatalogState value) {
         this.state = value;
     }

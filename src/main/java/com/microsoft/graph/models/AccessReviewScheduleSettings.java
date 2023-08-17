@@ -71,9 +71,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     private Boolean reminderNotificationsEnabled;
     /**
      * Instantiates a new accessReviewScheduleSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessReviewScheduleSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -233,9 +231,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("applyActions", this.getApplyActions());
@@ -257,135 +253,105 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the applyActions property value. Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction.
      * @param value Value to set for the applyActions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplyActions(@jakarta.annotation.Nullable final java.util.List<AccessReviewApplyAction> value) {
         this.applyActions = value;
     }
     /**
      * Sets the autoApplyDecisionsEnabled property value. Indicates whether decisions are automatically applied. When set to false, an admin must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.  CAUTION: If both autoApplyDecisionsEnabled and defaultDecisionEnabled are true, all access for the principals to the resource risks being revoked if the reviewers fail to respond.
      * @param value Value to set for the autoApplyDecisionsEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAutoApplyDecisionsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.autoApplyDecisionsEnabled = value;
     }
     /**
      * Sets the decisionHistoriesForReviewersEnabled property value. Indicates whether decisions on previous access review stages are available for reviewers on an accessReviewInstance with multiple subsequent stages. If not provided, the default is disabled (false).
      * @param value Value to set for the decisionHistoriesForReviewersEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDecisionHistoriesForReviewersEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.decisionHistoriesForReviewersEnabled = value;
     }
     /**
      * Sets the defaultDecision property value. Decision chosen if defaultDecisionEnabled is enabled. Can be one of Approve, Deny, or Recommendation.
      * @param value Value to set for the defaultDecision property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefaultDecision(@jakarta.annotation.Nullable final String value) {
         this.defaultDecision = value;
     }
     /**
      * Sets the defaultDecisionEnabled property value. Indicates whether the default decision is enabled or disabled when reviewers do not respond. Default value is false.  CAUTION: If both autoApplyDecisionsEnabled and defaultDecisionEnabled are true, all access for the principals to the resource risks being revoked if the reviewers fail to respond.
      * @param value Value to set for the defaultDecisionEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefaultDecisionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.defaultDecisionEnabled = value;
     }
     /**
      * Sets the instanceDurationInDays property value. Duration of an access review instance in days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
      * @param value Value to set for the instanceDurationInDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstanceDurationInDays(@jakarta.annotation.Nullable final Integer value) {
         this.instanceDurationInDays = value;
     }
     /**
      * Sets the justificationRequiredOnApproval property value. Indicates whether reviewers are required to provide justification with their decision. Default value is false.
      * @param value Value to set for the justificationRequiredOnApproval property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setJustificationRequiredOnApproval(@jakarta.annotation.Nullable final Boolean value) {
         this.justificationRequiredOnApproval = value;
     }
     /**
      * Sets the mailNotificationsEnabled property value. Indicates whether emails are enabled or disabled. Default value is false.
      * @param value Value to set for the mailNotificationsEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMailNotificationsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.mailNotificationsEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the recommendationInsightSettings property value. Optional. Describes the types of insights that aid reviewers to make access review decisions. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationInsightSettings setting will be used instead of the value of this property.
      * @param value Value to set for the recommendationInsightSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecommendationInsightSettings(@jakarta.annotation.Nullable final java.util.List<AccessReviewRecommendationInsightSetting> value) {
         this.recommendationInsightSettings = value;
     }
     /**
      * Sets the recommendationLookBackDuration property value. Optional field. Indicates the period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look-back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationLookBackDuration setting will be used instead of the value of this property.
      * @param value Value to set for the recommendationLookBackDuration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecommendationLookBackDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.recommendationLookBackDuration = value;
     }
     /**
      * Sets the recommendationsEnabled property value. Indicates whether decision recommendations are enabled or disabled. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationsEnabled setting will be used instead of the value of this property.
      * @param value Value to set for the recommendationsEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecommendationsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.recommendationsEnabled = value;
     }
     /**
      * Sets the recurrence property value. Detailed settings for recurrence using the standard Outlook recurrence object. Note: Only dayOfMonth, interval, and type (weekly, absoluteMonthly) properties are supported. Use the property startDate on recurrenceRange to determine the day the review starts.
      * @param value Value to set for the recurrence property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecurrence(@jakarta.annotation.Nullable final PatternedRecurrence value) {
         this.recurrence = value;
     }
     /**
      * Sets the reminderNotificationsEnabled property value. Indicates whether reminders are enabled or disabled. Default value is false.
      * @param value Value to set for the reminderNotificationsEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReminderNotificationsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.reminderNotificationsEnabled = value;
     }

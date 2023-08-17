@@ -22,9 +22,7 @@ public class AgreementFileData implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new agreementFileData and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AgreementFileData() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -76,9 +74,7 @@ public class AgreementFileData implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("data", this.getData());
@@ -88,27 +84,21 @@ public class AgreementFileData implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the data property value. Data that represents the terms of use PDF document. Read-only.
      * @param value Value to set for the data property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setData(@jakarta.annotation.Nullable final byte[] value) {
         this.data = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

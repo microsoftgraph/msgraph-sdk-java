@@ -32,9 +32,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Pa
     private AppCredentialRestrictionType restrictionType;
     /**
      * Instantiates a new passwordCredentialConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PasswordCredentialConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -104,9 +102,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writePeriodAndDurationValue("maxLifetime", this.getMaxLifetime());
@@ -118,45 +114,35 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Pa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the maxLifetime property value. The maxLifetime property
      * @param value Value to set for the maxLifetime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaxLifetime(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.maxLifetime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the restrictForAppsCreatedAfterDateTime property value. Enforces the policy for an app created on or after the enforcement date. For existing applications, the enforcement date would be back dated. To apply to all applications, enforcement datetime would be null.
      * @param value Value to set for the restrictForAppsCreatedAfterDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRestrictForAppsCreatedAfterDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.restrictForAppsCreatedAfterDateTime = value;
     }
     /**
      * Sets the restrictionType property value. The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime,customPasswordAddition, unknownFutureValue. Each value of restrictionType can be used only once per policy.
      * @param value Value to set for the restrictionType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRestrictionType(@jakarta.annotation.Nullable final AppCredentialRestrictionType value) {
         this.restrictionType = value;
     }

@@ -34,9 +34,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     private SelectionLikelihoodInfo selectionLikelihood;
     /**
      * Instantiates a new scoredEmailAddress and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ScoredEmailAddress() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("address", this.getAddress());
@@ -130,54 +126,42 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the address property value. The email address.
      * @param value Value to set for the address property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAddress(@jakarta.annotation.Nullable final String value) {
         this.address = value;
     }
     /**
      * Sets the itemId property value. The itemId property
      * @param value Value to set for the itemId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setItemId(@jakarta.annotation.Nullable final String value) {
         this.itemId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships.
      * @param value Value to set for the relevanceScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRelevanceScore(@jakarta.annotation.Nullable final Double value) {
         this.relevanceScore = value;
     }
     /**
      * Sets the selectionLikelihood property value. The selectionLikelihood property
      * @param value Value to set for the selectionLikelihood property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSelectionLikelihood(@jakarta.annotation.Nullable final SelectionLikelihoodInfo value) {
         this.selectionLikelihood = value;
     }

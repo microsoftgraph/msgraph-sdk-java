@@ -35,9 +35,7 @@ public class DiscPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json settlement;
     /**
      * Instantiates a new discPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DiscPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -116,9 +114,7 @@ public class DiscPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("basis", this.getBasis());
@@ -131,54 +127,42 @@ public class DiscPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the basis property value. The basis property
      * @param value Value to set for the basis property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBasis(@jakarta.annotation.Nullable final Json value) {
         this.basis = value;
     }
     /**
      * Sets the maturity property value. The maturity property
      * @param value Value to set for the maturity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaturity(@jakarta.annotation.Nullable final Json value) {
         this.maturity = value;
     }
     /**
      * Sets the pr property value. The pr property
      * @param value Value to set for the pr property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPr(@jakarta.annotation.Nullable final Json value) {
         this.pr = value;
     }
     /**
      * Sets the redemption property value. The redemption property
      * @param value Value to set for the redemption property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRedemption(@jakarta.annotation.Nullable final Json value) {
         this.redemption = value;
     }
     /**
      * Sets the settlement property value. The settlement property
      * @param value Value to set for the settlement property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettlement(@jakarta.annotation.Nullable final Json value) {
         this.settlement = value;
     }

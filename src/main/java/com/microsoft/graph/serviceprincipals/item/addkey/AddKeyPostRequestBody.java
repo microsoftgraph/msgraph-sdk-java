@@ -28,9 +28,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
     private String proof;
     /**
      * Instantiates a new addKeyPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AddKeyPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -91,9 +89,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("keyCredential", this.getKeyCredential());
@@ -104,36 +100,28 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the keyCredential property value. The keyCredential property
      * @param value Value to set for the keyCredential property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKeyCredential(@jakarta.annotation.Nullable final KeyCredential value) {
         this.keyCredential = value;
     }
     /**
      * Sets the passwordCredential property value. The passwordCredential property
      * @param value Value to set for the passwordCredential property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordCredential(@jakarta.annotation.Nullable final PasswordCredential value) {
         this.passwordCredential = value;
     }
     /**
      * Sets the proof property value. The proof property
      * @param value Value to set for the proof property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProof(@jakarta.annotation.Nullable final String value) {
         this.proof = value;
     }

@@ -33,9 +33,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new iosNetworkUsageRule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosNetworkUsageRule() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -105,9 +103,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("cellularDataBlocked", this.getCellularDataBlocked());
@@ -119,45 +115,35 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the cellularDataBlocked property value. If set to true, corresponding managed apps will not be allowed to use cellular data at any time.
      * @param value Value to set for the cellularDataBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCellularDataBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.cellularDataBlocked = value;
     }
     /**
      * Sets the cellularDataBlockWhenRoaming property value. If set to true, corresponding managed apps will not be allowed to use cellular data when roaming.
      * @param value Value to set for the cellularDataBlockWhenRoaming property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCellularDataBlockWhenRoaming(@jakarta.annotation.Nullable final Boolean value) {
         this.cellularDataBlockWhenRoaming = value;
     }
     /**
      * Sets the managedApps property value. Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the managedApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagedApps(@jakarta.annotation.Nullable final java.util.List<AppListItem> value) {
         this.managedApps = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

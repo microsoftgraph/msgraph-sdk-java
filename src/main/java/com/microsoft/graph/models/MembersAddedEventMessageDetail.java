@@ -22,9 +22,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
     private OffsetDateTime visibleHistoryStartDateTime;
     /**
      * Instantiates a new membersAddedEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MembersAddedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.membersAddedEventMessageDetail");
@@ -78,9 +76,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -91,27 +87,21 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
     /**
      * Sets the members property value. List of members added.
      * @param value Value to set for the members property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<TeamworkUserIdentity> value) {
         this.members = value;
     }
     /**
      * Sets the visibleHistoryStartDateTime property value. The timestamp that denotes how far back a conversation's history is shared with the conversation members.
      * @param value Value to set for the visibleHistoryStartDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVisibleHistoryStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.visibleHistoryStartDateTime = value;
     }

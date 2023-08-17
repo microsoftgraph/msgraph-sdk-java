@@ -16,9 +16,7 @@ public class DeviceManagementReports extends Entity implements Parsable {
     private java.util.List<DeviceManagementExportJob> exportJobs;
     /**
      * Instantiates a new deviceManagementReports and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceManagementReports() {
         super();
     }
@@ -53,9 +51,7 @@ public class DeviceManagementReports extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -64,9 +60,7 @@ public class DeviceManagementReports extends Entity implements Parsable {
     /**
      * Sets the exportJobs property value. Entity representing a job to export a report
      * @param value Value to set for the exportJobs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExportJobs(@jakarta.annotation.Nullable final java.util.List<DeviceManagementExportJob> value) {
         this.exportJobs = value;
     }

@@ -83,9 +83,7 @@ public class LearningContent extends Entity implements Parsable {
     private String title;
     /**
      * Instantiates a new learningContent and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LearningContent() {
         super();
     }
@@ -273,9 +271,7 @@ public class LearningContent extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -301,162 +297,126 @@ public class LearningContent extends Entity implements Parsable {
     /**
      * Sets the additionalTags property value. Keywords, topics, and other tags associated with the learning content. Optional.
      * @param value Value to set for the additionalTags property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.additionalTags = value;
     }
     /**
      * Sets the contentWebUrl property value. The content web URL for the learning content. Required.
      * @param value Value to set for the contentWebUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentWebUrl(@jakarta.annotation.Nullable final String value) {
         this.contentWebUrl = value;
     }
     /**
      * Sets the contributors property value. The authors, creators, or contributors of the learning content. Optional.
      * @param value Value to set for the contributors property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContributors(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.contributors = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the learning content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description or summary for the learning content. Optional.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the duration property value. The duration of the learning content in seconds. The value is represented in ISO 8601 format for durations. Optional.
      * @param value Value to set for the duration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.duration = value;
     }
     /**
      * Sets the externalId property value. Unique external content ID for the learning content. Required.
      * @param value Value to set for the externalId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
      * Sets the format property value. The format of the learning content. For example, Course, Video, Book, Book Summary, Audiobook Summary. Optional.
      * @param value Value to set for the format property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFormat(@jakarta.annotation.Nullable final String value) {
         this.format = value;
     }
     /**
      * Sets the isActive property value. Indicates whether the content is active or not. Inactive content doesn't show up in the UI. The default value is true. Optional.
      * @param value Value to set for the isActive property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
         this.isActive = value;
     }
     /**
      * Sets the isPremium property value. Indicates whether the learning content requires the user to sign-in on the learning provider platform or not. The default value is false. Optional.
      * @param value Value to set for the isPremium property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsPremium(@jakarta.annotation.Nullable final Boolean value) {
         this.isPremium = value;
     }
     /**
      * Sets the isSearchable property value. Indicates whether the learning content is searchable or not. The default value is true. Optional.
      * @param value Value to set for the isSearchable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSearchable(@jakarta.annotation.Nullable final Boolean value) {
         this.isSearchable = value;
     }
     /**
      * Sets the languageTag property value. The language of the learning content, for example, en-us or fr-fr. Required.
      * @param value Value to set for the languageTag property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
         this.languageTag = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the learning content was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the numberOfPages property value. The number of pages of the learning content, for example, 9. Optional.
      * @param value Value to set for the numberOfPages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNumberOfPages(@jakarta.annotation.Nullable final Integer value) {
         this.numberOfPages = value;
     }
     /**
      * Sets the skillTags property value. The skills tags associated with the learning content. Optional.
      * @param value Value to set for the skillTags property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSkillTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.skillTags = value;
     }
     /**
      * Sets the sourceName property value. The source name of the learning content, such as LinkedIn Learning or Coursera. Optional.
      * @param value Value to set for the sourceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceName(@jakarta.annotation.Nullable final String value) {
         this.sourceName = value;
     }
     /**
      * Sets the thumbnailWebUrl property value. The URL of learning content thumbnail image. Optional.
      * @param value Value to set for the thumbnailWebUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setThumbnailWebUrl(@jakarta.annotation.Nullable final String value) {
         this.thumbnailWebUrl = value;
     }
     /**
      * Sets the title property value. The title of the learning content. Required.
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }

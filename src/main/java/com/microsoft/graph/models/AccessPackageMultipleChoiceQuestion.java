@@ -17,9 +17,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
     private Boolean isMultipleSelectionAllowed;
     /**
      * Instantiates a new accessPackageMultipleChoiceQuestion and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageMultipleChoiceQuestion() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageMultipleChoiceQuestion");
@@ -64,9 +62,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
     /**
      * Sets the choices property value. List of answer choices.
      * @param value Value to set for the choices property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChoices(@jakarta.annotation.Nullable final java.util.List<AccessPackageAnswerChoice> value) {
         this.choices = value;
     }
     /**
      * Sets the isMultipleSelectionAllowed property value. Indicates whether requestor can select multiple choices as their answer.
      * @param value Value to set for the isMultipleSelectionAllowed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsMultipleSelectionAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.isMultipleSelectionAllowed = value;
     }

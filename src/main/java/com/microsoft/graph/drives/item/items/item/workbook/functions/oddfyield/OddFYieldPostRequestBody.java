@@ -51,9 +51,7 @@ public class OddFYieldPostRequestBody implements AdditionalDataHolder, Parsable 
     private Json settlement;
     /**
      * Instantiates a new oddFYieldPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OddFYieldPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -168,9 +166,7 @@ public class OddFYieldPostRequestBody implements AdditionalDataHolder, Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("basis", this.getBasis());
@@ -187,90 +183,70 @@ public class OddFYieldPostRequestBody implements AdditionalDataHolder, Parsable 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the basis property value. The basis property
      * @param value Value to set for the basis property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBasis(@jakarta.annotation.Nullable final Json value) {
         this.basis = value;
     }
     /**
      * Sets the firstCoupon property value. The firstCoupon property
      * @param value Value to set for the firstCoupon property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirstCoupon(@jakarta.annotation.Nullable final Json value) {
         this.firstCoupon = value;
     }
     /**
      * Sets the frequency property value. The frequency property
      * @param value Value to set for the frequency property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFrequency(@jakarta.annotation.Nullable final Json value) {
         this.frequency = value;
     }
     /**
      * Sets the issue property value. The issue property
      * @param value Value to set for the issue property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIssue(@jakarta.annotation.Nullable final Json value) {
         this.issue = value;
     }
     /**
      * Sets the maturity property value. The maturity property
      * @param value Value to set for the maturity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaturity(@jakarta.annotation.Nullable final Json value) {
         this.maturity = value;
     }
     /**
      * Sets the pr property value. The pr property
      * @param value Value to set for the pr property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPr(@jakarta.annotation.Nullable final Json value) {
         this.pr = value;
     }
     /**
      * Sets the rate property value. The rate property
      * @param value Value to set for the rate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRate(@jakarta.annotation.Nullable final Json value) {
         this.rate = value;
     }
     /**
      * Sets the redemption property value. The redemption property
      * @param value Value to set for the redemption property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRedemption(@jakarta.annotation.Nullable final Json value) {
         this.redemption = value;
     }
     /**
      * Sets the settlement property value. The settlement property
      * @param value Value to set for the settlement property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettlement(@jakarta.annotation.Nullable final Json value) {
         this.settlement = value;
     }

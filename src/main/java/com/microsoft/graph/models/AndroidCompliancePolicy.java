@@ -96,9 +96,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
     private Boolean storageRequireEncryption;
     /**
      * Instantiates a new androidCompliancePolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AndroidCompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.androidCompliancePolicy");
@@ -314,9 +312,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -345,189 +341,147 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
     /**
      * Sets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection.
      * @param value Value to set for the deviceThreatProtectionEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceThreatProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.deviceThreatProtectionEnabled = value;
     }
     /**
      * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceThreatProtectionRequiredSecurityLevel(@jakarta.annotation.Nullable final DeviceThreatProtectionLevel value) {
         this.deviceThreatProtectionRequiredSecurityLevel = value;
     }
     /**
      * Sets the minAndroidSecurityPatchLevel property value. Minimum Android security patch level.
      * @param value Value to set for the minAndroidSecurityPatchLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinAndroidSecurityPatchLevel(@jakarta.annotation.Nullable final String value) {
         this.minAndroidSecurityPatchLevel = value;
     }
     /**
      * Sets the osMaximumVersion property value. Maximum Android version.
      * @param value Value to set for the osMaximumVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMaximumVersion = value;
     }
     /**
      * Sets the osMinimumVersion property value. Minimum Android version.
      * @param value Value to set for the osMinimumVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMinimumVersion = value;
     }
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 365
      * @param value Value to set for the passwordExpirationDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.passwordExpirationDays = value;
     }
     /**
      * Sets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
      * @param value Value to set for the passwordMinimumLength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumLength = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeLock(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinutesOfInactivityBeforeLock = value;
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 1 to 24
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the passwordRequired property value. Require a password to unlock device.
      * @param value Value to set for the passwordRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordRequired = value;
     }
     /**
      * Sets the passwordRequiredType property value. Android required password type.
      * @param value Value to set for the passwordRequiredType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidRequiredPasswordType value) {
         this.passwordRequiredType = value;
     }
     /**
      * Sets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
      * @param value Value to set for the securityBlockJailbrokenDevices property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecurityBlockJailbrokenDevices(@jakarta.annotation.Nullable final Boolean value) {
         this.securityBlockJailbrokenDevices = value;
     }
     /**
      * Sets the securityDisableUsbDebugging property value. Disable USB debugging on Android devices.
      * @param value Value to set for the securityDisableUsbDebugging property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecurityDisableUsbDebugging(@jakarta.annotation.Nullable final Boolean value) {
         this.securityDisableUsbDebugging = value;
     }
     /**
      * Sets the securityPreventInstallAppsFromUnknownSources property value. Require that devices disallow installation of apps from unknown sources.
      * @param value Value to set for the securityPreventInstallAppsFromUnknownSources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecurityPreventInstallAppsFromUnknownSources(@jakarta.annotation.Nullable final Boolean value) {
         this.securityPreventInstallAppsFromUnknownSources = value;
     }
     /**
      * Sets the securityRequireCompanyPortalAppIntegrity property value. Require the device to pass the Company Portal client app runtime integrity check.
      * @param value Value to set for the securityRequireCompanyPortalAppIntegrity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecurityRequireCompanyPortalAppIntegrity(@jakarta.annotation.Nullable final Boolean value) {
         this.securityRequireCompanyPortalAppIntegrity = value;
     }
     /**
      * Sets the securityRequireGooglePlayServices property value. Require Google Play Services to be installed and enabled on the device.
      * @param value Value to set for the securityRequireGooglePlayServices property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecurityRequireGooglePlayServices(@jakarta.annotation.Nullable final Boolean value) {
         this.securityRequireGooglePlayServices = value;
     }
     /**
      * Sets the securityRequireSafetyNetAttestationBasicIntegrity property value. Require the device to pass the SafetyNet basic integrity check.
      * @param value Value to set for the securityRequireSafetyNetAttestationBasicIntegrity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecurityRequireSafetyNetAttestationBasicIntegrity(@jakarta.annotation.Nullable final Boolean value) {
         this.securityRequireSafetyNetAttestationBasicIntegrity = value;
     }
     /**
      * Sets the securityRequireSafetyNetAttestationCertifiedDevice property value. Require the device to pass the SafetyNet certified device check.
      * @param value Value to set for the securityRequireSafetyNetAttestationCertifiedDevice property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecurityRequireSafetyNetAttestationCertifiedDevice(@jakarta.annotation.Nullable final Boolean value) {
         this.securityRequireSafetyNetAttestationCertifiedDevice = value;
     }
     /**
      * Sets the securityRequireUpToDateSecurityProviders property value. Require the device to have up to date security providers. The device will require Google Play Services to be enabled and up to date.
      * @param value Value to set for the securityRequireUpToDateSecurityProviders property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecurityRequireUpToDateSecurityProviders(@jakarta.annotation.Nullable final Boolean value) {
         this.securityRequireUpToDateSecurityProviders = value;
     }
     /**
      * Sets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
      * @param value Value to set for the securityRequireVerifyApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecurityRequireVerifyApps(@jakarta.annotation.Nullable final Boolean value) {
         this.securityRequireVerifyApps = value;
     }
     /**
      * Sets the storageRequireEncryption property value. Require encryption on Android devices.
      * @param value Value to set for the storageRequireEncryption property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStorageRequireEncryption(@jakarta.annotation.Nullable final Boolean value) {
         this.storageRequireEncryption = value;
     }

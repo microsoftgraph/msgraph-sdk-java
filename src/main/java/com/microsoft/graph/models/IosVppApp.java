@@ -53,9 +53,7 @@ public class IosVppApp extends MobileApp implements Parsable {
     private String vppTokenOrganizationName;
     /**
      * Instantiates a new iosVppApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosVppApp() {
         super();
         this.setOdataType("#microsoft.graph.iosVppApp");
@@ -172,9 +170,7 @@ public class IosVppApp extends MobileApp implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -192,90 +188,70 @@ public class IosVppApp extends MobileApp implements Parsable {
     /**
      * Sets the applicableDeviceType property value. The applicable iOS Device Type.
      * @param value Value to set for the applicableDeviceType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicableDeviceType(@jakarta.annotation.Nullable final IosDeviceType value) {
         this.applicableDeviceType = value;
     }
     /**
      * Sets the appStoreUrl property value. The store URL.
      * @param value Value to set for the appStoreUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppStoreUrl(@jakarta.annotation.Nullable final String value) {
         this.appStoreUrl = value;
     }
     /**
      * Sets the bundleId property value. The Identity Name.
      * @param value Value to set for the bundleId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBundleId(@jakarta.annotation.Nullable final String value) {
         this.bundleId = value;
     }
     /**
      * Sets the licensingType property value. The supported License Type.
      * @param value Value to set for the licensingType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLicensingType(@jakarta.annotation.Nullable final VppLicensingType value) {
         this.licensingType = value;
     }
     /**
      * Sets the releaseDateTime property value. The VPP application release date and time.
      * @param value Value to set for the releaseDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReleaseDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.releaseDateTime = value;
     }
     /**
      * Sets the totalLicenseCount property value. The total number of VPP licenses.
      * @param value Value to set for the totalLicenseCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalLicenseCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalLicenseCount = value;
     }
     /**
      * Sets the usedLicenseCount property value. The number of VPP licenses in use.
      * @param value Value to set for the usedLicenseCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUsedLicenseCount(@jakarta.annotation.Nullable final Integer value) {
         this.usedLicenseCount = value;
     }
     /**
      * Sets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
      * @param value Value to set for the vppTokenAccountType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVppTokenAccountType(@jakarta.annotation.Nullable final VppTokenAccountType value) {
         this.vppTokenAccountType = value;
     }
     /**
      * Sets the vppTokenAppleId property value. The Apple Id associated with the given Apple Volume Purchase Program Token.
      * @param value Value to set for the vppTokenAppleId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVppTokenAppleId(@jakarta.annotation.Nullable final String value) {
         this.vppTokenAppleId = value;
     }
     /**
      * Sets the vppTokenOrganizationName property value. The organization associated with the Apple Volume Purchase Program Token
      * @param value Value to set for the vppTokenOrganizationName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVppTokenOrganizationName(@jakarta.annotation.Nullable final String value) {
         this.vppTokenOrganizationName = value;
     }

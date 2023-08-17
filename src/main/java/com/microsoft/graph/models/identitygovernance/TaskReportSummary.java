@@ -34,9 +34,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
     private Integer unprocessedTasks;
     /**
      * Instantiates a new taskReportSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TaskReportSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("failedTasks", this.getFailedTasks());
@@ -130,54 +126,42 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the failedTasks property value. The number of failed tasks in a report.
      * @param value Value to set for the failedTasks property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailedTasks(@jakarta.annotation.Nullable final Integer value) {
         this.failedTasks = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the successfulTasks property value. The total number of successful tasks in a report.
      * @param value Value to set for the successfulTasks property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSuccessfulTasks(@jakarta.annotation.Nullable final Integer value) {
         this.successfulTasks = value;
     }
     /**
      * Sets the totalTasks property value. The total number of tasks in a report.
      * @param value Value to set for the totalTasks property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalTasks(@jakarta.annotation.Nullable final Integer value) {
         this.totalTasks = value;
     }
     /**
      * Sets the unprocessedTasks property value. The number of unprocessed tasks in a report.
      * @param value Value to set for the unprocessedTasks property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnprocessedTasks(@jakarta.annotation.Nullable final Integer value) {
         this.unprocessedTasks = value;
     }

@@ -13,9 +13,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
     private String chatId;
     /**
      * Instantiates a new chatMembersNotificationRecipient and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ChatMembersNotificationRecipient() {
         super();
         this.setOdataType("#microsoft.graph.chatMembersNotificationRecipient");
@@ -51,9 +49,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
     /**
      * Sets the chatId property value. The unique identifier for the chat whose members should receive the notifications.
      * @param value Value to set for the chatId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChatId(@jakarta.annotation.Nullable final String value) {
         this.chatId = value;
     }

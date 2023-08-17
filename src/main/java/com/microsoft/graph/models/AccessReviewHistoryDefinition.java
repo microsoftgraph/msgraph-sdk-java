@@ -50,9 +50,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     private AccessReviewHistoryStatus status;
     /**
      * Instantiates a new accessReviewHistoryDefinition and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessReviewHistoryDefinition() {
         super();
     }
@@ -168,9 +166,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -188,90 +184,70 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final UserIdentity value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. Timestamp when the access review definition was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the decisions property value. Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions will be included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
      * @param value Value to set for the decisions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDecisions(@jakarta.annotation.Nullable final java.util.List<AccessReviewHistoryDecisionFilter> value) {
         this.decisions = value;
     }
     /**
      * Sets the displayName property value. Name for the access review history data collection. Required.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the instances property value. If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that does not recur will have exactly one instance.
      * @param value Value to set for the instances property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstances(@jakarta.annotation.Nullable final java.util.List<AccessReviewHistoryInstance> value) {
         this.instances = value;
     }
     /**
      * Sets the reviewHistoryPeriodEndDateTime property value. A timestamp. Reviews ending on or before this date will be included in the fetched history data. Only required if scheduleSettings is not defined.
      * @param value Value to set for the reviewHistoryPeriodEndDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReviewHistoryPeriodEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.reviewHistoryPeriodEndDateTime = value;
     }
     /**
      * Sets the reviewHistoryPeriodStartDateTime property value. A timestamp. Reviews starting on or before this date will be included in the fetched history data. Only required if scheduleSettings is not defined.
      * @param value Value to set for the reviewHistoryPeriodStartDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReviewHistoryPeriodStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.reviewHistoryPeriodStartDateTime = value;
     }
     /**
      * Sets the scheduleSettings property value. The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime are not defined. Not supported yet.
      * @param value Value to set for the scheduleSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScheduleSettings(@jakarta.annotation.Nullable final AccessReviewHistoryScheduleSettings value) {
         this.scheduleSettings = value;
     }
     /**
      * Sets the scopes property value. Used to scope what reviews are included in the fetched history data. Fetches reviews whose scope matches with this provided scope. Required.
      * @param value Value to set for the scopes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScopes(@jakarta.annotation.Nullable final java.util.List<AccessReviewScope> value) {
         this.scopes = value;
     }
     /**
      * Sets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final AccessReviewHistoryStatus value) {
         this.status = value;
     }

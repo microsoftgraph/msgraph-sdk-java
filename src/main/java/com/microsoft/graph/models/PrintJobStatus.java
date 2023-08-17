@@ -34,9 +34,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
     private PrintJobProcessingState state;
     /**
      * Instantiates a new printJobStatus and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PrintJobStatus() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -130,54 +126,42 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the description property value. A human-readable description of the print job's current processing state. Read-only.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the details property value. Additional details for print job state. Valid values are described in the following table. Read-only.
      * @param value Value to set for the details property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDetails(@jakarta.annotation.Nullable final java.util.List<PrintJobStateDetail> value) {
         this.details = value;
     }
     /**
      * Sets the isAcquiredByPrinter property value. True if the job was acknowledged by a printer; false otherwise. Read-only.
      * @param value Value to set for the isAcquiredByPrinter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAcquiredByPrinter(@jakarta.annotation.Nullable final Boolean value) {
         this.isAcquiredByPrinter = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final PrintJobProcessingState value) {
         this.state = value;
     }

@@ -26,9 +26,7 @@ public class Relation extends Entity implements Parsable {
     private Term toTerm;
     /**
      * Instantiates a new relation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Relation() {
         super();
     }
@@ -90,9 +88,7 @@ public class Relation extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +100,28 @@ public class Relation extends Entity implements Parsable {
     /**
      * Sets the fromTerm property value. The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
      * @param value Value to set for the fromTerm property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFromTerm(@jakarta.annotation.Nullable final Term value) {
         this.fromTerm = value;
     }
     /**
      * Sets the relationship property value. The type of relation. Possible values are: pin, reuse.
      * @param value Value to set for the relationship property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRelationship(@jakarta.annotation.Nullable final RelationType value) {
         this.relationship = value;
     }
     /**
      * Sets the set property value. The [set] in which the relation is relevant.
      * @param value Value to set for the set property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSet(@jakarta.annotation.Nullable final Set value) {
         this.set = value;
     }
     /**
      * Sets the toTerm property value. The to [term] of the relation. The term to which the relationship is defined.
      * @param value Value to set for the toTerm property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setToTerm(@jakarta.annotation.Nullable final Term value) {
         this.toTerm = value;
     }

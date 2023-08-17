@@ -73,9 +73,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     private String version;
     /**
      * Instantiates a new managedAppRegistration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ManagedAppRegistration() {
         super();
     }
@@ -244,9 +242,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -269,135 +265,105 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     /**
      * Sets the appIdentifier property value. The app package Identifier
      * @param value Value to set for the appIdentifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppIdentifier(@jakarta.annotation.Nullable final MobileAppIdentifier value) {
         this.appIdentifier = value;
     }
     /**
      * Sets the applicationVersion property value. App version
      * @param value Value to set for the applicationVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationVersion(@jakarta.annotation.Nullable final String value) {
         this.applicationVersion = value;
     }
     /**
      * Sets the appliedPolicies property value. Zero or more policys already applied on the registered app when it last synchronized with managment service.
      * @param value Value to set for the appliedPolicies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppliedPolicies(@jakarta.annotation.Nullable final java.util.List<ManagedAppPolicy> value) {
         this.appliedPolicies = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time of creation
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the deviceName property value. Host device name
      * @param value Value to set for the deviceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
      * Sets the deviceTag property value. App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
      * @param value Value to set for the deviceTag property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceTag(@jakarta.annotation.Nullable final String value) {
         this.deviceTag = value;
     }
     /**
      * Sets the deviceType property value. Host device type
      * @param value Value to set for the deviceType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceType(@jakarta.annotation.Nullable final String value) {
         this.deviceType = value;
     }
     /**
      * Sets the flaggedReasons property value. Zero or more reasons an app registration is flagged. E.g. app running on rooted device
      * @param value Value to set for the flaggedReasons property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFlaggedReasons(@jakarta.annotation.Nullable final java.util.List<ManagedAppFlaggedReason> value) {
         this.flaggedReasons = value;
     }
     /**
      * Sets the intendedPolicies property value. Zero or more policies admin intended for the app as of now.
      * @param value Value to set for the intendedPolicies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIntendedPolicies(@jakarta.annotation.Nullable final java.util.List<ManagedAppPolicy> value) {
         this.intendedPolicies = value;
     }
     /**
      * Sets the lastSyncDateTime property value. Date and time of last the app synced with management service.
      * @param value Value to set for the lastSyncDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSyncDateTime = value;
     }
     /**
      * Sets the managementSdkVersion property value. App management SDK version
      * @param value Value to set for the managementSdkVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagementSdkVersion(@jakarta.annotation.Nullable final String value) {
         this.managementSdkVersion = value;
     }
     /**
      * Sets the operations property value. Zero or more long running operations triggered on the app registration.
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<ManagedAppOperation> value) {
         this.operations = value;
     }
     /**
      * Sets the platformVersion property value. Operating System version
      * @param value Value to set for the platformVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPlatformVersion(@jakarta.annotation.Nullable final String value) {
         this.platformVersion = value;
     }
     /**
      * Sets the userId property value. The user Id to who this app registration belongs.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
      * Sets the version property value. Version of the entity.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }

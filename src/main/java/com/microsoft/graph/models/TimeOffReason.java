@@ -21,9 +21,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
     private Boolean isActive;
     /**
      * Instantiates a new timeOffReason and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TimeOffReason() {
         super();
         this.setOdataType("#microsoft.graph.timeOffReason");
@@ -77,9 +75,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +86,21 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
     /**
      * Sets the displayName property value. The name of the timeOffReason. Required.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the iconType property value. Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.
      * @param value Value to set for the iconType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIconType(@jakarta.annotation.Nullable final TimeOffReasonIconType value) {
         this.iconType = value;
     }
     /**
      * Sets the isActive property value. Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required.
      * @param value Value to set for the isActive property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
         this.isActive = value;
     }

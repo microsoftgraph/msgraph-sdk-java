@@ -13,9 +13,7 @@ public class AnonymousGuestConversationMember extends ConversationMember impleme
     private String anonymousGuestId;
     /**
      * Instantiates a new anonymousGuestConversationMember and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AnonymousGuestConversationMember() {
         super();
         this.setOdataType("#microsoft.graph.anonymousGuestConversationMember");
@@ -51,9 +49,7 @@ public class AnonymousGuestConversationMember extends ConversationMember impleme
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class AnonymousGuestConversationMember extends ConversationMember impleme
     /**
      * Sets the anonymousGuestId property value. Unique ID that represents the user. Note: This ID can change if the user leaves and rejoins the meeting, or joins from a different device.
      * @param value Value to set for the anonymousGuestId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAnonymousGuestId(@jakarta.annotation.Nullable final String value) {
         this.anonymousGuestId = value;
     }

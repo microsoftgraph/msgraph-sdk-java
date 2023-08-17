@@ -42,9 +42,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     private ScheduleChangeState state;
     /**
      * Instantiates a new scheduleChangeRequest and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ScheduleChangeRequest() {
         super();
         this.setOdataType("#microsoft.graph.scheduleChangeRequest");
@@ -153,9 +151,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -167,72 +163,56 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     /**
      * Sets the assignedTo property value. The assignedTo property
      * @param value Value to set for the assignedTo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignedTo(@jakarta.annotation.Nullable final ScheduleChangeRequestActor value) {
         this.assignedTo = value;
     }
     /**
      * Sets the managerActionDateTime property value. The managerActionDateTime property
      * @param value Value to set for the managerActionDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagerActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.managerActionDateTime = value;
     }
     /**
      * Sets the managerActionMessage property value. The managerActionMessage property
      * @param value Value to set for the managerActionMessage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagerActionMessage(@jakarta.annotation.Nullable final String value) {
         this.managerActionMessage = value;
     }
     /**
      * Sets the managerUserId property value. The managerUserId property
      * @param value Value to set for the managerUserId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagerUserId(@jakarta.annotation.Nullable final String value) {
         this.managerUserId = value;
     }
     /**
      * Sets the senderDateTime property value. The senderDateTime property
      * @param value Value to set for the senderDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSenderDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.senderDateTime = value;
     }
     /**
      * Sets the senderMessage property value. The senderMessage property
      * @param value Value to set for the senderMessage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSenderMessage(@jakarta.annotation.Nullable final String value) {
         this.senderMessage = value;
     }
     /**
      * Sets the senderUserId property value. The senderUserId property
      * @param value Value to set for the senderUserId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSenderUserId(@jakarta.annotation.Nullable final String value) {
         this.senderUserId = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final ScheduleChangeState value) {
         this.state = value;
     }

@@ -17,9 +17,7 @@ public class WorkbookChartDataLabelFormat extends Entity implements Parsable {
     private WorkbookChartFont font;
     /**
      * Instantiates a new workbookChartDataLabelFormat and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookChartDataLabelFormat() {
         super();
     }
@@ -63,9 +61,7 @@ public class WorkbookChartDataLabelFormat extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +71,14 @@ public class WorkbookChartDataLabelFormat extends Entity implements Parsable {
     /**
      * Sets the fill property value. Represents the fill format of the current chart data label. Read-only.
      * @param value Value to set for the fill property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFill(@jakarta.annotation.Nullable final WorkbookChartFill value) {
         this.fill = value;
     }
     /**
      * Sets the font property value. Represents the font attributes (font name, font size, color, etc.) for a chart data label. Read-only.
      * @param value Value to set for the font property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFont(@jakarta.annotation.Nullable final WorkbookChartFont value) {
         this.font = value;
     }

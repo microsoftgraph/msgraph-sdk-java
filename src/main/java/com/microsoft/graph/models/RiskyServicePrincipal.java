@@ -50,9 +50,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     private String servicePrincipalType;
     /**
      * Instantiates a new riskyServicePrincipal and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RiskyServicePrincipal() {
         super();
     }
@@ -175,9 +173,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -195,90 +191,70 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     /**
      * Sets the appId property value. The globally unique identifier for the associated application (its appId property), if any.
      * @param value Value to set for the appId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
      * Sets the displayName property value. The display name for the service principal.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the history property value. Represents the risk history of Azure AD service principals.
      * @param value Value to set for the history property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHistory(@jakarta.annotation.Nullable final java.util.List<RiskyServicePrincipalHistoryItem> value) {
         this.history = value;
     }
     /**
      * Sets the isEnabled property value. true if the service principal account is enabled; otherwise, false.
      * @param value Value to set for the isEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
      * Sets the isProcessing property value. Indicates whether Azure AD is currently processing the service principal's risky state.
      * @param value Value to set for the isProcessing property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsProcessing(@jakarta.annotation.Nullable final Boolean value) {
         this.isProcessing = value;
     }
     /**
      * Sets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden,  unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
      * @param value Value to set for the riskDetail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
         this.riskDetail = value;
     }
     /**
      * Sets the riskLastUpdatedDateTime property value. The date and time that the risk state was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z. Supports $filter (eq).
      * @param value Value to set for the riskLastUpdatedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.riskLastUpdatedDateTime = value;
     }
     /**
      * Sets the riskLevel property value. Level of the detected risky workload identity. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq).
      * @param value Value to set for the riskLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {
         this.riskLevel = value;
     }
     /**
      * Sets the riskState property value. State of the service principal's risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @param value Value to set for the riskState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {
         this.riskState = value;
     }
     /**
      * Sets the servicePrincipalType property value. Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Azure AD internally and is inherited from servicePrincipal.
      * @param value Value to set for the servicePrincipalType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServicePrincipalType(@jakarta.annotation.Nullable final String value) {
         this.servicePrincipalType = value;
     }

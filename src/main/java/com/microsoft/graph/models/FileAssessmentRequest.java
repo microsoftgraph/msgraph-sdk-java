@@ -17,9 +17,7 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
     private String fileName;
     /**
      * Instantiates a new fileAssessmentRequest and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public FileAssessmentRequest() {
         super();
         this.setOdataType("#microsoft.graph.fileAssessmentRequest");
@@ -64,9 +62,7 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
     /**
      * Sets the contentData property value. Base64 encoded file content. The file content cannot fetch back because it isn't stored.
      * @param value Value to set for the contentData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentData(@jakarta.annotation.Nullable final String value) {
         this.contentData = value;
     }
     /**
      * Sets the fileName property value. The file name.
      * @param value Value to set for the fileName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileName(@jakarta.annotation.Nullable final String value) {
         this.fileName = value;
     }

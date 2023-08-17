@@ -29,9 +29,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     private java.util.List<String> targetObjects;
     /**
      * Instantiates a new extensionProperty and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ExtensionProperty() {
         super();
         this.setOdataType("#microsoft.graph.extensionProperty");
@@ -103,9 +101,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,45 +114,35 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     /**
      * Sets the appDisplayName property value. Display name of the application object on which this extension property is defined. Read-only.
      * @param value Value to set for the appDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.appDisplayName = value;
     }
     /**
      * Sets the dataType property value. Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum
      * @param value Value to set for the dataType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDataType(@jakarta.annotation.Nullable final String value) {
         this.dataType = value;
     }
     /**
      * Sets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
      * @param value Value to set for the isSyncedFromOnPremises property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSyncedFromOnPremises(@jakarta.annotation.Nullable final Boolean value) {
         this.isSyncedFromOnPremises = value;
     }
     /**
      * Sets the name property value. Name of the extension property. Not nullable. Supports $filter (eq).
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the targetObjects property value. Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization
      * @param value Value to set for the targetObjects property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetObjects(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.targetObjects = value;
     }

@@ -30,9 +30,7 @@ public class LongRunningOperation extends Entity implements Parsable {
     private String statusDetail;
     /**
      * Instantiates a new longRunningOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LongRunningOperation() {
         super();
     }
@@ -110,9 +108,7 @@ public class LongRunningOperation extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -125,45 +121,35 @@ public class LongRunningOperation extends Entity implements Parsable {
     /**
      * Sets the createdDateTime property value. The start time of the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the lastActionDateTime property value. The time of the last action in the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastActionDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastActionDateTime = value;
     }
     /**
      * Sets the resourceLocation property value. URI of the resource that the operation is performed on.
      * @param value Value to set for the resourceLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceLocation(@jakarta.annotation.Nullable final String value) {
         this.resourceLocation = value;
     }
     /**
      * Sets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final LongRunningOperationStatus value) {
         this.status = value;
     }
     /**
      * Sets the statusDetail property value. Details about the status of the operation.
      * @param value Value to set for the statusDetail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatusDetail(@jakarta.annotation.Nullable final String value) {
         this.statusDetail = value;
     }

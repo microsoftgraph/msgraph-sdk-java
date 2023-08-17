@@ -50,9 +50,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
     private String signer;
     /**
      * Instantiates a new fileDetails and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public FileDetails() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -167,9 +165,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("fileName", this.getFileName());
@@ -186,90 +182,70 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the fileName property value. The name of the file.
      * @param value Value to set for the fileName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileName(@jakarta.annotation.Nullable final String value) {
         this.fileName = value;
     }
     /**
      * Sets the filePath property value. The file path (location) of the file instance.
      * @param value Value to set for the filePath property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFilePath(@jakarta.annotation.Nullable final String value) {
         this.filePath = value;
     }
     /**
      * Sets the filePublisher property value. The publisher of the file.
      * @param value Value to set for the filePublisher property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFilePublisher(@jakarta.annotation.Nullable final String value) {
         this.filePublisher = value;
     }
     /**
      * Sets the fileSize property value. The size of the file in bytes.
      * @param value Value to set for the fileSize property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileSize(@jakarta.annotation.Nullable final Long value) {
         this.fileSize = value;
     }
     /**
      * Sets the issuer property value. The certificate authority (CA) that issued the certificate.
      * @param value Value to set for the issuer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIssuer(@jakarta.annotation.Nullable final String value) {
         this.issuer = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the sha1 property value. The Sha1 cryptographic hash of the file content.
      * @param value Value to set for the sha1 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSha1(@jakarta.annotation.Nullable final String value) {
         this.sha1 = value;
     }
     /**
      * Sets the sha256 property value. The Sha256 cryptographic hash of the file content.
      * @param value Value to set for the sha256 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSha256(@jakarta.annotation.Nullable final String value) {
         this.sha256 = value;
     }
     /**
      * Sets the signer property value. The signer of the signed file.
      * @param value Value to set for the signer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSigner(@jakarta.annotation.Nullable final String value) {
         this.signer = value;
     }

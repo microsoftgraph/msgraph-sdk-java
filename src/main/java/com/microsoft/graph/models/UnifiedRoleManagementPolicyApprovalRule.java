@@ -13,9 +13,7 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
     private ApprovalSettings setting;
     /**
      * Instantiates a new unifiedRoleManagementPolicyApprovalRule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyApprovalRule() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyApprovalRule");
@@ -51,9 +49,7 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
     /**
      * Sets the setting property value. The settings for approval of the role assignment.
      * @param value Value to set for the setting property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSetting(@jakarta.annotation.Nullable final ApprovalSettings value) {
         this.setting = value;
     }

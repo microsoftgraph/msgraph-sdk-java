@@ -24,9 +24,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
     private Integer deviceCount;
     /**
      * Instantiates a new windowsInformationProtectionAppLearningSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLearningSummary() {
         super();
     }
@@ -79,9 +77,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -92,27 +88,21 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
     /**
      * Sets the applicationName property value. Application Name
      * @param value Value to set for the applicationName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationName(@jakarta.annotation.Nullable final String value) {
         this.applicationName = value;
     }
     /**
      * Sets the applicationType property value. Possible types of Application
      * @param value Value to set for the applicationType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationType(@jakarta.annotation.Nullable final ApplicationType value) {
         this.applicationType = value;
     }
     /**
      * Sets the deviceCount property value. Device Count
      * @param value Value to set for the deviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.deviceCount = value;
     }

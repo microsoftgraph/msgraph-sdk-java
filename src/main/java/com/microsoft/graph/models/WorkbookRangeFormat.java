@@ -45,9 +45,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
     private Boolean wrapText;
     /**
      * Instantiates a new workbookRangeFormat and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookRangeFormat() {
         super();
     }
@@ -154,9 +152,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -173,81 +169,63 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
     /**
      * Sets the borders property value. Collection of border objects that apply to the overall range selected Read-only.
      * @param value Value to set for the borders property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBorders(@jakarta.annotation.Nullable final java.util.List<WorkbookRangeBorder> value) {
         this.borders = value;
     }
     /**
      * Sets the columnWidth property value. Gets or sets the width of all colums within the range. If the column widths are not uniform, null will be returned.
      * @param value Value to set for the columnWidth property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColumnWidth(@jakarta.annotation.Nullable final Double value) {
         this.columnWidth = value;
     }
     /**
      * Sets the fill property value. Returns the fill object defined on the overall range. Read-only.
      * @param value Value to set for the fill property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFill(@jakarta.annotation.Nullable final WorkbookRangeFill value) {
         this.fill = value;
     }
     /**
      * Sets the font property value. Returns the font object defined on the overall range selected Read-only.
      * @param value Value to set for the font property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFont(@jakarta.annotation.Nullable final WorkbookRangeFont value) {
         this.font = value;
     }
     /**
      * Sets the horizontalAlignment property value. Represents the horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
      * @param value Value to set for the horizontalAlignment property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHorizontalAlignment(@jakarta.annotation.Nullable final String value) {
         this.horizontalAlignment = value;
     }
     /**
      * Sets the protection property value. Returns the format protection object for a range. Read-only.
      * @param value Value to set for the protection property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProtection(@jakarta.annotation.Nullable final WorkbookFormatProtection value) {
         this.protection = value;
     }
     /**
      * Sets the rowHeight property value. Gets or sets the height of all rows in the range. If the row heights are not uniform null will be returned.
      * @param value Value to set for the rowHeight property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRowHeight(@jakarta.annotation.Nullable final Double value) {
         this.rowHeight = value;
     }
     /**
      * Sets the verticalAlignment property value. Represents the vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed.
      * @param value Value to set for the verticalAlignment property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVerticalAlignment(@jakarta.annotation.Nullable final String value) {
         this.verticalAlignment = value;
     }
     /**
      * Sets the wrapText property value. Indicates if Excel wraps the text in the object. A null value indicates that the entire range doesn't have uniform wrap setting
      * @param value Value to set for the wrapText property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWrapText(@jakarta.annotation.Nullable final Boolean value) {
         this.wrapText = value;
     }

@@ -34,9 +34,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
     private AttributeType type;
     /**
      * Instantiates a new attributeMappingParameterSchema and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AttributeMappingParameterSchema() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +113,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowMultipleOccurrences", this.getAllowMultipleOccurrences());
@@ -130,54 +126,42 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowMultipleOccurrences property value. The given parameter can be provided multiple times (for example, multiple input strings in the Concatenate(string,string,...) function).
      * @param value Value to set for the allowMultipleOccurrences property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowMultipleOccurrences(@jakarta.annotation.Nullable final Boolean value) {
         this.allowMultipleOccurrences = value;
     }
     /**
      * Sets the name property value. Parameter name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the required property value. true if the parameter is required; otherwise false.
      * @param value Value to set for the required property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.required = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final AttributeType value) {
         this.type = value;
     }

@@ -21,9 +21,7 @@ public class GroupSetting extends Entity implements Parsable {
     private java.util.List<SettingValue> values;
     /**
      * Instantiates a new groupSetting and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public GroupSetting() {
         super();
     }
@@ -76,9 +74,7 @@ public class GroupSetting extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +85,21 @@ public class GroupSetting extends Entity implements Parsable {
     /**
      * Sets the displayName property value. Display name of this group of settings, which comes from the associated template.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the templateId property value. Unique identifier for the tenant-level groupSettingTemplates object that's been customized for this group-level settings object. Read-only.
      * @param value Value to set for the templateId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTemplateId(@jakarta.annotation.Nullable final String value) {
         this.templateId = value;
     }
     /**
      * Sets the values property value. Collection of name-value pairs corresponding to the name and defaultValue properties in the referenced groupSettingTemplates object.
      * @param value Value to set for the values property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValues(@jakarta.annotation.Nullable final java.util.List<SettingValue> value) {
         this.values = value;
     }

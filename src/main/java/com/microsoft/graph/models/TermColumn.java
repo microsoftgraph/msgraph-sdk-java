@@ -36,9 +36,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
     private Set termSet;
     /**
      * Instantiates a new termColumn and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TermColumn() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -117,9 +115,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowMultipleValues", this.getAllowMultipleValues());
@@ -132,54 +128,42 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowMultipleValues property value. Specifies whether the column will allow more than one value.
      * @param value Value to set for the allowMultipleValues property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowMultipleValues(@jakarta.annotation.Nullable final Boolean value) {
         this.allowMultipleValues = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the parentTerm property value. The parentTerm property
      * @param value Value to set for the parentTerm property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentTerm(@jakarta.annotation.Nullable final Term value) {
         this.parentTerm = value;
     }
     /**
      * Sets the showFullyQualifiedName property value. Specifies whether to display the entire term path or only the term label.
      * @param value Value to set for the showFullyQualifiedName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShowFullyQualifiedName(@jakarta.annotation.Nullable final Boolean value) {
         this.showFullyQualifiedName = value;
     }
     /**
      * Sets the termSet property value. The termSet property
      * @param value Value to set for the termSet property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTermSet(@jakarta.annotation.Nullable final Set value) {
         this.termSet = value;
     }

@@ -29,9 +29,7 @@ public class WindowsInformationProtectionIPRangeCollection implements Additional
     private java.util.List<IpRange> ranges;
     /**
      * Instantiates a new windowsInformationProtectionIPRangeCollection and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsInformationProtectionIPRangeCollection() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -92,9 +90,7 @@ public class WindowsInformationProtectionIPRangeCollection implements Additional
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -105,36 +101,28 @@ public class WindowsInformationProtectionIPRangeCollection implements Additional
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the displayName property value. Display name
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the ranges property value. Collection of ip ranges
      * @param value Value to set for the ranges property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRanges(@jakarta.annotation.Nullable final java.util.List<IpRange> value) {
         this.ranges = value;
     }

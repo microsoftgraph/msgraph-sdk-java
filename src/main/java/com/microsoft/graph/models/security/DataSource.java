@@ -28,9 +28,7 @@ public class DataSource extends Entity implements Parsable {
     private DataSourceHoldStatus holdStatus;
     /**
      * Instantiates a new dataSource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DataSource() {
         super();
     }
@@ -101,9 +99,7 @@ public class DataSource extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -115,36 +111,28 @@ public class DataSource extends Entity implements Parsable {
     /**
      * Sets the createdBy property value. The user who created the dataSource.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time the dataSource was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the displayName property value. The display name of the dataSource. This will be the name of the SharePoint site.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the holdStatus property value. The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
      * @param value Value to set for the holdStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHoldStatus(@jakarta.annotation.Nullable final DataSourceHoldStatus value) {
         this.holdStatus = value;
     }

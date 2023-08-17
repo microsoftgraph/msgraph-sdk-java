@@ -13,9 +13,7 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
     private Float points;
     /**
      * Instantiates a new educationAssignmentPointsGrade and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationAssignmentPointsGrade() {
         super();
         this.setOdataType("#microsoft.graph.educationAssignmentPointsGrade");
@@ -51,9 +49,7 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
     /**
      * Sets the points property value. Number of points a teacher is giving this submission object.
      * @param value Value to set for the points property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPoints(@jakarta.annotation.Nullable final Float value) {
         this.points = value;
     }

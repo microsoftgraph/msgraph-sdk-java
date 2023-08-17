@@ -39,9 +39,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
     private String type;
     /**
      * Instantiates a new createLinkPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CreateLinkPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -129,9 +127,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
@@ -145,63 +141,49 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the message property value. The message property
      * @param value Value to set for the message property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessage(@jakarta.annotation.Nullable final String value) {
         this.message = value;
     }
     /**
      * Sets the password property value. The password property
      * @param value Value to set for the password property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPassword(@jakarta.annotation.Nullable final String value) {
         this.password = value;
     }
     /**
      * Sets the retainInheritedPermissions property value. The retainInheritedPermissions property
      * @param value Value to set for the retainInheritedPermissions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRetainInheritedPermissions(@jakarta.annotation.Nullable final Boolean value) {
         this.retainInheritedPermissions = value;
     }
     /**
      * Sets the scope property value. The scope property
      * @param value Value to set for the scope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScope(@jakarta.annotation.Nullable final String value) {
         this.scope = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }

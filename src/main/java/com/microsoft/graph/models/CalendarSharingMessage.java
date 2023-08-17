@@ -25,9 +25,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
     private String suggestedCalendarName;
     /**
      * Instantiates a new calendarSharingMessage and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CalendarSharingMessage() {
         super();
         this.setOdataType("#microsoft.graph.calendarSharingMessage");
@@ -90,9 +88,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +100,28 @@ public class CalendarSharingMessage extends Message implements Parsable {
     /**
      * Sets the canAccept property value. The canAccept property
      * @param value Value to set for the canAccept property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCanAccept(@jakarta.annotation.Nullable final Boolean value) {
         this.canAccept = value;
     }
     /**
      * Sets the sharingMessageAction property value. The sharingMessageAction property
      * @param value Value to set for the sharingMessageAction property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharingMessageAction(@jakarta.annotation.Nullable final CalendarSharingMessageAction value) {
         this.sharingMessageAction = value;
     }
     /**
      * Sets the sharingMessageActions property value. The sharingMessageActions property
      * @param value Value to set for the sharingMessageActions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharingMessageActions(@jakarta.annotation.Nullable final java.util.List<CalendarSharingMessageAction> value) {
         this.sharingMessageActions = value;
     }
     /**
      * Sets the suggestedCalendarName property value. The suggestedCalendarName property
      * @param value Value to set for the suggestedCalendarName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSuggestedCalendarName(@jakarta.annotation.Nullable final String value) {
         this.suggestedCalendarName = value;
     }

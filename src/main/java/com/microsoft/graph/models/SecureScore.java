@@ -50,9 +50,7 @@ public class SecureScore extends Entity implements Parsable {
     private SecurityVendorInformation vendorInformation;
     /**
      * Instantiates a new secureScore and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SecureScore() {
         super();
     }
@@ -168,9 +166,7 @@ public class SecureScore extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -188,90 +184,70 @@ public class SecureScore extends Entity implements Parsable {
     /**
      * Sets the activeUserCount property value. Active user count of the given tenant.
      * @param value Value to set for the activeUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActiveUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.activeUserCount = value;
     }
     /**
      * Sets the averageComparativeScores property value. Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
      * @param value Value to set for the averageComparativeScores property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAverageComparativeScores(@jakarta.annotation.Nullable final java.util.List<AverageComparativeScore> value) {
         this.averageComparativeScores = value;
     }
     /**
      * Sets the azureTenantId property value. GUID string for tenant ID.
      * @param value Value to set for the azureTenantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAzureTenantId(@jakarta.annotation.Nullable final String value) {
         this.azureTenantId = value;
     }
     /**
      * Sets the controlScores property value. Contains tenant scores for a set of controls.
      * @param value Value to set for the controlScores property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setControlScores(@jakarta.annotation.Nullable final java.util.List<ControlScore> value) {
         this.controlScores = value;
     }
     /**
      * Sets the createdDateTime property value. The date when the entity is created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the currentScore property value. Tenant current attained score on specified date.
      * @param value Value to set for the currentScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCurrentScore(@jakarta.annotation.Nullable final Double value) {
         this.currentScore = value;
     }
     /**
      * Sets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
      * @param value Value to set for the enabledServices property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnabledServices(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.enabledServices = value;
     }
     /**
      * Sets the licensedUserCount property value. Licensed user count of the given tenant.
      * @param value Value to set for the licensedUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLicensedUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.licensedUserCount = value;
     }
     /**
      * Sets the maxScore property value. Tenant maximum possible score on specified date.
      * @param value Value to set for the maxScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaxScore(@jakarta.annotation.Nullable final Double value) {
         this.maxScore = value;
     }
     /**
      * Sets the vendorInformation property value. Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
      * @param value Value to set for the vendorInformation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVendorInformation(@jakarta.annotation.Nullable final SecurityVendorInformation value) {
         this.vendorInformation = value;
     }

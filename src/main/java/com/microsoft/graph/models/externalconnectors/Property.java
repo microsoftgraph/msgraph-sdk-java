@@ -50,9 +50,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     private PropertyType type;
     /**
      * Instantiates a new property and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Property() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -167,9 +165,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("aliases", this.getAliases());
@@ -186,90 +182,70 @@ public class Property implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the aliases property value. A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^. Optional.
      * @param value Value to set for the aliases property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAliases(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.aliases = value;
     }
     /**
      * Sets the isQueryable property value. Specifies if the property is queryable. Queryable properties can be used in Keyword Query Language (KQL) queries. Optional.
      * @param value Value to set for the isQueryable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsQueryable(@jakarta.annotation.Nullable final Boolean value) {
         this.isQueryable = value;
     }
     /**
      * Sets the isRefinable property value. Specifies if the property is refinable.  Refinable properties can be used to filter search results in the Search API and add a refiner control in the Microsoft Search user experience. Optional.
      * @param value Value to set for the isRefinable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsRefinable(@jakarta.annotation.Nullable final Boolean value) {
         this.isRefinable = value;
     }
     /**
      * Sets the isRetrievable property value. Specifies if the property is retrievable. Retrievable properties are returned in the result set when items are returned by the search API. Retrievable properties are also available to add to the display template used to render search results. Optional.
      * @param value Value to set for the isRetrievable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsRetrievable(@jakarta.annotation.Nullable final Boolean value) {
         this.isRetrievable = value;
     }
     /**
      * Sets the isSearchable property value. Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.
      * @param value Value to set for the isSearchable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSearchable(@jakarta.annotation.Nullable final Boolean value) {
         this.isSearchable = value;
     }
     /**
      * Sets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.
      * @param value Value to set for the labels property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLabels(@jakarta.annotation.Nullable final java.util.List<Label> value) {
         this.labels = value;
     }
     /**
      * Sets the name property value. The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final PropertyType value) {
         this.type = value;
     }

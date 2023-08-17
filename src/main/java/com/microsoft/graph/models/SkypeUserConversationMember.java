@@ -13,9 +13,7 @@ public class SkypeUserConversationMember extends ConversationMember implements P
     private String skypeId;
     /**
      * Instantiates a new skypeUserConversationMember and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SkypeUserConversationMember() {
         super();
         this.setOdataType("#microsoft.graph.skypeUserConversationMember");
@@ -51,9 +49,7 @@ public class SkypeUserConversationMember extends ConversationMember implements P
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +58,7 @@ public class SkypeUserConversationMember extends ConversationMember implements P
     /**
      * Sets the skypeId property value. Skype ID of the user.
      * @param value Value to set for the skypeId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSkypeId(@jakarta.annotation.Nullable final String value) {
         this.skypeId = value;
     }

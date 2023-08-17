@@ -17,9 +17,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
     private java.util.List<Agreement> agreements;
     /**
      * Instantiates a new termsOfUseContainer and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TermsOfUseContainer() {
         super();
     }
@@ -63,9 +61,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +71,14 @@ public class TermsOfUseContainer extends Entity implements Parsable {
     /**
      * Sets the agreementAcceptances property value. Represents the current status of a user's response to a company's customizable terms of use agreement.
      * @param value Value to set for the agreementAcceptances property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAgreementAcceptances(@jakarta.annotation.Nullable final java.util.List<AgreementAcceptance> value) {
         this.agreementAcceptances = value;
     }
     /**
      * Sets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
      * @param value Value to set for the agreements property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAgreements(@jakarta.annotation.Nullable final java.util.List<Agreement> value) {
         this.agreements = value;
     }

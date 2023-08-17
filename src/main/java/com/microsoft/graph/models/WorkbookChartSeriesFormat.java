@@ -17,9 +17,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
     private WorkbookChartLineFormat line;
     /**
      * Instantiates a new workbookChartSeriesFormat and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookChartSeriesFormat() {
         super();
     }
@@ -63,9 +61,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +71,14 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
     /**
      * Sets the fill property value. Represents the fill format of a chart series, which includes background formating information. Read-only.
      * @param value Value to set for the fill property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFill(@jakarta.annotation.Nullable final WorkbookChartFill value) {
         this.fill = value;
     }
     /**
      * Sets the line property value. Represents line formatting. Read-only.
      * @param value Value to set for the line property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLine(@jakarta.annotation.Nullable final WorkbookChartLineFormat value) {
         this.line = value;
     }

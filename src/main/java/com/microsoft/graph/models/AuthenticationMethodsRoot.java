@@ -13,9 +13,7 @@ public class AuthenticationMethodsRoot extends Entity implements Parsable {
     private java.util.List<UserRegistrationDetails> userRegistrationDetails;
     /**
      * Instantiates a new authenticationMethodsRoot and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AuthenticationMethodsRoot() {
         super();
     }
@@ -50,9 +48,7 @@ public class AuthenticationMethodsRoot extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +57,7 @@ public class AuthenticationMethodsRoot extends Entity implements Parsable {
     /**
      * Sets the userRegistrationDetails property value. Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multi-factor authentication, self-service password reset, and passwordless authentication).
      * @param value Value to set for the userRegistrationDetails property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserRegistrationDetails(@jakarta.annotation.Nullable final java.util.List<UserRegistrationDetails> value) {
         this.userRegistrationDetails = value;
     }

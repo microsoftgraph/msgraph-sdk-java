@@ -38,9 +38,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     private Integer width;
     /**
      * Instantiates a new thumbnail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Thumbnail() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +126,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("content", this.getContent());
@@ -144,63 +140,49 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the content property value. The content stream for the thumbnail.
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
         this.content = value;
     }
     /**
      * Sets the height property value. The height of the thumbnail, in pixels.
      * @param value Value to set for the height property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHeight(@jakarta.annotation.Nullable final Integer value) {
         this.height = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the sourceItemId property value. The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
      * @param value Value to set for the sourceItemId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceItemId(@jakarta.annotation.Nullable final String value) {
         this.sourceItemId = value;
     }
     /**
      * Sets the url property value. The URL used to fetch the thumbnail content.
      * @param value Value to set for the url property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUrl(@jakarta.annotation.Nullable final String value) {
         this.url = value;
     }
     /**
      * Sets the width property value. The width of the thumbnail, in pixels.
      * @param value Value to set for the width property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWidth(@jakarta.annotation.Nullable final Integer value) {
         this.width = value;
     }

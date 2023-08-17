@@ -41,9 +41,7 @@ public class MessageRule extends Entity implements Parsable {
     private Integer sequence;
     /**
      * Instantiates a new messageRule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MessageRule() {
         super();
     }
@@ -141,9 +139,7 @@ public class MessageRule extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,72 +155,56 @@ public class MessageRule extends Entity implements Parsable {
     /**
      * Sets the actions property value. Actions to be taken on a message when the corresponding conditions are fulfilled.
      * @param value Value to set for the actions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActions(@jakarta.annotation.Nullable final MessageRuleActions value) {
         this.actions = value;
     }
     /**
      * Sets the conditions property value. Conditions that when fulfilled, will trigger the corresponding actions for that rule.
      * @param value Value to set for the conditions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConditions(@jakarta.annotation.Nullable final MessageRulePredicates value) {
         this.conditions = value;
     }
     /**
      * Sets the displayName property value. The display name of the rule.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the exceptions property value. Exception conditions for the rule.
      * @param value Value to set for the exceptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExceptions(@jakarta.annotation.Nullable final MessageRulePredicates value) {
         this.exceptions = value;
     }
     /**
      * Sets the hasError property value. Indicates whether the rule is in an error condition. Read-only.
      * @param value Value to set for the hasError property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHasError(@jakarta.annotation.Nullable final Boolean value) {
         this.hasError = value;
     }
     /**
      * Sets the isEnabled property value. Indicates whether the rule is enabled to be applied to messages.
      * @param value Value to set for the isEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
      * Sets the isReadOnly property value. Indicates if the rule is read-only and cannot be modified or deleted by the rules REST API.
      * @param value Value to set for the isReadOnly property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsReadOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.isReadOnly = value;
     }
     /**
      * Sets the sequence property value. Indicates the order in which the rule is executed, among other rules.
      * @param value Value to set for the sequence property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSequence(@jakarta.annotation.Nullable final Integer value) {
         this.sequence = value;
     }

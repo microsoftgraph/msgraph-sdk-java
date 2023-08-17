@@ -21,9 +21,7 @@ public class PrintDocument extends Entity implements Parsable {
     private Long size;
     /**
      * Instantiates a new printDocument and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PrintDocument() {
         super();
     }
@@ -76,9 +74,7 @@ public class PrintDocument extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +85,21 @@ public class PrintDocument extends Entity implements Parsable {
     /**
      * Sets the contentType property value. The document's content (MIME) type. Read-only.
      * @param value Value to set for the contentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentType(@jakarta.annotation.Nullable final String value) {
         this.contentType = value;
     }
     /**
      * Sets the displayName property value. The document's name. Read-only.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the size property value. The document's size in bytes. Read-only.
      * @param value Value to set for the size property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSize(@jakarta.annotation.Nullable final Long value) {
         this.size = value;
     }

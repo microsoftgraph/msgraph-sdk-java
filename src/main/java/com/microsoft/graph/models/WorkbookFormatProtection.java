@@ -17,9 +17,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
     private Boolean locked;
     /**
      * Instantiates a new workbookFormatProtection and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookFormatProtection() {
         super();
     }
@@ -63,9 +61,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +71,14 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
     /**
      * Sets the formulaHidden property value. Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
      * @param value Value to set for the formulaHidden property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFormulaHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.formulaHidden = value;
     }
     /**
      * Sets the locked property value. Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
      * @param value Value to set for the locked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocked(@jakarta.annotation.Nullable final Boolean value) {
         this.locked = value;
     }

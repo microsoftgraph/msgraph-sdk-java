@@ -30,9 +30,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
     private String odataType;
     /**
      * Instantiates a new calendarSharingMessageAction and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CalendarSharingMessageAction() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +100,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("action", this.getAction());
@@ -116,45 +112,35 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
     /**
      * Sets the action property value. The action property
      * @param value Value to set for the action property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAction(@jakarta.annotation.Nullable final CalendarSharingAction value) {
         this.action = value;
     }
     /**
      * Sets the actionType property value. The actionType property
      * @param value Value to set for the actionType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActionType(@jakarta.annotation.Nullable final CalendarSharingActionType value) {
         this.actionType = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImportance(@jakarta.annotation.Nullable final CalendarSharingActionImportance value) {
         this.importance = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

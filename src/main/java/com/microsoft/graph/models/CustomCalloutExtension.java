@@ -30,9 +30,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
     private CustomExtensionEndpointConfiguration endpointConfiguration;
     /**
      * Instantiates a new customCalloutExtension and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CustomCalloutExtension() {
         super();
     }
@@ -112,9 +110,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -127,45 +123,35 @@ public class CustomCalloutExtension extends Entity implements Parsable {
     /**
      * Sets the authenticationConfiguration property value. Configuration for securing the API call to the logic app. For example, using OAuth client credentials flow.
      * @param value Value to set for the authenticationConfiguration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthenticationConfiguration(@jakarta.annotation.Nullable final CustomExtensionAuthenticationConfiguration value) {
         this.authenticationConfiguration = value;
     }
     /**
      * Sets the clientConfiguration property value. HTTP connection settings that define how long Azure AD can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
      * @param value Value to set for the clientConfiguration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClientConfiguration(@jakarta.annotation.Nullable final CustomExtensionClientConfiguration value) {
         this.clientConfiguration = value;
     }
     /**
      * Sets the description property value. Description for the customCalloutExtension object.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Display name for the customCalloutExtension object.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the endpointConfiguration property value. The type and details for configuring the endpoint to call the logic app's workflow.
      * @param value Value to set for the endpointConfiguration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndpointConfiguration(@jakarta.annotation.Nullable final CustomExtensionEndpointConfiguration value) {
         this.endpointConfiguration = value;
     }

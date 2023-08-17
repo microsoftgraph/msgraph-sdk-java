@@ -41,9 +41,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     private java.util.List<String> supportedSingleSignOnModes;
     /**
      * Instantiates a new applicationTemplate and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ApplicationTemplate() {
         super();
     }
@@ -141,9 +139,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,72 +155,56 @@ public class ApplicationTemplate extends Entity implements Parsable {
     /**
      * Sets the categories property value. The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design & hosting.
      * @param value Value to set for the categories property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.categories = value;
     }
     /**
      * Sets the description property value. A description of the application.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the application.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the homePageUrl property value. The home page URL of the application.
      * @param value Value to set for the homePageUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHomePageUrl(@jakarta.annotation.Nullable final String value) {
         this.homePageUrl = value;
     }
     /**
      * Sets the logoUrl property value. The URL to get the logo for this application.
      * @param value Value to set for the logoUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLogoUrl(@jakarta.annotation.Nullable final String value) {
         this.logoUrl = value;
     }
     /**
      * Sets the publisher property value. The name of the publisher for this application.
      * @param value Value to set for the publisher property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.publisher = value;
     }
     /**
      * Sets the supportedProvisioningTypes property value. The list of provisioning modes supported by this application. The only valid value is sync.
      * @param value Value to set for the supportedProvisioningTypes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSupportedProvisioningTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.supportedProvisioningTypes = value;
     }
     /**
      * Sets the supportedSingleSignOnModes property value. The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported.
      * @param value Value to set for the supportedSingleSignOnModes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSupportedSingleSignOnModes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.supportedSingleSignOnModes = value;
     }

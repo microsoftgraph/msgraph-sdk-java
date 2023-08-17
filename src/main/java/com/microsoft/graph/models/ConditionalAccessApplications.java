@@ -38,9 +38,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
     private String odataType;
     /**
      * Instantiates a new conditionalAccessApplications and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConditionalAccessApplications() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +126,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("applicationFilter", this.getApplicationFilter());
@@ -144,63 +140,49 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the applicationFilter property value. The applicationFilter property
      * @param value Value to set for the applicationFilter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationFilter(@jakarta.annotation.Nullable final ConditionalAccessFilter value) {
         this.applicationFilter = value;
     }
     /**
      * Sets the excludeApplications property value. Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
      * @param value Value to set for the excludeApplications property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExcludeApplications(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.excludeApplications = value;
     }
     /**
      * Sets the includeApplications property value. Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
      * @param value Value to set for the includeApplications property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeApplications(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.includeApplications = value;
     }
     /**
      * Sets the includeAuthenticationContextClassReferences property value. The includeAuthenticationContextClassReferences property
      * @param value Value to set for the includeAuthenticationContextClassReferences property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeAuthenticationContextClassReferences(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.includeAuthenticationContextClassReferences = value;
     }
     /**
      * Sets the includeUserActions property value. User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice
      * @param value Value to set for the includeUserActions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeUserActions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.includeUserActions = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

@@ -17,9 +17,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
     private EducationFeedbackResourceOutcomeStatus resourceStatus;
     /**
      * Instantiates a new educationFeedbackResourceOutcome and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationFeedbackResourceOutcome() {
         super();
         this.setOdataType("#microsoft.graph.educationFeedbackResourceOutcome");
@@ -64,9 +62,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
     /**
      * Sets the feedbackResource property value. The actual feedback resource.
      * @param value Value to set for the feedbackResource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFeedbackResource(@jakarta.annotation.Nullable final EducationResource value) {
         this.feedbackResource = value;
     }
     /**
      * Sets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
      * @param value Value to set for the resourceStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceStatus(@jakarta.annotation.Nullable final EducationFeedbackResourceOutcomeStatus value) {
         this.resourceStatus = value;
     }

@@ -17,9 +17,7 @@ public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail imp
     private String teamId;
     /**
      * Instantiates a new teamJoiningEnabledEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamJoiningEnabledEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.teamJoiningEnabledEventMessageDetail");
@@ -64,9 +62,7 @@ public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail imp
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +72,14 @@ public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail imp
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
     /**
      * Sets the teamId property value. Unique identifier of the team.
      * @param value Value to set for the teamId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamId(@jakarta.annotation.Nullable final String value) {
         this.teamId = value;
     }

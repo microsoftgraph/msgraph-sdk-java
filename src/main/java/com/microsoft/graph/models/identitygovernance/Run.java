@@ -67,9 +67,7 @@ public class Run extends Entity implements Parsable {
     private WorkflowExecutionType workflowExecutionType;
     /**
      * Instantiates a new run and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Run() {
         super();
     }
@@ -221,9 +219,7 @@ public class Run extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -245,126 +241,98 @@ public class Run extends Entity implements Parsable {
     /**
      * Sets the completedDateTime property value. The date time that the run completed. Value is null if the workflow hasn't completed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the completedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completedDateTime = value;
     }
     /**
      * Sets the failedTasksCount property value. The number of tasks that failed in the run execution.
      * @param value Value to set for the failedTasksCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailedTasksCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedTasksCount = value;
     }
     /**
      * Sets the failedUsersCount property value. The number of users that failed in the run execution.
      * @param value Value to set for the failedUsersCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailedUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedUsersCount = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. The datetime that the run was last updated.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the lastUpdatedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the processingStatus property value. The processingStatus property
      * @param value Value to set for the processingStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProcessingStatus(@jakarta.annotation.Nullable final LifecycleWorkflowProcessingStatus value) {
         this.processingStatus = value;
     }
     /**
      * Sets the scheduledDateTime property value. The date time that the run is scheduled to be executed for a workflow.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the scheduledDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScheduledDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.scheduledDateTime = value;
     }
     /**
      * Sets the startedDateTime property value. The date time that the run execution started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the startedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startedDateTime = value;
     }
     /**
      * Sets the successfulUsersCount property value. The number of successfully completed users in the run.
      * @param value Value to set for the successfulUsersCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSuccessfulUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.successfulUsersCount = value;
     }
     /**
      * Sets the taskProcessingResults property value. The related taskProcessingResults.
      * @param value Value to set for the taskProcessingResults property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTaskProcessingResults(@jakarta.annotation.Nullable final java.util.List<TaskProcessingResult> value) {
         this.taskProcessingResults = value;
     }
     /**
      * Sets the totalTasksCount property value. The totalTasksCount property
      * @param value Value to set for the totalTasksCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalTasksCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalTasksCount = value;
     }
     /**
      * Sets the totalUnprocessedTasksCount property value. The total number of unprocessed tasks in the run execution.
      * @param value Value to set for the totalUnprocessedTasksCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalUnprocessedTasksCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalUnprocessedTasksCount = value;
     }
     /**
      * Sets the totalUsersCount property value. The total number of users in the workflow execution.
      * @param value Value to set for the totalUsersCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalUsersCount = value;
     }
     /**
      * Sets the userProcessingResults property value. The associated individual user execution.
      * @param value Value to set for the userProcessingResults property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserProcessingResults(@jakarta.annotation.Nullable final java.util.List<UserProcessingResult> value) {
         this.userProcessingResults = value;
     }
     /**
      * Sets the workflowExecutionType property value. The workflowExecutionType property
      * @param value Value to set for the workflowExecutionType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkflowExecutionType(@jakarta.annotation.Nullable final WorkflowExecutionType value) {
         this.workflowExecutionType = value;
     }

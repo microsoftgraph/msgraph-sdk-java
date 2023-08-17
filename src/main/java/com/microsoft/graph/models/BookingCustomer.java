@@ -28,9 +28,7 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
     private java.util.List<Phone> phones;
     /**
      * Instantiates a new bookingCustomer and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BookingCustomer() {
         super();
         this.setOdataType("#microsoft.graph.bookingCustomer");
@@ -93,9 +91,7 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -107,36 +103,28 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
     /**
      * Sets the addresses property value. Addresses associated with the customer. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
      * @param value Value to set for the addresses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAddresses(@jakarta.annotation.Nullable final java.util.List<PhysicalAddress> value) {
         this.addresses = value;
     }
     /**
      * Sets the displayName property value. The name of the customer.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the emailAddress property value. The SMTP address of the customer.
      * @param value Value to set for the emailAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.emailAddress = value;
     }
     /**
      * Sets the phones property value. Phone numbers associated with the customer, including home, business and mobile numbers.
      * @param value Value to set for the phones property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPhones(@jakarta.annotation.Nullable final java.util.List<Phone> value) {
         this.phones = value;
     }

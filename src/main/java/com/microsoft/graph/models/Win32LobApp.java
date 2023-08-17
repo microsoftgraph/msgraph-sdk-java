@@ -64,9 +64,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
     private String uninstallCommandLine;
     /**
      * Instantiates a new win32LobApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Win32LobApp() {
         super();
         this.setOdataType("#microsoft.graph.win32LobApp");
@@ -210,9 +208,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -233,117 +229,91 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
     /**
      * Sets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @param value Value to set for the applicableArchitectures property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicableArchitectures(@jakarta.annotation.Nullable final WindowsArchitecture value) {
         this.applicableArchitectures = value;
     }
     /**
      * Sets the installCommandLine property value. The command line to install this app
      * @param value Value to set for the installCommandLine property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstallCommandLine(@jakarta.annotation.Nullable final String value) {
         this.installCommandLine = value;
     }
     /**
      * Sets the installExperience property value. The install experience for this app.
      * @param value Value to set for the installExperience property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstallExperience(@jakarta.annotation.Nullable final Win32LobAppInstallExperience value) {
         this.installExperience = value;
     }
     /**
      * Sets the minimumCpuSpeedInMHz property value. The value for the minimum CPU speed which is required to install this app.
      * @param value Value to set for the minimumCpuSpeedInMHz property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumCpuSpeedInMHz(@jakarta.annotation.Nullable final Integer value) {
         this.minimumCpuSpeedInMHz = value;
     }
     /**
      * Sets the minimumFreeDiskSpaceInMB property value. The value for the minimum free disk space which is required to install this app.
      * @param value Value to set for the minimumFreeDiskSpaceInMB property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumFreeDiskSpaceInMB(@jakarta.annotation.Nullable final Integer value) {
         this.minimumFreeDiskSpaceInMB = value;
     }
     /**
      * Sets the minimumMemoryInMB property value. The value for the minimum physical memory which is required to install this app.
      * @param value Value to set for the minimumMemoryInMB property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumMemoryInMB(@jakarta.annotation.Nullable final Integer value) {
         this.minimumMemoryInMB = value;
     }
     /**
      * Sets the minimumNumberOfProcessors property value. The value for the minimum number of processors which is required to install this app.
      * @param value Value to set for the minimumNumberOfProcessors property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumNumberOfProcessors(@jakarta.annotation.Nullable final Integer value) {
         this.minimumNumberOfProcessors = value;
     }
     /**
      * Sets the minimumSupportedWindowsRelease property value. The value for the minimum supported windows release.
      * @param value Value to set for the minimumSupportedWindowsRelease property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumSupportedWindowsRelease(@jakarta.annotation.Nullable final String value) {
         this.minimumSupportedWindowsRelease = value;
     }
     /**
      * Sets the msiInformation property value. The MSI details if this Win32 app is an MSI app.
      * @param value Value to set for the msiInformation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMsiInformation(@jakarta.annotation.Nullable final Win32LobAppMsiInformation value) {
         this.msiInformation = value;
     }
     /**
      * Sets the returnCodes property value. The return codes for post installation behavior.
      * @param value Value to set for the returnCodes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReturnCodes(@jakarta.annotation.Nullable final java.util.List<Win32LobAppReturnCode> value) {
         this.returnCodes = value;
     }
     /**
      * Sets the rules property value. The detection and requirement rules for this app.
      * @param value Value to set for the rules property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRules(@jakarta.annotation.Nullable final java.util.List<Win32LobAppRule> value) {
         this.rules = value;
     }
     /**
      * Sets the setupFilePath property value. The relative path of the setup file in the encrypted Win32LobApp package.
      * @param value Value to set for the setupFilePath property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSetupFilePath(@jakarta.annotation.Nullable final String value) {
         this.setupFilePath = value;
     }
     /**
      * Sets the uninstallCommandLine property value. The command line to uninstall this app
      * @param value Value to set for the uninstallCommandLine property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUninstallCommandLine(@jakarta.annotation.Nullable final String value) {
         this.uninstallCommandLine = value;
     }
