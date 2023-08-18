@@ -105,6 +105,15 @@ public class Incident extends Entity implements IJsonBackedObject {
     public String incidentWebUrl;
 
     /**
+     * The Last Modified By.
+     * 
+     */
+    @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
+    @Expose
+	@Nullable
+    public String lastModifiedBy;
+
+    /**
      * The Last Update Date Time.
      * Time when the incident was last updated.
      */

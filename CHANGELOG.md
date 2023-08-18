@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.68.0] - 2023-08-18
+
+### Changed 
+
+- Added properties to the PublicationFacet model.
+- Added properties to the Alert and Incident models in the security namespace. 
+
 ## [5.67.0] - 2023-08-10
 
 ### Added 
