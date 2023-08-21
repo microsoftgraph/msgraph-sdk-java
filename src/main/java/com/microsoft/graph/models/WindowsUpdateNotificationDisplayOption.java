@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Windows Update Notification Display Options
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsUpdateNotificationDisplayOption implements ValuedEnum {
     /** Not configured */
     NotConfigured("notConfigured"),

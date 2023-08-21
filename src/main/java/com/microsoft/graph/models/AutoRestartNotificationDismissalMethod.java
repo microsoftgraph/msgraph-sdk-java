@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Auto restart required notification dismissal method
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AutoRestartNotificationDismissalMethod implements ValuedEnum {
     /** Not configured */
     NotConfigured("notConfigured"),

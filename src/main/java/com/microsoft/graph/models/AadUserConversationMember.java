@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AadUserConversationMember extends ConversationMember implements Parsable {
     /**
      * The email address of the user.
@@ -25,9 +26,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
     private String userId;
     /**
      * Instantiates a new aadUserConversationMember and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AadUserConversationMember() {
         super();
         this.setOdataType("#microsoft.graph.aadUserConversationMember");
@@ -90,9 +89,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +101,28 @@ public class AadUserConversationMember extends ConversationMember implements Par
     /**
      * Sets the email property value. The email address of the user.
      * @param value Value to set for the email property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
      * Sets the tenantId property value. TenantId which the Azure AD user belongs to.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
      * Sets the user property value. The user property
      * @param value Value to set for the user property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUser(@jakarta.annotation.Nullable final User value) {
         this.user = value;
     }
     /**
      * Sets the userId property value. The guid of the user.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }

@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * This class contains compliance settings for Windows 10 Mobile.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /**
      * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
@@ -76,9 +77,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     private Boolean storageRequireEncryption;
     /**
      * Instantiates a new windows10MobileCompliancePolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Windows10MobileCompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.windows10MobileCompliancePolicy");
@@ -249,9 +248,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -275,144 +272,112 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     /**
      * Sets the bitLockerEnabled property value. Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
      * @param value Value to set for the bitLockerEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBitLockerEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.bitLockerEnabled = value;
     }
     /**
      * Sets the codeIntegrityEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation.
      * @param value Value to set for the codeIntegrityEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCodeIntegrityEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.codeIntegrityEnabled = value;
     }
     /**
      * Sets the earlyLaunchAntiMalwareDriverEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
      * @param value Value to set for the earlyLaunchAntiMalwareDriverEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEarlyLaunchAntiMalwareDriverEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.earlyLaunchAntiMalwareDriverEnabled = value;
     }
     /**
      * Sets the osMaximumVersion property value. Maximum Windows Phone version.
      * @param value Value to set for the osMaximumVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMaximumVersion = value;
     }
     /**
      * Sets the osMinimumVersion property value. Minimum Windows Phone version.
      * @param value Value to set for the osMinimumVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMinimumVersion = value;
     }
     /**
      * Sets the passwordBlockSimple property value. Whether or not to block syncing the calendar.
      * @param value Value to set for the passwordBlockSimple property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordBlockSimple = value;
     }
     /**
      * Sets the passwordExpirationDays property value. Number of days before password expiration. Valid values 1 to 255
      * @param value Value to set for the passwordExpirationDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.passwordExpirationDays = value;
     }
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumCharacterSetCount = value;
     }
     /**
      * Sets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
      * @param value Value to set for the passwordMinimumLength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumLength = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeLock(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinutesOfInactivityBeforeLock = value;
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of.
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the passwordRequired property value. Require a password to unlock Windows Phone device.
      * @param value Value to set for the passwordRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordRequired = value;
     }
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
         this.passwordRequiredType = value;
     }
     /**
      * Sets the passwordRequireToUnlockFromIdle property value. Require a password to unlock an idle device.
      * @param value Value to set for the passwordRequireToUnlockFromIdle property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordRequireToUnlockFromIdle(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordRequireToUnlockFromIdle = value;
     }
     /**
      * Sets the secureBootEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
      * @param value Value to set for the secureBootEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecureBootEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.secureBootEnabled = value;
     }
     /**
      * Sets the storageRequireEncryption property value. Require encryption on windows devices.
      * @param value Value to set for the storageRequireEncryption property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStorageRequireEncryption(@jakarta.annotation.Nullable final Boolean value) {
         this.storageRequireEncryption = value;
     }

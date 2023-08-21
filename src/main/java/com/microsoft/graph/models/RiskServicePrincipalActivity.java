@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
     private java.util.List<String> riskEventTypes;
     /**
      * Instantiates a new riskServicePrincipalActivity and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RiskServicePrincipalActivity() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("detail", this.getDetail());
@@ -102,36 +99,28 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Parsa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the detail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
      * @param value Value to set for the detail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDetail(@jakarta.annotation.Nullable final RiskDetail value) {
         this.detail = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the riskEventTypes property value. The riskEventTypes property
      * @param value Value to set for the riskEventTypes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskEventTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.riskEventTypes = value;
     }

@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MroundPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -23,9 +24,7 @@ public class MroundPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json number;
     /**
      * Instantiates a new mroundPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MroundPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,9 +76,7 @@ public class MroundPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("multiple", this.getMultiple());
@@ -89,27 +86,21 @@ public class MroundPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the multiple property value. The multiple property
      * @param value Value to set for the multiple property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMultiple(@jakarta.annotation.Nullable final Json value) {
         this.multiple = value;
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNumber(@jakarta.annotation.Nullable final Json value) {
         this.number = value;
     }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserSettings extends Entity implements Parsable {
     /**
      * Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn't have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
@@ -21,9 +22,7 @@ public class UserSettings extends Entity implements Parsable {
     private ShiftPreferences shiftPreferences;
     /**
      * Instantiates a new userSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserSettings() {
         super();
     }
@@ -76,9 +75,7 @@ public class UserSettings extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +86,21 @@ public class UserSettings extends Entity implements Parsable {
     /**
      * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn't have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
      * @param value Value to set for the contributionToContentDiscoveryAsOrganizationDisabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContributionToContentDiscoveryAsOrganizationDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.contributionToContentDiscoveryAsOrganizationDisabled = value;
     }
     /**
      * Sets the contributionToContentDiscoveryDisabled property value. When set to true, the delegate access to the user's trending API is disabled. When set to true, documents in the user's Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected. Users can control this setting in Office Delve.
      * @param value Value to set for the contributionToContentDiscoveryDisabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContributionToContentDiscoveryDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.contributionToContentDiscoveryDisabled = value;
     }
     /**
      * Sets the shiftPreferences property value. The shiftPreferences property
      * @param value Value to set for the shiftPreferences property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShiftPreferences(@jakarta.annotation.Nullable final ShiftPreferences value) {
         this.shiftPreferences = value;
     }

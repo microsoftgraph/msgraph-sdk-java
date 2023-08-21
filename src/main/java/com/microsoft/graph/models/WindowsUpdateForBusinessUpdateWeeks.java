@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Scheduled the update installation on the weeks of the month
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsUpdateForBusinessUpdateWeeks implements ValuedEnum {
     /** Allow the user to set. */
     UserDefined("userDefined"),

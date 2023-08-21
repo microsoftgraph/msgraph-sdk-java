@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * The windowsAutopilotDeviceIdentity resource represents a Windows Autopilot Device.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     /**
      * Addressable user name.
@@ -77,9 +78,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new windowsAutopilotDeviceIdentity and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsAutopilotDeviceIdentity() {
         super();
     }
@@ -249,9 +248,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -275,144 +272,112 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     /**
      * Sets the addressableUserName property value. Addressable user name.
      * @param value Value to set for the addressableUserName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAddressableUserName(@jakarta.annotation.Nullable final String value) {
         this.addressableUserName = value;
     }
     /**
      * Sets the azureActiveDirectoryDeviceId property value. AAD Device ID - to be deprecated
      * @param value Value to set for the azureActiveDirectoryDeviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAzureActiveDirectoryDeviceId(@jakarta.annotation.Nullable final String value) {
         this.azureActiveDirectoryDeviceId = value;
     }
     /**
      * Sets the displayName property value. Display Name
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the enrollmentState property value. The enrollmentState property
      * @param value Value to set for the enrollmentState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnrollmentState(@jakarta.annotation.Nullable final EnrollmentState value) {
         this.enrollmentState = value;
     }
     /**
      * Sets the groupTag property value. Group Tag of the Windows autopilot device.
      * @param value Value to set for the groupTag property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroupTag(@jakarta.annotation.Nullable final String value) {
         this.groupTag = value;
     }
     /**
      * Sets the lastContactedDateTime property value. Intune Last Contacted Date Time of the Windows autopilot device.
      * @param value Value to set for the lastContactedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastContactedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastContactedDateTime = value;
     }
     /**
      * Sets the managedDeviceId property value. Managed Device ID
      * @param value Value to set for the managedDeviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagedDeviceId(@jakarta.annotation.Nullable final String value) {
         this.managedDeviceId = value;
     }
     /**
      * Sets the manufacturer property value. Oem manufacturer of the Windows autopilot device.
      * @param value Value to set for the manufacturer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
      * Sets the model property value. Model name of the Windows autopilot device.
      * @param value Value to set for the model property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
      * Sets the productKey property value. Product Key of the Windows autopilot device.
      * @param value Value to set for the productKey property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProductKey(@jakarta.annotation.Nullable final String value) {
         this.productKey = value;
     }
     /**
      * Sets the purchaseOrderIdentifier property value. Purchase Order Identifier of the Windows autopilot device.
      * @param value Value to set for the purchaseOrderIdentifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPurchaseOrderIdentifier(@jakarta.annotation.Nullable final String value) {
         this.purchaseOrderIdentifier = value;
     }
     /**
      * Sets the resourceName property value. Resource Name.
      * @param value Value to set for the resourceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceName(@jakarta.annotation.Nullable final String value) {
         this.resourceName = value;
     }
     /**
      * Sets the serialNumber property value. Serial number of the Windows autopilot device.
      * @param value Value to set for the serialNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
         this.serialNumber = value;
     }
     /**
      * Sets the skuNumber property value. SKU Number
      * @param value Value to set for the skuNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSkuNumber(@jakarta.annotation.Nullable final String value) {
         this.skuNumber = value;
     }
     /**
      * Sets the systemFamily property value. System Family
      * @param value Value to set for the systemFamily property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSystemFamily(@jakarta.annotation.Nullable final String value) {
         this.systemFamily = value;
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }

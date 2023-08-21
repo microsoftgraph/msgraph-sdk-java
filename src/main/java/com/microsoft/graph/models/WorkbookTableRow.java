@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookTableRow extends Entity implements Parsable {
     /**
      * Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.
@@ -17,9 +18,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
     private Json values;
     /**
      * Instantiates a new workbookTableRow and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookTableRow() {
         super();
     }
@@ -63,9 +62,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class WorkbookTableRow extends Entity implements Parsable {
     /**
      * Sets the index property value. Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.
      * @param value Value to set for the index property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIndex(@jakarta.annotation.Nullable final Integer value) {
         this.index = value;
     }
     /**
      * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
      * @param value Value to set for the values property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValues(@jakarta.annotation.Nullable final Json value) {
         this.values = value;
     }

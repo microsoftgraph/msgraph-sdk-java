@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Describes the resourceOperation resource (entity) of the Microsoft Graph API (REST), which supports Intune workflows related to role-based access control (RBAC).
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ResourceOperation extends Entity implements Parsable {
     /**
      * Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
@@ -24,9 +25,7 @@ public class ResourceOperation extends Entity implements Parsable {
     private String resourceName;
     /**
      * Instantiates a new resourceOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ResourceOperation() {
         super();
     }
@@ -79,9 +78,7 @@ public class ResourceOperation extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -92,27 +89,21 @@ public class ResourceOperation extends Entity implements Parsable {
     /**
      * Sets the actionName property value. Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
      * @param value Value to set for the actionName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActionName(@jakarta.annotation.Nullable final String value) {
         this.actionName = value;
     }
     /**
      * Sets the description property value. Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the resourceName property value. Name of the Resource this operation is performed on.
      * @param value Value to set for the resourceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceName(@jakarta.annotation.Nullable final String value) {
         this.resourceName = value;
     }

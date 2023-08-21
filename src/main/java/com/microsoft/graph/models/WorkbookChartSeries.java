@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartSeries extends Entity implements Parsable {
     /**
      * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
@@ -21,9 +22,7 @@ public class WorkbookChartSeries extends Entity implements Parsable {
     private java.util.List<WorkbookChartPoint> points;
     /**
      * Instantiates a new workbookChartSeries and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookChartSeries() {
         super();
     }
@@ -76,9 +75,7 @@ public class WorkbookChartSeries extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +86,21 @@ public class WorkbookChartSeries extends Entity implements Parsable {
     /**
      * Sets the format property value. Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
      * @param value Value to set for the format property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFormat(@jakarta.annotation.Nullable final WorkbookChartSeriesFormat value) {
         this.format = value;
     }
     /**
      * Sets the name property value. Represents the name of a series in a chart.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the points property value. Represents a collection of all points in the series. Read-only.
      * @param value Value to set for the points property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPoints(@jakarta.annotation.Nullable final java.util.List<WorkbookChartPoint> value) {
         this.points = value;
     }

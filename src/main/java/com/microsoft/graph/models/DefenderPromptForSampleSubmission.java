@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for prompting user for samples submission.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DefenderPromptForSampleSubmission implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),

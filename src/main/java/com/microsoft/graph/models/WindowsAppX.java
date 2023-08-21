@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Contains properties and inherited properties for Windows AppX Line Of Business apps.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsAppX extends MobileLobApp implements Parsable {
     /**
      * Contains properties for Windows architecture.
@@ -40,9 +41,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     private WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
     /**
      * Instantiates a new windowsAppX and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsAppX() {
         super();
         this.setOdataType("#microsoft.graph.windowsAppX");
@@ -132,9 +131,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -149,63 +146,49 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     /**
      * Sets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @param value Value to set for the applicableArchitectures property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicableArchitectures(@jakarta.annotation.Nullable final WindowsArchitecture value) {
         this.applicableArchitectures = value;
     }
     /**
      * Sets the identityName property value. The identity name of the uploaded app package. For example: 'Contoso.DemoApp'.
      * @param value Value to set for the identityName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentityName(@jakarta.annotation.Nullable final String value) {
         this.identityName = value;
     }
     /**
      * Sets the identityPublisherHash property value. The identity publisher hash of the uploaded app package. This is the hash of the publisher from the manifest. For example: 'AB82CD0XYZ'.
      * @param value Value to set for the identityPublisherHash property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentityPublisherHash(@jakarta.annotation.Nullable final String value) {
         this.identityPublisherHash = value;
     }
     /**
      * Sets the identityResourceIdentifier property value. The identity resource identifier of the uploaded app package. For example: 'TestResourceId'.
      * @param value Value to set for the identityResourceIdentifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentityResourceIdentifier(@jakarta.annotation.Nullable final String value) {
         this.identityResourceIdentifier = value;
     }
     /**
      * Sets the identityVersion property value. The identity version of the uploaded app package. For example: '1.0.0.0'.
      * @param value Value to set for the identityVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentityVersion(@jakarta.annotation.Nullable final String value) {
         this.identityVersion = value;
     }
     /**
      * Sets the isBundle property value. When TRUE, indicates that the app is a bundle. When FALSE, indicates that the app is not a bundle. By default, property is set to FALSE.
      * @param value Value to set for the isBundle property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsBundle(@jakarta.annotation.Nullable final Boolean value) {
         this.isBundle = value;
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. The minimum operating system required for a Windows mobile app.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final WindowsMinimumOperatingSystem value) {
         this.minimumSupportedOperatingSystem = value;
     }

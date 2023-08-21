@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectoryDefinition extends Entity implements Parsable {
     /**
      * The discoverabilities property
@@ -34,9 +35,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
     private String version;
     /**
      * Instantiates a new directoryDefinition and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DirectoryDefinition() {
         super();
     }
@@ -116,9 +115,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -132,54 +129,42 @@ public class DirectoryDefinition extends Entity implements Parsable {
     /**
      * Sets the discoverabilities property value. The discoverabilities property
      * @param value Value to set for the discoverabilities property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDiscoverabilities(@jakarta.annotation.Nullable final DirectoryDefinitionDiscoverabilities value) {
         this.discoverabilities = value;
     }
     /**
      * Sets the discoveryDateTime property value. Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the discoveryDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDiscoveryDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.discoveryDateTime = value;
     }
     /**
      * Sets the name property value. Name of the directory. Must be unique within the synchronization schema. Not nullable.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the objects property value. Collection of objects supported by the directory.
      * @param value Value to set for the objects property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setObjects(@jakarta.annotation.Nullable final java.util.List<ObjectDefinition> value) {
         this.objects = value;
     }
     /**
      * Sets the readOnly property value. Whether this object is read-only.
      * @param value Value to set for the readOnly property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReadOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.readOnly = value;
     }
     /**
      * Sets the version property value. Read only value that indicates version discovered. null if discovery has not yet occurred.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }

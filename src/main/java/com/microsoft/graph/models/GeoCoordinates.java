@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class GeoCoordinates implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new geoCoordinates and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public GeoCoordinates() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeDoubleValue("altitude", this.getAltitude());
@@ -116,45 +113,35 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the altitude property value. Optional. The altitude (height), in feet,  above sea level for the item. Read-only.
      * @param value Value to set for the altitude property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAltitude(@jakarta.annotation.Nullable final Double value) {
         this.altitude = value;
     }
     /**
      * Sets the latitude property value. Optional. The latitude, in decimal, for the item. Read-only.
      * @param value Value to set for the latitude property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLatitude(@jakarta.annotation.Nullable final Double value) {
         this.latitude = value;
     }
     /**
      * Sets the longitude property value. Optional. The longitude, in decimal, for the item. Read-only.
      * @param value Value to set for the longitude property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLongitude(@jakarta.annotation.Nullable final Double value) {
         this.longitude = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

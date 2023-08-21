@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl implements Parsable {
     /**
      * Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
@@ -13,9 +14,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
     private CloudAppSecuritySessionControlType cloudAppSecurityType;
     /**
      * Instantiates a new cloudAppSecuritySessionControl and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CloudAppSecuritySessionControl() {
         super();
         this.setOdataType("#microsoft.graph.cloudAppSecuritySessionControl");
@@ -51,9 +50,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +59,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
     /**
      * Sets the cloudAppSecurityType property value. Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
      * @param value Value to set for the cloudAppSecurityType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudAppSecurityType(@jakarta.annotation.Nullable final CloudAppSecuritySessionControlType value) {
         this.cloudAppSecurityType = value;
     }

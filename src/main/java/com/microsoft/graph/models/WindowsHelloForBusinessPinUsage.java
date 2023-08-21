@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Windows Hello for Business pin usage options
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsHelloForBusinessPinUsage implements ValuedEnum {
     /** Allowed the usage of certain pin rule */
     Allowed("allowed"),

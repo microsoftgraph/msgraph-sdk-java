@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Policy for Windows information protection without MDM
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtectionPolicy extends WindowsInformationProtection implements Parsable {
     /**
      * Offline interval before app data is wiped (days)
@@ -60,9 +61,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     private Boolean windowsHelloForBusinessBlocked;
     /**
      * Instantiates a new windowsInformationProtectionPolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsInformationProtectionPolicy() {
         super();
         this.setOdataType("#microsoft.graph.windowsInformationProtectionPolicy");
@@ -197,9 +196,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -219,108 +216,84 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     /**
      * Sets the daysWithoutContactBeforeUnenroll property value. Offline interval before app data is wiped (days)
      * @param value Value to set for the daysWithoutContactBeforeUnenroll property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDaysWithoutContactBeforeUnenroll(@jakarta.annotation.Nullable final Integer value) {
         this.daysWithoutContactBeforeUnenroll = value;
     }
     /**
      * Sets the mdmEnrollmentUrl property value. Enrollment url for the MDM
      * @param value Value to set for the mdmEnrollmentUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMdmEnrollmentUrl(@jakarta.annotation.Nullable final String value) {
         this.mdmEnrollmentUrl = value;
     }
     /**
      * Sets the minutesOfInactivityBeforeDeviceLock property value. Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 <= X <= 999.
      * @param value Value to set for the minutesOfInactivityBeforeDeviceLock property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinutesOfInactivityBeforeDeviceLock(@jakarta.annotation.Nullable final Integer value) {
         this.minutesOfInactivityBeforeDeviceLock = value;
     }
     /**
      * Sets the numberOfPastPinsRemembered property value. Integer value that specifies the number of past PINs that can be associated to a user account that can't be reused. The largest number you can configure for this policy setting is 50. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then storage of previous PINs is not required. This node was added in Windows 10, version 1511. Default is 0.
      * @param value Value to set for the numberOfPastPinsRemembered property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNumberOfPastPinsRemembered(@jakarta.annotation.Nullable final Integer value) {
         this.numberOfPastPinsRemembered = value;
     }
     /**
      * Sets the passwordMaximumAttemptCount property value. The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 <= X <= 16 for desktop and 0 <= X <= 999 for mobile devices.
      * @param value Value to set for the passwordMaximumAttemptCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMaximumAttemptCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMaximumAttemptCount = value;
     }
     /**
      * Sets the pinExpirationDays property value. Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user's PIN will never expire. This node was added in Windows 10, version 1511. Default is 0.
      * @param value Value to set for the pinExpirationDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPinExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.pinExpirationDays = value;
     }
     /**
      * Sets the pinLowercaseLetters property value. Pin Character Requirements
      * @param value Value to set for the pinLowercaseLetters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPinLowercaseLetters(@jakarta.annotation.Nullable final WindowsInformationProtectionPinCharacterRequirements value) {
         this.pinLowercaseLetters = value;
     }
     /**
      * Sets the pinMinimumLength property value. Integer value that sets the minimum number of characters required for the PIN. Default value is 4. The lowest number you can configure for this policy setting is 4. The largest number you can configure must be less than the number configured in the Maximum PIN length policy setting or the number 127, whichever is the lowest.
      * @param value Value to set for the pinMinimumLength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPinMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.pinMinimumLength = value;
     }
     /**
      * Sets the pinSpecialCharacters property value. Pin Character Requirements
      * @param value Value to set for the pinSpecialCharacters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPinSpecialCharacters(@jakarta.annotation.Nullable final WindowsInformationProtectionPinCharacterRequirements value) {
         this.pinSpecialCharacters = value;
     }
     /**
      * Sets the pinUppercaseLetters property value. Pin Character Requirements
      * @param value Value to set for the pinUppercaseLetters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPinUppercaseLetters(@jakarta.annotation.Nullable final WindowsInformationProtectionPinCharacterRequirements value) {
         this.pinUppercaseLetters = value;
     }
     /**
      * Sets the revokeOnMdmHandoffDisabled property value. New property in RS2, pending documentation
      * @param value Value to set for the revokeOnMdmHandoffDisabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRevokeOnMdmHandoffDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.revokeOnMdmHandoffDisabled = value;
     }
     /**
      * Sets the windowsHelloForBusinessBlocked property value. Boolean value that sets Windows Hello for Business as a method for signing into Windows.
      * @param value Value to set for the windowsHelloForBusinessBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsHelloForBusinessBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.windowsHelloForBusinessBlocked = value;
     }

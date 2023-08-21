@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Workbook extends Entity implements Parsable {
     /**
      * The application property
@@ -37,9 +38,7 @@ public class Workbook extends Entity implements Parsable {
     private java.util.List<WorkbookWorksheet> worksheets;
     /**
      * Instantiates a new workbook and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Workbook() {
         super();
     }
@@ -128,9 +127,7 @@ public class Workbook extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -145,63 +142,49 @@ public class Workbook extends Entity implements Parsable {
     /**
      * Sets the application property value. The application property
      * @param value Value to set for the application property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplication(@jakarta.annotation.Nullable final WorkbookApplication value) {
         this.application = value;
     }
     /**
      * Sets the comments property value. Represents a collection of comments in a workbook.
      * @param value Value to set for the comments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComments(@jakarta.annotation.Nullable final java.util.List<WorkbookComment> value) {
         this.comments = value;
     }
     /**
      * Sets the functions property value. The functions property
      * @param value Value to set for the functions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFunctions(@jakarta.annotation.Nullable final WorkbookFunctions value) {
         this.functions = value;
     }
     /**
      * Sets the names property value. Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
      * @param value Value to set for the names property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNames(@jakarta.annotation.Nullable final java.util.List<WorkbookNamedItem> value) {
         this.names = value;
     }
     /**
      * Sets the operations property value. The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<WorkbookOperation> value) {
         this.operations = value;
     }
     /**
      * Sets the tables property value. Represents a collection of tables associated with the workbook. Read-only.
      * @param value Value to set for the tables property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTables(@jakarta.annotation.Nullable final java.util.List<WorkbookTable> value) {
         this.tables = value;
     }
     /**
      * Sets the worksheets property value. Represents a collection of worksheets associated with the workbook. Read-only.
      * @param value Value to set for the worksheets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorksheets(@jakarta.annotation.Nullable final java.util.List<WorkbookWorksheet> value) {
         this.worksheets = value;
     }

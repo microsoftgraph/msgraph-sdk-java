@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationRoot implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
     private java.util.List<EducationUser> users;
     /**
      * Instantiates a new educationRoot and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationRoot() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("classes", this.getClasses());
@@ -130,54 +127,42 @@ public class EducationRoot implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the classes property value. The classes property
      * @param value Value to set for the classes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClasses(@jakarta.annotation.Nullable final java.util.List<EducationClass> value) {
         this.classes = value;
     }
     /**
      * Sets the me property value. The me property
      * @param value Value to set for the me property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMe(@jakarta.annotation.Nullable final EducationUser value) {
         this.me = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the schools property value. The schools property
      * @param value Value to set for the schools property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSchools(@jakarta.annotation.Nullable final java.util.List<EducationSchool> value) {
         this.schools = value;
     }
     /**
      * Sets the users property value. The users property
      * @param value Value to set for the users property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUsers(@jakarta.annotation.Nullable final java.util.List<EducationUser> value) {
         this.users = value;
     }

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamSummary implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
     private Integer ownersCount;
     /**
      * Instantiates a new teamSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("guestsCount", this.getGuestsCount());
@@ -116,45 +113,35 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the guestsCount property value. Count of guests in a team.
      * @param value Value to set for the guestsCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGuestsCount(@jakarta.annotation.Nullable final Integer value) {
         this.guestsCount = value;
     }
     /**
      * Sets the membersCount property value. Count of members in a team.
      * @param value Value to set for the membersCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMembersCount(@jakarta.annotation.Nullable final Integer value) {
         this.membersCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the ownersCount property value. Count of owners in a team.
      * @param value Value to set for the ownersCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOwnersCount(@jakarta.annotation.Nullable final Integer value) {
         this.ownersCount = value;
     }

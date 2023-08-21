@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
     private String queryType;
     /**
      * Instantiates a new accessReviewReviewerScope and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessReviewReviewerScope() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -116,45 +113,35 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the query property value. The query specifying who will be the reviewer.
      * @param value Value to set for the query property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQuery(@jakarta.annotation.Nullable final String value) {
         this.query = value;
     }
     /**
      * Sets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query, for example, ./manager, is specified. Possible value: decisions.
      * @param value Value to set for the queryRoot property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQueryRoot(@jakarta.annotation.Nullable final String value) {
         this.queryRoot = value;
     }
     /**
      * Sets the queryType property value. The type of query. Examples include MicrosoftGraph and ARM.
      * @param value Value to set for the queryType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQueryType(@jakarta.annotation.Nullable final String value) {
         this.queryType = value;
     }

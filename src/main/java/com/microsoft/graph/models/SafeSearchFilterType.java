@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Specifies what level of safe search (filtering adult content) is required
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum SafeSearchFilterType implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),

@@ -10,6 +10,7 @@ import java.util.UUID;
 /**
  * A class containing the properties for iOS Vpp eBook.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosVppEBook extends ManagedEBook implements Parsable {
     /**
      * The Apple ID associated with Vpp token.
@@ -45,9 +46,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     private UUID vppTokenId;
     /**
      * Instantiates a new iosVppEBook and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosVppEBook() {
         super();
         this.setOdataType("#microsoft.graph.iosVppEBook");
@@ -146,9 +145,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -164,72 +161,56 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     /**
      * Sets the appleId property value. The Apple ID associated with Vpp token.
      * @param value Value to set for the appleId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppleId(@jakarta.annotation.Nullable final String value) {
         this.appleId = value;
     }
     /**
      * Sets the genres property value. Genres.
      * @param value Value to set for the genres property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGenres(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.genres = value;
     }
     /**
      * Sets the language property value. Language.
      * @param value Value to set for the language property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLanguage(@jakarta.annotation.Nullable final String value) {
         this.language = value;
     }
     /**
      * Sets the seller property value. Seller.
      * @param value Value to set for the seller property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSeller(@jakarta.annotation.Nullable final String value) {
         this.seller = value;
     }
     /**
      * Sets the totalLicenseCount property value. Total license count.
      * @param value Value to set for the totalLicenseCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalLicenseCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalLicenseCount = value;
     }
     /**
      * Sets the usedLicenseCount property value. Used license count.
      * @param value Value to set for the usedLicenseCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUsedLicenseCount(@jakarta.annotation.Nullable final Integer value) {
         this.usedLicenseCount = value;
     }
     /**
      * Sets the vppOrganizationName property value. The Vpp token's organization name.
      * @param value Value to set for the vppOrganizationName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVppOrganizationName(@jakarta.annotation.Nullable final String value) {
         this.vppOrganizationName = value;
     }
     /**
      * Sets the vppTokenId property value. The Vpp token ID.
      * @param value Value to set for the vppTokenId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVppTokenId(@jakarta.annotation.Nullable final UUID value) {
         this.vppTokenId = value;
     }

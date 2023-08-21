@@ -11,6 +11,7 @@ import java.util.UUID;
 /**
  * Windows Log Collection request entity.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceLogCollectionResponse extends Entity implements Parsable {
     /**
      * The User Principal Name (UPN) of the user that enrolled the device.
@@ -46,9 +47,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     private AppLogUploadState status;
     /**
      * Instantiates a new deviceLogCollectionResponse and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceLogCollectionResponse() {
         super();
     }
@@ -146,9 +145,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -164,72 +161,56 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     /**
      * Sets the enrolledByUser property value. The User Principal Name (UPN) of the user that enrolled the device.
      * @param value Value to set for the enrolledByUser property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnrolledByUser(@jakarta.annotation.Nullable final String value) {
         this.enrolledByUser = value;
     }
     /**
      * Sets the expirationDateTimeUTC property value. The DateTime of the expiration of the logs.
      * @param value Value to set for the expirationDateTimeUTC property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpirationDateTimeUTC(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTimeUTC = value;
     }
     /**
      * Sets the initiatedByUserPrincipalName property value. The UPN for who initiated the request.
      * @param value Value to set for the initiatedByUserPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiatedByUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.initiatedByUserPrincipalName = value;
     }
     /**
      * Sets the managedDeviceId property value. Indicates Intune device unique identifier.
      * @param value Value to set for the managedDeviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagedDeviceId(@jakarta.annotation.Nullable final UUID value) {
         this.managedDeviceId = value;
     }
     /**
      * Sets the receivedDateTimeUTC property value. The DateTime the request was received.
      * @param value Value to set for the receivedDateTimeUTC property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReceivedDateTimeUTC(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.receivedDateTimeUTC = value;
     }
     /**
      * Sets the requestedDateTimeUTC property value. The DateTime of the request.
      * @param value Value to set for the requestedDateTimeUTC property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRequestedDateTimeUTC(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.requestedDateTimeUTC = value;
     }
     /**
      * Sets the sizeInKB property value. The size of the logs in KB. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the sizeInKB property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSizeInKB(@jakarta.annotation.Nullable final Double value) {
         this.sizeInKB = value;
     }
     /**
      * Sets the status property value. AppLogUploadStatus
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final AppLogUploadState value) {
         this.status = value;
     }

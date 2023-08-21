@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ListItem extends BaseItem implements Parsable {
     /**
      * Analytics about the view activities that took place on this item.
@@ -37,9 +38,7 @@ public class ListItem extends BaseItem implements Parsable {
     private java.util.List<ListItemVersion> versions;
     /**
      * Instantiates a new listItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ListItem() {
         super();
         this.setOdataType("#microsoft.graph.listItem");
@@ -129,9 +128,7 @@ public class ListItem extends BaseItem implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,63 +143,49 @@ public class ListItem extends BaseItem implements Parsable {
     /**
      * Sets the analytics property value. Analytics about the view activities that took place on this item.
      * @param value Value to set for the analytics property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAnalytics(@jakarta.annotation.Nullable final ItemAnalytics value) {
         this.analytics = value;
     }
     /**
      * Sets the contentType property value. The content type of this list item
      * @param value Value to set for the contentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentType(@jakarta.annotation.Nullable final ContentTypeInfo value) {
         this.contentType = value;
     }
     /**
      * Sets the documentSetVersions property value. Version information for a document set version created by a user.
      * @param value Value to set for the documentSetVersions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDocumentSetVersions(@jakarta.annotation.Nullable final java.util.List<DocumentSetVersion> value) {
         this.documentSetVersions = value;
     }
     /**
      * Sets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
      * @param value Value to set for the driveItem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDriveItem(@jakarta.annotation.Nullable final DriveItem value) {
         this.driveItem = value;
     }
     /**
      * Sets the fields property value. The values of the columns set on this list item.
      * @param value Value to set for the fields property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFields(@jakarta.annotation.Nullable final FieldValueSet value) {
         this.fields = value;
     }
     /**
      * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
      * @param value Value to set for the sharepointIds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharepointIds(@jakarta.annotation.Nullable final SharepointIds value) {
         this.sharepointIds = value;
     }
     /**
      * Sets the versions property value. The list of previous versions of the list item.
      * @param value Value to set for the versions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersions(@jakarta.annotation.Nullable final java.util.List<ListItemVersion> value) {
         this.versions = value;
     }

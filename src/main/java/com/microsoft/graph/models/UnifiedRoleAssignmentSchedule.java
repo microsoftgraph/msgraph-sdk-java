@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements Parsable {
     /**
      * If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
@@ -25,9 +26,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
     private RequestSchedule scheduleInfo;
     /**
      * Instantiates a new unifiedRoleAssignmentSchedule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRoleAssignmentSchedule() {
         super();
     }
@@ -89,9 +88,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -103,36 +100,28 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
     /**
      * Sets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
      * @param value Value to set for the activatedUsing property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivatedUsing(@jakarta.annotation.Nullable final UnifiedRoleEligibilitySchedule value) {
         this.activatedUsing = value;
     }
     /**
      * Sets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
      * @param value Value to set for the assignmentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignmentType(@jakarta.annotation.Nullable final String value) {
         this.assignmentType = value;
     }
     /**
      * Sets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
      * @param value Value to set for the memberType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMemberType(@jakarta.annotation.Nullable final String value) {
         this.memberType = value;
     }
     /**
      * Sets the scheduleInfo property value. The period of the role assignment. It can represent a single occurrence or multiple recurrences.
      * @param value Value to set for the scheduleInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScheduleInfo(@jakarta.annotation.Nullable final RequestSchedule value) {
         this.scheduleInfo = value;
     }

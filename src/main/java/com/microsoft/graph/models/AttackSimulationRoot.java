@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttackSimulationRoot extends Entity implements Parsable {
     /**
      * Represents simulation automation created to run on a tenant.
@@ -17,9 +18,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     private java.util.List<Simulation> simulations;
     /**
      * Instantiates a new attackSimulationRoot and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AttackSimulationRoot() {
         super();
     }
@@ -63,9 +62,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     /**
      * Sets the simulationAutomations property value. Represents simulation automation created to run on a tenant.
      * @param value Value to set for the simulationAutomations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSimulationAutomations(@jakarta.annotation.Nullable final java.util.List<SimulationAutomation> value) {
         this.simulationAutomations = value;
     }
     /**
      * Sets the simulations property value. Represents an attack simulation training campaign in a tenant.
      * @param value Value to set for the simulations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSimulations(@jakarta.annotation.Nullable final java.util.List<Simulation> value) {
         this.simulations = value;
     }

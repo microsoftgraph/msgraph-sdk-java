@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable {
     /**
      * If present, represents a conversation (for example, team or channel) @mentioned in a message.
@@ -13,9 +14,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
     private TeamworkConversationIdentity conversation;
     /**
      * Instantiates a new chatMessageMentionedIdentitySet and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ChatMessageMentionedIdentitySet() {
         super();
         this.setOdataType("#microsoft.graph.chatMessageMentionedIdentitySet");
@@ -51,9 +50,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +59,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
     /**
      * Sets the conversation property value. If present, represents a conversation (for example, team or channel) @mentioned in a message.
      * @param value Value to set for the conversation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConversation(@jakarta.annotation.Nullable final TeamworkConversationIdentity value) {
         this.conversation = value;
     }

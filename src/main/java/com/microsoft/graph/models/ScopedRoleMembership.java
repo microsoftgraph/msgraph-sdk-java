@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ScopedRoleMembership extends Entity implements Parsable {
     /**
      * Unique identifier for the administrative unit that the directory role is scoped to
@@ -21,9 +22,7 @@ public class ScopedRoleMembership extends Entity implements Parsable {
     private Identity roleMemberInfo;
     /**
      * Instantiates a new scopedRoleMembership and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ScopedRoleMembership() {
         super();
     }
@@ -76,9 +75,7 @@ public class ScopedRoleMembership extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +86,21 @@ public class ScopedRoleMembership extends Entity implements Parsable {
     /**
      * Sets the administrativeUnitId property value. Unique identifier for the administrative unit that the directory role is scoped to
      * @param value Value to set for the administrativeUnitId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdministrativeUnitId(@jakarta.annotation.Nullable final String value) {
         this.administrativeUnitId = value;
     }
     /**
      * Sets the roleId property value. Unique identifier for the directory role that the member is in.
      * @param value Value to set for the roleId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleId(@jakarta.annotation.Nullable final String value) {
         this.roleId = value;
     }
     /**
      * Sets the roleMemberInfo property value. The roleMemberInfo property
      * @param value Value to set for the roleMemberInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleMemberInfo(@jakarta.annotation.Nullable final Identity value) {
         this.roleMemberInfo = value;
     }

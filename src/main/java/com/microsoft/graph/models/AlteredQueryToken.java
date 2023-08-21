@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     private String suggestion;
     /**
      * Instantiates a new alteredQueryToken and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AlteredQueryToken() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("length", this.getLength());
@@ -116,45 +113,35 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the length property value. Defines the length of a changed segment.
      * @param value Value to set for the length property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLength(@jakarta.annotation.Nullable final Integer value) {
         this.length = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the offset property value. Defines the offset of a changed segment.
      * @param value Value to set for the offset property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOffset(@jakarta.annotation.Nullable final Integer value) {
         this.offset = value;
     }
     /**
      * Sets the suggestion property value. Represents the corrected segment string.
      * @param value Value to set for the suggestion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSuggestion(@jakarta.annotation.Nullable final String value) {
         this.suggestion = value;
     }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UsedInsight extends Entity implements Parsable {
     /**
      * Information about when the item was last viewed or modified by the user. Read only.
@@ -25,9 +26,7 @@ public class UsedInsight extends Entity implements Parsable {
     private ResourceVisualization resourceVisualization;
     /**
      * Instantiates a new usedInsight and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UsedInsight() {
         super();
     }
@@ -89,9 +88,7 @@ public class UsedInsight extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -101,36 +98,28 @@ public class UsedInsight extends Entity implements Parsable {
     /**
      * Sets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read only.
      * @param value Value to set for the lastUsed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastUsed(@jakarta.annotation.Nullable final UsageDetails value) {
         this.lastUsed = value;
     }
     /**
      * Sets the resource property value. Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
      * @param value Value to set for the resource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResource(@jakarta.annotation.Nullable final Entity value) {
         this.resource = value;
     }
     /**
      * Sets the resourceReference property value. Reference properties of the used document, such as the url and type of the document. Read-only
      * @param value Value to set for the resourceReference property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceReference(@jakarta.annotation.Nullable final ResourceReference value) {
         this.resourceReference = value;
     }
     /**
      * Sets the resourceVisualization property value. Properties that you can use to visualize the document in your experience. Read-only
      * @param value Value to set for the resourceVisualization property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceVisualization(@jakarta.annotation.Nullable final ResourceVisualization value) {
         this.resourceVisualization = value;
     }

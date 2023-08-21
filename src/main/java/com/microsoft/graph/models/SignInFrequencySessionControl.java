@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SignInFrequencySessionControl extends ConditionalAccessSessionControl implements Parsable {
     /**
      * The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
@@ -25,9 +26,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
     private Integer value;
     /**
      * Instantiates a new signInFrequencySessionControl and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SignInFrequencySessionControl() {
         super();
         this.setOdataType("#microsoft.graph.signInFrequencySessionControl");
@@ -90,9 +89,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +101,28 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
     /**
      * Sets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
      * @param value Value to set for the authenticationType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthenticationType(@jakarta.annotation.Nullable final SignInFrequencyAuthenticationType value) {
         this.authenticationType = value;
     }
     /**
      * Sets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.
      * @param value Value to set for the frequencyInterval property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFrequencyInterval(@jakarta.annotation.Nullable final SignInFrequencyInterval value) {
         this.frequencyInterval = value;
     }
     /**
      * Sets the type property value. Possible values are: days, hours.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final SigninFrequencyType value) {
         this.type = value;
     }
     /**
      * Sets the value property value. The number of days or hours.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final Integer value) {
         this.value = value;
     }

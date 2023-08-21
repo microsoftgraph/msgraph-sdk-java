@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class FindPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -27,9 +28,7 @@ public class FindPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json withinText;
     /**
      * Instantiates a new findPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public FindPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +89,7 @@ public class FindPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("findText", this.getFindText());
@@ -103,36 +100,28 @@ public class FindPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the findText property value. The findText property
      * @param value Value to set for the findText property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFindText(@jakarta.annotation.Nullable final Json value) {
         this.findText = value;
     }
     /**
      * Sets the startNum property value. The startNum property
      * @param value Value to set for the startNum property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartNum(@jakarta.annotation.Nullable final Json value) {
         this.startNum = value;
     }
     /**
      * Sets the withinText property value. The withinText property
      * @param value Value to set for the withinText property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWithinText(@jakarta.annotation.Nullable final Json value) {
         this.withinText = value;
     }

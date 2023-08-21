@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new teamMemberSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamMemberSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +140,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowAddRemoveApps", this.getAllowAddRemoveApps());
@@ -158,72 +155,56 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowAddRemoveApps property value. If set to true, members can add and remove apps.
      * @param value Value to set for the allowAddRemoveApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowAddRemoveApps(@jakarta.annotation.Nullable final Boolean value) {
         this.allowAddRemoveApps = value;
     }
     /**
      * Sets the allowCreatePrivateChannels property value. If set to true, members can add and update private channels.
      * @param value Value to set for the allowCreatePrivateChannels property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowCreatePrivateChannels(@jakarta.annotation.Nullable final Boolean value) {
         this.allowCreatePrivateChannels = value;
     }
     /**
      * Sets the allowCreateUpdateChannels property value. If set to true, members can add and update channels.
      * @param value Value to set for the allowCreateUpdateChannels property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowCreateUpdateChannels(@jakarta.annotation.Nullable final Boolean value) {
         this.allowCreateUpdateChannels = value;
     }
     /**
      * Sets the allowCreateUpdateRemoveConnectors property value. If set to true, members can add, update, and remove connectors.
      * @param value Value to set for the allowCreateUpdateRemoveConnectors property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowCreateUpdateRemoveConnectors(@jakarta.annotation.Nullable final Boolean value) {
         this.allowCreateUpdateRemoveConnectors = value;
     }
     /**
      * Sets the allowCreateUpdateRemoveTabs property value. If set to true, members can add, update, and remove tabs.
      * @param value Value to set for the allowCreateUpdateRemoveTabs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowCreateUpdateRemoveTabs(@jakarta.annotation.Nullable final Boolean value) {
         this.allowCreateUpdateRemoveTabs = value;
     }
     /**
      * Sets the allowDeleteChannels property value. If set to true, members can delete channels.
      * @param value Value to set for the allowDeleteChannels property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowDeleteChannels(@jakarta.annotation.Nullable final Boolean value) {
         this.allowDeleteChannels = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

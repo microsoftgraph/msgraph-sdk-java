@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the publishing state of an app.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MobileAppPublishingState implements ValuedEnum {
     /** The app is not yet published. */
     NotPublished("notPublished"),

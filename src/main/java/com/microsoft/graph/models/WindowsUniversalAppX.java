@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Contains properties and inherited properties for Windows Universal AppX Line Of Business apps.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     /**
      * Contains properties for Windows architecture.
@@ -48,9 +49,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     private WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
     /**
      * Instantiates a new windowsUniversalAppX and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsUniversalAppX() {
         super();
         this.setOdataType("#microsoft.graph.windowsUniversalAppX");
@@ -158,9 +157,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -177,81 +174,63 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     /**
      * Sets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @param value Value to set for the applicableArchitectures property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicableArchitectures(@jakarta.annotation.Nullable final WindowsArchitecture value) {
         this.applicableArchitectures = value;
     }
     /**
      * Sets the applicableDeviceTypes property value. Contains properties for Windows device type.
      * @param value Value to set for the applicableDeviceTypes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicableDeviceTypes(@jakarta.annotation.Nullable final WindowsDeviceType value) {
         this.applicableDeviceTypes = value;
     }
     /**
      * Sets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
      * @param value Value to set for the committedContainedApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCommittedContainedApps(@jakarta.annotation.Nullable final java.util.List<MobileContainedApp> value) {
         this.committedContainedApps = value;
     }
     /**
      * Sets the identityName property value. The Identity Name.
      * @param value Value to set for the identityName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentityName(@jakarta.annotation.Nullable final String value) {
         this.identityName = value;
     }
     /**
      * Sets the identityPublisherHash property value. The Identity Publisher Hash.
      * @param value Value to set for the identityPublisherHash property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentityPublisherHash(@jakarta.annotation.Nullable final String value) {
         this.identityPublisherHash = value;
     }
     /**
      * Sets the identityResourceIdentifier property value. The Identity Resource Identifier.
      * @param value Value to set for the identityResourceIdentifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentityResourceIdentifier(@jakarta.annotation.Nullable final String value) {
         this.identityResourceIdentifier = value;
     }
     /**
      * Sets the identityVersion property value. The identity version.
      * @param value Value to set for the identityVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentityVersion(@jakarta.annotation.Nullable final String value) {
         this.identityVersion = value;
     }
     /**
      * Sets the isBundle property value. Whether or not the app is a bundle.
      * @param value Value to set for the isBundle property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsBundle(@jakarta.annotation.Nullable final Boolean value) {
         this.isBundle = value;
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. The minimum operating system required for a Windows mobile app.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final WindowsMinimumOperatingSystem value) {
         this.minimumSupportedOperatingSystem = value;
     }

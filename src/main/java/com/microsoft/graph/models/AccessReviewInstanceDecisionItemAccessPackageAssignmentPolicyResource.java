@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource extends AccessReviewInstanceDecisionItemResource implements Parsable {
     /**
      * Display name of the access package to which access has been granted.
@@ -17,9 +18,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
     private String accessPackageId;
     /**
      * Instantiates a new accessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource");
@@ -64,9 +63,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
     /**
      * Sets the accessPackageDisplayName property value. Display name of the access package to which access has been granted.
      * @param value Value to set for the accessPackageDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccessPackageDisplayName(@jakarta.annotation.Nullable final String value) {
         this.accessPackageDisplayName = value;
     }
     /**
      * Sets the accessPackageId property value. Identifier of the access package to which access has been granted.
      * @param value Value to set for the accessPackageId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccessPackageId(@jakarta.annotation.Nullable final String value) {
         this.accessPackageId = value;
     }

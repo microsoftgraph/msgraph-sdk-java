@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -46,9 +47,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     private String thumbnailUrl;
     /**
      * Instantiates a new chatMessageAttachment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ChatMessageAttachment() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -154,9 +153,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("content", this.getContent());
@@ -172,81 +169,63 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the content property value. The content of the attachment. If the attachment is a rich card, set the property to the rich card object. This property and contentUrl are mutually exclusive.
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContent(@jakarta.annotation.Nullable final String value) {
         this.content = value;
     }
     /**
      * Sets the contentType property value. The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentTypes supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
      * @param value Value to set for the contentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentType(@jakarta.annotation.Nullable final String value) {
         this.contentType = value;
     }
     /**
      * Sets the contentUrl property value. URL for the content of the attachment. Supported protocols: http, https, file and data.
      * @param value Value to set for the contentUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentUrl(@jakarta.annotation.Nullable final String value) {
         this.contentUrl = value;
     }
     /**
      * Sets the id property value. Read-only. Unique id of the attachment.
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the name property value. Name of the attachment.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the teamsAppId property value. The ID of the Teams app that is associated with the attachment. The property is specifically used to attribute a Teams message card to the specified app.
      * @param value Value to set for the teamsAppId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamsAppId(@jakarta.annotation.Nullable final String value) {
         this.teamsAppId = value;
     }
     /**
      * Sets the thumbnailUrl property value. URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document.
      * @param value Value to set for the thumbnailUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setThumbnailUrl(@jakarta.annotation.Nullable final String value) {
         this.thumbnailUrl = value;
     }

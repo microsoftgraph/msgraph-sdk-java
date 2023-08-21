@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Contains rule types for Win32 LOB apps.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Win32LobAppRuleType implements ValuedEnum {
     /** Detection rule. */
     Detection("detection"),

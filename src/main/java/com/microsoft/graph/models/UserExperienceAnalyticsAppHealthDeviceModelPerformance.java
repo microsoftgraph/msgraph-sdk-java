@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * The user experience analytics device model performance entity contains device model performance details.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity implements Parsable {
     /**
      * The number of active devices for the model. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
@@ -36,9 +37,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
     private Double modelAppHealthScore;
     /**
      * Instantiates a new userExperienceAnalyticsAppHealthDeviceModelPerformance and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAppHealthDeviceModelPerformance() {
         super();
     }
@@ -118,9 +117,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,54 +131,42 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
     /**
      * Sets the activeDeviceCount property value. The number of active devices for the model. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the activeDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActiveDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.activeDeviceCount = value;
     }
     /**
      * Sets the deviceManufacturer property value. The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceManufacturer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceManufacturer(@jakarta.annotation.Nullable final String value) {
         this.deviceManufacturer = value;
     }
     /**
      * Sets the deviceModel property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceModel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
         this.deviceModel = value;
     }
     /**
      * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHealthStatus(@jakarta.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
         this.healthStatus = value;
     }
     /**
      * Sets the meanTimeToFailureInMinutes property value. The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the meanTimeToFailureInMinutes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMeanTimeToFailureInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.meanTimeToFailureInMinutes = value;
     }
     /**
      * Sets the modelAppHealthScore property value. The application health score of the device model. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the modelAppHealthScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModelAppHealthScore(@jakarta.annotation.Nullable final Double value) {
         this.modelAppHealthScore = value;
     }

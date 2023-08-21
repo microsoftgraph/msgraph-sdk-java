@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * iOS Device Features Configuration Profile.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBase implements Parsable {
     /**
      * Asset tag information for the device, displayed on the login window and lock screen.
@@ -32,9 +33,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     private java.util.List<IosNotificationSettings> notificationSettings;
     /**
      * Instantiates a new iosDeviceFeaturesConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosDeviceFeaturesConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosDeviceFeaturesConfiguration");
@@ -106,9 +105,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -121,45 +118,35 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     /**
      * Sets the assetTagTemplate property value. Asset tag information for the device, displayed on the login window and lock screen.
      * @param value Value to set for the assetTagTemplate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssetTagTemplate(@jakarta.annotation.Nullable final String value) {
         this.assetTagTemplate = value;
     }
     /**
      * Sets the homeScreenDockIcons property value. A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the homeScreenDockIcons property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHomeScreenDockIcons(@jakarta.annotation.Nullable final java.util.List<IosHomeScreenItem> value) {
         this.homeScreenDockIcons = value;
     }
     /**
      * Sets the homeScreenPages property value. A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the homeScreenPages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHomeScreenPages(@jakarta.annotation.Nullable final java.util.List<IosHomeScreenPage> value) {
         this.homeScreenPages = value;
     }
     /**
      * Sets the lockScreenFootnote property value. A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
      * @param value Value to set for the lockScreenFootnote property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLockScreenFootnote(@jakarta.annotation.Nullable final String value) {
         this.lockScreenFootnote = value;
     }
     /**
      * Sets the notificationSettings property value. Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
      * @param value Value to set for the notificationSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotificationSettings(@jakarta.annotation.Nullable final java.util.List<IosNotificationSettings> value) {
         this.notificationSettings = value;
     }

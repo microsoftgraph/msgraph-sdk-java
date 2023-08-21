@@ -9,12 +9,11 @@ import java.util.Objects;
 /**
  * Contains properties used to assign an iOS VPP EBook to a group.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosVppEBookAssignment extends ManagedEBookAssignment implements Parsable {
     /**
      * Instantiates a new iosVppEBookAssignment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosVppEBookAssignment() {
         super();
     }
@@ -40,9 +39,7 @@ public class IosVppEBookAssignment extends ManagedEBookAssignment implements Par
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

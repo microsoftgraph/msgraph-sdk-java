@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class KubernetesServiceEvidence extends AlertEvidence implements Parsable {
     /**
      * The service cluster IP.
@@ -41,9 +42,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     private KubernetesServiceType serviceType;
     /**
      * Instantiates a new kubernetesServiceEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public KubernetesServiceEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.kubernetesServiceEvidence");
@@ -142,9 +141,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,72 +157,56 @@ public class KubernetesServiceEvidence extends AlertEvidence implements Parsable
     /**
      * Sets the clusterIP property value. The service cluster IP.
      * @param value Value to set for the clusterIP property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClusterIP(@jakarta.annotation.Nullable final IpEvidence value) {
         this.clusterIP = value;
     }
     /**
      * Sets the externalIPs property value. The service external IPs.
      * @param value Value to set for the externalIPs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalIPs(@jakarta.annotation.Nullable final java.util.List<IpEvidence> value) {
         this.externalIPs = value;
     }
     /**
      * Sets the labels property value. The service labels.
      * @param value Value to set for the labels property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLabels(@jakarta.annotation.Nullable final Dictionary value) {
         this.labels = value;
     }
     /**
      * Sets the name property value. The service name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the namespace property value. The service namespace.
      * @param value Value to set for the namespace property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNamespace(@jakarta.annotation.Nullable final KubernetesNamespaceEvidence value) {
         this.namespace = value;
     }
     /**
      * Sets the selector property value. The service selector.
      * @param value Value to set for the selector property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSelector(@jakarta.annotation.Nullable final Dictionary value) {
         this.selector = value;
     }
     /**
      * Sets the servicePorts property value. The list of service ports.
      * @param value Value to set for the servicePorts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServicePorts(@jakarta.annotation.Nullable final java.util.List<KubernetesServicePort> value) {
         this.servicePorts = value;
     }
     /**
      * Sets the serviceType property value. The serviceType property
      * @param value Value to set for the serviceType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServiceType(@jakarta.annotation.Nullable final KubernetesServiceType value) {
         this.serviceType = value;
     }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserConsentRequest extends Request implements Parsable {
     /**
      * Approval decisions associated with a request.
@@ -17,9 +18,7 @@ public class UserConsentRequest extends Request implements Parsable {
     private String reason;
     /**
      * Instantiates a new userConsentRequest and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserConsentRequest() {
         super();
     }
@@ -63,9 +62,7 @@ public class UserConsentRequest extends Request implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class UserConsentRequest extends Request implements Parsable {
     /**
      * Sets the approval property value. Approval decisions associated with a request.
      * @param value Value to set for the approval property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApproval(@jakarta.annotation.Nullable final Approval value) {
         this.approval = value;
     }
     /**
      * Sets the reason property value. The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
      * @param value Value to set for the reason property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReason(@jakarta.annotation.Nullable final String value) {
         this.reason = value;
     }

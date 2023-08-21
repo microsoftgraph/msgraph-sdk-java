@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * AppLogUploadStatus
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AppLogUploadState implements ValuedEnum {
     /** Default. Indicates that request is waiting to be processed or under processing. */
     Pending("pending"),

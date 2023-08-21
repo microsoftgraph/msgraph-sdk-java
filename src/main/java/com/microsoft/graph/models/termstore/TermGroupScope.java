@@ -3,6 +3,7 @@ package com.microsoft.graph.models.termstore;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum TermGroupScope implements ValuedEnum {
     Global("global"),
     System("system"),

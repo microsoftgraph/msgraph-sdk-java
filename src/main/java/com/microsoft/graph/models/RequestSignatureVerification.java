@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RequestSignatureVerification implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
     private String odataType;
     /**
      * Instantiates a new requestSignatureVerification and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RequestSignatureVerification() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("allowedWeakAlgorithms", this.getAllowedWeakAlgorithms());
@@ -102,36 +99,28 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowedWeakAlgorithms property value. Specifies which weak algorithms are allowed.  The possible values are: rsaSha1, unknownFutureValue.
      * @param value Value to set for the allowedWeakAlgorithms property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedWeakAlgorithms(@jakarta.annotation.Nullable final WeakAlgorithms value) {
         this.allowedWeakAlgorithms = value;
     }
     /**
      * Sets the isSignedRequestRequired property value. Specifies whether signed authentication requests for this application should be required.
      * @param value Value to set for the isSignedRequestRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSignedRequestRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isSignedRequestRequired = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

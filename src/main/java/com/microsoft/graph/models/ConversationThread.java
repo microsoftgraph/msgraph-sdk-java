@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConversationThread extends Entity implements Parsable {
     /**
      * The Cc: recipients for the thread. Returned only on $select.
@@ -46,9 +47,7 @@ public class ConversationThread extends Entity implements Parsable {
     private java.util.List<String> uniqueSenders;
     /**
      * Instantiates a new conversationThread and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConversationThread() {
         super();
     }
@@ -155,9 +154,7 @@ public class ConversationThread extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -174,81 +171,63 @@ public class ConversationThread extends Entity implements Parsable {
     /**
      * Sets the ccRecipients property value. The Cc: recipients for the thread. Returned only on $select.
      * @param value Value to set for the ccRecipients property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCcRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.ccRecipients = value;
     }
     /**
      * Sets the hasAttachments property value. Indicates whether any of the posts within this thread has at least one attachment. Returned by default.
      * @param value Value to set for the hasAttachments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
         this.hasAttachments = value;
     }
     /**
      * Sets the isLocked property value. Indicates if the thread is locked. Returned by default.
      * @param value Value to set for the isLocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsLocked(@jakarta.annotation.Nullable final Boolean value) {
         this.isLocked = value;
     }
     /**
      * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default.
      * @param value Value to set for the lastDeliveredDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastDeliveredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastDeliveredDateTime = value;
     }
     /**
      * Sets the posts property value. The posts property
      * @param value Value to set for the posts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPosts(@jakarta.annotation.Nullable final java.util.List<Post> value) {
         this.posts = value;
     }
     /**
      * Sets the preview property value. A short summary from the body of the latest post in this conversation. Returned by default.
      * @param value Value to set for the preview property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPreview(@jakarta.annotation.Nullable final String value) {
         this.preview = value;
     }
     /**
      * Sets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. Returned by default.
      * @param value Value to set for the topic property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTopic(@jakarta.annotation.Nullable final String value) {
         this.topic = value;
     }
     /**
      * Sets the toRecipients property value. The To: recipients for the thread. Returned only on $select.
      * @param value Value to set for the toRecipients property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setToRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.toRecipients = value;
     }
     /**
      * Sets the uniqueSenders property value. All the users that sent a message to this thread. Returned by default.
      * @param value Value to set for the uniqueSenders property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUniqueSenders(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.uniqueSenders = value;
     }

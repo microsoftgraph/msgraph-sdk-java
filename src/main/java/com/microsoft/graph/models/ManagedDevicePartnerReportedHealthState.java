@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Available health states for the Device Health API
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedDevicePartnerReportedHealthState implements ValuedEnum {
     /** Device health state is not yet reported */
     Unknown("unknown"),

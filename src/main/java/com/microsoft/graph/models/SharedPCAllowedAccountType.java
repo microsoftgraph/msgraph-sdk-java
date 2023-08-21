@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Type of accounts that are allowed to share the PC.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum SharedPCAllowedAccountType implements ValuedEnum {
     /** Only guest accounts. */
     Guest("guest"),

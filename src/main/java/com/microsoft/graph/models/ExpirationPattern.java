@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExpirationPattern implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -32,9 +33,7 @@ public class ExpirationPattern implements AdditionalDataHolder, Parsable {
     private ExpirationPatternType type;
     /**
      * Instantiates a new expirationPattern and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ExpirationPattern() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -104,9 +103,7 @@ public class ExpirationPattern implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writePeriodAndDurationValue("duration", this.getDuration());
@@ -118,45 +115,35 @@ public class ExpirationPattern implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the duration property value. The requestor's desired duration of access represented in ISO 8601 format for durations. For example, PT3H refers to three hours.  If specified in a request, endDateTime should not be present and the type property should be set to afterDuration.
      * @param value Value to set for the duration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.duration = value;
+        this.duration = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the endDateTime property value. Timestamp of date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the type property value. The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final ExpirationPatternType value) {
         this.type = value;
     }

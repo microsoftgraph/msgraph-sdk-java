@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminCustomer extends Entity implements Parsable {
     /**
      * The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
@@ -21,9 +22,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
     private String tenantId;
     /**
      * Instantiates a new delegatedAdminCustomer and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DelegatedAdminCustomer() {
         super();
     }
@@ -76,9 +75,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +86,21 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
     /**
      * Sets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the serviceManagementDetails property value. Contains the management details of a service in the customer tenant that's managed by delegated administration.
      * @param value Value to set for the serviceManagementDetails property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServiceManagementDetails(@jakarta.annotation.Nullable final java.util.List<DelegatedAdminServiceManagementDetail> value) {
         this.serviceManagementDetails = value;
     }
     /**
      * Sets the tenantId property value. The Azure AD-assigned tenant ID of the customer. Read-only.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }

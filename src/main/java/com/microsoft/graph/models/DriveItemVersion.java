@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DriveItemVersion extends BaseItemVersion implements Parsable {
     /**
      * The content stream for this version of the item.
@@ -17,9 +18,7 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
     private Long size;
     /**
      * Instantiates a new driveItemVersion and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DriveItemVersion() {
         super();
         this.setOdataType("#microsoft.graph.driveItemVersion");
@@ -64,9 +63,7 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
     /**
      * Sets the content property value. The content stream for this version of the item.
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
         this.content = value;
     }
     /**
      * Sets the size property value. Indicates the size of the content stream for this version of the item.
      * @param value Value to set for the size property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSize(@jakarta.annotation.Nullable final Long value) {
         this.size = value;
     }

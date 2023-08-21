@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConnectedOrganizationMembers extends SubjectSet implements Parsable {
     /**
      * The ID of the connected organization in entitlement management.
@@ -17,9 +18,7 @@ public class ConnectedOrganizationMembers extends SubjectSet implements Parsable
     private String description;
     /**
      * Instantiates a new connectedOrganizationMembers and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConnectedOrganizationMembers() {
         super();
         this.setOdataType("#microsoft.graph.connectedOrganizationMembers");
@@ -64,9 +63,7 @@ public class ConnectedOrganizationMembers extends SubjectSet implements Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class ConnectedOrganizationMembers extends SubjectSet implements Parsable
     /**
      * Sets the connectedOrganizationId property value. The ID of the connected organization in entitlement management.
      * @param value Value to set for the connectedOrganizationId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConnectedOrganizationId(@jakarta.annotation.Nullable final String value) {
         this.connectedOrganizationId = value;
     }
     /**
      * Sets the description property value. The name of the connected organization.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationAssignmentSettings extends Entity implements Parsable {
     /**
      * Indicates whether turn-in celebration animation will be shown. A value of true indicates that the animation will not be shown. Default value is false.
@@ -13,9 +14,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
     private Boolean submissionAnimationDisabled;
     /**
      * Instantiates a new educationAssignmentSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationAssignmentSettings() {
         super();
     }
@@ -50,9 +49,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +58,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
     /**
      * Sets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation will be shown. A value of true indicates that the animation will not be shown. Default value is false.
      * @param value Value to set for the submissionAnimationDisabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubmissionAnimationDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.submissionAnimationDisabled = value;
     }

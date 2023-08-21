@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Contains properties and inherited properties for iOS web apps.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosiPadOSWebClip extends MobileApp implements Parsable {
     /**
      * Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com'
@@ -20,9 +21,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
     private Boolean useManagedBrowser;
     /**
      * Instantiates a new iosiPadOSWebClip and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosiPadOSWebClip() {
         super();
         this.setOdataType("#microsoft.graph.iosiPadOSWebClip");
@@ -67,9 +66,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -79,18 +76,14 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
     /**
      * Sets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com'
      * @param value Value to set for the appUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppUrl(@jakarta.annotation.Nullable final String value) {
         this.appUrl = value;
     }
     /**
      * Sets the useManagedBrowser property value. Whether or not to use managed browser. When TRUE, the app will be required to be opened in Microsoft Edge. When FALSE, the app will not be required to be opened in Microsoft Edge. By default, this property is set to FALSE.
      * @param value Value to set for the useManagedBrowser property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUseManagedBrowser(@jakarta.annotation.Nullable final Boolean value) {
         this.useManagedBrowser = value;
     }

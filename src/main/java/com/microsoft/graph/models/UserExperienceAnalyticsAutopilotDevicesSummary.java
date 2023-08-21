@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * The user experience analytics summary of Devices not windows autopilot ready.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAutopilotDevicesSummary implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -33,9 +34,7 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements Additiona
     private Integer totalWindows10DevicesWithoutTenantAttached;
     /**
      * Instantiates a new userExperienceAnalyticsAutopilotDevicesSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAutopilotDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -105,9 +104,7 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements Additiona
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("devicesNotAutopilotRegistered", this.getDevicesNotAutopilotRegistered());
@@ -119,45 +116,35 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements Additiona
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the devicesNotAutopilotRegistered property value. The count of intune devices that are not autopilot registerd. Read-only.
      * @param value Value to set for the devicesNotAutopilotRegistered property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDevicesNotAutopilotRegistered(@jakarta.annotation.Nullable final Integer value) {
         this.devicesNotAutopilotRegistered = value;
     }
     /**
      * Sets the devicesWithoutAutopilotProfileAssigned property value. The count of intune devices not autopilot profile assigned. Read-only.
      * @param value Value to set for the devicesWithoutAutopilotProfileAssigned property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDevicesWithoutAutopilotProfileAssigned(@jakarta.annotation.Nullable final Integer value) {
         this.devicesWithoutAutopilotProfileAssigned = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the totalWindows10DevicesWithoutTenantAttached property value. The count of windows 10 devices that are Intune and co-managed. Read-only.
      * @param value Value to set for the totalWindows10DevicesWithoutTenantAttached property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalWindows10DevicesWithoutTenantAttached(@jakarta.annotation.Nullable final Integer value) {
         this.totalWindows10DevicesWithoutTenantAttached = value;
     }

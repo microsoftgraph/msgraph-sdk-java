@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityProviderBase extends Entity implements Parsable {
     /**
      * The display name of the identity provider.
@@ -13,9 +14,7 @@ public class IdentityProviderBase extends Entity implements Parsable {
     private String displayName;
     /**
      * Instantiates a new identityProviderBase and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IdentityProviderBase() {
         super();
     }
@@ -62,9 +61,7 @@ public class IdentityProviderBase extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -73,9 +70,7 @@ public class IdentityProviderBase extends Entity implements Parsable {
     /**
      * Sets the displayName property value. The display name of the identity provider.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }

@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * OMA Settings String definition.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class OmaSettingString extends OmaSetting implements Parsable {
     /**
      * Value.
@@ -16,9 +17,7 @@ public class OmaSettingString extends OmaSetting implements Parsable {
     private String value;
     /**
      * Instantiates a new omaSettingString and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OmaSettingString() {
         super();
         this.setOdataType("#microsoft.graph.omaSettingString");
@@ -54,9 +53,7 @@ public class OmaSettingString extends OmaSetting implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -65,9 +62,7 @@ public class OmaSettingString extends OmaSetting implements Parsable {
     /**
      * Sets the value property value. Value.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }

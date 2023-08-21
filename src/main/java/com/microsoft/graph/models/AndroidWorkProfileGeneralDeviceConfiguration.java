@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Android Work Profile general device configuration.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Indicates whether or not to block fingerprint unlock.
@@ -148,9 +149,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     private Boolean workProfileRequirePassword;
     /**
      * Instantiates a new androidWorkProfileGeneralDeviceConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AndroidWorkProfileGeneralDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidWorkProfileGeneralDeviceConfiguration");
@@ -483,9 +482,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -527,306 +524,238 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     /**
      * Sets the passwordBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
      * @param value Value to set for the passwordBlockFingerprintUnlock property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordBlockFingerprintUnlock(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordBlockFingerprintUnlock = value;
     }
     /**
      * Sets the passwordBlockTrustAgents property value. Indicates whether or not to block Smart Lock and other trust agents.
      * @param value Value to set for the passwordBlockTrustAgents property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordBlockTrustAgents(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordBlockTrustAgents = value;
     }
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 365
      * @param value Value to set for the passwordExpirationDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.passwordExpirationDays = value;
     }
     /**
      * Sets the passwordMinimumLength property value. Minimum length of passwords. Valid values 4 to 16
      * @param value Value to set for the passwordMinimumLength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumLength = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the passwordRequiredType property value. Android Work Profile required password type.
      * @param value Value to set for the passwordRequiredType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidWorkProfileRequiredPasswordType value) {
         this.passwordRequiredType = value;
     }
     /**
      * Sets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before factory reset. Valid values 1 to 16
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@jakarta.annotation.Nullable final Integer value) {
         this.passwordSignInFailureCountBeforeFactoryReset = value;
     }
     /**
      * Sets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
      * @param value Value to set for the securityRequireVerifyApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecurityRequireVerifyApps(@jakarta.annotation.Nullable final Boolean value) {
         this.securityRequireVerifyApps = value;
     }
     /**
      * Sets the workProfileBlockAddingAccounts property value. Block users from adding/removing accounts in work profile.
      * @param value Value to set for the workProfileBlockAddingAccounts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfileBlockAddingAccounts(@jakarta.annotation.Nullable final Boolean value) {
         this.workProfileBlockAddingAccounts = value;
     }
     /**
      * Sets the workProfileBlockCamera property value. Block work profile camera.
      * @param value Value to set for the workProfileBlockCamera property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfileBlockCamera(@jakarta.annotation.Nullable final Boolean value) {
         this.workProfileBlockCamera = value;
     }
     /**
      * Sets the workProfileBlockCrossProfileCallerId property value. Block display work profile caller ID in personal profile.
      * @param value Value to set for the workProfileBlockCrossProfileCallerId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfileBlockCrossProfileCallerId(@jakarta.annotation.Nullable final Boolean value) {
         this.workProfileBlockCrossProfileCallerId = value;
     }
     /**
      * Sets the workProfileBlockCrossProfileContactsSearch property value. Block work profile contacts availability in personal profile.
      * @param value Value to set for the workProfileBlockCrossProfileContactsSearch property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfileBlockCrossProfileContactsSearch(@jakarta.annotation.Nullable final Boolean value) {
         this.workProfileBlockCrossProfileContactsSearch = value;
     }
     /**
      * Sets the workProfileBlockCrossProfileCopyPaste property value. Boolean that indicates if the setting disallow cross profile copy/paste is enabled.
      * @param value Value to set for the workProfileBlockCrossProfileCopyPaste property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfileBlockCrossProfileCopyPaste(@jakarta.annotation.Nullable final Boolean value) {
         this.workProfileBlockCrossProfileCopyPaste = value;
     }
     /**
      * Sets the workProfileBlockNotificationsWhileDeviceLocked property value. Indicates whether or not to block notifications while device locked.
      * @param value Value to set for the workProfileBlockNotificationsWhileDeviceLocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfileBlockNotificationsWhileDeviceLocked(@jakarta.annotation.Nullable final Boolean value) {
         this.workProfileBlockNotificationsWhileDeviceLocked = value;
     }
     /**
      * Sets the workProfileBlockScreenCapture property value. Block screen capture in work profile.
      * @param value Value to set for the workProfileBlockScreenCapture property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfileBlockScreenCapture(@jakarta.annotation.Nullable final Boolean value) {
         this.workProfileBlockScreenCapture = value;
     }
     /**
      * Sets the workProfileBluetoothEnableContactSharing property value. Allow bluetooth devices to access enterprise contacts.
      * @param value Value to set for the workProfileBluetoothEnableContactSharing property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfileBluetoothEnableContactSharing(@jakarta.annotation.Nullable final Boolean value) {
         this.workProfileBluetoothEnableContactSharing = value;
     }
     /**
      * Sets the workProfileDataSharingType property value. Android Work Profile cross profile data sharing type.
      * @param value Value to set for the workProfileDataSharingType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfileDataSharingType(@jakarta.annotation.Nullable final AndroidWorkProfileCrossProfileDataSharingType value) {
         this.workProfileDataSharingType = value;
     }
     /**
      * Sets the workProfileDefaultAppPermissionPolicy property value. Android Work Profile default app permission policy type.
      * @param value Value to set for the workProfileDefaultAppPermissionPolicy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfileDefaultAppPermissionPolicy(@jakarta.annotation.Nullable final AndroidWorkProfileDefaultAppPermissionPolicyType value) {
         this.workProfileDefaultAppPermissionPolicy = value;
     }
     /**
      * Sets the workProfilePasswordBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock for work profile.
      * @param value Value to set for the workProfilePasswordBlockFingerprintUnlock property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfilePasswordBlockFingerprintUnlock(@jakarta.annotation.Nullable final Boolean value) {
         this.workProfilePasswordBlockFingerprintUnlock = value;
     }
     /**
      * Sets the workProfilePasswordBlockTrustAgents property value. Indicates whether or not to block Smart Lock and other trust agents for work profile.
      * @param value Value to set for the workProfilePasswordBlockTrustAgents property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfilePasswordBlockTrustAgents(@jakarta.annotation.Nullable final Boolean value) {
         this.workProfilePasswordBlockTrustAgents = value;
     }
     /**
      * Sets the workProfilePasswordExpirationDays property value. Number of days before the work profile password expires. Valid values 1 to 365
      * @param value Value to set for the workProfilePasswordExpirationDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfilePasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.workProfilePasswordExpirationDays = value;
     }
     /**
      * Sets the workProfilePasswordMinimumLength property value. Minimum length of work profile password. Valid values 4 to 16
      * @param value Value to set for the workProfilePasswordMinimumLength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfilePasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.workProfilePasswordMinimumLength = value;
     }
     /**
      * Sets the workProfilePasswordMinLetterCharacters property value. Minimum # of letter characters required in work profile password. Valid values 1 to 10
      * @param value Value to set for the workProfilePasswordMinLetterCharacters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfilePasswordMinLetterCharacters(@jakarta.annotation.Nullable final Integer value) {
         this.workProfilePasswordMinLetterCharacters = value;
     }
     /**
      * Sets the workProfilePasswordMinLowerCaseCharacters property value. Minimum # of lower-case characters required in work profile password. Valid values 1 to 10
      * @param value Value to set for the workProfilePasswordMinLowerCaseCharacters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfilePasswordMinLowerCaseCharacters(@jakarta.annotation.Nullable final Integer value) {
         this.workProfilePasswordMinLowerCaseCharacters = value;
     }
     /**
      * Sets the workProfilePasswordMinNonLetterCharacters property value. Minimum # of non-letter characters required in work profile password. Valid values 1 to 10
      * @param value Value to set for the workProfilePasswordMinNonLetterCharacters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfilePasswordMinNonLetterCharacters(@jakarta.annotation.Nullable final Integer value) {
         this.workProfilePasswordMinNonLetterCharacters = value;
     }
     /**
      * Sets the workProfilePasswordMinNumericCharacters property value. Minimum # of numeric characters required in work profile password. Valid values 1 to 10
      * @param value Value to set for the workProfilePasswordMinNumericCharacters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfilePasswordMinNumericCharacters(@jakarta.annotation.Nullable final Integer value) {
         this.workProfilePasswordMinNumericCharacters = value;
     }
     /**
      * Sets the workProfilePasswordMinSymbolCharacters property value. Minimum # of symbols required in work profile password. Valid values 1 to 10
      * @param value Value to set for the workProfilePasswordMinSymbolCharacters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfilePasswordMinSymbolCharacters(@jakarta.annotation.Nullable final Integer value) {
         this.workProfilePasswordMinSymbolCharacters = value;
     }
     /**
      * Sets the workProfilePasswordMinUpperCaseCharacters property value. Minimum # of upper-case characters required in work profile password. Valid values 1 to 10
      * @param value Value to set for the workProfilePasswordMinUpperCaseCharacters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfilePasswordMinUpperCaseCharacters(@jakarta.annotation.Nullable final Integer value) {
         this.workProfilePasswordMinUpperCaseCharacters = value;
     }
     /**
      * Sets the workProfilePasswordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
      * @param value Value to set for the workProfilePasswordMinutesOfInactivityBeforeScreenTimeout property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfilePasswordMinutesOfInactivityBeforeScreenTimeout(@jakarta.annotation.Nullable final Integer value) {
         this.workProfilePasswordMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
      * Sets the workProfilePasswordPreviousPasswordBlockCount property value. Number of previous work profile passwords to block. Valid values 0 to 24
      * @param value Value to set for the workProfilePasswordPreviousPasswordBlockCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfilePasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.workProfilePasswordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the workProfilePasswordRequiredType property value. Android Work Profile required password type.
      * @param value Value to set for the workProfilePasswordRequiredType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfilePasswordRequiredType(@jakarta.annotation.Nullable final AndroidWorkProfileRequiredPasswordType value) {
         this.workProfilePasswordRequiredType = value;
     }
     /**
      * Sets the workProfilePasswordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16
      * @param value Value to set for the workProfilePasswordSignInFailureCountBeforeFactoryReset property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfilePasswordSignInFailureCountBeforeFactoryReset(@jakarta.annotation.Nullable final Integer value) {
         this.workProfilePasswordSignInFailureCountBeforeFactoryReset = value;
     }
     /**
      * Sets the workProfileRequirePassword property value. Password is required or not for work profile
      * @param value Value to set for the workProfileRequirePassword property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkProfileRequirePassword(@jakarta.annotation.Nullable final Boolean value) {
         this.workProfileRequirePassword = value;
     }

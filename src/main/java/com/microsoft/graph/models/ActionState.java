@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * State of the action on the device
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ActionState implements ValuedEnum {
     /** Not a valid action state */
     None("none"),

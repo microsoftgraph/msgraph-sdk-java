@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewReviewer extends Entity implements Parsable {
     /**
      * The date when the reviewer was added for the access review.
@@ -22,9 +23,7 @@ public class AccessReviewReviewer extends Entity implements Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new accessReviewReviewer and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessReviewReviewer() {
         super();
     }
@@ -77,9 +76,7 @@ public class AccessReviewReviewer extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class AccessReviewReviewer extends Entity implements Parsable {
     /**
      * Sets the createdDateTime property value. The date when the reviewer was added for the access review.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the displayName property value. Name of reviewer.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the userPrincipalName property value. User principal name of the reviewer.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }

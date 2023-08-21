@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * App configuration key types.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MdmAppConfigKeyType implements ValuedEnum {
     StringType("stringType"),
     IntegerType("integerType"),

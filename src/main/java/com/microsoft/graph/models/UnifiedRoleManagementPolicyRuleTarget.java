@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
     private java.util.List<DirectoryObject> targetObjects;
     /**
      * Instantiates a new unifiedRoleManagementPolicyRuleTarget and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyRuleTarget() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +140,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("caller", this.getCaller());
@@ -158,72 +155,56 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the caller property value. The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
      * @param value Value to set for the caller property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCaller(@jakarta.annotation.Nullable final String value) {
         this.caller = value;
     }
     /**
      * Sets the enforcedSettings property value. The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings.
      * @param value Value to set for the enforcedSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnforcedSettings(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.enforcedSettings = value;
     }
     /**
      * Sets the inheritableSettings property value. The list of role settings that can be inherited by child scopes. Use All for all settings.
      * @param value Value to set for the inheritableSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInheritableSettings(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.inheritableSettings = value;
     }
     /**
      * Sets the level property value. The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
      * @param value Value to set for the level property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLevel(@jakarta.annotation.Nullable final String value) {
         this.level = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRuleTargetOperations> value) {
         this.operations = value;
     }
     /**
      * Sets the targetObjects property value. The targetObjects property
      * @param value Value to set for the targetObjects property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetObjects(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.targetObjects = value;
     }

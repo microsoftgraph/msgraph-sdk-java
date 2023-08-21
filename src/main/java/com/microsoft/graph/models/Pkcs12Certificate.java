@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Parsable {
     /**
      * The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
@@ -17,9 +18,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
     private String pkcs12Value;
     /**
      * Instantiates a new pkcs12Certificate and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Pkcs12Certificate() {
         super();
         this.setOdataType("#microsoft.graph.pkcs12Certificate");
@@ -64,9 +63,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
     /**
      * Sets the password property value. The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
      * @param value Value to set for the password property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPassword(@jakarta.annotation.Nullable final String value) {
         this.password = value;
     }
     /**
      * Sets the pkcs12Value property value. Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
      * @param value Value to set for the pkcs12Value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPkcs12Value(@jakarta.annotation.Nullable final String value) {
         this.pkcs12Value = value;
     }

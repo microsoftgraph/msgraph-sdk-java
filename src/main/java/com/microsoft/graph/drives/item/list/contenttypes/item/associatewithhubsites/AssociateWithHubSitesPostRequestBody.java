@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -22,9 +23,7 @@ public class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolde
     private Boolean propagateToExistingLists;
     /**
      * Instantiates a new associateWithHubSitesPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AssociateWithHubSitesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -76,9 +75,7 @@ public class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolde
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("hubSiteUrls", this.getHubSiteUrls());
@@ -88,27 +85,21 @@ public class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolde
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the hubSiteUrls property value. The hubSiteUrls property
      * @param value Value to set for the hubSiteUrls property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHubSiteUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.hubSiteUrls = value;
     }
     /**
      * Sets the propagateToExistingLists property value. The propagateToExistingLists property
      * @param value Value to set for the propagateToExistingLists property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPropagateToExistingLists(@jakarta.annotation.Nullable final Boolean value) {
         this.propagateToExistingLists = value;
     }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrinterCreateOperation extends PrintOperation implements Parsable {
     /**
      * The signed certificate created during the registration process. Read-only.
@@ -17,9 +18,7 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
     private Printer printer;
     /**
      * Instantiates a new printerCreateOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PrinterCreateOperation() {
         super();
         this.setOdataType("#microsoft.graph.printerCreateOperation");
@@ -64,9 +63,7 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
     /**
      * Sets the certificate property value. The signed certificate created during the registration process. Read-only.
      * @param value Value to set for the certificate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificate(@jakarta.annotation.Nullable final String value) {
         this.certificate = value;
     }
     /**
      * Sets the printer property value. The created printer entity. Read-only.
      * @param value Value to set for the printer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrinter(@jakarta.annotation.Nullable final Printer value) {
         this.printer = value;
     }

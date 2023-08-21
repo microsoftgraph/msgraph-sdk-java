@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SoftwareOathAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
      * The secret key of the method. Always returns null.
@@ -13,9 +14,7 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
     private String secretKey;
     /**
      * Instantiates a new softwareOathAuthenticationMethod and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SoftwareOathAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.softwareOathAuthenticationMethod");
@@ -51,9 +50,7 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +59,7 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
     /**
      * Sets the secretKey property value. The secret key of the method. Always returns null.
      * @param value Value to set for the secretKey property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecretKey(@jakarta.annotation.Nullable final String value) {
         this.secretKey = value;
     }

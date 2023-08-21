@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The type of Exchange Connector.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementExchangeConnectorType implements ValuedEnum {
     /** Connects to on-premises Exchange Environment. */
     OnPremises("onPremises"),

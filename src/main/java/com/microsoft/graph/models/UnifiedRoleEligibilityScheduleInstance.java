@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstanceBase implements Parsable {
     /**
      * The end date of the schedule instance.
@@ -26,9 +27,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new unifiedRoleEligibilityScheduleInstance and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleInstance() {
         super();
     }
@@ -90,9 +89,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +101,28 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
     /**
      * Sets the endDateTime property value. The end date of the schedule instance.
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
      * Sets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
      * @param value Value to set for the memberType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMemberType(@jakarta.annotation.Nullable final String value) {
         this.memberType = value;
     }
     /**
      * Sets the roleEligibilityScheduleId property value. The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne).
      * @param value Value to set for the roleEligibilityScheduleId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleEligibilityScheduleId(@jakarta.annotation.Nullable final String value) {
         this.roleEligibilityScheduleId = value;
     }
     /**
      * Sets the startDateTime property value. When this instance starts.
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }

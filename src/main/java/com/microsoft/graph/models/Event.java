@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Event extends OutlookItem implements Parsable {
     /**
      * true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
@@ -178,9 +179,7 @@ public class Event extends OutlookItem implements Parsable {
     private String webLink;
     /**
      * Instantiates a new event and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Event() {
         super();
         this.setOdataType("#microsoft.graph.event");
@@ -585,9 +584,7 @@ public class Event extends OutlookItem implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -637,378 +634,294 @@ public class Event extends OutlookItem implements Parsable {
     /**
      * Sets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
      * @param value Value to set for the allowNewTimeProposals property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowNewTimeProposals(@jakarta.annotation.Nullable final Boolean value) {
         this.allowNewTimeProposals = value;
     }
     /**
      * Sets the attachments property value. The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
      * @param value Value to set for the attachments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttachments(@jakarta.annotation.Nullable final java.util.List<Attachment> value) {
         this.attachments = value;
     }
     /**
      * Sets the attendees property value. The collection of attendees for the event.
      * @param value Value to set for the attendees property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttendees(@jakarta.annotation.Nullable final java.util.List<Attendee> value) {
         this.attendees = value;
     }
     /**
      * Sets the body property value. The body of the message associated with the event. It can be in HTML or text format.
      * @param value Value to set for the body property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
         this.body = value;
     }
     /**
      * Sets the bodyPreview property value. The preview of the message associated with the event. It is in text format.
      * @param value Value to set for the bodyPreview property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBodyPreview(@jakarta.annotation.Nullable final String value) {
         this.bodyPreview = value;
     }
     /**
      * Sets the calendar property value. The calendar that contains the event. Navigation property. Read-only.
      * @param value Value to set for the calendar property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCalendar(@jakarta.annotation.Nullable final Calendar value) {
         this.calendar = value;
     }
     /**
      * Sets the end property value. The date, time, and time zone that the event ends. By default, the end time is in UTC.
      * @param value Value to set for the end property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnd(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.end = value;
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the event. Nullable.
      * @param value Value to set for the extensions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
         this.extensions = value;
     }
     /**
      * Sets the hasAttachments property value. Set to true if the event has attachments.
      * @param value Value to set for the hasAttachments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
         this.hasAttachments = value;
     }
     /**
      * Sets the hideAttendees property value. When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
      * @param value Value to set for the hideAttendees property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHideAttendees(@jakarta.annotation.Nullable final Boolean value) {
         this.hideAttendees = value;
     }
     /**
      * Sets the iCalUId property value. A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
      * @param value Value to set for the iCalUId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setICalUId(@jakarta.annotation.Nullable final String value) {
         this.iCalUId = value;
     }
     /**
      * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImportance(@jakarta.annotation.Nullable final Importance value) {
         this.importance = value;
     }
     /**
      * Sets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
      * @param value Value to set for the instances property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstances(@jakarta.annotation.Nullable final java.util.List<Event> value) {
         this.instances = value;
     }
     /**
      * Sets the isAllDay property value. The isAllDay property
      * @param value Value to set for the isAllDay property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAllDay(@jakarta.annotation.Nullable final Boolean value) {
         this.isAllDay = value;
     }
     /**
      * Sets the isCancelled property value. The isCancelled property
      * @param value Value to set for the isCancelled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsCancelled(@jakarta.annotation.Nullable final Boolean value) {
         this.isCancelled = value;
     }
     /**
      * Sets the isDraft property value. The isDraft property
      * @param value Value to set for the isDraft property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsDraft(@jakarta.annotation.Nullable final Boolean value) {
         this.isDraft = value;
     }
     /**
      * Sets the isOnlineMeeting property value. The isOnlineMeeting property
      * @param value Value to set for the isOnlineMeeting property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsOnlineMeeting(@jakarta.annotation.Nullable final Boolean value) {
         this.isOnlineMeeting = value;
     }
     /**
      * Sets the isOrganizer property value. The isOrganizer property
      * @param value Value to set for the isOrganizer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsOrganizer(@jakarta.annotation.Nullable final Boolean value) {
         this.isOrganizer = value;
     }
     /**
      * Sets the isReminderOn property value. The isReminderOn property
      * @param value Value to set for the isReminderOn property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsReminderOn(@jakarta.annotation.Nullable final Boolean value) {
         this.isReminderOn = value;
     }
     /**
      * Sets the location property value. The location property
      * @param value Value to set for the location property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocation(@jakarta.annotation.Nullable final Location value) {
         this.location = value;
     }
     /**
      * Sets the locations property value. The locations property
      * @param value Value to set for the locations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocations(@jakarta.annotation.Nullable final java.util.List<Location> value) {
         this.locations = value;
     }
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the event. Read-only. Nullable.
      * @param value Value to set for the multiValueExtendedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this.multiValueExtendedProperties = value;
     }
     /**
      * Sets the onlineMeeting property value. The onlineMeeting property
      * @param value Value to set for the onlineMeeting property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnlineMeeting(@jakarta.annotation.Nullable final OnlineMeetingInfo value) {
         this.onlineMeeting = value;
     }
     /**
      * Sets the onlineMeetingProvider property value. The onlineMeetingProvider property
      * @param value Value to set for the onlineMeetingProvider property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnlineMeetingProvider(@jakarta.annotation.Nullable final OnlineMeetingProviderType value) {
         this.onlineMeetingProvider = value;
     }
     /**
      * Sets the onlineMeetingUrl property value. The onlineMeetingUrl property
      * @param value Value to set for the onlineMeetingUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnlineMeetingUrl(@jakarta.annotation.Nullable final String value) {
         this.onlineMeetingUrl = value;
     }
     /**
      * Sets the organizer property value. The organizer property
      * @param value Value to set for the organizer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrganizer(@jakarta.annotation.Nullable final Recipient value) {
         this.organizer = value;
     }
     /**
      * Sets the originalEndTimeZone property value. The originalEndTimeZone property
      * @param value Value to set for the originalEndTimeZone property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOriginalEndTimeZone(@jakarta.annotation.Nullable final String value) {
         this.originalEndTimeZone = value;
     }
     /**
      * Sets the originalStart property value. The originalStart property
      * @param value Value to set for the originalStart property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOriginalStart(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.originalStart = value;
     }
     /**
      * Sets the originalStartTimeZone property value. The originalStartTimeZone property
      * @param value Value to set for the originalStartTimeZone property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOriginalStartTimeZone(@jakarta.annotation.Nullable final String value) {
         this.originalStartTimeZone = value;
     }
     /**
      * Sets the recurrence property value. The recurrence property
      * @param value Value to set for the recurrence property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecurrence(@jakarta.annotation.Nullable final PatternedRecurrence value) {
         this.recurrence = value;
     }
     /**
      * Sets the reminderMinutesBeforeStart property value. The reminderMinutesBeforeStart property
      * @param value Value to set for the reminderMinutesBeforeStart property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReminderMinutesBeforeStart(@jakarta.annotation.Nullable final Integer value) {
         this.reminderMinutesBeforeStart = value;
     }
     /**
      * Sets the responseRequested property value. The responseRequested property
      * @param value Value to set for the responseRequested property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResponseRequested(@jakarta.annotation.Nullable final Boolean value) {
         this.responseRequested = value;
     }
     /**
      * Sets the responseStatus property value. The responseStatus property
      * @param value Value to set for the responseStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResponseStatus(@jakarta.annotation.Nullable final ResponseStatus value) {
         this.responseStatus = value;
     }
     /**
      * Sets the sensitivity property value. The sensitivity property
      * @param value Value to set for the sensitivity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSensitivity(@jakarta.annotation.Nullable final Sensitivity value) {
         this.sensitivity = value;
     }
     /**
      * Sets the seriesMasterId property value. The seriesMasterId property
      * @param value Value to set for the seriesMasterId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSeriesMasterId(@jakarta.annotation.Nullable final String value) {
         this.seriesMasterId = value;
     }
     /**
      * Sets the showAs property value. The showAs property
      * @param value Value to set for the showAs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShowAs(@jakarta.annotation.Nullable final FreeBusyStatus value) {
         this.showAs = value;
     }
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the event. Read-only. Nullable.
      * @param value Value to set for the singleValueExtendedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this.singleValueExtendedProperties = value;
     }
     /**
      * Sets the start property value. The start property
      * @param value Value to set for the start property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStart(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.start = value;
     }
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
     /**
      * Sets the transactionId property value. The transactionId property
      * @param value Value to set for the transactionId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTransactionId(@jakarta.annotation.Nullable final String value) {
         this.transactionId = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final EventType value) {
         this.type = value;
     }
     /**
      * Sets the webLink property value. The webLink property
      * @param value Value to set for the webLink property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebLink(@jakarta.annotation.Nullable final String value) {
         this.webLink = value;
     }

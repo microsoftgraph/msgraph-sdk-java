@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible types of an Apple Volume Purchase Program token.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum VppTokenAccountType implements ValuedEnum {
     /** Apple Volume Purchase Program token associated with an business program. */
     Business("business"),

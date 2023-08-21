@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
     /**
      * Restrictions that apply as default to all application objects in the tenant.
@@ -21,9 +22,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
     private AppManagementConfiguration servicePrincipalRestrictions;
     /**
      * Instantiates a new tenantAppManagementPolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TenantAppManagementPolicy() {
         super();
         this.setOdataType("#microsoft.graph.tenantAppManagementPolicy");
@@ -77,9 +76,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
     /**
      * Sets the applicationRestrictions property value. Restrictions that apply as default to all application objects in the tenant.
      * @param value Value to set for the applicationRestrictions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationRestrictions(@jakarta.annotation.Nullable final AppManagementConfiguration value) {
         this.applicationRestrictions = value;
     }
     /**
      * Sets the isEnabled property value. Denotes whether the policy is enabled. Default value is false.
      * @param value Value to set for the isEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
      * Sets the servicePrincipalRestrictions property value. Restrictions that apply as default to all service principal objects in the tenant.
      * @param value Value to set for the servicePrincipalRestrictions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServicePrincipalRestrictions(@jakarta.annotation.Nullable final AppManagementConfiguration value) {
         this.servicePrincipalRestrictions = value;
     }

@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSubmission extends Entity implements Parsable {
     /**
      * The outcomes property
@@ -66,9 +67,7 @@ public class EducationSubmission extends Entity implements Parsable {
     private OffsetDateTime unsubmittedDateTime;
     /**
      * Instantiates a new educationSubmission and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationSubmission() {
         super();
     }
@@ -220,9 +219,7 @@ public class EducationSubmission extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -234,126 +231,98 @@ public class EducationSubmission extends Entity implements Parsable {
     /**
      * Sets the outcomes property value. The outcomes property
      * @param value Value to set for the outcomes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOutcomes(@jakarta.annotation.Nullable final java.util.List<EducationOutcome> value) {
         this.outcomes = value;
     }
     /**
      * Sets the reassignedBy property value. User who moved the status of this submission to reassigned.
      * @param value Value to set for the reassignedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReassignedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.reassignedBy = value;
     }
     /**
      * Sets the reassignedDateTime property value. Moment in time when the submission was reassigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the reassignedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReassignedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.reassignedDateTime = value;
     }
     /**
      * Sets the recipient property value. Who this submission is assigned to.
      * @param value Value to set for the recipient property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecipient(@jakarta.annotation.Nullable final EducationSubmissionRecipient value) {
         this.recipient = value;
     }
     /**
      * Sets the resources property value. The resources property
      * @param value Value to set for the resources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResources(@jakarta.annotation.Nullable final java.util.List<EducationSubmissionResource> value) {
         this.resources = value;
     }
     /**
      * Sets the resourcesFolderUrl property value. Folder where all file resources for this submission need to be stored.
      * @param value Value to set for the resourcesFolderUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourcesFolderUrl(@jakarta.annotation.Nullable final String value) {
         this.resourcesFolderUrl = value;
     }
     /**
      * Sets the returnedBy property value. User who moved the status of this submission to returned.
      * @param value Value to set for the returnedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReturnedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.returnedBy = value;
     }
     /**
      * Sets the returnedDateTime property value. Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the returnedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReturnedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.returnedDateTime = value;
     }
     /**
      * Sets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final EducationSubmissionStatus value) {
         this.status = value;
     }
     /**
      * Sets the submittedBy property value. User who moved the resource into the submitted state.
      * @param value Value to set for the submittedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubmittedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.submittedBy = value;
     }
     /**
      * Sets the submittedDateTime property value. Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the submittedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubmittedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.submittedDateTime = value;
     }
     /**
      * Sets the submittedResources property value. The submittedResources property
      * @param value Value to set for the submittedResources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubmittedResources(@jakarta.annotation.Nullable final java.util.List<EducationSubmissionResource> value) {
         this.submittedResources = value;
     }
     /**
      * Sets the unsubmittedBy property value. User who moved the resource from submitted into the working state.
      * @param value Value to set for the unsubmittedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnsubmittedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.unsubmittedBy = value;
     }
     /**
      * Sets the unsubmittedDateTime property value. Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the unsubmittedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnsubmittedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.unsubmittedDateTime = value;
     }

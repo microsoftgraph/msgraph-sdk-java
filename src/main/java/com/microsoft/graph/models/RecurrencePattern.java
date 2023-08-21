@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RecurrencePattern implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -46,9 +47,7 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
     private RecurrencePatternType type;
     /**
      * Instantiates a new recurrencePattern and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RecurrencePattern() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -154,9 +153,7 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("dayOfMonth", this.getDayOfMonth());
@@ -172,81 +169,63 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the dayOfMonth property value. The day of the month on which the event occurs. Required if type is absoluteMonthly or absoluteYearly.
      * @param value Value to set for the dayOfMonth property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDayOfMonth(@jakarta.annotation.Nullable final Integer value) {
         this.dayOfMonth = value;
     }
     /**
      * Sets the daysOfWeek property value. A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
      * @param value Value to set for the daysOfWeek property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDaysOfWeek(@jakarta.annotation.Nullable final java.util.List<DayOfWeek> value) {
         this.daysOfWeek = value;
     }
     /**
      * Sets the firstDayOfWeek property value. The first day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly.
      * @param value Value to set for the firstDayOfWeek property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirstDayOfWeek(@jakarta.annotation.Nullable final DayOfWeek value) {
         this.firstDayOfWeek = value;
     }
     /**
      * Sets the index property value. Specifies on which instance of the allowed days specified in daysOfWeek the event occurs, counted from the first instance in the month. The possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly.
      * @param value Value to set for the index property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIndex(@jakarta.annotation.Nullable final WeekIndex value) {
         this.index = value;
     }
     /**
      * Sets the interval property value. The number of units between occurrences, where units can be in days, weeks, months, or years, depending on the type. Required.
      * @param value Value to set for the interval property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInterval(@jakarta.annotation.Nullable final Integer value) {
         this.interval = value;
     }
     /**
      * Sets the month property value. The month in which the event occurs.  This is a number from 1 to 12.
      * @param value Value to set for the month property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMonth(@jakarta.annotation.Nullable final Integer value) {
         this.month = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the type property value. The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final RecurrencePatternType value) {
         this.type = value;
     }

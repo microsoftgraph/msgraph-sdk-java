@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IntegerRange implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
     private Long start;
     /**
      * Instantiates a new integerRange and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IntegerRange() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLongValue("end", this.getEnd());
@@ -102,36 +99,28 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the end property value. The inclusive upper bound of the integer range.
      * @param value Value to set for the end property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnd(@jakarta.annotation.Nullable final Long value) {
         this.end = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the start property value. The inclusive lower bound of the integer range.
      * @param value Value to set for the start property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStart(@jakarta.annotation.Nullable final Long value) {
         this.start = value;
     }

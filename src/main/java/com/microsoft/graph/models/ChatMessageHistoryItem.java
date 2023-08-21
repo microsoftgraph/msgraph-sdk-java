@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
     /**
      * The actions property
@@ -31,9 +32,7 @@ public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
     private ChatMessageReaction reaction;
     /**
      * Instantiates a new chatMessageHistoryItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ChatMessageHistoryItem() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,9 +102,7 @@ public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("actions", this.getActions());
@@ -117,45 +114,35 @@ public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
     /**
      * Sets the actions property value. The actions property
      * @param value Value to set for the actions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActions(@jakarta.annotation.Nullable final ChatMessageActions value) {
         this.actions = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the modifiedDateTime property value. The date and time when the message was modified.
      * @param value Value to set for the modifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the reaction property value. The reaction in the modified message.
      * @param value Value to set for the reaction property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReaction(@jakarta.annotation.Nullable final ChatMessageReaction value) {
         this.reaction = value;
     }

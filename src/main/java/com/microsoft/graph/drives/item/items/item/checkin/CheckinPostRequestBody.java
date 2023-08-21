@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -22,9 +23,7 @@ public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
     private String comment;
     /**
      * Instantiates a new checkinPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CheckinPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -76,9 +75,7 @@ public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("checkInAs", this.getCheckInAs());
@@ -88,27 +85,21 @@ public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the checkInAs property value. The checkInAs property
      * @param value Value to set for the checkInAs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCheckInAs(@jakarta.annotation.Nullable final String value) {
         this.checkInAs = value;
     }
     /**
      * Sets the comment property value. The comment property
      * @param value Value to set for the comment property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComment(@jakarta.annotation.Nullable final String value) {
         this.comment = value;
     }

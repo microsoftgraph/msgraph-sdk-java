@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Android Work Profile cross profile data sharing type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidWorkProfileCrossProfileDataSharingType implements ValuedEnum {
     /** Device default value, no intent. */
     DeviceDefault("deviceDefault"),

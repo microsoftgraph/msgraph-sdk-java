@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
     private String tenantId;
     /**
      * Instantiates a new sensitivityLabelAssignment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SensitivityLabelAssignment() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("assignmentMethod", this.getAssignmentMethod());
@@ -116,45 +113,35 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the assignmentMethod property value. The assignmentMethod property
      * @param value Value to set for the assignmentMethod property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignmentMethod(@jakarta.annotation.Nullable final SensitivityLabelAssignmentMethod value) {
         this.assignmentMethod = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the sensitivityLabelId property value. The unique identifier for the sensitivity label assigned to the file.
      * @param value Value to set for the sensitivityLabelId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSensitivityLabelId(@jakarta.annotation.Nullable final String value) {
         this.sensitivityLabelId = value;
     }
     /**
      * Sets the tenantId property value. The unique identifier for the tenant that hosts the file when this label is applied.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }

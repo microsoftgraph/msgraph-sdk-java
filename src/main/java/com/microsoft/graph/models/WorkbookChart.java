@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChart extends Entity implements Parsable {
     /**
      * Represents chart axes. Read-only.
@@ -57,9 +58,7 @@ public class WorkbookChart extends Entity implements Parsable {
     private WorkbookWorksheet worksheet;
     /**
      * Instantiates a new workbookChart and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookChart() {
         super();
     }
@@ -193,9 +192,7 @@ public class WorkbookChart extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -215,108 +212,84 @@ public class WorkbookChart extends Entity implements Parsable {
     /**
      * Sets the axes property value. Represents chart axes. Read-only.
      * @param value Value to set for the axes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAxes(@jakarta.annotation.Nullable final WorkbookChartAxes value) {
         this.axes = value;
     }
     /**
      * Sets the dataLabels property value. Represents the datalabels on the chart. Read-only.
      * @param value Value to set for the dataLabels property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDataLabels(@jakarta.annotation.Nullable final WorkbookChartDataLabels value) {
         this.dataLabels = value;
     }
     /**
      * Sets the format property value. Encapsulates the format properties for the chart area. Read-only.
      * @param value Value to set for the format property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFormat(@jakarta.annotation.Nullable final WorkbookChartAreaFormat value) {
         this.format = value;
     }
     /**
      * Sets the height property value. Represents the height, in points, of the chart object.
      * @param value Value to set for the height property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHeight(@jakarta.annotation.Nullable final Double value) {
         this.height = value;
     }
     /**
      * Sets the left property value. The distance, in points, from the left side of the chart to the worksheet origin.
      * @param value Value to set for the left property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLeft(@jakarta.annotation.Nullable final Double value) {
         this.left = value;
     }
     /**
      * Sets the legend property value. Represents the legend for the chart. Read-only.
      * @param value Value to set for the legend property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLegend(@jakarta.annotation.Nullable final WorkbookChartLegend value) {
         this.legend = value;
     }
     /**
      * Sets the name property value. Represents the name of a chart object.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the series property value. Represents either a single series or collection of series in the chart. Read-only.
      * @param value Value to set for the series property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSeries(@jakarta.annotation.Nullable final java.util.List<WorkbookChartSeries> value) {
         this.series = value;
     }
     /**
      * Sets the title property value. Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTitle(@jakarta.annotation.Nullable final WorkbookChartTitle value) {
         this.title = value;
     }
     /**
      * Sets the top property value. Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart).
      * @param value Value to set for the top property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTop(@jakarta.annotation.Nullable final Double value) {
         this.top = value;
     }
     /**
      * Sets the width property value. Represents the width, in points, of the chart object.
      * @param value Value to set for the width property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWidth(@jakarta.annotation.Nullable final Double value) {
         this.width = value;
     }
     /**
      * Sets the worksheet property value. The worksheet containing the current chart. Read-only.
      * @param value Value to set for the worksheet property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorksheet(@jakarta.annotation.Nullable final WorkbookWorksheet value) {
         this.worksheet = value;
     }

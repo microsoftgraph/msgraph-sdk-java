@@ -9,12 +9,11 @@ import java.util.Objects;
 /**
  * MacOS device features configuration profile.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBase implements Parsable {
     /**
      * Instantiates a new macOSDeviceFeaturesConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MacOSDeviceFeaturesConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSDeviceFeaturesConfiguration");
@@ -41,9 +40,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

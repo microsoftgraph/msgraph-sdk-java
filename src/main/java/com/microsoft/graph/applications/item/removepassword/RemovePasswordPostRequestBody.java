@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -19,9 +20,7 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
     private UUID keyId;
     /**
      * Instantiates a new removePasswordPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RemovePasswordPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,9 +63,7 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeUUIDValue("keyId", this.getKeyId());
@@ -75,18 +72,14 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the keyId property value. The keyId property
      * @param value Value to set for the keyId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKeyId(@jakarta.annotation.Nullable final UUID value) {
         this.keyId = value;
     }

@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttachmentSession extends Entity implements Parsable {
     /**
      * The content streams that are uploaded.
@@ -22,9 +23,7 @@ public class AttachmentSession extends Entity implements Parsable {
     private java.util.List<String> nextExpectedRanges;
     /**
      * Instantiates a new attachmentSession and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AttachmentSession() {
         super();
     }
@@ -77,9 +76,7 @@ public class AttachmentSession extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class AttachmentSession extends Entity implements Parsable {
     /**
      * Sets the content property value. The content streams that are uploaded.
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
         this.content = value;
     }
     /**
      * Sets the expirationDateTime property value. The date and time in UTC when the upload session will expire. The complete file must be uploaded before this expiration time is reached.
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the nextExpectedRanges property value. Indicates a single value {start} that represents the location in the file where the next upload should begin.
      * @param value Value to set for the nextExpectedRanges property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNextExpectedRanges(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.nextExpectedRanges = value;
     }

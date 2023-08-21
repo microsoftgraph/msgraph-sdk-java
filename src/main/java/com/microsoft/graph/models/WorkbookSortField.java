@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     private String sortOn;
     /**
      * Instantiates a new workbookSortField and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookSortField() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +140,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("ascending", this.getAscending());
@@ -158,72 +155,56 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the ascending property value. Represents whether the sorting is done in an ascending fashion.
      * @param value Value to set for the ascending property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAscending(@jakarta.annotation.Nullable final Boolean value) {
         this.ascending = value;
     }
     /**
      * Sets the color property value. Represents the color that is the target of the condition if the sorting is on font or cell color.
      * @param value Value to set for the color property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColor(@jakarta.annotation.Nullable final String value) {
         this.color = value;
     }
     /**
      * Sets the dataOption property value. Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
      * @param value Value to set for the dataOption property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDataOption(@jakarta.annotation.Nullable final String value) {
         this.dataOption = value;
     }
     /**
      * Sets the icon property value. Represents the icon that is the target of the condition if the sorting is on the cell's icon.
      * @param value Value to set for the icon property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIcon(@jakarta.annotation.Nullable final WorkbookIcon value) {
         this.icon = value;
     }
     /**
      * Sets the key property value. Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row).
      * @param value Value to set for the key property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKey(@jakarta.annotation.Nullable final Integer value) {
         this.key = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the sortOn property value. Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
      * @param value Value to set for the sortOn property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSortOn(@jakarta.annotation.Nullable final String value) {
         this.sortOn = value;
     }

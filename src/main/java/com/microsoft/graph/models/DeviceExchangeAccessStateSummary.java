@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Device Exchange Access State summary
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -41,9 +42,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
     private Integer unknownDeviceCount;
     /**
      * Instantiates a new deviceExchangeAccessStateSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceExchangeAccessStateSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -131,9 +130,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("allowedDeviceCount", this.getAllowedDeviceCount());
@@ -147,63 +144,49 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowedDeviceCount property value. Total count of devices with Exchange Access State: Allowed.
      * @param value Value to set for the allowedDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.allowedDeviceCount = value;
     }
     /**
      * Sets the blockedDeviceCount property value. Total count of devices with Exchange Access State: Blocked.
      * @param value Value to set for the blockedDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBlockedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.blockedDeviceCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the quarantinedDeviceCount property value. Total count of devices with Exchange Access State: Quarantined.
      * @param value Value to set for the quarantinedDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQuarantinedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.quarantinedDeviceCount = value;
     }
     /**
      * Sets the unavailableDeviceCount property value. Total count of devices for which no Exchange Access State could be found.
      * @param value Value to set for the unavailableDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnavailableDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.unavailableDeviceCount = value;
     }
     /**
      * Sets the unknownDeviceCount property value. Total count of devices with Exchange Access State: Unknown.
      * @param value Value to set for the unknownDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnknownDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.unknownDeviceCount = value;
     }

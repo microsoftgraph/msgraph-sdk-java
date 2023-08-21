@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Notification messages are messages that are sent to end users who are determined to be not-compliant with the compliance policies defined by the administrator. Administrators choose notifications and configure them in the Intune Admin Console using the compliance policy creation page under the Actions for non-compliance section. Use the notificationMessageTemplate object to create your own custom notifications for administrators to choose while configuring actions for non-compliance.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class NotificationMessageTemplate extends Entity implements Parsable {
     /**
      * Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
@@ -37,9 +38,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
     private java.util.List<String> roleScopeTagIds;
     /**
      * Instantiates a new notificationMessageTemplate and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public NotificationMessageTemplate() {
         super();
     }
@@ -119,9 +118,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,54 +132,42 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
     /**
      * Sets the brandingOptions property value. Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
      * @param value Value to set for the brandingOptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrandingOptions(@jakarta.annotation.Nullable final NotificationTemplateBrandingOptions value) {
         this.brandingOptions = value;
     }
     /**
      * Sets the defaultLocale property value. The default locale to fallback onto when the requested locale is not available.
      * @param value Value to set for the defaultLocale property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefaultLocale(@jakarta.annotation.Nullable final String value) {
         this.defaultLocale = value;
     }
     /**
      * Sets the displayName property value. Display name for the Notification Message Template.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the localizedNotificationMessages property value. The list of localized messages for this Notification Message Template.
      * @param value Value to set for the localizedNotificationMessages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocalizedNotificationMessages(@jakarta.annotation.Nullable final java.util.List<LocalizedNotificationMessage> value) {
         this.localizedNotificationMessages = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }

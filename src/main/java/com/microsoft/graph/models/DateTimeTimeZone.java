@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DateTimeTimeZone implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class DateTimeTimeZone implements AdditionalDataHolder, Parsable {
     private String timeZone;
     /**
      * Instantiates a new dateTimeTimeZone and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DateTimeTimeZone() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class DateTimeTimeZone implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("dateTime", this.getDateTime());
@@ -102,36 +99,28 @@ public class DateTimeTimeZone implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the dateTime property value. A single point of time in a combined date and time representation ({date}T{time}; for example, 2017-08-29T04:00:00.0000000).
      * @param value Value to set for the dateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDateTime(@jakarta.annotation.Nullable final String value) {
         this.dateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the timeZone property value. Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values.
      * @param value Value to set for the timeZone property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeZone(@jakarta.annotation.Nullable final String value) {
         this.timeZone = value;
     }

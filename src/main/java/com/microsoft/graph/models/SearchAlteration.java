@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SearchAlteration implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new searchAlteration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SearchAlteration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("alteredHighlightedQueryString", this.getAlteredHighlightedQueryString());
@@ -116,45 +113,35 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the alteredHighlightedQueryString property value. Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001.
      * @param value Value to set for the alteredHighlightedQueryString property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlteredHighlightedQueryString(@jakarta.annotation.Nullable final String value) {
         this.alteredHighlightedQueryString = value;
     }
     /**
      * Sets the alteredQueryString property value. Defines the altered query string with spelling correction.
      * @param value Value to set for the alteredQueryString property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlteredQueryString(@jakarta.annotation.Nullable final String value) {
         this.alteredQueryString = value;
     }
     /**
      * Sets the alteredQueryTokens property value. Represents changed segments related to an original user query.
      * @param value Value to set for the alteredQueryTokens property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlteredQueryTokens(@jakarta.annotation.Nullable final java.util.List<AlteredQueryToken> value) {
         this.alteredQueryTokens = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

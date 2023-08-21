@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ShiftActivity implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -43,9 +44,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
     private ScheduleEntityTheme theme;
     /**
      * Instantiates a new shiftActivity and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ShiftActivity() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -142,9 +141,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("code", this.getCode());
@@ -159,72 +156,56 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the code property value. Customer defined code for the shiftActivity. Required.
      * @param value Value to set for the code property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCode(@jakarta.annotation.Nullable final String value) {
         this.code = value;
     }
     /**
      * Sets the displayName property value. The name of the shiftActivity. Required.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the endDateTime property value. The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
      * Sets the isPaid property value. Indicates whether the microsoft.graph.user should be paid for the activity during their shift. Required.
      * @param value Value to set for the isPaid property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsPaid(@jakarta.annotation.Nullable final Boolean value) {
         this.isPaid = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the startDateTime property value. The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
      * Sets the theme property value. The theme property
      * @param value Value to set for the theme property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTheme(@jakarta.annotation.Nullable final ScheduleEntityTheme value) {
         this.theme = value;
     }

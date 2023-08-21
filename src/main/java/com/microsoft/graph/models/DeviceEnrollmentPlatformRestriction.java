@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Platform specific enrollment restrictions
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -37,9 +38,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
     private Boolean platformBlocked;
     /**
      * Instantiates a new deviceEnrollmentPlatformRestriction and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -118,9 +117,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -133,54 +130,42 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the osMaximumVersion property value. Max OS version supported
      * @param value Value to set for the osMaximumVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMaximumVersion = value;
     }
     /**
      * Sets the osMinimumVersion property value. Min OS version supported
      * @param value Value to set for the osMinimumVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMinimumVersion = value;
     }
     /**
      * Sets the personalDeviceEnrollmentBlocked property value. Block personally owned devices from enrolling
      * @param value Value to set for the personalDeviceEnrollmentBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPersonalDeviceEnrollmentBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.personalDeviceEnrollmentBlocked = value;
     }
     /**
      * Sets the platformBlocked property value. Block the platform from enrolling
      * @param value Value to set for the platformBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPlatformBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.platformBlocked = value;
     }

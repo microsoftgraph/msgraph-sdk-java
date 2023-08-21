@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Print implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -46,9 +47,7 @@ public class Print implements AdditionalDataHolder, Parsable {
     private java.util.List<PrintTaskDefinition> taskDefinitions;
     /**
      * Instantiates a new print and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Print() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -154,9 +153,7 @@ public class Print implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("connectors", this.getConnectors());
@@ -172,81 +169,63 @@ public class Print implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the connectors property value. The list of available print connectors.
      * @param value Value to set for the connectors property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConnectors(@jakarta.annotation.Nullable final java.util.List<PrintConnector> value) {
         this.connectors = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the operations property value. The list of print long running operations.
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<PrintOperation> value) {
         this.operations = value;
     }
     /**
      * Sets the printers property value. The list of printers registered in the tenant.
      * @param value Value to set for the printers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrinters(@jakarta.annotation.Nullable final java.util.List<Printer> value) {
         this.printers = value;
     }
     /**
      * Sets the services property value. The list of available Universal Print service endpoints.
      * @param value Value to set for the services property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServices(@jakarta.annotation.Nullable final java.util.List<PrintService> value) {
         this.services = value;
     }
     /**
      * Sets the settings property value. Tenant-wide settings for the Universal Print service.
      * @param value Value to set for the settings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettings(@jakarta.annotation.Nullable final PrintSettings value) {
         this.settings = value;
     }
     /**
      * Sets the shares property value. The list of printer shares registered in the tenant.
      * @param value Value to set for the shares property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShares(@jakarta.annotation.Nullable final java.util.List<PrinterShare> value) {
         this.shares = value;
     }
     /**
      * Sets the taskDefinitions property value. List of abstract definition for a task that can be triggered when various events occur within Universal Print.
      * @param value Value to set for the taskDefinitions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTaskDefinitions(@jakarta.annotation.Nullable final java.util.List<PrintTaskDefinition> value) {
         this.taskDefinitions = value;
     }

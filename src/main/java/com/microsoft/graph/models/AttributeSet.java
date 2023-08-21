@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttributeSet extends Entity implements Parsable {
     /**
      * Description of the attribute set. Can be up to 128 characters long and include Unicode characters. Can be changed later.
@@ -17,9 +18,7 @@ public class AttributeSet extends Entity implements Parsable {
     private Integer maxAttributesPerSet;
     /**
      * Instantiates a new attributeSet and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AttributeSet() {
         super();
     }
@@ -63,9 +62,7 @@ public class AttributeSet extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class AttributeSet extends Entity implements Parsable {
     /**
      * Sets the description property value. Description of the attribute set. Can be up to 128 characters long and include Unicode characters. Can be changed later.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the maxAttributesPerSet property value. Maximum number of custom security attributes that can be defined in this attribute set. Default value is null. If not specified, the administrator can add up to the maximum of 500 active attributes per tenant. Can be changed later.
      * @param value Value to set for the maxAttributesPerSet property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaxAttributesPerSet(@jakarta.annotation.Nullable final Integer value) {
         this.maxAttributesPerSet = value;
     }

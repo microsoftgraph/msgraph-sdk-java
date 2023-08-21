@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable {
     /**
      * Value used when configuring the text property at the DNS host.
@@ -13,9 +14,7 @@ public class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable {
     private String text;
     /**
      * Instantiates a new domainDnsTxtRecord and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DomainDnsTxtRecord() {
         super();
     }
@@ -50,9 +49,7 @@ public class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +58,7 @@ public class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable {
     /**
      * Sets the text property value. Value used when configuring the text property at the DNS host.
      * @param value Value to set for the text property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setText(@jakarta.annotation.Nullable final String value) {
         this.text = value;
     }

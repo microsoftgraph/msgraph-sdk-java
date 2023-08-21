@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Operating System restart category.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum UserExperienceAnalyticsOperatingSystemRestartCategory implements ValuedEnum {
     /** Default. Set to unknown if device operating system restart category has not yet been calculated. */
     Unknown("unknown"),

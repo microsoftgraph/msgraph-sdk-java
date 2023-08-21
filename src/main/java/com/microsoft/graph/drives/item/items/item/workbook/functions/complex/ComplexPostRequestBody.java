@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -27,9 +28,7 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json suffix;
     /**
      * Instantiates a new complexPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ComplexPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +89,7 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("iNum", this.getINum());
@@ -103,36 +100,28 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the iNum property value. The iNum property
      * @param value Value to set for the iNum property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setINum(@jakarta.annotation.Nullable final Json value) {
         this.iNum = value;
     }
     /**
      * Sets the realNum property value. The realNum property
      * @param value Value to set for the realNum property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRealNum(@jakarta.annotation.Nullable final Json value) {
         this.realNum = value;
     }
     /**
      * Sets the suffix property value. The suffix property
      * @param value Value to set for the suffix property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSuffix(@jakarta.annotation.Nullable final Json value) {
         this.suffix = value;
     }

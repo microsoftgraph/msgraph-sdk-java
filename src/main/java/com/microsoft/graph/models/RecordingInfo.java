@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RecordingInfo implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     private RecordingStatus recordingStatus;
     /**
      * Instantiates a new recordingInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RecordingInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("initiator", this.getInitiator());
@@ -102,36 +99,28 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the initiator property value. The identities of the recording initiator.
      * @param value Value to set for the initiator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the recordingStatus property value. The recordingStatus property
      * @param value Value to set for the recordingStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecordingStatus(@jakarta.annotation.Nullable final RecordingStatus value) {
         this.recordingStatus = value;
     }

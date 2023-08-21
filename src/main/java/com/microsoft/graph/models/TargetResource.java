@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TargetResource implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new targetResource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TargetResource() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +140,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -158,72 +155,56 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the displayName property value. Indicates the visible name defined for the resource. Typically specified when the resource is created.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
      * @param value Value to set for the groupType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroupType(@jakarta.annotation.Nullable final GroupType value) {
         this.groupType = value;
     }
     /**
      * Sets the id property value. Indicates the unique ID of the resource.
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the modifiedProperties property value. Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.
      * @param value Value to set for the modifiedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModifiedProperties(@jakarta.annotation.Nullable final java.util.List<ModifiedProperty> value) {
         this.modifiedProperties = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the type property value. Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
     /**
      * Sets the userPrincipalName property value. When type is set to User, this includes the user name that initiated the action; null for other types.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }

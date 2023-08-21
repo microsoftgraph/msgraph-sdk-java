@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     private AutomaticRepliesStatus status;
     /**
      * Instantiates a new automaticRepliesSetting and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AutomaticRepliesSetting() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +140,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("externalAudience", this.getExternalAudience());
@@ -158,72 +155,56 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
      * @param value Value to set for the externalAudience property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalAudience(@jakarta.annotation.Nullable final ExternalAudienceScope value) {
         this.externalAudience = value;
     }
     /**
      * Sets the externalReplyMessage property value. The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
      * @param value Value to set for the externalReplyMessage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalReplyMessage(@jakarta.annotation.Nullable final String value) {
         this.externalReplyMessage = value;
     }
     /**
      * Sets the internalReplyMessage property value. The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
      * @param value Value to set for the internalReplyMessage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInternalReplyMessage(@jakarta.annotation.Nullable final String value) {
         this.internalReplyMessage = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the scheduledEndDateTime property value. The date and time that automatic replies are set to end, if Status is set to Scheduled.
      * @param value Value to set for the scheduledEndDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScheduledEndDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.scheduledEndDateTime = value;
     }
     /**
      * Sets the scheduledStartDateTime property value. The date and time that automatic replies are set to begin, if Status is set to Scheduled.
      * @param value Value to set for the scheduledStartDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScheduledStartDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.scheduledStartDateTime = value;
     }
     /**
      * Sets the status property value. Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final AutomaticRepliesStatus value) {
         this.status = value;
     }

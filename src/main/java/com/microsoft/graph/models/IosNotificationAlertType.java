@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Notification Settings Alert Type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum IosNotificationAlertType implements ValuedEnum {
     /** Device default value, no intent. */
     DeviceDefault("deviceDefault"),

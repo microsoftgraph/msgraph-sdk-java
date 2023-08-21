@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -32,9 +33,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
     private SynchronizationScheduleState state;
     /**
      * Instantiates a new synchronizationSchedule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SynchronizationSchedule() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -104,9 +103,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("expiration", this.getExpiration());
@@ -118,45 +115,35 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the expiration property value. Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the expiration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpiration(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expiration = value;
     }
     /**
      * Sets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of 1 month.
      * @param value Value to set for the interval property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInterval(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.interval = value;
+        this.interval = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final SynchronizationScheduleState value) {
         this.state = value;
     }

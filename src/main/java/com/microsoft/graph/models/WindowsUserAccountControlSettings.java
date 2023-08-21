@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for Windows user account control settings.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsUserAccountControlSettings implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),

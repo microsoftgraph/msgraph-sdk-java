@@ -3,6 +3,7 @@ package com.microsoft.graph.models.externalconnectors;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ExternalItemContentType implements ValuedEnum {
     Text("text"),
     Html("html"),

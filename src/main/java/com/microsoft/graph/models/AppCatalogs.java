@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppCatalogs extends Entity implements Parsable {
     /**
      * The teamsApps property
@@ -13,9 +14,7 @@ public class AppCatalogs extends Entity implements Parsable {
     private java.util.List<TeamsApp> teamsApps;
     /**
      * Instantiates a new appCatalogs and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AppCatalogs() {
         super();
     }
@@ -50,9 +49,7 @@ public class AppCatalogs extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +58,7 @@ public class AppCatalogs extends Entity implements Parsable {
     /**
      * Sets the teamsApps property value. The teamsApps property
      * @param value Value to set for the teamsApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamsApps(@jakarta.annotation.Nullable final java.util.List<TeamsApp> value) {
         this.teamsApps = value;
     }

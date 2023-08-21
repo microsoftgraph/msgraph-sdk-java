@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AudioConferencing implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     private java.util.List<String> tollNumbers;
     /**
      * Instantiates a new audioConferencing and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AudioConferencing() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +140,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("conferenceId", this.getConferenceId());
@@ -158,72 +155,56 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the conferenceId property value. The conference id of the online meeting.
      * @param value Value to set for the conferenceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConferenceId(@jakarta.annotation.Nullable final String value) {
         this.conferenceId = value;
     }
     /**
      * Sets the dialinUrl property value. A URL to the externally-accessible web page that contains dial-in information.
      * @param value Value to set for the dialinUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDialinUrl(@jakarta.annotation.Nullable final String value) {
         this.dialinUrl = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the tollFreeNumber property value. The tollFreeNumber property
      * @param value Value to set for the tollFreeNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTollFreeNumber(@jakarta.annotation.Nullable final String value) {
         this.tollFreeNumber = value;
     }
     /**
      * Sets the tollFreeNumbers property value. List of toll-free numbers that are displayed in the meeting invite.
      * @param value Value to set for the tollFreeNumbers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTollFreeNumbers(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.tollFreeNumbers = value;
     }
     /**
      * Sets the tollNumber property value. The tollNumber property
      * @param value Value to set for the tollNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTollNumber(@jakarta.annotation.Nullable final String value) {
         this.tollNumber = value;
     }
     /**
      * Sets the tollNumbers property value. List of toll numbers that are displayed in the meeting invite.
      * @param value Value to set for the tollNumbers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTollNumbers(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.tollNumbers = value;
     }

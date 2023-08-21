@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values to specify which cookies are allowed in Microsoft Edge.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum EdgeCookiePolicy implements ValuedEnum {
     /** Allow the user to set. */
     UserDefined("userDefined"),

@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * This topic provides descriptions of the declared methods, properties and relationships exposed by the Windows10EndpointProtectionConfiguration resource.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10EndpointProtectionConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Allow persisting user generated data inside the App Guard Containter (favorites, cookies, web passwords, etc.)
@@ -156,9 +157,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     private Boolean smartScreenEnableInShell;
     /**
      * Instantiates a new windows10EndpointProtectionConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Windows10EndpointProtectionConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10EndpointProtectionConfiguration");
@@ -509,9 +508,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -555,324 +552,252 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     /**
      * Sets the applicationGuardAllowPersistence property value. Allow persisting user generated data inside the App Guard Containter (favorites, cookies, web passwords, etc.)
      * @param value Value to set for the applicationGuardAllowPersistence property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationGuardAllowPersistence(@jakarta.annotation.Nullable final Boolean value) {
         this.applicationGuardAllowPersistence = value;
     }
     /**
      * Sets the applicationGuardAllowPrintToLocalPrinters property value. Allow printing to Local Printers from Container
      * @param value Value to set for the applicationGuardAllowPrintToLocalPrinters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationGuardAllowPrintToLocalPrinters(@jakarta.annotation.Nullable final Boolean value) {
         this.applicationGuardAllowPrintToLocalPrinters = value;
     }
     /**
      * Sets the applicationGuardAllowPrintToNetworkPrinters property value. Allow printing to Network Printers from Container
      * @param value Value to set for the applicationGuardAllowPrintToNetworkPrinters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationGuardAllowPrintToNetworkPrinters(@jakarta.annotation.Nullable final Boolean value) {
         this.applicationGuardAllowPrintToNetworkPrinters = value;
     }
     /**
      * Sets the applicationGuardAllowPrintToPDF property value. Allow printing to PDF from Container
      * @param value Value to set for the applicationGuardAllowPrintToPDF property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationGuardAllowPrintToPDF(@jakarta.annotation.Nullable final Boolean value) {
         this.applicationGuardAllowPrintToPDF = value;
     }
     /**
      * Sets the applicationGuardAllowPrintToXPS property value. Allow printing to XPS from Container
      * @param value Value to set for the applicationGuardAllowPrintToXPS property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationGuardAllowPrintToXPS(@jakarta.annotation.Nullable final Boolean value) {
         this.applicationGuardAllowPrintToXPS = value;
     }
     /**
      * Sets the applicationGuardBlockClipboardSharing property value. Possible values for applicationGuardBlockClipboardSharingType
      * @param value Value to set for the applicationGuardBlockClipboardSharing property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationGuardBlockClipboardSharing(@jakarta.annotation.Nullable final ApplicationGuardBlockClipboardSharingType value) {
         this.applicationGuardBlockClipboardSharing = value;
     }
     /**
      * Sets the applicationGuardBlockFileTransfer property value. Possible values for applicationGuardBlockFileTransfer
      * @param value Value to set for the applicationGuardBlockFileTransfer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationGuardBlockFileTransfer(@jakarta.annotation.Nullable final ApplicationGuardBlockFileTransferType value) {
         this.applicationGuardBlockFileTransfer = value;
     }
     /**
      * Sets the applicationGuardBlockNonEnterpriseContent property value. Block enterprise sites to load non-enterprise content, such as third party plug-ins
      * @param value Value to set for the applicationGuardBlockNonEnterpriseContent property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationGuardBlockNonEnterpriseContent(@jakarta.annotation.Nullable final Boolean value) {
         this.applicationGuardBlockNonEnterpriseContent = value;
     }
     /**
      * Sets the applicationGuardEnabled property value. Enable Windows Defender Application Guard
      * @param value Value to set for the applicationGuardEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationGuardEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.applicationGuardEnabled = value;
     }
     /**
      * Sets the applicationGuardForceAuditing property value. Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.)
      * @param value Value to set for the applicationGuardForceAuditing property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationGuardForceAuditing(@jakarta.annotation.Nullable final Boolean value) {
         this.applicationGuardForceAuditing = value;
     }
     /**
      * Sets the appLockerApplicationControl property value. Possible values of AppLocker Application Control Types
      * @param value Value to set for the appLockerApplicationControl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppLockerApplicationControl(@jakarta.annotation.Nullable final AppLockerApplicationControlType value) {
         this.appLockerApplicationControl = value;
     }
     /**
      * Sets the bitLockerDisableWarningForOtherDiskEncryption property value. Allows the Admin to disable the warning prompt for other disk encryption on the user machines.
      * @param value Value to set for the bitLockerDisableWarningForOtherDiskEncryption property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBitLockerDisableWarningForOtherDiskEncryption(@jakarta.annotation.Nullable final Boolean value) {
         this.bitLockerDisableWarningForOtherDiskEncryption = value;
     }
     /**
      * Sets the bitLockerEnableStorageCardEncryptionOnMobile property value. Allows the admin to require encryption to be turned on using BitLocker. This policy is valid only for a mobile SKU.
      * @param value Value to set for the bitLockerEnableStorageCardEncryptionOnMobile property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBitLockerEnableStorageCardEncryptionOnMobile(@jakarta.annotation.Nullable final Boolean value) {
         this.bitLockerEnableStorageCardEncryptionOnMobile = value;
     }
     /**
      * Sets the bitLockerEncryptDevice property value. Allows the admin to require encryption to be turned on using BitLocker.
      * @param value Value to set for the bitLockerEncryptDevice property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBitLockerEncryptDevice(@jakarta.annotation.Nullable final Boolean value) {
         this.bitLockerEncryptDevice = value;
     }
     /**
      * Sets the bitLockerRemovableDrivePolicy property value. BitLocker Removable Drive Policy.
      * @param value Value to set for the bitLockerRemovableDrivePolicy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBitLockerRemovableDrivePolicy(@jakarta.annotation.Nullable final BitLockerRemovableDrivePolicy value) {
         this.bitLockerRemovableDrivePolicy = value;
     }
     /**
      * Sets the defenderAdditionalGuardedFolders property value. List of folder paths to be added to the list of protected folders
      * @param value Value to set for the defenderAdditionalGuardedFolders property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderAdditionalGuardedFolders(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.defenderAdditionalGuardedFolders = value;
     }
     /**
      * Sets the defenderAttackSurfaceReductionExcludedPaths property value. List of exe files and folders to be excluded from attack surface reduction rules
      * @param value Value to set for the defenderAttackSurfaceReductionExcludedPaths property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderAttackSurfaceReductionExcludedPaths(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.defenderAttackSurfaceReductionExcludedPaths = value;
     }
     /**
      * Sets the defenderExploitProtectionXml property value. Xml content containing information regarding exploit protection details.
      * @param value Value to set for the defenderExploitProtectionXml property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderExploitProtectionXml(@jakarta.annotation.Nullable final byte[] value) {
         this.defenderExploitProtectionXml = value;
     }
     /**
      * Sets the defenderExploitProtectionXmlFileName property value. Name of the file from which DefenderExploitProtectionXml was obtained.
      * @param value Value to set for the defenderExploitProtectionXmlFileName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderExploitProtectionXmlFileName(@jakarta.annotation.Nullable final String value) {
         this.defenderExploitProtectionXmlFileName = value;
     }
     /**
      * Sets the defenderGuardedFoldersAllowedAppPaths property value. List of paths to exe that are allowed to access protected folders
      * @param value Value to set for the defenderGuardedFoldersAllowedAppPaths property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderGuardedFoldersAllowedAppPaths(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.defenderGuardedFoldersAllowedAppPaths = value;
     }
     /**
      * Sets the defenderSecurityCenterBlockExploitProtectionOverride property value. Indicates whether or not to block user from overriding Exploit Protection settings.
      * @param value Value to set for the defenderSecurityCenterBlockExploitProtectionOverride property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefenderSecurityCenterBlockExploitProtectionOverride(@jakarta.annotation.Nullable final Boolean value) {
         this.defenderSecurityCenterBlockExploitProtectionOverride = value;
     }
     /**
      * Sets the firewallBlockStatefulFTP property value. Blocks stateful FTP connections to the device
      * @param value Value to set for the firewallBlockStatefulFTP property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirewallBlockStatefulFTP(@jakarta.annotation.Nullable final Boolean value) {
         this.firewallBlockStatefulFTP = value;
     }
     /**
      * Sets the firewallCertificateRevocationListCheckMethod property value. Possible values for firewallCertificateRevocationListCheckMethod
      * @param value Value to set for the firewallCertificateRevocationListCheckMethod property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirewallCertificateRevocationListCheckMethod(@jakarta.annotation.Nullable final FirewallCertificateRevocationListCheckMethodType value) {
         this.firewallCertificateRevocationListCheckMethod = value;
     }
     /**
      * Sets the firewallIdleTimeoutForSecurityAssociationInSeconds property value. Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600
      * @param value Value to set for the firewallIdleTimeoutForSecurityAssociationInSeconds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirewallIdleTimeoutForSecurityAssociationInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.firewallIdleTimeoutForSecurityAssociationInSeconds = value;
     }
     /**
      * Sets the firewallIPSecExemptionsAllowDHCP property value. Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic
      * @param value Value to set for the firewallIPSecExemptionsAllowDHCP property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirewallIPSecExemptionsAllowDHCP(@jakarta.annotation.Nullable final Boolean value) {
         this.firewallIPSecExemptionsAllowDHCP = value;
     }
     /**
      * Sets the firewallIPSecExemptionsAllowICMP property value. Configures IPSec exemptions to allow ICMP
      * @param value Value to set for the firewallIPSecExemptionsAllowICMP property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirewallIPSecExemptionsAllowICMP(@jakarta.annotation.Nullable final Boolean value) {
         this.firewallIPSecExemptionsAllowICMP = value;
     }
     /**
      * Sets the firewallIPSecExemptionsAllowNeighborDiscovery property value. Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes
      * @param value Value to set for the firewallIPSecExemptionsAllowNeighborDiscovery property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirewallIPSecExemptionsAllowNeighborDiscovery(@jakarta.annotation.Nullable final Boolean value) {
         this.firewallIPSecExemptionsAllowNeighborDiscovery = value;
     }
     /**
      * Sets the firewallIPSecExemptionsAllowRouterDiscovery property value. Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes
      * @param value Value to set for the firewallIPSecExemptionsAllowRouterDiscovery property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirewallIPSecExemptionsAllowRouterDiscovery(@jakarta.annotation.Nullable final Boolean value) {
         this.firewallIPSecExemptionsAllowRouterDiscovery = value;
     }
     /**
      * Sets the firewallMergeKeyingModuleSettings property value. If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set
      * @param value Value to set for the firewallMergeKeyingModuleSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirewallMergeKeyingModuleSettings(@jakarta.annotation.Nullable final Boolean value) {
         this.firewallMergeKeyingModuleSettings = value;
     }
     /**
      * Sets the firewallPacketQueueingMethod property value. Possible values for firewallPacketQueueingMethod
      * @param value Value to set for the firewallPacketQueueingMethod property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirewallPacketQueueingMethod(@jakarta.annotation.Nullable final FirewallPacketQueueingMethodType value) {
         this.firewallPacketQueueingMethod = value;
     }
     /**
      * Sets the firewallPreSharedKeyEncodingMethod property value. Possible values for firewallPreSharedKeyEncodingMethod
      * @param value Value to set for the firewallPreSharedKeyEncodingMethod property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirewallPreSharedKeyEncodingMethod(@jakarta.annotation.Nullable final FirewallPreSharedKeyEncodingMethodType value) {
         this.firewallPreSharedKeyEncodingMethod = value;
     }
     /**
      * Sets the firewallProfileDomain property value. Configures the firewall profile settings for domain networks
      * @param value Value to set for the firewallProfileDomain property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirewallProfileDomain(@jakarta.annotation.Nullable final WindowsFirewallNetworkProfile value) {
         this.firewallProfileDomain = value;
     }
     /**
      * Sets the firewallProfilePrivate property value. Configures the firewall profile settings for private networks
      * @param value Value to set for the firewallProfilePrivate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirewallProfilePrivate(@jakarta.annotation.Nullable final WindowsFirewallNetworkProfile value) {
         this.firewallProfilePrivate = value;
     }
     /**
      * Sets the firewallProfilePublic property value. Configures the firewall profile settings for public networks
      * @param value Value to set for the firewallProfilePublic property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirewallProfilePublic(@jakarta.annotation.Nullable final WindowsFirewallNetworkProfile value) {
         this.firewallProfilePublic = value;
     }
     /**
      * Sets the smartScreenBlockOverrideForFiles property value. Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
      * @param value Value to set for the smartScreenBlockOverrideForFiles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSmartScreenBlockOverrideForFiles(@jakarta.annotation.Nullable final Boolean value) {
         this.smartScreenBlockOverrideForFiles = value;
     }
     /**
      * Sets the smartScreenEnableInShell property value. Allows IT Admins to configure SmartScreen for Windows.
      * @param value Value to set for the smartScreenEnableInShell property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSmartScreenEnableInShell(@jakarta.annotation.Nullable final Boolean value) {
         this.smartScreenEnableInShell = value;
     }

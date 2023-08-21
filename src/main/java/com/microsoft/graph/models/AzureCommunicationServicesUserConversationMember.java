@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureCommunicationServicesUserConversationMember extends ConversationMember implements Parsable {
     /**
      * Azure Communication Services ID of the user.
@@ -13,9 +14,7 @@ public class AzureCommunicationServicesUserConversationMember extends Conversati
     private String azureCommunicationServicesId;
     /**
      * Instantiates a new azureCommunicationServicesUserConversationMember and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AzureCommunicationServicesUserConversationMember() {
         super();
         this.setOdataType("#microsoft.graph.azureCommunicationServicesUserConversationMember");
@@ -51,9 +50,7 @@ public class AzureCommunicationServicesUserConversationMember extends Conversati
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +59,7 @@ public class AzureCommunicationServicesUserConversationMember extends Conversati
     /**
      * Sets the azureCommunicationServicesId property value. Azure Communication Services ID of the user.
      * @param value Value to set for the azureCommunicationServicesId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAzureCommunicationServicesId(@jakarta.annotation.Nullable final String value) {
         this.azureCommunicationServicesId = value;
     }

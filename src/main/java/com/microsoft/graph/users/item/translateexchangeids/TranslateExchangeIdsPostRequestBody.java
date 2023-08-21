@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -27,9 +28,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     private ExchangeIdFormat targetIdType;
     /**
      * Instantiates a new translateExchangeIdsPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TranslateExchangeIdsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +89,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("InputIds", this.getInputIds());
@@ -103,36 +100,28 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the InputIds property value. The InputIds property
      * @param value Value to set for the InputIds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInputIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.inputIds = value;
     }
     /**
      * Sets the SourceIdType property value. The SourceIdType property
      * @param value Value to set for the SourceIdType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceIdType(@jakarta.annotation.Nullable final ExchangeIdFormat value) {
         this.sourceIdType = value;
     }
     /**
      * Sets the TargetIdType property value. The TargetIdType property
      * @param value Value to set for the TargetIdType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetIdType(@jakarta.annotation.Nullable final ExchangeIdFormat value) {
         this.targetIdType = value;
     }

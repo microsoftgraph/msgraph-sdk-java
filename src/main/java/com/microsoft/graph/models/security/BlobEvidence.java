@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class BlobEvidence extends AlertEvidence implements Parsable {
     /**
      * The container which the blob belongs to.
@@ -29,9 +30,7 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
     private String url;
     /**
      * Instantiates a new blobEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BlobEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.blobEvidence");
@@ -103,9 +102,7 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,45 +115,35 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the blobContainer property value. The container which the blob belongs to.
      * @param value Value to set for the blobContainer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBlobContainer(@jakarta.annotation.Nullable final BlobContainerEvidence value) {
         this.blobContainer = value;
     }
     /**
      * Sets the etag property value. The Etag associated with this blob.
      * @param value Value to set for the etag property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEtag(@jakarta.annotation.Nullable final String value) {
         this.etag = value;
     }
     /**
      * Sets the fileHashes property value. The file hashes associated with this blob.
      * @param value Value to set for the fileHashes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileHashes(@jakarta.annotation.Nullable final java.util.List<FileHash> value) {
         this.fileHashes = value;
     }
     /**
      * Sets the name property value. The name of the blob.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the url property value. The full URL representation of the blob.
      * @param value Value to set for the url property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUrl(@jakarta.annotation.Nullable final String value) {
         this.url = value;
     }

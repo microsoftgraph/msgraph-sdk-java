@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * The user experience analytics category entity contains the scores and insights for the various metrics of a category.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsCategory extends Entity implements Parsable {
     /**
      * The insights for the category. Read-only.
@@ -20,9 +21,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
     private java.util.List<UserExperienceAnalyticsMetric> metricValues;
     /**
      * Instantiates a new userExperienceAnalyticsCategory and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory() {
         super();
     }
@@ -66,9 +65,7 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -78,18 +75,14 @@ public class UserExperienceAnalyticsCategory extends Entity implements Parsable 
     /**
      * Sets the insights property value. The insights for the category. Read-only.
      * @param value Value to set for the insights property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInsights(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsInsight> value) {
         this.insights = value;
     }
     /**
      * Sets the metricValues property value. The metric values for the user experience analytics category. Read-only.
      * @param value Value to set for the metricValues property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMetricValues(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsMetric> value) {
         this.metricValues = value;
     }

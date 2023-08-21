@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for applicationGuardBlockFileTransfer
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ApplicationGuardBlockFileTransferType implements ValuedEnum {
     /** Not Configured */
     NotConfigured("notConfigured"),

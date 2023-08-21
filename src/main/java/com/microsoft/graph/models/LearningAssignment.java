@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class LearningAssignment extends LearningCourseActivity implements Parsable {
     /**
      * Assigned date for the course activity. Optional.
@@ -30,9 +31,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     private ItemBody notes;
     /**
      * Instantiates a new learningAssignment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LearningAssignment() {
         super();
     }
@@ -103,9 +102,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,45 +115,35 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     /**
      * Sets the assignedDateTime property value. Assigned date for the course activity. Optional.
      * @param value Value to set for the assignedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.assignedDateTime = value;
     }
     /**
      * Sets the assignerUserId property value. The user ID of the assigner. Optional.
      * @param value Value to set for the assignerUserId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignerUserId(@jakarta.annotation.Nullable final String value) {
         this.assignerUserId = value;
     }
     /**
      * Sets the assignmentType property value. The assignmentType property
      * @param value Value to set for the assignmentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignmentType(@jakarta.annotation.Nullable final AssignmentType value) {
         this.assignmentType = value;
     }
     /**
      * Sets the dueDateTime property value. Due date for the course activity. Optional.
      * @param value Value to set for the dueDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDueDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.dueDateTime = value;
     }
     /**
      * Sets the notes property value. Notes for the course activity. Optional.
      * @param value Value to set for the notes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotes(@jakarta.annotation.Nullable final ItemBody value) {
         this.notes = value;
     }

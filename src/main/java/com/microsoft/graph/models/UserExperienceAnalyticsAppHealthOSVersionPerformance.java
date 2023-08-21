@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * The user experience analytics device OS version performance entity contains OS version performance details.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity implements Parsable {
     /**
      * The number of active devices for the OS version. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
@@ -32,9 +33,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
     private Double osVersionAppHealthScore;
     /**
      * Instantiates a new userExperienceAnalyticsAppHealthOSVersionPerformance and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAppHealthOSVersionPerformance() {
         super();
     }
@@ -105,9 +104,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -120,45 +117,35 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
     /**
      * Sets the activeDeviceCount property value. The number of active devices for the OS version. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the activeDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActiveDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.activeDeviceCount = value;
     }
     /**
      * Sets the meanTimeToFailureInMinutes property value. The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the meanTimeToFailureInMinutes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMeanTimeToFailureInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.meanTimeToFailureInMinutes = value;
     }
     /**
      * Sets the osBuildNumber property value. The OS build number installed on the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the osBuildNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsBuildNumber(@jakarta.annotation.Nullable final String value) {
         this.osBuildNumber = value;
     }
     /**
      * Sets the osVersion property value. The OS version installed on the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the osVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
         this.osVersion = value;
     }
     /**
      * Sets the osVersionAppHealthScore property value. The application health score of the OS version. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the osVersionAppHealthScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsVersionAppHealthScore(@jakarta.annotation.Nullable final Double value) {
         this.osVersionAppHealthScore = value;
     }

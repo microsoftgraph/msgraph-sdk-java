@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsAsyncOperation extends Entity implements Parsable {
     /**
      * Number of times the operation was attempted before being marked successful or failed.
@@ -42,9 +43,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     private String targetResourceLocation;
     /**
      * Instantiates a new teamsAsyncOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamsAsyncOperation() {
         super();
     }
@@ -142,9 +141,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,72 +157,56 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     /**
      * Sets the attemptsCount property value. Number of times the operation was attempted before being marked successful or failed.
      * @param value Value to set for the attemptsCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttemptsCount(@jakarta.annotation.Nullable final Integer value) {
         this.attemptsCount = value;
     }
     /**
      * Sets the createdDateTime property value. Time when the operation was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the error property value. Any error that causes the async operation to fail.
      * @param value Value to set for the error property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setError(@jakarta.annotation.Nullable final OperationError value) {
         this.error = value;
     }
     /**
      * Sets the lastActionDateTime property value. Time when the async operation was last updated.
      * @param value Value to set for the lastActionDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastActionDateTime = value;
     }
     /**
      * Sets the operationType property value. The operationType property
      * @param value Value to set for the operationType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperationType(@jakarta.annotation.Nullable final TeamsAsyncOperationType value) {
         this.operationType = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final TeamsAsyncOperationStatus value) {
         this.status = value;
     }
     /**
      * Sets the targetResourceId property value. The ID of the object that's created or modified as result of this async operation, typically a team.
      * @param value Value to set for the targetResourceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetResourceId(@jakarta.annotation.Nullable final String value) {
         this.targetResourceId = value;
     }
     /**
      * Sets the targetResourceLocation property value. The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
      * @param value Value to set for the targetResourceLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetResourceLocation(@jakarta.annotation.Nullable final String value) {
         this.targetResourceLocation = value;
     }

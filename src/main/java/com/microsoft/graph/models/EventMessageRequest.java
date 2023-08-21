@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EventMessageRequest extends EventMessage implements Parsable {
     /**
      * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
@@ -33,9 +34,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     private Boolean responseRequested;
     /**
      * Instantiates a new eventMessageRequest and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EventMessageRequest() {
         super();
         this.setOdataType("#microsoft.graph.eventMessageRequest");
@@ -116,9 +115,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -132,54 +129,42 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     /**
      * Sets the allowNewTimeProposals property value. True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
      * @param value Value to set for the allowNewTimeProposals property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowNewTimeProposals(@jakarta.annotation.Nullable final Boolean value) {
         this.allowNewTimeProposals = value;
     }
     /**
      * Sets the meetingRequestType property value. The meetingRequestType property
      * @param value Value to set for the meetingRequestType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMeetingRequestType(@jakarta.annotation.Nullable final MeetingRequestType value) {
         this.meetingRequestType = value;
     }
     /**
      * Sets the previousEndDateTime property value. If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
      * @param value Value to set for the previousEndDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPreviousEndDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.previousEndDateTime = value;
     }
     /**
      * Sets the previousLocation property value. If the meeting update changes the meeting location, this property specifies the previous meeting location.
      * @param value Value to set for the previousLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPreviousLocation(@jakarta.annotation.Nullable final Location value) {
         this.previousLocation = value;
     }
     /**
      * Sets the previousStartDateTime property value. If the meeting update changes the meeting start time, this property specifies the previous meeting start time.
      * @param value Value to set for the previousStartDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPreviousStartDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.previousStartDateTime = value;
     }
     /**
      * Sets the responseRequested property value. Set to true if the sender would like the invitee to send a response to the requested meeting.
      * @param value Value to set for the responseRequested property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResponseRequested(@jakarta.annotation.Nullable final Boolean value) {
         this.responseRequested = value;
     }

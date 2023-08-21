@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Work From Anywhere windows device upgrade eligibility status.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum OperatingSystemUpgradeEligibility implements ValuedEnum {
     /** The device is upgraded to latest version of windows. */
     Upgraded("upgraded"),

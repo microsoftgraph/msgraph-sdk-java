@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerPlanDetails extends Entity implements Parsable {
     /**
      * An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan.
@@ -17,9 +18,7 @@ public class PlannerPlanDetails extends Entity implements Parsable {
     private PlannerUserIds sharedWith;
     /**
      * Instantiates a new plannerPlanDetails and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PlannerPlanDetails() {
         super();
     }
@@ -63,9 +62,7 @@ public class PlannerPlanDetails extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class PlannerPlanDetails extends Entity implements Parsable {
     /**
      * Sets the categoryDescriptions property value. An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan.
      * @param value Value to set for the categoryDescriptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategoryDescriptions(@jakarta.annotation.Nullable final PlannerCategoryDescriptions value) {
         this.categoryDescriptions = value;
     }
     /**
      * Sets the sharedWith property value. Set of user IDs that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required for them to access the plan owned by the group.
      * @param value Value to set for the sharedWith property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharedWith(@jakarta.annotation.Nullable final PlannerUserIds value) {
         this.sharedWith = value;
     }

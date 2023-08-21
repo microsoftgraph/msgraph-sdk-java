@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
     private AttributeMappingSourceType type;
     /**
      * Instantiates a new attributeMappingSource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AttributeMappingSource() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("expression", this.getExpression());
@@ -130,54 +127,42 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the expression property value. Equivalent expression representation of this attributeMappingSource object.
      * @param value Value to set for the expression property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpression(@jakarta.annotation.Nullable final String value) {
         this.expression = value;
     }
     /**
      * Sets the name property value. Name parameter of the mapping source. Depending on the type property value, this can be the name of the function, the name of the source attribute, or a constant value to be used.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type is not Function, this property will be null/empty array.
      * @param value Value to set for the parameters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParameters(@jakarta.annotation.Nullable final java.util.List<StringKeyAttributeMappingSourceValuePair> value) {
         this.parameters = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final AttributeMappingSourceType value) {
         this.type = value;
     }

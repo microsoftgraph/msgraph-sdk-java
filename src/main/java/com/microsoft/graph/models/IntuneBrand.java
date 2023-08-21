@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IntuneBrand implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -77,9 +78,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     private RgbColor themeColor;
     /**
      * Instantiates a new intuneBrand and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IntuneBrand() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -248,9 +247,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("contactITEmailAddress", this.getContactITEmailAddress());
@@ -273,144 +270,112 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the contactITEmailAddress property value. Email address of the person/organization responsible for IT support.
      * @param value Value to set for the contactITEmailAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContactITEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.contactITEmailAddress = value;
     }
     /**
      * Sets the contactITName property value. Name of the person/organization responsible for IT support.
      * @param value Value to set for the contactITName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContactITName(@jakarta.annotation.Nullable final String value) {
         this.contactITName = value;
     }
     /**
      * Sets the contactITNotes property value. Text comments regarding the person/organization responsible for IT support.
      * @param value Value to set for the contactITNotes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContactITNotes(@jakarta.annotation.Nullable final String value) {
         this.contactITNotes = value;
     }
     /**
      * Sets the contactITPhoneNumber property value. Phone number of the person/organization responsible for IT support.
      * @param value Value to set for the contactITPhoneNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContactITPhoneNumber(@jakarta.annotation.Nullable final String value) {
         this.contactITPhoneNumber = value;
     }
     /**
      * Sets the darkBackgroundLogo property value. Logo image displayed in Company Portal apps which have a dark background behind the logo.
      * @param value Value to set for the darkBackgroundLogo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDarkBackgroundLogo(@jakarta.annotation.Nullable final MimeContent value) {
         this.darkBackgroundLogo = value;
     }
     /**
      * Sets the displayName property value. Company/organization name that is displayed to end users.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lightBackgroundLogo property value. Logo image displayed in Company Portal apps which have a light background behind the logo.
      * @param value Value to set for the lightBackgroundLogo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLightBackgroundLogo(@jakarta.annotation.Nullable final MimeContent value) {
         this.lightBackgroundLogo = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site.
      * @param value Value to set for the onlineSupportSiteName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnlineSupportSiteName(@jakarta.annotation.Nullable final String value) {
         this.onlineSupportSiteName = value;
     }
     /**
      * Sets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site.
      * @param value Value to set for the onlineSupportSiteUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnlineSupportSiteUrl(@jakarta.annotation.Nullable final String value) {
         this.onlineSupportSiteUrl = value;
     }
     /**
      * Sets the privacyUrl property value. URL to the company/organizations privacy policy.
      * @param value Value to set for the privacyUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrivacyUrl(@jakarta.annotation.Nullable final String value) {
         this.privacyUrl = value;
     }
     /**
      * Sets the showDisplayNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
      * @param value Value to set for the showDisplayNameNextToLogo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShowDisplayNameNextToLogo(@jakarta.annotation.Nullable final Boolean value) {
         this.showDisplayNameNextToLogo = value;
     }
     /**
      * Sets the showLogo property value. Boolean that represents whether the administrator-supplied logo images are shown or not shown.
      * @param value Value to set for the showLogo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShowLogo(@jakarta.annotation.Nullable final Boolean value) {
         this.showLogo = value;
     }
     /**
      * Sets the showNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
      * @param value Value to set for the showNameNextToLogo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShowNameNextToLogo(@jakarta.annotation.Nullable final Boolean value) {
         this.showNameNextToLogo = value;
     }
     /**
      * Sets the themeColor property value. Primary theme color used in the Company Portal applications and web portal.
      * @param value Value to set for the themeColor property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setThemeColor(@jakarta.annotation.Nullable final RgbColor value) {
         this.themeColor = value;
     }

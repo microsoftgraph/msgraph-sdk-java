@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Drive extends BaseItem implements Parsable {
     /**
      * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
@@ -53,9 +54,7 @@ public class Drive extends BaseItem implements Parsable {
     private SystemFacet system;
     /**
      * Instantiates a new drive and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Drive() {
         super();
         this.setOdataType("#microsoft.graph.drive");
@@ -181,9 +180,7 @@ public class Drive extends BaseItem implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -202,99 +199,77 @@ public class Drive extends BaseItem implements Parsable {
     /**
      * Sets the bundles property value. Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
      * @param value Value to set for the bundles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBundles(@jakarta.annotation.Nullable final java.util.List<DriveItem> value) {
         this.bundles = value;
     }
     /**
      * Sets the driveType property value. Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
      * @param value Value to set for the driveType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDriveType(@jakarta.annotation.Nullable final String value) {
         this.driveType = value;
     }
     /**
      * Sets the following property value. The list of items the user is following. Only in OneDrive for Business.
      * @param value Value to set for the following property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFollowing(@jakarta.annotation.Nullable final java.util.List<DriveItem> value) {
         this.following = value;
     }
     /**
      * Sets the items property value. All items contained in the drive. Read-only. Nullable.
      * @param value Value to set for the items property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setItems(@jakarta.annotation.Nullable final java.util.List<DriveItem> value) {
         this.items = value;
     }
     /**
      * Sets the list property value. For drives in SharePoint, the underlying document library list. Read-only. Nullable.
      * @param value Value to set for the list property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setList(@jakarta.annotation.Nullable final List value) {
         this.list = value;
     }
     /**
      * Sets the owner property value. Optional. The user account that owns the drive. Read-only.
      * @param value Value to set for the owner property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOwner(@jakarta.annotation.Nullable final IdentitySet value) {
         this.owner = value;
     }
     /**
      * Sets the quota property value. Optional. Information about the drive's storage space quota. Read-only.
      * @param value Value to set for the quota property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQuota(@jakarta.annotation.Nullable final Quota value) {
         this.quota = value;
     }
     /**
      * Sets the root property value. The root folder of the drive. Read-only.
      * @param value Value to set for the root property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoot(@jakarta.annotation.Nullable final DriveItem value) {
         this.root = value;
     }
     /**
      * Sets the sharePointIds property value. The sharePointIds property
      * @param value Value to set for the sharePointIds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharePointIds(@jakarta.annotation.Nullable final SharepointIds value) {
         this.sharePointIds = value;
     }
     /**
      * Sets the special property value. Collection of common folders available in OneDrive. Read-only. Nullable.
      * @param value Value to set for the special property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSpecial(@jakarta.annotation.Nullable final java.util.List<DriveItem> value) {
         this.special = value;
     }
     /**
      * Sets the system property value. If present, indicates that this is a system-managed drive. Read-only.
      * @param value Value to set for the system property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSystem(@jakarta.annotation.Nullable final SystemFacet value) {
         this.system = value;
     }

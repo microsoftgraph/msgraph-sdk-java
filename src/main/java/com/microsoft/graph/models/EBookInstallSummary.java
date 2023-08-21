@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Contains properties for the installation summary of a book for a device.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EBookInstallSummary extends Entity implements Parsable {
     /**
      * Number of Devices that have failed to install this book.
@@ -36,9 +37,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
     private Integer notInstalledUserCount;
     /**
      * Instantiates a new eBookInstallSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EBookInstallSummary() {
         super();
     }
@@ -118,9 +117,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,54 +131,42 @@ public class EBookInstallSummary extends Entity implements Parsable {
     /**
      * Sets the failedDeviceCount property value. Number of Devices that have failed to install this book.
      * @param value Value to set for the failedDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedDeviceCount = value;
     }
     /**
      * Sets the failedUserCount property value. Number of Users that have 1 or more device that failed to install this book.
      * @param value Value to set for the failedUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFailedUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedUserCount = value;
     }
     /**
      * Sets the installedDeviceCount property value. Number of Devices that have successfully installed this book.
      * @param value Value to set for the installedDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstalledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.installedDeviceCount = value;
     }
     /**
      * Sets the installedUserCount property value. Number of Users whose devices have all succeeded to install this book.
      * @param value Value to set for the installedUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstalledUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.installedUserCount = value;
     }
     /**
      * Sets the notInstalledDeviceCount property value. Number of Devices that does not have this book installed.
      * @param value Value to set for the notInstalledDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotInstalledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.notInstalledDeviceCount = value;
     }
     /**
      * Sets the notInstalledUserCount property value. Number of Users that did not install this book.
      * @param value Value to set for the notInstalledUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotInstalledUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.notInstalledUserCount = value;
     }

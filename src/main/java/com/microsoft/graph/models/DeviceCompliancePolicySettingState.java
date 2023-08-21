@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Device Compilance Policy Setting State for a given device.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -69,9 +70,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     private String userPrincipalName;
     /**
      * Instantiates a new deviceCompliancePolicySettingState and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceCompliancePolicySettingState() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -222,9 +221,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("currentValue", this.getCurrentValue());
@@ -245,126 +242,98 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the currentValue property value. Current value of setting on device
      * @param value Value to set for the currentValue property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCurrentValue(@jakarta.annotation.Nullable final String value) {
         this.currentValue = value;
     }
     /**
      * Sets the errorCode property value. Error code for the setting
      * @param value Value to set for the errorCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setErrorCode(@jakarta.annotation.Nullable final Long value) {
         this.errorCode = value;
     }
     /**
      * Sets the errorDescription property value. Error description
      * @param value Value to set for the errorDescription property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setErrorDescription(@jakarta.annotation.Nullable final String value) {
         this.errorDescription = value;
     }
     /**
      * Sets the instanceDisplayName property value. Name of setting instance that is being reported.
      * @param value Value to set for the instanceDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstanceDisplayName(@jakarta.annotation.Nullable final String value) {
         this.instanceDisplayName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the setting property value. The setting that is being reported
      * @param value Value to set for the setting property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSetting(@jakarta.annotation.Nullable final String value) {
         this.setting = value;
     }
     /**
      * Sets the settingName property value. Localized/user friendly setting name that is being reported
      * @param value Value to set for the settingName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingName(@jakarta.annotation.Nullable final String value) {
         this.settingName = value;
     }
     /**
      * Sets the sources property value. Contributing policies
      * @param value Value to set for the sources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSources(@jakarta.annotation.Nullable final java.util.List<SettingSource> value) {
         this.sources = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final ComplianceStatus value) {
         this.state = value;
     }
     /**
      * Sets the userEmail property value. UserEmail
      * @param value Value to set for the userEmail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserEmail(@jakarta.annotation.Nullable final String value) {
         this.userEmail = value;
     }
     /**
      * Sets the userId property value. UserId
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
      * Sets the userName property value. UserName
      * @param value Value to set for the userName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
     /**
      * Sets the userPrincipalName property value. UserPrincipalName.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }

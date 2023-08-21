@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppIdentity implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
     private String servicePrincipalName;
     /**
      * Instantiates a new appIdentity and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AppIdentity() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appId", this.getAppId());
@@ -130,54 +127,42 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the appId property value. Refers to the Unique GUID representing Application Id in the Azure Active Directory.
      * @param value Value to set for the appId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
      * Sets the displayName property value. Refers to the Application Name displayed in the Azure Portal.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the servicePrincipalId property value. Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
      * @param value Value to set for the servicePrincipalId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServicePrincipalId(@jakarta.annotation.Nullable final String value) {
         this.servicePrincipalId = value;
     }
     /**
      * Sets the servicePrincipalName property value. Refers to the Service Principal Name is the Application name in the tenant.
      * @param value Value to set for the servicePrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServicePrincipalName(@jakarta.annotation.Nullable final String value) {
         this.servicePrincipalName = value;
     }

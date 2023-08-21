@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserRegistrationMethodSummary implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
     private IncludedUserTypes userTypes;
     /**
      * Instantiates a new userRegistrationMethodSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserRegistrationMethodSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -130,54 +127,42 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the totalUserCount property value. Total number of users in the tenant.
      * @param value Value to set for the totalUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalUserCount(@jakarta.annotation.Nullable final Long value) {
         this.totalUserCount = value;
     }
     /**
      * Sets the userRegistrationMethodCounts property value. Number of users registered for each authentication method.
      * @param value Value to set for the userRegistrationMethodCounts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserRegistrationMethodCounts(@jakarta.annotation.Nullable final java.util.List<UserRegistrationMethodCount> value) {
         this.userRegistrationMethodCounts = value;
     }
     /**
      * Sets the userRoles property value. The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
      * @param value Value to set for the userRoles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserRoles(@jakarta.annotation.Nullable final IncludedUserRoles value) {
         this.userRoles = value;
     }
     /**
      * Sets the userTypes property value. User type. Possible values are: all, member, guest, unknownFutureValue.
      * @param value Value to set for the userTypes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserTypes(@jakarta.annotation.Nullable final IncludedUserTypes value) {
         this.userTypes = value;
     }

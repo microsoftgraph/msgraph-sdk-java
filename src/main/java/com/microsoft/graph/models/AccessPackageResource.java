@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResource extends Entity implements Parsable {
     /**
      * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -46,9 +47,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     private java.util.List<AccessPackageResourceScope> scopes;
     /**
      * Instantiates a new accessPackageResource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageResource() {
         super();
     }
@@ -155,9 +154,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -174,81 +171,63 @@ public class AccessPackageResource extends Entity implements Parsable {
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. A description for the resource.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of the resource, such as the application name, group name or site name.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the environment property value. Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
      * @param value Value to set for the environment property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnvironment(@jakarta.annotation.Nullable final AccessPackageResourceEnvironment value) {
         this.environment = value;
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the modifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
     }
     /**
      * Sets the originId property value. The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
      * @param value Value to set for the originId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOriginId(@jakarta.annotation.Nullable final String value) {
         this.originId = value;
     }
     /**
      * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      * @param value Value to set for the originSystem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOriginSystem(@jakarta.annotation.Nullable final String value) {
         this.originSystem = value;
     }
     /**
      * Sets the roles property value. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the roles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoles(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceRole> value) {
         this.roles = value;
     }
     /**
      * Sets the scopes property value. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the scopes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScopes(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceScope> value) {
         this.scopes = value;
     }

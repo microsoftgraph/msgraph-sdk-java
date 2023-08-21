@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
     private UserTrainingContentEventInfo trainingUpdatedProperties;
     /**
      * Instantiates a new userTrainingEventInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserTrainingEventInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +127,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -144,63 +141,49 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the displayName property value. Display name of the training.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the latestTrainingStatus property value. Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @param value Value to set for the latestTrainingStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLatestTrainingStatus(@jakarta.annotation.Nullable final TrainingStatus value) {
         this.latestTrainingStatus = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the trainingAssignedProperties property value. Event details of the training when it was assigned to the user.
      * @param value Value to set for the trainingAssignedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTrainingAssignedProperties(@jakarta.annotation.Nullable final UserTrainingContentEventInfo value) {
         this.trainingAssignedProperties = value;
     }
     /**
      * Sets the trainingCompletedProperties property value. Event details of the training when it was completed by the user.
      * @param value Value to set for the trainingCompletedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTrainingCompletedProperties(@jakarta.annotation.Nullable final UserTrainingContentEventInfo value) {
         this.trainingCompletedProperties = value;
     }
     /**
      * Sets the trainingUpdatedProperties property value. Event details of the training when it was updated/in-progress by the user.
      * @param value Value to set for the trainingUpdatedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTrainingUpdatedProperties(@jakarta.annotation.Nullable final UserTrainingContentEventInfo value) {
         this.trainingUpdatedProperties = value;
     }

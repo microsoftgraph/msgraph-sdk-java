@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Entity for AppLogCollectionRequest contains all logs values.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppLogCollectionRequest extends Entity implements Parsable {
     /**
      * Time at which the upload log request reached a completed state if not completed yet NULL will be returned.
@@ -29,9 +30,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
     private AppLogUploadState status;
     /**
      * Instantiates a new appLogCollectionRequest and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AppLogCollectionRequest() {
         super();
     }
@@ -93,9 +92,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -107,36 +104,28 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
     /**
      * Sets the completedDateTime property value. Time at which the upload log request reached a completed state if not completed yet NULL will be returned.
      * @param value Value to set for the completedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completedDateTime = value;
     }
     /**
      * Sets the customLogFolders property value. List of log folders.
      * @param value Value to set for the customLogFolders property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomLogFolders(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.customLogFolders = value;
     }
     /**
      * Sets the errorMessage property value. Indicates error message if any during the upload process.
      * @param value Value to set for the errorMessage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setErrorMessage(@jakarta.annotation.Nullable final String value) {
         this.errorMessage = value;
     }
     /**
      * Sets the status property value. AppLogUploadStatus
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final AppLogUploadState value) {
         this.status = value;
     }

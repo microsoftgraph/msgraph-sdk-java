@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     private String region;
     /**
      * Instantiates a new participantInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +140,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("countryCode", this.getCountryCode());
@@ -158,72 +155,56 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the countryCode property value. The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
      * @param value Value to set for the countryCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountryCode(@jakarta.annotation.Nullable final String value) {
         this.countryCode = value;
     }
     /**
      * Sets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
      * @param value Value to set for the endpointType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndpointType(@jakarta.annotation.Nullable final EndpointType value) {
         this.endpointType = value;
     }
     /**
      * Sets the identity property value. The identity property
      * @param value Value to set for the identity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
         this.identity = value;
     }
     /**
      * Sets the languageId property value. The language culture string. Read-only.
      * @param value Value to set for the languageId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLanguageId(@jakarta.annotation.Nullable final String value) {
         this.languageId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the participantId property value. The participant ID of the participant. Read-only.
      * @param value Value to set for the participantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParticipantId(@jakarta.annotation.Nullable final String value) {
         this.participantId = value;
     }
     /**
      * Sets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
      * @param value Value to set for the region property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRegion(@jakarta.annotation.Nullable final String value) {
         this.region = value;
     }

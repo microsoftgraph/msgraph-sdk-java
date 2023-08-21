@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -43,9 +44,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
     private Long seriesCount;
     /**
      * Instantiates a new synchronizationQuarantine and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SynchronizationQuarantine() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -142,9 +141,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("currentBegan", this.getCurrentBegan());
@@ -159,72 +156,56 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the currentBegan property value. Date and time when the quarantine was last evaluated and imposed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the currentBegan property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCurrentBegan(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.currentBegan = value;
     }
     /**
      * Sets the error property value. Describes the error(s) that occurred when putting the synchronization job into quarantine.
      * @param value Value to set for the error property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setError(@jakarta.annotation.Nullable final SynchronizationError value) {
         this.error = value;
     }
     /**
      * Sets the nextAttempt property value. Date and time when the next attempt to re-evaluate the quarantine will be made. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the nextAttempt property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNextAttempt(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.nextAttempt = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the reason property value. The reason property
      * @param value Value to set for the reason property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReason(@jakarta.annotation.Nullable final QuarantineReason value) {
         this.reason = value;
     }
     /**
      * Sets the seriesBegan property value. Date and time when the quarantine was first imposed in this series (a series starts when a quarantine is first imposed, and is reset as soon as the quarantine is lifted). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the seriesBegan property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSeriesBegan(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.seriesBegan = value;
     }
     /**
      * Sets the seriesCount property value. Number of times in this series the quarantine was re-evaluated and left in effect (a series starts when quarantine is first imposed, and is reset as soon as quarantine is lifted).
      * @param value Value to set for the seriesCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSeriesCount(@jakarta.annotation.Nullable final Long value) {
         this.seriesCount = value;
     }

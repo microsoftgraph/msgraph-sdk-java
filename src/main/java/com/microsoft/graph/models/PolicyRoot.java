@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PolicyRoot extends Entity implements Parsable {
     /**
      * The policy that controls the idle time out for web sessions for applications.
@@ -85,9 +86,7 @@ public class PolicyRoot extends Entity implements Parsable {
     private java.util.List<TokenLifetimePolicy> tokenLifetimePolicies;
     /**
      * Instantiates a new policyRoot and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PolicyRoot() {
         super();
     }
@@ -284,9 +283,7 @@ public class PolicyRoot extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -313,171 +310,133 @@ public class PolicyRoot extends Entity implements Parsable {
     /**
      * Sets the activityBasedTimeoutPolicies property value. The policy that controls the idle time out for web sessions for applications.
      * @param value Value to set for the activityBasedTimeoutPolicies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivityBasedTimeoutPolicies(@jakarta.annotation.Nullable final java.util.List<ActivityBasedTimeoutPolicy> value) {
         this.activityBasedTimeoutPolicies = value;
     }
     /**
      * Sets the adminConsentRequestPolicy property value. The policy by which consent requests are created and managed for the entire tenant.
      * @param value Value to set for the adminConsentRequestPolicy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdminConsentRequestPolicy(@jakarta.annotation.Nullable final AdminConsentRequestPolicy value) {
         this.adminConsentRequestPolicy = value;
     }
     /**
      * Sets the appManagementPolicies property value. The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
      * @param value Value to set for the appManagementPolicies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppManagementPolicies(@jakarta.annotation.Nullable final java.util.List<AppManagementPolicy> value) {
         this.appManagementPolicies = value;
     }
     /**
      * Sets the authenticationFlowsPolicy property value. The policy configuration of the self-service sign-up experience of external users.
      * @param value Value to set for the authenticationFlowsPolicy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthenticationFlowsPolicy(@jakarta.annotation.Nullable final AuthenticationFlowsPolicy value) {
         this.authenticationFlowsPolicy = value;
     }
     /**
      * Sets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
      * @param value Value to set for the authenticationMethodsPolicy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthenticationMethodsPolicy(@jakarta.annotation.Nullable final AuthenticationMethodsPolicy value) {
         this.authenticationMethodsPolicy = value;
     }
     /**
      * Sets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
      * @param value Value to set for the authenticationStrengthPolicies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthenticationStrengthPolicies(@jakarta.annotation.Nullable final java.util.List<AuthenticationStrengthPolicy> value) {
         this.authenticationStrengthPolicies = value;
     }
     /**
      * Sets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.
      * @param value Value to set for the authorizationPolicy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthorizationPolicy(@jakarta.annotation.Nullable final AuthorizationPolicy value) {
         this.authorizationPolicy = value;
     }
     /**
      * Sets the claimsMappingPolicies property value. The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
      * @param value Value to set for the claimsMappingPolicies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClaimsMappingPolicies(@jakarta.annotation.Nullable final java.util.List<ClaimsMappingPolicy> value) {
         this.claimsMappingPolicies = value;
     }
     /**
      * Sets the conditionalAccessPolicies property value. The custom rules that define an access scenario.
      * @param value Value to set for the conditionalAccessPolicies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConditionalAccessPolicies(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
         this.conditionalAccessPolicies = value;
     }
     /**
      * Sets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Azure AD tenants.
      * @param value Value to set for the crossTenantAccessPolicy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCrossTenantAccessPolicy(@jakarta.annotation.Nullable final CrossTenantAccessPolicy value) {
         this.crossTenantAccessPolicy = value;
     }
     /**
      * Sets the defaultAppManagementPolicy property value. The tenant-wide policy that enforces app management restrictions for all applications and service principals.
      * @param value Value to set for the defaultAppManagementPolicy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefaultAppManagementPolicy(@jakarta.annotation.Nullable final TenantAppManagementPolicy value) {
         this.defaultAppManagementPolicy = value;
     }
     /**
      * Sets the featureRolloutPolicies property value. The feature rollout policy associated with a directory object.
      * @param value Value to set for the featureRolloutPolicies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFeatureRolloutPolicies(@jakarta.annotation.Nullable final java.util.List<FeatureRolloutPolicy> value) {
         this.featureRolloutPolicies = value;
     }
     /**
      * Sets the homeRealmDiscoveryPolicies property value. The policy to control Azure AD authentication behavior for federated users.
      * @param value Value to set for the homeRealmDiscoveryPolicies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHomeRealmDiscoveryPolicies(@jakarta.annotation.Nullable final java.util.List<HomeRealmDiscoveryPolicy> value) {
         this.homeRealmDiscoveryPolicies = value;
     }
     /**
      * Sets the identitySecurityDefaultsEnforcementPolicy property value. The policy that represents the security defaults that protect against common attacks.
      * @param value Value to set for the identitySecurityDefaultsEnforcementPolicy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentitySecurityDefaultsEnforcementPolicy(@jakarta.annotation.Nullable final IdentitySecurityDefaultsEnforcementPolicy value) {
         this.identitySecurityDefaultsEnforcementPolicy = value;
     }
     /**
      * Sets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.
      * @param value Value to set for the permissionGrantPolicies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPermissionGrantPolicies(@jakarta.annotation.Nullable final java.util.List<PermissionGrantPolicy> value) {
         this.permissionGrantPolicies = value;
     }
     /**
      * Sets the roleManagementPolicies property value. Specifies the various policies associated with scopes and roles.
      * @param value Value to set for the roleManagementPolicies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleManagementPolicies(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicy> value) {
         this.roleManagementPolicies = value;
     }
     /**
      * Sets the roleManagementPolicyAssignments property value. The assignment of a role management policy to a role definition object.
      * @param value Value to set for the roleManagementPolicyAssignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleManagementPolicyAssignments(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyAssignment> value) {
         this.roleManagementPolicyAssignments = value;
     }
     /**
      * Sets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Azure AD.
      * @param value Value to set for the tokenIssuancePolicies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTokenIssuancePolicies(@jakarta.annotation.Nullable final java.util.List<TokenIssuancePolicy> value) {
         this.tokenIssuancePolicies = value;
     }
     /**
      * Sets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
      * @param value Value to set for the tokenLifetimePolicies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTokenLifetimePolicies(@jakarta.annotation.Nullable final java.util.List<TokenLifetimePolicy> value) {
         this.tokenLifetimePolicies = value;
     }

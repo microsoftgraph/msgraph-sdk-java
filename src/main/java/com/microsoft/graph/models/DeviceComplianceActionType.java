@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Scheduled Action Type Enum
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceComplianceActionType implements ValuedEnum {
     /** No Action */
     NoAction("noAction"),

@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Contains properties for a single Intune app category.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppCategory extends Entity implements Parsable {
     /**
      * The name of the app category.
@@ -21,9 +22,7 @@ public class MobileAppCategory extends Entity implements Parsable {
     private OffsetDateTime lastModifiedDateTime;
     /**
      * Instantiates a new mobileAppCategory and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MobileAppCategory() {
         super();
     }
@@ -67,9 +66,7 @@ public class MobileAppCategory extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -79,18 +76,14 @@ public class MobileAppCategory extends Entity implements Parsable {
     /**
      * Sets the displayName property value. The name of the app category.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the mobileAppCategory was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }

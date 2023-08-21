@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Device operating system summary.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -69,9 +70,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     private Integer windowsMobileCount;
     /**
      * Instantiates a new deviceOperatingSystemSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceOperatingSystemSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -222,9 +221,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("androidCorporateWorkProfileCount", this.getAndroidCorporateWorkProfileCount());
@@ -245,126 +242,98 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the androidCorporateWorkProfileCount property value. The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
      * @param value Value to set for the androidCorporateWorkProfileCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAndroidCorporateWorkProfileCount(@jakarta.annotation.Nullable final Integer value) {
         this.androidCorporateWorkProfileCount = value;
     }
     /**
      * Sets the androidCount property value. Number of android device count.
      * @param value Value to set for the androidCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAndroidCount(@jakarta.annotation.Nullable final Integer value) {
         this.androidCount = value;
     }
     /**
      * Sets the androidDedicatedCount property value. Number of dedicated Android devices.
      * @param value Value to set for the androidDedicatedCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAndroidDedicatedCount(@jakarta.annotation.Nullable final Integer value) {
         this.androidDedicatedCount = value;
     }
     /**
      * Sets the androidDeviceAdminCount property value. Number of device admin Android devices.
      * @param value Value to set for the androidDeviceAdminCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAndroidDeviceAdminCount(@jakarta.annotation.Nullable final Integer value) {
         this.androidDeviceAdminCount = value;
     }
     /**
      * Sets the androidFullyManagedCount property value. Number of fully managed Android devices.
      * @param value Value to set for the androidFullyManagedCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAndroidFullyManagedCount(@jakarta.annotation.Nullable final Integer value) {
         this.androidFullyManagedCount = value;
     }
     /**
      * Sets the androidWorkProfileCount property value. Number of work profile Android devices.
      * @param value Value to set for the androidWorkProfileCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAndroidWorkProfileCount(@jakarta.annotation.Nullable final Integer value) {
         this.androidWorkProfileCount = value;
     }
     /**
      * Sets the configMgrDeviceCount property value. Number of ConfigMgr managed devices.
      * @param value Value to set for the configMgrDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConfigMgrDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.configMgrDeviceCount = value;
     }
     /**
      * Sets the iosCount property value. Number of iOS device count.
      * @param value Value to set for the iosCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIosCount(@jakarta.annotation.Nullable final Integer value) {
         this.iosCount = value;
     }
     /**
      * Sets the macOSCount property value. Number of Mac OS X device count.
      * @param value Value to set for the macOSCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMacOSCount(@jakarta.annotation.Nullable final Integer value) {
         this.macOSCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the unknownCount property value. Number of unknown device count.
      * @param value Value to set for the unknownCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnknownCount(@jakarta.annotation.Nullable final Integer value) {
         this.unknownCount = value;
     }
     /**
      * Sets the windowsCount property value. Number of Windows device count.
      * @param value Value to set for the windowsCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsCount(@jakarta.annotation.Nullable final Integer value) {
         this.windowsCount = value;
     }
     /**
      * Sets the windowsMobileCount property value. Number of Windows mobile device count.
      * @param value Value to set for the windowsMobileCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsMobileCount(@jakarta.annotation.Nullable final Integer value) {
         this.windowsMobileCount = value;
     }

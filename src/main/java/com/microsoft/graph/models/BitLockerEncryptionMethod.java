@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * BitLockerEncryptionMethod types
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum BitLockerEncryptionMethod implements ValuedEnum {
     /** AES-CBC 128-bit. */
     AesCbc128("aesCbc128"),

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -50,9 +51,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     private EntitlementManagementSchedule schedule;
     /**
      * Instantiates a new accessPackageAssignmentRequestRequirements and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageAssignmentRequestRequirements() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -167,9 +166,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowCustomAssignmentSchedule", this.getAllowCustomAssignmentSchedule());
@@ -186,90 +183,70 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowCustomAssignmentSchedule property value. Indicates whether the requestor is allowed to set a custom schedule.
      * @param value Value to set for the allowCustomAssignmentSchedule property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowCustomAssignmentSchedule(@jakarta.annotation.Nullable final Boolean value) {
         this.allowCustomAssignmentSchedule = value;
     }
     /**
      * Sets the isApprovalRequiredForAdd property value. Indicates whether a request to add must be approved by an approver.
      * @param value Value to set for the isApprovalRequiredForAdd property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsApprovalRequiredForAdd(@jakarta.annotation.Nullable final Boolean value) {
         this.isApprovalRequiredForAdd = value;
     }
     /**
      * Sets the isApprovalRequiredForUpdate property value. Indicates whether a request to update must be approved by an approver.
      * @param value Value to set for the isApprovalRequiredForUpdate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsApprovalRequiredForUpdate(@jakarta.annotation.Nullable final Boolean value) {
         this.isApprovalRequiredForUpdate = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the policyDescription property value. The description of the policy that the user is trying to request access using.
      * @param value Value to set for the policyDescription property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPolicyDescription(@jakarta.annotation.Nullable final String value) {
         this.policyDescription = value;
     }
     /**
      * Sets the policyDisplayName property value. The display name of the policy that the user is trying to request access using.
      * @param value Value to set for the policyDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPolicyDisplayName(@jakarta.annotation.Nullable final String value) {
         this.policyDisplayName = value;
     }
     /**
      * Sets the policyId property value. The identifier of the policy that these requirements are associated with. This identifier can be used when creating a new assignment request.
      * @param value Value to set for the policyId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPolicyId(@jakarta.annotation.Nullable final String value) {
         this.policyId = value;
     }
     /**
      * Sets the questions property value. The questions property
      * @param value Value to set for the questions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQuestions(@jakarta.annotation.Nullable final java.util.List<AccessPackageQuestion> value) {
         this.questions = value;
     }
     /**
      * Sets the schedule property value. Schedule restrictions enforced, if any.
      * @param value Value to set for the schedule property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSchedule(@jakarta.annotation.Nullable final EntitlementManagementSchedule value) {
         this.schedule = value;
     }

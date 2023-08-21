@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookFilter extends Entity implements Parsable {
     /**
      * The currently applied filter on the given column. Read-only.
@@ -13,9 +14,7 @@ public class WorkbookFilter extends Entity implements Parsable {
     private WorkbookFilterCriteria criteria;
     /**
      * Instantiates a new workbookFilter and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookFilter() {
         super();
     }
@@ -50,9 +49,7 @@ public class WorkbookFilter extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +58,7 @@ public class WorkbookFilter extends Entity implements Parsable {
     /**
      * Sets the criteria property value. The currently applied filter on the given column. Read-only.
      * @param value Value to set for the criteria property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCriteria(@jakarta.annotation.Nullable final WorkbookFilterCriteria value) {
         this.criteria = value;
     }

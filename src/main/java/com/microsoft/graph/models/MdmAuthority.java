@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Mobile device management authority.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MdmAuthority implements ValuedEnum {
     /** Unknown */
     Unknown("unknown"),

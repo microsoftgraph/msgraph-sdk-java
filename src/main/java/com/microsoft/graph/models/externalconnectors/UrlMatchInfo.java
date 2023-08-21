@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
     private String urlPattern;
     /**
      * Instantiates a new urlMatchInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UrlMatchInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("baseUrls", this.getBaseUrls());
@@ -102,36 +99,28 @@ public class UrlMatchInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the baseUrls property value. A list of the URL prefixes that must match URLs to be processed by this URL-to-item-resolver.
      * @param value Value to set for the baseUrls property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBaseUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.baseUrls = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the urlPattern property value. A regular expression that will be matched towards the URL that is processed by this URL-to-item-resolver. The ECMAScript specification for regular expressions (ECMA-262) is used for the evaluation. The named groups defined by the regular expression will be used later to extract values from the URL.
      * @param value Value to set for the urlPattern property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUrlPattern(@jakarta.annotation.Nullable final String value) {
         this.urlPattern = value;
     }

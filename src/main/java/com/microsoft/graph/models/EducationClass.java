@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationClass extends Entity implements Parsable {
     /**
      * All categories associated with this class. Nullable.
@@ -89,9 +90,7 @@ public class EducationClass extends Entity implements Parsable {
     private EducationTerm term;
     /**
      * Instantiates a new educationClass and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationClass() {
         super();
     }
@@ -297,9 +296,7 @@ public class EducationClass extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -327,180 +324,140 @@ public class EducationClass extends Entity implements Parsable {
     /**
      * Sets the assignmentCategories property value. All categories associated with this class. Nullable.
      * @param value Value to set for the assignmentCategories property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignmentCategories(@jakarta.annotation.Nullable final java.util.List<EducationCategory> value) {
         this.assignmentCategories = value;
     }
     /**
      * Sets the assignmentDefaults property value. Specifies class-level defaults respected by new assignments created in the class.
      * @param value Value to set for the assignmentDefaults property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignmentDefaults(@jakarta.annotation.Nullable final EducationAssignmentDefaults value) {
         this.assignmentDefaults = value;
     }
     /**
      * Sets the assignments property value. All assignments associated with this class. Nullable.
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<EducationAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the assignmentSettings property value. Specifies class-level assignments settings.
      * @param value Value to set for the assignmentSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignmentSettings(@jakarta.annotation.Nullable final EducationAssignmentSettings value) {
         this.assignmentSettings = value;
     }
     /**
      * Sets the classCode property value. Class code used by the school to identify the class.
      * @param value Value to set for the classCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClassCode(@jakarta.annotation.Nullable final String value) {
         this.classCode = value;
     }
     /**
      * Sets the course property value. The course property
      * @param value Value to set for the course property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCourse(@jakarta.annotation.Nullable final EducationCourse value) {
         this.course = value;
     }
     /**
      * Sets the createdBy property value. Entity who created the class
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the description property value. Description of the class.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Name of the class.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the externalId property value. ID of the class from the syncing system.
      * @param value Value to set for the externalId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
      * Sets the externalName property value. Name of the class in the syncing system.
      * @param value Value to set for the externalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalName(@jakarta.annotation.Nullable final String value) {
         this.externalName = value;
     }
     /**
      * Sets the externalSource property value. How this class was created. Possible values are: sis, manual.
      * @param value Value to set for the externalSource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalSource(@jakarta.annotation.Nullable final EducationExternalSource value) {
         this.externalSource = value;
     }
     /**
      * Sets the externalSourceDetail property value. The name of the external source this resources was generated from.
      * @param value Value to set for the externalSourceDetail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalSourceDetail(@jakarta.annotation.Nullable final String value) {
         this.externalSourceDetail = value;
     }
     /**
      * Sets the grade property value. Grade level of the class.
      * @param value Value to set for the grade property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGrade(@jakarta.annotation.Nullable final String value) {
         this.grade = value;
     }
     /**
      * Sets the group property value. The underlying Microsoft 365 group object.
      * @param value Value to set for the group property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroup(@jakarta.annotation.Nullable final Group value) {
         this.group = value;
     }
     /**
      * Sets the mailNickname property value. Mail name for sending email to all members, if this is enabled.
      * @param value Value to set for the mailNickname property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMailNickname(@jakarta.annotation.Nullable final String value) {
         this.mailNickname = value;
     }
     /**
      * Sets the members property value. All users in the class. Nullable.
      * @param value Value to set for the members property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<EducationUser> value) {
         this.members = value;
     }
     /**
      * Sets the schools property value. All schools that this class is associated with. Nullable.
      * @param value Value to set for the schools property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSchools(@jakarta.annotation.Nullable final java.util.List<EducationSchool> value) {
         this.schools = value;
     }
     /**
      * Sets the teachers property value. All teachers in the class. Nullable.
      * @param value Value to set for the teachers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeachers(@jakarta.annotation.Nullable final java.util.List<EducationUser> value) {
         this.teachers = value;
     }
     /**
      * Sets the term property value. Term for this class.
      * @param value Value to set for the term property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTerm(@jakarta.annotation.Nullable final EducationTerm value) {
         this.term = value;
     }

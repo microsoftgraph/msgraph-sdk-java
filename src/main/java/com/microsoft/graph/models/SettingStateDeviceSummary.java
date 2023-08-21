@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Device Compilance Policy and Configuration for a Setting State summary
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SettingStateDeviceSummary extends Entity implements Parsable {
     /**
      * Device Compliant count for the setting
@@ -48,9 +49,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
     private Integer unknownDeviceCount;
     /**
      * Instantiates a new settingStateDeviceSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SettingStateDeviceSummary() {
         super();
     }
@@ -157,9 +156,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -176,81 +173,63 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
     /**
      * Sets the compliantDeviceCount property value. Device Compliant count for the setting
      * @param value Value to set for the compliantDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.compliantDeviceCount = value;
     }
     /**
      * Sets the conflictDeviceCount property value. Device conflict error count for the setting
      * @param value Value to set for the conflictDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConflictDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.conflictDeviceCount = value;
     }
     /**
      * Sets the errorDeviceCount property value. Device error count for the setting
      * @param value Value to set for the errorDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setErrorDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.errorDeviceCount = value;
     }
     /**
      * Sets the instancePath property value. Name of the InstancePath for the setting
      * @param value Value to set for the instancePath property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstancePath(@jakarta.annotation.Nullable final String value) {
         this.instancePath = value;
     }
     /**
      * Sets the nonCompliantDeviceCount property value. Device NonCompliant count for the setting
      * @param value Value to set for the nonCompliantDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNonCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.nonCompliantDeviceCount = value;
     }
     /**
      * Sets the notApplicableDeviceCount property value. Device Not Applicable count for the setting
      * @param value Value to set for the notApplicableDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotApplicableDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.notApplicableDeviceCount = value;
     }
     /**
      * Sets the remediatedDeviceCount property value. Device Compliant count for the setting
      * @param value Value to set for the remediatedDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRemediatedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.remediatedDeviceCount = value;
     }
     /**
      * Sets the settingName property value. Name of the setting
      * @param value Value to set for the settingName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettingName(@jakarta.annotation.Nullable final String value) {
         this.settingName = value;
     }
     /**
      * Sets the unknownDeviceCount property value. Device Unkown count for the setting
      * @param value Value to set for the unknownDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnknownDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.unknownDeviceCount = value;
     }

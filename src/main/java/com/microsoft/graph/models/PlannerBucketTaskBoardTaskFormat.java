@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable {
     /**
      * Hint used to order tasks in the bucket view of the task board. For details about the supported format, see Using order hints in Planner.
@@ -13,9 +14,7 @@ public class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable
     private String orderHint;
     /**
      * Instantiates a new plannerBucketTaskBoardTaskFormat and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PlannerBucketTaskBoardTaskFormat() {
         super();
     }
@@ -50,9 +49,7 @@ public class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +58,7 @@ public class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable
     /**
      * Sets the orderHint property value. Hint used to order tasks in the bucket view of the task board. For details about the supported format, see Using order hints in Planner.
      * @param value Value to set for the orderHint property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrderHint(@jakarta.annotation.Nullable final String value) {
         this.orderHint = value;
     }

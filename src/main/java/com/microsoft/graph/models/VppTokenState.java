@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible states associated with an Apple Volume Purchase Program token.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum VppTokenState implements ValuedEnum {
     /** Default state. */
     Unknown("unknown"),

@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Chat extends Entity implements Parsable {
     /**
      * The chatType property
@@ -70,9 +71,7 @@ public class Chat extends Entity implements Parsable {
     private String webUrl;
     /**
      * Instantiates a new chat and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Chat() {
         super();
     }
@@ -233,9 +232,7 @@ public class Chat extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -258,135 +255,105 @@ public class Chat extends Entity implements Parsable {
     /**
      * Sets the chatType property value. The chatType property
      * @param value Value to set for the chatType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChatType(@jakarta.annotation.Nullable final ChatType value) {
         this.chatType = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time at which the chat was created. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the installedApps property value. A collection of all the apps in the chat. Nullable.
      * @param value Value to set for the installedApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstalledApps(@jakarta.annotation.Nullable final java.util.List<TeamsAppInstallation> value) {
         this.installedApps = value;
     }
     /**
      * Sets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
      * @param value Value to set for the lastMessagePreview property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastMessagePreview(@jakarta.annotation.Nullable final ChatMessageInfo value) {
         this.lastMessagePreview = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. Date and time at which the chat was renamed or list of members were last changed. Read-only.
      * @param value Value to set for the lastUpdatedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the members property value. A collection of all the members in the chat. Nullable.
      * @param value Value to set for the members property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<ConversationMember> value) {
         this.members = value;
     }
     /**
      * Sets the messages property value. A collection of all the messages in the chat. Nullable.
      * @param value Value to set for the messages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessages(@jakarta.annotation.Nullable final java.util.List<ChatMessage> value) {
         this.messages = value;
     }
     /**
      * Sets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
      * @param value Value to set for the onlineMeetingInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnlineMeetingInfo(@jakarta.annotation.Nullable final TeamworkOnlineMeetingInfo value) {
         this.onlineMeetingInfo = value;
     }
     /**
      * Sets the permissionGrants property value. The permissionGrants property
      * @param value Value to set for the permissionGrants property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPermissionGrants(@jakarta.annotation.Nullable final java.util.List<ResourceSpecificPermissionGrant> value) {
         this.permissionGrants = value;
     }
     /**
      * Sets the pinnedMessages property value. A collection of all the pinned messages in the chat. Nullable.
      * @param value Value to set for the pinnedMessages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPinnedMessages(@jakarta.annotation.Nullable final java.util.List<PinnedChatMessageInfo> value) {
         this.pinnedMessages = value;
     }
     /**
      * Sets the tabs property value. A collection of all the tabs in the chat. Nullable.
      * @param value Value to set for the tabs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTabs(@jakarta.annotation.Nullable final java.util.List<TeamsTab> value) {
         this.tabs = value;
     }
     /**
      * Sets the tenantId property value. The identifier of the tenant in which the chat was created. Read-only.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
      * Sets the topic property value. (Optional) Subject or topic for the chat. Only available for group chats.
      * @param value Value to set for the topic property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTopic(@jakarta.annotation.Nullable final String value) {
         this.topic = value;
     }
     /**
      * Sets the viewpoint property value. Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
      * @param value Value to set for the viewpoint property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setViewpoint(@jakarta.annotation.Nullable final ChatViewpoint value) {
         this.viewpoint = value;
     }
     /**
      * Sets the webUrl property value. The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only.
      * @param value Value to set for the webUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }

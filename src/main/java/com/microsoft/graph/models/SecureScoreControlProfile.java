@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecureScoreControlProfile extends Entity implements Parsable {
     /**
      * Control action type (Config, Review, Behavior).
@@ -86,9 +87,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     private SecurityVendorInformation vendorInformation;
     /**
      * Instantiates a new secureScoreControlProfile and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SecureScoreControlProfile() {
         super();
     }
@@ -285,9 +284,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -314,171 +311,133 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     /**
      * Sets the actionType property value. Control action type (Config, Review, Behavior).
      * @param value Value to set for the actionType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActionType(@jakarta.annotation.Nullable final String value) {
         this.actionType = value;
     }
     /**
      * Sets the actionUrl property value. URL to where the control can be actioned.
      * @param value Value to set for the actionUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActionUrl(@jakarta.annotation.Nullable final String value) {
         this.actionUrl = value;
     }
     /**
      * Sets the azureTenantId property value. GUID string for tenant ID.
      * @param value Value to set for the azureTenantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAzureTenantId(@jakarta.annotation.Nullable final String value) {
         this.azureTenantId = value;
     }
     /**
      * Sets the complianceInformation property value. The collection of compliance information associated with secure score control
      * @param value Value to set for the complianceInformation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComplianceInformation(@jakarta.annotation.Nullable final java.util.List<ComplianceInformation> value) {
         this.complianceInformation = value;
     }
     /**
      * Sets the controlCategory property value. Control action category (Identity, Data, Device, Apps, Infrastructure).
      * @param value Value to set for the controlCategory property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setControlCategory(@jakarta.annotation.Nullable final String value) {
         this.controlCategory = value;
     }
     /**
      * Sets the controlStateUpdates property value. Flag to indicate where the tenant has marked a control (ignored, thirdParty, reviewed) (supports update).
      * @param value Value to set for the controlStateUpdates property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setControlStateUpdates(@jakarta.annotation.Nullable final java.util.List<SecureScoreControlStateUpdate> value) {
         this.controlStateUpdates = value;
     }
     /**
      * Sets the deprecated property value. Flag to indicate if a control is depreciated.
      * @param value Value to set for the deprecated property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeprecated(@jakarta.annotation.Nullable final Boolean value) {
         this.deprecated = value;
     }
     /**
      * Sets the implementationCost property value. Resource cost of implemmentating control (low, moderate, high).
      * @param value Value to set for the implementationCost property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImplementationCost(@jakarta.annotation.Nullable final String value) {
         this.implementationCost = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Time at which the control profile entity was last modified. The Timestamp type represents date and time
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the maxScore property value. max attainable score for the control.
      * @param value Value to set for the maxScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaxScore(@jakarta.annotation.Nullable final Double value) {
         this.maxScore = value;
     }
     /**
      * Sets the rank property value. Microsoft's stack ranking of control.
      * @param value Value to set for the rank property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRank(@jakarta.annotation.Nullable final Integer value) {
         this.rank = value;
     }
     /**
      * Sets the remediation property value. Description of what the control will help remediate.
      * @param value Value to set for the remediation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRemediation(@jakarta.annotation.Nullable final String value) {
         this.remediation = value;
     }
     /**
      * Sets the remediationImpact property value. Description of the impact on users of the remediation.
      * @param value Value to set for the remediationImpact property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRemediationImpact(@jakarta.annotation.Nullable final String value) {
         this.remediationImpact = value;
     }
     /**
      * Sets the service property value. Service that owns the control (Exchange, Sharepoint, Azure AD).
      * @param value Value to set for the service property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setService(@jakarta.annotation.Nullable final String value) {
         this.service = value;
     }
     /**
      * Sets the threats property value. List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage,
      * @param value Value to set for the threats property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setThreats(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.threats = value;
     }
     /**
      * Sets the tier property value. The tier property
      * @param value Value to set for the tier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTier(@jakarta.annotation.Nullable final String value) {
         this.tier = value;
     }
     /**
      * Sets the title property value. The title property
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
     /**
      * Sets the userImpact property value. The userImpact property
      * @param value Value to set for the userImpact property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserImpact(@jakarta.annotation.Nullable final String value) {
         this.userImpact = value;
     }
     /**
      * Sets the vendorInformation property value. The vendorInformation property
      * @param value Value to set for the vendorInformation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVendorInformation(@jakarta.annotation.Nullable final SecurityVendorInformation value) {
         this.vendorInformation = value;
     }

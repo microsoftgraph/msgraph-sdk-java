@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceDetail implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -46,9 +47,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     private String trustType;
     /**
      * Instantiates a new deviceDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceDetail() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -154,9 +153,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("browser", this.getBrowser());
@@ -172,81 +169,63 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the browser property value. Indicates the browser information of the used for signing in.
      * @param value Value to set for the browser property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowser(@jakarta.annotation.Nullable final String value) {
         this.browser = value;
     }
     /**
      * Sets the deviceId property value. Refers to the UniqueID of the device used for signing in.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the displayName property value. Refers to the name of the device used for signing in.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the isCompliant property value. Indicates whether the device is compliant.
      * @param value Value to set for the isCompliant property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsCompliant(@jakarta.annotation.Nullable final Boolean value) {
         this.isCompliant = value;
     }
     /**
      * Sets the isManaged property value. Indicates whether the device is managed.
      * @param value Value to set for the isManaged property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsManaged(@jakarta.annotation.Nullable final Boolean value) {
         this.isManaged = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the operatingSystem property value. Indicates the operating system name and version used for signing in.
      * @param value Value to set for the operatingSystem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.operatingSystem = value;
     }
     /**
      * Sets the trustType property value. Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
      * @param value Value to set for the trustType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTrustType(@jakarta.annotation.Nullable final String value) {
         this.trustType = value;
     }

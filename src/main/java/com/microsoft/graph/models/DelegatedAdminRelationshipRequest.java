@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminRelationshipRequest extends Entity implements Parsable {
     /**
      * The action property
@@ -26,9 +27,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
     private DelegatedAdminRelationshipRequestStatus status;
     /**
      * Instantiates a new delegatedAdminRelationshipRequest and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipRequest() {
         super();
     }
@@ -90,9 +89,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +101,28 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
     /**
      * Sets the action property value. The action property
      * @param value Value to set for the action property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAction(@jakarta.annotation.Nullable final DelegatedAdminRelationshipRequestAction value) {
         this.action = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time in ISO 8601 format and in UTC time when the relationship request was created. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time in ISO 8601 format and UTC time when this relationship request was last modified. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the status property value. The status of the request. Read-only. The possible values are: created, pending, succeeded, failed, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final DelegatedAdminRelationshipRequestStatus value) {
         this.status = value;
     }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Contains properties for Windows architecture.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsArchitecture implements ValuedEnum {
     /** No flags set. */
     None("none"),

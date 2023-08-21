@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -62,9 +63,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     private String odataType;
     /**
      * Instantiates a new workbookWorksheetProtectionOptions and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookWorksheetProtectionOptions() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -206,9 +205,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowAutoFilter", this.getAllowAutoFilter());
@@ -228,117 +225,91 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowAutoFilter property value. Represents the worksheet protection option of allowing using auto filter feature.
      * @param value Value to set for the allowAutoFilter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowAutoFilter(@jakarta.annotation.Nullable final Boolean value) {
         this.allowAutoFilter = value;
     }
     /**
      * Sets the allowDeleteColumns property value. Represents the worksheet protection option of allowing deleting columns.
      * @param value Value to set for the allowDeleteColumns property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowDeleteColumns(@jakarta.annotation.Nullable final Boolean value) {
         this.allowDeleteColumns = value;
     }
     /**
      * Sets the allowDeleteRows property value. Represents the worksheet protection option of allowing deleting rows.
      * @param value Value to set for the allowDeleteRows property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowDeleteRows(@jakarta.annotation.Nullable final Boolean value) {
         this.allowDeleteRows = value;
     }
     /**
      * Sets the allowFormatCells property value. Represents the worksheet protection option of allowing formatting cells.
      * @param value Value to set for the allowFormatCells property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowFormatCells(@jakarta.annotation.Nullable final Boolean value) {
         this.allowFormatCells = value;
     }
     /**
      * Sets the allowFormatColumns property value. Represents the worksheet protection option of allowing formatting columns.
      * @param value Value to set for the allowFormatColumns property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowFormatColumns(@jakarta.annotation.Nullable final Boolean value) {
         this.allowFormatColumns = value;
     }
     /**
      * Sets the allowFormatRows property value. Represents the worksheet protection option of allowing formatting rows.
      * @param value Value to set for the allowFormatRows property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowFormatRows(@jakarta.annotation.Nullable final Boolean value) {
         this.allowFormatRows = value;
     }
     /**
      * Sets the allowInsertColumns property value. Represents the worksheet protection option of allowing inserting columns.
      * @param value Value to set for the allowInsertColumns property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowInsertColumns(@jakarta.annotation.Nullable final Boolean value) {
         this.allowInsertColumns = value;
     }
     /**
      * Sets the allowInsertHyperlinks property value. Represents the worksheet protection option of allowing inserting hyperlinks.
      * @param value Value to set for the allowInsertHyperlinks property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowInsertHyperlinks(@jakarta.annotation.Nullable final Boolean value) {
         this.allowInsertHyperlinks = value;
     }
     /**
      * Sets the allowInsertRows property value. Represents the worksheet protection option of allowing inserting rows.
      * @param value Value to set for the allowInsertRows property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowInsertRows(@jakarta.annotation.Nullable final Boolean value) {
         this.allowInsertRows = value;
     }
     /**
      * Sets the allowPivotTables property value. Represents the worksheet protection option of allowing using pivot table feature.
      * @param value Value to set for the allowPivotTables property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowPivotTables(@jakarta.annotation.Nullable final Boolean value) {
         this.allowPivotTables = value;
     }
     /**
      * Sets the allowSort property value. Represents the worksheet protection option of allowing using sort feature.
      * @param value Value to set for the allowSort property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowSort(@jakarta.annotation.Nullable final Boolean value) {
         this.allowSort = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

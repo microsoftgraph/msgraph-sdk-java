@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
     /**
      * Registry hive of the key that the recorded action was applied to.
@@ -17,9 +18,7 @@ public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
     private String registryKey;
     /**
      * Instantiates a new registryKeyEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RegistryKeyEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.registryKeyEvidence");
@@ -64,9 +63,7 @@ public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the registryHive property value. Registry hive of the key that the recorded action was applied to.
      * @param value Value to set for the registryHive property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRegistryHive(@jakarta.annotation.Nullable final String value) {
         this.registryHive = value;
     }
     /**
      * Sets the registryKey property value. Registry key that the recorded action was applied to.
      * @param value Value to set for the registryKey property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRegistryKey(@jakarta.annotation.Nullable final String value) {
         this.registryKey = value;
     }

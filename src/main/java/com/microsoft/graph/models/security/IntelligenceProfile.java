@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IntelligenceProfile extends Entity implements Parsable {
     /**
      * A list of commonly-known aliases for the threat intelligence included in the intelligenceProfile.
@@ -51,9 +52,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
     private FormattedContent tradecraft;
     /**
      * Instantiates a new intelligenceProfile and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IntelligenceProfile() {
         super();
     }
@@ -169,9 +168,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -189,90 +186,70 @@ public class IntelligenceProfile extends Entity implements Parsable {
     /**
      * Sets the aliases property value. A list of commonly-known aliases for the threat intelligence included in the intelligenceProfile.
      * @param value Value to set for the aliases property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAliases(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.aliases = value;
     }
     /**
      * Sets the countriesOrRegionsOfOrigin property value. The country/region of origin for the given actor or threat associated with this intelligenceProfile.
      * @param value Value to set for the countriesOrRegionsOfOrigin property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountriesOrRegionsOfOrigin(@jakarta.annotation.Nullable final java.util.List<IntelligenceProfileCountryOrRegionOfOrigin> value) {
         this.countriesOrRegionsOfOrigin = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final FormattedContent value) {
         this.description = value;
     }
     /**
      * Sets the firstActiveDateTime property value. The date and time when this intelligenceProfile was first active. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstActiveDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirstActiveDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstActiveDateTime = value;
     }
     /**
      * Sets the indicators property value. Includes an assemblage of high-fidelity network indicators of compromise.
      * @param value Value to set for the indicators property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIndicators(@jakarta.annotation.Nullable final java.util.List<IntelligenceProfileIndicator> value) {
         this.indicators = value;
     }
     /**
      * Sets the kind property value. The kind property
      * @param value Value to set for the kind property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKind(@jakarta.annotation.Nullable final IntelligenceProfileKind value) {
         this.kind = value;
     }
     /**
      * Sets the summary property value. The summary property
      * @param value Value to set for the summary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSummary(@jakarta.annotation.Nullable final FormattedContent value) {
         this.summary = value;
     }
     /**
      * Sets the targets property value. Known targets related to this intelligenceProfile.
      * @param value Value to set for the targets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargets(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.targets = value;
     }
     /**
      * Sets the title property value. The title of this intelligenceProfile.
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
     /**
      * Sets the tradecraft property value. Formatted information featuring a description of the distinctive tactics, techniques, and procedures (TTP) of the group, followed by a list of all known custom, commodity, and publicly available implants used by the group.
      * @param value Value to set for the tradecraft property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTradecraft(@jakarta.annotation.Nullable final FormattedContent value) {
         this.tradecraft = value;
     }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values of a property
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Enablement implements ValuedEnum {
     /** Device default value, no intent. */
     NotConfigured("notConfigured"),

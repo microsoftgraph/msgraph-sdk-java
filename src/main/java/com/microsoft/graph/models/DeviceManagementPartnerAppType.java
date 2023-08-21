@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Partner App Type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementPartnerAppType implements ValuedEnum {
     /** Partner App type is unknown. */
     Unknown("unknown"),

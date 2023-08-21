@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SearchRequest implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -78,9 +79,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     private java.util.List<SortProperty> sortProperties;
     /**
      * Instantiates a new searchRequest and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SearchRequest() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -258,9 +257,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("aggregationFilters", this.getAggregationFilters());
@@ -284,153 +281,119 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the aggregationFilters property value. Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
      * @param value Value to set for the aggregationFilters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAggregationFilters(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.aggregationFilters = value;
     }
     /**
      * Sets the aggregations property value. Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
      * @param value Value to set for the aggregations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAggregations(@jakarta.annotation.Nullable final java.util.List<AggregationOption> value) {
         this.aggregations = value;
     }
     /**
      * Sets the collapseProperties property value. Contains the ordered collection of fields and limit to collapse results. Optional.
      * @param value Value to set for the collapseProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCollapseProperties(@jakarta.annotation.Nullable final java.util.List<CollapseProperty> value) {
         this.collapseProperties = value;
     }
     /**
      * Sets the contentSources property value. Contains the connection to be targeted.
      * @param value Value to set for the contentSources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentSources(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.contentSources = value;
     }
     /**
      * Sets the enableTopResults property value. This triggers hybrid sort for messages : the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional.
      * @param value Value to set for the enableTopResults property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnableTopResults(@jakarta.annotation.Nullable final Boolean value) {
         this.enableTopResults = value;
     }
     /**
      * Sets the entityTypes property value. One or more types of resources expected in the response. Possible values are: event, message, driveItem, externalItem, site, list, listItem, drive, chatMessage, person, acronym, bookmark.  Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum:chatMessage, person, acronym, bookmark. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
      * @param value Value to set for the entityTypes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEntityTypes(@jakarta.annotation.Nullable final java.util.List<EntityType> value) {
         this.entityTypes = value;
     }
     /**
      * Sets the fields property value. Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default; otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from the content that Microsoft Graph connectors bring in. The fields property can use the semantic labels applied to properties. For example, if a property is labeled as title, you can retrieve it using the following syntax: label_title. Optional.
      * @param value Value to set for the fields property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFields(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.fields = value;
     }
     /**
      * Sets the from property value. Specifies the offset for the search results. Offset 0 returns the very first result. Optional.
      * @param value Value to set for the from property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFrom(@jakarta.annotation.Nullable final Integer value) {
         this.from = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the query property value. The query property
      * @param value Value to set for the query property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQuery(@jakarta.annotation.Nullable final SearchQuery value) {
         this.query = value;
     }
     /**
      * Sets the queryAlterationOptions property value. Query alteration options formatted in a JSON blob that contains two optional flags related to spelling correction. Optional.
      * @param value Value to set for the queryAlterationOptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQueryAlterationOptions(@jakarta.annotation.Nullable final SearchAlterationOptions value) {
         this.queryAlterationOptions = value;
     }
     /**
      * Sets the region property value. The geographic location for the search. Required for searches that use application permissions. For details, see Get the region value.
      * @param value Value to set for the region property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRegion(@jakarta.annotation.Nullable final String value) {
         this.region = value;
     }
     /**
      * Sets the resultTemplateOptions property value. Provides the search result template options to render search results from connectors.
      * @param value Value to set for the resultTemplateOptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResultTemplateOptions(@jakarta.annotation.Nullable final ResultTemplateOption value) {
         this.resultTemplateOptions = value;
     }
     /**
      * Sets the sharePointOneDriveOptions property value. Indicates the kind of contents to be searched when a search is performed using application permissions. Optional.
      * @param value Value to set for the sharePointOneDriveOptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharePointOneDriveOptions(@jakarta.annotation.Nullable final SharePointOneDriveOptions value) {
         this.sharePointOneDriveOptions = value;
     }
     /**
      * Sets the size property value. The size of the page to be retrieved. The maximum value is 500. Optional.
      * @param value Value to set for the size property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSize(@jakarta.annotation.Nullable final Integer value) {
         this.size = value;
     }
     /**
      * Sets the sortProperties property value. Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
      * @param value Value to set for the sortProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSortProperties(@jakarta.annotation.Nullable final java.util.List<SortProperty> value) {
         this.sortProperties = value;
     }

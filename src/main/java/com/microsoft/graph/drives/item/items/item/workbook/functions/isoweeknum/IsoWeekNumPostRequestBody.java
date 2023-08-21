@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IsoWeekNumPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -19,9 +20,7 @@ public class IsoWeekNumPostRequestBody implements AdditionalDataHolder, Parsable
     private Json date;
     /**
      * Instantiates a new isoWeekNumPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IsoWeekNumPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,9 +63,7 @@ public class IsoWeekNumPostRequestBody implements AdditionalDataHolder, Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("date", this.getDate());
@@ -75,18 +72,14 @@ public class IsoWeekNumPostRequestBody implements AdditionalDataHolder, Parsable
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the date property value. The date property
      * @param value Value to set for the date property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDate(@jakarta.annotation.Nullable final Json value) {
         this.date = value;
     }

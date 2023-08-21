@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -46,9 +47,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     private Long totalItemSize;
     /**
      * Instantiates a new subjectRightsRequestDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SubjectRightsRequestDetail() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -154,9 +153,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLongValue("excludedItemCount", this.getExcludedItemCount());
@@ -172,81 +169,63 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the excludedItemCount property value. Count of items that are excluded from the request.
      * @param value Value to set for the excludedItemCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExcludedItemCount(@jakarta.annotation.Nullable final Long value) {
         this.excludedItemCount = value;
     }
     /**
      * Sets the insightCounts property value. Count of items per insight.
      * @param value Value to set for the insightCounts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInsightCounts(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this.insightCounts = value;
     }
     /**
      * Sets the itemCount property value. Count of items found.
      * @param value Value to set for the itemCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setItemCount(@jakarta.annotation.Nullable final Long value) {
         this.itemCount = value;
     }
     /**
      * Sets the itemNeedReview property value. Count of item that need review.
      * @param value Value to set for the itemNeedReview property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setItemNeedReview(@jakarta.annotation.Nullable final Long value) {
         this.itemNeedReview = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the productItemCounts property value. Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.
      * @param value Value to set for the productItemCounts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProductItemCounts(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this.productItemCounts = value;
     }
     /**
      * Sets the signedOffItemCount property value. Count of items signed off by the administrator.
      * @param value Value to set for the signedOffItemCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSignedOffItemCount(@jakarta.annotation.Nullable final Long value) {
         this.signedOffItemCount = value;
     }
     /**
      * Sets the totalItemSize property value. Total item size in bytes.
      * @param value Value to set for the totalItemSize property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalItemSize(@jakarta.annotation.Nullable final Long value) {
         this.totalItemSize = value;
     }

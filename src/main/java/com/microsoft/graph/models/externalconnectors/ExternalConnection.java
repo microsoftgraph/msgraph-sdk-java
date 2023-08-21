@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalConnection extends Entity implements Parsable {
     /**
      * Collects configurable settings related to activities involving connector content.
@@ -50,9 +51,7 @@ public class ExternalConnection extends Entity implements Parsable {
     private ConnectionState state;
     /**
      * Instantiates a new externalConnection and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ExternalConnection() {
         super();
     }
@@ -168,9 +167,7 @@ public class ExternalConnection extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -187,90 +184,70 @@ public class ExternalConnection extends Entity implements Parsable {
     /**
      * Sets the activitySettings property value. Collects configurable settings related to activities involving connector content.
      * @param value Value to set for the activitySettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivitySettings(@jakarta.annotation.Nullable final ActivitySettings value) {
         this.activitySettings = value;
     }
     /**
      * Sets the configuration property value. Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
      * @param value Value to set for the configuration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConfiguration(@jakarta.annotation.Nullable final Configuration value) {
         this.configuration = value;
     }
     /**
      * Sets the description property value. Description of the connection displayed in the Microsoft 365 admin center. Optional.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the groups property value. The groups property
      * @param value Value to set for the groups property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroups(@jakarta.annotation.Nullable final java.util.List<ExternalGroup> value) {
         this.groups = value;
     }
     /**
      * Sets the items property value. The items property
      * @param value Value to set for the items property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setItems(@jakarta.annotation.Nullable final java.util.List<ExternalItem> value) {
         this.items = value;
     }
     /**
      * Sets the name property value. The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the operations property value. The operations property
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<ConnectionOperation> value) {
         this.operations = value;
     }
     /**
      * Sets the schema property value. The schema property
      * @param value Value to set for the schema property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSchema(@jakarta.annotation.Nullable final Schema value) {
         this.schema = value;
     }
     /**
      * Sets the searchSettings property value. The settings configuring the search experience for content in this connection, such as the display templates for search results.
      * @param value Value to set for the searchSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSearchSettings(@jakarta.annotation.Nullable final SearchSettings value) {
         this.searchSettings = value;
     }
     /**
      * Sets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final ConnectionState value) {
         this.state = value;
     }

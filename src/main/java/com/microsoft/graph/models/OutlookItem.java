@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class OutlookItem extends Entity implements Parsable {
     /**
      * The categories associated with the item
@@ -26,9 +27,7 @@ public class OutlookItem extends Entity implements Parsable {
     private OffsetDateTime lastModifiedDateTime;
     /**
      * Instantiates a new outlookItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OutlookItem() {
         super();
     }
@@ -104,9 +103,7 @@ public class OutlookItem extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,36 +115,28 @@ public class OutlookItem extends Entity implements Parsable {
     /**
      * Sets the categories property value. The categories associated with the item
      * @param value Value to set for the categories property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.categories = value;
     }
     /**
      * Sets the changeKey property value. Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
      * @param value Value to set for the changeKey property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChangeKey(@jakarta.annotation.Nullable final String value) {
         this.changeKey = value;
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }

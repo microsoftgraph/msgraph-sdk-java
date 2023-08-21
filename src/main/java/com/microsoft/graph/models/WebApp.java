@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Contains properties and inherited properties for web apps.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WebApp extends MobileApp implements Parsable {
     /**
      * The web app URL. This property cannot be PATCHed.
@@ -20,9 +21,7 @@ public class WebApp extends MobileApp implements Parsable {
     private Boolean useManagedBrowser;
     /**
      * Instantiates a new webApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WebApp() {
         super();
         this.setOdataType("#microsoft.graph.webApp");
@@ -67,9 +66,7 @@ public class WebApp extends MobileApp implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -79,18 +76,14 @@ public class WebApp extends MobileApp implements Parsable {
     /**
      * Sets the appUrl property value. The web app URL. This property cannot be PATCHed.
      * @param value Value to set for the appUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppUrl(@jakarta.annotation.Nullable final String value) {
         this.appUrl = value;
     }
     /**
      * Sets the useManagedBrowser property value. Whether or not to use managed browser. This property is only applicable for Android and IOS.
      * @param value Value to set for the useManagedBrowser property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUseManagedBrowser(@jakarta.annotation.Nullable final Boolean value) {
         this.useManagedBrowser = value;
     }

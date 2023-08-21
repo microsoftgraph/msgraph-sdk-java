@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RecentNotebook implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -35,9 +36,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
     private OnenoteSourceService sourceService;
     /**
      * Instantiates a new recentNotebook and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RecentNotebook() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -116,9 +115,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -131,54 +128,42 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the displayName property value. The name of the notebook.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lastAccessedTime property value. The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the lastAccessedTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastAccessedTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastAccessedTime = value;
     }
     /**
      * Sets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
      * @param value Value to set for the links property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLinks(@jakarta.annotation.Nullable final RecentNotebookLinks value) {
         this.links = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the sourceService property value. The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive.
      * @param value Value to set for the sourceService property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceService(@jakarta.annotation.Nullable final OnenoteSourceService value) {
         this.sourceService = value;
     }

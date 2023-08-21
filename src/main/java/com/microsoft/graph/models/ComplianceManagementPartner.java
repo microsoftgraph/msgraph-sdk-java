@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Compliance management partner for all platforms
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ComplianceManagementPartner extends Entity implements Parsable {
     /**
      * User groups which enroll Android devices through partner.
@@ -49,9 +50,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     private DeviceManagementPartnerTenantState partnerState;
     /**
      * Instantiates a new complianceManagementPartner and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ComplianceManagementPartner() {
         super();
     }
@@ -158,9 +157,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -177,81 +174,63 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     /**
      * Sets the androidEnrollmentAssignments property value. User groups which enroll Android devices through partner.
      * @param value Value to set for the androidEnrollmentAssignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAndroidEnrollmentAssignments(@jakarta.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
         this.androidEnrollmentAssignments = value;
     }
     /**
      * Sets the androidOnboarded property value. Partner onboarded for Android devices.
      * @param value Value to set for the androidOnboarded property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAndroidOnboarded(@jakarta.annotation.Nullable final Boolean value) {
         this.androidOnboarded = value;
     }
     /**
      * Sets the displayName property value. Partner display name
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the iosEnrollmentAssignments property value. User groups which enroll ios devices through partner.
      * @param value Value to set for the iosEnrollmentAssignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIosEnrollmentAssignments(@jakarta.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
         this.iosEnrollmentAssignments = value;
     }
     /**
      * Sets the iosOnboarded property value. Partner onboarded for ios devices.
      * @param value Value to set for the iosOnboarded property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIosOnboarded(@jakarta.annotation.Nullable final Boolean value) {
         this.iosOnboarded = value;
     }
     /**
      * Sets the lastHeartbeatDateTime property value. Timestamp of last heartbeat after admin onboarded to the compliance management partner
      * @param value Value to set for the lastHeartbeatDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastHeartbeatDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastHeartbeatDateTime = value;
     }
     /**
      * Sets the macOsEnrollmentAssignments property value. User groups which enroll Mac devices through partner.
      * @param value Value to set for the macOsEnrollmentAssignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMacOsEnrollmentAssignments(@jakarta.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
         this.macOsEnrollmentAssignments = value;
     }
     /**
      * Sets the macOsOnboarded property value. Partner onboarded for Mac devices.
      * @param value Value to set for the macOsOnboarded property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMacOsOnboarded(@jakarta.annotation.Nullable final Boolean value) {
         this.macOsOnboarded = value;
     }
     /**
      * Sets the partnerState property value. Partner state of this tenant.
      * @param value Value to set for the partnerState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPartnerState(@jakarta.annotation.Nullable final DeviceManagementPartnerTenantState value) {
         this.partnerState = value;
     }

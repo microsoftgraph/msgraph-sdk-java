@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class OrgContact extends DirectoryObject implements Parsable {
     /**
      * Postal addresses for this organizational contact. For now a contact can only have one physical address.
@@ -82,9 +83,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     private java.util.List<DirectoryObject> transitiveMemberOf;
     /**
      * Instantiates a new orgContact and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OrgContact() {
         super();
         this.setOdataType("#microsoft.graph.orgContact");
@@ -273,9 +272,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -301,162 +298,126 @@ public class OrgContact extends DirectoryObject implements Parsable {
     /**
      * Sets the addresses property value. Postal addresses for this organizational contact. For now a contact can only have one physical address.
      * @param value Value to set for the addresses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAddresses(@jakarta.annotation.Nullable final java.util.List<PhysicalOfficeAddress> value) {
         this.addresses = value;
     }
     /**
      * Sets the companyName property value. Name of the company that this organizational contact belongs to.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @param value Value to set for the companyName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompanyName(@jakarta.annotation.Nullable final String value) {
         this.companyName = value;
     }
     /**
      * Sets the department property value. The name for the department in which the contact works.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @param value Value to set for the department property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDepartment(@jakarta.annotation.Nullable final String value) {
         this.department = value;
     }
     /**
      * Sets the directReports property value. The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
      * @param value Value to set for the directReports property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDirectReports(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.directReports = value;
     }
     /**
      * Sets the displayName property value. Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderBy.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the givenName property value. First name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @param value Value to set for the givenName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGivenName(@jakarta.annotation.Nullable final String value) {
         this.givenName = value;
     }
     /**
      * Sets the jobTitle property value. Job title for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @param value Value to set for the jobTitle property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setJobTitle(@jakarta.annotation.Nullable final String value) {
         this.jobTitle = value;
     }
     /**
      * Sets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @param value Value to set for the mail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMail(@jakarta.annotation.Nullable final String value) {
         this.mail = value;
     }
     /**
      * Sets the mailNickname property value. Email alias (portion of email address pre-pending the @ symbol) for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @param value Value to set for the mailNickname property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMailNickname(@jakarta.annotation.Nullable final String value) {
         this.mailNickname = value;
     }
     /**
      * Sets the manager property value. The user or contact that is this contact's manager. Read-only. Supports $expand and $filter (eq) by id.
      * @param value Value to set for the manager property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManager(@jakarta.annotation.Nullable final DirectoryObject value) {
         this.manager = value;
     }
     /**
      * Sets the memberOf property value. Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the memberOf property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMemberOf(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.memberOf = value;
     }
     /**
      * Sets the onPremisesLastSyncDateTime property value. Date and time when this organizational contact was last synchronized from on-premises AD. This date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, not, ge, le, in).
      * @param value Value to set for the onPremisesLastSyncDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnPremisesLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.onPremisesLastSyncDateTime = value;
     }
     /**
      * Sets the onPremisesProvisioningErrors property value. List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not for category and propertyCausingError), /$count eq 0, /$count ne 0.
      * @param value Value to set for the onPremisesProvisioningErrors property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnPremisesProvisioningErrors(@jakarta.annotation.Nullable final java.util.List<OnPremisesProvisioningError> value) {
         this.onPremisesProvisioningErrors = value;
     }
     /**
      * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).   Supports $filter (eq, ne, not, in, and eq for null values).
      * @param value Value to set for the onPremisesSyncEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnPremisesSyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.onPremisesSyncEnabled = value;
     }
     /**
      * Sets the phones property value. List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection.
      * @param value Value to set for the phones property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPhones(@jakarta.annotation.Nullable final java.util.List<Phone> value) {
         this.phones = value;
     }
     /**
      * Sets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0).
      * @param value Value to set for the proxyAddresses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProxyAddresses(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.proxyAddresses = value;
     }
     /**
      * Sets the surname property value. Last name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @param value Value to set for the surname property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSurname(@jakarta.annotation.Nullable final String value) {
         this.surname = value;
     }
     /**
      * Sets the transitiveMemberOf property value. Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
      * @param value Value to set for the transitiveMemberOf property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTransitiveMemberOf(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.transitiveMemberOf = value;
     }

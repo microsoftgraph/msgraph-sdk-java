@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values of required passwords.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RequiredPasswordType implements ValuedEnum {
     /** Device default value, no intent. */
     DeviceDefault("deviceDefault"),

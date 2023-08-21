@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for monitoring file activity.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DefenderMonitorFileActivity implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Movies rating labels in United Kingdom
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RatingUnitedKingdomMoviesType implements ValuedEnum {
     /** Default value, allow all movies content */
     AllAllowed("allAllowed"),

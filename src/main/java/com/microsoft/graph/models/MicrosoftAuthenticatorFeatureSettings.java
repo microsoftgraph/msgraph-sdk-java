@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
     private String odataType;
     /**
      * Instantiates a new microsoftAuthenticatorFeatureSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MicrosoftAuthenticatorFeatureSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("displayAppInformationRequiredState", this.getDisplayAppInformationRequiredState());
@@ -102,36 +99,28 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the displayAppInformationRequiredState property value. Determines whether the user's Authenticator app will show them the client app they are signing into.
      * @param value Value to set for the displayAppInformationRequiredState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayAppInformationRequiredState(@jakarta.annotation.Nullable final AuthenticationMethodFeatureConfiguration value) {
         this.displayAppInformationRequiredState = value;
     }
     /**
      * Sets the displayLocationInformationRequiredState property value. Determines whether the user's Authenticator app will show them the geographic location of where the authentication request originated from.
      * @param value Value to set for the displayLocationInformationRequiredState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayLocationInformationRequiredState(@jakarta.annotation.Nullable final AuthenticationMethodFeatureConfiguration value) {
         this.displayLocationInformationRequiredState = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

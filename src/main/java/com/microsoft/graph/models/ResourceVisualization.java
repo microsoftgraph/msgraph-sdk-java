@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -50,9 +51,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     private String type;
     /**
      * Instantiates a new resourceVisualization and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ResourceVisualization() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -167,9 +166,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("containerDisplayName", this.getContainerDisplayName());
@@ -186,90 +183,70 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the containerDisplayName property value. A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
      * @param value Value to set for the containerDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContainerDisplayName(@jakarta.annotation.Nullable final String value) {
         this.containerDisplayName = value;
     }
     /**
      * Sets the containerType property value. Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
      * @param value Value to set for the containerType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContainerType(@jakarta.annotation.Nullable final String value) {
         this.containerType = value;
     }
     /**
      * Sets the containerWebUrl property value. A path leading to the folder in which the item is stored.
      * @param value Value to set for the containerWebUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContainerWebUrl(@jakarta.annotation.Nullable final String value) {
         this.containerWebUrl = value;
     }
     /**
      * Sets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
      * @param value Value to set for the mediaType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMediaType(@jakarta.annotation.Nullable final String value) {
         this.mediaType = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the previewImageUrl property value. A URL leading to the preview image for the item.
      * @param value Value to set for the previewImageUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPreviewImageUrl(@jakarta.annotation.Nullable final String value) {
         this.previewImageUrl = value;
     }
     /**
      * Sets the previewText property value. A preview text for the item.
      * @param value Value to set for the previewText property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPreviewText(@jakarta.annotation.Nullable final String value) {
         this.previewText = value;
     }
     /**
      * Sets the title property value. The item's title text.
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
     /**
      * Sets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }

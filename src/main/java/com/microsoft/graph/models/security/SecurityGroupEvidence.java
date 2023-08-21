@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
     /**
      * The name of the security group.
@@ -17,9 +18,7 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
     private String securityGroupId;
     /**
      * Instantiates a new securityGroupEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SecurityGroupEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.securityGroupEvidence");
@@ -64,9 +63,7 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the displayName property value. The name of the security group.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the securityGroupId property value. Unique identifier of the security group.
      * @param value Value to set for the securityGroupId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecurityGroupId(@jakarta.annotation.Nullable final String value) {
         this.securityGroupId = value;
     }

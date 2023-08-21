@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Apps rating as in media content
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RatingAppsType implements ValuedEnum {
     /** Default value, allow all apps content */
     AllAllowed("allAllowed"),

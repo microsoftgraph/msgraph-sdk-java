@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum BrowserSiteMergeType implements ValuedEnum {
     /** No merge type */
     NoMerge("noMerge"),

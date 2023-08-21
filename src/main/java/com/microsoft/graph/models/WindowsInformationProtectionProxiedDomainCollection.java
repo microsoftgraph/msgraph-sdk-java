@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Windows Information Protection Proxied Domain Collection
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtectionProxiedDomainCollection implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -29,9 +30,7 @@ public class WindowsInformationProtectionProxiedDomainCollection implements Addi
     private java.util.List<ProxiedDomain> proxiedDomains;
     /**
      * Instantiates a new windowsInformationProtectionProxiedDomainCollection and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsInformationProtectionProxiedDomainCollection() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -92,9 +91,7 @@ public class WindowsInformationProtectionProxiedDomainCollection implements Addi
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -105,36 +102,28 @@ public class WindowsInformationProtectionProxiedDomainCollection implements Addi
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the displayName property value. Display name
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the proxiedDomains property value. Collection of proxied domains
      * @param value Value to set for the proxiedDomains property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProxiedDomains(@jakarta.annotation.Nullable final java.util.List<ProxiedDomain> value) {
         this.proxiedDomains = value;
     }

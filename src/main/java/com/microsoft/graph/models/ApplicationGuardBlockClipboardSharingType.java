@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for applicationGuardBlockClipboardSharingType
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ApplicationGuardBlockClipboardSharingType implements ValuedEnum {
     /** Not Configured */
     NotConfigured("notConfigured"),

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Storage locations where managed apps can potentially store their data
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedAppDataStorageLocation implements ValuedEnum {
     /** OneDrive for business */
     OneDriveForBusiness("oneDriveForBusiness"),

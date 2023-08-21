@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RiskyUser extends Entity implements Parsable {
     /**
      * The activity related to user risk level change
@@ -46,9 +47,7 @@ public class RiskyUser extends Entity implements Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new riskyUser and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RiskyUser() {
         super();
     }
@@ -162,9 +161,7 @@ public class RiskyUser extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -181,81 +178,63 @@ public class RiskyUser extends Entity implements Parsable {
     /**
      * Sets the history property value. The activity related to user risk level change
      * @param value Value to set for the history property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHistory(@jakarta.annotation.Nullable final java.util.List<RiskyUserHistoryItem> value) {
         this.history = value;
     }
     /**
      * Sets the isDeleted property value. Indicates whether the user is deleted. Possible values are: true, false.
      * @param value Value to set for the isDeleted property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsDeleted(@jakarta.annotation.Nullable final Boolean value) {
         this.isDeleted = value;
     }
     /**
      * Sets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend.
      * @param value Value to set for the isProcessing property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsProcessing(@jakarta.annotation.Nullable final Boolean value) {
         this.isProcessing = value;
     }
     /**
      * Sets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      * @param value Value to set for the riskDetail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
         this.riskDetail = value;
     }
     /**
      * Sets the riskLastUpdatedDateTime property value. The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the riskLastUpdatedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.riskLastUpdatedDateTime = value;
     }
     /**
      * Sets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
      * @param value Value to set for the riskLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {
         this.riskLevel = value;
     }
     /**
      * Sets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @param value Value to set for the riskState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {
         this.riskState = value;
     }
     /**
      * Sets the userDisplayName property value. Risky user display name.
      * @param value Value to set for the userDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
      * Sets the userPrincipalName property value. Risky user principal name.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }

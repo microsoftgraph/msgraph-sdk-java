@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for welcome screen meeting information.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WelcomeScreenMeetingInformation implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),

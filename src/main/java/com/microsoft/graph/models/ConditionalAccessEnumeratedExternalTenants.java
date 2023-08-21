@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessEnumeratedExternalTenants extends ConditionalAccessExternalTenants implements Parsable {
     /**
      * A collection of tenant IDs that define the scope of a policy targeting conditional access for guests and external users.
@@ -13,9 +14,7 @@ public class ConditionalAccessEnumeratedExternalTenants extends ConditionalAcces
     private java.util.List<String> members;
     /**
      * Instantiates a new conditionalAccessEnumeratedExternalTenants and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConditionalAccessEnumeratedExternalTenants() {
         super();
         this.setOdataType("#microsoft.graph.conditionalAccessEnumeratedExternalTenants");
@@ -51,9 +50,7 @@ public class ConditionalAccessEnumeratedExternalTenants extends ConditionalAcces
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +59,7 @@ public class ConditionalAccessEnumeratedExternalTenants extends ConditionalAcces
     /**
      * Sets the members property value. A collection of tenant IDs that define the scope of a policy targeting conditional access for guests and external users.
      * @param value Value to set for the members property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.members = value;
     }

@@ -10,6 +10,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CaseOperation extends Entity implements Parsable {
     /**
      * The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
@@ -41,9 +42,7 @@ public class CaseOperation extends Entity implements Parsable {
     private CaseOperationStatus status;
     /**
      * Instantiates a new caseOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CaseOperation() {
         super();
     }
@@ -145,9 +144,7 @@ public class CaseOperation extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -162,63 +159,49 @@ public class CaseOperation extends Entity implements Parsable {
     /**
      * Sets the action property value. The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
      * @param value Value to set for the action property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAction(@jakarta.annotation.Nullable final CaseAction value) {
         this.action = value;
     }
     /**
      * Sets the completedDateTime property value. The date and time the operation was completed.
      * @param value Value to set for the completedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completedDateTime = value;
     }
     /**
      * Sets the createdBy property value. The user that created the operation.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time the operation was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the percentProgress property value. The progress of the operation.
      * @param value Value to set for the percentProgress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPercentProgress(@jakarta.annotation.Nullable final Integer value) {
         this.percentProgress = value;
     }
     /**
      * Sets the resultInfo property value. Contains success and failure-specific result information.
      * @param value Value to set for the resultInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResultInfo(@jakarta.annotation.Nullable final ResultInfo value) {
         this.resultInfo = value;
     }
     /**
      * Sets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final CaseOperationStatus value) {
         this.status = value;
     }

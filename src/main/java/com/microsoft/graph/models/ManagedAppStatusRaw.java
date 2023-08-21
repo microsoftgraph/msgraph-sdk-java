@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Represents an un-typed status report about organizations app protection and configuration.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
     /**
      * Status report content.
@@ -16,9 +17,7 @@ public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
     private Json content;
     /**
      * Instantiates a new managedAppStatusRaw and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ManagedAppStatusRaw() {
         super();
         this.setOdataType("#microsoft.graph.managedAppStatusRaw");
@@ -54,9 +53,7 @@ public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -65,9 +62,7 @@ public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
     /**
      * Sets the content property value. Status report content.
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContent(@jakarta.annotation.Nullable final Json value) {
         this.content = value;
     }

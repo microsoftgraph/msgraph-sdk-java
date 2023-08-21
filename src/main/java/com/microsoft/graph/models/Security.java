@@ -12,6 +12,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Security extends Entity implements Parsable {
     /**
      * The alerts property
@@ -55,9 +56,7 @@ public class Security extends Entity implements Parsable {
     private TriggerTypesRoot triggerTypes;
     /**
      * Instantiates a new security and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Security() {
         super();
     }
@@ -173,9 +172,7 @@ public class Security extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -193,90 +190,70 @@ public class Security extends Entity implements Parsable {
     /**
      * Sets the alerts property value. The alerts property
      * @param value Value to set for the alerts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlerts(@jakarta.annotation.Nullable final java.util.List<Alert> value) {
         this.alerts = value;
     }
     /**
      * Sets the alerts_v2 property value. A collection of alerts in Microsoft 365 Defender.
      * @param value Value to set for the alerts_v2 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlertsV2(@jakarta.annotation.Nullable final java.util.List<Alert> value) {
         this.alertsV2 = value;
     }
     /**
      * Sets the attackSimulation property value. The attackSimulation property
      * @param value Value to set for the attackSimulation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttackSimulation(@jakarta.annotation.Nullable final AttackSimulationRoot value) {
         this.attackSimulation = value;
     }
     /**
      * Sets the cases property value. The cases property
      * @param value Value to set for the cases property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCases(@jakarta.annotation.Nullable final CasesRoot value) {
         this.cases = value;
     }
     /**
      * Sets the incidents property value. A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
      * @param value Value to set for the incidents property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncidents(@jakarta.annotation.Nullable final java.util.List<Incident> value) {
         this.incidents = value;
     }
     /**
      * Sets the secureScoreControlProfiles property value. The secureScoreControlProfiles property
      * @param value Value to set for the secureScoreControlProfiles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecureScoreControlProfiles(@jakarta.annotation.Nullable final java.util.List<SecureScoreControlProfile> value) {
         this.secureScoreControlProfiles = value;
     }
     /**
      * Sets the secureScores property value. The secureScores property
      * @param value Value to set for the secureScores property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecureScores(@jakarta.annotation.Nullable final java.util.List<SecureScore> value) {
         this.secureScores = value;
     }
     /**
      * Sets the threatIntelligence property value. The threatIntelligence property
      * @param value Value to set for the threatIntelligence property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setThreatIntelligence(@jakarta.annotation.Nullable final ThreatIntelligence value) {
         this.threatIntelligence = value;
     }
     /**
      * Sets the triggers property value. The triggers property
      * @param value Value to set for the triggers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTriggers(@jakarta.annotation.Nullable final TriggersRoot value) {
         this.triggers = value;
     }
     /**
      * Sets the triggerTypes property value. The triggerTypes property
      * @param value Value to set for the triggerTypes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTriggerTypes(@jakarta.annotation.Nullable final TriggerTypesRoot value) {
         this.triggerTypes = value;
     }

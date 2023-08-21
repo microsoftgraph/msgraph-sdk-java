@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
      * Roles for the coversation member user.
@@ -21,9 +22,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
     private IdentitySet initiator;
     /**
      * Instantiates a new conversationMemberRoleUpdatedEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConversationMemberRoleUpdatedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.conversationMemberRoleUpdatedEventMessageDetail");
@@ -77,9 +76,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
     /**
      * Sets the conversationMemberRoles property value. Roles for the coversation member user.
      * @param value Value to set for the conversationMemberRoles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConversationMemberRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.conversationMemberRoles = value;
     }
     /**
      * Sets the conversationMemberUser property value. Identity of the conversation member user.
      * @param value Value to set for the conversationMemberUser property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConversationMemberUser(@jakarta.annotation.Nullable final TeamworkUserIdentity value) {
         this.conversationMemberUser = value;
     }
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }

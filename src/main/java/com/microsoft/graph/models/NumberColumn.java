@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class NumberColumn implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new numberColumn and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public NumberColumn() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("decimalPlaces", this.getDecimalPlaces());
@@ -130,54 +127,42 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the decimalPlaces property value. How many decimal places to display. See below for information about the possible values.
      * @param value Value to set for the decimalPlaces property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDecimalPlaces(@jakarta.annotation.Nullable final String value) {
         this.decimalPlaces = value;
     }
     /**
      * Sets the displayAs property value. How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
      * @param value Value to set for the displayAs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayAs(@jakarta.annotation.Nullable final String value) {
         this.displayAs = value;
     }
     /**
      * Sets the maximum property value. The maximum permitted value.
      * @param value Value to set for the maximum property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaximum(@jakarta.annotation.Nullable final Double value) {
         this.maximum = value;
     }
     /**
      * Sets the minimum property value. The minimum permitted value.
      * @param value Value to set for the minimum property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimum(@jakarta.annotation.Nullable final Double value) {
         this.minimum = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Contact extends OutlookItem implements Parsable {
     /**
      * The name of the contact's assistant.
@@ -158,9 +159,7 @@ public class Contact extends OutlookItem implements Parsable {
     private String yomiSurname;
     /**
      * Instantiates a new contact and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Contact() {
         super();
         this.setOdataType("#microsoft.graph.contact");
@@ -520,9 +519,7 @@ public class Contact extends OutlookItem implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -567,333 +564,259 @@ public class Contact extends OutlookItem implements Parsable {
     /**
      * Sets the assistantName property value. The name of the contact's assistant.
      * @param value Value to set for the assistantName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssistantName(@jakarta.annotation.Nullable final String value) {
         this.assistantName = value;
     }
     /**
      * Sets the birthday property value. The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the birthday property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBirthday(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.birthday = value;
     }
     /**
      * Sets the businessAddress property value. The contact's business address.
      * @param value Value to set for the businessAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBusinessAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.businessAddress = value;
     }
     /**
      * Sets the businessHomePage property value. The business home page of the contact.
      * @param value Value to set for the businessHomePage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBusinessHomePage(@jakarta.annotation.Nullable final String value) {
         this.businessHomePage = value;
     }
     /**
      * Sets the businessPhones property value. The contact's business phone numbers.
      * @param value Value to set for the businessPhones property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBusinessPhones(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.businessPhones = value;
     }
     /**
      * Sets the children property value. The names of the contact's children.
      * @param value Value to set for the children property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChildren(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.children = value;
     }
     /**
      * Sets the companyName property value. The name of the contact's company.
      * @param value Value to set for the companyName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompanyName(@jakarta.annotation.Nullable final String value) {
         this.companyName = value;
     }
     /**
      * Sets the department property value. The contact's department.
      * @param value Value to set for the department property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDepartment(@jakarta.annotation.Nullable final String value) {
         this.department = value;
     }
     /**
      * Sets the displayName property value. The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the emailAddresses property value. The contact's email addresses.
      * @param value Value to set for the emailAddresses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmailAddresses(@jakarta.annotation.Nullable final java.util.List<EmailAddress> value) {
         this.emailAddresses = value;
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the contact. Read-only. Nullable.
      * @param value Value to set for the extensions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
         this.extensions = value;
     }
     /**
      * Sets the fileAs property value. The name the contact is filed under.
      * @param value Value to set for the fileAs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileAs(@jakarta.annotation.Nullable final String value) {
         this.fileAs = value;
     }
     /**
      * Sets the generation property value. The contact's generation.
      * @param value Value to set for the generation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGeneration(@jakarta.annotation.Nullable final String value) {
         this.generation = value;
     }
     /**
      * Sets the givenName property value. The contact's given name.
      * @param value Value to set for the givenName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGivenName(@jakarta.annotation.Nullable final String value) {
         this.givenName = value;
     }
     /**
      * Sets the homeAddress property value. The contact's home address.
      * @param value Value to set for the homeAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHomeAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.homeAddress = value;
     }
     /**
      * Sets the homePhones property value. The contact's home phone numbers.
      * @param value Value to set for the homePhones property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHomePhones(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.homePhones = value;
     }
     /**
      * Sets the imAddresses property value. The imAddresses property
      * @param value Value to set for the imAddresses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImAddresses(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.imAddresses = value;
     }
     /**
      * Sets the initials property value. The initials property
      * @param value Value to set for the initials property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitials(@jakarta.annotation.Nullable final String value) {
         this.initials = value;
     }
     /**
      * Sets the jobTitle property value. The jobTitle property
      * @param value Value to set for the jobTitle property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setJobTitle(@jakarta.annotation.Nullable final String value) {
         this.jobTitle = value;
     }
     /**
      * Sets the manager property value. The manager property
      * @param value Value to set for the manager property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManager(@jakarta.annotation.Nullable final String value) {
         this.manager = value;
     }
     /**
      * Sets the middleName property value. The middleName property
      * @param value Value to set for the middleName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMiddleName(@jakarta.annotation.Nullable final String value) {
         this.middleName = value;
     }
     /**
      * Sets the mobilePhone property value. The mobilePhone property
      * @param value Value to set for the mobilePhone property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMobilePhone(@jakarta.annotation.Nullable final String value) {
         this.mobilePhone = value;
     }
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the contact. Read-only. Nullable.
      * @param value Value to set for the multiValueExtendedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this.multiValueExtendedProperties = value;
     }
     /**
      * Sets the nickName property value. The nickName property
      * @param value Value to set for the nickName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNickName(@jakarta.annotation.Nullable final String value) {
         this.nickName = value;
     }
     /**
      * Sets the officeLocation property value. The officeLocation property
      * @param value Value to set for the officeLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOfficeLocation(@jakarta.annotation.Nullable final String value) {
         this.officeLocation = value;
     }
     /**
      * Sets the otherAddress property value. The otherAddress property
      * @param value Value to set for the otherAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOtherAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.otherAddress = value;
     }
     /**
      * Sets the parentFolderId property value. The parentFolderId property
      * @param value Value to set for the parentFolderId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentFolderId(@jakarta.annotation.Nullable final String value) {
         this.parentFolderId = value;
     }
     /**
      * Sets the personalNotes property value. The personalNotes property
      * @param value Value to set for the personalNotes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPersonalNotes(@jakarta.annotation.Nullable final String value) {
         this.personalNotes = value;
     }
     /**
      * Sets the photo property value. Optional contact picture. You can get or set a photo for a contact.
      * @param value Value to set for the photo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPhoto(@jakarta.annotation.Nullable final ProfilePhoto value) {
         this.photo = value;
     }
     /**
      * Sets the profession property value. The profession property
      * @param value Value to set for the profession property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProfession(@jakarta.annotation.Nullable final String value) {
         this.profession = value;
     }
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the contact. Read-only. Nullable.
      * @param value Value to set for the singleValueExtendedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this.singleValueExtendedProperties = value;
     }
     /**
      * Sets the spouseName property value. The spouseName property
      * @param value Value to set for the spouseName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSpouseName(@jakarta.annotation.Nullable final String value) {
         this.spouseName = value;
     }
     /**
      * Sets the surname property value. The surname property
      * @param value Value to set for the surname property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSurname(@jakarta.annotation.Nullable final String value) {
         this.surname = value;
     }
     /**
      * Sets the title property value. The title property
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
     /**
      * Sets the yomiCompanyName property value. The yomiCompanyName property
      * @param value Value to set for the yomiCompanyName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setYomiCompanyName(@jakarta.annotation.Nullable final String value) {
         this.yomiCompanyName = value;
     }
     /**
      * Sets the yomiGivenName property value. The yomiGivenName property
      * @param value Value to set for the yomiGivenName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setYomiGivenName(@jakarta.annotation.Nullable final String value) {
         this.yomiGivenName = value;
     }
     /**
      * Sets the yomiSurname property value. The yomiSurname property
      * @param value Value to set for the yomiSurname property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setYomiSurname(@jakarta.annotation.Nullable final String value) {
         this.yomiSurname = value;
     }

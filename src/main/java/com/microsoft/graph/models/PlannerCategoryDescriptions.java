@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -118,9 +119,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     private String odataType;
     /**
      * Instantiates a new plannerCategoryDescriptions and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PlannerCategoryDescriptions() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -388,9 +387,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("category1", this.getCategory1());
@@ -424,243 +421,189 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the category1 property value. The label associated with Category 1
      * @param value Value to set for the category1 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory1(@jakarta.annotation.Nullable final String value) {
         this.category1 = value;
     }
     /**
      * Sets the category10 property value. The label associated with Category 10
      * @param value Value to set for the category10 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory10(@jakarta.annotation.Nullable final String value) {
         this.category10 = value;
     }
     /**
      * Sets the category11 property value. The label associated with Category 11
      * @param value Value to set for the category11 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory11(@jakarta.annotation.Nullable final String value) {
         this.category11 = value;
     }
     /**
      * Sets the category12 property value. The label associated with Category 12
      * @param value Value to set for the category12 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory12(@jakarta.annotation.Nullable final String value) {
         this.category12 = value;
     }
     /**
      * Sets the category13 property value. The label associated with Category 13
      * @param value Value to set for the category13 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory13(@jakarta.annotation.Nullable final String value) {
         this.category13 = value;
     }
     /**
      * Sets the category14 property value. The label associated with Category 14
      * @param value Value to set for the category14 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory14(@jakarta.annotation.Nullable final String value) {
         this.category14 = value;
     }
     /**
      * Sets the category15 property value. The label associated with Category 15
      * @param value Value to set for the category15 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory15(@jakarta.annotation.Nullable final String value) {
         this.category15 = value;
     }
     /**
      * Sets the category16 property value. The label associated with Category 16
      * @param value Value to set for the category16 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory16(@jakarta.annotation.Nullable final String value) {
         this.category16 = value;
     }
     /**
      * Sets the category17 property value. The label associated with Category 17
      * @param value Value to set for the category17 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory17(@jakarta.annotation.Nullable final String value) {
         this.category17 = value;
     }
     /**
      * Sets the category18 property value. The label associated with Category 18
      * @param value Value to set for the category18 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory18(@jakarta.annotation.Nullable final String value) {
         this.category18 = value;
     }
     /**
      * Sets the category19 property value. The label associated with Category 19
      * @param value Value to set for the category19 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory19(@jakarta.annotation.Nullable final String value) {
         this.category19 = value;
     }
     /**
      * Sets the category2 property value. The label associated with Category 2
      * @param value Value to set for the category2 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory2(@jakarta.annotation.Nullable final String value) {
         this.category2 = value;
     }
     /**
      * Sets the category20 property value. The label associated with Category 20
      * @param value Value to set for the category20 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory20(@jakarta.annotation.Nullable final String value) {
         this.category20 = value;
     }
     /**
      * Sets the category21 property value. The label associated with Category 21
      * @param value Value to set for the category21 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory21(@jakarta.annotation.Nullable final String value) {
         this.category21 = value;
     }
     /**
      * Sets the category22 property value. The label associated with Category 22
      * @param value Value to set for the category22 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory22(@jakarta.annotation.Nullable final String value) {
         this.category22 = value;
     }
     /**
      * Sets the category23 property value. The label associated with Category 23
      * @param value Value to set for the category23 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory23(@jakarta.annotation.Nullable final String value) {
         this.category23 = value;
     }
     /**
      * Sets the category24 property value. The label associated with Category 24
      * @param value Value to set for the category24 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory24(@jakarta.annotation.Nullable final String value) {
         this.category24 = value;
     }
     /**
      * Sets the category25 property value. The label associated with Category 25
      * @param value Value to set for the category25 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory25(@jakarta.annotation.Nullable final String value) {
         this.category25 = value;
     }
     /**
      * Sets the category3 property value. The label associated with Category 3
      * @param value Value to set for the category3 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory3(@jakarta.annotation.Nullable final String value) {
         this.category3 = value;
     }
     /**
      * Sets the category4 property value. The label associated with Category 4
      * @param value Value to set for the category4 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory4(@jakarta.annotation.Nullable final String value) {
         this.category4 = value;
     }
     /**
      * Sets the category5 property value. The label associated with Category 5
      * @param value Value to set for the category5 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory5(@jakarta.annotation.Nullable final String value) {
         this.category5 = value;
     }
     /**
      * Sets the category6 property value. The label associated with Category 6
      * @param value Value to set for the category6 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory6(@jakarta.annotation.Nullable final String value) {
         this.category6 = value;
     }
     /**
      * Sets the category7 property value. The label associated with Category 7
      * @param value Value to set for the category7 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory7(@jakarta.annotation.Nullable final String value) {
         this.category7 = value;
     }
     /**
      * Sets the category8 property value. The label associated with Category 8
      * @param value Value to set for the category8 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory8(@jakarta.annotation.Nullable final String value) {
         this.category8 = value;
     }
     /**
      * Sets the category9 property value. The label associated with Category 9
      * @param value Value to set for the category9 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory9(@jakarta.annotation.Nullable final String value) {
         this.category9 = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

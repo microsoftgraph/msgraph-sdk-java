@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SimulationReport implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
     private java.util.List<UserSimulationDetails> simulationUsers;
     /**
      * Instantiates a new simulationReport and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SimulationReport() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -102,36 +99,28 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the overview property value. Overview of an attack simulation and training campaign.
      * @param value Value to set for the overview property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOverview(@jakarta.annotation.Nullable final SimulationReportOverview value) {
         this.overview = value;
     }
     /**
      * Sets the simulationUsers property value. The tenant users and their online actions in an attack simulation and training campaign.
      * @param value Value to set for the simulationUsers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSimulationUsers(@jakarta.annotation.Nullable final java.util.List<UserSimulationDetails> value) {
         this.simulationUsers = value;
     }

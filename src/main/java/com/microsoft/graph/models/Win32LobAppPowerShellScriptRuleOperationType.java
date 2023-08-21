@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Contains all supported Powershell Script output detection type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Win32LobAppPowerShellScriptRuleOperationType implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),

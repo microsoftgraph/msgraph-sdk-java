@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RecordOperation extends CommsOperation implements Parsable {
     /**
      * The access token required to retrieve the recording.
@@ -17,9 +18,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
     private String recordingLocation;
     /**
      * Instantiates a new recordOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RecordOperation() {
         super();
     }
@@ -63,9 +62,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class RecordOperation extends CommsOperation implements Parsable {
     /**
      * Sets the recordingAccessToken property value. The access token required to retrieve the recording.
      * @param value Value to set for the recordingAccessToken property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecordingAccessToken(@jakarta.annotation.Nullable final String value) {
         this.recordingAccessToken = value;
     }
     /**
      * Sets the recordingLocation property value. The location where the recording is located.
      * @param value Value to set for the recordingLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecordingLocation(@jakarta.annotation.Nullable final String value) {
         this.recordingLocation = value;
     }

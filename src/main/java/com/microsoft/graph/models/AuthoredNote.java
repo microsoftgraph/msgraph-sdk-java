@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthoredNote extends Entity implements Parsable {
     /**
      * Identity information about the note's author.
@@ -22,9 +23,7 @@ public class AuthoredNote extends Entity implements Parsable {
     private OffsetDateTime createdDateTime;
     /**
      * Instantiates a new authoredNote and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AuthoredNote() {
         super();
     }
@@ -77,9 +76,7 @@ public class AuthoredNote extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class AuthoredNote extends Entity implements Parsable {
     /**
      * Sets the author property value. Identity information about the note's author.
      * @param value Value to set for the author property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthor(@jakarta.annotation.Nullable final Identity value) {
         this.author = value;
     }
     /**
      * Sets the content property value. The content of the note.
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContent(@jakarta.annotation.Nullable final ItemBody value) {
         this.content = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }

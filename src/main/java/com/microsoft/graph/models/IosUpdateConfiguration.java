@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * IOS Update Configuration, allows you to configure time window within week to install iOS updates
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosUpdateConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Active Hours End (active hours mean the time window when updates install should not happen)
@@ -29,9 +30,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     private Integer utcTimeOffsetInMinutes;
     /**
      * Instantiates a new iosUpdateConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosUpdateConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosUpdateConfiguration");
@@ -94,9 +93,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -108,36 +105,28 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     /**
      * Sets the activeHoursEnd property value. Active Hours End (active hours mean the time window when updates install should not happen)
      * @param value Value to set for the activeHoursEnd property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActiveHoursEnd(@jakarta.annotation.Nullable final LocalTime value) {
         this.activeHoursEnd = value;
     }
     /**
      * Sets the activeHoursStart property value. Active Hours Start (active hours mean the time window when updates install should not happen)
      * @param value Value to set for the activeHoursStart property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActiveHoursStart(@jakarta.annotation.Nullable final LocalTime value) {
         this.activeHoursStart = value;
     }
     /**
      * Sets the scheduledInstallDays property value. Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
      * @param value Value to set for the scheduledInstallDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScheduledInstallDays(@jakarta.annotation.Nullable final java.util.List<DayOfWeek> value) {
         this.scheduledInstallDays = value;
     }
     /**
      * Sets the utcTimeOffsetInMinutes property value. UTC Time Offset indicated in minutes
      * @param value Value to set for the utcTimeOffsetInMinutes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUtcTimeOffsetInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.utcTimeOffsetInMinutes = value;
     }

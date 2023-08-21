@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureResourceEvidence extends AlertEvidence implements Parsable {
     /**
      * The unique identifier for the Azure resource.
@@ -21,9 +22,7 @@ public class AzureResourceEvidence extends AlertEvidence implements Parsable {
     private String resourceType;
     /**
      * Instantiates a new azureResourceEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AzureResourceEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.azureResourceEvidence");
@@ -77,9 +76,7 @@ public class AzureResourceEvidence extends AlertEvidence implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class AzureResourceEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the resourceId property value. The unique identifier for the Azure resource.
      * @param value Value to set for the resourceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.resourceId = value;
     }
     /**
      * Sets the resourceName property value. The name of the resource.
      * @param value Value to set for the resourceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceName(@jakarta.annotation.Nullable final String value) {
         this.resourceName = value;
     }
     /**
      * Sets the resourceType property value. The type of the resource.
      * @param value Value to set for the resourceType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceType(@jakarta.annotation.Nullable final String value) {
         this.resourceType = value;
     }

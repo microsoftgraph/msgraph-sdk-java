@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Bitlocker extends Entity implements Parsable {
     /**
      * The recovery keys associated with the bitlocker entity.
@@ -13,9 +14,7 @@ public class Bitlocker extends Entity implements Parsable {
     private java.util.List<BitlockerRecoveryKey> recoveryKeys;
     /**
      * Instantiates a new bitlocker and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Bitlocker() {
         super();
     }
@@ -50,9 +49,7 @@ public class Bitlocker extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +58,7 @@ public class Bitlocker extends Entity implements Parsable {
     /**
      * Sets the recoveryKeys property value. The recovery keys associated with the bitlocker entity.
      * @param value Value to set for the recoveryKeys property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecoveryKeys(@jakarta.annotation.Nullable final java.util.List<BitlockerRecoveryKey> value) {
         this.recoveryKeys = value;
     }

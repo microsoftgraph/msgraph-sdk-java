@@ -6,12 +6,11 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationAssignmentGroupRecipient extends EducationAssignmentRecipient implements Parsable {
     /**
      * Instantiates a new educationAssignmentGroupRecipient and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationAssignmentGroupRecipient() {
         super();
         this.setOdataType("#microsoft.graph.educationAssignmentGroupRecipient");
@@ -38,9 +37,7 @@ public class EducationAssignmentGroupRecipient extends EducationAssignmentRecipi
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

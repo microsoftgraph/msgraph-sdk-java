@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkflowTemplate extends Entity implements Parsable {
     /**
      * The category property
@@ -30,9 +31,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
     private java.util.List<Task> tasks;
     /**
      * Instantiates a new workflowTemplate and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkflowTemplate() {
         super();
     }
@@ -103,9 +102,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,45 +115,35 @@ public class WorkflowTemplate extends Entity implements Parsable {
     /**
      * Sets the category property value. The category property
      * @param value Value to set for the category property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory(@jakarta.annotation.Nullable final LifecycleWorkflowCategory value) {
         this.category = value;
     }
     /**
      * Sets the description property value. The description of the workflowTemplate.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of the workflowTemplate.Supports $filter(eq, ne) and $orderby.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the executionConditions property value. Conditions describing when to execute the workflow and the criteria to identify in-scope subject set.
      * @param value Value to set for the executionConditions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExecutionConditions(@jakarta.annotation.Nullable final WorkflowExecutionConditions value) {
         this.executionConditions = value;
     }
     /**
      * Sets the tasks property value. Represents the configured tasks to execute and their execution sequence within a workflow. This relationship is expanded by default.
      * @param value Value to set for the tasks property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<Task> value) {
         this.tasks = value;
     }

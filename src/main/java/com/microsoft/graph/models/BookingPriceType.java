@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Represents the type of pricing of a booking service.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum BookingPriceType implements ValuedEnum {
     /** The price of the service is not defined. */
     Undefined("undefined"),

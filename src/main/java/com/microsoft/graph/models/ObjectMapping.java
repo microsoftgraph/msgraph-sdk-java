@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ObjectMapping implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -50,9 +51,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     private String targetObjectName;
     /**
      * Instantiates a new objectMapping and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ObjectMapping() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -167,9 +166,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("attributeMappings", this.getAttributeMappings());
@@ -186,90 +183,70 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the attributeMappings property value. Attribute mappings define which attributes to map from the source object into the target object and how they should flow. A number of functions are available to support the transformation of the original source values.
      * @param value Value to set for the attributeMappings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttributeMappings(@jakarta.annotation.Nullable final java.util.List<AttributeMapping> value) {
         this.attributeMappings = value;
     }
     /**
      * Sets the enabled property value. When true, this object mapping will be processed during synchronization. When false, this object mapping will be skipped.
      * @param value Value to set for the enabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.enabled = value;
     }
     /**
      * Sets the flowTypes property value. The flowTypes property
      * @param value Value to set for the flowTypes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFlowTypes(@jakarta.annotation.Nullable final ObjectFlowTypes value) {
         this.flowTypes = value;
     }
     /**
      * Sets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      * @param value Value to set for the metadata property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMetadata(@jakarta.annotation.Nullable final java.util.List<ObjectMappingMetadataEntry> value) {
         this.metadata = value;
     }
     /**
      * Sets the name property value. Human-friendly name of the object mapping.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the scope property value. Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US.
      * @param value Value to set for the scope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScope(@jakarta.annotation.Nullable final Filter value) {
         this.scope = value;
     }
     /**
      * Sets the sourceObjectName property value. Name of the object in the source directory. Must match the object name from the source directory definition.
      * @param value Value to set for the sourceObjectName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceObjectName(@jakarta.annotation.Nullable final String value) {
         this.sourceObjectName = value;
     }
     /**
      * Sets the targetObjectName property value. Name of the object in target directory. Must match the object name from the target directory definition.
      * @param value Value to set for the targetObjectName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetObjectName(@jakarta.annotation.Nullable final String value) {
         this.targetObjectName = value;
     }

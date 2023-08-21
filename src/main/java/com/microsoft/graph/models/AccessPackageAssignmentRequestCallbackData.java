@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData implements Parsable {
     /**
      * Details for the callback.
@@ -25,9 +26,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
     private String state;
     /**
      * Instantiates a new accessPackageAssignmentRequestCallbackData and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageAssignmentRequestCallbackData() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageAssignmentRequestCallbackData");
@@ -90,9 +89,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +101,28 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
     /**
      * Sets the customExtensionStageInstanceDetail property value. Details for the callback.
      * @param value Value to set for the customExtensionStageInstanceDetail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomExtensionStageInstanceDetail(@jakarta.annotation.Nullable final String value) {
         this.customExtensionStageInstanceDetail = value;
     }
     /**
      * Sets the customExtensionStageInstanceId property value. Unique identifier of the callout to the custom extension.
      * @param value Value to set for the customExtensionStageInstanceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomExtensionStageInstanceId(@jakarta.annotation.Nullable final String value) {
         this.customExtensionStageInstanceId = value;
     }
     /**
      * Sets the stage property value. Indicates the stage at which the custom callout extension will be executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
      * @param value Value to set for the stage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStage(@jakarta.annotation.Nullable final AccessPackageCustomExtensionStage value) {
         this.stage = value;
     }
     /**
      * Sets the state property value. Allow the extension to be able to deny or cancel the request submitted by the requestor. The supported values are Denied and Canceled. This property can only be set for an assignmentRequestCreated stage.
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final String value) {
         this.state = value;
     }

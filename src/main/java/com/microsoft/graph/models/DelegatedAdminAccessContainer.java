@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Parsable {
     /**
      * The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of an Azure AD security group in the Microsoft partner's tenant.
@@ -26,9 +27,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
     private String odataType;
     /**
      * Instantiates a new delegatedAdminAccessContainer and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DelegatedAdminAccessContainer() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("accessContainerId", this.getAccessContainerId());
@@ -102,36 +99,28 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
     /**
      * Sets the accessContainerId property value. The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of an Azure AD security group in the Microsoft partner's tenant.
      * @param value Value to set for the accessContainerId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccessContainerId(@jakarta.annotation.Nullable final String value) {
         this.accessContainerId = value;
     }
     /**
      * Sets the accessContainerType property value. The accessContainerType property
      * @param value Value to set for the accessContainerType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccessContainerType(@jakarta.annotation.Nullable final DelegatedAdminAccessContainerType value) {
         this.accessContainerType = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsable {
     /**
      * The certificate data, which is a long string of text from the certificate. Can be null.
@@ -25,9 +26,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
     private String serviceId;
     /**
      * Instantiates a new appleManagedIdentityProvider and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AppleManagedIdentityProvider() {
         super();
         this.setOdataType("#microsoft.graph.appleManagedIdentityProvider");
@@ -90,9 +89,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +101,28 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
     /**
      * Sets the certificateData property value. The certificate data, which is a long string of text from the certificate. Can be null.
      * @param value Value to set for the certificateData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificateData(@jakarta.annotation.Nullable final String value) {
         this.certificateData = value;
     }
     /**
      * Sets the developerId property value. The Apple developer identifier. Required.
      * @param value Value to set for the developerId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeveloperId(@jakarta.annotation.Nullable final String value) {
         this.developerId = value;
     }
     /**
      * Sets the keyId property value. The Apple key identifier. Required.
      * @param value Value to set for the keyId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKeyId(@jakarta.annotation.Nullable final String value) {
         this.keyId = value;
     }
     /**
      * Sets the serviceId property value. The Apple service identifier. Required.
      * @param value Value to set for the serviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServiceId(@jakarta.annotation.Nullable final String value) {
         this.serviceId = value;
     }

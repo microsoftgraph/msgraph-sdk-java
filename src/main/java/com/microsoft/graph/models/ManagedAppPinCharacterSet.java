@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Character set which is to be used for a user's app PIN
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedAppPinCharacterSet implements ValuedEnum {
     /** Numeric characters */
     Numeric("numeric"),

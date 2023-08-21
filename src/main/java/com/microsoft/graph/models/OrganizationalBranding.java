@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class OrganizationalBranding extends OrganizationalBrandingProperties implements Parsable {
     /**
      * Add different branding based on a locale.
@@ -13,9 +14,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
     private java.util.List<OrganizationalBrandingLocalization> localizations;
     /**
      * Instantiates a new organizationalBranding and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OrganizationalBranding() {
         super();
         this.setOdataType("#microsoft.graph.organizationalBranding");
@@ -51,9 +50,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +59,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
     /**
      * Sets the localizations property value. Add different branding based on a locale.
      * @param value Value to set for the localizations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocalizations(@jakarta.annotation.Nullable final java.util.List<OrganizationalBrandingLocalization> value) {
         this.localizations = value;
     }

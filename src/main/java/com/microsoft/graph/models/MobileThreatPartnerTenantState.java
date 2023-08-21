@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Partner state of this tenant.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MobileThreatPartnerTenantState implements ValuedEnum {
     /** Partner is unavailable. */
     Unavailable("unavailable"),

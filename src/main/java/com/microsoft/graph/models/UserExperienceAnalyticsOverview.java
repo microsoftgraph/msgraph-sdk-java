@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * The user experience analytics overview entity contains the overall score and the scores and insights of every metric of all categories.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsOverview extends Entity implements Parsable {
     /**
      * The user experience analytics insights. Read-only.
@@ -16,9 +17,7 @@ public class UserExperienceAnalyticsOverview extends Entity implements Parsable 
     private java.util.List<UserExperienceAnalyticsInsight> insights;
     /**
      * Instantiates a new userExperienceAnalyticsOverview and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsOverview() {
         super();
     }
@@ -53,9 +52,7 @@ public class UserExperienceAnalyticsOverview extends Entity implements Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -64,9 +61,7 @@ public class UserExperienceAnalyticsOverview extends Entity implements Parsable 
     /**
      * Sets the insights property value. The user experience analytics insights. Read-only.
      * @param value Value to set for the insights property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInsights(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsInsight> value) {
         this.insights = value;
     }
