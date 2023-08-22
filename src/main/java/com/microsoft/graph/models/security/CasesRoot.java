@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CasesRoot extends Entity implements Parsable {
     /**
      * The ediscoveryCases property
@@ -14,9 +15,7 @@ public class CasesRoot extends Entity implements Parsable {
     private java.util.List<EdiscoveryCase> ediscoveryCases;
     /**
      * Instantiates a new casesRoot and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CasesRoot() {
         super();
     }
@@ -51,9 +50,7 @@ public class CasesRoot extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +59,7 @@ public class CasesRoot extends Entity implements Parsable {
     /**
      * Sets the ediscoveryCases property value. The ediscoveryCases property
      * @param value Value to set for the ediscoveryCases property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEdiscoveryCases(@jakarta.annotation.Nullable final java.util.List<EdiscoveryCase> value) {
         this.ediscoveryCases = value;
     }

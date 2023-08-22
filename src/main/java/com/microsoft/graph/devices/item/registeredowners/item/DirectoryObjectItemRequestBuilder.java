@@ -12,6 +12,7 @@ import java.util.Objects;
 /**
  * Builds and executes requests for operations under /devices/{device-id}/registeredOwners/{directoryObject-id}
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Casts the previous resource to appRoleAssignment.
@@ -52,9 +53,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DirectoryObjectItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/devices/{device%2Did}/registeredOwners/{directoryObject%2Did}", pathParameters);
     }
@@ -62,9 +61,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DirectoryObjectItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/devices/{device%2Did}/registeredOwners/{directoryObject%2Did}", rawUrl);
     }

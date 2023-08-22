@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Contains properties and inherited properties for Android Line Of Business apps.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidLobApp extends MobileLobApp implements Parsable {
     /**
      * The value for the minimum applicable operating system.
@@ -28,9 +29,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     private String versionName;
     /**
      * Instantiates a new androidLobApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AndroidLobApp() {
         super();
         this.setOdataType("#microsoft.graph.androidLobApp");
@@ -93,9 +92,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -107,36 +104,28 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     /**
      * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final AndroidMinimumOperatingSystem value) {
         this.minimumSupportedOperatingSystem = value;
     }
     /**
      * Sets the packageId property value. The package identifier.
      * @param value Value to set for the packageId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPackageId(@jakarta.annotation.Nullable final String value) {
         this.packageId = value;
     }
     /**
      * Sets the versionCode property value. The version code of Android Line of Business (LoB) app.
      * @param value Value to set for the versionCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersionCode(@jakarta.annotation.Nullable final String value) {
         this.versionCode = value;
     }
     /**
      * Sets the versionName property value. The version name of Android Line of Business (LoB) app.
      * @param value Value to set for the versionName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersionName(@jakarta.annotation.Nullable final String value) {
         this.versionName = value;
     }

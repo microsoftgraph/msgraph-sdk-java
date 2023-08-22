@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfigurationDeviceStatus extends Entity implements Parsable {
     /**
      * The DateTime when device compliance grace period expires
@@ -38,9 +39,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
     private String userPrincipalName;
     /**
      * Instantiates a new deviceConfigurationDeviceStatus and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceConfigurationDeviceStatus() {
         super();
     }
@@ -129,9 +128,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,63 +143,49 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
     /**
      * Sets the complianceGracePeriodExpirationDateTime property value. The DateTime when device compliance grace period expires
      * @param value Value to set for the complianceGracePeriodExpirationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComplianceGracePeriodExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.complianceGracePeriodExpirationDateTime = value;
     }
     /**
      * Sets the deviceDisplayName property value. Device name of the DevicePolicyStatus.
      * @param value Value to set for the deviceDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
         this.deviceDisplayName = value;
     }
     /**
      * Sets the deviceModel property value. The device model that is being reported
      * @param value Value to set for the deviceModel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
         this.deviceModel = value;
     }
     /**
      * Sets the lastReportedDateTime property value. Last modified date time of the policy report.
      * @param value Value to set for the lastReportedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastReportedDateTime = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final ComplianceStatus value) {
         this.status = value;
     }
     /**
      * Sets the userName property value. The User Name that is being reported
      * @param value Value to set for the userName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
     /**
      * Sets the userPrincipalName property value. UserPrincipalName.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }

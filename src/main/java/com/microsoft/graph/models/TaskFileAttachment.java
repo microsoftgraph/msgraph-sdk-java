@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TaskFileAttachment extends AttachmentBase implements Parsable {
     /**
      * The base64-encoded contents of the file.
@@ -13,9 +14,7 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
     private byte[] contentBytes;
     /**
      * Instantiates a new taskFileAttachment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TaskFileAttachment() {
         super();
         this.setOdataType("#microsoft.graph.taskFileAttachment");
@@ -51,9 +50,7 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +59,7 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
     /**
      * Sets the contentBytes property value. The base64-encoded contents of the file.
      * @param value Value to set for the contentBytes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentBytes(@jakarta.annotation.Nullable final byte[] value) {
         this.contentBytes = value;
     }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Supported platform types for policies.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum PolicyPlatformType implements ValuedEnum {
     /** Android. */
     Android("android"),

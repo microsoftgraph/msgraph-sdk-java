@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Shift extends ChangeTrackedEntity implements Parsable {
     /**
      * The draft version of this shift that is viewable by managers. Required.
@@ -25,9 +26,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     private String userId;
     /**
      * Instantiates a new shift and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Shift() {
         super();
         this.setOdataType("#microsoft.graph.shift");
@@ -90,9 +89,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +101,28 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     /**
      * Sets the draftShift property value. The draft version of this shift that is viewable by managers. Required.
      * @param value Value to set for the draftShift property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDraftShift(@jakarta.annotation.Nullable final ShiftItem value) {
         this.draftShift = value;
     }
     /**
      * Sets the schedulingGroupId property value. ID of the scheduling group the shift is part of. Required.
      * @param value Value to set for the schedulingGroupId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSchedulingGroupId(@jakarta.annotation.Nullable final String value) {
         this.schedulingGroupId = value;
     }
     /**
      * Sets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Required.
      * @param value Value to set for the sharedShift property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharedShift(@jakarta.annotation.Nullable final ShiftItem value) {
         this.sharedShift = value;
     }
     /**
      * Sets the userId property value. ID of the user assigned to the shift. Required.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }

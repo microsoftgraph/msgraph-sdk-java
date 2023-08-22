@@ -16,7 +16,6 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -24,6 +23,7 @@ import java.util.Objects;
 /**
  * Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
@@ -62,9 +62,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new MobileAppsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MobileAppsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
@@ -72,108 +70,74 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new MobileAppsRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MobileAppsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the androidLobApp objects.
+     * List properties and relationships of the windowsMobileMSI objects.
      * @return a CompletableFuture of mobileAppCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-androidlobapp-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsmobilemsi-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCollectionResponse> get() {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, MobileAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<MobileAppCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<MobileAppCollectionResponse>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return get(null);
     }
     /**
-     * List properties and relationships of the androidLobApp objects.
+     * List properties and relationships of the windowsMobileMSI objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileAppCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-androidlobapp-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsmobilemsi-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, MobileAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<MobileAppCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<MobileAppCollectionResponse>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, MobileAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new windowsUniversalAppX object.
+     * Create a new win32LobApp object.
      * @param body The request body
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsuniversalappx-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-win32lobapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> post(@jakarta.annotation.Nonnull final MobileApp body) {
-        try {
-            final RequestInformation requestInfo = toPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, MobileApp::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<MobileApp> executionException = new java.util.concurrent.CompletableFuture<MobileApp>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return post(body, null);
     }
     /**
-     * Create a new windowsUniversalAppX object.
+     * Create a new win32LobApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsuniversalappx-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-win32lobapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> post(@jakarta.annotation.Nonnull final MobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, MobileApp::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<MobileApp> executionException = new java.util.concurrent.CompletableFuture<MobileApp>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, MobileApp::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List properties and relationships of the androidLobApp objects.
+     * List properties and relationships of the windowsMobileMSI objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+    public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the androidLobApp objects.
+     * List properties and relationships of the windowsMobileMSI objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -189,22 +153,22 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new windowsUniversalAppX object.
+     * Create a new win32LobApp object.
      * @param body The request body
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MobileApp body) throws URISyntaxException {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MobileApp body) {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new windowsUniversalAppX object.
+     * Create a new win32LobApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -221,8 +185,9 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the androidLobApp objects.
+     * List properties and relationships of the windowsMobileMSI objects.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
         /**
          * Include count of items
@@ -276,6 +241,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetRequestConfiguration extends BaseRequestConfiguration {
         /**
          * Request query parameters
@@ -286,6 +252,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IspmtPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -31,9 +32,7 @@ public class IspmtPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json rate;
     /**
      * Instantiates a new ispmtPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IspmtPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,9 +102,7 @@ public class IspmtPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("nper", this.getNper());
@@ -117,45 +114,35 @@ public class IspmtPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the nper property value. The nper property
      * @param value Value to set for the nper property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNper(@jakarta.annotation.Nullable final Json value) {
         this.nper = value;
     }
     /**
      * Sets the per property value. The per property
      * @param value Value to set for the per property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPer(@jakarta.annotation.Nullable final Json value) {
         this.per = value;
     }
     /**
      * Sets the pv property value. The pv property
      * @param value Value to set for the pv property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPv(@jakarta.annotation.Nullable final Json value) {
         this.pv = value;
     }
     /**
      * Sets the rate property value. The rate property
      * @param value Value to set for the rate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRate(@jakarta.annotation.Nullable final Json value) {
         this.rate = value;
     }

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new teamMessagingSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamMessagingSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +127,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowChannelMentions", this.getAllowChannelMentions());
@@ -144,63 +141,49 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowChannelMentions property value. If set to true, @channel mentions are allowed.
      * @param value Value to set for the allowChannelMentions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowChannelMentions(@jakarta.annotation.Nullable final Boolean value) {
         this.allowChannelMentions = value;
     }
     /**
      * Sets the allowOwnerDeleteMessages property value. If set to true, owners can delete any message.
      * @param value Value to set for the allowOwnerDeleteMessages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowOwnerDeleteMessages(@jakarta.annotation.Nullable final Boolean value) {
         this.allowOwnerDeleteMessages = value;
     }
     /**
      * Sets the allowTeamMentions property value. If set to true, @team mentions are allowed.
      * @param value Value to set for the allowTeamMentions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowTeamMentions(@jakarta.annotation.Nullable final Boolean value) {
         this.allowTeamMentions = value;
     }
     /**
      * Sets the allowUserDeleteMessages property value. If set to true, users can delete their messages.
      * @param value Value to set for the allowUserDeleteMessages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowUserDeleteMessages(@jakarta.annotation.Nullable final Boolean value) {
         this.allowUserDeleteMessages = value;
     }
     /**
      * Sets the allowUserEditMessages property value. If set to true, users can edit their messages.
      * @param value Value to set for the allowUserEditMessages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowUserEditMessages(@jakarta.annotation.Nullable final Boolean value) {
         this.allowUserEditMessages = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

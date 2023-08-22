@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -19,9 +20,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
     private PrintDocumentUploadProperties properties;
     /**
      * Instantiates a new createUploadSessionPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CreateUploadSessionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,9 +63,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("properties", this.getProperties());
@@ -75,18 +72,14 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the properties property value. The properties property
      * @param value Value to set for the properties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProperties(@jakarta.annotation.Nullable final PrintDocumentUploadProperties value) {
         this.properties = value;
     }

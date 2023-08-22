@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
     /**
      * A collection of team members who have access to the shared channel.
@@ -17,9 +18,7 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
     private Boolean isHostTeam;
     /**
      * Instantiates a new sharedWithChannelTeamInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SharedWithChannelTeamInfo() {
         super();
     }
@@ -63,9 +62,7 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
     /**
      * Sets the allowedMembers property value. A collection of team members who have access to the shared channel.
      * @param value Value to set for the allowedMembers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedMembers(@jakarta.annotation.Nullable final java.util.List<ConversationMember> value) {
         this.allowedMembers = value;
     }
     /**
      * Sets the isHostTeam property value. Indicates whether the team is the host of the channel.
      * @param value Value to set for the isHostTeam property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsHostTeam(@jakarta.annotation.Nullable final Boolean value) {
         this.isHostTeam = value;
     }

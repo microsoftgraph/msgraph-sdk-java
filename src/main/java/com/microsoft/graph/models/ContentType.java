@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContentType extends Entity implements Parsable {
     /**
      * List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
@@ -85,9 +86,7 @@ public class ContentType extends Entity implements Parsable {
     private Boolean sealed;
     /**
      * Instantiates a new contentType and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ContentType() {
         super();
     }
@@ -284,9 +283,7 @@ public class ContentType extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -313,171 +310,133 @@ public class ContentType extends Entity implements Parsable {
     /**
      * Sets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
      * @param value Value to set for the associatedHubsUrls property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssociatedHubsUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.associatedHubsUrls = value;
     }
     /**
      * Sets the base property value. Parent contentType from which this content type is derived.
      * @param value Value to set for the base property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBase(@jakarta.annotation.Nullable final ContentType value) {
         this.base = value;
     }
     /**
      * Sets the baseTypes property value. The collection of content types that are ancestors of this content type.
      * @param value Value to set for the baseTypes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBaseTypes(@jakarta.annotation.Nullable final java.util.List<ContentType> value) {
         this.baseTypes = value;
     }
     /**
      * Sets the columnLinks property value. The collection of columns that are required by this content type.
      * @param value Value to set for the columnLinks property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColumnLinks(@jakarta.annotation.Nullable final java.util.List<ColumnLink> value) {
         this.columnLinks = value;
     }
     /**
      * Sets the columnPositions property value. Column order information in a content type.
      * @param value Value to set for the columnPositions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColumnPositions(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
         this.columnPositions = value;
     }
     /**
      * Sets the columns property value. The collection of column definitions for this contentType.
      * @param value Value to set for the columns property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColumns(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
         this.columns = value;
     }
     /**
      * Sets the description property value. The descriptive text for the item.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the documentSet property value. Document Set metadata.
      * @param value Value to set for the documentSet property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDocumentSet(@jakarta.annotation.Nullable final DocumentSet value) {
         this.documentSet = value;
     }
     /**
      * Sets the documentTemplate property value. Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
      * @param value Value to set for the documentTemplate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDocumentTemplate(@jakarta.annotation.Nullable final DocumentSetContent value) {
         this.documentTemplate = value;
     }
     /**
      * Sets the group property value. The name of the group this content type belongs to. Helps organize related content types.
      * @param value Value to set for the group property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroup(@jakarta.annotation.Nullable final String value) {
         this.group = value;
     }
     /**
      * Sets the hidden property value. Indicates whether the content type is hidden in the list's 'New' menu.
      * @param value Value to set for the hidden property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.hidden = value;
     }
     /**
      * Sets the inheritedFrom property value. If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
      * @param value Value to set for the inheritedFrom property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInheritedFrom(@jakarta.annotation.Nullable final ItemReference value) {
         this.inheritedFrom = value;
     }
     /**
      * Sets the isBuiltIn property value. Specifies if a content type is a built-in content type.
      * @param value Value to set for the isBuiltIn property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsBuiltIn(@jakarta.annotation.Nullable final Boolean value) {
         this.isBuiltIn = value;
     }
     /**
      * Sets the name property value. The name of the content type.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the order property value. Specifies the order in which the content type appears in the selection UI.
      * @param value Value to set for the order property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrder(@jakarta.annotation.Nullable final ContentTypeOrder value) {
         this.order = value;
     }
     /**
      * Sets the parentId property value. The unique identifier of the content type.
      * @param value Value to set for the parentId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentId(@jakarta.annotation.Nullable final String value) {
         this.parentId = value;
     }
     /**
      * Sets the propagateChanges property value. If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
      * @param value Value to set for the propagateChanges property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPropagateChanges(@jakarta.annotation.Nullable final Boolean value) {
         this.propagateChanges = value;
     }
     /**
      * Sets the readOnly property value. If true, the content type can't be modified unless this value is first set to false.
      * @param value Value to set for the readOnly property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReadOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.readOnly = value;
     }
     /**
      * Sets the sealed property value. If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
      * @param value Value to set for the sealed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSealed(@jakarta.annotation.Nullable final Boolean value) {
         this.sealed = value;
     }

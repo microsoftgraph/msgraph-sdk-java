@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamInfo extends Entity implements Parsable {
     /**
      * The name of the team.
@@ -21,9 +22,7 @@ public class TeamInfo extends Entity implements Parsable {
     private String tenantId;
     /**
      * Instantiates a new teamInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamInfo() {
         super();
     }
@@ -84,9 +83,7 @@ public class TeamInfo extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -97,27 +94,21 @@ public class TeamInfo extends Entity implements Parsable {
     /**
      * Sets the displayName property value. The name of the team.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the team property value. The team property
      * @param value Value to set for the team property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeam(@jakarta.annotation.Nullable final Team value) {
         this.team = value;
     }
     /**
      * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }

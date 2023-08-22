@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, P
     private String oper;
     /**
      * Instantiates a new applyCustomFilterPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ApplyCustomFilterPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, P
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("criteria1", this.getCriteria1());
@@ -102,36 +99,28 @@ public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, P
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the criteria1 property value. The criteria1 property
      * @param value Value to set for the criteria1 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCriteria1(@jakarta.annotation.Nullable final String value) {
         this.criteria1 = value;
     }
     /**
      * Sets the criteria2 property value. The criteria2 property
      * @param value Value to set for the criteria2 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCriteria2(@jakarta.annotation.Nullable final String value) {
         this.criteria2 = value;
     }
     /**
      * Sets the oper property value. The oper property
      * @param value Value to set for the oper property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOper(@jakarta.annotation.Nullable final String value) {
         this.oper = value;
     }

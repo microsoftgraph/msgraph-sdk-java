@@ -9,6 +9,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -24,9 +25,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
     private EdiscoverySearch search;
     /**
      * Instantiates a new addToReviewSetPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AddToReviewSetPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -78,9 +77,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("additionalDataOptions", this.getAdditionalDataOptions());
@@ -90,27 +87,21 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the additionalDataOptions property value. The additionalDataOptions property
      * @param value Value to set for the additionalDataOptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalDataOptions(@jakarta.annotation.Nullable final AdditionalDataOptions value) {
         this.additionalDataOptions = value;
     }
     /**
      * Sets the search property value. The search property
      * @param value Value to set for the search property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSearch(@jakarta.annotation.Nullable final EdiscoverySearch value) {
         this.search = value;
     }

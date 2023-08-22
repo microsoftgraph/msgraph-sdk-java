@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupLifecyclePolicy extends Entity implements Parsable {
     /**
      * List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
@@ -21,9 +22,7 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
     private String managedGroupTypes;
     /**
      * Instantiates a new groupLifecyclePolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public GroupLifecyclePolicy() {
         super();
     }
@@ -76,9 +75,7 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +86,21 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
     /**
      * Sets the alternateNotificationEmails property value. List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
      * @param value Value to set for the alternateNotificationEmails property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlternateNotificationEmails(@jakarta.annotation.Nullable final String value) {
         this.alternateNotificationEmails = value;
     }
     /**
      * Sets the groupLifetimeInDays property value. Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.
      * @param value Value to set for the groupLifetimeInDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroupLifetimeInDays(@jakarta.annotation.Nullable final Integer value) {
         this.groupLifetimeInDays = value;
     }
     /**
      * Sets the managedGroupTypes property value. The group type for which the expiration policy applies. Possible values are All, Selected or None.
      * @param value Value to set for the managedGroupTypes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagedGroupTypes(@jakarta.annotation.Nullable final String value) {
         this.managedGroupTypes = value;
     }

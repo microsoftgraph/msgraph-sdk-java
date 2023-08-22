@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartAxisFormat extends Entity implements Parsable {
     /**
      * Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
@@ -17,9 +18,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
     private WorkbookChartLineFormat line;
     /**
      * Instantiates a new workbookChartAxisFormat and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookChartAxisFormat() {
         super();
     }
@@ -63,9 +62,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
     /**
      * Sets the font property value. Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
      * @param value Value to set for the font property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFont(@jakarta.annotation.Nullable final WorkbookChartFont value) {
         this.font = value;
     }
     /**
      * Sets the line property value. Represents chart line formatting. Read-only.
      * @param value Value to set for the line property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLine(@jakarta.annotation.Nullable final WorkbookChartLineFormat value) {
         this.line = value;
     }

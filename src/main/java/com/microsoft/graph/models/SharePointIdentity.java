@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharePointIdentity extends Identity implements Parsable {
     /**
      * The sign in name of the SharePoint identity.
@@ -13,9 +14,7 @@ public class SharePointIdentity extends Identity implements Parsable {
     private String loginName;
     /**
      * Instantiates a new sharePointIdentity and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SharePointIdentity() {
         super();
         this.setOdataType("#microsoft.graph.sharePointIdentity");
@@ -51,9 +50,7 @@ public class SharePointIdentity extends Identity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +59,7 @@ public class SharePointIdentity extends Identity implements Parsable {
     /**
      * Sets the loginName property value. The sign in name of the SharePoint identity.
      * @param value Value to set for the loginName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLoginName(@jakarta.annotation.Nullable final String value) {
         this.loginName = value;
     }

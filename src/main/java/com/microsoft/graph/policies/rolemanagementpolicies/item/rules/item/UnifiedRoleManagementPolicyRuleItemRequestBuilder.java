@@ -11,7 +11,6 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -19,14 +18,13 @@ import java.util.Objects;
 /**
  * Provides operations to manage the rules property of the microsoft.graph.unifiedRoleManagementPolicy entity.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new UnifiedRoleManagementPolicyRuleItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyRuleItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/policies/roleManagementPolicies/{unifiedRoleManagementPolicy%2Did}/rules/{unifiedRoleManagementPolicyRule%2Did}{?%24select,%24expand}", pathParameters);
     }
@@ -34,48 +32,28 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
      * Instantiates a new UnifiedRoleManagementPolicyRuleItemRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyRuleItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/policies/roleManagementPolicies/{unifiedRoleManagementPolicy%2Did}/rules/{unifiedRoleManagementPolicyRule%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property rules for policies
-     * @return a CompletableFuture of void
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
-        try {
-            final RequestInformation requestInfo = toDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return delete(null);
     }
     /**
      * Delete navigation property rules for policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
      * Retrieve a rule or settings defined for a role management policy. The rule can be one of the following types that are derived from the unifiedRoleManagementPolicyRule object:+ unifiedRoleManagementPolicyApprovalRule+ unifiedRoleManagementPolicyAuthenticationContextRule+ unifiedRoleManagementPolicyEnablementRule+ unifiedRoleManagementPolicyExpirationRule+ unifiedRoleManagementPolicyNotificationRule
@@ -84,17 +62,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule> get() {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, UnifiedRoleManagementPolicyRule::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule> executionException = new java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return get(null);
     }
     /**
      * Retrieve a rule or settings defined for a role management policy. The rule can be one of the following types that are derived from the unifiedRoleManagementPolicyRule object:+ unifiedRoleManagementPolicyApprovalRule+ unifiedRoleManagementPolicyAuthenticationContextRule+ unifiedRoleManagementPolicyEnablementRule+ unifiedRoleManagementPolicyExpirationRule+ unifiedRoleManagementPolicyNotificationRule
@@ -104,17 +72,11 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, UnifiedRoleManagementPolicyRule::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule> executionException = new java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, UnifiedRoleManagementPolicyRule::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update a rule defined for a role management policy. The rule can be one of the following types that are derived from the unifiedRoleManagementPolicyRule object: For more information about rules for Azure AD roles and examples of updating rules, see the following articles:
@@ -124,17 +86,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule> patch(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyRule body) {
-        try {
-            final RequestInformation requestInfo = toPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, UnifiedRoleManagementPolicyRule::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule> executionException = new java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return patch(body, null);
     }
     /**
      * Update a rule defined for a role management policy. The rule can be one of the following types that are derived from the unifiedRoleManagementPolicyRule object: For more information about rules for Azure AD roles and examples of updating rules, see the following articles:
@@ -146,24 +98,18 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule> patch(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyRule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, UnifiedRoleManagementPolicyRule::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule> executionException = new java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, UnifiedRoleManagementPolicyRule::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property rules for policies
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
+    public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
     /**
@@ -172,7 +118,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -190,7 +136,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+    public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
@@ -199,7 +145,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -220,7 +166,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyRule body) throws URISyntaxException {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyRule body) {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -230,7 +176,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyRule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyRule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -249,11 +195,13 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
      * Retrieve a rule or settings defined for a role management policy. The rule can be one of the following types that are derived from the unifiedRoleManagementPolicyRule object:+ unifiedRoleManagementPolicyApprovalRule+ unifiedRoleManagementPolicyAuthenticationContextRule+ unifiedRoleManagementPolicyEnablementRule+ unifiedRoleManagementPolicyExpirationRule+ unifiedRoleManagementPolicyNotificationRule
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
         /**
          * Expand related entities
@@ -271,6 +219,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetRequestConfiguration extends BaseRequestConfiguration {
         /**
          * Request query parameters
@@ -281,6 +230,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }

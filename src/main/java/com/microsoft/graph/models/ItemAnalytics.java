@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemAnalytics extends Entity implements Parsable {
     /**
      * The allTime property
@@ -21,9 +22,7 @@ public class ItemAnalytics extends Entity implements Parsable {
     private ItemActivityStat lastSevenDays;
     /**
      * Instantiates a new itemAnalytics and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ItemAnalytics() {
         super();
     }
@@ -76,9 +75,7 @@ public class ItemAnalytics extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +86,21 @@ public class ItemAnalytics extends Entity implements Parsable {
     /**
      * Sets the allTime property value. The allTime property
      * @param value Value to set for the allTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllTime(@jakarta.annotation.Nullable final ItemActivityStat value) {
         this.allTime = value;
     }
     /**
      * Sets the itemActivityStats property value. The itemActivityStats property
      * @param value Value to set for the itemActivityStats property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setItemActivityStats(@jakarta.annotation.Nullable final java.util.List<ItemActivityStat> value) {
         this.itemActivityStats = value;
     }
     /**
      * Sets the lastSevenDays property value. The lastSevenDays property
      * @param value Value to set for the lastSevenDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastSevenDays(@jakarta.annotation.Nullable final ItemActivityStat value) {
         this.lastSevenDays = value;
     }

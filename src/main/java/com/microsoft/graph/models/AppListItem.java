@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Represents an app in the list of managed applications
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppListItem implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -37,9 +38,7 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
     private String publisher;
     /**
      * Instantiates a new appListItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AppListItem() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -118,9 +117,7 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appId", this.getAppId());
@@ -133,54 +130,42 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the appId property value. The application or bundle identifier of the application
      * @param value Value to set for the appId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
      * Sets the appStoreUrl property value. The Store URL of the application
      * @param value Value to set for the appStoreUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppStoreUrl(@jakarta.annotation.Nullable final String value) {
         this.appStoreUrl = value;
     }
     /**
      * Sets the name property value. The application name
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the publisher property value. The publisher of the application
      * @param value Value to set for the publisher property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.publisher = value;
     }

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
     private CrossTenantUserSyncInbound userSyncInbound;
     /**
      * Instantiates a new crossTenantIdentitySyncPolicyPartner and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CrossTenantIdentitySyncPolicyPartner() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -116,45 +113,35 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the displayName property value. Display name for the cross-tenant user synchronization policy. Use the name of the partner Azure AD (Azure Active Directory) tenant to easily identify the policy. Optional.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the tenantId property value. Tenant identifier for the partner Azure AD organization. Read-only.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
      * Sets the userSyncInbound property value. Defines whether users can be synchronized from the partner tenant. Key.
      * @param value Value to set for the userSyncInbound property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserSyncInbound(@jakarta.annotation.Nullable final CrossTenantUserSyncInbound value) {
         this.userSyncInbound = value;
     }

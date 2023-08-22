@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AllowedValue extends Entity implements Parsable {
     /**
      * Indicates whether the predefined value is active or deactivated. If set to false, this predefined value cannot be assigned to any additional supported directory objects.
@@ -13,9 +14,7 @@ public class AllowedValue extends Entity implements Parsable {
     private Boolean isActive;
     /**
      * Instantiates a new allowedValue and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AllowedValue() {
         super();
     }
@@ -50,9 +49,7 @@ public class AllowedValue extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +58,7 @@ public class AllowedValue extends Entity implements Parsable {
     /**
      * Sets the isActive property value. Indicates whether the predefined value is active or deactivated. If set to false, this predefined value cannot be assigned to any additional supported directory objects.
      * @param value Value to set for the isActive property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
         this.isActive = value;
     }

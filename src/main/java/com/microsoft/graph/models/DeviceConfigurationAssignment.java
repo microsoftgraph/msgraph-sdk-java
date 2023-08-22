@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * The device configuration assignment entity assigns an AAD group to a specific device configuration.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfigurationAssignment extends Entity implements Parsable {
     /**
      * The assignment target for the device configuration.
@@ -16,9 +17,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
     private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new deviceConfigurationAssignment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceConfigurationAssignment() {
         super();
     }
@@ -53,9 +52,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -64,9 +61,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
     /**
      * Sets the target property value. The assignment target for the device configuration.
      * @param value Value to set for the target property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this.target = value;
     }

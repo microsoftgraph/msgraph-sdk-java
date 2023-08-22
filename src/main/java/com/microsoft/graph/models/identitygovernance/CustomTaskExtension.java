@@ -10,6 +10,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTaskExtension extends CustomCalloutExtension implements Parsable {
     /**
      * The callback configuration for a custom task extension.
@@ -33,9 +34,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     private OffsetDateTime lastModifiedDateTime;
     /**
      * Instantiates a new customTaskExtension and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CustomTaskExtension() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.customTaskExtension");
@@ -107,9 +106,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,45 +119,35 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     /**
      * Sets the callbackConfiguration property value. The callback configuration for a custom task extension.
      * @param value Value to set for the callbackConfiguration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallbackConfiguration(@jakarta.annotation.Nullable final CustomExtensionCallbackConfiguration value) {
         this.callbackConfiguration = value;
     }
     /**
      * Sets the createdBy property value. The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final User value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. When the custom task extension was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the lastModifiedBy property value. The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedBy(@jakarta.annotation.Nullable final User value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. When the custom extension was last modified.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }

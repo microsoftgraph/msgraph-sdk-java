@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MediaStream implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     private String sourceId;
     /**
      * Instantiates a new mediaStream and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MediaStream() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +127,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("direction", this.getDirection());
@@ -144,63 +141,49 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the direction property value. The direction property
      * @param value Value to set for the direction property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDirection(@jakarta.annotation.Nullable final MediaDirection value) {
         this.direction = value;
     }
     /**
      * Sets the label property value. The media stream label.
      * @param value Value to set for the label property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLabel(@jakarta.annotation.Nullable final String value) {
         this.label = value;
     }
     /**
      * Sets the mediaType property value. The mediaType property
      * @param value Value to set for the mediaType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMediaType(@jakarta.annotation.Nullable final Modality value) {
         this.mediaType = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the serverMuted property value. If the media is muted by the server.
      * @param value Value to set for the serverMuted property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServerMuted(@jakarta.annotation.Nullable final Boolean value) {
         this.serverMuted = value;
     }
     /**
      * Sets the sourceId property value. The source ID.
      * @param value Value to set for the sourceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceId(@jakarta.annotation.Nullable final String value) {
         this.sourceId = value;
     }

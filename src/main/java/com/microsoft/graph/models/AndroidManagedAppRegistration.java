@@ -9,12 +9,11 @@ import java.util.Objects;
 /**
  * Represents the synchronization details of an android app, with management capabilities, for a specific user.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidManagedAppRegistration extends ManagedAppRegistration implements Parsable {
     /**
      * Instantiates a new androidManagedAppRegistration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AndroidManagedAppRegistration() {
         super();
         this.setOdataType("#microsoft.graph.androidManagedAppRegistration");
@@ -41,9 +40,7 @@ public class AndroidManagedAppRegistration extends ManagedAppRegistration implem
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

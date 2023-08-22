@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
     /**
      * The list of media to pre-fetch.
@@ -13,9 +14,7 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
     private java.util.List<MediaInfo> preFetchMedia;
     /**
      * Instantiates a new serviceHostedMediaConfig and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ServiceHostedMediaConfig() {
         super();
         this.setOdataType("#microsoft.graph.serviceHostedMediaConfig");
@@ -51,9 +50,7 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +59,7 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
     /**
      * Sets the preFetchMedia property value. The list of media to pre-fetch.
      * @param value Value to set for the preFetchMedia property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPreFetchMedia(@jakarta.annotation.Nullable final java.util.List<MediaInfo> value) {
         this.preFetchMedia = value;
     }

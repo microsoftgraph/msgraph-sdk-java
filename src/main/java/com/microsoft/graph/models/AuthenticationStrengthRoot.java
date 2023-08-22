@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationStrengthRoot extends Entity implements Parsable {
     /**
      * Names and descriptions of all valid authentication method modes in the system.
@@ -21,9 +22,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
     private java.util.List<AuthenticationStrengthPolicy> policies;
     /**
      * Instantiates a new authenticationStrengthRoot and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AuthenticationStrengthRoot() {
         super();
     }
@@ -76,9 +75,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +86,21 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
     /**
      * Sets the authenticationMethodModes property value. Names and descriptions of all valid authentication method modes in the system.
      * @param value Value to set for the authenticationMethodModes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthenticationMethodModes(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodModeDetail> value) {
         this.authenticationMethodModes = value;
     }
     /**
      * Sets the combinations property value. The combinations property
      * @param value Value to set for the combinations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCombinations(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodModes> value) {
         this.combinations = value;
     }
     /**
      * Sets the policies property value. A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      * @param value Value to set for the policies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPolicies(@jakarta.annotation.Nullable final java.util.List<AuthenticationStrengthPolicy> value) {
         this.policies = value;
     }

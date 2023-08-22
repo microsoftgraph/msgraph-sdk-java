@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Computer endpoint protection state
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsDeviceHealthState implements ValuedEnum {
     /** Computer is clean and no action is required */
     Clean("clean"),

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTaskExtensionCallbackData extends CustomExtensionData implements Parsable {
     /**
      * Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
@@ -14,9 +15,7 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
     private CustomTaskExtensionOperationStatus operationStatus;
     /**
      * Instantiates a new customTaskExtensionCallbackData and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CustomTaskExtensionCallbackData() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.customTaskExtensionCallbackData");
@@ -52,9 +51,7 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,9 +60,7 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
     /**
      * Sets the operationStatus property value. Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
      * @param value Value to set for the operationStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperationStatus(@jakarta.annotation.Nullable final CustomTaskExtensionOperationStatus value) {
         this.operationStatus = value;
     }

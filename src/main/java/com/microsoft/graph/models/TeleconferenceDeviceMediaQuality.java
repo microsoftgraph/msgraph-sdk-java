@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -103,9 +104,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     private Integer remotePort;
     /**
      * Instantiates a new teleconferenceDeviceMediaQuality and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeleconferenceDeviceMediaQuality() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -346,9 +345,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writePeriodAndDurationValue("averageInboundJitter", this.getAverageInboundJitter());
@@ -378,207 +375,161 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the averageInboundJitter property value. The average inbound stream network jitter.
      * @param value Value to set for the averageInboundJitter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAverageInboundJitter(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.averageInboundJitter = value;
+        this.averageInboundJitter = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the averageInboundPacketLossRateInPercentage property value. The average inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
      * @param value Value to set for the averageInboundPacketLossRateInPercentage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAverageInboundPacketLossRateInPercentage(@jakarta.annotation.Nullable final Double value) {
         this.averageInboundPacketLossRateInPercentage = value;
     }
     /**
      * Sets the averageInboundRoundTripDelay property value. The average inbound stream network round trip delay.
      * @param value Value to set for the averageInboundRoundTripDelay property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAverageInboundRoundTripDelay(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.averageInboundRoundTripDelay = value;
+        this.averageInboundRoundTripDelay = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the averageOutboundJitter property value. The average outbound stream network jitter.
      * @param value Value to set for the averageOutboundJitter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAverageOutboundJitter(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.averageOutboundJitter = value;
+        this.averageOutboundJitter = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the averageOutboundPacketLossRateInPercentage property value. The average outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
      * @param value Value to set for the averageOutboundPacketLossRateInPercentage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAverageOutboundPacketLossRateInPercentage(@jakarta.annotation.Nullable final Double value) {
         this.averageOutboundPacketLossRateInPercentage = value;
     }
     /**
      * Sets the averageOutboundRoundTripDelay property value. The average outbound stream network round trip delay.
      * @param value Value to set for the averageOutboundRoundTripDelay property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAverageOutboundRoundTripDelay(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.averageOutboundRoundTripDelay = value;
+        this.averageOutboundRoundTripDelay = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the channelIndex property value. The channel index of media. Indexing begins with 1.  If a media session contains 3 video modalities, channel indexes will be 1, 2, and 3.
      * @param value Value to set for the channelIndex property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChannelIndex(@jakarta.annotation.Nullable final Integer value) {
         this.channelIndex = value;
     }
     /**
      * Sets the inboundPackets property value. The total number of the inbound packets.
      * @param value Value to set for the inboundPackets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInboundPackets(@jakarta.annotation.Nullable final Long value) {
         this.inboundPackets = value;
     }
     /**
      * Sets the localIPAddress property value. the local IP address for the media session.
      * @param value Value to set for the localIPAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocalIPAddress(@jakarta.annotation.Nullable final String value) {
         this.localIPAddress = value;
     }
     /**
      * Sets the localPort property value. The local media port.
      * @param value Value to set for the localPort property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocalPort(@jakarta.annotation.Nullable final Integer value) {
         this.localPort = value;
     }
     /**
      * Sets the maximumInboundJitter property value. The maximum inbound stream network jitter.
      * @param value Value to set for the maximumInboundJitter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaximumInboundJitter(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.maximumInboundJitter = value;
+        this.maximumInboundJitter = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the maximumInboundPacketLossRateInPercentage property value. The maximum inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
      * @param value Value to set for the maximumInboundPacketLossRateInPercentage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaximumInboundPacketLossRateInPercentage(@jakarta.annotation.Nullable final Double value) {
         this.maximumInboundPacketLossRateInPercentage = value;
     }
     /**
      * Sets the maximumInboundRoundTripDelay property value. The maximum inbound stream network round trip delay.
      * @param value Value to set for the maximumInboundRoundTripDelay property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaximumInboundRoundTripDelay(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.maximumInboundRoundTripDelay = value;
+        this.maximumInboundRoundTripDelay = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the maximumOutboundJitter property value. The maximum outbound stream network jitter.
      * @param value Value to set for the maximumOutboundJitter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaximumOutboundJitter(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.maximumOutboundJitter = value;
+        this.maximumOutboundJitter = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the maximumOutboundPacketLossRateInPercentage property value. The maximum outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
      * @param value Value to set for the maximumOutboundPacketLossRateInPercentage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaximumOutboundPacketLossRateInPercentage(@jakarta.annotation.Nullable final Double value) {
         this.maximumOutboundPacketLossRateInPercentage = value;
     }
     /**
      * Sets the maximumOutboundRoundTripDelay property value. The maximum outbound stream network round trip delay.
      * @param value Value to set for the maximumOutboundRoundTripDelay property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaximumOutboundRoundTripDelay(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.maximumOutboundRoundTripDelay = value;
+        this.maximumOutboundRoundTripDelay = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the mediaDuration property value. The total modality duration. If the media enabled and disabled multiple times, MediaDuration will the summation of all of the durations.
      * @param value Value to set for the mediaDuration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMediaDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.mediaDuration = value;
+        this.mediaDuration = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the networkLinkSpeedInBytes property value. The network link speed in bytes
      * @param value Value to set for the networkLinkSpeedInBytes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNetworkLinkSpeedInBytes(@jakarta.annotation.Nullable final Long value) {
         this.networkLinkSpeedInBytes = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the outboundPackets property value. The total number of the outbound packets.
      * @param value Value to set for the outboundPackets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOutboundPackets(@jakarta.annotation.Nullable final Long value) {
         this.outboundPackets = value;
     }
     /**
      * Sets the remoteIPAddress property value. The remote IP address for the media session.
      * @param value Value to set for the remoteIPAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRemoteIPAddress(@jakarta.annotation.Nullable final String value) {
         this.remoteIPAddress = value;
     }
     /**
      * Sets the remotePort property value. The remote media port.
      * @param value Value to set for the remotePort property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRemotePort(@jakarta.annotation.Nullable final Integer value) {
         this.remotePort = value;
     }

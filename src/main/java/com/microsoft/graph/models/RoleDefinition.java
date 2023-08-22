@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * The Role Definition resource. The role definition is the foundation of role based access in Intune. The role combines an Intune resource such as a Mobile App and associated role permissions such as Create or Read for the resource. There are two types of roles, built-in and custom. Built-in roles cannot be modified. Both built-in roles and custom roles must have assignments to be enforced. Create custom roles if you want to define a role that allows any of the available resources and role permissions to be combined into a single role.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RoleDefinition extends Entity implements Parsable {
     /**
      * Description of the Role definition.
@@ -32,9 +33,7 @@ public class RoleDefinition extends Entity implements Parsable {
     private java.util.List<RolePermission> rolePermissions;
     /**
      * Instantiates a new roleDefinition and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RoleDefinition() {
         super();
     }
@@ -112,9 +111,7 @@ public class RoleDefinition extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -127,45 +124,35 @@ public class RoleDefinition extends Entity implements Parsable {
     /**
      * Sets the description property value. Description of the Role definition.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Display Name of the Role definition.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the isBuiltIn property value. Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
      * @param value Value to set for the isBuiltIn property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsBuiltIn(@jakarta.annotation.Nullable final Boolean value) {
         this.isBuiltIn = value;
     }
     /**
      * Sets the roleAssignments property value. List of Role assignments for this role definition.
      * @param value Value to set for the roleAssignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleAssignments(@jakarta.annotation.Nullable final java.util.List<RoleAssignment> value) {
         this.roleAssignments = value;
     }
     /**
      * Sets the rolePermissions property value. List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
      * @param value Value to set for the rolePermissions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRolePermissions(@jakarta.annotation.Nullable final java.util.List<RolePermission> value) {
         this.rolePermissions = value;
     }

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Schema extends Entity implements Parsable {
     /**
      * Must be set to microsoft.graph.externalConnector.externalItem. Required.
@@ -18,9 +19,7 @@ public class Schema extends Entity implements Parsable {
     private java.util.List<Property> properties;
     /**
      * Instantiates a new schema and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Schema() {
         super();
     }
@@ -64,9 +63,7 @@ public class Schema extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class Schema extends Entity implements Parsable {
     /**
      * Sets the baseType property value. Must be set to microsoft.graph.externalConnector.externalItem. Required.
      * @param value Value to set for the baseType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBaseType(@jakarta.annotation.Nullable final String value) {
         this.baseType = value;
     }
     /**
      * Sets the properties property value. The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.
      * @param value Value to set for the properties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProperties(@jakarta.annotation.Nullable final java.util.List<Property> value) {
         this.properties = value;
     }

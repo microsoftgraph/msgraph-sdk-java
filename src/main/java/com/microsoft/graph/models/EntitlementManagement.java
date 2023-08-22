@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EntitlementManagement extends Entity implements Parsable {
     /**
      * Approval stages for decisions associated with access package assignment requests.
@@ -57,9 +58,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     private EntitlementManagementSettings settings;
     /**
      * Instantiates a new entitlementManagement and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EntitlementManagement() {
         super();
     }
@@ -193,9 +192,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -215,108 +212,84 @@ public class EntitlementManagement extends Entity implements Parsable {
     /**
      * Sets the accessPackageAssignmentApprovals property value. Approval stages for decisions associated with access package assignment requests.
      * @param value Value to set for the accessPackageAssignmentApprovals property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccessPackageAssignmentApprovals(@jakarta.annotation.Nullable final java.util.List<Approval> value) {
         this.accessPackageAssignmentApprovals = value;
     }
     /**
      * Sets the accessPackages property value. Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      * @param value Value to set for the accessPackages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccessPackages(@jakarta.annotation.Nullable final java.util.List<AccessPackage> value) {
         this.accessPackages = value;
     }
     /**
      * Sets the assignmentPolicies property value. Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
      * @param value Value to set for the assignmentPolicies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignmentPolicies(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignmentPolicy> value) {
         this.assignmentPolicies = value;
     }
     /**
      * Sets the assignmentRequests property value. Access package assignment requests created by or on behalf of a subject.
      * @param value Value to set for the assignmentRequests property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignmentRequests(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignmentRequest> value) {
         this.assignmentRequests = value;
     }
     /**
      * Sets the assignments property value. The assignment of an access package to a subject for a period of time.
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the catalogs property value. A container for access packages.
      * @param value Value to set for the catalogs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCatalogs(@jakarta.annotation.Nullable final java.util.List<AccessPackageCatalog> value) {
         this.catalogs = value;
     }
     /**
      * Sets the connectedOrganizations property value. References to a directory or domain of another organization whose users can request access.
      * @param value Value to set for the connectedOrganizations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConnectedOrganizations(@jakarta.annotation.Nullable final java.util.List<ConnectedOrganization> value) {
         this.connectedOrganizations = value;
     }
     /**
      * Sets the resourceEnvironments property value. A reference to the geolocation environments in which a resource is located.
      * @param value Value to set for the resourceEnvironments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceEnvironments(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceEnvironment> value) {
         this.resourceEnvironments = value;
     }
     /**
      * Sets the resourceRequests property value. Represents a request to add or remove a resource to or from a catalog respectively.
      * @param value Value to set for the resourceRequests property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceRequests(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceRequest> value) {
         this.resourceRequests = value;
     }
     /**
      * Sets the resourceRoleScopes property value. The resourceRoleScopes property
      * @param value Value to set for the resourceRoleScopes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceRoleScopes(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceRoleScope> value) {
         this.resourceRoleScopes = value;
     }
     /**
      * Sets the resources property value. The resources associated with the catalogs.
      * @param value Value to set for the resources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResources(@jakarta.annotation.Nullable final java.util.List<AccessPackageResource> value) {
         this.resources = value;
     }
     /**
      * Sets the settings property value. The settings that control the behavior of Azure AD entitlement management.
      * @param value Value to set for the settings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettings(@jakarta.annotation.Nullable final EntitlementManagementSettings value) {
         this.settings = value;
     }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for when accounts are deleted on a shared PC.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum SharedPCAccountDeletionPolicyType implements ValuedEnum {
     /** Delete immediately. */
     Immediate("immediate"),

@@ -10,6 +10,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -41,9 +42,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
     private String subject;
     /**
      * Instantiates a new createOrGetPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CreateOrGetPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -131,9 +130,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("chatInfo", this.getChatInfo());
@@ -147,63 +144,49 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the chatInfo property value. The chatInfo property
      * @param value Value to set for the chatInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChatInfo(@jakarta.annotation.Nullable final ChatInfo value) {
         this.chatInfo = value;
     }
     /**
      * Sets the endDateTime property value. The endDateTime property
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
      * Sets the externalId property value. The externalId property
      * @param value Value to set for the externalId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
      * Sets the participants property value. The participants property
      * @param value Value to set for the participants property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParticipants(@jakarta.annotation.Nullable final MeetingParticipants value) {
         this.participants = value;
     }
     /**
      * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }

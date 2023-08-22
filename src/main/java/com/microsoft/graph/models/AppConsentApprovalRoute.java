@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppConsentApprovalRoute extends Entity implements Parsable {
     /**
      * A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users.
@@ -13,9 +14,7 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
     private java.util.List<AppConsentRequest> appConsentRequests;
     /**
      * Instantiates a new appConsentApprovalRoute and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AppConsentApprovalRoute() {
         super();
     }
@@ -50,9 +49,7 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +58,7 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
     /**
      * Sets the appConsentRequests property value. A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users.
      * @param value Value to set for the appConsentRequests property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppConsentRequests(@jakarta.annotation.Nullable final java.util.List<AppConsentRequest> value) {
         this.appConsentRequests = value;
     }

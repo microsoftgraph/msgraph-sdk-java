@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsAppRemovedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
      * Initiator of the event.
@@ -21,9 +22,7 @@ public class TeamsAppRemovedEventMessageDetail extends EventMessageDetail implem
     private String teamsAppId;
     /**
      * Instantiates a new teamsAppRemovedEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamsAppRemovedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.teamsAppRemovedEventMessageDetail");
@@ -77,9 +76,7 @@ public class TeamsAppRemovedEventMessageDetail extends EventMessageDetail implem
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class TeamsAppRemovedEventMessageDetail extends EventMessageDetail implem
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
     /**
      * Sets the teamsAppDisplayName property value. Display name of the teamsApp.
      * @param value Value to set for the teamsAppDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamsAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.teamsAppDisplayName = value;
     }
     /**
      * Sets the teamsAppId property value. Unique identifier of the teamsApp.
      * @param value Value to set for the teamsAppId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamsAppId(@jakarta.annotation.Nullable final String value) {
         this.teamsAppId = value;
     }

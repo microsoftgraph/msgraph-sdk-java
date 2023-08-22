@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Contains properties used to assign a macOS LOB app to a group.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
      * When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune.
@@ -16,9 +17,7 @@ public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings i
     private Boolean uninstallOnDeviceRemoval;
     /**
      * Instantiates a new macOsLobAppAssignmentSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MacOsLobAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.macOsLobAppAssignmentSettings");
@@ -54,9 +53,7 @@ public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings i
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -65,9 +62,7 @@ public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings i
     /**
      * Sets the uninstallOnDeviceRemoval property value. When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune.
      * @param value Value to set for the uninstallOnDeviceRemoval property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUninstallOnDeviceRemoval(@jakarta.annotation.Nullable final Boolean value) {
         this.uninstallOnDeviceRemoval = value;
     }

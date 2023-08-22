@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     private Boolean parsingSucceeded;
     /**
      * Instantiates a new parseExpressionResponse and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ParseExpressionResponse() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +127,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("error", this.getError());
@@ -144,63 +141,49 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the error property value. Error details, if expression evaluation resulted in an error.
      * @param value Value to set for the error property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setError(@jakarta.annotation.Nullable final PublicError value) {
         this.error = value;
     }
     /**
      * Sets the evaluationResult property value. A collection of values produced by the evaluation of the expression.
      * @param value Value to set for the evaluationResult property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEvaluationResult(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.evaluationResult = value;
     }
     /**
      * Sets the evaluationSucceeded property value. true if the evaluation was successful.
      * @param value Value to set for the evaluationSucceeded property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEvaluationSucceeded(@jakarta.annotation.Nullable final Boolean value) {
         this.evaluationSucceeded = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the parsedExpression property value. An attributeMappingSource object representing the parsed expression.
      * @param value Value to set for the parsedExpression property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParsedExpression(@jakarta.annotation.Nullable final AttributeMappingSource value) {
         this.parsedExpression = value;
     }
     /**
      * Sets the parsingSucceeded property value. true if the expression was parsed successfully.
      * @param value Value to set for the parsingSucceeded property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParsingSucceeded(@jakarta.annotation.Nullable final Boolean value) {
         this.parsingSucceeded = value;
     }

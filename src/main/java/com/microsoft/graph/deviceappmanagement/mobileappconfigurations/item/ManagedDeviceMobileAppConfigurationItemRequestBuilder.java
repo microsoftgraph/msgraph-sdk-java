@@ -17,7 +17,6 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,6 +24,7 @@ import java.util.Objects;
 /**
  * Provides operations to manage the mobileAppConfigurations property of the microsoft.graph.deviceAppManagement entity.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the assign method.
@@ -72,9 +72,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
      * Instantiates a new ManagedDeviceMobileAppConfigurationItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfiguration%2Did}{?%24select,%24expand}", pathParameters);
     }
@@ -82,89 +80,53 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
      * Instantiates a new ManagedDeviceMobileAppConfigurationItemRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfiguration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Deletes a iosMobileAppConfiguration.
-     * @return a CompletableFuture of void
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
-        try {
-            final RequestInformation requestInfo = toDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return delete(null);
     }
     /**
      * Deletes a iosMobileAppConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read properties and relationships of the iosMobileAppConfiguration object.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      * @return a CompletableFuture of managedDeviceMobileAppConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> get() {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> executionException = new java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return get(null);
     }
     /**
-     * Read properties and relationships of the iosMobileAppConfiguration object.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDeviceMobileAppConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> executionException = new java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the properties of a iosMobileAppConfiguration object.
@@ -174,17 +136,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> patch(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfiguration body) {
-        try {
-            final RequestInformation requestInfo = toPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> executionException = new java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return patch(body, null);
     }
     /**
      * Update the properties of a iosMobileAppConfiguration object.
@@ -196,24 +148,18 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> patch(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> executionException = new java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Deletes a iosMobileAppConfiguration.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
+    public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
     /**
@@ -222,7 +168,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -236,20 +182,20 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the iosMobileAppConfiguration object.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+    public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the iosMobileAppConfiguration object.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -270,7 +216,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfiguration body) throws URISyntaxException {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfiguration body) {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -280,7 +226,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -299,11 +245,13 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the iosMobileAppConfiguration object.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
         /**
          * Expand related entities
@@ -321,6 +269,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetRequestConfiguration extends BaseRequestConfiguration {
         /**
          * Request query parameters
@@ -331,6 +280,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Hostname extends Host implements Parsable {
     /**
      * The company or individual who registered this hostname, from WHOIS data.
@@ -17,9 +18,7 @@ public class Hostname extends Host implements Parsable {
     private String registrar;
     /**
      * Instantiates a new hostname and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Hostname() {
         super();
         this.setOdataType("#microsoft.graph.security.hostname");
@@ -64,9 +63,7 @@ public class Hostname extends Host implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class Hostname extends Host implements Parsable {
     /**
      * Sets the registrant property value. The company or individual who registered this hostname, from WHOIS data.
      * @param value Value to set for the registrant property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRegistrant(@jakarta.annotation.Nullable final String value) {
         this.registrant = value;
     }
     /**
      * Sets the registrar property value. The registrar for this hostname, from WHOIS data.
      * @param value Value to set for the registrar property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRegistrar(@jakarta.annotation.Nullable final String value) {
         this.registrar = value;
     }

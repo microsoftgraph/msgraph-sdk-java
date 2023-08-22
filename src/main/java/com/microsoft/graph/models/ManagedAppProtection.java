@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Policy used to configure detailed management settings for a specified set of apps
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /**
      * Data storage locations where a user may store managed data.
@@ -121,9 +122,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     private Boolean simplePinBlocked;
     /**
      * Instantiates a new managedAppProtection and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ManagedAppProtection() {
         super();
         this.setOdataType("#microsoft.graph.managedAppProtection");
@@ -403,9 +402,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -440,243 +437,189 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /**
      * Sets the allowedDataStorageLocations property value. Data storage locations where a user may store managed data.
      * @param value Value to set for the allowedDataStorageLocations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedDataStorageLocations(@jakarta.annotation.Nullable final java.util.List<ManagedAppDataStorageLocation> value) {
         this.allowedDataStorageLocations = value;
     }
     /**
      * Sets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
      * @param value Value to set for the allowedInboundDataTransferSources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedInboundDataTransferSources(@jakarta.annotation.Nullable final ManagedAppDataTransferLevel value) {
         this.allowedInboundDataTransferSources = value;
     }
     /**
      * Sets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
      * @param value Value to set for the allowedOutboundClipboardSharingLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedOutboundClipboardSharingLevel(@jakarta.annotation.Nullable final ManagedAppClipboardSharingLevel value) {
         this.allowedOutboundClipboardSharingLevel = value;
     }
     /**
      * Sets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
      * @param value Value to set for the allowedOutboundDataTransferDestinations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedOutboundDataTransferDestinations(@jakarta.annotation.Nullable final ManagedAppDataTransferLevel value) {
         this.allowedOutboundDataTransferDestinations = value;
     }
     /**
      * Sets the contactSyncBlocked property value. Indicates whether contacts can be synced to the user's device.
      * @param value Value to set for the contactSyncBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContactSyncBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.contactSyncBlocked = value;
     }
     /**
      * Sets the dataBackupBlocked property value. Indicates whether the backup of a managed app's data is blocked.
      * @param value Value to set for the dataBackupBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDataBackupBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.dataBackupBlocked = value;
     }
     /**
      * Sets the deviceComplianceRequired property value. Indicates whether device compliance is required.
      * @param value Value to set for the deviceComplianceRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceComplianceRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.deviceComplianceRequired = value;
     }
     /**
      * Sets the disableAppPinIfDevicePinIsSet property value. Indicates whether use of the app pin is required if the device pin is set.
      * @param value Value to set for the disableAppPinIfDevicePinIsSet property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisableAppPinIfDevicePinIsSet(@jakarta.annotation.Nullable final Boolean value) {
         this.disableAppPinIfDevicePinIsSet = value;
     }
     /**
      * Sets the fingerprintBlocked property value. Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True.
      * @param value Value to set for the fingerprintBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFingerprintBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.fingerprintBlocked = value;
     }
     /**
      * Sets the managedBrowser property value. Type of managed browser
      * @param value Value to set for the managedBrowser property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagedBrowser(@jakarta.annotation.Nullable final ManagedBrowserType value) {
         this.managedBrowser = value;
     }
     /**
      * Sets the managedBrowserToOpenLinksRequired property value. Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android)
      * @param value Value to set for the managedBrowserToOpenLinksRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagedBrowserToOpenLinksRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.managedBrowserToOpenLinksRequired = value;
     }
     /**
      * Sets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
      * @param value Value to set for the maximumPinRetries property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaximumPinRetries(@jakarta.annotation.Nullable final Integer value) {
         this.maximumPinRetries = value;
     }
     /**
      * Sets the minimumPinLength property value. Minimum pin length required for an app-level pin if PinRequired is set to True
      * @param value Value to set for the minimumPinLength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumPinLength(@jakarta.annotation.Nullable final Integer value) {
         this.minimumPinLength = value;
     }
     /**
      * Sets the minimumRequiredAppVersion property value. Versions less than the specified version will block the managed app from accessing company data.
      * @param value Value to set for the minimumRequiredAppVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumRequiredAppVersion(@jakarta.annotation.Nullable final String value) {
         this.minimumRequiredAppVersion = value;
     }
     /**
      * Sets the minimumRequiredOsVersion property value. Versions less than the specified version will block the managed app from accessing company data.
      * @param value Value to set for the minimumRequiredOsVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumRequiredOsVersion(@jakarta.annotation.Nullable final String value) {
         this.minimumRequiredOsVersion = value;
     }
     /**
      * Sets the minimumWarningAppVersion property value. Versions less than the specified version will result in warning message on the managed app.
      * @param value Value to set for the minimumWarningAppVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumWarningAppVersion(@jakarta.annotation.Nullable final String value) {
         this.minimumWarningAppVersion = value;
     }
     /**
      * Sets the minimumWarningOsVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data.
      * @param value Value to set for the minimumWarningOsVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumWarningOsVersion(@jakarta.annotation.Nullable final String value) {
         this.minimumWarningOsVersion = value;
     }
     /**
      * Sets the organizationalCredentialsRequired property value. Indicates whether organizational credentials are required for app use.
      * @param value Value to set for the organizationalCredentialsRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrganizationalCredentialsRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.organizationalCredentialsRequired = value;
     }
     /**
      * Sets the periodBeforePinReset property value. TimePeriod before the all-level pin must be reset if PinRequired is set to True.
      * @param value Value to set for the periodBeforePinReset property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPeriodBeforePinReset(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.periodBeforePinReset = value;
+        this.periodBeforePinReset = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the periodOfflineBeforeAccessCheck property value. The period after which access is checked when the device is not connected to the internet.
      * @param value Value to set for the periodOfflineBeforeAccessCheck property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPeriodOfflineBeforeAccessCheck(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.periodOfflineBeforeAccessCheck = value;
+        this.periodOfflineBeforeAccessCheck = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the periodOfflineBeforeWipeIsEnforced property value. The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped.
      * @param value Value to set for the periodOfflineBeforeWipeIsEnforced property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPeriodOfflineBeforeWipeIsEnforced(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.periodOfflineBeforeWipeIsEnforced = value;
+        this.periodOfflineBeforeWipeIsEnforced = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the periodOnlineBeforeAccessCheck property value. The period after which access is checked when the device is connected to the internet.
      * @param value Value to set for the periodOnlineBeforeAccessCheck property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPeriodOnlineBeforeAccessCheck(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.periodOnlineBeforeAccessCheck = value;
+        this.periodOnlineBeforeAccessCheck = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the pinCharacterSet property value. Character set which is to be used for a user's app PIN
      * @param value Value to set for the pinCharacterSet property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPinCharacterSet(@jakarta.annotation.Nullable final ManagedAppPinCharacterSet value) {
         this.pinCharacterSet = value;
     }
     /**
      * Sets the pinRequired property value. Indicates whether an app-level pin is required.
      * @param value Value to set for the pinRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPinRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.pinRequired = value;
     }
     /**
      * Sets the printBlocked property value. Indicates whether printing is allowed from managed apps.
      * @param value Value to set for the printBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrintBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.printBlocked = value;
     }
     /**
      * Sets the saveAsBlocked property value. Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
      * @param value Value to set for the saveAsBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSaveAsBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.saveAsBlocked = value;
     }
     /**
      * Sets the simplePinBlocked property value. Indicates whether simplePin is blocked.
      * @param value Value to set for the simplePinBlocked property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSimplePinBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.simplePinBlocked = value;
     }

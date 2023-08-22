@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible statuses associated with a generated report
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementReportStatus implements ValuedEnum {
     /** Report generation status is unknown */
     Unknown("unknown"),

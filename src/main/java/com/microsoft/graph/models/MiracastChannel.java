@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for Miracast channel.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MiracastChannel implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),

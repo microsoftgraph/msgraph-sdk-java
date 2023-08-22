@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryEstimateOperation extends CaseOperation implements Parsable {
     /**
      * The estimated count of items for the search that matched the content query.
@@ -37,9 +38,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
     private Long unindexedItemsSize;
     /**
      * Instantiates a new ediscoveryEstimateOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EdiscoveryEstimateOperation() {
         super();
     }
@@ -128,9 +127,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -145,63 +142,49 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
     /**
      * Sets the indexedItemCount property value. The estimated count of items for the search that matched the content query.
      * @param value Value to set for the indexedItemCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIndexedItemCount(@jakarta.annotation.Nullable final Long value) {
         this.indexedItemCount = value;
     }
     /**
      * Sets the indexedItemsSize property value. The estimated size of items for the search that matched the content query.
      * @param value Value to set for the indexedItemsSize property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIndexedItemsSize(@jakarta.annotation.Nullable final Long value) {
         this.indexedItemsSize = value;
     }
     /**
      * Sets the mailboxCount property value. The number of mailboxes that had search hits.
      * @param value Value to set for the mailboxCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMailboxCount(@jakarta.annotation.Nullable final Integer value) {
         this.mailboxCount = value;
     }
     /**
      * Sets the search property value. eDiscovery search.
      * @param value Value to set for the search property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSearch(@jakarta.annotation.Nullable final EdiscoverySearch value) {
         this.search = value;
     }
     /**
      * Sets the siteCount property value. The number of mailboxes that had search hits.
      * @param value Value to set for the siteCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSiteCount(@jakarta.annotation.Nullable final Integer value) {
         this.siteCount = value;
     }
     /**
      * Sets the unindexedItemCount property value. The estimated count of unindexed items for the collection.
      * @param value Value to set for the unindexedItemCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnindexedItemCount(@jakarta.annotation.Nullable final Long value) {
         this.unindexedItemCount = value;
     }
     /**
      * Sets the unindexedItemsSize property value. The estimated size of unindexed items for the collection.
      * @param value Value to set for the unindexedItemsSize property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnindexedItemsSize(@jakarta.annotation.Nullable final Long value) {
         this.unindexedItemsSize = value;
     }

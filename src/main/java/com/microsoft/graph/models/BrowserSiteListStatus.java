@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum BrowserSiteListStatus implements ValuedEnum {
     /** A site list that has not yet been published */
     Draft("draft"),

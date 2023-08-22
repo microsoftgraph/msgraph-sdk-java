@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for system scan type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DefenderScanType implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),

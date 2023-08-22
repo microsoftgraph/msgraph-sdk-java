@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ArchivePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -18,9 +19,7 @@ public class ArchivePostRequestBody implements AdditionalDataHolder, Parsable {
     private Boolean shouldSetSpoSiteReadOnlyForMembers;
     /**
      * Instantiates a new archivePostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ArchivePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -63,9 +62,7 @@ public class ArchivePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("shouldSetSpoSiteReadOnlyForMembers", this.getShouldSetSpoSiteReadOnlyForMembers());
@@ -74,18 +71,14 @@ public class ArchivePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the shouldSetSpoSiteReadOnlyForMembers property value. The shouldSetSpoSiteReadOnlyForMembers property
      * @param value Value to set for the shouldSetSpoSiteReadOnlyForMembers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShouldSetSpoSiteReadOnlyForMembers(@jakarta.annotation.Nullable final Boolean value) {
         this.shouldSetSpoSiteReadOnlyForMembers = value;
     }

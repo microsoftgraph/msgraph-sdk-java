@@ -10,6 +10,7 @@ import java.util.UUID;
 /**
  * Singleton entity that acts as a container for all device management functionality.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagement extends Entity implements Parsable {
     /**
      * Apple push notification certificate.
@@ -265,9 +266,7 @@ public class DeviceManagement extends Entity implements Parsable {
     private WindowsMalwareOverview windowsMalwareOverview;
     /**
      * Instantiates a new deviceManagement and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceManagement() {
         super();
     }
@@ -860,9 +859,7 @@ public class DeviceManagement extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -933,567 +930,441 @@ public class DeviceManagement extends Entity implements Parsable {
     /**
      * Sets the applePushNotificationCertificate property value. Apple push notification certificate.
      * @param value Value to set for the applePushNotificationCertificate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplePushNotificationCertificate(@jakarta.annotation.Nullable final ApplePushNotificationCertificate value) {
         this.applePushNotificationCertificate = value;
     }
     /**
      * Sets the auditEvents property value. The Audit Events
      * @param value Value to set for the auditEvents property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuditEvents(@jakarta.annotation.Nullable final java.util.List<AuditEvent> value) {
         this.auditEvents = value;
     }
     /**
      * Sets the complianceManagementPartners property value. The list of Compliance Management Partners configured by the tenant.
      * @param value Value to set for the complianceManagementPartners property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComplianceManagementPartners(@jakarta.annotation.Nullable final java.util.List<ComplianceManagementPartner> value) {
         this.complianceManagementPartners = value;
     }
     /**
      * Sets the conditionalAccessSettings property value. The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
      * @param value Value to set for the conditionalAccessSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConditionalAccessSettings(@jakarta.annotation.Nullable final OnPremisesConditionalAccessSettings value) {
         this.conditionalAccessSettings = value;
     }
     /**
      * Sets the detectedApps property value. The list of detected apps associated with a device.
      * @param value Value to set for the detectedApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDetectedApps(@jakarta.annotation.Nullable final java.util.List<DetectedApp> value) {
         this.detectedApps = value;
     }
     /**
      * Sets the deviceCategories property value. The list of device categories with the tenant.
      * @param value Value to set for the deviceCategories property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceCategories(@jakarta.annotation.Nullable final java.util.List<DeviceCategory> value) {
         this.deviceCategories = value;
     }
     /**
      * Sets the deviceCompliancePolicies property value. The device compliance policies.
      * @param value Value to set for the deviceCompliancePolicies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceCompliancePolicies(@jakarta.annotation.Nullable final java.util.List<DeviceCompliancePolicy> value) {
         this.deviceCompliancePolicies = value;
     }
     /**
      * Sets the deviceCompliancePolicyDeviceStateSummary property value. The device compliance state summary for this account.
      * @param value Value to set for the deviceCompliancePolicyDeviceStateSummary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceCompliancePolicyDeviceStateSummary(@jakarta.annotation.Nullable final DeviceCompliancePolicyDeviceStateSummary value) {
         this.deviceCompliancePolicyDeviceStateSummary = value;
     }
     /**
      * Sets the deviceCompliancePolicySettingStateSummaries property value. The summary states of compliance policy settings for this account.
      * @param value Value to set for the deviceCompliancePolicySettingStateSummaries property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceCompliancePolicySettingStateSummaries(@jakarta.annotation.Nullable final java.util.List<DeviceCompliancePolicySettingStateSummary> value) {
         this.deviceCompliancePolicySettingStateSummaries = value;
     }
     /**
      * Sets the deviceConfigurationDeviceStateSummaries property value. The device configuration device state summary for this account.
      * @param value Value to set for the deviceConfigurationDeviceStateSummaries property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceConfigurationDeviceStateSummaries(@jakarta.annotation.Nullable final DeviceConfigurationDeviceStateSummary value) {
         this.deviceConfigurationDeviceStateSummaries = value;
     }
     /**
      * Sets the deviceConfigurations property value. The device configurations.
      * @param value Value to set for the deviceConfigurations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceConfigurations(@jakarta.annotation.Nullable final java.util.List<DeviceConfiguration> value) {
         this.deviceConfigurations = value;
     }
     /**
      * Sets the deviceEnrollmentConfigurations property value. The list of device enrollment configurations
      * @param value Value to set for the deviceEnrollmentConfigurations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceEnrollmentConfigurations(@jakarta.annotation.Nullable final java.util.List<DeviceEnrollmentConfiguration> value) {
         this.deviceEnrollmentConfigurations = value;
     }
     /**
      * Sets the deviceManagementPartners property value. The list of Device Management Partners configured by the tenant.
      * @param value Value to set for the deviceManagementPartners property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceManagementPartners(@jakarta.annotation.Nullable final java.util.List<DeviceManagementPartner> value) {
         this.deviceManagementPartners = value;
     }
     /**
      * Sets the deviceProtectionOverview property value. Device protection overview.
      * @param value Value to set for the deviceProtectionOverview property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceProtectionOverview(@jakarta.annotation.Nullable final DeviceProtectionOverview value) {
         this.deviceProtectionOverview = value;
     }
     /**
      * Sets the exchangeConnectors property value. The list of Exchange Connectors configured by the tenant.
      * @param value Value to set for the exchangeConnectors property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExchangeConnectors(@jakarta.annotation.Nullable final java.util.List<DeviceManagementExchangeConnector> value) {
         this.exchangeConnectors = value;
     }
     /**
      * Sets the importedWindowsAutopilotDeviceIdentities property value. Collection of imported Windows autopilot devices.
      * @param value Value to set for the importedWindowsAutopilotDeviceIdentities property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImportedWindowsAutopilotDeviceIdentities(@jakarta.annotation.Nullable final java.util.List<ImportedWindowsAutopilotDeviceIdentity> value) {
         this.importedWindowsAutopilotDeviceIdentities = value;
     }
     /**
      * Sets the intuneAccountId property value. Intune Account Id for given tenant
      * @param value Value to set for the intuneAccountId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIntuneAccountId(@jakarta.annotation.Nullable final UUID value) {
         this.intuneAccountId = value;
     }
     /**
      * Sets the intuneBrand property value. intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
      * @param value Value to set for the intuneBrand property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIntuneBrand(@jakarta.annotation.Nullable final IntuneBrand value) {
         this.intuneBrand = value;
     }
     /**
      * Sets the iosUpdateStatuses property value. The IOS software update installation statuses for this account.
      * @param value Value to set for the iosUpdateStatuses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIosUpdateStatuses(@jakarta.annotation.Nullable final java.util.List<IosUpdateDeviceStatus> value) {
         this.iosUpdateStatuses = value;
     }
     /**
      * Sets the managedDeviceOverview property value. Device overview
      * @param value Value to set for the managedDeviceOverview property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagedDeviceOverview(@jakarta.annotation.Nullable final ManagedDeviceOverview value) {
         this.managedDeviceOverview = value;
     }
     /**
      * Sets the managedDevices property value. The list of managed devices.
      * @param value Value to set for the managedDevices property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagedDevices(@jakarta.annotation.Nullable final java.util.List<ManagedDevice> value) {
         this.managedDevices = value;
     }
     /**
      * Sets the mobileAppTroubleshootingEvents property value. The collection property of MobileAppTroubleshootingEvent.
      * @param value Value to set for the mobileAppTroubleshootingEvents property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMobileAppTroubleshootingEvents(@jakarta.annotation.Nullable final java.util.List<MobileAppTroubleshootingEvent> value) {
         this.mobileAppTroubleshootingEvents = value;
     }
     /**
      * Sets the mobileThreatDefenseConnectors property value. The list of Mobile threat Defense connectors configured by the tenant.
      * @param value Value to set for the mobileThreatDefenseConnectors property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMobileThreatDefenseConnectors(@jakarta.annotation.Nullable final java.util.List<MobileThreatDefenseConnector> value) {
         this.mobileThreatDefenseConnectors = value;
     }
     /**
      * Sets the notificationMessageTemplates property value. The Notification Message Templates.
      * @param value Value to set for the notificationMessageTemplates property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotificationMessageTemplates(@jakarta.annotation.Nullable final java.util.List<NotificationMessageTemplate> value) {
         this.notificationMessageTemplates = value;
     }
     /**
      * Sets the remoteAssistancePartners property value. The remote assist partners.
      * @param value Value to set for the remoteAssistancePartners property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRemoteAssistancePartners(@jakarta.annotation.Nullable final java.util.List<RemoteAssistancePartner> value) {
         this.remoteAssistancePartners = value;
     }
     /**
      * Sets the reports property value. Reports singleton
      * @param value Value to set for the reports property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReports(@jakarta.annotation.Nullable final DeviceManagementReports value) {
         this.reports = value;
     }
     /**
      * Sets the resourceOperations property value. The Resource Operations.
      * @param value Value to set for the resourceOperations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceOperations(@jakarta.annotation.Nullable final java.util.List<ResourceOperation> value) {
         this.resourceOperations = value;
     }
     /**
      * Sets the roleAssignments property value. The Role Assignments.
      * @param value Value to set for the roleAssignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceAndAppManagementRoleAssignment> value) {
         this.roleAssignments = value;
     }
     /**
      * Sets the roleDefinitions property value. The Role Definitions.
      * @param value Value to set for the roleDefinitions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleDefinitions(@jakarta.annotation.Nullable final java.util.List<RoleDefinition> value) {
         this.roleDefinitions = value;
     }
     /**
      * Sets the settings property value. Account level settings.
      * @param value Value to set for the settings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettings(@jakarta.annotation.Nullable final DeviceManagementSettings value) {
         this.settings = value;
     }
     /**
      * Sets the softwareUpdateStatusSummary property value. The software update status summary.
      * @param value Value to set for the softwareUpdateStatusSummary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSoftwareUpdateStatusSummary(@jakarta.annotation.Nullable final SoftwareUpdateStatusSummary value) {
         this.softwareUpdateStatusSummary = value;
     }
     /**
      * Sets the subscriptionState property value. Tenant mobile device management subscription state.
      * @param value Value to set for the subscriptionState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubscriptionState(@jakarta.annotation.Nullable final DeviceManagementSubscriptionState value) {
         this.subscriptionState = value;
     }
     /**
      * Sets the telecomExpenseManagementPartners property value. The telecom expense management partners.
      * @param value Value to set for the telecomExpenseManagementPartners property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTelecomExpenseManagementPartners(@jakarta.annotation.Nullable final java.util.List<TelecomExpenseManagementPartner> value) {
         this.telecomExpenseManagementPartners = value;
     }
     /**
      * Sets the termsAndConditions property value. The terms and conditions associated with device management of the company.
      * @param value Value to set for the termsAndConditions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTermsAndConditions(@jakarta.annotation.Nullable final java.util.List<TermsAndConditions> value) {
         this.termsAndConditions = value;
     }
     /**
      * Sets the troubleshootingEvents property value. The list of troubleshooting events for the tenant.
      * @param value Value to set for the troubleshootingEvents property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTroubleshootingEvents(@jakarta.annotation.Nullable final java.util.List<DeviceManagementTroubleshootingEvent> value) {
         this.troubleshootingEvents = value;
     }
     /**
      * Sets the userExperienceAnalyticsAppHealthApplicationPerformance property value. User experience analytics appHealth Application Performance
      * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformance property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthApplicationPerformance(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthApplicationPerformance> value) {
         this.userExperienceAnalyticsAppHealthApplicationPerformance = value;
     }
     /**
      * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property value. User experience analytics appHealth Application Performance by App Version details
      * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails> value) {
         this.userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails = value;
     }
     /**
      * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property value. User experience analytics appHealth Application Performance by App Version Device Id
      * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> value) {
         this.userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId = value;
     }
     /**
      * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property value. User experience analytics appHealth Application Performance by OS Version
      * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> value) {
         this.userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion = value;
     }
     /**
      * Sets the userExperienceAnalyticsAppHealthDeviceModelPerformance property value. User experience analytics appHealth Model Performance
      * @param value Value to set for the userExperienceAnalyticsAppHealthDeviceModelPerformance property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthDeviceModelPerformance(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthDeviceModelPerformance> value) {
         this.userExperienceAnalyticsAppHealthDeviceModelPerformance = value;
     }
     /**
      * Sets the userExperienceAnalyticsAppHealthDevicePerformance property value. User experience analytics appHealth Device Performance
      * @param value Value to set for the userExperienceAnalyticsAppHealthDevicePerformance property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthDevicePerformance(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthDevicePerformance> value) {
         this.userExperienceAnalyticsAppHealthDevicePerformance = value;
     }
     /**
      * Sets the userExperienceAnalyticsAppHealthDevicePerformanceDetails property value. User experience analytics device performance details
      * @param value Value to set for the userExperienceAnalyticsAppHealthDevicePerformanceDetails property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthDevicePerformanceDetails(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> value) {
         this.userExperienceAnalyticsAppHealthDevicePerformanceDetails = value;
     }
     /**
      * Sets the userExperienceAnalyticsAppHealthOSVersionPerformance property value. User experience analytics appHealth OS version Performance
      * @param value Value to set for the userExperienceAnalyticsAppHealthOSVersionPerformance property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthOSVersionPerformance(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthOSVersionPerformance> value) {
         this.userExperienceAnalyticsAppHealthOSVersionPerformance = value;
     }
     /**
      * Sets the userExperienceAnalyticsAppHealthOverview property value. User experience analytics appHealth overview
      * @param value Value to set for the userExperienceAnalyticsAppHealthOverview property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthOverview(@jakarta.annotation.Nullable final UserExperienceAnalyticsCategory value) {
         this.userExperienceAnalyticsAppHealthOverview = value;
     }
     /**
      * Sets the userExperienceAnalyticsBaselines property value. User experience analytics baselines
      * @param value Value to set for the userExperienceAnalyticsBaselines property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsBaselines(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsBaseline> value) {
         this.userExperienceAnalyticsBaselines = value;
     }
     /**
      * Sets the userExperienceAnalyticsCategories property value. User experience analytics categories
      * @param value Value to set for the userExperienceAnalyticsCategories property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsCategories(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsCategory> value) {
         this.userExperienceAnalyticsCategories = value;
     }
     /**
      * Sets the userExperienceAnalyticsDevicePerformance property value. User experience analytics device performance
      * @param value Value to set for the userExperienceAnalyticsDevicePerformance property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsDevicePerformance(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsDevicePerformance> value) {
         this.userExperienceAnalyticsDevicePerformance = value;
     }
     /**
      * Sets the userExperienceAnalyticsDeviceScores property value. User experience analytics device scores
      * @param value Value to set for the userExperienceAnalyticsDeviceScores property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsDeviceScores(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceScores> value) {
         this.userExperienceAnalyticsDeviceScores = value;
     }
     /**
      * Sets the userExperienceAnalyticsDeviceStartupHistory property value. User experience analytics device Startup History
      * @param value Value to set for the userExperienceAnalyticsDeviceStartupHistory property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsDeviceStartupHistory(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceStartupHistory> value) {
         this.userExperienceAnalyticsDeviceStartupHistory = value;
     }
     /**
      * Sets the userExperienceAnalyticsDeviceStartupProcesses property value. User experience analytics device Startup Processes
      * @param value Value to set for the userExperienceAnalyticsDeviceStartupProcesses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsDeviceStartupProcesses(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceStartupProcess> value) {
         this.userExperienceAnalyticsDeviceStartupProcesses = value;
     }
     /**
      * Sets the userExperienceAnalyticsMetricHistory property value. User experience analytics metric history
      * @param value Value to set for the userExperienceAnalyticsMetricHistory property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsMetricHistory(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsMetricHistory> value) {
         this.userExperienceAnalyticsMetricHistory = value;
     }
     /**
      * Sets the userExperienceAnalyticsModelScores property value. User experience analytics model scores
      * @param value Value to set for the userExperienceAnalyticsModelScores property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsModelScores(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsModelScores> value) {
         this.userExperienceAnalyticsModelScores = value;
     }
     /**
      * Sets the userExperienceAnalyticsOverview property value. User experience analytics overview
      * @param value Value to set for the userExperienceAnalyticsOverview property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsOverview(@jakarta.annotation.Nullable final UserExperienceAnalyticsOverview value) {
         this.userExperienceAnalyticsOverview = value;
     }
     /**
      * Sets the userExperienceAnalyticsScoreHistory property value. User experience analytics device Startup Score History
      * @param value Value to set for the userExperienceAnalyticsScoreHistory property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsScoreHistory(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsScoreHistory> value) {
         this.userExperienceAnalyticsScoreHistory = value;
     }
     /**
      * Sets the userExperienceAnalyticsSettings property value. User experience analytics device settings
      * @param value Value to set for the userExperienceAnalyticsSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsSettings(@jakarta.annotation.Nullable final UserExperienceAnalyticsSettings value) {
         this.userExperienceAnalyticsSettings = value;
     }
     /**
      * Sets the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric property value. User experience analytics work from anywhere hardware readiness metrics.
      * @param value Value to set for the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric(@jakarta.annotation.Nullable final UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric value) {
         this.userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric = value;
     }
     /**
      * Sets the userExperienceAnalyticsWorkFromAnywhereMetrics property value. User experience analytics work from anywhere metrics.
      * @param value Value to set for the userExperienceAnalyticsWorkFromAnywhereMetrics property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsWorkFromAnywhereMetrics(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsWorkFromAnywhereMetric> value) {
         this.userExperienceAnalyticsWorkFromAnywhereMetrics = value;
     }
     /**
      * Sets the userExperienceAnalyticsWorkFromAnywhereModelPerformance property value. The user experience analytics work from anywhere model performance
      * @param value Value to set for the userExperienceAnalyticsWorkFromAnywhereModelPerformance property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserExperienceAnalyticsWorkFromAnywhereModelPerformance(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> value) {
         this.userExperienceAnalyticsWorkFromAnywhereModelPerformance = value;
     }
     /**
      * Sets the windowsAutopilotDeviceIdentities property value. The Windows autopilot device identities contained collection.
      * @param value Value to set for the windowsAutopilotDeviceIdentities property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsAutopilotDeviceIdentities(@jakarta.annotation.Nullable final java.util.List<WindowsAutopilotDeviceIdentity> value) {
         this.windowsAutopilotDeviceIdentities = value;
     }
     /**
      * Sets the windowsInformationProtectionAppLearningSummaries property value. The windows information protection app learning summaries.
      * @param value Value to set for the windowsInformationProtectionAppLearningSummaries property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsInformationProtectionAppLearningSummaries(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionAppLearningSummary> value) {
         this.windowsInformationProtectionAppLearningSummaries = value;
     }
     /**
      * Sets the windowsInformationProtectionNetworkLearningSummaries property value. The windows information protection network learning summaries.
      * @param value Value to set for the windowsInformationProtectionNetworkLearningSummaries property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsInformationProtectionNetworkLearningSummaries(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionNetworkLearningSummary> value) {
         this.windowsInformationProtectionNetworkLearningSummaries = value;
     }
     /**
      * Sets the windowsMalwareInformation property value. The list of affected malware in the tenant.
      * @param value Value to set for the windowsMalwareInformation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsMalwareInformation(@jakarta.annotation.Nullable final java.util.List<WindowsMalwareInformation> value) {
         this.windowsMalwareInformation = value;
     }
     /**
      * Sets the windowsMalwareOverview property value. Malware overview for windows devices.
      * @param value Value to set for the windowsMalwareOverview property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsMalwareOverview(@jakarta.annotation.Nullable final WindowsMalwareOverview value) {
         this.windowsMalwareOverview = value;
     }

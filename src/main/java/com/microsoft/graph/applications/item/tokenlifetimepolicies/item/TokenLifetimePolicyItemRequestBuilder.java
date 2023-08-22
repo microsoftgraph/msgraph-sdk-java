@@ -8,6 +8,7 @@ import java.util.Objects;
 /**
  * Builds and executes requests for operations under /applications/{application-id}/tokenLifetimePolicies/{tokenLifetimePolicy-id}
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of application entities.
@@ -20,9 +21,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new TokenLifetimePolicyItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TokenLifetimePolicyItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/tokenLifetimePolicies/{tokenLifetimePolicy%2Did}", pathParameters);
     }
@@ -30,9 +29,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new TokenLifetimePolicyItemRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TokenLifetimePolicyItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/tokenLifetimePolicies/{tokenLifetimePolicy%2Did}", rawUrl);
     }

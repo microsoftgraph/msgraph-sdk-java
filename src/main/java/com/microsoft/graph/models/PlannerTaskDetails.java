@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerTaskDetails extends Entity implements Parsable {
     /**
      * The collection of checklist items on the task.
@@ -25,9 +26,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
     private PlannerExternalReferences references;
     /**
      * Instantiates a new plannerTaskDetails and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PlannerTaskDetails() {
         super();
     }
@@ -89,9 +88,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -103,36 +100,28 @@ public class PlannerTaskDetails extends Entity implements Parsable {
     /**
      * Sets the checklist property value. The collection of checklist items on the task.
      * @param value Value to set for the checklist property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChecklist(@jakarta.annotation.Nullable final PlannerChecklistItems value) {
         this.checklist = value;
     }
     /**
      * Sets the description property value. Description of the task.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
      * @param value Value to set for the previewType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPreviewType(@jakarta.annotation.Nullable final PlannerPreviewType value) {
         this.previewType = value;
     }
     /**
      * Sets the references property value. The collection of references on the task.
      * @param value Value to set for the references property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReferences(@jakarta.annotation.Nullable final PlannerExternalReferences value) {
         this.references = value;
     }

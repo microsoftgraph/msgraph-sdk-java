@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     /**
      * Description for the policy.
@@ -46,9 +47,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     private String scopeType;
     /**
      * Instantiates a new unifiedRoleManagementPolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicy() {
         super();
     }
@@ -155,9 +154,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -174,81 +171,63 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     /**
      * Sets the description property value. Description for the policy.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Display name for the policy.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the effectiveRules property value. The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
      * @param value Value to set for the effectiveRules property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEffectiveRules(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRule> value) {
         this.effectiveRules = value;
     }
     /**
      * Sets the isOrganizationDefault property value. This can only be set to true for a single tenant-wide policy which will apply to all scopes and roles. Set the scopeId to / and scopeType to Directory. Supports $filter (eq, ne).
      * @param value Value to set for the isOrganizationDefault property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsOrganizationDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isOrganizationDefault = value;
     }
     /**
      * Sets the lastModifiedBy property value. The identity who last modified the role setting.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedBy(@jakarta.annotation.Nullable final Identity value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The time when the role setting was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the rules property value. The collection of rules like approval rules and expiration rules. Supports $expand.
      * @param value Value to set for the rules property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRules(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRule> value) {
         this.rules = value;
     }
     /**
      * Sets the scopeId property value. The identifier of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
      * @param value Value to set for the scopeId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScopeId(@jakarta.annotation.Nullable final String value) {
         this.scopeId = value;
     }
     /**
      * Sets the scopeType property value. The type of the scope where the policy is created. One of Directory, DirectoryRole. Required.
      * @param value Value to set for the scopeType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScopeType(@jakarta.annotation.Nullable final String value) {
         this.scopeType = value;
     }

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class LookupColumn implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
     private String primaryLookupColumnId;
     /**
      * Instantiates a new lookupColumn and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LookupColumn() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +127,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowMultipleValues", this.getAllowMultipleValues());
@@ -144,63 +141,49 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowMultipleValues property value. Indicates whether multiple values can be selected from the source.
      * @param value Value to set for the allowMultipleValues property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowMultipleValues(@jakarta.annotation.Nullable final Boolean value) {
         this.allowMultipleValues = value;
     }
     /**
      * Sets the allowUnlimitedLength property value. Indicates whether values in the column should be able to exceed the standard limit of 255 characters.
      * @param value Value to set for the allowUnlimitedLength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowUnlimitedLength(@jakarta.annotation.Nullable final Boolean value) {
         this.allowUnlimitedLength = value;
     }
     /**
      * Sets the columnName property value. The name of the lookup source column.
      * @param value Value to set for the columnName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColumnName(@jakarta.annotation.Nullable final String value) {
         this.columnName = value;
     }
     /**
      * Sets the listId property value. The unique identifier of the lookup source list.
      * @param value Value to set for the listId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setListId(@jakarta.annotation.Nullable final String value) {
         this.listId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the primaryLookupColumnId property value. If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.
      * @param value Value to set for the primaryLookupColumnId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrimaryLookupColumnId(@jakarta.annotation.Nullable final String value) {
         this.primaryLookupColumnId = value;
     }

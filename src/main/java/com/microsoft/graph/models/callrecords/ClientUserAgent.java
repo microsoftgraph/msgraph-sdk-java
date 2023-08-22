@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ClientUserAgent extends UserAgent implements Parsable {
     /**
      * The unique identifier of the Azure AD application used by this endpoint.
@@ -25,9 +26,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     private ProductFamily productFamily;
     /**
      * Instantiates a new clientUserAgent and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ClientUserAgent() {
         super();
         this.setOdataType("#microsoft.graph.callRecords.clientUserAgent");
@@ -90,9 +89,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +101,28 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     /**
      * Sets the azureADAppId property value. The unique identifier of the Azure AD application used by this endpoint.
      * @param value Value to set for the azureADAppId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAzureADAppId(@jakarta.annotation.Nullable final String value) {
         this.azureADAppId = value;
     }
     /**
      * Sets the communicationServiceId property value. Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
      * @param value Value to set for the communicationServiceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCommunicationServiceId(@jakarta.annotation.Nullable final String value) {
         this.communicationServiceId = value;
     }
     /**
      * Sets the platform property value. The platform property
      * @param value Value to set for the platform property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPlatform(@jakarta.annotation.Nullable final ClientPlatform value) {
         this.platform = value;
     }
     /**
      * Sets the productFamily property value. The productFamily property
      * @param value Value to set for the productFamily property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProductFamily(@jakarta.annotation.Nullable final ProductFamily value) {
         this.productFamily = value;
     }

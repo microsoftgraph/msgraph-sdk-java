@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
     private String value;
     /**
      * Instantiates a new defaultColumnValue and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DefaultColumnValue() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("formula", this.getFormula());
@@ -102,36 +99,28 @@ public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the formula property value. The formula used to compute the default value for the column.
      * @param value Value to set for the formula property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFormula(@jakarta.annotation.Nullable final String value) {
         this.formula = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the value property value. The direct value to use as the default value for the column.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }

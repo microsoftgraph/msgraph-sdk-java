@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -27,9 +28,7 @@ public class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, P
     private Boolean sendResponse;
     /**
      * Instantiates a new tentativelyAcceptPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TentativelyAcceptPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +89,7 @@ public class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, P
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("Comment", this.getComment());
@@ -103,36 +100,28 @@ public class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, P
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the Comment property value. The Comment property
      * @param value Value to set for the Comment property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComment(@jakarta.annotation.Nullable final String value) {
         this.comment = value;
     }
     /**
      * Sets the ProposedNewTime property value. The ProposedNewTime property
      * @param value Value to set for the ProposedNewTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProposedNewTime(@jakarta.annotation.Nullable final TimeSlot value) {
         this.proposedNewTime = value;
     }
     /**
      * Sets the SendResponse property value. The SendResponse property
      * @param value Value to set for the SendResponse property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSendResponse(@jakarta.annotation.Nullable final Boolean value) {
         this.sendResponse = value;
     }

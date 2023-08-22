@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the type of restart action.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Win32LobAppRestartBehavior implements ValuedEnum {
     /** Intune will restart the device after running the app installation if the operation returns a reboot code. */
     BasedOnReturnCode("basedOnReturnCode"),

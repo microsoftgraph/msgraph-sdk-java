@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Type of display modes for the start menu.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsStartMenuModeType implements ValuedEnum {
     /** User defined. Default value. */
     UserDefined("userDefined"),

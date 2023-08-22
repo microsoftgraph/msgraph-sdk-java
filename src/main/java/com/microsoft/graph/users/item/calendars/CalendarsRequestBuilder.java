@@ -14,7 +14,6 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -22,6 +21,7 @@ import java.util.Objects;
 /**
  * Provides operations to manage the calendars property of the microsoft.graph.user entity.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CalendarsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
@@ -46,9 +46,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new CalendarsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CalendarsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendars{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
@@ -56,9 +54,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new CalendarsRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CalendarsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendars{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
@@ -69,17 +65,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarCollectionResponse> get() {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, CalendarCollectionResponse::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<CalendarCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<CalendarCollectionResponse>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return get(null);
     }
     /**
      * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group. 
@@ -89,17 +75,11 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, CalendarCollectionResponse::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<CalendarCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<CalendarCollectionResponse>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, CalendarCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a new calendar for a user.
@@ -109,17 +89,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Calendar> post(@jakarta.annotation.Nonnull final Calendar body) {
-        try {
-            final RequestInformation requestInfo = toPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, Calendar::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Calendar> executionException = new java.util.concurrent.CompletableFuture<Calendar>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return post(body, null);
     }
     /**
      * Create a new calendar for a user.
@@ -131,24 +101,18 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Calendar> post(@jakarta.annotation.Nonnull final Calendar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, Calendar::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Calendar> executionException = new java.util.concurrent.CompletableFuture<Calendar>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, Calendar::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+    public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
@@ -157,7 +121,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -178,7 +142,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Calendar body) throws URISyntaxException {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Calendar body) {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -188,7 +152,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Calendar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Calendar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -207,6 +171,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all the user's calendars (/calendars navigation property), get the calendars from the default calendar group or from a specific calendar group. 
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
         /**
          * Include count of items
@@ -254,6 +219,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetRequestConfiguration extends BaseRequestConfiguration {
         /**
          * Request query parameters
@@ -264,6 +230,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

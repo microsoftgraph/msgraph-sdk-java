@@ -14,7 +14,6 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -22,6 +21,7 @@ import java.util.Objects;
 /**
  * Provides operations to manage the versions property of the microsoft.graph.identityGovernance.workflow entity.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the createdBy property of the microsoft.graph.identityGovernance.workflowBase entity.
@@ -48,9 +48,7 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
      * Instantiates a new WorkflowVersionVersionNumberItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkflowVersionVersionNumberItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/versions/{workflowVersion%2DversionNumber}{?%24select,%24expand}", pathParameters);
     }
@@ -58,9 +56,7 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
      * Instantiates a new WorkflowVersionVersionNumberItemRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkflowVersionVersionNumberItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/versions/{workflowVersion%2DversionNumber}{?%24select,%24expand}", rawUrl);
     }
@@ -71,17 +67,7 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkflowVersion> get() {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, WorkflowVersion::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<WorkflowVersion> executionException = new java.util.concurrent.CompletableFuture<WorkflowVersion>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return get(null);
     }
     /**
      * Read the properties and relationships of a workflowVersion object.
@@ -91,24 +77,18 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkflowVersion> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, WorkflowVersion::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<WorkflowVersion> executionException = new java.util.concurrent.CompletableFuture<WorkflowVersion>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, WorkflowVersion::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Read the properties and relationships of a workflowVersion object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+    public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
@@ -117,7 +97,7 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -135,6 +115,7 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
     /**
      * Read the properties and relationships of a workflowVersion object.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
         /**
          * Expand related entities
@@ -152,6 +133,7 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetRequestConfiguration extends BaseRequestConfiguration {
         /**
          * Request query parameters

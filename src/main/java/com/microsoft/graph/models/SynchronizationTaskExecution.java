@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsable {
     /**
      * Identifier of the job run.
@@ -75,9 +76,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     private OffsetDateTime timeEnded;
     /**
      * Instantiates a new synchronizationTaskExecution and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SynchronizationTaskExecution() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -246,9 +245,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("activityIdentifier", this.getActivityIdentifier());
@@ -271,144 +268,112 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     /**
      * Sets the activityIdentifier property value. Identifier of the job run.
      * @param value Value to set for the activityIdentifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivityIdentifier(@jakarta.annotation.Nullable final String value) {
         this.activityIdentifier = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the countEntitled property value. Count of processed entries that were assigned for this application.
      * @param value Value to set for the countEntitled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountEntitled(@jakarta.annotation.Nullable final Long value) {
         this.countEntitled = value;
     }
     /**
      * Sets the countEntitledForProvisioning property value. Count of processed entries that were assigned for provisioning.
      * @param value Value to set for the countEntitledForProvisioning property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountEntitledForProvisioning(@jakarta.annotation.Nullable final Long value) {
         this.countEntitledForProvisioning = value;
     }
     /**
      * Sets the countEscrowed property value. Count of entries that were escrowed (errors).
      * @param value Value to set for the countEscrowed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountEscrowed(@jakarta.annotation.Nullable final Long value) {
         this.countEscrowed = value;
     }
     /**
      * Sets the countEscrowedRaw property value. Count of entries that were escrowed, including system-generated escrows.
      * @param value Value to set for the countEscrowedRaw property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountEscrowedRaw(@jakarta.annotation.Nullable final Long value) {
         this.countEscrowedRaw = value;
     }
     /**
      * Sets the countExported property value. Count of exported entries.
      * @param value Value to set for the countExported property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountExported(@jakarta.annotation.Nullable final Long value) {
         this.countExported = value;
     }
     /**
      * Sets the countExports property value. Count of entries that were expected to be exported.
      * @param value Value to set for the countExports property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountExports(@jakarta.annotation.Nullable final Long value) {
         this.countExports = value;
     }
     /**
      * Sets the countImported property value. Count of imported entries.
      * @param value Value to set for the countImported property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountImported(@jakarta.annotation.Nullable final Long value) {
         this.countImported = value;
     }
     /**
      * Sets the countImportedDeltas property value. Count of imported delta-changes.
      * @param value Value to set for the countImportedDeltas property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountImportedDeltas(@jakarta.annotation.Nullable final Long value) {
         this.countImportedDeltas = value;
     }
     /**
      * Sets the countImportedReferenceDeltas property value. Count of imported delta-changes pertaining to reference changes.
      * @param value Value to set for the countImportedReferenceDeltas property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountImportedReferenceDeltas(@jakarta.annotation.Nullable final Long value) {
         this.countImportedReferenceDeltas = value;
     }
     /**
      * Sets the error property value. If an error was encountered, contains a synchronizationError object with details.
      * @param value Value to set for the error property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setError(@jakarta.annotation.Nullable final SynchronizationError value) {
         this.error = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final SynchronizationTaskExecutionResult value) {
         this.state = value;
     }
     /**
      * Sets the timeBegan property value. Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the timeBegan property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeBegan(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.timeBegan = value;
     }
     /**
      * Sets the timeEnded property value. Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the timeEnded property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeEnded(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.timeEnded = value;
     }

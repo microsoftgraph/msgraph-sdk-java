@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -58,9 +59,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     private RegistryValueType valueType;
     /**
      * Instantiates a new registryKeyState and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RegistryKeyState() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -193,9 +192,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("hive", this.getHive());
@@ -214,108 +211,84 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the hive property value. A Windows registry hive : HKEYCURRENTCONFIG HKEYCURRENTUSER HKEYLOCALMACHINE/SAM HKEYLOCALMACHINE/Security HKEYLOCALMACHINE/Software HKEYLOCALMACHINE/System HKEY_USERS/.Default. Possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault.
      * @param value Value to set for the hive property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHive(@jakarta.annotation.Nullable final RegistryHive value) {
         this.hive = value;
     }
     /**
      * Sets the key property value. Current (i.e. changed) registry key (excludes HIVE).
      * @param value Value to set for the key property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKey(@jakarta.annotation.Nullable final String value) {
         this.key = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the oldKey property value. Previous (i.e. before changed) registry key (excludes HIVE).
      * @param value Value to set for the oldKey property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOldKey(@jakarta.annotation.Nullable final String value) {
         this.oldKey = value;
     }
     /**
      * Sets the oldValueData property value. Previous (i.e. before changed) registry key value data (contents).
      * @param value Value to set for the oldValueData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOldValueData(@jakarta.annotation.Nullable final String value) {
         this.oldValueData = value;
     }
     /**
      * Sets the oldValueName property value. Previous (i.e. before changed) registry key value name.
      * @param value Value to set for the oldValueName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOldValueName(@jakarta.annotation.Nullable final String value) {
         this.oldValueName = value;
     }
     /**
      * Sets the operation property value. Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete.
      * @param value Value to set for the operation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperation(@jakarta.annotation.Nullable final RegistryOperation value) {
         this.operation = value;
     }
     /**
      * Sets the processId property value. Process ID (PID) of the process that modified the registry key (process details will appear in the alert 'processes' collection).
      * @param value Value to set for the processId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProcessId(@jakarta.annotation.Nullable final Integer value) {
         this.processId = value;
     }
     /**
      * Sets the valueData property value. Current (i.e. changed) registry key value data (contents).
      * @param value Value to set for the valueData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValueData(@jakarta.annotation.Nullable final String value) {
         this.valueData = value;
     }
     /**
      * Sets the valueName property value. Current (i.e. changed) registry key value name
      * @param value Value to set for the valueName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValueName(@jakarta.annotation.Nullable final String value) {
         this.valueName = value;
     }
     /**
      * Sets the valueType property value. Registry key value type REGBINARY REGDWORD REGDWORDLITTLEENDIAN REGDWORDBIGENDIANREGEXPANDSZ REGLINK REGMULTISZ REGNONE REGQWORD REGQWORDLITTLEENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
      * @param value Value to set for the valueType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValueType(@jakarta.annotation.Nullable final RegistryValueType value) {
         this.valueType = value;
     }

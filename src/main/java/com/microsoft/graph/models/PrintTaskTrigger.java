@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintTaskTrigger extends Entity implements Parsable {
     /**
      * The definition property
@@ -17,9 +18,7 @@ public class PrintTaskTrigger extends Entity implements Parsable {
     private PrintEvent event;
     /**
      * Instantiates a new printTaskTrigger and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PrintTaskTrigger() {
         super();
     }
@@ -63,9 +62,7 @@ public class PrintTaskTrigger extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class PrintTaskTrigger extends Entity implements Parsable {
     /**
      * Sets the definition property value. The definition property
      * @param value Value to set for the definition property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefinition(@jakarta.annotation.Nullable final PrintTaskDefinition value) {
         this.definition = value;
     }
     /**
      * Sets the event property value. The event property
      * @param value Value to set for the event property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEvent(@jakarta.annotation.Nullable final PrintEvent value) {
         this.event = value;
     }

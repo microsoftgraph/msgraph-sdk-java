@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new approvalSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ApprovalSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +127,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("approvalMode", this.getApprovalMode());
@@ -144,63 +141,49 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the approvalMode property value. One of SingleStage, Serial, Parallel, NoApproval (default). NoApproval is used when isApprovalRequired is false.
      * @param value Value to set for the approvalMode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApprovalMode(@jakarta.annotation.Nullable final String value) {
         this.approvalMode = value;
     }
     /**
      * Sets the approvalStages property value. If approval is required, the one or two elements of this collection define each of the stages of approval. An empty array if no approval is required.
      * @param value Value to set for the approvalStages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApprovalStages(@jakarta.annotation.Nullable final java.util.List<UnifiedApprovalStage> value) {
         this.approvalStages = value;
     }
     /**
      * Sets the isApprovalRequired property value. Indicates whether approval is required for requests in this policy.
      * @param value Value to set for the isApprovalRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsApprovalRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isApprovalRequired = value;
     }
     /**
      * Sets the isApprovalRequiredForExtension property value. Indicates whether approval is required for a user to extend their assignment.
      * @param value Value to set for the isApprovalRequiredForExtension property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsApprovalRequiredForExtension(@jakarta.annotation.Nullable final Boolean value) {
         this.isApprovalRequiredForExtension = value;
     }
     /**
      * Sets the isRequestorJustificationRequired property value. Indicates whether the requestor is required to supply a justification in their request.
      * @param value Value to set for the isRequestorJustificationRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsRequestorJustificationRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isRequestorJustificationRequired = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

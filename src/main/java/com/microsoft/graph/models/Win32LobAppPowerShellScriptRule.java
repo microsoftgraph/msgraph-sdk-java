@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * A complex type to store the PowerShell script rule data for a Win32 LOB app.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsable {
     /**
      * The script output comparison value. Do not specify a value if the rule is used for detection.
@@ -44,9 +45,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     private String scriptContent;
     /**
      * Instantiates a new win32LobAppPowerShellScriptRule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Win32LobAppPowerShellScriptRule() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppPowerShellScriptRule");
@@ -145,9 +144,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -163,72 +160,56 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     /**
      * Sets the comparisonValue property value. The script output comparison value. Do not specify a value if the rule is used for detection.
      * @param value Value to set for the comparisonValue property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComparisonValue(@jakarta.annotation.Nullable final String value) {
         this.comparisonValue = value;
     }
     /**
      * Sets the displayName property value. The display name for the rule. Do not specify this value if the rule is used for detection.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the enforceSignatureCheck property value. A value indicating whether a signature check is enforced.
      * @param value Value to set for the enforceSignatureCheck property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnforceSignatureCheck(@jakarta.annotation.Nullable final Boolean value) {
         this.enforceSignatureCheck = value;
     }
     /**
      * Sets the operationType property value. Contains all supported Powershell Script output detection type.
      * @param value Value to set for the operationType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperationType(@jakarta.annotation.Nullable final Win32LobAppPowerShellScriptRuleOperationType value) {
         this.operationType = value;
     }
     /**
      * Sets the operator property value. Contains properties for detection operator.
      * @param value Value to set for the operator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperator(@jakarta.annotation.Nullable final Win32LobAppRuleOperator value) {
         this.operator = value;
     }
     /**
      * Sets the runAs32Bit property value. A value indicating whether the script should run as 32-bit.
      * @param value Value to set for the runAs32Bit property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRunAs32Bit(@jakarta.annotation.Nullable final Boolean value) {
         this.runAs32Bit = value;
     }
     /**
      * Sets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
      * @param value Value to set for the runAsAccount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRunAsAccount(@jakarta.annotation.Nullable final RunAsAccountType value) {
         this.runAsAccount = value;
     }
     /**
      * Sets the scriptContent property value. The base64-encoded script content.
      * @param value Value to set for the scriptContent property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScriptContent(@jakarta.annotation.Nullable final String value) {
         this.scriptContent = value;
     }

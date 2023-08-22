@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     /**
      * True if the job was acquired by a printer; false otherwise. Read-only.
@@ -59,9 +60,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     private PrintJobProcessingState processingState;
     /**
      * Instantiates a new archivedPrintJob and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ArchivedPrintJob() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -194,9 +193,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("acquiredByPrinter", this.getAcquiredByPrinter());
@@ -215,108 +212,84 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     /**
      * Sets the acquiredByPrinter property value. True if the job was acquired by a printer; false otherwise. Read-only.
      * @param value Value to set for the acquiredByPrinter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAcquiredByPrinter(@jakarta.annotation.Nullable final Boolean value) {
         this.acquiredByPrinter = value;
     }
     /**
      * Sets the acquiredDateTime property value. The dateTimeOffset when the job was acquired by the printer, if any. Read-only.
      * @param value Value to set for the acquiredDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAcquiredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.acquiredDateTime = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the completionDateTime property value. The dateTimeOffset when the job was completed, canceled or aborted. Read-only.
      * @param value Value to set for the completionDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completionDateTime = value;
     }
     /**
      * Sets the copiesPrinted property value. The number of copies that were printed. Read-only.
      * @param value Value to set for the copiesPrinted property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCopiesPrinted(@jakarta.annotation.Nullable final Integer value) {
         this.copiesPrinted = value;
     }
     /**
      * Sets the createdBy property value. The user who created the print job. Read-only.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final UserIdentity value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The dateTimeOffset when the job was created. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the id property value. The archived print job's GUID. Read-only.
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the printerId property value. The printer ID that the job was queued for. Read-only.
      * @param value Value to set for the printerId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrinterId(@jakarta.annotation.Nullable final String value) {
         this.printerId = value;
     }
     /**
      * Sets the printerName property value. The printer name that the job was queued for. Read-only.
      * @param value Value to set for the printerName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrinterName(@jakarta.annotation.Nullable final String value) {
         this.printerName = value;
     }
     /**
      * Sets the processingState property value. The processingState property
      * @param value Value to set for the processingState property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProcessingState(@jakarta.annotation.Nullable final PrintJobProcessingState value) {
         this.processingState = value;
     }

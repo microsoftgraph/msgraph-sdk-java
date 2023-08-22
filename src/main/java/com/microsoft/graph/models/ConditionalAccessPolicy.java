@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessPolicy extends Entity implements Parsable {
     /**
      * The conditions property
@@ -41,10 +42,12 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      */
     private ConditionalAccessPolicyState state;
     /**
-     * Instantiates a new conditionalAccessPolicy and sets the default values.
-     * @return a void
+     * The templateId property
      */
-    @jakarta.annotation.Nullable
+    private String templateId;
+    /**
+     * Instantiates a new conditionalAccessPolicy and sets the default values.
+     */
     public ConditionalAccessPolicy() {
         super();
     }
@@ -105,6 +108,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("sessionControls", (n) -> { this.setSessionControls(n.getObjectValue(ConditionalAccessSessionControls::createFromDiscriminatorValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ConditionalAccessPolicyState.class)); });
+        deserializerMap.put("templateId", (n) -> { this.setTemplateId(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -140,11 +144,17 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
         return this.state;
     }
     /**
+     * Gets the templateId property value. The templateId property
+     * @return a string
+     */
+    @jakarta.annotation.Nullable
+    public String getTemplateId() {
+        return this.templateId;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -156,77 +166,69 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("modifiedDateTime", this.getModifiedDateTime());
         writer.writeObjectValue("sessionControls", this.getSessionControls());
         writer.writeEnumValue("state", this.getState());
+        writer.writeStringValue("templateId", this.getTemplateId());
     }
     /**
      * Sets the conditions property value. The conditions property
      * @param value Value to set for the conditions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConditions(@jakarta.annotation.Nullable final ConditionalAccessConditionSet value) {
         this.conditions = value;
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Specifies a display name for the conditionalAccessPolicy object.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the grantControls property value. Specifies the grant controls that must be fulfilled to pass the policy.
      * @param value Value to set for the grantControls property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGrantControls(@jakarta.annotation.Nullable final ConditionalAccessGrantControls value) {
         this.grantControls = value;
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
      * @param value Value to set for the modifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
     }
     /**
      * Sets the sessionControls property value. Specifies the session controls that are enforced after sign-in.
      * @param value Value to set for the sessionControls property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSessionControls(@jakarta.annotation.Nullable final ConditionalAccessSessionControls value) {
         this.sessionControls = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final ConditionalAccessPolicyState value) {
         this.state = value;
+    }
+    /**
+     * Sets the templateId property value. The templateId property
+     * @param value Value to set for the templateId property.
+     */
+    public void setTemplateId(@jakarta.annotation.Nullable final String value) {
+        this.templateId = value;
     }
 }

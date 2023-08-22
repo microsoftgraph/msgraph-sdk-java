@@ -10,7 +10,6 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -18,14 +17,13 @@ import java.util.Objects;
 /**
  * Provides operations to call the addTokenSigningCertificate method.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddTokenSigningCertificateRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new AddTokenSigningCertificateRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AddTokenSigningCertificateRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/addTokenSigningCertificate", pathParameters);
     }
@@ -33,9 +31,7 @@ public class AddTokenSigningCertificateRequestBuilder extends BaseRequestBuilder
      * Instantiates a new AddTokenSigningCertificateRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AddTokenSigningCertificateRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/addTokenSigningCertificate", rawUrl);
     }
@@ -47,17 +43,7 @@ public class AddTokenSigningCertificateRequestBuilder extends BaseRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SelfSignedCertificate> post(@jakarta.annotation.Nonnull final AddTokenSigningCertificatePostRequestBody body) {
-        try {
-            final RequestInformation requestInfo = toPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, SelfSignedCertificate::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<SelfSignedCertificate> executionException = new java.util.concurrent.CompletableFuture<SelfSignedCertificate>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return post(body, null);
     }
     /**
      * Create a self-signed signing certificate and return a selfSignedCertificate object, which is the public part of the generated certificate.  The self-signed signing certificate is composed of the following objects, which are added to the servicePrincipal: + The keyCredentials object with the following objects:    + A private key object with usage set to Sign.    + A public key object with usage set to Verify.+ The passwordCredentials object.  All the objects have the same value of customKeyIdentifier. The passwordCredential is used to open the PFX file (private key). It and the associated private key object have the same value of keyId. When set during creation through the displayName property, the subject of the certificate cannot be updated. The startDateTime is set to the same time the certificate is created using the action. The endDateTime can be up to three years after the certificate is created.
@@ -69,17 +55,11 @@ public class AddTokenSigningCertificateRequestBuilder extends BaseRequestBuilder
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SelfSignedCertificate> post(@jakarta.annotation.Nonnull final AddTokenSigningCertificatePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, SelfSignedCertificate::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<SelfSignedCertificate> executionException = new java.util.concurrent.CompletableFuture<SelfSignedCertificate>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, SelfSignedCertificate::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create a self-signed signing certificate and return a selfSignedCertificate object, which is the public part of the generated certificate.  The self-signed signing certificate is composed of the following objects, which are added to the servicePrincipal: + The keyCredentials object with the following objects:    + A private key object with usage set to Sign.    + A public key object with usage set to Verify.+ The passwordCredentials object.  All the objects have the same value of customKeyIdentifier. The passwordCredential is used to open the PFX file (private key). It and the associated private key object have the same value of keyId. When set during creation through the displayName property, the subject of the certificate cannot be updated. The startDateTime is set to the same time the certificate is created using the action. The endDateTime can be up to three years after the certificate is created.
@@ -87,7 +67,7 @@ public class AddTokenSigningCertificateRequestBuilder extends BaseRequestBuilder
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AddTokenSigningCertificatePostRequestBody body) throws URISyntaxException {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AddTokenSigningCertificatePostRequestBody body) {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -97,7 +77,7 @@ public class AddTokenSigningCertificateRequestBuilder extends BaseRequestBuilder
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AddTokenSigningCertificatePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AddTokenSigningCertificatePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -116,6 +96,7 @@ public class AddTokenSigningCertificateRequestBuilder extends BaseRequestBuilder
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

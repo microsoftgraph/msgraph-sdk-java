@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
     /**
      * The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
@@ -38,9 +39,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new outlookGeoCoordinates and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OutlookGeoCoordinates() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +127,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeDoubleValue("accuracy", this.getAccuracy());
@@ -144,63 +141,49 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
     /**
      * Sets the accuracy property value. The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
      * @param value Value to set for the accuracy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccuracy(@jakarta.annotation.Nullable final Double value) {
         this.accuracy = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the altitude property value. The altitude of the location.
      * @param value Value to set for the altitude property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAltitude(@jakarta.annotation.Nullable final Double value) {
         this.altitude = value;
     }
     /**
      * Sets the altitudeAccuracy property value. The accuracy of the altitude.
      * @param value Value to set for the altitudeAccuracy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAltitudeAccuracy(@jakarta.annotation.Nullable final Double value) {
         this.altitudeAccuracy = value;
     }
     /**
      * Sets the latitude property value. The latitude of the location.
      * @param value Value to set for the latitude property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLatitude(@jakarta.annotation.Nullable final Double value) {
         this.latitude = value;
     }
     /**
      * Sets the longitude property value. The longitude of the location.
      * @param value Value to set for the longitude property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLongitude(@jakarta.annotation.Nullable final Double value) {
         this.longitude = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

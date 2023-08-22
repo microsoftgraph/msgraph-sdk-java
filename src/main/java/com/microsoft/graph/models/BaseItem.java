@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class BaseItem extends Entity implements Parsable {
     /**
      * Identity of the user, device, or application which created the item. Read-only.
@@ -54,9 +55,7 @@ public class BaseItem extends Entity implements Parsable {
     private String webUrl;
     /**
      * Instantiates a new baseItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BaseItem() {
         super();
     }
@@ -193,9 +192,7 @@ public class BaseItem extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -214,99 +211,77 @@ public class BaseItem extends Entity implements Parsable {
     /**
      * Sets the createdBy property value. Identity of the user, device, or application which created the item. Read-only.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdByUser property value. Identity of the user who created the item. Read-only.
      * @param value Value to set for the createdByUser property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedByUser(@jakarta.annotation.Nullable final User value) {
         this.createdByUser = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time of item creation. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Provides a user-visible description of the item. Optional.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the eTag property value. ETag for the item. Read-only.
      * @param value Value to set for the eTag property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setETag(@jakarta.annotation.Nullable final String value) {
         this.eTag = value;
     }
     /**
      * Sets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedByUser property value. Identity of the user who last modified the item. Read-only.
      * @param value Value to set for the lastModifiedByUser property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedByUser(@jakarta.annotation.Nullable final User value) {
         this.lastModifiedByUser = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Date and time the item was last modified. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the name property value. The name of the item. Read-write.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the parentReference property value. Parent information, if the item has a parent. Read-write.
      * @param value Value to set for the parentReference property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentReference(@jakarta.annotation.Nullable final ItemReference value) {
         this.parentReference = value;
     }
     /**
      * Sets the webUrl property value. URL that displays the resource in the browser. Read-only.
      * @param value Value to set for the webUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }

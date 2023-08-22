@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemAttachment extends Attachment implements Parsable {
     /**
      * The attached message or event. Navigation property.
@@ -13,9 +14,7 @@ public class ItemAttachment extends Attachment implements Parsable {
     private OutlookItem item;
     /**
      * Instantiates a new itemAttachment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ItemAttachment() {
         super();
         this.setOdataType("#microsoft.graph.itemAttachment");
@@ -51,9 +50,7 @@ public class ItemAttachment extends Attachment implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +59,7 @@ public class ItemAttachment extends Attachment implements Parsable {
     /**
      * Sets the item property value. The attached message or event. Navigation property.
      * @param value Value to set for the item property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setItem(@jakarta.annotation.Nullable final OutlookItem value) {
         this.item = value;
     }

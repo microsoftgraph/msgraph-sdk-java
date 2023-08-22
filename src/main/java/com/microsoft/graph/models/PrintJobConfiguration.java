@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -94,9 +95,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
     private PrintScaling scaling;
     /**
      * Instantiates a new printJobConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PrintJobConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -310,9 +309,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("collate", this.getCollate());
@@ -340,189 +337,147 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the collate property value. Whether the printer should collate pages wehen printing multiple copies of a multi-page document.
      * @param value Value to set for the collate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCollate(@jakarta.annotation.Nullable final Boolean value) {
         this.collate = value;
     }
     /**
      * Sets the colorMode property value. The color mode the printer should use to print the job. Valid values are described in the table below. Read-only.
      * @param value Value to set for the colorMode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColorMode(@jakarta.annotation.Nullable final PrintColorMode value) {
         this.colorMode = value;
     }
     /**
      * Sets the copies property value. The number of copies that should be printed. Read-only.
      * @param value Value to set for the copies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCopies(@jakarta.annotation.Nullable final Integer value) {
         this.copies = value;
     }
     /**
      * Sets the dpi property value. The resolution to use when printing the job, expressed in dots per inch (DPI). Read-only.
      * @param value Value to set for the dpi property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDpi(@jakarta.annotation.Nullable final Integer value) {
         this.dpi = value;
     }
     /**
      * Sets the duplexMode property value. The duplex mode the printer should use when printing the job. Valid values are described in the table below. Read-only.
      * @param value Value to set for the duplexMode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDuplexMode(@jakarta.annotation.Nullable final PrintDuplexMode value) {
         this.duplexMode = value;
     }
     /**
      * Sets the feedOrientation property value. The orientation to use when feeding media into the printer. Valid values are described in the following table. Read-only.
      * @param value Value to set for the feedOrientation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFeedOrientation(@jakarta.annotation.Nullable final PrinterFeedOrientation value) {
         this.feedOrientation = value;
     }
     /**
      * Sets the finishings property value. Finishing processes to use when printing.
      * @param value Value to set for the finishings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFinishings(@jakarta.annotation.Nullable final java.util.List<PrintFinishing> value) {
         this.finishings = value;
     }
     /**
      * Sets the fitPdfToPage property value. The fitPdfToPage property
      * @param value Value to set for the fitPdfToPage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFitPdfToPage(@jakarta.annotation.Nullable final Boolean value) {
         this.fitPdfToPage = value;
     }
     /**
      * Sets the inputBin property value. The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins.
      * @param value Value to set for the inputBin property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInputBin(@jakarta.annotation.Nullable final String value) {
         this.inputBin = value;
     }
     /**
      * Sets the margin property value. The margin settings to use when printing.
      * @param value Value to set for the margin property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMargin(@jakarta.annotation.Nullable final PrintMargin value) {
         this.margin = value;
     }
     /**
      * Sets the mediaSize property value. The media size to use when printing. Supports standard size names for ISO and ANSI media sizes.
      * @param value Value to set for the mediaSize property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMediaSize(@jakarta.annotation.Nullable final String value) {
         this.mediaSize = value;
     }
     /**
      * Sets the mediaType property value. The mediaType property
      * @param value Value to set for the mediaType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMediaType(@jakarta.annotation.Nullable final String value) {
         this.mediaType = value;
     }
     /**
      * Sets the multipageLayout property value. The multipageLayout property
      * @param value Value to set for the multipageLayout property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMultipageLayout(@jakarta.annotation.Nullable final PrintMultipageLayout value) {
         this.multipageLayout = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the orientation property value. The orientation property
      * @param value Value to set for the orientation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrientation(@jakarta.annotation.Nullable final PrintOrientation value) {
         this.orientation = value;
     }
     /**
      * Sets the outputBin property value. The outputBin property
      * @param value Value to set for the outputBin property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOutputBin(@jakarta.annotation.Nullable final String value) {
         this.outputBin = value;
     }
     /**
      * Sets the pageRanges property value. The pageRanges property
      * @param value Value to set for the pageRanges property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPageRanges(@jakarta.annotation.Nullable final java.util.List<IntegerRange> value) {
         this.pageRanges = value;
     }
     /**
      * Sets the pagesPerSheet property value. The pagesPerSheet property
      * @param value Value to set for the pagesPerSheet property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPagesPerSheet(@jakarta.annotation.Nullable final Integer value) {
         this.pagesPerSheet = value;
     }
     /**
      * Sets the quality property value. The quality property
      * @param value Value to set for the quality property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQuality(@jakarta.annotation.Nullable final PrintQuality value) {
         this.quality = value;
     }
     /**
      * Sets the scaling property value. The scaling property
      * @param value Value to set for the scaling property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScaling(@jakarta.annotation.Nullable final PrintScaling value) {
         this.scaling = value;
     }

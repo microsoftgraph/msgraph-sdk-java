@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnenoteOperation extends Operation implements Parsable {
     /**
      * The error returned by the operation.
@@ -25,9 +26,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     private String resourceLocation;
     /**
      * Instantiates a new onenoteOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OnenoteOperation() {
         super();
     }
@@ -89,9 +88,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -103,36 +100,28 @@ public class OnenoteOperation extends Operation implements Parsable {
     /**
      * Sets the error property value. The error returned by the operation.
      * @param value Value to set for the error property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setError(@jakarta.annotation.Nullable final OnenoteOperationError value) {
         this.error = value;
     }
     /**
      * Sets the percentComplete property value. The operation percent complete if the operation is still in running status.
      * @param value Value to set for the percentComplete property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPercentComplete(@jakarta.annotation.Nullable final String value) {
         this.percentComplete = value;
     }
     /**
      * Sets the resourceId property value. The resource id.
      * @param value Value to set for the resourceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.resourceId = value;
     }
     /**
      * Sets the resourceLocation property value. The resource URI for the object. For example, the resource URI for a copied page or section.
      * @param value Value to set for the resourceLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceLocation(@jakarta.annotation.Nullable final String value) {
         this.resourceLocation = value;
     }

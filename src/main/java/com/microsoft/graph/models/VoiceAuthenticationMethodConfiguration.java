@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class VoiceAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /**
      * A collection of groups that are enabled to use the authentication method. Expanded by default.
@@ -17,9 +18,7 @@ public class VoiceAuthenticationMethodConfiguration extends AuthenticationMethod
     private Boolean isOfficePhoneAllowed;
     /**
      * Instantiates a new voiceAuthenticationMethodConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public VoiceAuthenticationMethodConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.voiceAuthenticationMethodConfiguration");
@@ -64,9 +63,7 @@ public class VoiceAuthenticationMethodConfiguration extends AuthenticationMethod
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class VoiceAuthenticationMethodConfiguration extends AuthenticationMethod
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method. Expanded by default.
      * @param value Value to set for the includeTargets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
         this.includeTargets = value;
     }
     /**
      * Sets the isOfficePhoneAllowed property value. true if users can register office phones, otherwise, false.
      * @param value Value to set for the isOfficePhoneAllowed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsOfficePhoneAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.isOfficePhoneAllowed = value;
     }

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttributeMapping implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -46,9 +47,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     private String targetAttributeName;
     /**
      * Instantiates a new attributeMapping and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AttributeMapping() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -154,9 +153,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("defaultValue", this.getDefaultValue());
@@ -172,81 +169,63 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the defaultValue property value. Default value to be used in case the source property was evaluated to null. Optional.
      * @param value Value to set for the defaultValue property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefaultValue(@jakarta.annotation.Nullable final String value) {
         this.defaultValue = value;
     }
     /**
      * Sets the exportMissingReferences property value. For internal use only.
      * @param value Value to set for the exportMissingReferences property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExportMissingReferences(@jakarta.annotation.Nullable final Boolean value) {
         this.exportMissingReferences = value;
     }
     /**
      * Sets the flowBehavior property value. The flowBehavior property
      * @param value Value to set for the flowBehavior property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFlowBehavior(@jakarta.annotation.Nullable final AttributeFlowBehavior value) {
         this.flowBehavior = value;
     }
     /**
      * Sets the flowType property value. The flowType property
      * @param value Value to set for the flowType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFlowType(@jakarta.annotation.Nullable final AttributeFlowType value) {
         this.flowType = value;
     }
     /**
      * Sets the matchingPriority property value. If higher than 0, this attribute will be used to perform an initial match of the objects between source and target directories. The synchronization engine will try to find the matching object using attribute with lowest value of matching priority first. If not found, the attribute with the next matching priority will be used, and so on a until match is found or no more matching attributes are left. Only attributes that are expected to have unique values, such as email, should be used as matching attributes.
      * @param value Value to set for the matchingPriority property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMatchingPriority(@jakarta.annotation.Nullable final Integer value) {
         this.matchingPriority = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the source property value. Defines how a value should be extracted (or transformed) from the source object.
      * @param value Value to set for the source property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSource(@jakarta.annotation.Nullable final AttributeMappingSource value) {
         this.source = value;
     }
     /**
      * Sets the targetAttributeName property value. Name of the attribute on the target object.
      * @param value Value to set for the targetAttributeName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetAttributeName(@jakarta.annotation.Nullable final String value) {
         this.targetAttributeName = value;
     }

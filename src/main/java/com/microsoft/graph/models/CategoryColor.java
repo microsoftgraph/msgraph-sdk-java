@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum CategoryColor implements ValuedEnum {
     None("none"),
     Preset0("preset0"),

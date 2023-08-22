@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -138,9 +139,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     private SizeRange withinSizeRange;
     /**
      * Instantiates a new messageRulePredicates and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MessageRulePredicates() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -453,9 +452,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("bodyContains", this.getBodyContains());
@@ -494,288 +491,224 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the bodyContains property value. Represents the strings that should appear in the body of an incoming message in order for the condition or exception to apply.
      * @param value Value to set for the bodyContains property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBodyContains(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.bodyContains = value;
     }
     /**
      * Sets the bodyOrSubjectContains property value. Represents the strings that should appear in the body or subject of an incoming message in order for the condition or exception to apply.
      * @param value Value to set for the bodyOrSubjectContains property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBodyOrSubjectContains(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.bodyOrSubjectContains = value;
     }
     /**
      * Sets the categories property value. Represents the categories that an incoming message should be labeled with in order for the condition or exception to apply.
      * @param value Value to set for the categories property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.categories = value;
     }
     /**
      * Sets the fromAddresses property value. Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply.
      * @param value Value to set for the fromAddresses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFromAddresses(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.fromAddresses = value;
     }
     /**
      * Sets the hasAttachments property value. Indicates whether an incoming message must have attachments in order for the condition or exception to apply.
      * @param value Value to set for the hasAttachments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
         this.hasAttachments = value;
     }
     /**
      * Sets the headerContains property value. Represents the strings that appear in the headers of an incoming message in order for the condition or exception to apply.
      * @param value Value to set for the headerContains property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHeaderContains(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.headerContains = value;
     }
     /**
      * Sets the importance property value. The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high.
      * @param value Value to set for the importance property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImportance(@jakarta.annotation.Nullable final Importance value) {
         this.importance = value;
     }
     /**
      * Sets the isApprovalRequest property value. Indicates whether an incoming message must be an approval request in order for the condition or exception to apply.
      * @param value Value to set for the isApprovalRequest property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsApprovalRequest(@jakarta.annotation.Nullable final Boolean value) {
         this.isApprovalRequest = value;
     }
     /**
      * Sets the isAutomaticForward property value. Indicates whether an incoming message must be automatically forwarded in order for the condition or exception to apply.
      * @param value Value to set for the isAutomaticForward property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAutomaticForward(@jakarta.annotation.Nullable final Boolean value) {
         this.isAutomaticForward = value;
     }
     /**
      * Sets the isAutomaticReply property value. Indicates whether an incoming message must be an auto reply in order for the condition or exception to apply.
      * @param value Value to set for the isAutomaticReply property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAutomaticReply(@jakarta.annotation.Nullable final Boolean value) {
         this.isAutomaticReply = value;
     }
     /**
      * Sets the isEncrypted property value. Indicates whether an incoming message must be encrypted in order for the condition or exception to apply.
      * @param value Value to set for the isEncrypted property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsEncrypted(@jakarta.annotation.Nullable final Boolean value) {
         this.isEncrypted = value;
     }
     /**
      * Sets the isMeetingRequest property value. Indicates whether an incoming message must be a meeting request in order for the condition or exception to apply.
      * @param value Value to set for the isMeetingRequest property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsMeetingRequest(@jakarta.annotation.Nullable final Boolean value) {
         this.isMeetingRequest = value;
     }
     /**
      * Sets the isMeetingResponse property value. Indicates whether an incoming message must be a meeting response in order for the condition or exception to apply.
      * @param value Value to set for the isMeetingResponse property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsMeetingResponse(@jakarta.annotation.Nullable final Boolean value) {
         this.isMeetingResponse = value;
     }
     /**
      * Sets the isNonDeliveryReport property value. Indicates whether an incoming message must be a non-delivery report in order for the condition or exception to apply.
      * @param value Value to set for the isNonDeliveryReport property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsNonDeliveryReport(@jakarta.annotation.Nullable final Boolean value) {
         this.isNonDeliveryReport = value;
     }
     /**
      * Sets the isPermissionControlled property value. Indicates whether an incoming message must be permission controlled (RMS-protected) in order for the condition or exception to apply.
      * @param value Value to set for the isPermissionControlled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsPermissionControlled(@jakarta.annotation.Nullable final Boolean value) {
         this.isPermissionControlled = value;
     }
     /**
      * Sets the isReadReceipt property value. Indicates whether an incoming message must be a read receipt in order for the condition or exception to apply.
      * @param value Value to set for the isReadReceipt property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsReadReceipt(@jakarta.annotation.Nullable final Boolean value) {
         this.isReadReceipt = value;
     }
     /**
      * Sets the isSigned property value. Indicates whether an incoming message must be S/MIME-signed in order for the condition or exception to apply.
      * @param value Value to set for the isSigned property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSigned(@jakarta.annotation.Nullable final Boolean value) {
         this.isSigned = value;
     }
     /**
      * Sets the isVoicemail property value. Indicates whether an incoming message must be a voice mail in order for the condition or exception to apply.
      * @param value Value to set for the isVoicemail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsVoicemail(@jakarta.annotation.Nullable final Boolean value) {
         this.isVoicemail = value;
     }
     /**
      * Sets the messageActionFlag property value. Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
      * @param value Value to set for the messageActionFlag property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessageActionFlag(@jakarta.annotation.Nullable final MessageActionFlag value) {
         this.messageActionFlag = value;
     }
     /**
      * Sets the notSentToMe property value. Indicates whether the owner of the mailbox must not be a recipient of an incoming message in order for the condition or exception to apply.
      * @param value Value to set for the notSentToMe property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotSentToMe(@jakarta.annotation.Nullable final Boolean value) {
         this.notSentToMe = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the recipientContains property value. Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
      * @param value Value to set for the recipientContains property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecipientContains(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.recipientContains = value;
     }
     /**
      * Sets the senderContains property value. Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply.
      * @param value Value to set for the senderContains property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSenderContains(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.senderContains = value;
     }
     /**
      * Sets the sensitivity property value. Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
      * @param value Value to set for the sensitivity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSensitivity(@jakarta.annotation.Nullable final Sensitivity value) {
         this.sensitivity = value;
     }
     /**
      * Sets the sentCcMe property value. Indicates whether the owner of the mailbox must be in the ccRecipients property of an incoming message in order for the condition or exception to apply.
      * @param value Value to set for the sentCcMe property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSentCcMe(@jakarta.annotation.Nullable final Boolean value) {
         this.sentCcMe = value;
     }
     /**
      * Sets the sentOnlyToMe property value. Indicates whether the owner of the mailbox must be the only recipient in an incoming message in order for the condition or exception to apply.
      * @param value Value to set for the sentOnlyToMe property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSentOnlyToMe(@jakarta.annotation.Nullable final Boolean value) {
         this.sentOnlyToMe = value;
     }
     /**
      * Sets the sentToAddresses property value. Represents the email addresses that an incoming message must have been sent to in order for the condition or exception to apply.
      * @param value Value to set for the sentToAddresses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSentToAddresses(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.sentToAddresses = value;
     }
     /**
      * Sets the sentToMe property value. Indicates whether the owner of the mailbox must be in the toRecipients property of an incoming message in order for the condition or exception to apply.
      * @param value Value to set for the sentToMe property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSentToMe(@jakarta.annotation.Nullable final Boolean value) {
         this.sentToMe = value;
     }
     /**
      * Sets the sentToOrCcMe property value. Indicates whether the owner of the mailbox must be in either a toRecipients or ccRecipients property of an incoming message in order for the condition or exception to apply.
      * @param value Value to set for the sentToOrCcMe property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSentToOrCcMe(@jakarta.annotation.Nullable final Boolean value) {
         this.sentToOrCcMe = value;
     }
     /**
      * Sets the subjectContains property value. Represents the strings that appear in the subject of an incoming message in order for the condition or exception to apply.
      * @param value Value to set for the subjectContains property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubjectContains(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.subjectContains = value;
     }
     /**
      * Sets the withinSizeRange property value. Represents the minimum and maximum sizes (in kilobytes) that an incoming message must fall in between in order for the condition or exception to apply.
      * @param value Value to set for the withinSizeRange property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWithinSizeRange(@jakarta.annotation.Nullable final SizeRange value) {
         this.withinSizeRange = value;
     }

@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkflowBase implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -64,9 +65,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
     private java.util.List<Task> tasks;
     /**
      * Instantiates a new workflowBase and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkflowBase() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -216,9 +215,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("category", this.getCategory());
@@ -238,117 +235,91 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the category property value. The category property
      * @param value Value to set for the category property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategory(@jakarta.annotation.Nullable final LifecycleWorkflowCategory value) {
         this.category = value;
     }
     /**
      * Sets the createdBy property value. The user who created the workflow.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final User value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. When a workflow was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. A string that describes the purpose of the workflow.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. A string to identify the workflow.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the executionConditions property value. Defines when and for who the workflow will run.
      * @param value Value to set for the executionConditions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExecutionConditions(@jakarta.annotation.Nullable final WorkflowExecutionConditions value) {
         this.executionConditions = value;
     }
     /**
      * Sets the isEnabled property value. Whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
      * @param value Value to set for the isEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
      * Sets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
      * @param value Value to set for the isSchedulingEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSchedulingEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isSchedulingEnabled = value;
     }
     /**
      * Sets the lastModifiedBy property value. The unique identifier of the AAD identity that last modified the workflow.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedBy(@jakarta.annotation.Nullable final User value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. When the workflow was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the tasks property value. The tasks in the workflow.
      * @param value Value to set for the tasks property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<Task> value) {
         this.tasks = value;
     }

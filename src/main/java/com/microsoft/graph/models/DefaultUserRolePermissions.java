@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     private java.util.List<String> permissionGrantPoliciesAssigned;
     /**
      * Instantiates a new defaultUserRolePermissions and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DefaultUserRolePermissions() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +140,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowedToCreateApps", this.getAllowedToCreateApps());
@@ -158,72 +155,56 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowedToCreateApps property value. Indicates whether the default user role can create applications. This setting corresponds to the Users can register applications setting in the User settings menu in the Azure portal.
      * @param value Value to set for the allowedToCreateApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedToCreateApps(@jakarta.annotation.Nullable final Boolean value) {
         this.allowedToCreateApps = value;
     }
     /**
      * Sets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups. This setting corresponds to the following menus in the Azure portal:  The Users can create security groups in Azure portals, API or PowerShell setting in the Group settings menu.  Users can create security groups setting in the User settings menu.
      * @param value Value to set for the allowedToCreateSecurityGroups property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedToCreateSecurityGroups(@jakarta.annotation.Nullable final Boolean value) {
         this.allowedToCreateSecurityGroups = value;
     }
     /**
      * Sets the allowedToCreateTenants property value. Indicates whether the default user role can create tenants. This setting corresponds to the Restrict non-admin users from creating tenants setting in the User settings menu in the Azure portal.  When this setting is false, users assigned the Tenant Creator role can still create tenants.
      * @param value Value to set for the allowedToCreateTenants property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedToCreateTenants(@jakarta.annotation.Nullable final Boolean value) {
         this.allowedToCreateTenants = value;
     }
     /**
      * Sets the allowedToReadBitlockerKeysForOwnedDevice property value. Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
      * @param value Value to set for the allowedToReadBitlockerKeysForOwnedDevice property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedToReadBitlockerKeysForOwnedDevice(@jakarta.annotation.Nullable final Boolean value) {
         this.allowedToReadBitlockerKeysForOwnedDevice = value;
     }
     /**
      * Sets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users. DO NOT SET THIS VALUE TO false.
      * @param value Value to set for the allowedToReadOtherUsers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedToReadOtherUsers(@jakarta.annotation.Nullable final Boolean value) {
         this.allowedToReadOtherUsers = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the permissionGrantPoliciesAssigned property value. Indicates if user consent to apps is allowed, and if it is, which permission to grant consent and which app consent policy (permissionGrantPolicy) govern the permission for users to grant consent. Value should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
      * @param value Value to set for the permissionGrantPoliciesAssigned property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPermissionGrantPoliciesAssigned(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.permissionGrantPoliciesAssigned = value;
     }

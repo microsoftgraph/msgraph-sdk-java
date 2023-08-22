@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserTeamwork extends Entity implements Parsable {
     /**
      * The list of associatedTeamInfo objects that a user is associated with.
@@ -17,9 +18,7 @@ public class UserTeamwork extends Entity implements Parsable {
     private java.util.List<UserScopeTeamsAppInstallation> installedApps;
     /**
      * Instantiates a new userTeamwork and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserTeamwork() {
         super();
     }
@@ -63,9 +62,7 @@ public class UserTeamwork extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class UserTeamwork extends Entity implements Parsable {
     /**
      * Sets the associatedTeams property value. The list of associatedTeamInfo objects that a user is associated with.
      * @param value Value to set for the associatedTeams property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssociatedTeams(@jakarta.annotation.Nullable final java.util.List<AssociatedTeamInfo> value) {
         this.associatedTeams = value;
     }
     /**
      * Sets the installedApps property value. The apps installed in the personal scope of this user.
      * @param value Value to set for the installedApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstalledApps(@jakarta.annotation.Nullable final java.util.List<UserScopeTeamsAppInstallation> value) {
         this.installedApps = value;
     }

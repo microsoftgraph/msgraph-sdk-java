@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Windows10 Enterprise Modern App Management Configuration.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Indicates whether or not to uninstall a fixed list of built-in Windows apps.
@@ -16,9 +17,7 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
     private Boolean uninstallBuiltInApps;
     /**
      * Instantiates a new windows10EnterpriseModernAppManagementConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Windows10EnterpriseModernAppManagementConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10EnterpriseModernAppManagementConfiguration");
@@ -54,9 +53,7 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -65,9 +62,7 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
     /**
      * Sets the uninstallBuiltInApps property value. Indicates whether or not to uninstall a fixed list of built-in Windows apps.
      * @param value Value to set for the uninstallBuiltInApps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUninstallBuiltInApps(@jakarta.annotation.Nullable final Boolean value) {
         this.uninstallBuiltInApps = value;
     }

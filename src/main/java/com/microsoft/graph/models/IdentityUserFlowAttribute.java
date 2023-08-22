@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityUserFlowAttribute extends Entity implements Parsable {
     /**
      * The dataType property
@@ -25,9 +26,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
     private IdentityUserFlowAttributeType userFlowAttributeType;
     /**
      * Instantiates a new identityUserFlowAttribute and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IdentityUserFlowAttribute() {
         super();
     }
@@ -97,9 +96,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,36 +108,28 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
     /**
      * Sets the dataType property value. The dataType property
      * @param value Value to set for the dataType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDataType(@jakarta.annotation.Nullable final IdentityUserFlowAttributeDataType value) {
         this.dataType = value;
     }
     /**
      * Sets the description property value. The description of the user flow attribute that's shown to the user at the time of sign-up.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of the user flow attribute.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the userFlowAttributeType property value. The userFlowAttributeType property
      * @param value Value to set for the userFlowAttributeType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserFlowAttributeType(@jakarta.annotation.Nullable final IdentityUserFlowAttributeType value) {
         this.userFlowAttributeType = value;
     }

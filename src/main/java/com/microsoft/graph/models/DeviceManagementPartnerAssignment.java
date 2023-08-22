@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * User group targeting for Device Management Partner
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementPartnerAssignment implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -25,9 +26,7 @@ public class DeviceManagementPartnerAssignment implements AdditionalDataHolder, 
     private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new deviceManagementPartnerAssignment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceManagementPartnerAssignment() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -79,9 +78,7 @@ public class DeviceManagementPartnerAssignment implements AdditionalDataHolder, 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -91,27 +88,21 @@ public class DeviceManagementPartnerAssignment implements AdditionalDataHolder, 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the target property value. User groups targeting for devices to be enrolled through partner.
      * @param value Value to set for the target property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this.target = value;
     }

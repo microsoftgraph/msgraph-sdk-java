@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImageInfo implements AdditionalDataHolder, Parsable {
     /**
      * Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example  a high contrast image
@@ -34,9 +35,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new imageInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ImageInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("addImageQuery", this.getAddImageQuery());
@@ -130,54 +127,42 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the addImageQuery property value. Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example  a high contrast image
      * @param value Value to set for the addImageQuery property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAddImageQuery(@jakarta.annotation.Nullable final Boolean value) {
         this.addImageQuery = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the alternateText property value. Optional; alt-text accessible content for the image
      * @param value Value to set for the alternateText property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlternateText(@jakarta.annotation.Nullable final String value) {
         this.alternateText = value;
     }
     /**
      * Sets the alternativeText property value. The alternativeText property
      * @param value Value to set for the alternativeText property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlternativeText(@jakarta.annotation.Nullable final String value) {
         this.alternativeText = value;
     }
     /**
      * Sets the iconUrl property value. Optional; URI that points to an icon which represents the application used to generate the activity
      * @param value Value to set for the iconUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIconUrl(@jakarta.annotation.Nullable final String value) {
         this.iconUrl = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

@@ -14,7 +14,6 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -22,6 +21,7 @@ import java.util.Objects;
 /**
  * Provides operations to manage the relations property of the microsoft.graph.termStore.term entity.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RelationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
@@ -46,9 +46,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new RelationsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RelationsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/termStore/sets/{set%2Did}/parentGroup/sets/{set%2Did1}/terms/{term%2Did}/children/{term%2Did1}/relations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
@@ -56,9 +54,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new RelationsRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RelationsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/termStore/sets/{set%2Did}/parentGroup/sets/{set%2Did1}/terms/{term%2Did}/children/{term%2Did1}/relations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
@@ -68,17 +64,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RelationCollectionResponse> get() {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, RelationCollectionResponse::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<RelationCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<RelationCollectionResponse>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return get(null);
     }
     /**
      * To indicate which terms are related to the current term as either pinned or reused.
@@ -87,17 +73,11 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RelationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, RelationCollectionResponse::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<RelationCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<RelationCollectionResponse>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, RelationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to relations for sites
@@ -106,17 +86,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Relation> post(@jakarta.annotation.Nonnull final Relation body) {
-        try {
-            final RequestInformation requestInfo = toPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, Relation::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Relation> executionException = new java.util.concurrent.CompletableFuture<Relation>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return post(body, null);
     }
     /**
      * Create new navigation property to relations for sites
@@ -127,24 +97,18 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Relation> post(@jakarta.annotation.Nonnull final Relation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, Relation::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Relation> executionException = new java.util.concurrent.CompletableFuture<Relation>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, Relation::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * To indicate which terms are related to the current term as either pinned or reused.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+    public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
@@ -153,7 +117,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -174,7 +138,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Relation body) throws URISyntaxException {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Relation body) {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -184,7 +148,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Relation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Relation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -203,6 +167,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
     /**
      * To indicate which terms are related to the current term as either pinned or reused.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
         /**
          * Include count of items
@@ -256,6 +221,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetRequestConfiguration extends BaseRequestConfiguration {
         /**
          * Request query parameters
@@ -266,6 +232,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

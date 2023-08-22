@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IPv6CidrRange extends IpRange implements Parsable {
     /**
      * IPv6 address in CIDR notation. Not nullable.
@@ -13,9 +14,7 @@ public class IPv6CidrRange extends IpRange implements Parsable {
     private String cidrAddress;
     /**
      * Instantiates a new iPv6CidrRange and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IPv6CidrRange() {
         super();
         this.setOdataType("#microsoft.graph.iPv6CidrRange");
@@ -51,9 +50,7 @@ public class IPv6CidrRange extends IpRange implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +59,7 @@ public class IPv6CidrRange extends IpRange implements Parsable {
     /**
      * Sets the cidrAddress property value. IPv6 address in CIDR notation. Not nullable.
      * @param value Value to set for the cidrAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCidrAddress(@jakarta.annotation.Nullable final String value) {
         this.cidrAddress = value;
     }

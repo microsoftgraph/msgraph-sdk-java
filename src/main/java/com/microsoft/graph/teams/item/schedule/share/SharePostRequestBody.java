@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -27,9 +28,7 @@ public class SharePostRequestBody implements AdditionalDataHolder, Parsable {
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new sharePostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SharePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +89,7 @@ public class SharePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
@@ -103,36 +100,28 @@ public class SharePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the endDateTime property value. The endDateTime property
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
      * Sets the notifyTeam property value. The notifyTeam property
      * @param value Value to set for the notifyTeam property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotifyTeam(@jakarta.annotation.Nullable final Boolean value) {
         this.notifyTeam = value;
     }
     /**
      * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }

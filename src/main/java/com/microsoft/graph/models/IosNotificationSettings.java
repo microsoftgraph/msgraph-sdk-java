@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * An item describing notification setting.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -57,9 +58,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     private Boolean soundsEnabled;
     /**
      * Instantiates a new iosNotificationSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosNotificationSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -183,9 +182,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("alertType", this.getAlertType());
@@ -203,99 +200,77 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the alertType property value. Notification Settings Alert Type.
      * @param value Value to set for the alertType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlertType(@jakarta.annotation.Nullable final IosNotificationAlertType value) {
         this.alertType = value;
     }
     /**
      * Sets the appName property value. Application name to be associated with the bundleID.
      * @param value Value to set for the appName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppName(@jakarta.annotation.Nullable final String value) {
         this.appName = value;
     }
     /**
      * Sets the badgesEnabled property value. Indicates whether badges are allowed for this app.
      * @param value Value to set for the badgesEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBadgesEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.badgesEnabled = value;
     }
     /**
      * Sets the bundleID property value. Bundle id of app to which to apply these notification settings.
      * @param value Value to set for the bundleID property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBundleID(@jakarta.annotation.Nullable final String value) {
         this.bundleID = value;
     }
     /**
      * Sets the enabled property value. Indicates whether notifications are allowed for this app.
      * @param value Value to set for the enabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.enabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the publisher property value. Publisher to be associated with the bundleID.
      * @param value Value to set for the publisher property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.publisher = value;
     }
     /**
      * Sets the showInNotificationCenter property value. Indicates whether notifications can be shown in notification center.
      * @param value Value to set for the showInNotificationCenter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShowInNotificationCenter(@jakarta.annotation.Nullable final Boolean value) {
         this.showInNotificationCenter = value;
     }
     /**
      * Sets the showOnLockScreen property value. Indicates whether notifications can be shown on the lock screen.
      * @param value Value to set for the showOnLockScreen property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setShowOnLockScreen(@jakarta.annotation.Nullable final Boolean value) {
         this.showOnLockScreen = value;
     }
     /**
      * Sets the soundsEnabled property value. Indicates whether sounds are allowed for this app.
      * @param value Value to set for the soundsEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSoundsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.soundsEnabled = value;
     }

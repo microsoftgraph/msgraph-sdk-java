@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * The user experience analytics work from anywhere model performance.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity implements Parsable {
     /**
      * The cloud identity score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -48,9 +49,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
     private Double workFromAnywhereScore;
     /**
      * Instantiates a new userExperienceAnalyticsWorkFromAnywhereModelPerformance and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereModelPerformance() {
         super();
     }
@@ -157,9 +156,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -176,81 +173,63 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
     /**
      * Sets the cloudIdentityScore property value. The cloud identity score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the cloudIdentityScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudIdentityScore(@jakarta.annotation.Nullable final Double value) {
         this.cloudIdentityScore = value;
     }
     /**
      * Sets the cloudManagementScore property value. The cloud management score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the cloudManagementScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudManagementScore(@jakarta.annotation.Nullable final Double value) {
         this.cloudManagementScore = value;
     }
     /**
      * Sets the cloudProvisioningScore property value. The cloud provisioning score of the device model.  Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the cloudProvisioningScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudProvisioningScore(@jakarta.annotation.Nullable final Double value) {
         this.cloudProvisioningScore = value;
     }
     /**
      * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHealthStatus(@jakarta.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
         this.healthStatus = value;
     }
     /**
      * Sets the manufacturer property value. The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the manufacturer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
      * Sets the model property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the model property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
      * Sets the modelDeviceCount property value. The devices count for the model. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the modelDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModelDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.modelDeviceCount = value;
     }
     /**
      * Sets the windowsScore property value. The window score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the windowsScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsScore(@jakarta.annotation.Nullable final Double value) {
         this.windowsScore = value;
     }
     /**
      * Sets the workFromAnywhereScore property value. The work from anywhere score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the workFromAnywhereScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkFromAnywhereScore(@jakarta.annotation.Nullable final Double value) {
         this.workFromAnywhereScore = value;
     }

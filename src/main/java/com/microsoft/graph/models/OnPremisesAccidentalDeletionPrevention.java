@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
     private OnPremisesDirectorySynchronizationDeletionPreventionType synchronizationPreventionType;
     /**
      * Instantiates a new onPremisesAccidentalDeletionPrevention and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OnPremisesAccidentalDeletionPrevention() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("alertThreshold", this.getAlertThreshold());
@@ -102,36 +99,28 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the alertThreshold property value. Threshold value which triggers accidental deletion prevention. The threshold is either an absolute number of objects or a percentage number of objects.
      * @param value Value to set for the alertThreshold property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlertThreshold(@jakarta.annotation.Nullable final Integer value) {
         this.alertThreshold = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the synchronizationPreventionType property value. The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage, unknownFutureValue.
      * @param value Value to set for the synchronizationPreventionType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSynchronizationPreventionType(@jakarta.annotation.Nullable final OnPremisesDirectorySynchronizationDeletionPreventionType value) {
         this.synchronizationPreventionType = value;
     }

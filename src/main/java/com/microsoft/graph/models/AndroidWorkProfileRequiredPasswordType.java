@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Android Work Profile required password type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidWorkProfileRequiredPasswordType implements ValuedEnum {
     /** Device default value, no intent. */
     DeviceDefault("deviceDefault"),

@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Simulation extends Entity implements Parsable {
     /**
      * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
@@ -70,9 +71,7 @@ public class Simulation extends Entity implements Parsable {
     private SimulationStatus status;
     /**
      * Instantiates a new simulation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Simulation() {
         super();
     }
@@ -233,9 +232,7 @@ public class Simulation extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -258,135 +255,105 @@ public class Simulation extends Entity implements Parsable {
     /**
      * Sets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
      * @param value Value to set for the attackTechnique property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttackTechnique(@jakarta.annotation.Nullable final SimulationAttackTechnique value) {
         this.attackTechnique = value;
     }
     /**
      * Sets the attackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      * @param value Value to set for the attackType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttackType(@jakarta.annotation.Nullable final SimulationAttackType value) {
         this.attackType = value;
     }
     /**
      * Sets the automationId property value. Unique identifier for the attack simulation automation.
      * @param value Value to set for the automationId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAutomationId(@jakarta.annotation.Nullable final String value) {
         this.automationId = value;
     }
     /**
      * Sets the completionDateTime property value. Date and time of completion of the attack simulation and training campaign. Supports $filter and $orderby.
      * @param value Value to set for the completionDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completionDateTime = value;
     }
     /**
      * Sets the createdBy property value. Identity of the user who created the attack simulation and training campaign.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time of creation of the attack simulation and training campaign.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Description of the attack simulation and training campaign.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Display name of the attack simulation and training campaign. Supports $filter and $orderby.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the isAutomated property value. Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
      * @param value Value to set for the isAutomated property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAutomated(@jakarta.annotation.Nullable final Boolean value) {
         this.isAutomated = value;
     }
     /**
      * Sets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation and training campaign.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Date and time of the most recent modification of the attack simulation and training campaign.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the launchDateTime property value. Date and time of the launch/start of the attack simulation and training campaign. Supports $filter and $orderby.
      * @param value Value to set for the launchDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLaunchDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.launchDateTime = value;
     }
     /**
      * Sets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @param value Value to set for the payloadDeliveryPlatform property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPayloadDeliveryPlatform(@jakarta.annotation.Nullable final PayloadDeliveryPlatform value) {
         this.payloadDeliveryPlatform = value;
     }
     /**
      * Sets the report property value. Report of the attack simulation and training campaign.
      * @param value Value to set for the report property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReport(@jakarta.annotation.Nullable final SimulationReport value) {
         this.report = value;
     }
     /**
      * Sets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final SimulationStatus value) {
         this.status = value;
     }

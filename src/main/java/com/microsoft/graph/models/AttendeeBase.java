@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttendeeBase extends Recipient implements Parsable {
     /**
      * The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
@@ -13,9 +14,7 @@ public class AttendeeBase extends Recipient implements Parsable {
     private AttendeeType type;
     /**
      * Instantiates a new attendeeBase and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AttendeeBase() {
         super();
         this.setOdataType("#microsoft.graph.attendeeBase");
@@ -58,9 +57,7 @@ public class AttendeeBase extends Recipient implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -69,9 +66,7 @@ public class AttendeeBase extends Recipient implements Parsable {
     /**
      * Sets the type property value. The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final AttendeeType value) {
         this.type = value;
     }

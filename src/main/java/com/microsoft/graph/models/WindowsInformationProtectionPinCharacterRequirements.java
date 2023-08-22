@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Pin Character Requirements
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsInformationProtectionPinCharacterRequirements implements ValuedEnum {
     /** Not allow */
     NotAllow("notAllow"),

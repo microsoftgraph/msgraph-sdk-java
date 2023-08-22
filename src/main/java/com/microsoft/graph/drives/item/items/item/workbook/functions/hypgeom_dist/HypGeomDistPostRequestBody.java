@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class HypGeomDistPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -35,9 +36,7 @@ public class HypGeomDistPostRequestBody implements AdditionalDataHolder, Parsabl
     private Json sampleS;
     /**
      * Instantiates a new HypGeomDistPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public HypGeomDistPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -116,9 +115,7 @@ public class HypGeomDistPostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("cumulative", this.getCumulative());
@@ -131,54 +128,42 @@ public class HypGeomDistPostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the cumulative property value. The cumulative property
      * @param value Value to set for the cumulative property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCumulative(@jakarta.annotation.Nullable final Json value) {
         this.cumulative = value;
     }
     /**
      * Sets the numberPop property value. The numberPop property
      * @param value Value to set for the numberPop property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNumberPop(@jakarta.annotation.Nullable final Json value) {
         this.numberPop = value;
     }
     /**
      * Sets the numberSample property value. The numberSample property
      * @param value Value to set for the numberSample property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNumberSample(@jakarta.annotation.Nullable final Json value) {
         this.numberSample = value;
     }
     /**
      * Sets the populationS property value. The populationS property
      * @param value Value to set for the populationS property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPopulationS(@jakarta.annotation.Nullable final Json value) {
         this.populationS = value;
     }
     /**
      * Sets the sampleS property value. The sampleS property
      * @param value Value to set for the sampleS property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSampleS(@jakarta.annotation.Nullable final Json value) {
         this.sampleS = value;
     }

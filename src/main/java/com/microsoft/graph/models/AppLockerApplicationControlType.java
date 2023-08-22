@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values of AppLocker Application Control Types
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AppLockerApplicationControlType implements ValuedEnum {
     /** Device default value, no Application Control type selected. */
     NotConfigured("notConfigured"),

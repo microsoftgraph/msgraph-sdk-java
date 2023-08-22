@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
     private java.util.List<SinglePropertySchema> schema;
     /**
      * Instantiates a new huntingQueryResults and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public HuntingQueryResults() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -102,36 +99,28 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the results property value. The results of the hunting query.
      * @param value Value to set for the results property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResults(@jakarta.annotation.Nullable final java.util.List<HuntingRowResult> value) {
         this.results = value;
     }
     /**
      * Sets the schema property value. The schema for the response.
      * @param value Value to set for the schema property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSchema(@jakarta.annotation.Nullable final java.util.List<SinglePropertySchema> value) {
         this.schema = value;
     }

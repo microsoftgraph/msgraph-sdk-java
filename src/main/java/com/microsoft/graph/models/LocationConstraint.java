@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class LocationConstraint implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
     private Boolean suggestLocation;
     /**
      * Instantiates a new locationConstraint and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LocationConstraint() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isRequired", this.getIsRequired());
@@ -116,45 +113,35 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the isRequired property value. The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes will not return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations.
      * @param value Value to set for the isRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isRequired = value;
     }
     /**
      * Sets the locations property value. Constraint information for one or more locations that the client requests for the meeting.
      * @param value Value to set for the locations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocations(@jakarta.annotation.Nullable final java.util.List<LocationConstraintItem> value) {
         this.locations = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the suggestLocation property value. The client requests the service to suggest one or more meeting locations.
      * @param value Value to set for the suggestLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSuggestLocation(@jakarta.annotation.Nullable final Boolean value) {
         this.suggestLocation = value;
     }

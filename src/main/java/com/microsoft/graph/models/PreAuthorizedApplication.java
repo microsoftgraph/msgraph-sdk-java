@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PreAuthorizedApplication implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class PreAuthorizedApplication implements AdditionalDataHolder, Parsable 
     private String odataType;
     /**
      * Instantiates a new preAuthorizedApplication and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PreAuthorizedApplication() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class PreAuthorizedApplication implements AdditionalDataHolder, Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appId", this.getAppId());
@@ -102,36 +99,28 @@ public class PreAuthorizedApplication implements AdditionalDataHolder, Parsable 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the appId property value. The unique identifier for the application.
      * @param value Value to set for the appId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
      * Sets the delegatedPermissionIds property value. The unique identifier for the oauth2PermissionScopes the application requires.
      * @param value Value to set for the delegatedPermissionIds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDelegatedPermissionIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.delegatedPermissionIds = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

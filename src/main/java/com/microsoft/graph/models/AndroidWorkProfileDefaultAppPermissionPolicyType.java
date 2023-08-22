@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Android Work Profile default app permission policy type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidWorkProfileDefaultAppPermissionPolicyType implements ValuedEnum {
     /** Device default value, no intent. */
     DeviceDefault("deviceDefault"),

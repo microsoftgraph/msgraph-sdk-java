@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The current TeamViewer connector status
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RemoteAssistanceOnboardingStatus implements ValuedEnum {
     /** The status reported when there is no active TeamViewer connector configured or active */
     NotOnboarded("notOnboarded"),

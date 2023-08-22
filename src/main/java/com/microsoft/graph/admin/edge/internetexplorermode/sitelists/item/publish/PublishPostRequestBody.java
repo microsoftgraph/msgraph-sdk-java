@@ -9,6 +9,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PublishPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -28,9 +29,7 @@ public class PublishPostRequestBody implements AdditionalDataHolder, Parsable {
     private java.util.List<BrowserSite> sites;
     /**
      * Instantiates a new publishPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PublishPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -91,9 +90,7 @@ public class PublishPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("revision", this.getRevision());
@@ -104,36 +101,28 @@ public class PublishPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the revision property value. The revision property
      * @param value Value to set for the revision property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRevision(@jakarta.annotation.Nullable final String value) {
         this.revision = value;
     }
     /**
      * Sets the sharedCookies property value. The sharedCookies property
      * @param value Value to set for the sharedCookies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharedCookies(@jakarta.annotation.Nullable final java.util.List<BrowserSharedCookie> value) {
         this.sharedCookies = value;
     }
     /**
      * Sets the sites property value. The sites property
      * @param value Value to set for the sites property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSites(@jakarta.annotation.Nullable final java.util.List<BrowserSite> value) {
         this.sites = value;
     }

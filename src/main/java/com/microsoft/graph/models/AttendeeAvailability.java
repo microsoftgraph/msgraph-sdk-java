@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttendeeAvailability implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new attendeeAvailability and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AttendeeAvailability() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("attendee", this.getAttendee());
@@ -102,36 +99,28 @@ public class AttendeeAvailability implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the attendee property value. The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
      * @param value Value to set for the attendee property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttendee(@jakarta.annotation.Nullable final AttendeeBase value) {
         this.attendee = value;
     }
     /**
      * Sets the availability property value. The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @param value Value to set for the availability property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAvailability(@jakarta.annotation.Nullable final FreeBusyStatus value) {
         this.availability = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

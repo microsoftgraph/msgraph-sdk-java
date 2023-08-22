@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AgreementFileLocalization extends AgreementFileProperties implements Parsable {
     /**
      * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
@@ -13,9 +14,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
     private java.util.List<AgreementFileVersion> versions;
     /**
      * Instantiates a new agreementFileLocalization and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AgreementFileLocalization() {
         super();
     }
@@ -50,9 +49,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +58,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
     /**
      * Sets the versions property value. Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
      * @param value Value to set for the versions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersions(@jakarta.annotation.Nullable final java.util.List<AgreementFileVersion> value) {
         this.versions = value;
     }

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     private String sessionInitiationProtocalAddress;
     /**
      * Instantiates a new updateWindowsDeviceAccountActionParameter and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UpdateWindowsDeviceAccountActionParameter() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +140,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("calendarSyncEnabled", this.getCalendarSyncEnabled());
@@ -158,72 +155,56 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the calendarSyncEnabled property value. Not yet documented
      * @param value Value to set for the calendarSyncEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCalendarSyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.calendarSyncEnabled = value;
     }
     /**
      * Sets the deviceAccount property value. Not yet documented
      * @param value Value to set for the deviceAccount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceAccount(@jakarta.annotation.Nullable final WindowsDeviceAccount value) {
         this.deviceAccount = value;
     }
     /**
      * Sets the deviceAccountEmail property value. Not yet documented
      * @param value Value to set for the deviceAccountEmail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceAccountEmail(@jakarta.annotation.Nullable final String value) {
         this.deviceAccountEmail = value;
     }
     /**
      * Sets the exchangeServer property value. Not yet documented
      * @param value Value to set for the exchangeServer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExchangeServer(@jakarta.annotation.Nullable final String value) {
         this.exchangeServer = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the passwordRotationEnabled property value. Not yet documented
      * @param value Value to set for the passwordRotationEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordRotationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordRotationEnabled = value;
     }
     /**
      * Sets the sessionInitiationProtocalAddress property value. Not yet documented
      * @param value Value to set for the sessionInitiationProtocalAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSessionInitiationProtocalAddress(@jakarta.annotation.Nullable final String value) {
         this.sessionInitiationProtocalAddress = value;
     }

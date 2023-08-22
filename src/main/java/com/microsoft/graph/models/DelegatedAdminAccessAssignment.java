@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     /**
      * The accessContainer property
@@ -30,9 +31,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     private DelegatedAdminAccessAssignmentStatus status;
     /**
      * Instantiates a new delegatedAdminAccessAssignment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DelegatedAdminAccessAssignment() {
         super();
     }
@@ -103,9 +102,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,45 +115,35 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     /**
      * Sets the accessContainer property value. The accessContainer property
      * @param value Value to set for the accessContainer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccessContainer(@jakarta.annotation.Nullable final DelegatedAdminAccessContainer value) {
         this.accessContainer = value;
     }
     /**
      * Sets the accessDetails property value. The accessDetails property
      * @param value Value to set for the accessDetails property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccessDetails(@jakarta.annotation.Nullable final DelegatedAdminAccessDetails value) {
         this.accessDetails = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time in ISO 8601 format and in UTC time when the access assignment was created. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time in ISO 8601 and in UTC time when this access assignment was last modified. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the status property value. The status of the access assignment. Read-only. The possible values are: pending, active, deleting, deleted, error, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final DelegatedAdminAccessAssignmentStatus value) {
         this.status = value;
     }

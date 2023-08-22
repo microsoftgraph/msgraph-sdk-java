@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     /**
      * Pattern that specifies how to form the ID of the external item that the URL represents. The named groups from the regular expression in urlPattern within the urlMatchInfo can be referenced by inserting the group name inside curly brackets.
@@ -17,9 +18,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     private UrlMatchInfo urlMatchInfo;
     /**
      * Instantiates a new itemIdResolver and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ItemIdResolver() {
         super();
         this.setOdataType("#microsoft.graph.externalConnectors.itemIdResolver");
@@ -64,9 +63,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     /**
      * Sets the itemId property value. Pattern that specifies how to form the ID of the external item that the URL represents. The named groups from the regular expression in urlPattern within the urlMatchInfo can be referenced by inserting the group name inside curly brackets.
      * @param value Value to set for the itemId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setItemId(@jakarta.annotation.Nullable final String value) {
         this.itemId = value;
     }
     /**
      * Sets the urlMatchInfo property value. Configurations to match and resolve URL.
      * @param value Value to set for the urlMatchInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUrlMatchInfo(@jakarta.annotation.Nullable final UrlMatchInfo value) {
         this.urlMatchInfo = value;
     }

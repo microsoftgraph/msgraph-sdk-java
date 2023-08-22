@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CalendarPermission extends Entity implements Parsable {
     /**
      * List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
@@ -29,9 +30,7 @@ public class CalendarPermission extends Entity implements Parsable {
     private CalendarRoleType role;
     /**
      * Instantiates a new calendarPermission and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CalendarPermission() {
         super();
     }
@@ -102,9 +101,7 @@ public class CalendarPermission extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -117,45 +114,35 @@ public class CalendarPermission extends Entity implements Parsable {
     /**
      * Sets the allowedRoles property value. List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
      * @param value Value to set for the allowedRoles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowedRoles(@jakarta.annotation.Nullable final java.util.List<CalendarRoleType> value) {
         this.allowedRoles = value;
     }
     /**
      * Sets the emailAddress property value. Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only.
      * @param value Value to set for the emailAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmailAddress(@jakarta.annotation.Nullable final EmailAddress value) {
         this.emailAddress = value;
     }
     /**
      * Sets the isInsideOrganization property value. True if the user in context (sharee or delegate) is inside the same organization as the calendar owner.
      * @param value Value to set for the isInsideOrganization property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsInsideOrganization(@jakarta.annotation.Nullable final Boolean value) {
         this.isInsideOrganization = value;
     }
     /**
      * Sets the isRemovable property value. True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar.
      * @param value Value to set for the isRemovable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsRemovable(@jakarta.annotation.Nullable final Boolean value) {
         this.isRemovable = value;
     }
     /**
      * Sets the role property value. Current permission level of the calendar sharee or delegate.
      * @param value Value to set for the role property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRole(@jakarta.annotation.Nullable final CalendarRoleType value) {
         this.role = value;
     }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MailFolder extends Entity implements Parsable {
     /**
      * The number of immediate child mailFolders in the current mailFolder.
@@ -53,9 +54,7 @@ public class MailFolder extends Entity implements Parsable {
     private Integer unreadItemCount;
     /**
      * Instantiates a new mailFolder and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MailFolder() {
         super();
     }
@@ -187,9 +186,7 @@ public class MailFolder extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -208,99 +205,77 @@ public class MailFolder extends Entity implements Parsable {
     /**
      * Sets the childFolderCount property value. The number of immediate child mailFolders in the current mailFolder.
      * @param value Value to set for the childFolderCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChildFolderCount(@jakarta.annotation.Nullable final Integer value) {
         this.childFolderCount = value;
     }
     /**
      * Sets the childFolders property value. The collection of child folders in the mailFolder.
      * @param value Value to set for the childFolders property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChildFolders(@jakarta.annotation.Nullable final java.util.List<MailFolder> value) {
         this.childFolders = value;
     }
     /**
      * Sets the displayName property value. The mailFolder's display name.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the isHidden property value. Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
      * @param value Value to set for the isHidden property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.isHidden = value;
     }
     /**
      * Sets the messageRules property value. The collection of rules that apply to the user's Inbox folder.
      * @param value Value to set for the messageRules property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessageRules(@jakarta.annotation.Nullable final java.util.List<MessageRule> value) {
         this.messageRules = value;
     }
     /**
      * Sets the messages property value. The collection of messages in the mailFolder.
      * @param value Value to set for the messages property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessages(@jakarta.annotation.Nullable final java.util.List<Message> value) {
         this.messages = value;
     }
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
      * @param value Value to set for the multiValueExtendedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this.multiValueExtendedProperties = value;
     }
     /**
      * Sets the parentFolderId property value. The unique identifier for the mailFolder's parent mailFolder.
      * @param value Value to set for the parentFolderId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentFolderId(@jakarta.annotation.Nullable final String value) {
         this.parentFolderId = value;
     }
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
      * @param value Value to set for the singleValueExtendedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this.singleValueExtendedProperties = value;
     }
     /**
      * Sets the totalItemCount property value. The number of items in the mailFolder.
      * @param value Value to set for the totalItemCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalItemCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalItemCount = value;
     }
     /**
      * Sets the unreadItemCount property value. The number of items in the mailFolder marked as unread.
      * @param value Value to set for the unreadItemCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnreadItemCount(@jakarta.annotation.Nullable final Integer value) {
         this.unreadItemCount = value;
     }

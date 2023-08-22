@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ParticipantEndpoint extends Endpoint implements Parsable {
     /**
      * CPU number of cores used by the media endpoint.
@@ -34,9 +35,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
     private String name;
     /**
      * Instantiates a new participantEndpoint and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ParticipantEndpoint() {
         super();
         this.setOdataType("#microsoft.graph.callRecords.participantEndpoint");
@@ -117,9 +116,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -133,54 +130,42 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
     /**
      * Sets the cpuCoresCount property value. CPU number of cores used by the media endpoint.
      * @param value Value to set for the cpuCoresCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCpuCoresCount(@jakarta.annotation.Nullable final Integer value) {
         this.cpuCoresCount = value;
     }
     /**
      * Sets the cpuName property value. CPU name used by the media endpoint.
      * @param value Value to set for the cpuName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCpuName(@jakarta.annotation.Nullable final String value) {
         this.cpuName = value;
     }
     /**
      * Sets the cpuProcessorSpeedInMhz property value. CPU processor speed used by the media endpoint.
      * @param value Value to set for the cpuProcessorSpeedInMhz property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCpuProcessorSpeedInMhz(@jakarta.annotation.Nullable final Integer value) {
         this.cpuProcessorSpeedInMhz = value;
     }
     /**
      * Sets the feedback property value. The feedback provided by the user of this endpoint about the quality of the session.
      * @param value Value to set for the feedback property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFeedback(@jakarta.annotation.Nullable final UserFeedback value) {
         this.feedback = value;
     }
     /**
      * Sets the identity property value. Identity associated with the endpoint.
      * @param value Value to set for the identity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
         this.identity = value;
     }
     /**
      * Sets the name property value. Name of the device used by the media endpoint.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }

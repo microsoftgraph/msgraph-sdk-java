@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for the install intent chosen by the admin.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum InstallIntent implements ValuedEnum {
     /** Available install intent. */
     Available("available"),

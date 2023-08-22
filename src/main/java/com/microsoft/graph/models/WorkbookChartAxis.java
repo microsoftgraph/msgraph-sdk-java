@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartAxis extends Entity implements Parsable {
     /**
      * Represents the formatting of a chart object, which includes line and font formatting. Read-only.
@@ -41,9 +42,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
     private WorkbookChartAxisTitle title;
     /**
      * Instantiates a new workbookChartAxis and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookChartAxis() {
         super();
     }
@@ -141,9 +140,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,72 +156,56 @@ public class WorkbookChartAxis extends Entity implements Parsable {
     /**
      * Sets the format property value. Represents the formatting of a chart object, which includes line and font formatting. Read-only.
      * @param value Value to set for the format property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFormat(@jakarta.annotation.Nullable final WorkbookChartAxisFormat value) {
         this.format = value;
     }
     /**
      * Sets the majorGridlines property value. Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
      * @param value Value to set for the majorGridlines property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMajorGridlines(@jakarta.annotation.Nullable final WorkbookChartGridlines value) {
         this.majorGridlines = value;
     }
     /**
      * Sets the majorUnit property value. Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
      * @param value Value to set for the majorUnit property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMajorUnit(@jakarta.annotation.Nullable final Json value) {
         this.majorUnit = value;
     }
     /**
      * Sets the maximum property value. Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
      * @param value Value to set for the maximum property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaximum(@jakarta.annotation.Nullable final Json value) {
         this.maximum = value;
     }
     /**
      * Sets the minimum property value. Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
      * @param value Value to set for the minimum property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimum(@jakarta.annotation.Nullable final Json value) {
         this.minimum = value;
     }
     /**
      * Sets the minorGridlines property value. Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
      * @param value Value to set for the minorGridlines property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinorGridlines(@jakarta.annotation.Nullable final WorkbookChartGridlines value) {
         this.minorGridlines = value;
     }
     /**
      * Sets the minorUnit property value. Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
      * @param value Value to set for the minorUnit property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinorUnit(@jakarta.annotation.Nullable final Json value) {
         this.minorUnit = value;
     }
     /**
      * Sets the title property value. Represents the axis title. Read-only.
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTitle(@jakarta.annotation.Nullable final WorkbookChartAxisTitle value) {
         this.title = value;
     }

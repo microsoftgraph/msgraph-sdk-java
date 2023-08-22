@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SetDataPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -23,9 +24,7 @@ public class SetDataPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json sourceData;
     /**
      * Instantiates a new setDataPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SetDataPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,9 +76,7 @@ public class SetDataPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("seriesBy", this.getSeriesBy());
@@ -89,27 +86,21 @@ public class SetDataPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the seriesBy property value. The seriesBy property
      * @param value Value to set for the seriesBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSeriesBy(@jakarta.annotation.Nullable final String value) {
         this.seriesBy = value;
     }
     /**
      * Sets the sourceData property value. The sourceData property
      * @param value Value to set for the sourceData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceData(@jakarta.annotation.Nullable final Json value) {
         this.sourceData = value;
     }

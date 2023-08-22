@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Teamwork extends Entity implements Parsable {
     /**
      * The deleted team.
@@ -21,9 +22,7 @@ public class Teamwork extends Entity implements Parsable {
     private java.util.List<WorkforceIntegration> workforceIntegrations;
     /**
      * Instantiates a new teamwork and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Teamwork() {
         super();
     }
@@ -76,9 +75,7 @@ public class Teamwork extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +86,21 @@ public class Teamwork extends Entity implements Parsable {
     /**
      * Sets the deletedTeams property value. The deleted team.
      * @param value Value to set for the deletedTeams property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeletedTeams(@jakarta.annotation.Nullable final java.util.List<DeletedTeam> value) {
         this.deletedTeams = value;
     }
     /**
      * Sets the teamsAppSettings property value. The teamsAppSettings property
      * @param value Value to set for the teamsAppSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamsAppSettings(@jakarta.annotation.Nullable final TeamsAppSettings value) {
         this.teamsAppSettings = value;
     }
     /**
      * Sets the workforceIntegrations property value. The workforceIntegrations property
      * @param value Value to set for the workforceIntegrations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkforceIntegrations(@jakarta.annotation.Nullable final java.util.List<WorkforceIntegration> value) {
         this.workforceIntegrations = value;
     }

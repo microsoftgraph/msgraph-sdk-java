@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Message extends OutlookItem implements Parsable {
     /**
      * The fileAttachment and itemAttachment attachments for the message.
@@ -130,9 +131,7 @@ public class Message extends OutlookItem implements Parsable {
     private String webLink;
     /**
      * Instantiates a new message and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Message() {
         super();
         this.setOdataType("#microsoft.graph.message");
@@ -439,9 +438,7 @@ public class Message extends OutlookItem implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -479,270 +476,210 @@ public class Message extends OutlookItem implements Parsable {
     /**
      * Sets the attachments property value. The fileAttachment and itemAttachment attachments for the message.
      * @param value Value to set for the attachments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttachments(@jakarta.annotation.Nullable final java.util.List<Attachment> value) {
         this.attachments = value;
     }
     /**
      * Sets the bccRecipients property value. The Bcc: recipients for the message.
      * @param value Value to set for the bccRecipients property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBccRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.bccRecipients = value;
     }
     /**
      * Sets the body property value. The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
      * @param value Value to set for the body property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
         this.body = value;
     }
     /**
      * Sets the bodyPreview property value. The first 255 characters of the message body. It is in text format.
      * @param value Value to set for the bodyPreview property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBodyPreview(@jakarta.annotation.Nullable final String value) {
         this.bodyPreview = value;
     }
     /**
      * Sets the ccRecipients property value. The Cc: recipients for the message.
      * @param value Value to set for the ccRecipients property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCcRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.ccRecipients = value;
     }
     /**
      * Sets the conversationId property value. The ID of the conversation the email belongs to.
      * @param value Value to set for the conversationId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConversationId(@jakarta.annotation.Nullable final String value) {
         this.conversationId = value;
     }
     /**
      * Sets the conversationIndex property value. Indicates the position of the message within the conversation.
      * @param value Value to set for the conversationIndex property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConversationIndex(@jakarta.annotation.Nullable final byte[] value) {
         this.conversationIndex = value;
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the message. Nullable.
      * @param value Value to set for the extensions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
         this.extensions = value;
     }
     /**
      * Sets the flag property value. The flag value that indicates the status, start date, due date, or completion date for the message.
      * @param value Value to set for the flag property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFlag(@jakarta.annotation.Nullable final FollowupFlag value) {
         this.flag = value;
     }
     /**
      * Sets the from property value. The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
      * @param value Value to set for the from property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFrom(@jakarta.annotation.Nullable final Recipient value) {
         this.from = value;
     }
     /**
      * Sets the hasAttachments property value. Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>.
      * @param value Value to set for the hasAttachments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
         this.hasAttachments = value;
     }
     /**
      * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setImportance(@jakarta.annotation.Nullable final Importance value) {
         this.importance = value;
     }
     /**
      * Sets the inferenceClassification property value. The inferenceClassification property
      * @param value Value to set for the inferenceClassification property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInferenceClassification(@jakarta.annotation.Nullable final InferenceClassificationType value) {
         this.inferenceClassification = value;
     }
     /**
      * Sets the internetMessageHeaders property value. The internetMessageHeaders property
      * @param value Value to set for the internetMessageHeaders property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInternetMessageHeaders(@jakarta.annotation.Nullable final java.util.List<InternetMessageHeader> value) {
         this.internetMessageHeaders = value;
     }
     /**
      * Sets the internetMessageId property value. The internetMessageId property
      * @param value Value to set for the internetMessageId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInternetMessageId(@jakarta.annotation.Nullable final String value) {
         this.internetMessageId = value;
     }
     /**
      * Sets the isDeliveryReceiptRequested property value. The isDeliveryReceiptRequested property
      * @param value Value to set for the isDeliveryReceiptRequested property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsDeliveryReceiptRequested(@jakarta.annotation.Nullable final Boolean value) {
         this.isDeliveryReceiptRequested = value;
     }
     /**
      * Sets the isDraft property value. The isDraft property
      * @param value Value to set for the isDraft property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsDraft(@jakarta.annotation.Nullable final Boolean value) {
         this.isDraft = value;
     }
     /**
      * Sets the isRead property value. The isRead property
      * @param value Value to set for the isRead property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsRead(@jakarta.annotation.Nullable final Boolean value) {
         this.isRead = value;
     }
     /**
      * Sets the isReadReceiptRequested property value. The isReadReceiptRequested property
      * @param value Value to set for the isReadReceiptRequested property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsReadReceiptRequested(@jakarta.annotation.Nullable final Boolean value) {
         this.isReadReceiptRequested = value;
     }
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the message. Nullable.
      * @param value Value to set for the multiValueExtendedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this.multiValueExtendedProperties = value;
     }
     /**
      * Sets the parentFolderId property value. The parentFolderId property
      * @param value Value to set for the parentFolderId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentFolderId(@jakarta.annotation.Nullable final String value) {
         this.parentFolderId = value;
     }
     /**
      * Sets the receivedDateTime property value. The receivedDateTime property
      * @param value Value to set for the receivedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReceivedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.receivedDateTime = value;
     }
     /**
      * Sets the replyTo property value. The replyTo property
      * @param value Value to set for the replyTo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReplyTo(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.replyTo = value;
     }
     /**
      * Sets the sender property value. The sender property
      * @param value Value to set for the sender property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSender(@jakarta.annotation.Nullable final Recipient value) {
         this.sender = value;
     }
     /**
      * Sets the sentDateTime property value. The sentDateTime property
      * @param value Value to set for the sentDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSentDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.sentDateTime = value;
     }
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the message. Nullable.
      * @param value Value to set for the singleValueExtendedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this.singleValueExtendedProperties = value;
     }
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
     /**
      * Sets the toRecipients property value. The toRecipients property
      * @param value Value to set for the toRecipients property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setToRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.toRecipients = value;
     }
     /**
      * Sets the uniqueBody property value. The uniqueBody property
      * @param value Value to set for the uniqueBody property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUniqueBody(@jakarta.annotation.Nullable final ItemBody value) {
         this.uniqueBody = value;
     }
     /**
      * Sets the webLink property value. The webLink property
      * @param value Value to set for the webLink property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebLink(@jakarta.annotation.Nullable final String value) {
         this.webLink = value;
     }

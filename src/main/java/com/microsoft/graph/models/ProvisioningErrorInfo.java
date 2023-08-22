@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     private String recommendedAction;
     /**
      * Instantiates a new provisioningErrorInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ProvisioningErrorInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +127,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("additionalDetails", this.getAdditionalDetails());
@@ -144,63 +141,49 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the additionalDetails property value. Additional details in case of error.
      * @param value Value to set for the additionalDetails property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalDetails(@jakarta.annotation.Nullable final String value) {
         this.additionalDetails = value;
     }
     /**
      * Sets the errorCategory property value. Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
      * @param value Value to set for the errorCategory property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setErrorCategory(@jakarta.annotation.Nullable final ProvisioningStatusErrorCategory value) {
         this.errorCategory = value;
     }
     /**
      * Sets the errorCode property value. Unique error code if any occurred. Learn more
      * @param value Value to set for the errorCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setErrorCode(@jakarta.annotation.Nullable final String value) {
         this.errorCode = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the reason property value. Summarizes the status and describes why the status happened.
      * @param value Value to set for the reason property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReason(@jakarta.annotation.Nullable final String value) {
         this.reason = value;
     }
     /**
      * Sets the recommendedAction property value. Provides the resolution for the corresponding error.
      * @param value Value to set for the recommendedAction property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecommendedAction(@jakarta.annotation.Nullable final String value) {
         this.recommendedAction = value;
     }

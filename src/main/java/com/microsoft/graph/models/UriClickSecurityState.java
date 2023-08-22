@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -43,9 +44,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     private String verdict;
     /**
      * Instantiates a new uriClickSecurityState and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UriClickSecurityState() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -142,9 +141,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("clickAction", this.getClickAction());
@@ -159,72 +156,56 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the clickAction property value. The clickAction property
      * @param value Value to set for the clickAction property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClickAction(@jakarta.annotation.Nullable final String value) {
         this.clickAction = value;
     }
     /**
      * Sets the clickDateTime property value. The clickDateTime property
      * @param value Value to set for the clickDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClickDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.clickDateTime = value;
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the sourceId property value. The sourceId property
      * @param value Value to set for the sourceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceId(@jakarta.annotation.Nullable final String value) {
         this.sourceId = value;
     }
     /**
      * Sets the uriDomain property value. The uriDomain property
      * @param value Value to set for the uriDomain property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUriDomain(@jakarta.annotation.Nullable final String value) {
         this.uriDomain = value;
     }
     /**
      * Sets the verdict property value. The verdict property
      * @param value Value to set for the verdict property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVerdict(@jakarta.annotation.Nullable final String value) {
         this.verdict = value;
     }

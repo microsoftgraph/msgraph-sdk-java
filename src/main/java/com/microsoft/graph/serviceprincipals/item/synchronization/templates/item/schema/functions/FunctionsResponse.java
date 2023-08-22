@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class FunctionsResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
      * The value property
@@ -15,9 +16,7 @@ public class FunctionsResponse extends BaseCollectionPaginationCountResponse imp
     private java.util.List<AttributeMappingFunctionSchema> value;
     /**
      * Instantiates a new functionsResponse and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public FunctionsResponse() {
         super();
     }
@@ -52,9 +51,7 @@ public class FunctionsResponse extends BaseCollectionPaginationCountResponse imp
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,9 +60,7 @@ public class FunctionsResponse extends BaseCollectionPaginationCountResponse imp
     /**
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AttributeMappingFunctionSchema> value) {
         this.value = value;
     }

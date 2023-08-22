@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Device registration status.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceRegistrationState implements ValuedEnum {
     /** The device is not registered. */
     NotRegistered("notRegistered"),

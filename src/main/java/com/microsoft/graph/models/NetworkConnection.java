@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class NetworkConnection implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -99,9 +100,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     private String urlParameters;
     /**
      * Instantiates a new networkConnection and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public NetworkConnection() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -324,9 +323,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("applicationName", this.getApplicationName());
@@ -355,198 +352,154 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the applicationName property value. Name of the application managing the network connection (for example, Facebook or SMTP).
      * @param value Value to set for the applicationName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationName(@jakarta.annotation.Nullable final String value) {
         this.applicationName = value;
     }
     /**
      * Sets the destinationAddress property value. Destination IP address (of the network connection).
      * @param value Value to set for the destinationAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDestinationAddress(@jakarta.annotation.Nullable final String value) {
         this.destinationAddress = value;
     }
     /**
      * Sets the destinationDomain property value. Destination domain portion of the destination URL. (for example 'www.contoso.com').
      * @param value Value to set for the destinationDomain property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDestinationDomain(@jakarta.annotation.Nullable final String value) {
         this.destinationDomain = value;
     }
     /**
      * Sets the destinationLocation property value. Location (by IP address mapping) associated with the destination of a network connection.
      * @param value Value to set for the destinationLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDestinationLocation(@jakarta.annotation.Nullable final String value) {
         this.destinationLocation = value;
     }
     /**
      * Sets the destinationPort property value. Destination port (of the network connection).
      * @param value Value to set for the destinationPort property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDestinationPort(@jakarta.annotation.Nullable final String value) {
         this.destinationPort = value;
     }
     /**
      * Sets the destinationUrl property value. Network connection URL/URI string - excluding parameters. (for example 'www.contoso.com/products/default.html')
      * @param value Value to set for the destinationUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDestinationUrl(@jakarta.annotation.Nullable final String value) {
         this.destinationUrl = value;
     }
     /**
      * Sets the direction property value. Network connection direction. Possible values are: unknown, inbound, outbound.
      * @param value Value to set for the direction property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDirection(@jakarta.annotation.Nullable final ConnectionDirection value) {
         this.direction = value;
     }
     /**
      * Sets the domainRegisteredDateTime property value. Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the domainRegisteredDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDomainRegisteredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.domainRegisteredDateTime = value;
     }
     /**
      * Sets the localDnsName property value. The local DNS name resolution as it appears in the host's local DNS cache (for example, in case the 'hosts' file was tampered with).
      * @param value Value to set for the localDnsName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocalDnsName(@jakarta.annotation.Nullable final String value) {
         this.localDnsName = value;
     }
     /**
      * Sets the natDestinationAddress property value. Network Address Translation destination IP address.
      * @param value Value to set for the natDestinationAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNatDestinationAddress(@jakarta.annotation.Nullable final String value) {
         this.natDestinationAddress = value;
     }
     /**
      * Sets the natDestinationPort property value. Network Address Translation destination port.
      * @param value Value to set for the natDestinationPort property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNatDestinationPort(@jakarta.annotation.Nullable final String value) {
         this.natDestinationPort = value;
     }
     /**
      * Sets the natSourceAddress property value. Network Address Translation source IP address.
      * @param value Value to set for the natSourceAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNatSourceAddress(@jakarta.annotation.Nullable final String value) {
         this.natSourceAddress = value;
     }
     /**
      * Sets the natSourcePort property value. Network Address Translation source port.
      * @param value Value to set for the natSourcePort property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNatSourcePort(@jakarta.annotation.Nullable final String value) {
         this.natSourcePort = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the protocol property value. Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
      * @param value Value to set for the protocol property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProtocol(@jakarta.annotation.Nullable final SecurityNetworkProtocol value) {
         this.protocol = value;
     }
     /**
      * Sets the riskScore property value. Provider generated/calculated risk score of the network connection. Recommended value range of 0-1, which equates to a percentage.
      * @param value Value to set for the riskScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskScore(@jakarta.annotation.Nullable final String value) {
         this.riskScore = value;
     }
     /**
      * Sets the sourceAddress property value. Source (i.e. origin) IP address (of the network connection).
      * @param value Value to set for the sourceAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceAddress(@jakarta.annotation.Nullable final String value) {
         this.sourceAddress = value;
     }
     /**
      * Sets the sourceLocation property value. Location (by IP address mapping) associated with the source of a network connection.
      * @param value Value to set for the sourceLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceLocation(@jakarta.annotation.Nullable final String value) {
         this.sourceLocation = value;
     }
     /**
      * Sets the sourcePort property value. Source (i.e. origin) IP port (of the network connection).
      * @param value Value to set for the sourcePort property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourcePort(@jakarta.annotation.Nullable final String value) {
         this.sourcePort = value;
     }
     /**
      * Sets the status property value. Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final ConnectionStatus value) {
         this.status = value;
     }
     /**
      * Sets the urlParameters property value. Parameters (suffix) of the destination URL.
      * @param value Value to set for the urlParameters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUrlParameters(@jakarta.annotation.Nullable final String value) {
         this.urlParameters = value;
     }

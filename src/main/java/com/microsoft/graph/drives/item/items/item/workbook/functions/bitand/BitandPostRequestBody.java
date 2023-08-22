@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class BitandPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -23,9 +24,7 @@ public class BitandPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json number2;
     /**
      * Instantiates a new bitandPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BitandPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,9 +76,7 @@ public class BitandPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("number1", this.getNumber1());
@@ -89,27 +86,21 @@ public class BitandPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the number1 property value. The number1 property
      * @param value Value to set for the number1 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNumber1(@jakarta.annotation.Nullable final Json value) {
         this.number1 = value;
     }
     /**
      * Sets the number2 property value. The number2 property
      * @param value Value to set for the number2 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNumber2(@jakarta.annotation.Nullable final Json value) {
         this.number2 = value;
     }

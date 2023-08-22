@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The current status of the Exchange Connector.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementExchangeConnectorStatus implements ValuedEnum {
     /** No Connector exists. */
     None("none"),

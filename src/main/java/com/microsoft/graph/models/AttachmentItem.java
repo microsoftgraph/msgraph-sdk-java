@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AttachmentItem implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
     private Long size;
     /**
      * Instantiates a new attachmentItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AttachmentItem() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +140,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("attachmentType", this.getAttachmentType());
@@ -158,72 +155,56 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the attachmentType property value. The type of attachment. Possible values are: file, item, reference. Required.
      * @param value Value to set for the attachmentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttachmentType(@jakarta.annotation.Nullable final AttachmentType value) {
         this.attachmentType = value;
     }
     /**
      * Sets the contentId property value. The CID or Content-Id of the attachment for referencing in case of in-line attachments using <img src='cid:contentId'> tag in HTML messages. Optional.
      * @param value Value to set for the contentId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentId(@jakarta.annotation.Nullable final String value) {
         this.contentId = value;
     }
     /**
      * Sets the contentType property value. The nature of the data in the attachment. Optional.
      * @param value Value to set for the contentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentType(@jakarta.annotation.Nullable final String value) {
         this.contentType = value;
     }
     /**
      * Sets the isInline property value. true if the attachment is an inline attachment; otherwise, false. Optional.
      * @param value Value to set for the isInline property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsInline(@jakarta.annotation.Nullable final Boolean value) {
         this.isInline = value;
     }
     /**
      * Sets the name property value. The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the size property value. The length of the attachment in bytes. Required.
      * @param value Value to set for the size property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSize(@jakarta.annotation.Nullable final Long value) {
         this.size = value;
     }

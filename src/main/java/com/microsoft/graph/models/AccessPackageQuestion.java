@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageQuestion extends Entity implements Parsable {
     /**
      * Specifies whether the requestor is allowed to edit answers to questions for an assignment by posting an update to accessPackageAssignmentRequest.
@@ -29,9 +30,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
     private String text;
     /**
      * Instantiates a new accessPackageQuestion and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageQuestion() {
         super();
     }
@@ -110,9 +109,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -125,45 +122,35 @@ public class AccessPackageQuestion extends Entity implements Parsable {
     /**
      * Sets the isAnswerEditable property value. Specifies whether the requestor is allowed to edit answers to questions for an assignment by posting an update to accessPackageAssignmentRequest.
      * @param value Value to set for the isAnswerEditable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAnswerEditable(@jakarta.annotation.Nullable final Boolean value) {
         this.isAnswerEditable = value;
     }
     /**
      * Sets the isRequired property value. Whether the requestor is required to supply an answer or not.
      * @param value Value to set for the isRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isRequired = value;
     }
     /**
      * Sets the localizations property value. The text of the question represented in a format for a specific locale.
      * @param value Value to set for the localizations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocalizations(@jakarta.annotation.Nullable final java.util.List<AccessPackageLocalizedText> value) {
         this.localizations = value;
     }
     /**
      * Sets the sequence property value. Relative position of this question when displaying a list of questions to the requestor.
      * @param value Value to set for the sequence property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSequence(@jakarta.annotation.Nullable final Integer value) {
         this.sequence = value;
     }
     /**
      * Sets the text property value. The text of the question to show to the requestor.
      * @param value Value to set for the text property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setText(@jakarta.annotation.Nullable final String value) {
         this.text = value;
     }

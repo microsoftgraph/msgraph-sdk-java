@@ -10,6 +10,7 @@ import java.util.UUID;
 /**
  * Singleton entity which represents the Exchange OnPremises Conditional Access Settings for a tenant.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnPremisesConditionalAccessSettings extends Entity implements Parsable {
     /**
      * Indicates if on premises conditional access is enabled for this organization
@@ -29,9 +30,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     private Boolean overrideDefaultRule;
     /**
      * Instantiates a new onPremisesConditionalAccessSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OnPremisesConditionalAccessSettings() {
         super();
     }
@@ -93,9 +92,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -107,36 +104,28 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     /**
      * Sets the enabled property value. Indicates if on premises conditional access is enabled for this organization
      * @param value Value to set for the enabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.enabled = value;
     }
     /**
      * Sets the excludedGroups property value. User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
      * @param value Value to set for the excludedGroups property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExcludedGroups(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
         this.excludedGroups = value;
     }
     /**
      * Sets the includedGroups property value. User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
      * @param value Value to set for the includedGroups property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludedGroups(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
         this.includedGroups = value;
     }
     /**
      * Sets the overrideDefaultRule property value. Override the default access rule when allowing a device to ensure access is granted.
      * @param value Value to set for the overrideDefaultRule property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOverrideDefaultRule(@jakarta.annotation.Nullable final Boolean value) {
         this.overrideDefaultRule = value;
     }

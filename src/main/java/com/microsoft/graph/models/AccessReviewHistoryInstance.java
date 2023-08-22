@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewHistoryInstance extends Entity implements Parsable {
     /**
      * Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
@@ -38,9 +39,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
     private AccessReviewHistoryStatus status;
     /**
      * Instantiates a new accessReviewHistoryInstance and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessReviewHistoryInstance() {
         super();
     }
@@ -129,9 +128,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,63 +143,49 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
     /**
      * Sets the downloadUri property value. Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
      * @param value Value to set for the downloadUri property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDownloadUri(@jakarta.annotation.Nullable final String value) {
         this.downloadUri = value;
     }
     /**
      * Sets the expirationDateTime property value. Timestamp when this instance and associated data expires and the history is deleted. Required.
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the fulfilledDateTime property value. Timestamp when all of the available data for this instance was collected. This will be set after this instance's status is set to done. Required.
      * @param value Value to set for the fulfilledDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFulfilledDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.fulfilledDateTime = value;
     }
     /**
      * Sets the reviewHistoryPeriodEndDateTime property value. Timestamp, reviews ending on or before this date will be included in the fetched history data.
      * @param value Value to set for the reviewHistoryPeriodEndDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReviewHistoryPeriodEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.reviewHistoryPeriodEndDateTime = value;
     }
     /**
      * Sets the reviewHistoryPeriodStartDateTime property value. Timestamp, reviews starting on or after this date will be included in the fetched history data.
      * @param value Value to set for the reviewHistoryPeriodStartDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReviewHistoryPeriodStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.reviewHistoryPeriodStartDateTime = value;
     }
     /**
      * Sets the runDateTime property value. Timestamp when the instance's history data is scheduled to be generated.
      * @param value Value to set for the runDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRunDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.runDateTime = value;
     }
     /**
      * Sets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status has been marked as done, a link can be generated to retrieve the instance's data by calling generateDownloadUri method.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final AccessReviewHistoryStatus value) {
         this.status = value;
     }

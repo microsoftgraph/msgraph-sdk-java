@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
     private OnlineMeetingVideoDisabledReason videoDisabled;
     /**
      * Instantiates a new onlineMeetingRestricted and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OnlineMeetingRestricted() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("contentSharingDisabled", this.getContentSharingDisabled());
@@ -102,36 +99,28 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the contentSharingDisabled property value. Specifies the reason shared content from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
      * @param value Value to set for the contentSharingDisabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentSharingDisabled(@jakarta.annotation.Nullable final OnlineMeetingContentSharingDisabledReason value) {
         this.contentSharingDisabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the videoDisabled property value. Specifies the reason video from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
      * @param value Value to set for the videoDisabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVideoDisabled(@jakarta.annotation.Nullable final OnlineMeetingVideoDisabledReason value) {
         this.videoDisabled = value;
     }

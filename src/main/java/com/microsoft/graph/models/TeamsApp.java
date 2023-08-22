@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsApp extends Entity implements Parsable {
     /**
      * The details for each version of the app.
@@ -25,9 +26,7 @@ public class TeamsApp extends Entity implements Parsable {
     private String externalId;
     /**
      * Instantiates a new teamsApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamsApp() {
         super();
     }
@@ -89,9 +88,7 @@ public class TeamsApp extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -103,36 +100,28 @@ public class TeamsApp extends Entity implements Parsable {
     /**
      * Sets the appDefinitions property value. The details for each version of the app.
      * @param value Value to set for the appDefinitions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppDefinitions(@jakarta.annotation.Nullable final java.util.List<TeamsAppDefinition> value) {
         this.appDefinitions = value;
     }
     /**
      * Sets the displayName property value. The name of the catalog app provided by the app developer in the Microsoft Teams zip app package.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the distributionMethod property value. The method of distribution for the app. Read-only.
      * @param value Value to set for the distributionMethod property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDistributionMethod(@jakarta.annotation.Nullable final TeamsAppDistributionMethod value) {
         this.distributionMethod = value;
     }
     /**
      * Sets the externalId property value. The ID of the catalog provided by the app developer in the Microsoft Teams zip app package.
      * @param value Value to set for the externalId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }

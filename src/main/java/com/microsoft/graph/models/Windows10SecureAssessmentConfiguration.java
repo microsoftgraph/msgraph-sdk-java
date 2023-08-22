@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * This topic provides descriptions of the declared methods, properties and relationships exposed by the secureAssessment resource.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Indicates whether or not to allow the app from printing during the test.
@@ -32,9 +33,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     private String launchUri;
     /**
      * Instantiates a new windows10SecureAssessmentConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Windows10SecureAssessmentConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10SecureAssessmentConfiguration");
@@ -106,9 +105,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -121,45 +118,35 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     /**
      * Sets the allowPrinting property value. Indicates whether or not to allow the app from printing during the test.
      * @param value Value to set for the allowPrinting property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowPrinting(@jakarta.annotation.Nullable final Boolean value) {
         this.allowPrinting = value;
     }
     /**
      * Sets the allowScreenCapture property value. Indicates whether or not to allow screen capture capability during a test.
      * @param value Value to set for the allowScreenCapture property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowScreenCapture(@jakarta.annotation.Nullable final Boolean value) {
         this.allowScreenCapture = value;
     }
     /**
      * Sets the allowTextSuggestion property value. Indicates whether or not to allow text suggestions during the test.
      * @param value Value to set for the allowTextSuggestion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowTextSuggestion(@jakarta.annotation.Nullable final Boolean value) {
         this.allowTextSuggestion = value;
     }
     /**
      * Sets the configurationAccount property value. The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
      * @param value Value to set for the configurationAccount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConfigurationAccount(@jakarta.annotation.Nullable final String value) {
         this.configurationAccount = value;
     }
     /**
      * Sets the launchUri property value. Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
      * @param value Value to set for the launchUri property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLaunchUri(@jakarta.annotation.Nullable final String value) {
         this.launchUri = value;
     }

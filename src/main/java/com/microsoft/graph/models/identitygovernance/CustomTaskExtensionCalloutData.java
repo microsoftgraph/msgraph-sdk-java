@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTaskExtensionCalloutData extends CustomExtensionData implements Parsable {
     /**
      * The subject property
@@ -27,9 +28,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     private Workflow workflow;
     /**
      * Instantiates a new customTaskExtensionCalloutData and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CustomTaskExtensionCalloutData() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.customTaskExtensionCalloutData");
@@ -92,9 +91,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -106,36 +103,28 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubject(@jakarta.annotation.Nullable final User value) {
         this.subject = value;
     }
     /**
      * Sets the task property value. The task property
      * @param value Value to set for the task property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTask(@jakarta.annotation.Nullable final Task value) {
         this.task = value;
     }
     /**
      * Sets the taskProcessingresult property value. The taskProcessingresult property
      * @param value Value to set for the taskProcessingresult property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTaskProcessingresult(@jakarta.annotation.Nullable final TaskProcessingResult value) {
         this.taskProcessingresult = value;
     }
     /**
      * Sets the workflow property value. The workflow property
      * @param value Value to set for the workflow property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkflow(@jakarta.annotation.Nullable final Workflow value) {
         this.workflow = value;
     }

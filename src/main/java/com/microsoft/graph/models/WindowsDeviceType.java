@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Contains properties for Windows device type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsDeviceType implements ValuedEnum {
     /** No flags set. */
     None("none"),

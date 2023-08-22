@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class FileSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
     private String riskScore;
     /**
      * Instantiates a new fileSecurityState and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public FileSecurityState() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("fileHash", this.getFileHash());
@@ -130,54 +127,42 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the fileHash property value. Complex type containing file hashes (cryptographic and location-sensitive).
      * @param value Value to set for the fileHash property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileHash(@jakarta.annotation.Nullable final FileHash value) {
         this.fileHash = value;
     }
     /**
      * Sets the name property value. File name (without path).
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the path property value. Full file path of the file/imageFile.
      * @param value Value to set for the path property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPath(@jakarta.annotation.Nullable final String value) {
         this.path = value;
     }
     /**
      * Sets the riskScore property value. Provider generated/calculated risk score of the alert file. Recommended value range of 0-1, which equates to a percentage.
      * @param value Value to set for the riskScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRiskScore(@jakarta.annotation.Nullable final String value) {
         this.riskScore = value;
     }

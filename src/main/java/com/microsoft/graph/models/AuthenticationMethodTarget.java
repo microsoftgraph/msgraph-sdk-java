@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationMethodTarget extends Entity implements Parsable {
     /**
      * Determines if the user is enforced to register the authentication method.
@@ -17,9 +18,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
     private AuthenticationMethodTargetType targetType;
     /**
      * Instantiates a new authenticationMethodTarget and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AuthenticationMethodTarget() {
         super();
     }
@@ -71,9 +70,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -83,18 +80,14 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
     /**
      * Sets the isRegistrationRequired property value. Determines if the user is enforced to register the authentication method.
      * @param value Value to set for the isRegistrationRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsRegistrationRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isRegistrationRequired = value;
     }
     /**
      * Sets the targetType property value. The targetType property
      * @param value Value to set for the targetType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetType(@jakarta.annotation.Nullable final AuthenticationMethodTargetType value) {
         this.targetType = value;
     }

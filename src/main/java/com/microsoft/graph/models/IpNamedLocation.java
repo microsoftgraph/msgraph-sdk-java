@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IpNamedLocation extends NamedLocation implements Parsable {
     /**
      * List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC5969. Required.
@@ -17,9 +18,7 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
     private Boolean isTrusted;
     /**
      * Instantiates a new ipNamedLocation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IpNamedLocation() {
         super();
     }
@@ -63,9 +62,7 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
     /**
      * Sets the ipRanges property value. List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC5969. Required.
      * @param value Value to set for the ipRanges property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIpRanges(@jakarta.annotation.Nullable final java.util.List<IpRange> value) {
         this.ipRanges = value;
     }
     /**
      * Sets the isTrusted property value. true if this location is explicitly trusted. Optional. Default value is false.
      * @param value Value to set for the isTrusted property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsTrusted(@jakarta.annotation.Nullable final Boolean value) {
         this.isTrusted = value;
     }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserSource extends DataSource implements Parsable {
     /**
      * Email address of the user's mailbox.
@@ -21,9 +22,7 @@ public class UserSource extends DataSource implements Parsable {
     private String siteWebUrl;
     /**
      * Instantiates a new userSource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserSource() {
         super();
         this.setOdataType("#microsoft.graph.security.userSource");
@@ -77,9 +76,7 @@ public class UserSource extends DataSource implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class UserSource extends DataSource implements Parsable {
     /**
      * Sets the email property value. Email address of the user's mailbox.
      * @param value Value to set for the email property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
      * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
      * @param value Value to set for the includedSources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludedSources(@jakarta.annotation.Nullable final SourceType value) {
         this.includedSources = value;
     }
     /**
      * Sets the siteWebUrl property value. The URL of the user's OneDrive for Business site. Read-only.
      * @param value Value to set for the siteWebUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSiteWebUrl(@jakarta.annotation.Nullable final String value) {
         this.siteWebUrl = value;
     }

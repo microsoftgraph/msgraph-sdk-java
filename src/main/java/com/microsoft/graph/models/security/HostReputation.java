@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostReputation extends Entity implements Parsable {
     /**
      * The classification property
@@ -22,9 +23,7 @@ public class HostReputation extends Entity implements Parsable {
     private Integer score;
     /**
      * Instantiates a new hostReputation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public HostReputation() {
         super();
     }
@@ -77,9 +76,7 @@ public class HostReputation extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class HostReputation extends Entity implements Parsable {
     /**
      * Sets the classification property value. The classification property
      * @param value Value to set for the classification property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClassification(@jakarta.annotation.Nullable final HostReputationClassification value) {
         this.classification = value;
     }
     /**
      * Sets the rules property value. A collection of rules that have been used to calculate the classification and score.
      * @param value Value to set for the rules property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRules(@jakarta.annotation.Nullable final java.util.List<HostReputationRule> value) {
         this.rules = value;
     }
     /**
      * Sets the score property value. The calculated score (0-100) of the requested host. A higher value indicates that this host is more likely to be suspicious or malicious.
      * @param value Value to set for the score property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScore(@jakarta.annotation.Nullable final Integer value) {
         this.score = value;
     }

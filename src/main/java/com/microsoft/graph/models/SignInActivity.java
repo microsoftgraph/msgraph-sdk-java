@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SignInActivity implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -35,9 +36,7 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new signInActivity and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SignInActivity() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -116,9 +115,7 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastNonInteractiveSignInDateTime", this.getLastNonInteractiveSignInDateTime());
@@ -131,54 +128,42 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the lastNonInteractiveSignInDateTime property value. The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client attempted to sign into the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: '2014-01-01T00:00:00Z'. Azure AD maintains non-interactive sign-ins going back to May 2020. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.
      * @param value Value to set for the lastNonInteractiveSignInDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastNonInteractiveSignInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastNonInteractiveSignInDateTime = value;
     }
     /**
      * Sets the lastNonInteractiveSignInRequestId property value. Request identifier of the last non-interactive sign-in performed by this user.
      * @param value Value to set for the lastNonInteractiveSignInRequestId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastNonInteractiveSignInRequestId(@jakarta.annotation.Nullable final String value) {
         this.lastNonInteractiveSignInRequestId = value;
     }
     /**
      * Sets the lastSignInDateTime property value. The last interactive sign-in date and time for a specific user. You can use this field to calculate the last time a user attempted to sign into the directory with an interactive authentication method. This field can be used to build reports, such as inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: '2014-01-01T00:00:00Z'. Azure AD maintains interactive sign-ins going back to April 2020. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.
      * @param value Value to set for the lastSignInDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastSignInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSignInDateTime = value;
     }
     /**
      * Sets the lastSignInRequestId property value. Request identifier of the last interactive sign-in performed by this user.
      * @param value Value to set for the lastSignInRequestId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastSignInRequestId(@jakarta.annotation.Nullable final String value) {
         this.lastSignInRequestId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

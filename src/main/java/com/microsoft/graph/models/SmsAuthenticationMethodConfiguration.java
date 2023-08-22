@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /**
      * A collection of groups that are enabled to use the authentication method.
@@ -13,9 +14,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
     private java.util.List<SmsAuthenticationMethodTarget> includeTargets;
     /**
      * Instantiates a new smsAuthenticationMethodConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SmsAuthenticationMethodConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.smsAuthenticationMethodConfiguration");
@@ -51,9 +50,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +59,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
      * @param value Value to set for the includeTargets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<SmsAuthenticationMethodTarget> value) {
         this.includeTargets = value;
     }

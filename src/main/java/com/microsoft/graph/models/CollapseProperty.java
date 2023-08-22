@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CollapseProperty implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class CollapseProperty implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new collapseProperty and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CollapseProperty() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class CollapseProperty implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("fields", this.getFields());
@@ -102,36 +99,28 @@ public class CollapseProperty implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the fields property value. Defines the collapse group to trim results. The properties in this collection must be sortable/refinable properties. Required.
      * @param value Value to set for the fields property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFields(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.fields = value;
     }
     /**
      * Sets the limit property value. Defines a maximum limit count for this field. This numeric value must be a positive integer. Required.
      * @param value Value to set for the limit property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLimit(@jakarta.annotation.Nullable final Integer value) {
         this.limit = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

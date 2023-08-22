@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartAxes extends Entity implements Parsable {
     /**
      * Represents the category axis in a chart. Read-only.
@@ -21,9 +22,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
     private WorkbookChartAxis valueAxis;
     /**
      * Instantiates a new workbookChartAxes and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookChartAxes() {
         super();
     }
@@ -76,9 +75,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +86,21 @@ public class WorkbookChartAxes extends Entity implements Parsable {
     /**
      * Sets the categoryAxis property value. Represents the category axis in a chart. Read-only.
      * @param value Value to set for the categoryAxis property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCategoryAxis(@jakarta.annotation.Nullable final WorkbookChartAxis value) {
         this.categoryAxis = value;
     }
     /**
      * Sets the seriesAxis property value. Represents the series axis of a 3-dimensional chart. Read-only.
      * @param value Value to set for the seriesAxis property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSeriesAxis(@jakarta.annotation.Nullable final WorkbookChartAxis value) {
         this.seriesAxis = value;
     }
     /**
      * Sets the valueAxis property value. Represents the value axis in an axis. Read-only.
      * @param value Value to set for the valueAxis property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValueAxis(@jakarta.annotation.Nullable final WorkbookChartAxis value) {
         this.valueAxis = value;
     }

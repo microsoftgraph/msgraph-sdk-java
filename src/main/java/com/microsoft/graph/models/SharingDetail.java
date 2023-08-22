@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharingDetail implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -39,9 +40,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     private String sharingType;
     /**
      * Instantiates a new sharingDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SharingDetail() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -129,9 +128,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -144,63 +141,49 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the sharedBy property value. The user who shared the document.
      * @param value Value to set for the sharedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharedBy(@jakarta.annotation.Nullable final InsightIdentity value) {
         this.sharedBy = value;
     }
     /**
      * Sets the sharedDateTime property value. The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the sharedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.sharedDateTime = value;
     }
     /**
      * Sets the sharingReference property value. The sharingReference property
      * @param value Value to set for the sharingReference property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharingReference(@jakarta.annotation.Nullable final ResourceReference value) {
         this.sharingReference = value;
     }
     /**
      * Sets the sharingSubject property value. The subject with which the document was shared.
      * @param value Value to set for the sharingSubject property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharingSubject(@jakarta.annotation.Nullable final String value) {
         this.sharingSubject = value;
     }
     /**
      * Sets the sharingType property value. Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
      * @param value Value to set for the sharingType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharingType(@jakarta.annotation.Nullable final String value) {
         this.sharingType = value;
     }

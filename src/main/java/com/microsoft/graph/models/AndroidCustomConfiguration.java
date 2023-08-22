@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * This topic provides descriptions of the declared methods, properties and relationships exposed by the androidCustomConfiguration resource.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidCustomConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * OMA settings. This collection can contain a maximum of 1000 elements.
@@ -16,9 +17,7 @@ public class AndroidCustomConfiguration extends DeviceConfiguration implements P
     private java.util.List<OmaSetting> omaSettings;
     /**
      * Instantiates a new androidCustomConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AndroidCustomConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidCustomConfiguration");
@@ -54,9 +53,7 @@ public class AndroidCustomConfiguration extends DeviceConfiguration implements P
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -65,9 +62,7 @@ public class AndroidCustomConfiguration extends DeviceConfiguration implements P
     /**
      * Sets the omaSettings property value. OMA settings. This collection can contain a maximum of 1000 elements.
      * @param value Value to set for the omaSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOmaSettings(@jakarta.annotation.Nullable final java.util.List<OmaSetting> value) {
         this.omaSettings = value;
     }

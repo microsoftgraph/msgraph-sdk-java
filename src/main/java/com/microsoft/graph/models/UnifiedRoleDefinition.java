@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleDefinition extends Entity implements Parsable {
     /**
      * The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
@@ -45,9 +46,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     private String version;
     /**
      * Instantiates a new unifiedRoleDefinition and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRoleDefinition() {
         super();
     }
@@ -154,9 +153,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -173,81 +170,63 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     /**
      * Sets the description property value. The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq, in).
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      * @param value Value to set for the inheritsPermissionsFrom property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInheritsPermissionsFrom(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleDefinition> value) {
         this.inheritsPermissionsFrom = value;
     }
     /**
      * Sets the isBuiltIn property value. Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).
      * @param value Value to set for the isBuiltIn property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsBuiltIn(@jakarta.annotation.Nullable final Boolean value) {
         this.isBuiltIn = value;
     }
     /**
      * Sets the isEnabled property value. Flag indicating whether the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
      * @param value Value to set for the isEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
      * Sets the resourceScopes property value. List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
      * @param value Value to set for the resourceScopes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceScopes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.resourceScopes = value;
     }
     /**
      * Sets the rolePermissions property value. List of permissions included in the role. Read-only when isBuiltIn is true. Required.
      * @param value Value to set for the rolePermissions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRolePermissions(@jakarta.annotation.Nullable final java.util.List<UnifiedRolePermission> value) {
         this.rolePermissions = value;
     }
     /**
      * Sets the templateId property value. Custom template identifier that can be set when isBuiltIn is false but is read-only when isBuiltIn is true. This identifier is typically used if one needs an identifier to be the same across different directories.
      * @param value Value to set for the templateId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTemplateId(@jakarta.annotation.Nullable final String value) {
         this.templateId = value;
     }
     /**
      * Sets the version property value. Indicates version of the role definition. Read-only when isBuiltIn is true.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }

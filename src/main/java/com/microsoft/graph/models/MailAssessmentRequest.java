@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable {
     /**
      * The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
@@ -21,9 +22,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
     private String recipientEmail;
     /**
      * Instantiates a new mailAssessmentRequest and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MailAssessmentRequest() {
         super();
         this.setOdataType("#microsoft.graph.mailAssessmentRequest");
@@ -77,9 +76,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
     /**
      * Sets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
      * @param value Value to set for the destinationRoutingReason property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDestinationRoutingReason(@jakarta.annotation.Nullable final MailDestinationRoutingReason value) {
         this.destinationRoutingReason = value;
     }
     /**
      * Sets the messageUri property value. The resource URI of the mail message for assessment.
      * @param value Value to set for the messageUri property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessageUri(@jakarta.annotation.Nullable final String value) {
         this.messageUri = value;
     }
     /**
      * Sets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
      * @param value Value to set for the recipientEmail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecipientEmail(@jakarta.annotation.Nullable final String value) {
         this.recipientEmail = value;
     }

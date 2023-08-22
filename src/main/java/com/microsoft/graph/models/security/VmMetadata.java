@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class VmMetadata implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
     private String vmId;
     /**
      * Instantiates a new vmMetadata and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public VmMetadata() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("cloudProvider", this.getCloudProvider());
@@ -130,54 +127,42 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the cloudProvider property value. The cloudProvider property
      * @param value Value to set for the cloudProvider property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudProvider(@jakarta.annotation.Nullable final VmCloudProvider value) {
         this.cloudProvider = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the resourceId property value. Unique identifier of the Azure resource.
      * @param value Value to set for the resourceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.resourceId = value;
     }
     /**
      * Sets the subscriptionId property value. Unique identifier of the Azure subscription the customer tenant belongs to.
      * @param value Value to set for the subscriptionId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubscriptionId(@jakarta.annotation.Nullable final String value) {
         this.subscriptionId = value;
     }
     /**
      * Sets the vmId property value. Unique identifier of the virtual machine instance.
      * @param value Value to set for the vmId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVmId(@jakarta.annotation.Nullable final String value) {
         this.vmId = value;
     }

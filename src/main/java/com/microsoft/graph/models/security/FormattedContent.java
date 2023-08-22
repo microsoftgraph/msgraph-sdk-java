@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class FormattedContent implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class FormattedContent implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new formattedContent and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public FormattedContent() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class FormattedContent implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("content", this.getContent());
@@ -102,36 +99,28 @@ public class FormattedContent implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the content property value. The content of this formattedContent.
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContent(@jakarta.annotation.Nullable final String value) {
         this.content = value;
     }
     /**
      * Sets the format property value. The format of the content. The possible values are: text, html, markdown, unknownFutureValue.
      * @param value Value to set for the format property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFormat(@jakarta.annotation.Nullable final ContentFormat value) {
         this.format = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

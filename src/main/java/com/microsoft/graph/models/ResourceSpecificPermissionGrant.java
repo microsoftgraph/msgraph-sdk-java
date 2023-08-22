@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsable {
     /**
      * ID of the service principal of the Azure AD app that has been granted access. Read-only.
@@ -29,9 +30,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
     private String resourceAppId;
     /**
      * Instantiates a new resourceSpecificPermissionGrant and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ResourceSpecificPermissionGrant() {
         super();
         this.setOdataType("#microsoft.graph.resourceSpecificPermissionGrant");
@@ -103,9 +102,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,45 +115,35 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
     /**
      * Sets the clientAppId property value. ID of the service principal of the Azure AD app that has been granted access. Read-only.
      * @param value Value to set for the clientAppId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClientAppId(@jakarta.annotation.Nullable final String value) {
         this.clientAppId = value;
     }
     /**
      * Sets the clientId property value. ID of the Azure AD app that has been granted access. Read-only.
      * @param value Value to set for the clientId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClientId(@jakarta.annotation.Nullable final String value) {
         this.clientId = value;
     }
     /**
      * Sets the permission property value. The name of the resource-specific permission. Read-only.
      * @param value Value to set for the permission property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPermission(@jakarta.annotation.Nullable final String value) {
         this.permission = value;
     }
     /**
      * Sets the permissionType property value. The type of permission. Possible values are: Application, Delegated. Read-only.
      * @param value Value to set for the permissionType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPermissionType(@jakarta.annotation.Nullable final String value) {
         this.permissionType = value;
     }
     /**
      * Sets the resourceAppId property value. ID of the Azure AD app that is hosting the resource. Read-only.
      * @param value Value to set for the resourceAppId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceAppId(@jakarta.annotation.Nullable final String value) {
         this.resourceAppId = value;
     }

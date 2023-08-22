@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityVendorInformation implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
     private String vendor;
     /**
      * Instantiates a new securityVendorInformation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SecurityVendorInformation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -130,54 +127,42 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the provider property value. Specific provider (product/service - not vendor company); for example, WindowsDefenderATP.
      * @param value Value to set for the provider property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProvider(@jakarta.annotation.Nullable final String value) {
         this.provider = value;
     }
     /**
      * Sets the providerVersion property value. Version of the provider or subprovider, if it exists, that generated the alert. Required
      * @param value Value to set for the providerVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProviderVersion(@jakarta.annotation.Nullable final String value) {
         this.providerVersion = value;
     }
     /**
      * Sets the subProvider property value. Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen.
      * @param value Value to set for the subProvider property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubProvider(@jakarta.annotation.Nullable final String value) {
         this.subProvider = value;
     }
     /**
      * Sets the vendor property value. Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required
      * @param value Value to set for the vendor property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVendor(@jakarta.annotation.Nullable final String value) {
         this.vendor = value;
     }

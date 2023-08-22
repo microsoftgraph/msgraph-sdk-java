@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * RemoteAssistPartner resources represent the metadata and status of a given Remote Assistance partner service.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoteAssistancePartner extends Entity implements Parsable {
     /**
      * Display name of the partner.
@@ -29,9 +30,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
     private String onboardingUrl;
     /**
      * Instantiates a new remoteAssistancePartner and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RemoteAssistancePartner() {
         super();
     }
@@ -93,9 +92,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -107,36 +104,28 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
     /**
      * Sets the displayName property value. Display name of the partner.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lastConnectionDateTime property value. Timestamp of the last request sent to Intune by the TEM partner.
      * @param value Value to set for the lastConnectionDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastConnectionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastConnectionDateTime = value;
     }
     /**
      * Sets the onboardingStatus property value. The current TeamViewer connector status
      * @param value Value to set for the onboardingStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnboardingStatus(@jakarta.annotation.Nullable final RemoteAssistanceOnboardingStatus value) {
         this.onboardingStatus = value;
     }
     /**
      * Sets the onboardingUrl property value. URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
      * @param value Value to set for the onboardingUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnboardingUrl(@jakarta.annotation.Nullable final String value) {
         this.onboardingUrl = value;
     }

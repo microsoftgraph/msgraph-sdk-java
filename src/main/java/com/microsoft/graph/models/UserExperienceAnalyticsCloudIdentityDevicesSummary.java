@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * The user experience analytics work from anywhere cloud identity devices summary.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsCloudIdentityDevicesSummary implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -25,9 +26,7 @@ public class UserExperienceAnalyticsCloudIdentityDevicesSummary implements Addit
     private String odataType;
     /**
      * Instantiates a new userExperienceAnalyticsCloudIdentityDevicesSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCloudIdentityDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -79,9 +78,7 @@ public class UserExperienceAnalyticsCloudIdentityDevicesSummary implements Addit
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("deviceWithoutCloudIdentityCount", this.getDeviceWithoutCloudIdentityCount());
@@ -91,27 +88,21 @@ public class UserExperienceAnalyticsCloudIdentityDevicesSummary implements Addit
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the deviceWithoutCloudIdentityCount property value. The count of devices that are not cloud identity. Read-only.
      * @param value Value to set for the deviceWithoutCloudIdentityCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceWithoutCloudIdentityCount(@jakarta.annotation.Nullable final Integer value) {
         this.deviceWithoutCloudIdentityCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

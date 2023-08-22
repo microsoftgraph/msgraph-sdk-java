@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrinterBase extends Entity implements Parsable {
     /**
      * The capabilities of the printer/printerShare.
@@ -45,9 +46,7 @@ public class PrinterBase extends Entity implements Parsable {
     private PrinterStatus status;
     /**
      * Instantiates a new printerBase and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PrinterBase() {
         super();
     }
@@ -162,9 +161,7 @@ public class PrinterBase extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -181,81 +178,63 @@ public class PrinterBase extends Entity implements Parsable {
     /**
      * Sets the capabilities property value. The capabilities of the printer/printerShare.
      * @param value Value to set for the capabilities property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCapabilities(@jakarta.annotation.Nullable final PrinterCapabilities value) {
         this.capabilities = value;
     }
     /**
      * Sets the defaults property value. The default print settings of printer/printerShare.
      * @param value Value to set for the defaults property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefaults(@jakarta.annotation.Nullable final PrinterDefaults value) {
         this.defaults = value;
     }
     /**
      * Sets the displayName property value. The name of the printer/printerShare.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the isAcceptingJobs property value. Whether the printer/printerShare is currently accepting new print jobs.
      * @param value Value to set for the isAcceptingJobs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAcceptingJobs(@jakarta.annotation.Nullable final Boolean value) {
         this.isAcceptingJobs = value;
     }
     /**
      * Sets the jobs property value. The list of jobs that are queued for printing by the printer/printerShare.
      * @param value Value to set for the jobs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setJobs(@jakarta.annotation.Nullable final java.util.List<PrintJob> value) {
         this.jobs = value;
     }
     /**
      * Sets the location property value. The physical and/or organizational location of the printer/printerShare.
      * @param value Value to set for the location property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocation(@jakarta.annotation.Nullable final PrinterLocation value) {
         this.location = value;
     }
     /**
      * Sets the manufacturer property value. The manufacturer of the printer/printerShare.
      * @param value Value to set for the manufacturer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
      * Sets the model property value. The model name of the printer/printerShare.
      * @param value Value to set for the model property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final PrinterStatus value) {
         this.status = value;
     }

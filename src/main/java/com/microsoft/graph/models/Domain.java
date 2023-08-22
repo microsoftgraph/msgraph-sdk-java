@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Domain extends Entity implements Parsable {
     /**
      * Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Azure AD performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.
@@ -77,9 +78,7 @@ public class Domain extends Entity implements Parsable {
     private java.util.List<DomainDnsRecord> verificationDnsRecords;
     /**
      * Instantiates a new domain and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Domain() {
         super();
     }
@@ -258,9 +257,7 @@ public class Domain extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -285,153 +282,119 @@ public class Domain extends Entity implements Parsable {
     /**
      * Sets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Azure AD performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.
      * @param value Value to set for the authenticationType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthenticationType(@jakarta.annotation.Nullable final String value) {
         this.authenticationType = value;
     }
     /**
      * Sets the availabilityStatus property value. This property is always null except when the verify action is used. When the verify action is used, a domain entity is returned in the response. The availabilityStatus property of the domain entity in the response is either AvailableImmediately or EmailVerifiedDomainTakeoverScheduled.
      * @param value Value to set for the availabilityStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAvailabilityStatus(@jakarta.annotation.Nullable final String value) {
         this.availabilityStatus = value;
     }
     /**
      * Sets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Supports $expand and $filter by the OData type of objects returned. For example /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
      * @param value Value to set for the domainNameReferences property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDomainNameReferences(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.domainNameReferences = value;
     }
     /**
      * Sets the federationConfiguration property value. Domain settings configured by a customer when federated with Azure AD. Supports $expand.
      * @param value Value to set for the federationConfiguration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFederationConfiguration(@jakarta.annotation.Nullable final java.util.List<InternalDomainFederation> value) {
         this.federationConfiguration = value;
     }
     /**
      * Sets the isAdminManaged property value. The value of the property is false if the DNS record management of the domain has been delegated to Microsoft 365. Otherwise, the value is true. Not nullable
      * @param value Value to set for the isAdminManaged property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAdminManaged(@jakarta.annotation.Nullable final Boolean value) {
         this.isAdminManaged = value;
     }
     /**
      * Sets the isDefault property value. true if this is the default domain that is used for user creation. There is only one default domain per company. Not nullable
      * @param value Value to set for the isDefault property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefault = value;
     }
     /**
      * Sets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (companyname.onmicrosoft.com). There is only one initial domain per company. Not nullable
      * @param value Value to set for the isInitial property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsInitial(@jakarta.annotation.Nullable final Boolean value) {
         this.isInitial = value;
     }
     /**
      * Sets the isRoot property value. true if the domain is a verified root domain. Otherwise, false if the domain is a subdomain or unverified. Not nullable
      * @param value Value to set for the isRoot property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsRoot(@jakarta.annotation.Nullable final Boolean value) {
         this.isRoot = value;
     }
     /**
      * Sets the isVerified property value. true if the domain has completed domain ownership verification. Not nullable
      * @param value Value to set for the isVerified property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsVerified(@jakarta.annotation.Nullable final Boolean value) {
         this.isVerified = value;
     }
     /**
      * Sets the manufacturer property value. The manufacturer property
      * @param value Value to set for the manufacturer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
      * Sets the model property value. The model property
      * @param value Value to set for the model property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
      * Sets the passwordNotificationWindowInDays property value. Specifies the number of days before a user receives notification that their password will expire. If the property is not set, a default value of 14 days will be used.
      * @param value Value to set for the passwordNotificationWindowInDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordNotificationWindowInDays(@jakarta.annotation.Nullable final Integer value) {
         this.passwordNotificationWindowInDays = value;
     }
     /**
      * Sets the passwordValidityPeriodInDays property value. Specifies the length of time that a password is valid before it must be changed. If the property is not set, a default value of 90 days will be used.
      * @param value Value to set for the passwordValidityPeriodInDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordValidityPeriodInDays(@jakarta.annotation.Nullable final Integer value) {
         this.passwordValidityPeriodInDays = value;
     }
     /**
      * Sets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Supports $expand.
      * @param value Value to set for the serviceConfigurationRecords property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServiceConfigurationRecords(@jakarta.annotation.Nullable final java.util.List<DomainDnsRecord> value) {
         this.serviceConfigurationRecords = value;
     }
     /**
      * Sets the state property value. Status of asynchronous operations scheduled for the domain.
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final DomainState value) {
         this.state = value;
     }
     /**
      * Sets the supportedServices property value. The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable.
      * @param value Value to set for the supportedServices property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSupportedServices(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.supportedServices = value;
     }
     /**
      * Sets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable. Supports $expand.
      * @param value Value to set for the verificationDnsRecords property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVerificationDnsRecords(@jakarta.annotation.Nullable final java.util.List<DomainDnsRecord> value) {
         this.verificationDnsRecords = value;
     }

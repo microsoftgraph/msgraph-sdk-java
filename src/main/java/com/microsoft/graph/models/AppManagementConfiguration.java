@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppManagementConfiguration implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, Parsabl
     private java.util.List<PasswordCredentialConfiguration> passwordCredentials;
     /**
      * Instantiates a new appManagementConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AppManagementConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("keyCredentials", this.getKeyCredentials());
@@ -102,36 +99,28 @@ public class AppManagementConfiguration implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the keyCredentials property value. Collection of keyCredential restrictions settings to be applied to an application or service principal.
      * @param value Value to set for the keyCredentials property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKeyCredentials(@jakarta.annotation.Nullable final java.util.List<KeyCredentialConfiguration> value) {
         this.keyCredentials = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the passwordCredentials property value. Collection of password restrictions settings to be applied to an application or service principal.
      * @param value Value to set for the passwordCredentials property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordCredentials(@jakarta.annotation.Nullable final java.util.List<PasswordCredentialConfiguration> value) {
         this.passwordCredentials = value;
     }

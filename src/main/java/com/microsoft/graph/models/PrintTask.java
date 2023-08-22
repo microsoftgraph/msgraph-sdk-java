@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintTask extends Entity implements Parsable {
     /**
      * The definition property
@@ -25,9 +26,7 @@ public class PrintTask extends Entity implements Parsable {
     private PrintTaskTrigger trigger;
     /**
      * Instantiates a new printTask and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PrintTask() {
         super();
     }
@@ -89,9 +88,7 @@ public class PrintTask extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -103,36 +100,28 @@ public class PrintTask extends Entity implements Parsable {
     /**
      * Sets the definition property value. The definition property
      * @param value Value to set for the definition property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefinition(@jakarta.annotation.Nullable final PrintTaskDefinition value) {
         this.definition = value;
     }
     /**
      * Sets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
      * @param value Value to set for the parentUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentUrl(@jakarta.annotation.Nullable final String value) {
         this.parentUrl = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final PrintTaskStatus value) {
         this.status = value;
     }
     /**
      * Sets the trigger property value. The trigger property
      * @param value Value to set for the trigger property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTrigger(@jakarta.annotation.Nullable final PrintTaskTrigger value) {
         this.trigger = value;
     }

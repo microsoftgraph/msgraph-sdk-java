@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class VisualInfo implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new visualInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public VisualInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +127,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("attribution", this.getAttribution());
@@ -144,63 +141,49 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the attribution property value. Optional. JSON object used to represent an icon which represents the application used to generate the activity
      * @param value Value to set for the attribution property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttribution(@jakarta.annotation.Nullable final ImageInfo value) {
         this.attribution = value;
     }
     /**
      * Sets the backgroundColor property value. Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
      * @param value Value to set for the backgroundColor property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBackgroundColor(@jakarta.annotation.Nullable final String value) {
         this.backgroundColor = value;
     }
     /**
      * Sets the content property value. Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContent(@jakarta.annotation.Nullable final Json value) {
         this.content = value;
     }
     /**
      * Sets the description property value. Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayText property value. Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
      * @param value Value to set for the displayText property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayText(@jakarta.annotation.Nullable final String value) {
         this.displayText = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Owner type of device.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedDeviceOwnerType implements ValuedEnum {
     /** Unknown. */
     Unknown("unknown"),

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * TV content rating labels in Ireland
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RatingIrelandTelevisionType implements ValuedEnum {
     /** Default value, allow all TV shows content */
     AllAllowed("allAllowed"),

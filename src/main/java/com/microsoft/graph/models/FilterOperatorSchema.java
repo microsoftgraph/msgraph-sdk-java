@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class FilterOperatorSchema extends Entity implements Parsable {
     /**
      * The arity property
@@ -21,9 +22,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
     private java.util.List<AttributeType> supportedAttributeTypes;
     /**
      * Instantiates a new filterOperatorSchema and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public FilterOperatorSchema() {
         super();
     }
@@ -76,9 +75,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +86,21 @@ public class FilterOperatorSchema extends Entity implements Parsable {
     /**
      * Sets the arity property value. The arity property
      * @param value Value to set for the arity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setArity(@jakarta.annotation.Nullable final ScopeOperatorType value) {
         this.arity = value;
     }
     /**
      * Sets the multivaluedComparisonType property value. The multivaluedComparisonType property
      * @param value Value to set for the multivaluedComparisonType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMultivaluedComparisonType(@jakarta.annotation.Nullable final ScopeOperatorMultiValuedComparisonType value) {
         this.multivaluedComparisonType = value;
     }
     /**
      * Sets the supportedAttributeTypes property value. Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
      * @param value Value to set for the supportedAttributeTypes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSupportedAttributeTypes(@jakarta.annotation.Nullable final java.util.List<AttributeType> value) {
         this.supportedAttributeTypes = value;
     }

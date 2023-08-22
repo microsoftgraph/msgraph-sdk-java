@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
     private String passcode;
     /**
      * Instantiates a new joinMeetingIdSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public JoinMeetingIdSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isPasscodeRequired", this.getIsPasscodeRequired());
@@ -116,45 +113,35 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the isPasscodeRequired property value. Indicates whether a passcode is required to join a meeting when using joinMeetingId. Optional.
      * @param value Value to set for the isPasscodeRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsPasscodeRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isPasscodeRequired = value;
     }
     /**
      * Sets the joinMeetingId property value. The meeting ID to be used to join a meeting. Optional. Read-only.
      * @param value Value to set for the joinMeetingId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setJoinMeetingId(@jakarta.annotation.Nullable final String value) {
         this.joinMeetingId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the passcode property value. The passcode to join a meeting.  Optional. Read-only.
      * @param value Value to set for the passcode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasscode(@jakarta.annotation.Nullable final String value) {
         this.passcode = value;
     }

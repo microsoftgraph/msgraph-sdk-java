@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
     private java.util.List<AuthenticationMethodModes> previousCombinations;
     /**
      * Instantiates a new updateAllowedCombinationsResult and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UpdateAllowedCombinationsResult() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("additionalInformation", this.getAdditionalInformation());
@@ -130,54 +127,42 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the additionalInformation property value. Information about why the updateAllowedCombinations action was successful or failed.
      * @param value Value to set for the additionalInformation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalInformation(@jakarta.annotation.Nullable final String value) {
         this.additionalInformation = value;
     }
     /**
      * Sets the conditionalAccessReferences property value. References to existing Conditional Access policies that use this authentication strength.
      * @param value Value to set for the conditionalAccessReferences property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConditionalAccessReferences(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.conditionalAccessReferences = value;
     }
     /**
      * Sets the currentCombinations property value. The list of current authentication method combinations allowed by the authentication strength.
      * @param value Value to set for the currentCombinations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCurrentCombinations(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodModes> value) {
         this.currentCombinations = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the previousCombinations property value. The list of former authentication method combinations allowed by the authentication strength before they were updated through the updateAllowedCombinations action.
      * @param value Value to set for the previousCombinations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPreviousCombinations(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodModes> value) {
         this.previousCombinations = value;
     }

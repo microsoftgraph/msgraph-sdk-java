@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, Pars
     private String value;
     /**
      * Instantiates a new objectDefinitionMetadataEntry and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ObjectDefinitionMetadataEntry() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("key", this.getKey());
@@ -102,36 +99,28 @@ public class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the key property value. Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
      * @param value Value to set for the key property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKey(@jakarta.annotation.Nullable final ObjectDefinitionMetadata value) {
         this.key = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the value property value. Value of the metadata property.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }

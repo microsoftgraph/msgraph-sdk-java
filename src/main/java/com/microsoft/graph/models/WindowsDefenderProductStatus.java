@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Product Status of Windows Defender
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsDefenderProductStatus implements ValuedEnum {
     /** No status */
     NoStatus("noStatus"),

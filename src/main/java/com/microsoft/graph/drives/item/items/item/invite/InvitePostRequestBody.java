@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -47,9 +48,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
     private Boolean sendInvitation;
     /**
      * Instantiates a new invitePostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public InvitePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -155,9 +154,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("expirationDateTime", this.getExpirationDateTime());
@@ -173,81 +170,63 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpirationDateTime(@jakarta.annotation.Nullable final String value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the message property value. The message property
      * @param value Value to set for the message property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessage(@jakarta.annotation.Nullable final String value) {
         this.message = value;
     }
     /**
      * Sets the password property value. The password property
      * @param value Value to set for the password property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPassword(@jakarta.annotation.Nullable final String value) {
         this.password = value;
     }
     /**
      * Sets the recipients property value. The recipients property
      * @param value Value to set for the recipients property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecipients(@jakarta.annotation.Nullable final java.util.List<DriveRecipient> value) {
         this.recipients = value;
     }
     /**
      * Sets the requireSignIn property value. The requireSignIn property
      * @param value Value to set for the requireSignIn property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRequireSignIn(@jakarta.annotation.Nullable final Boolean value) {
         this.requireSignIn = value;
     }
     /**
      * Sets the retainInheritedPermissions property value. The retainInheritedPermissions property
      * @param value Value to set for the retainInheritedPermissions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRetainInheritedPermissions(@jakarta.annotation.Nullable final Boolean value) {
         this.retainInheritedPermissions = value;
     }
     /**
      * Sets the roles property value. The roles property
      * @param value Value to set for the roles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roles = value;
     }
     /**
      * Sets the sendInvitation property value. The sendInvitation property
      * @param value Value to set for the sendInvitation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSendInvitation(@jakarta.annotation.Nullable final Boolean value) {
         this.sendInvitation = value;
     }

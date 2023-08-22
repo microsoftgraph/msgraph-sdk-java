@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * The user experience analytics device startup history entity contains device boot performance history details.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implements Parsable {
     /**
      * The device core boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
@@ -77,9 +78,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     private Integer totalLoginTimeInMs;
     /**
      * Instantiates a new userExperienceAnalyticsDeviceStartupHistory and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsDeviceStartupHistory() {
         super();
     }
@@ -249,9 +248,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -275,144 +272,112 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
     /**
      * Sets the coreBootTimeInMs property value. The device core boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the coreBootTimeInMs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCoreBootTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.coreBootTimeInMs = value;
     }
     /**
      * Sets the coreLoginTimeInMs property value. The device core login time in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the coreLoginTimeInMs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCoreLoginTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.coreLoginTimeInMs = value;
     }
     /**
      * Sets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the featureUpdateBootTimeInMs property value. The impact of device feature updates on boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the featureUpdateBootTimeInMs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFeatureUpdateBootTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.featureUpdateBootTimeInMs = value;
     }
     /**
      * Sets the groupPolicyBootTimeInMs property value. The impact of device group policy client on boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the groupPolicyBootTimeInMs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroupPolicyBootTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.groupPolicyBootTimeInMs = value;
     }
     /**
      * Sets the groupPolicyLoginTimeInMs property value. The impact of device group policy client on login time in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the groupPolicyLoginTimeInMs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroupPolicyLoginTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.groupPolicyLoginTimeInMs = value;
     }
     /**
      * Sets the isFeatureUpdate property value. When TRUE, indicates the device boot record is associated with feature updates. When FALSE, indicates the device boot record is not associated with feature updates. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the isFeatureUpdate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsFeatureUpdate(@jakarta.annotation.Nullable final Boolean value) {
         this.isFeatureUpdate = value;
     }
     /**
      * Sets the isFirstLogin property value. When TRUE, indicates the device login is the first login after a reboot. When FALSE, indicates the device login is not the first login after a reboot. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the isFirstLogin property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsFirstLogin(@jakarta.annotation.Nullable final Boolean value) {
         this.isFirstLogin = value;
     }
     /**
      * Sets the operatingSystemVersion property value. The user experience analytics device boot record's operating system version. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the operatingSystemVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperatingSystemVersion(@jakarta.annotation.Nullable final String value) {
         this.operatingSystemVersion = value;
     }
     /**
      * Sets the responsiveDesktopTimeInMs property value. The time for desktop to become responsive during login process in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the responsiveDesktopTimeInMs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResponsiveDesktopTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.responsiveDesktopTimeInMs = value;
     }
     /**
      * Sets the restartCategory property value. Operating System restart category.
      * @param value Value to set for the restartCategory property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRestartCategory(@jakarta.annotation.Nullable final UserExperienceAnalyticsOperatingSystemRestartCategory value) {
         this.restartCategory = value;
     }
     /**
      * Sets the restartFaultBucket property value. OS restart fault bucket. The fault bucket is used to find additional information about a system crash. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the restartFaultBucket property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRestartFaultBucket(@jakarta.annotation.Nullable final String value) {
         this.restartFaultBucket = value;
     }
     /**
      * Sets the restartStopCode property value. OS restart stop code. This shows the bug check code which can be used to look up the blue screen reason. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the restartStopCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRestartStopCode(@jakarta.annotation.Nullable final String value) {
         this.restartStopCode = value;
     }
     /**
      * Sets the startTime property value. The device boot start time. The value cannot be modified and is automatically populated when the device performs a reboot. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
      * @param value Value to set for the startTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startTime = value;
     }
     /**
      * Sets the totalBootTimeInMs property value. The device total boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the totalBootTimeInMs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalBootTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.totalBootTimeInMs = value;
     }
     /**
      * Sets the totalLoginTimeInMs property value. The device total login time in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the totalLoginTimeInMs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalLoginTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.totalLoginTimeInMs = value;
     }

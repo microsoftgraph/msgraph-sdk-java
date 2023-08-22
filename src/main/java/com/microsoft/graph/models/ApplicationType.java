@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible types of Application
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ApplicationType implements ValuedEnum {
     /** The windows universal application */
     Universal("universal"),

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookTableSort extends Entity implements Parsable {
     /**
      * Represents the current conditions used to last sort the table. Read-only.
@@ -21,9 +22,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
     private String method;
     /**
      * Instantiates a new workbookTableSort and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookTableSort() {
         super();
     }
@@ -76,9 +75,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +86,21 @@ public class WorkbookTableSort extends Entity implements Parsable {
     /**
      * Sets the fields property value. Represents the current conditions used to last sort the table. Read-only.
      * @param value Value to set for the fields property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFields(@jakarta.annotation.Nullable final java.util.List<WorkbookSortField> value) {
         this.fields = value;
     }
     /**
      * Sets the matchCase property value. Represents whether the casing impacted the last sort of the table. Read-only.
      * @param value Value to set for the matchCase property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMatchCase(@jakarta.annotation.Nullable final Boolean value) {
         this.matchCase = value;
     }
     /**
      * Sets the method property value. Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
      * @param value Value to set for the method property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMethod(@jakarta.annotation.Nullable final String value) {
         this.method = value;
     }

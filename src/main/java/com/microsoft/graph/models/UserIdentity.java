@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserIdentity extends Identity implements Parsable {
     /**
      * Indicates the client IP address used by user performing the activity (audit log only).
@@ -17,9 +18,7 @@ public class UserIdentity extends Identity implements Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new userIdentity and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserIdentity() {
         super();
         this.setOdataType("#microsoft.graph.userIdentity");
@@ -64,9 +63,7 @@ public class UserIdentity extends Identity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class UserIdentity extends Identity implements Parsable {
     /**
      * Sets the ipAddress property value. Indicates the client IP address used by user performing the activity (audit log only).
      * @param value Value to set for the ipAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
         this.ipAddress = value;
     }
     /**
      * Sets the userPrincipalName property value. The userPrincipalName attribute of the user.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }

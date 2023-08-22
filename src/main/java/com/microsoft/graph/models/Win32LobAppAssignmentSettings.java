@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Contains properties used to assign an Win32 LOB mobile app to a group.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
      * Contains value for delivery optimization priority.
@@ -28,9 +29,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     private Win32LobAppRestartSettings restartSettings;
     /**
      * Instantiates a new win32LobAppAssignmentSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Win32LobAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppAssignmentSettings");
@@ -93,9 +92,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -107,36 +104,28 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     /**
      * Sets the deliveryOptimizationPriority property value. Contains value for delivery optimization priority.
      * @param value Value to set for the deliveryOptimizationPriority property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeliveryOptimizationPriority(@jakarta.annotation.Nullable final Win32LobAppDeliveryOptimizationPriority value) {
         this.deliveryOptimizationPriority = value;
     }
     /**
      * Sets the installTimeSettings property value. The install time settings to apply for this app assignment.
      * @param value Value to set for the installTimeSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstallTimeSettings(@jakarta.annotation.Nullable final MobileAppInstallTimeSettings value) {
         this.installTimeSettings = value;
     }
     /**
      * Sets the notifications property value. Contains value for notification status.
      * @param value Value to set for the notifications property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotifications(@jakarta.annotation.Nullable final Win32LobAppNotification value) {
         this.notifications = value;
     }
     /**
      * Sets the restartSettings property value. The reboot settings to apply for this app assignment.
      * @param value Value to set for the restartSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRestartSettings(@jakarta.annotation.Nullable final Win32LobAppRestartSettings value) {
         this.restartSettings = value;
     }

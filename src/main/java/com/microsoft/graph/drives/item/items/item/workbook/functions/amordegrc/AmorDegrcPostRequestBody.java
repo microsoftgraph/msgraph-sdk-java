@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AmorDegrcPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -43,9 +44,7 @@ public class AmorDegrcPostRequestBody implements AdditionalDataHolder, Parsable 
     private Json salvage;
     /**
      * Instantiates a new amorDegrcPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AmorDegrcPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -142,9 +141,7 @@ public class AmorDegrcPostRequestBody implements AdditionalDataHolder, Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("basis", this.getBasis());
@@ -159,72 +156,56 @@ public class AmorDegrcPostRequestBody implements AdditionalDataHolder, Parsable 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the basis property value. The basis property
      * @param value Value to set for the basis property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBasis(@jakarta.annotation.Nullable final Json value) {
         this.basis = value;
     }
     /**
      * Sets the cost property value. The cost property
      * @param value Value to set for the cost property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCost(@jakarta.annotation.Nullable final Json value) {
         this.cost = value;
     }
     /**
      * Sets the datePurchased property value. The datePurchased property
      * @param value Value to set for the datePurchased property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDatePurchased(@jakarta.annotation.Nullable final Json value) {
         this.datePurchased = value;
     }
     /**
      * Sets the firstPeriod property value. The firstPeriod property
      * @param value Value to set for the firstPeriod property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirstPeriod(@jakarta.annotation.Nullable final Json value) {
         this.firstPeriod = value;
     }
     /**
      * Sets the period property value. The period property
      * @param value Value to set for the period property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPeriod(@jakarta.annotation.Nullable final Json value) {
         this.period = value;
     }
     /**
      * Sets the rate property value. The rate property
      * @param value Value to set for the rate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRate(@jakarta.annotation.Nullable final Json value) {
         this.rate = value;
     }
     /**
      * Sets the salvage property value. The salvage property
      * @param value Value to set for the salvage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSalvage(@jakarta.annotation.Nullable final Json value) {
         this.salvage = value;
     }

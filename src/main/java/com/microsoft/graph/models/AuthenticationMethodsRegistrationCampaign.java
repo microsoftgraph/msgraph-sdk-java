@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     private AdvancedConfigState state;
     /**
      * Instantiates a new authenticationMethodsRegistrationCampaign and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AuthenticationMethodsRegistrationCampaign() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("excludeTargets", this.getExcludeTargets());
@@ -130,54 +127,42 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the excludeTargets property value. Users and groups of users that are excluded from being prompted to set up the authentication method.
      * @param value Value to set for the excludeTargets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExcludeTargets(@jakarta.annotation.Nullable final java.util.List<ExcludeTarget> value) {
         this.excludeTargets = value;
     }
     /**
      * Sets the includeTargets property value. Users and groups of users that are prompted to set up the authentication method.
      * @param value Value to set for the includeTargets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> value) {
         this.includeTargets = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum: 0 days. Maximum: 14 days. If the value is '0', the user is prompted during every MFA attempt.
      * @param value Value to set for the snoozeDurationInDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSnoozeDurationInDays(@jakarta.annotation.Nullable final Integer value) {
         this.snoozeDurationInDays = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final AdvancedConfigState value) {
         this.state = value;
     }

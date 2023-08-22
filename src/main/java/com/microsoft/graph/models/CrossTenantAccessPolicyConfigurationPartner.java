@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -54,9 +55,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     private String tenantId;
     /**
      * Instantiates a new crossTenantAccessPolicyConfigurationPartner and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationPartner() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -180,9 +179,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("automaticUserConsentSettings", this.getAutomaticUserConsentSettings());
@@ -200,99 +197,77 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the automaticUserConsentSettings property value. Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
      * @param value Value to set for the automaticUserConsentSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAutomaticUserConsentSettings(@jakarta.annotation.Nullable final InboundOutboundPolicyConfiguration value) {
         this.automaticUserConsentSettings = value;
     }
     /**
      * Sets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
      * @param value Value to set for the b2bCollaborationInbound property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setB2bCollaborationInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bCollaborationInbound = value;
     }
     /**
      * Sets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
      * @param value Value to set for the b2bCollaborationOutbound property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setB2bCollaborationOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bCollaborationOutbound = value;
     }
     /**
      * Sets the b2bDirectConnectInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect.
      * @param value Value to set for the b2bDirectConnectInbound property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setB2bDirectConnectInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bDirectConnectInbound = value;
     }
     /**
      * Sets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
      * @param value Value to set for the b2bDirectConnectOutbound property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setB2bDirectConnectOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bDirectConnectOutbound = value;
     }
     /**
      * Sets the identitySynchronization property value. Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multi-tenant organization by automating the creation, update, and deletion of users from one tenant to another.
      * @param value Value to set for the identitySynchronization property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentitySynchronization(@jakarta.annotation.Nullable final CrossTenantIdentitySyncPolicyPartner value) {
         this.identitySynchronization = value;
     }
     /**
      * Sets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
      * @param value Value to set for the inboundTrust property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInboundTrust(@jakarta.annotation.Nullable final CrossTenantAccessPolicyInboundTrust value) {
         this.inboundTrust = value;
     }
     /**
      * Sets the isServiceProvider property value. Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
      * @param value Value to set for the isServiceProvider property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsServiceProvider(@jakarta.annotation.Nullable final Boolean value) {
         this.isServiceProvider = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the tenantId property value. The tenant identifier for the partner Azure AD organization. Read-only. Key.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
     /**
      * The rule for the subject set. Lifecycle Workflows supports a rich set of user properties for configuring the rules using $filter query expressions. For more information, see supported user and query parameters.
@@ -14,9 +15,7 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
     private String rule;
     /**
      * Instantiates a new ruleBasedSubjectSet and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RuleBasedSubjectSet() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.ruleBasedSubjectSet");
@@ -52,9 +51,7 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,9 +60,7 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
     /**
      * Sets the rule property value. The rule for the subject set. Lifecycle Workflows supports a rich set of user properties for configuring the rules using $filter query expressions. For more information, see supported user and query parameters.
      * @param value Value to set for the rule property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRule(@jakarta.annotation.Nullable final String value) {
         this.rule = value;
     }

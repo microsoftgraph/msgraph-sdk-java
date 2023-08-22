@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Web Browser Cookie Settings.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WebBrowserCookieSettings implements ValuedEnum {
     /** Browser default value, no intent. */
     BrowserDefault("browserDefault"),

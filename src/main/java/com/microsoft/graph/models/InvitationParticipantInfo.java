@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     private String replacesCallId;
     /**
      * Instantiates a new invitationParticipantInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public InvitationParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +127,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("hidden", this.getHidden());
@@ -144,63 +141,49 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the hidden property value. Optional. Whether to hide the participant from the roster.
      * @param value Value to set for the hidden property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.hidden = value;
     }
     /**
      * Sets the identity property value. The identity property
      * @param value Value to set for the identity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
         this.identity = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the participantId property value. Optional. The ID of the target participant.
      * @param value Value to set for the participantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParticipantId(@jakarta.annotation.Nullable final String value) {
         this.participantId = value;
     }
     /**
      * Sets the removeFromDefaultAudioRoutingGroup property value. Optional. Whether to remove them from the main mixer.
      * @param value Value to set for the removeFromDefaultAudioRoutingGroup property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRemoveFromDefaultAudioRoutingGroup(@jakarta.annotation.Nullable final Boolean value) {
         this.removeFromDefaultAudioRoutingGroup = value;
     }
     /**
      * Sets the replacesCallId property value. Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully.
      * @param value Value to set for the replacesCallId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReplacesCallId(@jakarta.annotation.Nullable final String value) {
         this.replacesCallId = value;
     }

@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * The minimum operating system required for a Windows mobile app.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -33,9 +34,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     private Boolean v81;
     /**
      * Instantiates a new windowsMinimumOperatingSystem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -105,9 +104,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -119,45 +116,35 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the v10_0 property value. Windows version 10.0 or later.
      * @param value Value to set for the v10_0 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV100(@jakarta.annotation.Nullable final Boolean value) {
         this.v100 = value;
     }
     /**
      * Sets the v8_0 property value. Windows version 8.0 or later.
      * @param value Value to set for the v8_0 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV80(@jakarta.annotation.Nullable final Boolean value) {
         this.v80 = value;
     }
     /**
      * Sets the v8_1 property value. Windows version 8.1 or later.
      * @param value Value to set for the v8_1 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setV81(@jakarta.annotation.Nullable final Boolean value) {
         this.v81 = value;
     }

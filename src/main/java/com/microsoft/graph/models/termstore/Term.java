@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Term extends Entity implements Parsable {
     /**
      * Children of current term.
@@ -44,9 +45,7 @@ public class Term extends Entity implements Parsable {
     private Set set;
     /**
      * Instantiates a new term and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Term() {
         super();
     }
@@ -144,9 +143,7 @@ public class Term extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -162,72 +159,56 @@ public class Term extends Entity implements Parsable {
     /**
      * Sets the children property value. Children of current term.
      * @param value Value to set for the children property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChildren(@jakarta.annotation.Nullable final java.util.List<Term> value) {
         this.children = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time of term creation. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the descriptions property value. Description about term that is dependent on the languageTag.
      * @param value Value to set for the descriptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescriptions(@jakarta.annotation.Nullable final java.util.List<LocalizedDescription> value) {
         this.descriptions = value;
     }
     /**
      * Sets the labels property value. Label metadata for a term.
      * @param value Value to set for the labels property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLabels(@jakarta.annotation.Nullable final java.util.List<LocalizedLabel> value) {
         this.labels = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Last date and time of term modification. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the properties property value. Collection of properties on the term.
      * @param value Value to set for the properties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProperties(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
         this.properties = value;
     }
     /**
      * Sets the relations property value. To indicate which terms are related to the current term as either pinned or reused.
      * @param value Value to set for the relations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRelations(@jakarta.annotation.Nullable final java.util.List<Relation> value) {
         this.relations = value;
     }
     /**
      * Sets the set property value. The [set] in which the term is created.
      * @param value Value to set for the set property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSet(@jakarta.annotation.Nullable final Set value) {
         this.set = value;
     }

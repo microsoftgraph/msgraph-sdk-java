@@ -15,7 +15,6 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,6 +22,7 @@ import java.util.Objects;
 /**
  * Provides operations to manage the assignments property of the microsoft.graph.entitlementManagement entity.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessPackage property of the microsoft.graph.accessPackageAssignment entity.
@@ -56,9 +56,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
      * Instantiates a new AccessPackageAssignmentItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageAssignmentItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignments/{accessPackageAssignment%2Did}{?%24select,%24expand}", pathParameters);
     }
@@ -66,48 +64,28 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
      * Instantiates a new AccessPackageAssignmentItemRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageAssignmentItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignments/{accessPackageAssignment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property assignments for identityGovernance
-     * @return a CompletableFuture of void
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
-        try {
-            final RequestInformation requestInfo = toDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return delete(null);
     }
     /**
      * Delete navigation property assignments for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
      * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
@@ -116,17 +94,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignment> get() {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, AccessPackageAssignment::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<AccessPackageAssignment> executionException = new java.util.concurrent.CompletableFuture<AccessPackageAssignment>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return get(null);
     }
     /**
      * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
@@ -136,17 +104,11 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, AccessPackageAssignment::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<AccessPackageAssignment> executionException = new java.util.concurrent.CompletableFuture<AccessPackageAssignment>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, AccessPackageAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property assignments in identityGovernance
@@ -155,17 +117,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignment> patch(@jakarta.annotation.Nonnull final AccessPackageAssignment body) {
-        try {
-            final RequestInformation requestInfo = toPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, AccessPackageAssignment::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<AccessPackageAssignment> executionException = new java.util.concurrent.CompletableFuture<AccessPackageAssignment>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return patch(body, null);
     }
     /**
      * Update the navigation property assignments in identityGovernance
@@ -176,24 +128,18 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignment> patch(@jakarta.annotation.Nonnull final AccessPackageAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, AccessPackageAssignment::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<AccessPackageAssignment> executionException = new java.util.concurrent.CompletableFuture<AccessPackageAssignment>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, AccessPackageAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property assignments for identityGovernance
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
+    public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
     /**
@@ -202,7 +148,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -220,7 +166,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+    public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
@@ -229,7 +175,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -250,7 +196,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackageAssignment body) throws URISyntaxException {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackageAssignment body) {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -260,7 +206,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackageAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackageAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -279,11 +225,13 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
      * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
         /**
          * Expand related entities
@@ -301,6 +249,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetRequestConfiguration extends BaseRequestConfiguration {
         /**
          * Request query parameters
@@ -311,6 +260,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }

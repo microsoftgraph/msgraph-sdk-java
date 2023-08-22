@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsExpiration implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -28,9 +29,7 @@ public class TermsExpiration implements AdditionalDataHolder, Parsable {
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new termsExpiration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TermsExpiration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -91,9 +90,7 @@ public class TermsExpiration implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writePeriodAndDurationValue("frequency", this.getFrequency());
@@ -104,36 +101,28 @@ public class TermsExpiration implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the frequency property value. Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of 1 month.
      * @param value Value to set for the frequency property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFrequency(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.frequency = value;
+        this.frequency = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the startDateTime property value. The DateTime when the agreement is set to expire for all users. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }

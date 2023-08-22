@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates severity of insights. Possible values are: None, Informational, Warning, Error.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum UserExperienceAnalyticsInsightSeverity implements ValuedEnum {
     /** Indicates that the insight severity is none. */
     None("none"),

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessSessionControls implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
     private SignInFrequencySessionControl signInFrequency;
     /**
      * Instantiates a new conditionalAccessSessionControls and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConditionalAccessSessionControls() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +127,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("applicationEnforcedRestrictions", this.getApplicationEnforcedRestrictions());
@@ -144,63 +141,49 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the applicationEnforcedRestrictions property value. Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control.
      * @param value Value to set for the applicationEnforcedRestrictions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicationEnforcedRestrictions(@jakarta.annotation.Nullable final ApplicationEnforcedRestrictionsSessionControl value) {
         this.applicationEnforcedRestrictions = value;
     }
     /**
      * Sets the cloudAppSecurity property value. Session control to apply cloud app security.
      * @param value Value to set for the cloudAppSecurity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudAppSecurity(@jakarta.annotation.Nullable final CloudAppSecuritySessionControl value) {
         this.cloudAppSecurity = value;
     }
     /**
      * Sets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
      * @param value Value to set for the disableResilienceDefaults property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisableResilienceDefaults(@jakarta.annotation.Nullable final Boolean value) {
         this.disableResilienceDefaults = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the persistentBrowser property value. Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
      * @param value Value to set for the persistentBrowser property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPersistentBrowser(@jakarta.annotation.Nullable final PersistentBrowserSessionControl value) {
         this.persistentBrowser = value;
     }
     /**
      * Sets the signInFrequency property value. Session control to enforce signin frequency.
      * @param value Value to set for the signInFrequency property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSignInFrequency(@jakarta.annotation.Nullable final SignInFrequencySessionControl value) {
         this.signInFrequency = value;
     }

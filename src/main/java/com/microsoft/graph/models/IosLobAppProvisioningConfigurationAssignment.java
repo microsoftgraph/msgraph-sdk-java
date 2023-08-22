@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * A class containing the properties used for Group Assignment of an iOS LOB App Provisioning and Configuration.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosLobAppProvisioningConfigurationAssignment extends Entity implements Parsable {
     /**
      * The target group assignment defined by the admin.
@@ -16,9 +17,7 @@ public class IosLobAppProvisioningConfigurationAssignment extends Entity impleme
     private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new iosLobAppProvisioningConfigurationAssignment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosLobAppProvisioningConfigurationAssignment() {
         super();
     }
@@ -53,9 +52,7 @@ public class IosLobAppProvisioningConfigurationAssignment extends Entity impleme
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -64,9 +61,7 @@ public class IosLobAppProvisioningConfigurationAssignment extends Entity impleme
     /**
      * Sets the target property value. The target group assignment defined by the admin.
      * @param value Value to set for the target property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this.target = value;
     }

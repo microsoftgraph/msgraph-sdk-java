@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * A complex type to store file or folder rule data for a Win32 LOB app.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable {
     /**
      * A value indicating whether to expand environment variables in the 32-bit context on 64-bit systems.
@@ -36,9 +37,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
     private String path;
     /**
      * Instantiates a new win32LobAppFileSystemRule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Win32LobAppFileSystemRule() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppFileSystemRule");
@@ -119,9 +118,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,54 +132,42 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
     /**
      * Sets the check32BitOn64System property value. A value indicating whether to expand environment variables in the 32-bit context on 64-bit systems.
      * @param value Value to set for the check32BitOn64System property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCheck32BitOn64System(@jakarta.annotation.Nullable final Boolean value) {
         this.check32BitOn64System = value;
     }
     /**
      * Sets the comparisonValue property value. The file or folder comparison value.
      * @param value Value to set for the comparisonValue property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComparisonValue(@jakarta.annotation.Nullable final String value) {
         this.comparisonValue = value;
     }
     /**
      * Sets the fileOrFolderName property value. The file or folder name to look up.
      * @param value Value to set for the fileOrFolderName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileOrFolderName(@jakarta.annotation.Nullable final String value) {
         this.fileOrFolderName = value;
     }
     /**
      * Sets the operationType property value. Contains all supported file system detection type.
      * @param value Value to set for the operationType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperationType(@jakarta.annotation.Nullable final Win32LobAppFileSystemOperationType value) {
         this.operationType = value;
     }
     /**
      * Sets the operator property value. Contains properties for detection operator.
      * @param value Value to set for the operator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperator(@jakarta.annotation.Nullable final Win32LobAppRuleOperator value) {
         this.operator = value;
     }
     /**
      * Sets the path property value. The file or folder path to look up.
      * @param value Value to set for the path property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPath(@jakarta.annotation.Nullable final String value) {
         this.path = value;
     }

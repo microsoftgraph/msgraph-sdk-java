@@ -9,12 +9,11 @@ import java.util.Objects;
 /**
  * Contains properties and inherited properties for the macOS Microsoft Defender App.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSMicrosoftDefenderApp extends MobileApp implements Parsable {
     /**
      * Instantiates a new macOSMicrosoftDefenderApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MacOSMicrosoftDefenderApp() {
         super();
         this.setOdataType("#microsoft.graph.macOSMicrosoftDefenderApp");
@@ -41,9 +40,7 @@ public class MacOSMicrosoftDefenderApp extends MobileApp implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

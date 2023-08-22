@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values of the compliance app list.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AppListType implements ValuedEnum {
     /** Default value, no intent. */
     None("none"),

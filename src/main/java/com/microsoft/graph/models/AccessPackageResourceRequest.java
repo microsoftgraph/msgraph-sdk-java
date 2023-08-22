@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResourceRequest extends Entity implements Parsable {
     /**
      * The catalog property
@@ -30,9 +31,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     private AccessPackageRequestState state;
     /**
      * Instantiates a new accessPackageResourceRequest and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageResourceRequest() {
         super();
     }
@@ -103,9 +102,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,45 +115,35 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     /**
      * Sets the catalog property value. The catalog property
      * @param value Value to set for the catalog property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCatalog(@jakarta.annotation.Nullable final AccessPackageCatalog value) {
         this.catalog = value;
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the requestType property value. The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
      * @param value Value to set for the requestType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRequestType(@jakarta.annotation.Nullable final AccessPackageRequestType value) {
         this.requestType = value;
     }
     /**
      * Sets the resource property value. The resource property
      * @param value Value to set for the resource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResource(@jakarta.annotation.Nullable final AccessPackageResource value) {
         this.resource = value;
     }
     /**
      * Sets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final AccessPackageRequestState value) {
         this.state = value;
     }

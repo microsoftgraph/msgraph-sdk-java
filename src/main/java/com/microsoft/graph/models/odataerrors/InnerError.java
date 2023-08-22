@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class InnerError implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -31,9 +32,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
     private String requestId;
     /**
      * Instantiates a new InnerError and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public InnerError() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,9 +102,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("client-request-id", this.getClientRequestId());
@@ -117,45 +114,35 @@ public class InnerError implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the client-request-id property value. Client request Id as sent by the client application.
      * @param value Value to set for the client-request-id property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClientRequestId(@jakarta.annotation.Nullable final String value) {
         this.clientRequestId = value;
     }
     /**
      * Sets the Date property value. Date when the error occured.
      * @param value Value to set for the Date property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDate(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.date = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the request-id property value. Request Id as tracked internally by the service
      * @param value Value to set for the request-id property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRequestId(@jakarta.annotation.Nullable final String value) {
         this.requestId = value;
     }

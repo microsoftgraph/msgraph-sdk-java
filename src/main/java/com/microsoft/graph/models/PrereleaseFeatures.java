@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for pre-release features.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum PrereleaseFeatures implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),

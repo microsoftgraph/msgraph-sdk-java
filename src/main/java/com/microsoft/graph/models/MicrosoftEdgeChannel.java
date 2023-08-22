@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The enum to specify the channels for Microsoft Edge apps.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MicrosoftEdgeChannel implements ValuedEnum {
     /** The Dev Channel is intended to help you plan and develop with the latest capabilities of Microsoft Edge. */
     Dev("dev"),

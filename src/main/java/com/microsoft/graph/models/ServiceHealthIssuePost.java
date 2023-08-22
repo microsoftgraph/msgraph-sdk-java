@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -31,9 +32,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
     private PostType postType;
     /**
      * Instantiates a new serviceHealthIssuePost and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ServiceHealthIssuePost() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,9 +102,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -117,45 +114,35 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the createdDateTime property value. The published time of the post.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The content of the service issue post. The supported value for the contentType property is html.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final ItemBody value) {
         this.description = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the postType property value. The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
      * @param value Value to set for the postType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPostType(@jakarta.annotation.Nullable final PostType value) {
         this.postType = value;
     }

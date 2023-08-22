@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ConditionalAccessGrantControl implements ValuedEnum {
     Block("block"),
     Mfa("mfa"),

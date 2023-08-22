@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityContainer extends Entity implements Parsable {
     /**
      * Represents entry point for API connectors.
@@ -29,9 +30,7 @@ public class IdentityContainer extends Entity implements Parsable {
     private java.util.List<IdentityUserFlowAttribute> userFlowAttributes;
     /**
      * Instantiates a new identityContainer and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IdentityContainer() {
         super();
     }
@@ -102,9 +101,7 @@ public class IdentityContainer extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -117,45 +114,35 @@ public class IdentityContainer extends Entity implements Parsable {
     /**
      * Sets the apiConnectors property value. Represents entry point for API connectors.
      * @param value Value to set for the apiConnectors property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApiConnectors(@jakarta.annotation.Nullable final java.util.List<IdentityApiConnector> value) {
         this.apiConnectors = value;
     }
     /**
      * Sets the b2xUserFlows property value. Represents entry point for B2X/self-service sign-up identity userflows.
      * @param value Value to set for the b2xUserFlows property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setB2xUserFlows(@jakarta.annotation.Nullable final java.util.List<B2xIdentityUserFlow> value) {
         this.b2xUserFlows = value;
     }
     /**
      * Sets the conditionalAccess property value. the entry point for the Conditional Access (CA) object model.
      * @param value Value to set for the conditionalAccess property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConditionalAccess(@jakarta.annotation.Nullable final ConditionalAccessRoot value) {
         this.conditionalAccess = value;
     }
     /**
      * Sets the identityProviders property value. The identityProviders property
      * @param value Value to set for the identityProviders property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentityProviders(@jakarta.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
         this.identityProviders = value;
     }
     /**
      * Sets the userFlowAttributes property value. Represents entry point for identity userflow attributes.
      * @param value Value to set for the userFlowAttributes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserFlowAttributes(@jakarta.annotation.Nullable final java.util.List<IdentityUserFlowAttribute> value) {
         this.userFlowAttributes = value;
     }

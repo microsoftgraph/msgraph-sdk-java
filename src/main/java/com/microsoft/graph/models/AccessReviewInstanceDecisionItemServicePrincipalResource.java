@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewInstanceDecisionItemServicePrincipalResource extends AccessReviewInstanceDecisionItemResource implements Parsable {
     /**
      * The globally unique identifier of the application to which access has been granted.
@@ -13,9 +14,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
     private String appId;
     /**
      * Instantiates a new accessReviewInstanceDecisionItemServicePrincipalResource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessReviewInstanceDecisionItemServicePrincipalResource() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemServicePrincipalResource");
@@ -51,9 +50,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +59,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
     /**
      * Sets the appId property value. The globally unique identifier of the application to which access has been granted.
      * @param value Value to set for the appId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }

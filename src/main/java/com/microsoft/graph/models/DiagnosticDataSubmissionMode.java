@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Allow the device to send diagnostic and usage telemetry data, such as Watson.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DiagnosticDataSubmissionMode implements ValuedEnum {
     /** Allow the user to set. */
     UserDefined("userDefined"),

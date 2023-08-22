@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for firewallPreSharedKeyEncodingMethod
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum FirewallPreSharedKeyEncodingMethodType implements ValuedEnum {
     /** No value configured by Intune, do not override the user-configured device default value */
     DeviceDefault("deviceDefault"),

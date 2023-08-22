@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for internet site security level.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum InternetSiteSecurityLevel implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),

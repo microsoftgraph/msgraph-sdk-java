@@ -9,6 +9,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -28,9 +29,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
     private ExpressionInputObject testInputObject;
     /**
      * Instantiates a new parseExpressionPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ParseExpressionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -91,9 +90,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("expression", this.getExpression());
@@ -104,36 +101,28 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the expression property value. The expression property
      * @param value Value to set for the expression property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpression(@jakarta.annotation.Nullable final String value) {
         this.expression = value;
     }
     /**
      * Sets the targetAttributeDefinition property value. The targetAttributeDefinition property
      * @param value Value to set for the targetAttributeDefinition property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetAttributeDefinition(@jakarta.annotation.Nullable final AttributeDefinition value) {
         this.targetAttributeDefinition = value;
     }
     /**
      * Sets the testInputObject property value. The testInputObject property
      * @param value Value to set for the testInputObject property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTestInputObject(@jakarta.annotation.Nullable final ExpressionInputObject value) {
         this.testInputObject = value;
     }

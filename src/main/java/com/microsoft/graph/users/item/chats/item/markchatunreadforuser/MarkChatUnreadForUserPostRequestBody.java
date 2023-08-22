@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -24,9 +25,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
     private TeamworkUserIdentity user;
     /**
      * Instantiates a new markChatUnreadForUserPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MarkChatUnreadForUserPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -78,9 +77,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastMessageReadDateTime", this.getLastMessageReadDateTime());
@@ -90,27 +87,21 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the lastMessageReadDateTime property value. The lastMessageReadDateTime property
      * @param value Value to set for the lastMessageReadDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastMessageReadDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastMessageReadDateTime = value;
     }
     /**
      * Sets the user property value. The user property
      * @param value Value to set for the user property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUser(@jakarta.annotation.Nullable final TeamworkUserIdentity value) {
         this.user = value;
     }

@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AssignedPlan implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -36,9 +37,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
     private UUID servicePlanId;
     /**
      * Instantiates a new assignedPlan and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AssignedPlan() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -117,9 +116,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("assignedDateTime", this.getAssignedDateTime());
@@ -132,54 +129,42 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the assignedDateTime property value. The date and time at which the plan was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the assignedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.assignedDateTime = value;
     }
     /**
      * Sets the capabilityStatus property value. Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. See a detailed description of each value.
      * @param value Value to set for the capabilityStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCapabilityStatus(@jakarta.annotation.Nullable final String value) {
         this.capabilityStatus = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the service property value. The name of the service; for example, exchange.
      * @param value Value to set for the service property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setService(@jakarta.annotation.Nullable final String value) {
         this.service = value;
     }
     /**
      * Sets the servicePlanId property value. A GUID that identifies the service plan. For a complete list of GUIDs and their equivalent friendly service names, see Product names and service plan identifiers for licensing.
      * @param value Value to set for the servicePlanId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServicePlanId(@jakarta.annotation.Nullable final UUID value) {
         this.servicePlanId = value;
     }

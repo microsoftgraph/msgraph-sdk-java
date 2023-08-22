@@ -88,6 +88,7 @@ import java.util.Objects;
 /**
  * The main entry point of the SDK, exposes the configuration and the fluent API.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the admin singleton.
@@ -571,9 +572,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Instantiates a new BaseGraphServiceClient and sets the default values.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BaseGraphServiceClient(@jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}");
         this.pathParameters = new HashMap<>();

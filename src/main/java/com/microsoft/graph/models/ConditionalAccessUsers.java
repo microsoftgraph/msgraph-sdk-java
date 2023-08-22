@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -50,9 +51,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new conditionalAccessUsers and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConditionalAccessUsers() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -167,9 +166,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("excludeGroups", this.getExcludeGroups());
@@ -186,90 +183,70 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the excludeGroups property value. Group IDs excluded from scope of policy.
      * @param value Value to set for the excludeGroups property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExcludeGroups(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.excludeGroups = value;
     }
     /**
      * Sets the excludeGuestsOrExternalUsers property value. Internal guests or external users excluded from the policy scope. Optionally populated.
      * @param value Value to set for the excludeGuestsOrExternalUsers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExcludeGuestsOrExternalUsers(@jakarta.annotation.Nullable final ConditionalAccessGuestsOrExternalUsers value) {
         this.excludeGuestsOrExternalUsers = value;
     }
     /**
      * Sets the excludeRoles property value. Role IDs excluded from scope of policy.
      * @param value Value to set for the excludeRoles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExcludeRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.excludeRoles = value;
     }
     /**
      * Sets the excludeUsers property value. User IDs excluded from scope of policy and/or GuestsOrExternalUsers.
      * @param value Value to set for the excludeUsers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExcludeUsers(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.excludeUsers = value;
     }
     /**
      * Sets the includeGroups property value. Group IDs in scope of policy unless explicitly excluded.
      * @param value Value to set for the includeGroups property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeGroups(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.includeGroups = value;
     }
     /**
      * Sets the includeGuestsOrExternalUsers property value. Internal guests or external users included in the policy scope. Optionally populated.
      * @param value Value to set for the includeGuestsOrExternalUsers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeGuestsOrExternalUsers(@jakarta.annotation.Nullable final ConditionalAccessGuestsOrExternalUsers value) {
         this.includeGuestsOrExternalUsers = value;
     }
     /**
      * Sets the includeRoles property value. Role IDs in scope of policy unless explicitly excluded.
      * @param value Value to set for the includeRoles property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.includeRoles = value;
     }
     /**
      * Sets the includeUsers property value. User IDs in scope of policy unless explicitly excluded, None, All, or GuestsOrExternalUsers.
      * @param value Value to set for the includeUsers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeUsers(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.includeUsers = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

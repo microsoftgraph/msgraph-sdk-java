@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleManagementPolicyRule implements Parsable {
     /**
      * The value of the authentication context claim.
@@ -17,9 +18,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
     private Boolean isEnabled;
     /**
      * Instantiates a new unifiedRoleManagementPolicyAuthenticationContextRule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyAuthenticationContextRule() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyAuthenticationContextRule");
@@ -64,9 +63,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
     /**
      * Sets the claimValue property value. The value of the authentication context claim.
      * @param value Value to set for the claimValue property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClaimValue(@jakarta.annotation.Nullable final String value) {
         this.claimValue = value;
     }
     /**
      * Sets the isEnabled property value. Whether this rule is enabled.
      * @param value Value to set for the isEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }

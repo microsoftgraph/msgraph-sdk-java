@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Compliance state.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ComplianceState implements ValuedEnum {
     /** Unknown. */
     Unknown("unknown"),

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryReviewTag extends Tag implements Parsable {
     /**
      * Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
@@ -21,9 +22,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
     private EdiscoveryReviewTag parent;
     /**
      * Instantiates a new ediscoveryReviewTag and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EdiscoveryReviewTag() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoveryReviewTag");
@@ -77,9 +76,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
     /**
      * Sets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
      * @param value Value to set for the childSelectability property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChildSelectability(@jakarta.annotation.Nullable final ChildSelectability value) {
         this.childSelectability = value;
     }
     /**
      * Sets the childTags property value. Returns the tags that are a child of a tag.
      * @param value Value to set for the childTags property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChildTags(@jakarta.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
         this.childTags = value;
     }
     /**
      * Sets the parent property value. Returns the parent tag of the specified tag.
      * @param value Value to set for the parent property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParent(@jakarta.annotation.Nullable final EdiscoveryReviewTag value) {
         this.parent = value;
     }
