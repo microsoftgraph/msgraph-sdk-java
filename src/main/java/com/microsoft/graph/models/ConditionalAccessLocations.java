@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessLocations implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
     private String odataType;
     /**
      * Instantiates a new conditionalAccessLocations and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConditionalAccessLocations() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("excludeLocations", this.getExcludeLocations());
@@ -102,36 +99,28 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the excludeLocations property value. Location IDs excluded from scope of policy.
      * @param value Value to set for the excludeLocations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExcludeLocations(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.excludeLocations = value;
     }
     /**
      * Sets the includeLocations property value. Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted.
      * @param value Value to set for the includeLocations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeLocations(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.includeLocations = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PhysicalAddress implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
     private String street;
     /**
      * Instantiates a new physicalAddress and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PhysicalAddress() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +127,7 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("city", this.getCity());
@@ -144,63 +141,49 @@ public class PhysicalAddress implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the city property value. The city.
      * @param value Value to set for the city property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCity(@jakarta.annotation.Nullable final String value) {
         this.city = value;
     }
     /**
      * Sets the countryOrRegion property value. The country or region. It's a free-format string value, for example, 'United States'.
      * @param value Value to set for the countryOrRegion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountryOrRegion(@jakarta.annotation.Nullable final String value) {
         this.countryOrRegion = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the postalCode property value. The postal code.
      * @param value Value to set for the postalCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPostalCode(@jakarta.annotation.Nullable final String value) {
         this.postalCode = value;
     }
     /**
      * Sets the state property value. The state.
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final String value) {
         this.state = value;
     }
     /**
      * Sets the street property value. The street.
      * @param value Value to set for the street property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStreet(@jakarta.annotation.Nullable final String value) {
         this.street = value;
     }

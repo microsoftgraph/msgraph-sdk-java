@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CallTranscriptEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
      * Unique identifier of the call.
@@ -21,9 +22,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
     private IdentitySet meetingOrganizer;
     /**
      * Instantiates a new callTranscriptEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CallTranscriptEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.callTranscriptEventMessageDetail");
@@ -77,9 +76,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
     /**
      * Sets the callId property value. Unique identifier of the call.
      * @param value Value to set for the callId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallId(@jakarta.annotation.Nullable final String value) {
         this.callId = value;
     }
     /**
      * Sets the callTranscriptICalUid property value. Unique identifier for a call transcript.
      * @param value Value to set for the callTranscriptICalUid property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallTranscriptICalUid(@jakarta.annotation.Nullable final String value) {
         this.callTranscriptICalUid = value;
     }
     /**
      * Sets the meetingOrganizer property value. The organizer of the meeting.
      * @param value Value to set for the meetingOrganizer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMeetingOrganizer(@jakarta.annotation.Nullable final IdentitySet value) {
         this.meetingOrganizer = value;
     }

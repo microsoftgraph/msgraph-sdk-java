@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Type of managed browser
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedBrowserType implements ValuedEnum {
     /** Not configured */
     NotConfigured("notConfigured"),

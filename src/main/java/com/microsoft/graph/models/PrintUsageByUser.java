@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintUsageByUser extends PrintUsage implements Parsable {
     /**
      * The UPN of the user represented by these statistics.
@@ -13,9 +14,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new printUsageByUser and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PrintUsageByUser() {
         super();
         this.setOdataType("#microsoft.graph.printUsageByUser");
@@ -51,9 +50,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +59,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
     /**
      * Sets the userPrincipalName property value. The UPN of the user represented by these statistics.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }

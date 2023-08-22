@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImSubPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -23,9 +24,7 @@ public class ImSubPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json inumber2;
     /**
      * Instantiates a new imSubPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ImSubPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,9 +76,7 @@ public class ImSubPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("inumber1", this.getInumber1());
@@ -89,27 +86,21 @@ public class ImSubPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the inumber1 property value. The inumber1 property
      * @param value Value to set for the inumber1 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInumber1(@jakarta.annotation.Nullable final Json value) {
         this.inumber1 = value;
     }
     /**
      * Sets the inumber2 property value. The inumber2 property
      * @param value Value to set for the inumber2 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInumber2(@jakarta.annotation.Nullable final Json value) {
         this.inumber2 = value;
     }

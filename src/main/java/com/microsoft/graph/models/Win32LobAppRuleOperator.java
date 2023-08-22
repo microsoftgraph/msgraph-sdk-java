@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Contains properties for detection operator.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Win32LobAppRuleOperator implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),

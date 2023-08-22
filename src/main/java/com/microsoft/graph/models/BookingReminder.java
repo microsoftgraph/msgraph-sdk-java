@@ -11,6 +11,7 @@ import java.util.Objects;
 /**
  * This type represents when and to whom to send an e-mail reminder.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingReminder implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
     private BookingReminderRecipients recipients;
     /**
      * Instantiates a new bookingReminder and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BookingReminder() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -106,9 +105,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("message", this.getMessage());
@@ -120,45 +117,35 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the message property value. The message in the reminder.
      * @param value Value to set for the message property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessage(@jakarta.annotation.Nullable final String value) {
         this.message = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the offset property value. The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format.
      * @param value Value to set for the offset property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOffset(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.offset = value;
+        this.offset = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the recipients property value. The recipients property
      * @param value Value to set for the recipients property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecipients(@jakarta.annotation.Nullable final BookingReminderRecipients value) {
         this.recipients = value;
     }

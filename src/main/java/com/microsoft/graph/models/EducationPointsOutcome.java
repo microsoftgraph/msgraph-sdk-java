@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationPointsOutcome extends EducationOutcome implements Parsable {
     /**
      * The numeric grade the teacher has given the student for this assignment.
@@ -17,9 +18,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
     private EducationAssignmentPointsGrade publishedPoints;
     /**
      * Instantiates a new educationPointsOutcome and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationPointsOutcome() {
         super();
         this.setOdataType("#microsoft.graph.educationPointsOutcome");
@@ -64,9 +63,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
     /**
      * Sets the points property value. The numeric grade the teacher has given the student for this assignment.
      * @param value Value to set for the points property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPoints(@jakarta.annotation.Nullable final EducationAssignmentPointsGrade value) {
         this.points = value;
     }
     /**
      * Sets the publishedPoints property value. A copy of the points property that is made when the grade is released to the student.
      * @param value Value to set for the publishedPoints property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublishedPoints(@jakarta.annotation.Nullable final EducationAssignmentPointsGrade value) {
         this.publishedPoints = value;
     }

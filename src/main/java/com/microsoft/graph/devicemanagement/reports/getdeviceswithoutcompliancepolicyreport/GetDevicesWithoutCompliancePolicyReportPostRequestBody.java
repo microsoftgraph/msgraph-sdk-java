@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetDevicesWithoutCompliancePolicyReportPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -50,9 +51,7 @@ public class GetDevicesWithoutCompliancePolicyReportPostRequestBody implements A
     private Integer top;
     /**
      * Instantiates a new getDevicesWithoutCompliancePolicyReportPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public GetDevicesWithoutCompliancePolicyReportPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -167,9 +166,7 @@ public class GetDevicesWithoutCompliancePolicyReportPostRequestBody implements A
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("filter", this.getFilter());
@@ -186,90 +183,70 @@ public class GetDevicesWithoutCompliancePolicyReportPostRequestBody implements A
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the filter property value. The filter property
      * @param value Value to set for the filter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFilter(@jakarta.annotation.Nullable final String value) {
         this.filter = value;
     }
     /**
      * Sets the groupBy property value. The groupBy property
      * @param value Value to set for the groupBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroupBy(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.groupBy = value;
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the orderBy property value. The orderBy property
      * @param value Value to set for the orderBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrderBy(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.orderBy = value;
     }
     /**
      * Sets the search property value. The search property
      * @param value Value to set for the search property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSearch(@jakarta.annotation.Nullable final String value) {
         this.search = value;
     }
     /**
      * Sets the select property value. The select property
      * @param value Value to set for the select property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSelect(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.select = value;
     }
     /**
      * Sets the sessionId property value. The sessionId property
      * @param value Value to set for the sessionId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSessionId(@jakarta.annotation.Nullable final String value) {
         this.sessionId = value;
     }
     /**
      * Sets the skip property value. The skip property
      * @param value Value to set for the skip property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSkip(@jakarta.annotation.Nullable final Integer value) {
         this.skip = value;
     }
     /**
      * Sets the top property value. The top property
      * @param value Value to set for the top property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTop(@jakarta.annotation.Nullable final Integer value) {
         this.top = value;
     }

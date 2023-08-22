@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * This is the base class for Compliance policy. Compliance policies are platform specific and individual per-platform compliance policies inherit from here. 
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceCompliancePolicy extends Entity implements Parsable {
     /**
      * The collection of assignments for this compliance policy.
@@ -61,9 +62,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     private Integer version;
     /**
      * Instantiates a new deviceCompliancePolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceCompliancePolicy() {
         super();
     }
@@ -211,9 +210,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -233,108 +230,84 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     /**
      * Sets the assignments property value. The collection of assignments for this compliance policy.
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceCompliancePolicyAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the createdDateTime property value. DateTime the object was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Admin provided description of the Device Configuration.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the deviceSettingStateSummaries property value. Compliance Setting State Device Summary
      * @param value Value to set for the deviceSettingStateSummaries property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceSettingStateSummaries(@jakarta.annotation.Nullable final java.util.List<SettingStateDeviceSummary> value) {
         this.deviceSettingStateSummaries = value;
     }
     /**
      * Sets the deviceStatuses property value. List of DeviceComplianceDeviceStatus.
      * @param value Value to set for the deviceStatuses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceStatuses(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceDeviceStatus> value) {
         this.deviceStatuses = value;
     }
     /**
      * Sets the deviceStatusOverview property value. Device compliance devices status overview
      * @param value Value to set for the deviceStatusOverview property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceStatusOverview(@jakarta.annotation.Nullable final DeviceComplianceDeviceOverview value) {
         this.deviceStatusOverview = value;
     }
     /**
      * Sets the displayName property value. Admin provided name of the device configuration.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the scheduledActionsForRule property value. The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      * @param value Value to set for the scheduledActionsForRule property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScheduledActionsForRule(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceScheduledActionForRule> value) {
         this.scheduledActionsForRule = value;
     }
     /**
      * Sets the userStatuses property value. List of DeviceComplianceUserStatus.
      * @param value Value to set for the userStatuses property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserStatuses(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceUserStatus> value) {
         this.userStatuses = value;
     }
     /**
      * Sets the userStatusOverview property value. Device compliance users status overview
      * @param value Value to set for the userStatusOverview property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserStatusOverview(@jakarta.annotation.Nullable final DeviceComplianceUserOverview value) {
         this.userStatusOverview = value;
     }
     /**
      * Sets the version property value. Version of the device configuration.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {
         this.version = value;
     }

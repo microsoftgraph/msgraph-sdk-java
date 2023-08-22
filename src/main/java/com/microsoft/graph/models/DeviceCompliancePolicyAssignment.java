@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Device compliance policy assignment.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceCompliancePolicyAssignment extends Entity implements Parsable {
     /**
      * Target for the compliance policy assignment.
@@ -16,9 +17,7 @@ public class DeviceCompliancePolicyAssignment extends Entity implements Parsable
     private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new deviceCompliancePolicyAssignment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceCompliancePolicyAssignment() {
         super();
     }
@@ -53,9 +52,7 @@ public class DeviceCompliancePolicyAssignment extends Entity implements Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -64,9 +61,7 @@ public class DeviceCompliancePolicyAssignment extends Entity implements Parsable
     /**
      * Sets the target property value. Target for the compliance policy assignment.
      * @param value Value to set for the target property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this.target = value;
     }

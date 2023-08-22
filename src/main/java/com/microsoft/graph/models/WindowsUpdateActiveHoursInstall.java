@@ -7,6 +7,7 @@ import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType implements Parsable {
     /**
      * Active Hours End
@@ -18,9 +19,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
     private LocalTime activeHoursStart;
     /**
      * Instantiates a new windowsUpdateActiveHoursInstall and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsUpdateActiveHoursInstall() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdateActiveHoursInstall");
@@ -65,9 +64,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -77,18 +74,14 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
     /**
      * Sets the activeHoursEnd property value. Active Hours End
      * @param value Value to set for the activeHoursEnd property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActiveHoursEnd(@jakarta.annotation.Nullable final LocalTime value) {
         this.activeHoursEnd = value;
     }
     /**
      * Sets the activeHoursStart property value. Active Hours Start
      * @param value Value to set for the activeHoursStart property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActiveHoursStart(@jakarta.annotation.Nullable final LocalTime value) {
         this.activeHoursStart = value;
     }

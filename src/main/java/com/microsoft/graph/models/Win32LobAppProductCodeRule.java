@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * A complex type to store the product code and version rule data for a Win32 LOB app. This rule is not supported as a requirement rule.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsable {
     /**
      * The product code of the app.
@@ -24,9 +25,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
     private Win32LobAppRuleOperator productVersionOperator;
     /**
      * Instantiates a new win32LobAppProductCodeRule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Win32LobAppProductCodeRule() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppProductCodeRule");
@@ -80,9 +79,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -93,27 +90,21 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
     /**
      * Sets the productCode property value. The product code of the app.
      * @param value Value to set for the productCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProductCode(@jakarta.annotation.Nullable final String value) {
         this.productCode = value;
     }
     /**
      * Sets the productVersion property value. The product version comparison value.
      * @param value Value to set for the productVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProductVersion(@jakarta.annotation.Nullable final String value) {
         this.productVersion = value;
     }
     /**
      * Sets the productVersionOperator property value. Contains properties for detection operator.
      * @param value Value to set for the productVersionOperator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProductVersionOperator(@jakarta.annotation.Nullable final Win32LobAppRuleOperator value) {
         this.productVersionOperator = value;
     }

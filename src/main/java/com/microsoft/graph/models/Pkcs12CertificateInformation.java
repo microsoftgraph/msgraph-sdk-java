@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
     private String thumbprint;
     /**
      * Instantiates a new pkcs12CertificateInformation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Pkcs12CertificateInformation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isActive", this.getIsActive());
@@ -130,54 +127,42 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past.
      * @param value Value to set for the isActive property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
         this.isActive = value;
     }
     /**
      * Sets the notAfter property value. The certificate's expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
      * @param value Value to set for the notAfter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotAfter(@jakarta.annotation.Nullable final Long value) {
         this.notAfter = value;
     }
     /**
      * Sets the notBefore property value. The certificate's issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
      * @param value Value to set for the notBefore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNotBefore(@jakarta.annotation.Nullable final Long value) {
         this.notBefore = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the thumbprint property value. The certificate thumbprint.
      * @param value Value to set for the thumbprint property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setThumbprint(@jakarta.annotation.Nullable final String value) {
         this.thumbprint = value;
     }

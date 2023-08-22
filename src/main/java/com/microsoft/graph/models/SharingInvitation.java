@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharingInvitation implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
     private Boolean signInRequired;
     /**
      * Instantiates a new sharingInvitation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SharingInvitation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("email", this.getEmail());
@@ -130,54 +127,42 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the email property value. The email address provided for the recipient of the sharing invitation. Read-only.
      * @param value Value to set for the email property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
      * Sets the invitedBy property value. Provides information about who sent the invitation that created this permission, if that information is available. Read-only.
      * @param value Value to set for the invitedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInvitedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.invitedBy = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the redeemedBy property value. The redeemedBy property
      * @param value Value to set for the redeemedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRedeemedBy(@jakarta.annotation.Nullable final String value) {
         this.redeemedBy = value;
     }
     /**
      * Sets the signInRequired property value. If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only.
      * @param value Value to set for the signInRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSignInRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.signInRequired = value;
     }

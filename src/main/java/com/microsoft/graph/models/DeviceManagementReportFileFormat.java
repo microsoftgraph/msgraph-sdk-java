@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for the file format of a report
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementReportFileFormat implements ValuedEnum {
     /** CSV Format */
     Csv("csv"),

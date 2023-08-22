@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Allows IT admind to set a predefined default search engine for MDM-Controlled devices
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsSpotlightEnablementSettings implements ValuedEnum {
     /** Spotlight on lock screen is not configured */
     NotConfigured("notConfigured"),

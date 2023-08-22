@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Defenders default action to take on detected Malware threats.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DefenderThreatAction implements ValuedEnum {
     /** Apply action based on the update definition. */
     DeviceDefault("deviceDefault"),

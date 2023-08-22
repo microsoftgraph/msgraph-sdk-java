@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
     private Boolean persistEsimDataPlan;
     /**
      * Instantiates a new wipePostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WipePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("keepEnrollmentData", this.getKeepEnrollmentData());
@@ -116,45 +113,35 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the keepEnrollmentData property value. The keepEnrollmentData property
      * @param value Value to set for the keepEnrollmentData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKeepEnrollmentData(@jakarta.annotation.Nullable final Boolean value) {
         this.keepEnrollmentData = value;
     }
     /**
      * Sets the keepUserData property value. The keepUserData property
      * @param value Value to set for the keepUserData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKeepUserData(@jakarta.annotation.Nullable final Boolean value) {
         this.keepUserData = value;
     }
     /**
      * Sets the macOsUnlockCode property value. The macOsUnlockCode property
      * @param value Value to set for the macOsUnlockCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMacOsUnlockCode(@jakarta.annotation.Nullable final String value) {
         this.macOsUnlockCode = value;
     }
     /**
      * Sets the persistEsimDataPlan property value. The persistEsimDataPlan property
      * @param value Value to set for the persistEsimDataPlan property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPersistEsimDataPlan(@jakarta.annotation.Nullable final Boolean value) {
         this.persistEsimDataPlan = value;
     }

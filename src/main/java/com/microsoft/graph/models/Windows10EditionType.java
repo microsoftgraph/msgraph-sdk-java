@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Windows 10 Edition type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Windows10EditionType implements ValuedEnum {
     /** Windows 10 Enterprise */
     Windows10Enterprise("windows10Enterprise"),

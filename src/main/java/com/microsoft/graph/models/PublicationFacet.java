@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PublicationFacet implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
     private String versionId;
     /**
      * Instantiates a new publicationFacet and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PublicationFacet() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("checkedOutBy", this.getCheckedOutBy());
@@ -116,45 +113,35 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the checkedOutBy property value. The checkedOutBy property
      * @param value Value to set for the checkedOutBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCheckedOutBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.checkedOutBy = value;
     }
     /**
      * Sets the level property value. The state of publication for this document. Either published or checkout. Read-only.
      * @param value Value to set for the level property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLevel(@jakarta.annotation.Nullable final String value) {
         this.level = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the versionId property value. The unique identifier for the version that is visible to the current caller. Read-only.
      * @param value Value to set for the versionId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersionId(@jakarta.annotation.Nullable final String value) {
         this.versionId = value;
     }

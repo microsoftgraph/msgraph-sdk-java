@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource implements Parsable {
     /**
      * The ID of the cloud where the tenant is located, one of microsoftonline.com, microsoftonline.us or partner.microsoftonline.cn. Read only.
@@ -21,9 +22,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
     private String tenantId;
     /**
      * Instantiates a new crossCloudAzureActiveDirectoryTenant and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CrossCloudAzureActiveDirectoryTenant() {
         super();
         this.setOdataType("#microsoft.graph.crossCloudAzureActiveDirectoryTenant");
@@ -77,9 +76,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
     /**
      * Sets the cloudInstance property value. The ID of the cloud where the tenant is located, one of microsoftonline.com, microsoftonline.us or partner.microsoftonline.cn. Read only.
      * @param value Value to set for the cloudInstance property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudInstance(@jakarta.annotation.Nullable final String value) {
         this.cloudInstance = value;
     }
     /**
      * Sets the displayName property value. The name of the Azure Active Directory tenant. Read only.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the tenantId property value. The ID of the Azure Active Directory tenant. Read only.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }

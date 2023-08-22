@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryCustodian extends DataSourceContainer implements Parsable {
     /**
      * Date and time the custodian acknowledged a hold notification.
@@ -34,9 +35,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     private java.util.List<UserSource> userSources;
     /**
      * Instantiates a new ediscoveryCustodian and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EdiscoveryCustodian() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoveryCustodian");
@@ -117,9 +116,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -133,54 +130,42 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     /**
      * Sets the acknowledgedDateTime property value. Date and time the custodian acknowledged a hold notification.
      * @param value Value to set for the acknowledgedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAcknowledgedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.acknowledgedDateTime = value;
     }
     /**
      * Sets the email property value. Email address of the custodian.
      * @param value Value to set for the email property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
      * Sets the lastIndexOperation property value. Operation entity that represents the latest indexing for the custodian.
      * @param value Value to set for the lastIndexOperation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastIndexOperation(@jakarta.annotation.Nullable final EdiscoveryIndexOperation value) {
         this.lastIndexOperation = value;
     }
     /**
      * Sets the siteSources property value. Data source entity for SharePoint sites associated with the custodian.
      * @param value Value to set for the siteSources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSiteSources(@jakarta.annotation.Nullable final java.util.List<SiteSource> value) {
         this.siteSources = value;
     }
     /**
      * Sets the unifiedGroupSources property value. Data source entity for groups associated with the custodian.
      * @param value Value to set for the unifiedGroupSources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnifiedGroupSources(@jakarta.annotation.Nullable final java.util.List<UnifiedGroupSource> value) {
         this.unifiedGroupSources = value;
     }
     /**
      * Sets the userSources property value. Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @param value Value to set for the userSources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserSources(@jakarta.annotation.Nullable final java.util.List<UserSource> value) {
         this.userSources = value;
     }

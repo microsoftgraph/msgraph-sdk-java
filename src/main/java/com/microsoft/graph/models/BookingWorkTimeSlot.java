@@ -8,6 +8,7 @@ import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -27,9 +28,7 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
     private LocalTime startTime;
     /**
      * Instantiates a new bookingWorkTimeSlot and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BookingWorkTimeSlot() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +89,7 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLocalTimeValue("endTime", this.getEndTime());
@@ -103,36 +100,28 @@ public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the endTime property value. The time of the day when work stops. For example, 17:00:00.0000000.
      * @param value Value to set for the endTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.endTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the startTime property value. The time of the day when work starts. For example, 08:00:00.0000000.
      * @param value Value to set for the startTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.startTime = value;
     }

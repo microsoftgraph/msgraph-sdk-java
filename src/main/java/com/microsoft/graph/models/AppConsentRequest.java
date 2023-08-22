@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppConsentRequest extends Entity implements Parsable {
     /**
      * The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby.
@@ -25,9 +26,7 @@ public class AppConsentRequest extends Entity implements Parsable {
     private java.util.List<UserConsentRequest> userConsentRequests;
     /**
      * Instantiates a new appConsentRequest and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AppConsentRequest() {
         super();
     }
@@ -89,9 +88,7 @@ public class AppConsentRequest extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -103,36 +100,28 @@ public class AppConsentRequest extends Entity implements Parsable {
     /**
      * Sets the appDisplayName property value. The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby.
      * @param value Value to set for the appDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.appDisplayName = value;
     }
     /**
      * Sets the appId property value. The identifier of the application. Required. Supports $filter (eq only) and $orderby.
      * @param value Value to set for the appId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
      * Sets the pendingScopes property value. A list of pending scopes waiting for approval. Required.
      * @param value Value to set for the pendingScopes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPendingScopes(@jakarta.annotation.Nullable final java.util.List<AppConsentRequestScope> value) {
         this.pendingScopes = value;
     }
     /**
      * Sets the userConsentRequests property value. A list of pending user consent requests. Supports $filter (eq).
      * @param value Value to set for the userConsentRequests property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserConsentRequests(@jakarta.annotation.Nullable final java.util.List<UserConsentRequest> value) {
         this.userConsentRequests = value;
     }

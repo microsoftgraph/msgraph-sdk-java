@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget implements Parsable {
     /**
      * Determines if users can use this authentication method to sign in to Azure AD. true if users can use this method for primary authentication, otherwise false.
@@ -13,9 +14,7 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
     private Boolean isUsableForSignIn;
     /**
      * Instantiates a new smsAuthenticationMethodTarget and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SmsAuthenticationMethodTarget() {
         super();
     }
@@ -50,9 +49,7 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +58,7 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
     /**
      * Sets the isUsableForSignIn property value. Determines if users can use this authentication method to sign in to Azure AD. true if users can use this method for primary authentication, otherwise false.
      * @param value Value to set for the isUsableForSignIn property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsUsableForSignIn(@jakarta.annotation.Nullable final Boolean value) {
         this.isUsableForSignIn = value;
     }

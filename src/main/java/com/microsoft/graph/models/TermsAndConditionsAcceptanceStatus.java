@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * A termsAndConditionsAcceptanceStatus entity represents the acceptance status of a given Terms and Conditions (T&C) policy by a given user. Users must accept the most up-to-date version of the terms in order to retain access to the Company Portal.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable {
     /**
      * DateTime when the terms were last accepted by the user.
@@ -33,9 +34,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
     private String userPrincipalName;
     /**
      * Instantiates a new termsAndConditionsAcceptanceStatus and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TermsAndConditionsAcceptanceStatus() {
         super();
     }
@@ -106,9 +105,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -121,45 +118,35 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
     /**
      * Sets the acceptedDateTime property value. DateTime when the terms were last accepted by the user.
      * @param value Value to set for the acceptedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAcceptedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.acceptedDateTime = value;
     }
     /**
      * Sets the acceptedVersion property value. Most recent version number of the T&C accepted by the user.
      * @param value Value to set for the acceptedVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAcceptedVersion(@jakarta.annotation.Nullable final Integer value) {
         this.acceptedVersion = value;
     }
     /**
      * Sets the termsAndConditions property value. Navigation link to the terms and conditions that are assigned.
      * @param value Value to set for the termsAndConditions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTermsAndConditions(@jakarta.annotation.Nullable final TermsAndConditions value) {
         this.termsAndConditions = value;
     }
     /**
      * Sets the userDisplayName property value. Display name of the user whose acceptance the entity represents.
      * @param value Value to set for the userDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
      * Sets the userPrincipalName property value. The userPrincipalName of the User that accepted the term.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }

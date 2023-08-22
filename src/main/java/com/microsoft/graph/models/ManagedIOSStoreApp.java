@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Contains properties and inherited properties for an iOS store app that you can manage with an Intune app protection policy.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
     /**
      * Contains properties of the possible iOS device types the mobile app can run on.
@@ -28,9 +29,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
     private IosMinimumOperatingSystem minimumSupportedOperatingSystem;
     /**
      * Instantiates a new managedIOSStoreApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ManagedIOSStoreApp() {
         super();
         this.setOdataType("#microsoft.graph.managedIOSStoreApp");
@@ -93,9 +92,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -107,36 +104,28 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
     /**
      * Sets the applicableDeviceType property value. Contains properties of the possible iOS device types the mobile app can run on.
      * @param value Value to set for the applicableDeviceType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplicableDeviceType(@jakarta.annotation.Nullable final IosDeviceType value) {
         this.applicableDeviceType = value;
     }
     /**
      * Sets the appStoreUrl property value. The Apple AppStoreUrl.
      * @param value Value to set for the appStoreUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppStoreUrl(@jakarta.annotation.Nullable final String value) {
         this.appStoreUrl = value;
     }
     /**
      * Sets the bundleId property value. The app's Bundle ID.
      * @param value Value to set for the bundleId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBundleId(@jakarta.annotation.Nullable final String value) {
         this.bundleId = value;
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. Contains properties of the minimum operating system required for an iOS mobile app.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final IosMinimumOperatingSystem value) {
         this.minimumSupportedOperatingSystem = value;
     }

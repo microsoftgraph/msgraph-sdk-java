@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
     private String odataType;
     /**
      * Instantiates a new loginPageLayoutConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LoginPageLayoutConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isFooterShown", this.getIsFooterShown());
@@ -116,45 +113,35 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the isFooterShown property value. Option to show the footer on the sign-in page.
      * @param value Value to set for the isFooterShown property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsFooterShown(@jakarta.annotation.Nullable final Boolean value) {
         this.isFooterShown = value;
     }
     /**
      * Sets the isHeaderShown property value. Option to show the header on the sign-in page.
      * @param value Value to set for the isHeaderShown property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsHeaderShown(@jakarta.annotation.Nullable final Boolean value) {
         this.isHeaderShown = value;
     }
     /**
      * Sets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a backgound on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
      * @param value Value to set for the layoutTemplateType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLayoutTemplateType(@jakarta.annotation.Nullable final LayoutTemplateType value) {
         this.layoutTemplateType = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

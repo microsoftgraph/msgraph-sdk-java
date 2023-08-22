@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AgreementAcceptance extends Entity implements Parsable {
     /**
      * The identifier of the agreement file accepted by the user.
@@ -62,9 +63,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new agreementAcceptance and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AgreementAcceptance() {
         super();
     }
@@ -207,9 +206,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -230,117 +227,91 @@ public class AgreementAcceptance extends Entity implements Parsable {
     /**
      * Sets the agreementFileId property value. The identifier of the agreement file accepted by the user.
      * @param value Value to set for the agreementFileId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAgreementFileId(@jakarta.annotation.Nullable final String value) {
         this.agreementFileId = value;
     }
     /**
      * Sets the agreementId property value. The identifier of the agreement.
      * @param value Value to set for the agreementId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAgreementId(@jakarta.annotation.Nullable final String value) {
         this.agreementId = value;
     }
     /**
      * Sets the deviceDisplayName property value. The display name of the device used for accepting the agreement.
      * @param value Value to set for the deviceDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
         this.deviceDisplayName = value;
     }
     /**
      * Sets the deviceId property value. The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the deviceOSType property value. The operating system used to accept the agreement.
      * @param value Value to set for the deviceOSType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceOSType(@jakarta.annotation.Nullable final String value) {
         this.deviceOSType = value;
     }
     /**
      * Sets the deviceOSVersion property value. The operating system version of the device used to accept the agreement.
      * @param value Value to set for the deviceOSVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceOSVersion(@jakarta.annotation.Nullable final String value) {
         this.deviceOSVersion = value;
     }
     /**
      * Sets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values.
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the recordedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the recordedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecordedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.recordedDateTime = value;
     }
     /**
      * Sets the state property value. The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final AgreementAcceptanceState value) {
         this.state = value;
     }
     /**
      * Sets the userDisplayName property value. Display name of the user when the acceptance was recorded.
      * @param value Value to set for the userDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
      * Sets the userEmail property value. Email of the user when the acceptance was recorded.
      * @param value Value to set for the userEmail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserEmail(@jakarta.annotation.Nullable final String value) {
         this.userEmail = value;
     }
     /**
      * Sets the userId property value. The identifier of the user who accepted the agreement. Supports $filter (eq).
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
      * Sets the userPrincipalName property value. UPN of the user when the acceptance was recorded.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }

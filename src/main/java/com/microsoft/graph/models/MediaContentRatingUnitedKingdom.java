@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
     private RatingUnitedKingdomTelevisionType tvRating;
     /**
      * Instantiates a new mediaContentRatingUnitedKingdom and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MediaContentRatingUnitedKingdom() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("movieRating", this.getMovieRating());
@@ -102,36 +99,28 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the movieRating property value. Movies rating labels in United Kingdom
      * @param value Value to set for the movieRating property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMovieRating(@jakarta.annotation.Nullable final RatingUnitedKingdomMoviesType value) {
         this.movieRating = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the tvRating property value. TV content rating labels in United Kingdom
      * @param value Value to set for the tvRating property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTvRating(@jakarta.annotation.Nullable final RatingUnitedKingdomTelevisionType value) {
         this.tvRating = value;
     }

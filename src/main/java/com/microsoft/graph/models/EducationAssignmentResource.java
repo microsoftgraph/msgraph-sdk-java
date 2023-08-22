@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationAssignmentResource extends Entity implements Parsable {
     /**
      * Indicates whether this resource should be copied to each student submission for modification and submission. Required
@@ -17,9 +18,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     private EducationResource resource;
     /**
      * Instantiates a new educationAssignmentResource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationAssignmentResource() {
         super();
     }
@@ -63,9 +62,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     /**
      * Sets the distributeForStudentWork property value. Indicates whether this resource should be copied to each student submission for modification and submission. Required
      * @param value Value to set for the distributeForStudentWork property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDistributeForStudentWork(@jakarta.annotation.Nullable final Boolean value) {
         this.distributeForStudentWork = value;
     }
     /**
      * Sets the resource property value. Resource object that has been associated with this assignment.
      * @param value Value to set for the resource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResource(@jakarta.annotation.Nullable final EducationResource value) {
         this.resource = value;
     }

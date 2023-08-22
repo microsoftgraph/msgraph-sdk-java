@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamworkTag extends Entity implements Parsable {
     /**
      * The description of the tag as it will appear to the user in Microsoft Teams. A teamworkTag can't have more than 200 teamworkTagMembers.
@@ -33,9 +34,7 @@ public class TeamworkTag extends Entity implements Parsable {
     private String teamId;
     /**
      * Instantiates a new teamworkTag and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamworkTag() {
         super();
     }
@@ -115,9 +114,7 @@ public class TeamworkTag extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -131,54 +128,42 @@ public class TeamworkTag extends Entity implements Parsable {
     /**
      * Sets the description property value. The description of the tag as it will appear to the user in Microsoft Teams. A teamworkTag can't have more than 200 teamworkTagMembers.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the tag as it will appear to the user in Microsoft Teams.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the memberCount property value. The number of users assigned to the tag.
      * @param value Value to set for the memberCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMemberCount(@jakarta.annotation.Nullable final Integer value) {
         this.memberCount = value;
     }
     /**
      * Sets the members property value. Users assigned to the tag.
      * @param value Value to set for the members property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<TeamworkTagMember> value) {
         this.members = value;
     }
     /**
      * Sets the tagType property value. The type of the tag. Default is standard.
      * @param value Value to set for the tagType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTagType(@jakarta.annotation.Nullable final TeamworkTagType value) {
         this.tagType = value;
     }
     /**
      * Sets the teamId property value. ID of the team in which the tag is defined.
      * @param value Value to set for the teamId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamId(@jakarta.annotation.Nullable final String value) {
         this.teamId = value;
     }

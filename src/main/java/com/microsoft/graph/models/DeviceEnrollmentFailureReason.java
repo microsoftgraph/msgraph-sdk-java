@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Top level failure categories for enrollment.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceEnrollmentFailureReason implements ValuedEnum {
     /** Default value, failure reason is unknown. */
     Unknown("unknown"),

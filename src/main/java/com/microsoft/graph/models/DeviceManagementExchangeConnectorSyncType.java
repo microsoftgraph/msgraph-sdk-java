@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The type of Exchange Connector sync requested.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementExchangeConnectorSyncType implements ValuedEnum {
     /** Discover all the device in Exchange. */
     FullSync("fullSync"),

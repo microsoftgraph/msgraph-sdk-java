@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for WIP Protection enforcement levels
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsInformationProtectionEnforcementLevel implements ValuedEnum {
     /** No protection enforcement */
     NoProtection("noProtection"),

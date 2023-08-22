@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Place extends Entity implements Parsable {
     /**
      * The street address of the place.
@@ -25,9 +26,7 @@ public class Place extends Entity implements Parsable {
     private String phone;
     /**
      * Instantiates a new place and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Place() {
         super();
     }
@@ -97,9 +96,7 @@ public class Place extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,36 +108,28 @@ public class Place extends Entity implements Parsable {
     /**
      * Sets the address property value. The street address of the place.
      * @param value Value to set for the address property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.address = value;
     }
     /**
      * Sets the displayName property value. The name associated with the place.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the geoCoordinates property value. Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
      * @param value Value to set for the geoCoordinates property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGeoCoordinates(@jakarta.annotation.Nullable final OutlookGeoCoordinates value) {
         this.geoCoordinates = value;
     }
     /**
      * Sets the phone property value. The phone number of the place.
      * @param value Value to set for the phone property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPhone(@jakarta.annotation.Nullable final String value) {
         this.phone = value;
     }

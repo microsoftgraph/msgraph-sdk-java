@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryCaseSettings extends Entity implements Parsable {
     /**
      * The OCR (Optical Character Recognition) settings for the case.
@@ -22,9 +23,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     private TopicModelingSettings topicModeling;
     /**
      * Instantiates a new ediscoveryCaseSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EdiscoveryCaseSettings() {
         super();
     }
@@ -77,9 +76,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     /**
      * Sets the ocr property value. The OCR (Optical Character Recognition) settings for the case.
      * @param value Value to set for the ocr property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOcr(@jakarta.annotation.Nullable final OcrSettings value) {
         this.ocr = value;
     }
     /**
      * Sets the redundancyDetection property value. The redundancy (near duplicate and email threading) detection settings for the case.
      * @param value Value to set for the redundancyDetection property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRedundancyDetection(@jakarta.annotation.Nullable final RedundancyDetectionSettings value) {
         this.redundancyDetection = value;
     }
     /**
      * Sets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
      * @param value Value to set for the topicModeling property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTopicModeling(@jakarta.annotation.Nullable final TopicModelingSettings value) {
         this.topicModeling = value;
     }

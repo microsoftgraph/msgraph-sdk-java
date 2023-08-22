@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Which branch devices will receive their updates from
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsUpdateType implements ValuedEnum {
     /** Allow the user to set. */
     UserDefined("userDefined"),

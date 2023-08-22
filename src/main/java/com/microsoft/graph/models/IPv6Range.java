@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * IPv6 Range definition.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IPv6Range extends IpRange implements Parsable {
     /**
      * Lower address.
@@ -20,9 +21,7 @@ public class IPv6Range extends IpRange implements Parsable {
     private String upperAddress;
     /**
      * Instantiates a new iPv6Range and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IPv6Range() {
         super();
         this.setOdataType("#microsoft.graph.iPv6Range");
@@ -67,9 +66,7 @@ public class IPv6Range extends IpRange implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -79,18 +76,14 @@ public class IPv6Range extends IpRange implements Parsable {
     /**
      * Sets the lowerAddress property value. Lower address.
      * @param value Value to set for the lowerAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLowerAddress(@jakarta.annotation.Nullable final String value) {
         this.lowerAddress = value;
     }
     /**
      * Sets the upperAddress property value. Upper address.
      * @param value Value to set for the upperAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUpperAddress(@jakarta.annotation.Nullable final String value) {
         this.upperAddress = value;
     }

@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Contains properties and inherited properties for Android store apps that you can manage with an Intune app protection policy.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
     /**
      * The Android AppStoreUrl.
@@ -24,9 +25,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
     private String packageId;
     /**
      * Instantiates a new managedAndroidStoreApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ManagedAndroidStoreApp() {
         super();
         this.setOdataType("#microsoft.graph.managedAndroidStoreApp");
@@ -80,9 +79,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -93,27 +90,21 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
     /**
      * Sets the appStoreUrl property value. The Android AppStoreUrl.
      * @param value Value to set for the appStoreUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppStoreUrl(@jakarta.annotation.Nullable final String value) {
         this.appStoreUrl = value;
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. Contains properties for the minimum operating system required for an Android mobile app.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final AndroidMinimumOperatingSystem value) {
         this.minimumSupportedOperatingSystem = value;
     }
     /**
      * Sets the packageId property value. The app's package ID.
      * @param value Value to set for the packageId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPackageId(@jakarta.annotation.Nullable final String value) {
         this.packageId = value;
     }

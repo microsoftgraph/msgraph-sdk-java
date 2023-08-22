@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Contains value for delivery optimization priority.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Win32LobAppDeliveryOptimizationPriority implements ValuedEnum {
     /** Not configured or background normal delivery optimization priority. */
     NotConfigured("notConfigured"),

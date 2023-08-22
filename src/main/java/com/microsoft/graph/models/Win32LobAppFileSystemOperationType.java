@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Contains all supported file system detection type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Win32LobAppFileSystemOperationType implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),

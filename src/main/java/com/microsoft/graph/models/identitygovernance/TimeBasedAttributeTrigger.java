@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implements Parsable {
     /**
      * How many days before or after the time-based attribute specified the workflow should trigger. For example, if the attribute is employeeHireDate and offsetInDays is -1, then the workflow should trigger one day before the employee hire date. The value can range between -180 and 180 days.
@@ -17,9 +18,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
     private WorkflowTriggerTimeBasedAttribute timeBasedAttribute;
     /**
      * Instantiates a new timeBasedAttributeTrigger and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TimeBasedAttributeTrigger() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.timeBasedAttributeTrigger");
@@ -64,9 +63,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
     /**
      * Sets the offsetInDays property value. How many days before or after the time-based attribute specified the workflow should trigger. For example, if the attribute is employeeHireDate and offsetInDays is -1, then the workflow should trigger one day before the employee hire date. The value can range between -180 and 180 days.
      * @param value Value to set for the offsetInDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOffsetInDays(@jakarta.annotation.Nullable final Integer value) {
         this.offsetInDays = value;
     }
     /**
      * Sets the timeBasedAttribute property value. The timeBasedAttribute property
      * @param value Value to set for the timeBasedAttribute property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeBasedAttribute(@jakarta.annotation.Nullable final WorkflowTriggerTimeBasedAttribute value) {
         this.timeBasedAttribute = value;
     }

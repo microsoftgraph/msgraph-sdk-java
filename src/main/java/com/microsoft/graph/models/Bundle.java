@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Bundle implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class Bundle implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new bundle and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Bundle() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class Bundle implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("album", this.getAlbum());
@@ -102,36 +99,28 @@ public class Bundle implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the album property value. If the bundle is an [album][], then the album property is included
      * @param value Value to set for the album property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlbum(@jakarta.annotation.Nullable final Album value) {
         this.album = value;
     }
     /**
      * Sets the childCount property value. Number of children contained immediately within this container.
      * @param value Value to set for the childCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChildCount(@jakarta.annotation.Nullable final Integer value) {
         this.childCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

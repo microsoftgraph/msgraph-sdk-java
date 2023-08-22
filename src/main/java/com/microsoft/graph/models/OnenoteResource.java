@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable {
     /**
      * The content stream
@@ -17,9 +18,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
     private String contentUrl;
     /**
      * Instantiates a new onenoteResource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OnenoteResource() {
         super();
         this.setOdataType("#microsoft.graph.onenoteResource");
@@ -64,9 +63,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
     /**
      * Sets the content property value. The content stream
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
         this.content = value;
     }
     /**
      * Sets the contentUrl property value. The URL for downloading the content
      * @param value Value to set for the contentUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentUrl(@jakarta.annotation.Nullable final String value) {
         this.contentUrl = value;
     }

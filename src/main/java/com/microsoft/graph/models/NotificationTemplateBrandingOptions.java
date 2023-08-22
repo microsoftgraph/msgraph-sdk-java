@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum NotificationTemplateBrandingOptions implements ValuedEnum {
     /** Indicates that no branding options are set in the message template. */
     None("none"),

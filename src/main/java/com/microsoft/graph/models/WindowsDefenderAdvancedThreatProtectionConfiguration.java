@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Windows Defender AdvancedThreatProtection Configuration.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
@@ -20,9 +21,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
     private Boolean enableExpeditedTelemetryReporting;
     /**
      * Instantiates a new windowsDefenderAdvancedThreatProtectionConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsDefenderAdvancedThreatProtectionConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsDefenderAdvancedThreatProtectionConfiguration");
@@ -67,9 +66,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -79,18 +76,14 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
     /**
      * Sets the allowSampleSharing property value. Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
      * @param value Value to set for the allowSampleSharing property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAllowSampleSharing(@jakarta.annotation.Nullable final Boolean value) {
         this.allowSampleSharing = value;
     }
     /**
      * Sets the enableExpeditedTelemetryReporting property value. Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
      * @param value Value to set for the enableExpeditedTelemetryReporting property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnableExpeditedTelemetryReporting(@jakarta.annotation.Nullable final Boolean value) {
         this.enableExpeditedTelemetryReporting = value;
     }

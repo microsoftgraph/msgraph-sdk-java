@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CallRecord extends Entity implements Parsable {
     /**
      * UTC time when the last user left the call. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -52,9 +53,7 @@ public class CallRecord extends Entity implements Parsable {
     private Long version;
     /**
      * Instantiates a new callRecord and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CallRecord() {
         super();
     }
@@ -170,9 +169,7 @@ public class CallRecord extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -190,90 +187,70 @@ public class CallRecord extends Entity implements Parsable {
     /**
      * Sets the endDateTime property value. UTC time when the last user left the call. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
      * Sets the joinWebUrl property value. Meeting URL associated to the call. May not be available for a peerToPeer call record type.
      * @param value Value to set for the joinWebUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setJoinWebUrl(@jakarta.annotation.Nullable final String value) {
         this.joinWebUrl = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. UTC time when the call record was created. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the modalities property value. List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      * @param value Value to set for the modalities property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {
         this.modalities = value;
     }
     /**
      * Sets the organizer property value. The organizing party's identity.
      * @param value Value to set for the organizer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrganizer(@jakarta.annotation.Nullable final IdentitySet value) {
         this.organizer = value;
     }
     /**
      * Sets the participants property value. List of distinct identities involved in the call.
      * @param value Value to set for the participants property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParticipants(@jakarta.annotation.Nullable final java.util.List<IdentitySet> value) {
         this.participants = value;
     }
     /**
      * Sets the sessions property value. List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.
      * @param value Value to set for the sessions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSessions(@jakarta.annotation.Nullable final java.util.List<Session> value) {
         this.sessions = value;
     }
     /**
      * Sets the startDateTime property value. UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final CallType value) {
         this.type = value;
     }
     /**
      * Sets the version property value. Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersion(@jakarta.annotation.Nullable final Long value) {
         this.version = value;
     }

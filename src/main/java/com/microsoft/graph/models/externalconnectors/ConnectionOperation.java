@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConnectionOperation extends Entity implements Parsable {
     /**
      * If status is failed, provides more information about the error that caused the failure.
@@ -19,9 +20,7 @@ public class ConnectionOperation extends Entity implements Parsable {
     private ConnectionOperationStatus status;
     /**
      * Instantiates a new connectionOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConnectionOperation() {
         super();
     }
@@ -65,9 +64,7 @@ public class ConnectionOperation extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -77,18 +74,14 @@ public class ConnectionOperation extends Entity implements Parsable {
     /**
      * Sets the error property value. If status is failed, provides more information about the error that caused the failure.
      * @param value Value to set for the error property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setError(@jakarta.annotation.Nullable final PublicError value) {
         this.error = value;
     }
     /**
      * Sets the status property value. Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final ConnectionOperationStatus value) {
         this.status = value;
     }

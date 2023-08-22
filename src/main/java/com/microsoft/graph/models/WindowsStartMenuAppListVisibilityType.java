@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Type of start menu app list visibility.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsStartMenuAppListVisibilityType implements ValuedEnum {
     /** User defined. Default value. */
     UserDefined("userDefined"),

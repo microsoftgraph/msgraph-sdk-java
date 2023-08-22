@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Hardware information of a given device.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -65,9 +66,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
     private Integer unknownStateThreatAgentDeviceCount;
     /**
      * Instantiates a new deviceProtectionOverview and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DeviceProtectionOverview() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -209,9 +208,7 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("cleanDeviceCount", this.getCleanDeviceCount());
@@ -231,117 +228,91 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the cleanDeviceCount property value. Indicates number of devices reporting as clean
      * @param value Value to set for the cleanDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCleanDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.cleanDeviceCount = value;
     }
     /**
      * Sets the criticalFailuresDeviceCount property value. Indicates number of devices with critical failures
      * @param value Value to set for the criticalFailuresDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCriticalFailuresDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.criticalFailuresDeviceCount = value;
     }
     /**
      * Sets the inactiveThreatAgentDeviceCount property value. Indicates number of devices with inactive threat agent
      * @param value Value to set for the inactiveThreatAgentDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInactiveThreatAgentDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.inactiveThreatAgentDeviceCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the pendingFullScanDeviceCount property value. Indicates number of devices pending full scan
      * @param value Value to set for the pendingFullScanDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPendingFullScanDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.pendingFullScanDeviceCount = value;
     }
     /**
      * Sets the pendingManualStepsDeviceCount property value. Indicates number of devices with pending manual steps
      * @param value Value to set for the pendingManualStepsDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPendingManualStepsDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.pendingManualStepsDeviceCount = value;
     }
     /**
      * Sets the pendingOfflineScanDeviceCount property value. Indicates number of pending offline scan devices
      * @param value Value to set for the pendingOfflineScanDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPendingOfflineScanDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.pendingOfflineScanDeviceCount = value;
     }
     /**
      * Sets the pendingQuickScanDeviceCount property value. Indicates the number of devices that have a pending full scan. Valid values -2147483648 to 2147483647
      * @param value Value to set for the pendingQuickScanDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPendingQuickScanDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.pendingQuickScanDeviceCount = value;
     }
     /**
      * Sets the pendingRestartDeviceCount property value. Indicates number of devices pending restart
      * @param value Value to set for the pendingRestartDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPendingRestartDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.pendingRestartDeviceCount = value;
     }
     /**
      * Sets the pendingSignatureUpdateDeviceCount property value. Indicates number of devices with an old signature
      * @param value Value to set for the pendingSignatureUpdateDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPendingSignatureUpdateDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.pendingSignatureUpdateDeviceCount = value;
     }
     /**
      * Sets the totalReportedDeviceCount property value. Total device count.
      * @param value Value to set for the totalReportedDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalReportedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalReportedDeviceCount = value;
     }
     /**
      * Sets the unknownStateThreatAgentDeviceCount property value. Indicates number of devices with threat agent state as unknown
      * @param value Value to set for the unknownStateThreatAgentDeviceCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnknownStateThreatAgentDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.unknownStateThreatAgentDeviceCount = value;
     }

@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * This class contains compliance settings for IOS.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /**
      * Require that devices have enabled device threat protection .
@@ -68,9 +69,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     private Boolean securityBlockJailbrokenDevices;
     /**
      * Instantiates a new iosCompliancePolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IosCompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.iosCompliancePolicy");
@@ -223,9 +222,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -247,126 +244,98 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     /**
      * Sets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection .
      * @param value Value to set for the deviceThreatProtectionEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceThreatProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.deviceThreatProtectionEnabled = value;
     }
     /**
      * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceThreatProtectionRequiredSecurityLevel(@jakarta.annotation.Nullable final DeviceThreatProtectionLevel value) {
         this.deviceThreatProtectionRequiredSecurityLevel = value;
     }
     /**
      * Sets the managedEmailProfileRequired property value. Indicates whether or not to require a managed email profile.
      * @param value Value to set for the managedEmailProfileRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagedEmailProfileRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.managedEmailProfileRequired = value;
     }
     /**
      * Sets the osMaximumVersion property value. Maximum IOS version.
      * @param value Value to set for the osMaximumVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMaximumVersion = value;
     }
     /**
      * Sets the osMinimumVersion property value. Minimum IOS version.
      * @param value Value to set for the osMinimumVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMinimumVersion = value;
     }
     /**
      * Sets the passcodeBlockSimple property value. Indicates whether or not to block simple passcodes.
      * @param value Value to set for the passcodeBlockSimple property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasscodeBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
         this.passcodeBlockSimple = value;
     }
     /**
      * Sets the passcodeExpirationDays property value. Number of days before the passcode expires. Valid values 1 to 65535
      * @param value Value to set for the passcodeExpirationDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasscodeExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.passcodeExpirationDays = value;
     }
     /**
      * Sets the passcodeMinimumCharacterSetCount property value. The number of character sets required in the password.
      * @param value Value to set for the passcodeMinimumCharacterSetCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasscodeMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
         this.passcodeMinimumCharacterSetCount = value;
     }
     /**
      * Sets the passcodeMinimumLength property value. Minimum length of passcode. Valid values 4 to 14
      * @param value Value to set for the passcodeMinimumLength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasscodeMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passcodeMinimumLength = value;
     }
     /**
      * Sets the passcodeMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a passcode is required.
      * @param value Value to set for the passcodeMinutesOfInactivityBeforeLock property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasscodeMinutesOfInactivityBeforeLock(@jakarta.annotation.Nullable final Integer value) {
         this.passcodeMinutesOfInactivityBeforeLock = value;
     }
     /**
      * Sets the passcodePreviousPasscodeBlockCount property value. Number of previous passcodes to block. Valid values 1 to 24
      * @param value Value to set for the passcodePreviousPasscodeBlockCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasscodePreviousPasscodeBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.passcodePreviousPasscodeBlockCount = value;
     }
     /**
      * Sets the passcodeRequired property value. Indicates whether or not to require a passcode.
      * @param value Value to set for the passcodeRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasscodeRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.passcodeRequired = value;
     }
     /**
      * Sets the passcodeRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passcodeRequiredType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasscodeRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
         this.passcodeRequiredType = value;
     }
     /**
      * Sets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
      * @param value Value to set for the securityBlockJailbrokenDevices property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecurityBlockJailbrokenDevices(@jakarta.annotation.Nullable final Boolean value) {
         this.securityBlockJailbrokenDevices = value;
     }

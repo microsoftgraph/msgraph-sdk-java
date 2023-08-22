@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppManagementPolicy extends PolicyBase implements Parsable {
     /**
      * Collection of applications and service principals to which the policy is applied.
@@ -21,9 +22,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     private AppManagementConfiguration restrictions;
     /**
      * Instantiates a new appManagementPolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AppManagementPolicy() {
         super();
         this.setOdataType("#microsoft.graph.appManagementPolicy");
@@ -77,9 +76,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     /**
      * Sets the appliesTo property value. Collection of applications and service principals to which the policy is applied.
      * @param value Value to set for the appliesTo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppliesTo(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.appliesTo = value;
     }
     /**
      * Sets the isEnabled property value. Denotes whether the policy is enabled.
      * @param value Value to set for the isEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
      * Sets the restrictions property value. Restrictions that apply to an application or service principal object.
      * @param value Value to set for the restrictions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRestrictions(@jakarta.annotation.Nullable final AppManagementConfiguration value) {
         this.restrictions = value;
     }

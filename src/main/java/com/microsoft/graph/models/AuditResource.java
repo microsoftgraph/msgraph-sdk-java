@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * A class containing the properties for Audit Resource.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuditResource implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -37,9 +38,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
     private String resourceId;
     /**
      * Instantiates a new auditResource and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AuditResource() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -118,9 +117,7 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("auditResourceType", this.getAuditResourceType());
@@ -133,54 +130,42 @@ public class AuditResource implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the auditResourceType property value. Audit resource's type.
      * @param value Value to set for the auditResourceType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuditResourceType(@jakarta.annotation.Nullable final String value) {
         this.auditResourceType = value;
     }
     /**
      * Sets the displayName property value. Display name.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the modifiedProperties property value. List of modified properties.
      * @param value Value to set for the modifiedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModifiedProperties(@jakarta.annotation.Nullable final java.util.List<AuditProperty> value) {
         this.modifiedProperties = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the resourceId property value. Audit resource's Id.
      * @param value Value to set for the resourceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.resourceId = value;
     }

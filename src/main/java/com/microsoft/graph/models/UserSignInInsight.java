@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserSignInInsight extends GovernanceInsight implements Parsable {
     /**
      * Indicates when the user last signed in.
@@ -14,9 +15,7 @@ public class UserSignInInsight extends GovernanceInsight implements Parsable {
     private OffsetDateTime lastSignInDateTime;
     /**
      * Instantiates a new userSignInInsight and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserSignInInsight() {
         super();
         this.setOdataType("#microsoft.graph.userSignInInsight");
@@ -52,9 +51,7 @@ public class UserSignInInsight extends GovernanceInsight implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,9 +60,7 @@ public class UserSignInInsight extends GovernanceInsight implements Parsable {
     /**
      * Sets the lastSignInDateTime property value. Indicates when the user last signed in.
      * @param value Value to set for the lastSignInDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastSignInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSignInDateTime = value;
     }

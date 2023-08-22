@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TraceRouteHop implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -31,9 +32,7 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
     private PeriodAndDuration roundTripTime;
     /**
      * Instantiates a new traceRouteHop and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TraceRouteHop() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,9 +102,7 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("hopCount", this.getHopCount());
@@ -117,46 +114,36 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the hopCount property value. The network path count of this hop that was used to compute the RTT.
      * @param value Value to set for the hopCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHopCount(@jakarta.annotation.Nullable final Integer value) {
         this.hopCount = value;
     }
     /**
      * Sets the ipAddress property value. IP address used for this hop in the network trace.
      * @param value Value to set for the ipAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
         this.ipAddress = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the roundTripTime property value. The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
      * @param value Value to set for the roundTripTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoundTripTime(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.roundTripTime = value;
+        this.roundTripTime = PeriodAndDuration.ofPeriodAndDuration(value);
     }
 }

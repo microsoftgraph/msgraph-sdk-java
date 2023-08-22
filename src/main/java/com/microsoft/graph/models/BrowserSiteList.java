@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * A singleton entity which is used to specify IE mode site list metadata
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class BrowserSiteList extends Entity implements Parsable {
     /**
      * The description of the site list.
@@ -53,9 +54,7 @@ public class BrowserSiteList extends Entity implements Parsable {
     private BrowserSiteListStatus status;
     /**
      * Instantiates a new browserSiteList and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BrowserSiteList() {
         super();
     }
@@ -171,9 +170,7 @@ public class BrowserSiteList extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -191,90 +188,70 @@ public class BrowserSiteList extends Entity implements Parsable {
     /**
      * Sets the description property value. The description of the site list.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the site list.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lastModifiedBy property value. The user who last modified the site list.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the site list was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the publishedBy property value. The user who published the site list.
      * @param value Value to set for the publishedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublishedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.publishedBy = value;
     }
     /**
      * Sets the publishedDateTime property value. The date and time when the site list was published.
      * @param value Value to set for the publishedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublishedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.publishedDateTime = value;
     }
     /**
      * Sets the revision property value. The current revision of the site list.
      * @param value Value to set for the revision property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRevision(@jakarta.annotation.Nullable final String value) {
         this.revision = value;
     }
     /**
      * Sets the sharedCookies property value. A collection of shared cookies defined for the site list.
      * @param value Value to set for the sharedCookies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSharedCookies(@jakarta.annotation.Nullable final java.util.List<BrowserSharedCookie> value) {
         this.sharedCookies = value;
     }
     /**
      * Sets the sites property value. A collection of sites defined for the site list.
      * @param value Value to set for the sites property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSites(@jakarta.annotation.Nullable final java.util.List<BrowserSite> value) {
         this.sites = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final BrowserSiteListStatus value) {
         this.status = value;
     }

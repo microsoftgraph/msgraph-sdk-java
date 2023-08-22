@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudApplicationEvidence extends AlertEvidence implements Parsable {
     /**
      * Unique identifier of the application.
@@ -29,9 +30,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     private Long saasAppId;
     /**
      * Instantiates a new cloudApplicationEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CloudApplicationEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.cloudApplicationEvidence");
@@ -103,9 +102,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,45 +115,35 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     /**
      * Sets the appId property value. Unique identifier of the application.
      * @param value Value to set for the appId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppId(@jakarta.annotation.Nullable final Long value) {
         this.appId = value;
     }
     /**
      * Sets the displayName property value. Name of the application.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the instanceId property value. Identifier of the instance of the Software as a Service (SaaS) application.
      * @param value Value to set for the instanceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstanceId(@jakarta.annotation.Nullable final Long value) {
         this.instanceId = value;
     }
     /**
      * Sets the instanceName property value. Name of the instance of the SaaS application.
      * @param value Value to set for the instanceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInstanceName(@jakarta.annotation.Nullable final String value) {
         this.instanceName = value;
     }
     /**
      * Sets the saasAppId property value. The identifier of the SaaS application.
      * @param value Value to set for the saasAppId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSaasAppId(@jakarta.annotation.Nullable final Long value) {
         this.saasAppId = value;
     }

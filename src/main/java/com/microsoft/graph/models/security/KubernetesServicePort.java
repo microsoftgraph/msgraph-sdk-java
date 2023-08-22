@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
     private String targetPort;
     /**
      * Instantiates a new kubernetesServicePort and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public KubernetesServicePort() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +140,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appProtocol", this.getAppProtocol());
@@ -158,72 +155,56 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the appProtocol property value. The application protocol for this port.
      * @param value Value to set for the appProtocol property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppProtocol(@jakarta.annotation.Nullable final String value) {
         this.appProtocol = value;
     }
     /**
      * Sets the name property value. The name of this port within the service.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the nodePort property value. The port on each node on which this service is exposed when the type is either NodePort or LoadBalancer.
      * @param value Value to set for the nodePort property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNodePort(@jakarta.annotation.Nullable final Integer value) {
         this.nodePort = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the port property value. The port that this service exposes.
      * @param value Value to set for the port property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPort(@jakarta.annotation.Nullable final Integer value) {
         this.port = value;
     }
     /**
      * Sets the protocol property value. The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
      * @param value Value to set for the protocol property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProtocol(@jakarta.annotation.Nullable final ContainerPortProtocol value) {
         this.protocol = value;
     }
     /**
      * Sets the targetPort property value. The name or number of the port to access on the pods targeted by the service. The port number must be in the range 1 to 65535. The name must be an IANASVCNAME.
      * @param value Value to set for the targetPort property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTargetPort(@jakarta.annotation.Nullable final String value) {
         this.targetPort = value;
     }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the type of return code.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Win32LobAppReturnCodeType implements ValuedEnum {
     /** Failed. */
     Failed("failed"),

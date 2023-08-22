@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Data can be transferred from/to these classes of apps
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedAppDataTransferLevel implements ValuedEnum {
     /** All apps. */
     AllApps("allApps"),

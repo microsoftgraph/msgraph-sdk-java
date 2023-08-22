@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContactFolder extends Entity implements Parsable {
     /**
      * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
@@ -33,9 +34,7 @@ public class ContactFolder extends Entity implements Parsable {
     private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
     /**
      * Instantiates a new contactFolder and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ContactFolder() {
         super();
     }
@@ -115,9 +114,7 @@ public class ContactFolder extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -131,54 +128,42 @@ public class ContactFolder extends Entity implements Parsable {
     /**
      * Sets the childFolders property value. The collection of child folders in the folder. Navigation property. Read-only. Nullable.
      * @param value Value to set for the childFolders property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChildFolders(@jakarta.annotation.Nullable final java.util.List<ContactFolder> value) {
         this.childFolders = value;
     }
     /**
      * Sets the contacts property value. The contacts in the folder. Navigation property. Read-only. Nullable.
      * @param value Value to set for the contacts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContacts(@jakarta.annotation.Nullable final java.util.List<Contact> value) {
         this.contacts = value;
     }
     /**
      * Sets the displayName property value. The folder's display name.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
      * @param value Value to set for the multiValueExtendedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this.multiValueExtendedProperties = value;
     }
     /**
      * Sets the parentFolderId property value. The ID of the folder's parent folder.
      * @param value Value to set for the parentFolderId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentFolderId(@jakarta.annotation.Nullable final String value) {
         this.parentFolderId = value;
     }
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
      * @param value Value to set for the singleValueExtendedProperties property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this.singleValueExtendedProperties = value;
     }

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class VerifiedDomain implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
     private String type;
     /**
      * Instantiates a new verifiedDomain and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public VerifiedDomain() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +127,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("capabilities", this.getCapabilities());
@@ -144,63 +141,49 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the capabilities property value. For example, Email, OfficeCommunicationsOnline.
      * @param value Value to set for the capabilities property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCapabilities(@jakarta.annotation.Nullable final String value) {
         this.capabilities = value;
     }
     /**
      * Sets the isDefault property value. true if this is the default domain associated with the tenant; otherwise, false.
      * @param value Value to set for the isDefault property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefault = value;
     }
     /**
      * Sets the isInitial property value. true if this is the initial domain associated with the tenant; otherwise, false.
      * @param value Value to set for the isInitial property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsInitial(@jakarta.annotation.Nullable final Boolean value) {
         this.isInitial = value;
     }
     /**
      * Sets the name property value. The domain name; for example, contoso.onmicrosoft.com.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the type property value. For example, Managed.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EventMessageResponse extends EventMessage implements Parsable {
     /**
      * The proposedNewTime property
@@ -17,9 +18,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
     private ResponseType responseType;
     /**
      * Instantiates a new eventMessageResponse and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EventMessageResponse() {
         super();
         this.setOdataType("#microsoft.graph.eventMessageResponse");
@@ -64,9 +63,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class EventMessageResponse extends EventMessage implements Parsable {
     /**
      * Sets the proposedNewTime property value. The proposedNewTime property
      * @param value Value to set for the proposedNewTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProposedNewTime(@jakarta.annotation.Nullable final TimeSlot value) {
         this.proposedNewTime = value;
     }
     /**
      * Sets the responseType property value. The responseType property
      * @param value Value to set for the responseType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResponseType(@jakarta.annotation.Nullable final ResponseType value) {
         this.responseType = value;
     }

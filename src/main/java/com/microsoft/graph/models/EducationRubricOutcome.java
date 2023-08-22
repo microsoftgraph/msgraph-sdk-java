@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationRubricOutcome extends EducationOutcome implements Parsable {
     /**
      * A copy of the rubricQualityFeedback property that is made when the grade is released to the student.
@@ -25,9 +26,7 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
     private java.util.List<RubricQualitySelectedColumnModel> rubricQualitySelectedLevels;
     /**
      * Instantiates a new educationRubricOutcome and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationRubricOutcome() {
         super();
         this.setOdataType("#microsoft.graph.educationRubricOutcome");
@@ -90,9 +89,7 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +101,28 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
     /**
      * Sets the publishedRubricQualityFeedback property value. A copy of the rubricQualityFeedback property that is made when the grade is released to the student.
      * @param value Value to set for the publishedRubricQualityFeedback property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublishedRubricQualityFeedback(@jakarta.annotation.Nullable final java.util.List<RubricQualityFeedbackModel> value) {
         this.publishedRubricQualityFeedback = value;
     }
     /**
      * Sets the publishedRubricQualitySelectedLevels property value. A copy of the rubricQualitySelectedLevels property that is made when the grade is released to the student.
      * @param value Value to set for the publishedRubricQualitySelectedLevels property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPublishedRubricQualitySelectedLevels(@jakarta.annotation.Nullable final java.util.List<RubricQualitySelectedColumnModel> value) {
         this.publishedRubricQualitySelectedLevels = value;
     }
     /**
      * Sets the rubricQualityFeedback property value. A collection of specific feedback for each quality of this rubric.
      * @param value Value to set for the rubricQualityFeedback property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRubricQualityFeedback(@jakarta.annotation.Nullable final java.util.List<RubricQualityFeedbackModel> value) {
         this.rubricQualityFeedback = value;
     }
     /**
      * Sets the rubricQualitySelectedLevels property value. The level that the teacher has selected for each quality while grading this assignment.
      * @param value Value to set for the rubricQualitySelectedLevels property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRubricQualitySelectedLevels(@jakarta.annotation.Nullable final java.util.List<RubricQualitySelectedColumnModel> value) {
         this.rubricQualitySelectedLevels = value;
     }

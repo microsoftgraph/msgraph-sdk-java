@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartGridlines extends Entity implements Parsable {
     /**
      * Represents the formatting of chart gridlines. Read-only.
@@ -17,9 +18,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
     private Boolean visible;
     /**
      * Instantiates a new workbookChartGridlines and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookChartGridlines() {
         super();
     }
@@ -63,9 +62,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
     /**
      * Sets the format property value. Represents the formatting of chart gridlines. Read-only.
      * @param value Value to set for the format property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFormat(@jakarta.annotation.Nullable final WorkbookChartGridlinesFormat value) {
         this.format = value;
     }
     /**
      * Sets the visible property value. Boolean value representing if the axis gridlines are visible or not.
      * @param value Value to set for the visible property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVisible(@jakarta.annotation.Nullable final Boolean value) {
         this.visible = value;
     }

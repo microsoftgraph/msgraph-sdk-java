@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Process implements AdditionalDataHolder, Parsable {
     /**
      * User account identifier (user account context the process ran under) for example, AccountName, SID, and so on.
@@ -67,9 +68,7 @@ public class Process implements AdditionalDataHolder, Parsable {
     private Integer processId;
     /**
      * Instantiates a new process and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Process() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -220,9 +219,7 @@ public class Process implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("accountName", this.getAccountName());
@@ -243,126 +240,98 @@ public class Process implements AdditionalDataHolder, Parsable {
     /**
      * Sets the accountName property value. User account identifier (user account context the process ran under) for example, AccountName, SID, and so on.
      * @param value Value to set for the accountName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccountName(@jakarta.annotation.Nullable final String value) {
         this.accountName = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the commandLine property value. The full process invocation commandline including all parameters.
      * @param value Value to set for the commandLine property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCommandLine(@jakarta.annotation.Nullable final String value) {
         this.commandLine = value;
     }
     /**
      * Sets the createdDateTime property value. Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the fileHash property value. Complex type containing file hashes (cryptographic and location-sensitive).
      * @param value Value to set for the fileHash property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileHash(@jakarta.annotation.Nullable final FileHash value) {
         this.fileHash = value;
     }
     /**
      * Sets the integrityLevel property value. The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
      * @param value Value to set for the integrityLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIntegrityLevel(@jakarta.annotation.Nullable final ProcessIntegrityLevel value) {
         this.integrityLevel = value;
     }
     /**
      * Sets the isElevated property value. True if the process is elevated.
      * @param value Value to set for the isElevated property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsElevated(@jakarta.annotation.Nullable final Boolean value) {
         this.isElevated = value;
     }
     /**
      * Sets the name property value. The name of the process' Image file.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the parentProcessCreatedDateTime property value. DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the parentProcessCreatedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentProcessCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.parentProcessCreatedDateTime = value;
     }
     /**
      * Sets the parentProcessId property value. The Process ID (PID) of the parent process.
      * @param value Value to set for the parentProcessId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentProcessId(@jakarta.annotation.Nullable final Integer value) {
         this.parentProcessId = value;
     }
     /**
      * Sets the parentProcessName property value. The name of the image file of the parent process.
      * @param value Value to set for the parentProcessName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParentProcessName(@jakarta.annotation.Nullable final String value) {
         this.parentProcessName = value;
     }
     /**
      * Sets the path property value. Full path, including filename.
      * @param value Value to set for the path property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPath(@jakarta.annotation.Nullable final String value) {
         this.path = value;
     }
     /**
      * Sets the processId property value. The Process ID (PID) of the process.
      * @param value Value to set for the processId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProcessId(@jakarta.annotation.Nullable final Integer value) {
         this.processId = value;
     }

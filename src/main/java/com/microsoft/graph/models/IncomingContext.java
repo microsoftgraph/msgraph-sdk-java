@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IncomingContext implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     private IdentitySet transferor;
     /**
      * Instantiates a new incomingContext and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public IncomingContext() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("observedParticipantId", this.getObservedParticipantId());
@@ -130,54 +127,42 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the observedParticipantId property value. The ID of the participant that is under observation. Read-only.
      * @param value Value to set for the observedParticipantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setObservedParticipantId(@jakarta.annotation.Nullable final String value) {
         this.observedParticipantId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the onBehalfOf property value. The identity that the call is happening on behalf of.
      * @param value Value to set for the onBehalfOf property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnBehalfOf(@jakarta.annotation.Nullable final IdentitySet value) {
         this.onBehalfOf = value;
     }
     /**
      * Sets the sourceParticipantId property value. The ID of the participant that triggered the incoming call. Read-only.
      * @param value Value to set for the sourceParticipantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceParticipantId(@jakarta.annotation.Nullable final String value) {
         this.sourceParticipantId = value;
     }
     /**
      * Sets the transferor property value. The identity that transferred the call.
      * @param value Value to set for the transferor property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTransferor(@jakarta.annotation.Nullable final IdentitySet value) {
         this.transferor = value;
     }

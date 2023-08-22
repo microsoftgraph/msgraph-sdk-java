@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingStaffMemberBaseCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
      * The value property
@@ -13,9 +14,7 @@ public class BookingStaffMemberBaseCollectionResponse extends BaseCollectionPagi
     private java.util.List<BookingStaffMemberBase> value;
     /**
      * Instantiates a new bookingStaffMemberBaseCollectionResponse and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BookingStaffMemberBaseCollectionResponse() {
         super();
     }
@@ -50,9 +49,7 @@ public class BookingStaffMemberBaseCollectionResponse extends BaseCollectionPagi
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +58,7 @@ public class BookingStaffMemberBaseCollectionResponse extends BaseCollectionPagi
     /**
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final java.util.List<BookingStaffMemberBase> value) {
         this.value = value;
     }

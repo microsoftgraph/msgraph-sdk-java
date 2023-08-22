@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * The user experience analytics device for work from anywhere report.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implements Parsable {
     /**
      * When TRUE, indicates the intune device's autopilot profile is assigned. When FALSE, indicates it's not Assigned. Supports: $select, $OrderBy. Read-only.
@@ -148,9 +149,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     private Double workFromAnywhereScore;
     /**
      * Instantiates a new userExperienceAnalyticsWorkFromAnywhereDevice and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereDevice() {
         super();
     }
@@ -482,9 +481,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -526,306 +523,238 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     /**
      * Sets the autoPilotProfileAssigned property value. When TRUE, indicates the intune device's autopilot profile is assigned. When FALSE, indicates it's not Assigned. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the autoPilotProfileAssigned property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAutoPilotProfileAssigned(@jakarta.annotation.Nullable final Boolean value) {
         this.autoPilotProfileAssigned = value;
     }
     /**
      * Sets the autoPilotRegistered property value. When TRUE, indicates the intune device's autopilot is registered. When FALSE, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the autoPilotRegistered property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAutoPilotRegistered(@jakarta.annotation.Nullable final Boolean value) {
         this.autoPilotRegistered = value;
     }
     /**
      * Sets the azureAdDeviceId property value. The Azure Active Directory (Azure AD) device Id. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the azureAdDeviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAzureAdDeviceId(@jakarta.annotation.Nullable final String value) {
         this.azureAdDeviceId = value;
     }
     /**
      * Sets the azureAdJoinType property value. The work from anywhere device's Azure Active Directory (Azure AD) join type. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the azureAdJoinType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAzureAdJoinType(@jakarta.annotation.Nullable final String value) {
         this.azureAdJoinType = value;
     }
     /**
      * Sets the azureAdRegistered property value. When TRUE, indicates the device's Azure Active Directory (Azure AD) is registered. When False, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the azureAdRegistered property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAzureAdRegistered(@jakarta.annotation.Nullable final Boolean value) {
         this.azureAdRegistered = value;
     }
     /**
      * Sets the cloudIdentityScore property value. Indicates per device cloud identity score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the cloudIdentityScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudIdentityScore(@jakarta.annotation.Nullable final Double value) {
         this.cloudIdentityScore = value;
     }
     /**
      * Sets the cloudManagementScore property value. Indicates per device cloud management score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the cloudManagementScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudManagementScore(@jakarta.annotation.Nullable final Double value) {
         this.cloudManagementScore = value;
     }
     /**
      * Sets the cloudProvisioningScore property value. Indicates per device cloud provisioning score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the cloudProvisioningScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudProvisioningScore(@jakarta.annotation.Nullable final Double value) {
         this.cloudProvisioningScore = value;
     }
     /**
      * Sets the compliancePolicySetToIntune property value. When TRUE, indicates the device's compliance policy is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the compliancePolicySetToIntune property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompliancePolicySetToIntune(@jakarta.annotation.Nullable final Boolean value) {
         this.compliancePolicySetToIntune = value;
     }
     /**
      * Sets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the deviceName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
      * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHealthStatus(@jakarta.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
         this.healthStatus = value;
     }
     /**
      * Sets the isCloudManagedGatewayEnabled property value. When TRUE, indicates the device's Cloud Management Gateway for Configuration Manager is enabled. When FALSE, indicates it's not enabled. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the isCloudManagedGatewayEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsCloudManagedGatewayEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isCloudManagedGatewayEnabled = value;
     }
     /**
      * Sets the managedBy property value. The management agent of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the managedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManagedBy(@jakarta.annotation.Nullable final String value) {
         this.managedBy = value;
     }
     /**
      * Sets the manufacturer property value. The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the manufacturer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
      * Sets the model property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the model property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
      * Sets the osCheckFailed property value. When TRUE, indicates OS check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the osCheckFailed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.osCheckFailed = value;
     }
     /**
      * Sets the osDescription property value. The OS description of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the osDescription property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsDescription(@jakarta.annotation.Nullable final String value) {
         this.osDescription = value;
     }
     /**
      * Sets the osVersion property value. The OS version of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the osVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
         this.osVersion = value;
     }
     /**
      * Sets the otherWorkloadsSetToIntune property value. When TRUE, indicates the device's other workloads is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the otherWorkloadsSetToIntune property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOtherWorkloadsSetToIntune(@jakarta.annotation.Nullable final Boolean value) {
         this.otherWorkloadsSetToIntune = value;
     }
     /**
      * Sets the ownership property value. Ownership of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the ownership property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOwnership(@jakarta.annotation.Nullable final String value) {
         this.ownership = value;
     }
     /**
      * Sets the processor64BitCheckFailed property value. When TRUE, indicates processor hardware 64-bit architecture check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the processor64BitCheckFailed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProcessor64BitCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.processor64BitCheckFailed = value;
     }
     /**
      * Sets the processorCoreCountCheckFailed property value. When TRUE, indicates processor hardware core count check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the processorCoreCountCheckFailed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProcessorCoreCountCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.processorCoreCountCheckFailed = value;
     }
     /**
      * Sets the processorFamilyCheckFailed property value. When TRUE, indicates processor hardware family check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the processorFamilyCheckFailed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProcessorFamilyCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.processorFamilyCheckFailed = value;
     }
     /**
      * Sets the processorSpeedCheckFailed property value. When TRUE, indicates processor hardware speed check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the processorSpeedCheckFailed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProcessorSpeedCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.processorSpeedCheckFailed = value;
     }
     /**
      * Sets the ramCheckFailed property value. When TRUE, indicates RAM hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the ramCheckFailed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRamCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.ramCheckFailed = value;
     }
     /**
      * Sets the secureBootCheckFailed property value. When TRUE, indicates secure boot hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the secureBootCheckFailed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecureBootCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.secureBootCheckFailed = value;
     }
     /**
      * Sets the serialNumber property value. The serial number of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the serialNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
         this.serialNumber = value;
     }
     /**
      * Sets the storageCheckFailed property value. When TRUE, indicates storage hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the storageCheckFailed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStorageCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.storageCheckFailed = value;
     }
     /**
      * Sets the tenantAttached property value. When TRUE, indicates the device is Tenant Attached. When FALSE, indicates it's not Tenant Attached. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the tenantAttached property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantAttached(@jakarta.annotation.Nullable final Boolean value) {
         this.tenantAttached = value;
     }
     /**
      * Sets the tpmCheckFailed property value. When TRUE, indicates Trusted Platform Module (TPM) hardware check failed for device to the latest version of upgrade to windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the tpmCheckFailed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTpmCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.tpmCheckFailed = value;
     }
     /**
      * Sets the upgradeEligibility property value. Work From Anywhere windows device upgrade eligibility status.
      * @param value Value to set for the upgradeEligibility property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUpgradeEligibility(@jakarta.annotation.Nullable final OperatingSystemUpgradeEligibility value) {
         this.upgradeEligibility = value;
     }
     /**
      * Sets the windowsScore property value. Indicates per device windows score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the windowsScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWindowsScore(@jakarta.annotation.Nullable final Double value) {
         this.windowsScore = value;
     }
     /**
      * Sets the workFromAnywhereScore property value. Indicates work from anywhere per device overall score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the workFromAnywhereScore property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkFromAnywhereScore(@jakarta.annotation.Nullable final Double value) {
         this.workFromAnywhereScore = value;
     }

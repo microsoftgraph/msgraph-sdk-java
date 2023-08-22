@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions implements Parsable {
     /**
      * Defines who the workflow runs for.
@@ -18,9 +19,7 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
     private WorkflowExecutionTrigger trigger;
     /**
      * Instantiates a new triggerAndScopeBasedConditions and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TriggerAndScopeBasedConditions() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.triggerAndScopeBasedConditions");
@@ -65,9 +64,7 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -77,18 +74,14 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
     /**
      * Sets the scope property value. Defines who the workflow runs for.
      * @param value Value to set for the scope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScope(@jakarta.annotation.Nullable final SubjectSet value) {
         this.scope = value;
     }
     /**
      * Sets the trigger property value. What triggers a workflow to run.
      * @param value Value to set for the trigger property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTrigger(@jakarta.annotation.Nullable final WorkflowExecutionTrigger value) {
         this.trigger = value;
     }

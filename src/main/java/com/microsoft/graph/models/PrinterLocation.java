@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrinterLocation implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -86,9 +87,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     private java.util.List<String> subunit;
     /**
      * Instantiates a new printerLocation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PrinterLocation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -284,9 +283,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("altitudeInMeters", this.getAltitudeInMeters());
@@ -312,171 +309,133 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the altitudeInMeters property value. The altitude, in meters, that the printer is located at.
      * @param value Value to set for the altitudeInMeters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAltitudeInMeters(@jakarta.annotation.Nullable final Integer value) {
         this.altitudeInMeters = value;
     }
     /**
      * Sets the building property value. The building that the printer is located in.
      * @param value Value to set for the building property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBuilding(@jakarta.annotation.Nullable final String value) {
         this.building = value;
     }
     /**
      * Sets the city property value. The city that the printer is located in.
      * @param value Value to set for the city property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCity(@jakarta.annotation.Nullable final String value) {
         this.city = value;
     }
     /**
      * Sets the countryOrRegion property value. The country or region that the printer is located in.
      * @param value Value to set for the countryOrRegion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountryOrRegion(@jakarta.annotation.Nullable final String value) {
         this.countryOrRegion = value;
     }
     /**
      * Sets the floor property value. The floor that the printer is located on. Only numerical values are supported right now.
      * @param value Value to set for the floor property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFloor(@jakarta.annotation.Nullable final String value) {
         this.floor = value;
     }
     /**
      * Sets the floorDescription property value. The description of the floor that the printer is located on.
      * @param value Value to set for the floorDescription property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFloorDescription(@jakarta.annotation.Nullable final String value) {
         this.floorDescription = value;
     }
     /**
      * Sets the latitude property value. The latitude that the printer is located at.
      * @param value Value to set for the latitude property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLatitude(@jakarta.annotation.Nullable final Double value) {
         this.latitude = value;
     }
     /**
      * Sets the longitude property value. The longitude that the printer is located at.
      * @param value Value to set for the longitude property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLongitude(@jakarta.annotation.Nullable final Double value) {
         this.longitude = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the organization property value. The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
      * @param value Value to set for the organization property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrganization(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.organization = value;
     }
     /**
      * Sets the postalCode property value. The postal code that the printer is located in.
      * @param value Value to set for the postalCode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPostalCode(@jakarta.annotation.Nullable final String value) {
         this.postalCode = value;
     }
     /**
      * Sets the roomDescription property value. The description of the room that the printer is located in.
      * @param value Value to set for the roomDescription property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoomDescription(@jakarta.annotation.Nullable final String value) {
         this.roomDescription = value;
     }
     /**
      * Sets the roomName property value. The room that the printer is located in. Only numerical values are supported right now.
      * @param value Value to set for the roomName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoomName(@jakarta.annotation.Nullable final String value) {
         this.roomName = value;
     }
     /**
      * Sets the site property value. The site that the printer is located in.
      * @param value Value to set for the site property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSite(@jakarta.annotation.Nullable final String value) {
         this.site = value;
     }
     /**
      * Sets the stateOrProvince property value. The state or province that the printer is located in.
      * @param value Value to set for the stateOrProvince property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStateOrProvince(@jakarta.annotation.Nullable final String value) {
         this.stateOrProvince = value;
     }
     /**
      * Sets the streetAddress property value. The street address where the printer is located.
      * @param value Value to set for the streetAddress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStreetAddress(@jakarta.annotation.Nullable final String value) {
         this.streetAddress = value;
     }
     /**
      * Sets the subdivision property value. The subdivision that the printer is located in. The elements should be in hierarchical order.
      * @param value Value to set for the subdivision property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubdivision(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.subdivision = value;
     }
     /**
      * Sets the subunit property value. The subunit property
      * @param value Value to set for the subunit property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubunit(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.subunit = value;
     }

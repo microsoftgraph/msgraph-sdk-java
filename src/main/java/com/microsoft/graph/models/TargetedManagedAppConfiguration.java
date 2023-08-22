@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Configuration used to deliver a set of custom settings as-is to all users in the targeted security group
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements Parsable {
     /**
      * List of apps to which the policy is deployed.
@@ -32,9 +33,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     private Boolean isAssigned;
     /**
      * Instantiates a new targetedManagedAppConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TargetedManagedAppConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.targetedManagedAppConfiguration");
@@ -106,9 +105,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -121,45 +118,35 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
      * @param value Value to set for the apps property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApps(@jakarta.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
         this.apps = value;
     }
     /**
      * Sets the assignments property value. Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<TargetedManagedAppPolicyAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
      * @param value Value to set for the deployedAppCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeployedAppCount(@jakarta.annotation.Nullable final Integer value) {
         this.deployedAppCount = value;
     }
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
      * @param value Value to set for the deploymentSummary property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeploymentSummary(@jakarta.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
         this.deploymentSummary = value;
     }
     /**
      * Sets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
      * @param value Value to set for the isAssigned property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsAssigned(@jakarta.annotation.Nullable final Boolean value) {
         this.isAssigned = value;
     }

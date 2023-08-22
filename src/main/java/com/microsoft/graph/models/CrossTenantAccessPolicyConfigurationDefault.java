@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Parsable {
     /**
      * Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and cannot be updated in the default configuration. Read-only.
@@ -37,9 +38,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
     private Boolean isServiceDefault;
     /**
      * Instantiates a new crossTenantAccessPolicyConfigurationDefault and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationDefault() {
         super();
     }
@@ -128,9 +127,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -145,63 +142,49 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
     /**
      * Sets the automaticUserConsentSettings property value. Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and cannot be updated in the default configuration. Read-only.
      * @param value Value to set for the automaticUserConsentSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAutomaticUserConsentSettings(@jakarta.annotation.Nullable final InboundOutboundPolicyConfiguration value) {
         this.automaticUserConsentSettings = value;
     }
     /**
      * Sets the b2bCollaborationInbound property value. Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
      * @param value Value to set for the b2bCollaborationInbound property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setB2bCollaborationInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bCollaborationInbound = value;
     }
     /**
      * Sets the b2bCollaborationOutbound property value. Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
      * @param value Value to set for the b2bCollaborationOutbound property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setB2bCollaborationOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bCollaborationOutbound = value;
     }
     /**
      * Sets the b2bDirectConnectInbound property value. Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B direct connect.
      * @param value Value to set for the b2bDirectConnectInbound property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setB2bDirectConnectInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bDirectConnectInbound = value;
     }
     /**
      * Sets the b2bDirectConnectOutbound property value. Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
      * @param value Value to set for the b2bDirectConnectOutbound property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setB2bDirectConnectOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bDirectConnectOutbound = value;
     }
     /**
      * Sets the inboundTrust property value. Determines the default configuration for trusting other Conditional Access claims from external Azure AD organizations.
      * @param value Value to set for the inboundTrust property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInboundTrust(@jakarta.annotation.Nullable final CrossTenantAccessPolicyInboundTrust value) {
         this.inboundTrust = value;
     }
     /**
      * Sets the isServiceDefault property value. If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
      * @param value Value to set for the isServiceDefault property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsServiceDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isServiceDefault = value;
     }

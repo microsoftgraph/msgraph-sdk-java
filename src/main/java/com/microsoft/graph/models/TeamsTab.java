@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsTab extends Entity implements Parsable {
     /**
      * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
@@ -25,9 +26,7 @@ public class TeamsTab extends Entity implements Parsable {
     private String webUrl;
     /**
      * Instantiates a new teamsTab and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamsTab() {
         super();
     }
@@ -89,9 +88,7 @@ public class TeamsTab extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -103,36 +100,28 @@ public class TeamsTab extends Entity implements Parsable {
     /**
      * Sets the configuration property value. Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
      * @param value Value to set for the configuration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConfiguration(@jakarta.annotation.Nullable final TeamsTabConfiguration value) {
         this.configuration = value;
     }
     /**
      * Sets the displayName property value. Name of the tab.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the teamsApp property value. The application that is linked to the tab. This cannot be changed after tab creation.
      * @param value Value to set for the teamsApp property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamsApp(@jakarta.annotation.Nullable final TeamsApp value) {
         this.teamsApp = value;
     }
     /**
      * Sets the webUrl property value. Deep link URL of the tab instance. Read only.
      * @param value Value to set for the webUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }

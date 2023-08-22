@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PinnedChatMessageInfo extends Entity implements Parsable {
     /**
      * Represents details about the chat message that is pinned.
@@ -13,9 +14,7 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
     private ChatMessage message;
     /**
      * Instantiates a new pinnedChatMessageInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PinnedChatMessageInfo() {
         super();
     }
@@ -50,9 +49,7 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +58,7 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
     /**
      * Sets the message property value. Represents details about the chat message that is pinned.
      * @param value Value to set for the message property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessage(@jakarta.annotation.Nullable final ChatMessage value) {
         this.message = value;
     }

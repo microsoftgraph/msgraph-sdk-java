@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Todo extends Entity implements Parsable {
     /**
      * The task lists in the users mailbox.
@@ -13,9 +14,7 @@ public class Todo extends Entity implements Parsable {
     private java.util.List<TodoTaskList> lists;
     /**
      * Instantiates a new todo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Todo() {
         super();
     }
@@ -50,9 +49,7 @@ public class Todo extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +58,7 @@ public class Todo extends Entity implements Parsable {
     /**
      * Sets the lists property value. The task lists in the users mailbox.
      * @param value Value to set for the lists property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLists(@jakarta.annotation.Nullable final java.util.List<TodoTaskList> value) {
         this.lists = value;
     }

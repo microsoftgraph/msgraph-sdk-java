@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
      * Duration of the call.
@@ -30,9 +31,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     private IdentitySet initiator;
     /**
      * Instantiates a new callEndedEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CallEndedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.callEndedEventMessageDetail");
@@ -104,9 +103,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -119,45 +116,35 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     /**
      * Sets the callDuration property value. Duration of the call.
      * @param value Value to set for the callDuration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.callDuration = value;
+        this.callDuration = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
      * @param value Value to set for the callEventType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallEventType(@jakarta.annotation.Nullable final TeamworkCallEventType value) {
         this.callEventType = value;
     }
     /**
      * Sets the callId property value. Unique identifier of the call.
      * @param value Value to set for the callId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallId(@jakarta.annotation.Nullable final String value) {
         this.callId = value;
     }
     /**
      * Sets the callParticipants property value. List of call participants.
      * @param value Value to set for the callParticipants property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallParticipants(@jakarta.annotation.Nullable final java.util.List<CallParticipantInfo> value) {
         this.callParticipants = value;
     }
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }

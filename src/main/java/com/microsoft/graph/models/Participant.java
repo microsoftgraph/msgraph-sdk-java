@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Participant extends Entity implements Parsable {
     /**
      * The info property
@@ -37,9 +38,7 @@ public class Participant extends Entity implements Parsable {
     private OnlineMeetingRestricted restrictedExperience;
     /**
      * Instantiates a new participant and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Participant() {
         super();
     }
@@ -128,9 +127,7 @@ public class Participant extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -145,63 +142,49 @@ public class Participant extends Entity implements Parsable {
     /**
      * Sets the info property value. The info property
      * @param value Value to set for the info property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInfo(@jakarta.annotation.Nullable final ParticipantInfo value) {
         this.info = value;
     }
     /**
      * Sets the isInLobby property value. true if the participant is in lobby.
      * @param value Value to set for the isInLobby property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsInLobby(@jakarta.annotation.Nullable final Boolean value) {
         this.isInLobby = value;
     }
     /**
      * Sets the isMuted property value. true if the participant is muted (client or server muted).
      * @param value Value to set for the isMuted property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsMuted(@jakarta.annotation.Nullable final Boolean value) {
         this.isMuted = value;
     }
     /**
      * Sets the mediaStreams property value. The list of media streams.
      * @param value Value to set for the mediaStreams property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMediaStreams(@jakarta.annotation.Nullable final java.util.List<MediaStream> value) {
         this.mediaStreams = value;
     }
     /**
      * Sets the metadata property value. A blob of data provided by the participant in the roster.
      * @param value Value to set for the metadata property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMetadata(@jakarta.annotation.Nullable final String value) {
         this.metadata = value;
     }
     /**
      * Sets the recordingInfo property value. Information about whether the participant has recording capability.
      * @param value Value to set for the recordingInfo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecordingInfo(@jakarta.annotation.Nullable final RecordingInfo value) {
         this.recordingInfo = value;
     }
     /**
      * Sets the restrictedExperience property value. Indicates the reason or reasons media content from this participant is restricted.
      * @param value Value to set for the restrictedExperience property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRestrictedExperience(@jakarta.annotation.Nullable final OnlineMeetingRestricted value) {
         this.restrictedExperience = value;
     }

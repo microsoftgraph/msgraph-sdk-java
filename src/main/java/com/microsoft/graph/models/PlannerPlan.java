@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerPlan extends Entity implements Parsable {
     /**
      * Read-only. Nullable. Collection of buckets in the plan.
@@ -42,9 +43,7 @@ public class PlannerPlan extends Entity implements Parsable {
     private String title;
     /**
      * Instantiates a new plannerPlan and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PlannerPlan() {
         super();
     }
@@ -142,9 +141,7 @@ public class PlannerPlan extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,72 +157,56 @@ public class PlannerPlan extends Entity implements Parsable {
     /**
      * Sets the buckets property value. Read-only. Nullable. Collection of buckets in the plan.
      * @param value Value to set for the buckets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBuckets(@jakarta.annotation.Nullable final java.util.List<PlannerBucket> value) {
         this.buckets = value;
     }
     /**
      * Sets the container property value. Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property cant be updated. Required.
      * @param value Value to set for the container property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContainer(@jakarta.annotation.Nullable final PlannerPlanContainer value) {
         this.container = value;
     }
     /**
      * Sets the createdBy property value. Read-only. The user who created the plan.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the details property value. Read-only. Nullable. Additional details about the plan.
      * @param value Value to set for the details property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDetails(@jakarta.annotation.Nullable final PlannerPlanDetails value) {
         this.details = value;
     }
     /**
      * Sets the owner property value. The owner property
      * @param value Value to set for the owner property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOwner(@jakarta.annotation.Nullable final String value) {
         this.owner = value;
     }
     /**
      * Sets the tasks property value. Read-only. Nullable. Collection of tasks in the plan.
      * @param value Value to set for the tasks property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<PlannerTask> value) {
         this.tasks = value;
     }
     /**
      * Sets the title property value. Required. Title of the plan.
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }

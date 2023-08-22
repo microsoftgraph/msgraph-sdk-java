@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookRangeBorder extends Entity implements Parsable {
     /**
      * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange').
@@ -25,9 +26,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
     private String weight;
     /**
      * Instantiates a new workbookRangeBorder and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookRangeBorder() {
         super();
     }
@@ -89,9 +88,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -103,36 +100,28 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
     /**
      * Sets the color property value. HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange').
      * @param value Value to set for the color property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColor(@jakarta.annotation.Nullable final String value) {
         this.color = value;
     }
     /**
      * Sets the sideIndex property value. Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
      * @param value Value to set for the sideIndex property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSideIndex(@jakarta.annotation.Nullable final String value) {
         this.sideIndex = value;
     }
     /**
      * Sets the style property value. One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
      * @param value Value to set for the style property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStyle(@jakarta.annotation.Nullable final String value) {
         this.style = value;
     }
     /**
      * Sets the weight property value. Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
      * @param value Value to set for the weight property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWeight(@jakarta.annotation.Nullable final String value) {
         this.weight = value;
     }

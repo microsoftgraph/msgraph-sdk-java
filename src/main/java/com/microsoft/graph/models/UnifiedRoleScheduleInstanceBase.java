@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable {
     /**
      * Read-only property with details of the app-specific scope when the assignment or role eligibility is scoped to an app. Nullable.
@@ -41,9 +42,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
     private String roleDefinitionId;
     /**
      * Instantiates a new unifiedRoleScheduleInstanceBase and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRoleScheduleInstanceBase() {
         super();
     }
@@ -149,9 +148,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -167,72 +164,56 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
     /**
      * Sets the appScope property value. Read-only property with details of the app-specific scope when the assignment or role eligibility is scoped to an app. Nullable.
      * @param value Value to set for the appScope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppScope(@jakarta.annotation.Nullable final AppScope value) {
         this.appScope = value;
     }
     /**
      * Sets the appScopeId property value. Identifier of the app-specific scope when the assignment or role eligibility is scoped to an app. The scope of an assignment or role eligibility determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.
      * @param value Value to set for the appScopeId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppScopeId(@jakarta.annotation.Nullable final String value) {
         this.appScopeId = value;
     }
     /**
      * Sets the directoryScope property value. The directory object that is the scope of the assignment or role eligibility. Read-only.
      * @param value Value to set for the directoryScope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDirectoryScope(@jakarta.annotation.Nullable final DirectoryObject value) {
         this.directoryScope = value;
     }
     /**
      * Sets the directoryScopeId property value. Identifier of the directory object representing the scope of the assignment or role eligibility. The scope of an assignment or role eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.
      * @param value Value to set for the directoryScopeId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDirectoryScopeId(@jakarta.annotation.Nullable final String value) {
         this.directoryScopeId = value;
     }
     /**
      * Sets the principal property value. The principal that's getting a role assignment or role eligibility through the request.
      * @param value Value to set for the principal property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
         this.principal = value;
     }
     /**
      * Sets the principalId property value. Identifier of the principal that has been granted the role assignment or that's eligible for a role.
      * @param value Value to set for the principalId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
         this.principalId = value;
     }
     /**
      * Sets the roleDefinition property value. Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
      * @param value Value to set for the roleDefinition property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleDefinition(@jakarta.annotation.Nullable final UnifiedRoleDefinition value) {
         this.roleDefinition = value;
     }
     /**
      * Sets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition object that is being assigned to the principal or that the principal is eligible for.
      * @param value Value to set for the roleDefinitionId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.roleDefinitionId = value;
     }

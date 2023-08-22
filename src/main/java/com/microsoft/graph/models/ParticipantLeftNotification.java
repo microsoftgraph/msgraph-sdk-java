@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ParticipantLeftNotification extends Entity implements Parsable {
     /**
      * The call property
@@ -17,9 +18,7 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
     private String participantId;
     /**
      * Instantiates a new participantLeftNotification and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ParticipantLeftNotification() {
         super();
     }
@@ -63,9 +62,7 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
     /**
      * Sets the call property value. The call property
      * @param value Value to set for the call property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCall(@jakarta.annotation.Nullable final Call value) {
         this.call = value;
     }
     /**
      * Sets the participantId property value. ID of the participant under the policy who has left the meeting.
      * @param value Value to set for the participantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParticipantId(@jakarta.annotation.Nullable final String value) {
         this.participantId = value;
     }

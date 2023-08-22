@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessClientApplications implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     private ConditionalAccessFilter servicePrincipalFilter;
     /**
      * Instantiates a new conditionalAccessClientApplications and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConditionalAccessClientApplications() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("excludeServicePrincipals", this.getExcludeServicePrincipals());
@@ -116,45 +113,35 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the excludeServicePrincipals property value. Service principal IDs excluded from the policy scope.
      * @param value Value to set for the excludeServicePrincipals property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExcludeServicePrincipals(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.excludeServicePrincipals = value;
     }
     /**
      * Sets the includeServicePrincipals property value. Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant.
      * @param value Value to set for the includeServicePrincipals property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeServicePrincipals(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.includeServicePrincipals = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the servicePrincipalFilter property value. The servicePrincipalFilter property
      * @param value Value to set for the servicePrincipalFilter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServicePrincipalFilter(@jakarta.annotation.Nullable final ConditionalAccessFilter value) {
         this.servicePrincipalFilter = value;
     }

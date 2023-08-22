@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * The user experience analytics metric contains the score and units of a metric of a user experience anlaytics category.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsMetric extends Entity implements Parsable {
     /**
      * The unit of the user experience analytics metric. Examples: none, percentage, count, seconds, score.
@@ -20,9 +21,7 @@ public class UserExperienceAnalyticsMetric extends Entity implements Parsable {
     private Double value;
     /**
      * Instantiates a new userExperienceAnalyticsMetric and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsMetric() {
         super();
     }
@@ -66,9 +65,7 @@ public class UserExperienceAnalyticsMetric extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -78,18 +75,14 @@ public class UserExperienceAnalyticsMetric extends Entity implements Parsable {
     /**
      * Sets the unit property value. The unit of the user experience analytics metric. Examples: none, percentage, count, seconds, score.
      * @param value Value to set for the unit property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUnit(@jakarta.annotation.Nullable final String value) {
         this.unit = value;
     }
     /**
      * Sets the value property value. The value of the user experience analytics metric.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final Double value) {
         this.value = value;
     }

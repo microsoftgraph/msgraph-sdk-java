@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Edition Upgrade License type
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum EditionUpgradeLicenseType implements ValuedEnum {
     /** Product Key Type */
     ProductKey("productKey"),

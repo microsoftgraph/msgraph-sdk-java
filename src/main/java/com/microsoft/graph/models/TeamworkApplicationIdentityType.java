@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum TeamworkApplicationIdentityType implements ValuedEnum {
     AadApplication("aadApplication"),
     Bot("bot"),

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNotificationRecipientScope implements Parsable {
     /**
      * Represents the query for who the recipients are. For example, /groups/{group id}/members for group members and /users/{user id} for a specific user.
@@ -21,9 +22,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
     private String queryType;
     /**
      * Instantiates a new accessReviewNotificationRecipientQueryScope and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessReviewNotificationRecipientQueryScope() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewNotificationRecipientQueryScope");
@@ -77,9 +76,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
     /**
      * Sets the query property value. Represents the query for who the recipients are. For example, /groups/{group id}/members for group members and /users/{user id} for a specific user.
      * @param value Value to set for the query property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQuery(@jakarta.annotation.Nullable final String value) {
         this.query = value;
     }
     /**
      * Sets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, indicates the relative source of the query. This property is only required if a relative query (that is, ./manager) is specified.
      * @param value Value to set for the queryRoot property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQueryRoot(@jakarta.annotation.Nullable final String value) {
         this.queryRoot = value;
     }
     /**
      * Sets the queryType property value. Indicates the type of query. Allowed value is MicrosoftGraph.
      * @param value Value to set for the queryType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setQueryType(@jakarta.annotation.Nullable final String value) {
         this.queryType = value;
     }

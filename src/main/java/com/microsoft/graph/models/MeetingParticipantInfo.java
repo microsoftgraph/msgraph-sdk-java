@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
     private String upn;
     /**
      * Instantiates a new meetingParticipantInfo and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MeetingParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("identity", this.getIdentity());
@@ -116,45 +113,35 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the identity property value. Identity information of the participant.
      * @param value Value to set for the identity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
         this.identity = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the role property value. Specifies the participant's role in the meeting.
      * @param value Value to set for the role property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRole(@jakarta.annotation.Nullable final OnlineMeetingRole value) {
         this.role = value;
     }
     /**
      * Sets the upn property value. User principal name of the participant.
      * @param value Value to set for the upn property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUpn(@jakarta.annotation.Nullable final String value) {
         this.upn = value;
     }

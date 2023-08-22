@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharingLink implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     private String webUrl;
     /**
      * Instantiates a new sharingLink and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SharingLink() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +140,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("application", this.getApplication());
@@ -158,72 +155,56 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the application property value. The app the link is associated with.
      * @param value Value to set for the application property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplication(@jakarta.annotation.Nullable final Identity value) {
         this.application = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the preventsDownload property value. If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
      * @param value Value to set for the preventsDownload property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPreventsDownload(@jakarta.annotation.Nullable final Boolean value) {
         this.preventsDownload = value;
     }
     /**
      * Sets the scope property value. The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
      * @param value Value to set for the scope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScope(@jakarta.annotation.Nullable final String value) {
         this.scope = value;
     }
     /**
      * Sets the type property value. The type of the link created.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
     /**
      * Sets the webHtml property value. For embed links, this property contains the HTML code for an <iframe> element that will embed the item in a webpage.
      * @param value Value to set for the webHtml property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebHtml(@jakarta.annotation.Nullable final String value) {
         this.webHtml = value;
     }
     /**
      * Sets the webUrl property value. A URL that opens the item in the browser on the OneDrive website.
      * @param value Value to set for the webUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }

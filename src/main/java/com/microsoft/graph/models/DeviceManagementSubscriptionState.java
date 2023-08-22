@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Tenant mobile device management subscription state.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementSubscriptionState implements ValuedEnum {
     /** Pending */
     Pending("pending"),

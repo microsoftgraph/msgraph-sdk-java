@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * The activity property
@@ -31,9 +32,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
     private String sessionId;
     /**
      * Instantiates a new setPresencePostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SetPresencePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,9 +102,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("activity", this.getActivity());
@@ -117,45 +114,35 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Sets the activity property value. The activity property
      * @param value Value to set for the activity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivity(@jakarta.annotation.Nullable final String value) {
         this.activity = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the availability property value. The availability property
      * @param value Value to set for the availability property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAvailability(@jakarta.annotation.Nullable final String value) {
         this.availability = value;
     }
     /**
      * Sets the expirationDuration property value. The expirationDuration property
      * @param value Value to set for the expirationDuration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExpirationDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.expirationDuration = value;
+        this.expirationDuration = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the sessionId property value. The sessionId property
      * @param value Value to set for the sessionId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSessionId(@jakarta.annotation.Nullable final String value) {
         this.sessionId = value;
     }

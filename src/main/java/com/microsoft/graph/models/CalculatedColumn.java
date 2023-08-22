@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CalculatedColumn implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
     private String outputType;
     /**
      * Instantiates a new calculatedColumn and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CalculatedColumn() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("format", this.getFormat());
@@ -116,45 +113,35 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the format property value. For dateTime output types, the format of the value. Possible values are: dateOnly or dateTime.
      * @param value Value to set for the format property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFormat(@jakarta.annotation.Nullable final String value) {
         this.format = value;
     }
     /**
      * Sets the formula property value. The formula used to compute the value for this column.
      * @param value Value to set for the formula property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFormula(@jakarta.annotation.Nullable final String value) {
         this.formula = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the outputType property value. The output type used to format values in this column. Possible values are: boolean, currency, dateTime, number, or text.
      * @param value Value to set for the outputType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOutputType(@jakarta.annotation.Nullable final String value) {
         this.outputType = value;
     }

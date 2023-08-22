@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -56,9 +57,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     private String usage;
     /**
      * Instantiates a new selfSignedCertificate and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SelfSignedCertificate() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -182,9 +181,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("customKeyIdentifier", this.getCustomKeyIdentifier());
@@ -202,99 +199,77 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the customKeyIdentifier property value. The customKeyIdentifier property
      * @param value Value to set for the customKeyIdentifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomKeyIdentifier(@jakarta.annotation.Nullable final byte[] value) {
         this.customKeyIdentifier = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the endDateTime property value. The endDateTime property
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
      * Sets the key property value. The key property
      * @param value Value to set for the key property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKey(@jakarta.annotation.Nullable final byte[] value) {
         this.key = value;
     }
     /**
      * Sets the keyId property value. The keyId property
      * @param value Value to set for the keyId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setKeyId(@jakarta.annotation.Nullable final UUID value) {
         this.keyId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
      * Sets the thumbprint property value. The thumbprint property
      * @param value Value to set for the thumbprint property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setThumbprint(@jakarta.annotation.Nullable final String value) {
         this.thumbprint = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
     /**
      * Sets the usage property value. The usage property
      * @param value Value to set for the usage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUsage(@jakarta.annotation.Nullable final String value) {
         this.usage = value;
     }

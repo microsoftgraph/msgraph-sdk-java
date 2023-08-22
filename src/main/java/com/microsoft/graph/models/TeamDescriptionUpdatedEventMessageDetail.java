@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
      * Initiator of the event.
@@ -21,9 +22,7 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
     private String teamId;
     /**
      * Instantiates a new teamDescriptionUpdatedEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamDescriptionUpdatedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.teamDescriptionUpdatedEventMessageDetail");
@@ -77,9 +76,7 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
     /**
      * Sets the teamDescription property value. The updated description for the team.
      * @param value Value to set for the teamDescription property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamDescription(@jakarta.annotation.Nullable final String value) {
         this.teamDescription = value;
     }
     /**
      * Sets the teamId property value. Unique identifier of the team.
      * @param value Value to set for the teamId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamId(@jakarta.annotation.Nullable final String value) {
         this.teamId = value;
     }

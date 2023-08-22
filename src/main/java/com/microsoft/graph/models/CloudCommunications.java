@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudCommunications implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -35,9 +36,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
     private java.util.List<Presence> presences;
     /**
      * Instantiates a new cloudCommunications and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CloudCommunications() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -116,9 +115,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("callRecords", this.getCallRecords());
@@ -131,54 +128,42 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the callRecords property value. The callRecords property
      * @param value Value to set for the callRecords property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallRecords(@jakarta.annotation.Nullable final java.util.List<CallRecord> value) {
         this.callRecords = value;
     }
     /**
      * Sets the calls property value. The calls property
      * @param value Value to set for the calls property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCalls(@jakarta.annotation.Nullable final java.util.List<Call> value) {
         this.calls = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the onlineMeetings property value. The onlineMeetings property
      * @param value Value to set for the onlineMeetings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOnlineMeetings(@jakarta.annotation.Nullable final java.util.List<OnlineMeeting> value) {
         this.onlineMeetings = value;
     }
     /**
      * Sets the presences property value. The presences property
      * @param value Value to set for the presences property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPresences(@jakarta.annotation.Nullable final java.util.List<Presence> value) {
         this.presences = value;
     }

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
     private String odataType;
     /**
      * Instantiates a new chatMessagePolicyViolationPolicyTip and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ChatMessagePolicyViolationPolicyTip() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("complianceUrl", this.getComplianceUrl());
@@ -116,45 +113,35 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the complianceUrl property value. The URL a user can visit to read about the data loss prevention policies for the organization. (ie, policies about what users shouldn't say in chats)
      * @param value Value to set for the complianceUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComplianceUrl(@jakarta.annotation.Nullable final String value) {
         this.complianceUrl = value;
     }
     /**
      * Sets the generalText property value. Explanatory text shown to the sender of the message.
      * @param value Value to set for the generalText property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGeneralText(@jakarta.annotation.Nullable final String value) {
         this.generalText = value;
     }
     /**
      * Sets the matchedConditionDescriptions property value. The list of improper data in the message that was detected by the data loss prevention app. Each DLP app defines its own conditions, examples include 'Credit Card Number' and 'Social Security Number'.
      * @param value Value to set for the matchedConditionDescriptions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMatchedConditionDescriptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.matchedConditionDescriptions = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

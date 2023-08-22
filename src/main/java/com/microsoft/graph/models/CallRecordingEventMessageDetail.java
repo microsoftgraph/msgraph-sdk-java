@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CallRecordingEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
      * Unique identifier of the call.
@@ -38,9 +39,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
     private IdentitySet meetingOrganizer;
     /**
      * Instantiates a new callRecordingEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CallRecordingEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.callRecordingEventMessageDetail");
@@ -130,9 +129,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -147,63 +144,49 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
     /**
      * Sets the callId property value. Unique identifier of the call.
      * @param value Value to set for the callId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallId(@jakarta.annotation.Nullable final String value) {
         this.callId = value;
     }
     /**
      * Sets the callRecordingDisplayName property value. Display name for the call recording.
      * @param value Value to set for the callRecordingDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallRecordingDisplayName(@jakarta.annotation.Nullable final String value) {
         this.callRecordingDisplayName = value;
     }
     /**
      * Sets the callRecordingDuration property value. Duration of the call recording.
      * @param value Value to set for the callRecordingDuration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallRecordingDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.callRecordingDuration = value;
+        this.callRecordingDuration = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the callRecordingStatus property value. Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
      * @param value Value to set for the callRecordingStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallRecordingStatus(@jakarta.annotation.Nullable final CallRecordingStatus value) {
         this.callRecordingStatus = value;
     }
     /**
      * Sets the callRecordingUrl property value. Call recording URL.
      * @param value Value to set for the callRecordingUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCallRecordingUrl(@jakarta.annotation.Nullable final String value) {
         this.callRecordingUrl = value;
     }
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
     /**
      * Sets the meetingOrganizer property value. Organizer of the meeting.
      * @param value Value to set for the meetingOrganizer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMeetingOrganizer(@jakarta.annotation.Nullable final IdentitySet value) {
         this.meetingOrganizer = value;
     }

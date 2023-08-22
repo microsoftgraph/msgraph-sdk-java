@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible sync statuses associated with an Apple Volume Purchase Program token.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum VppTokenSyncStatus implements ValuedEnum {
     /** Default status. */
     None("none"),

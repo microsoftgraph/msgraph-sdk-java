@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Contains properties for upload request states.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MobileAppContentFileUploadState implements ValuedEnum {
     Success("success"),
     TransientError("transientError"),

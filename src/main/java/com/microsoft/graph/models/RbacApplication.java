@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RbacApplication extends Entity implements Parsable {
     /**
      * The resourceNamespaces property
@@ -45,9 +46,7 @@ public class RbacApplication extends Entity implements Parsable {
     private java.util.List<UnifiedRoleEligibilitySchedule> roleEligibilitySchedules;
     /**
      * Instantiates a new rbacApplication and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RbacApplication() {
         super();
     }
@@ -154,9 +153,7 @@ public class RbacApplication extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -173,81 +170,63 @@ public class RbacApplication extends Entity implements Parsable {
     /**
      * Sets the resourceNamespaces property value. The resourceNamespaces property
      * @param value Value to set for the resourceNamespaces property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceNamespaces(@jakarta.annotation.Nullable final java.util.List<UnifiedRbacResourceNamespace> value) {
         this.resourceNamespaces = value;
     }
     /**
      * Sets the roleAssignments property value. Resource to grant access to users or groups.
      * @param value Value to set for the roleAssignments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleAssignments(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleAssignment> value) {
         this.roleAssignments = value;
     }
     /**
      * Sets the roleAssignmentScheduleInstances property value. Instances for active role assignments.
      * @param value Value to set for the roleAssignmentScheduleInstances property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleAssignmentScheduleInstances(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleAssignmentScheduleInstance> value) {
         this.roleAssignmentScheduleInstances = value;
     }
     /**
      * Sets the roleAssignmentScheduleRequests property value. Requests for active role assignments to principals through PIM.
      * @param value Value to set for the roleAssignmentScheduleRequests property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleAssignmentScheduleRequests(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleAssignmentScheduleRequest> value) {
         this.roleAssignmentScheduleRequests = value;
     }
     /**
      * Sets the roleAssignmentSchedules property value. Schedules for active role assignment operations.
      * @param value Value to set for the roleAssignmentSchedules property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleAssignmentSchedules(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleAssignmentSchedule> value) {
         this.roleAssignmentSchedules = value;
     }
     /**
      * Sets the roleDefinitions property value. Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
      * @param value Value to set for the roleDefinitions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleDefinitions(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleDefinition> value) {
         this.roleDefinitions = value;
     }
     /**
      * Sets the roleEligibilityScheduleInstances property value. Instances for role eligibility requests.
      * @param value Value to set for the roleEligibilityScheduleInstances property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleEligibilityScheduleInstances(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleEligibilityScheduleInstance> value) {
         this.roleEligibilityScheduleInstances = value;
     }
     /**
      * Sets the roleEligibilityScheduleRequests property value. Requests for role eligibilities for principals through PIM.
      * @param value Value to set for the roleEligibilityScheduleRequests property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleEligibilityScheduleRequests(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleEligibilityScheduleRequest> value) {
         this.roleEligibilityScheduleRequests = value;
     }
     /**
      * Sets the roleEligibilitySchedules property value. Schedules for role eligibility operations.
      * @param value Value to set for the roleEligibilitySchedules property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleEligibilitySchedules(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleEligibilitySchedule> value) {
         this.roleEligibilitySchedules = value;
     }

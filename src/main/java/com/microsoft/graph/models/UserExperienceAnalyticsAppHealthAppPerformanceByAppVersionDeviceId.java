@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * The user experience analytics application performance entity contains application performance by application version device id.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends Entity implements Parsable {
     /**
      * The number of crashes for the app. Valid values -2147483648 to 2147483647
@@ -45,9 +46,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
     private OffsetDateTime processedDateTime;
     /**
      * Instantiates a new userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId() {
         super();
     }
@@ -145,9 +144,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -163,72 +160,56 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
     /**
      * Sets the appCrashCount property value. The number of crashes for the app. Valid values -2147483648 to 2147483647
      * @param value Value to set for the appCrashCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppCrashCount(@jakarta.annotation.Nullable final Integer value) {
         this.appCrashCount = value;
     }
     /**
      * Sets the appDisplayName property value. The friendly name of the application.
      * @param value Value to set for the appDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.appDisplayName = value;
     }
     /**
      * Sets the appName property value. The name of the application.
      * @param value Value to set for the appName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppName(@jakarta.annotation.Nullable final String value) {
         this.appName = value;
     }
     /**
      * Sets the appPublisher property value. The publisher of the application.
      * @param value Value to set for the appPublisher property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppPublisher(@jakarta.annotation.Nullable final String value) {
         this.appPublisher = value;
     }
     /**
      * Sets the appVersion property value. The version of the application.
      * @param value Value to set for the appVersion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppVersion(@jakarta.annotation.Nullable final String value) {
         this.appVersion = value;
     }
     /**
      * Sets the deviceDisplayName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
         this.deviceDisplayName = value;
     }
     /**
      * Sets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the processedDateTime property value. The date and time when the statistics were last computed. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
      * @param value Value to set for the processedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProcessedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.processedDateTime = value;
     }

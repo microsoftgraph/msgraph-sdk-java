@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
     private String odataType;
     /**
      * Instantiates a new serviceUpdateMessageViewpoint and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ServiceUpdateMessageViewpoint() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isArchived", this.getIsArchived());
@@ -116,45 +113,35 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the isArchived property value. Indicates whether the user archived the message.
      * @param value Value to set for the isArchived property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsArchived(@jakarta.annotation.Nullable final Boolean value) {
         this.isArchived = value;
     }
     /**
      * Sets the isFavorited property value. Indicates whether the user marked the message as favorite.
      * @param value Value to set for the isFavorited property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsFavorited(@jakarta.annotation.Nullable final Boolean value) {
         this.isFavorited = value;
     }
     /**
      * Sets the isRead property value. Indicates whether the user read the message.
      * @param value Value to set for the isRead property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsRead(@jakarta.annotation.Nullable final Boolean value) {
         this.isRead = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

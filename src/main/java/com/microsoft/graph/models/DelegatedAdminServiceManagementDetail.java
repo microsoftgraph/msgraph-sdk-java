@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminServiceManagementDetail extends Entity implements Parsable {
     /**
      * The URL of the management portal for the managed service. Read-only.
@@ -17,9 +18,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
     private String serviceName;
     /**
      * Instantiates a new delegatedAdminServiceManagementDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DelegatedAdminServiceManagementDetail() {
         super();
     }
@@ -63,9 +62,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
     /**
      * Sets the serviceManagementUrl property value. The URL of the management portal for the managed service. Read-only.
      * @param value Value to set for the serviceManagementUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServiceManagementUrl(@jakarta.annotation.Nullable final String value) {
         this.serviceManagementUrl = value;
     }
     /**
      * Sets the serviceName property value. The name of a managed service. Read-only.
      * @param value Value to set for the serviceName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setServiceName(@jakarta.annotation.Nullable final String value) {
         this.serviceName = value;
     }

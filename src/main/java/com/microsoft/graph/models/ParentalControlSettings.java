@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ParentalControlSettings implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class ParentalControlSettings implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new parentalControlSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ParentalControlSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class ParentalControlSettings implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("countriesBlockedForMinors", this.getCountriesBlockedForMinors());
@@ -102,36 +99,28 @@ public class ParentalControlSettings implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the countriesBlockedForMinors property value. Specifies the two-letter ISO country codes. Access to the application will be blocked for minors from the countries specified in this list.
      * @param value Value to set for the countriesBlockedForMinors property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountriesBlockedForMinors(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.countriesBlockedForMinors = value;
     }
     /**
      * Sets the legalAgeGroupRule property value. Specifies the legal age group rule that applies to users of the app. Can be set to one of the following values: ValueDescriptionAllowDefault. Enforces the legal minimum. This means parental consent is required for minors in the European Union and Korea.RequireConsentForPrivacyServicesEnforces the user to specify date of birth to comply with COPPA rules. RequireConsentForMinorsRequires parental consent for ages below 18, regardless of country minor rules.RequireConsentForKidsRequires parental consent for ages below 14, regardless of country minor rules.BlockMinorsBlocks minors from using the app.
      * @param value Value to set for the legalAgeGroupRule property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLegalAgeGroupRule(@jakarta.annotation.Nullable final String value) {
         this.legalAgeGroupRule = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

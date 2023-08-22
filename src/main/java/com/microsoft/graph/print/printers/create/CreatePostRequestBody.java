@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -43,9 +44,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
     private String physicalDeviceId;
     /**
      * Instantiates a new createPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CreatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -142,9 +141,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("certificateSigningRequest", this.getCertificateSigningRequest());
@@ -159,72 +156,56 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the certificateSigningRequest property value. The certificateSigningRequest property
      * @param value Value to set for the certificateSigningRequest property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificateSigningRequest(@jakarta.annotation.Nullable final PrintCertificateSigningRequest value) {
         this.certificateSigningRequest = value;
     }
     /**
      * Sets the connectorId property value. The connectorId property
      * @param value Value to set for the connectorId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConnectorId(@jakarta.annotation.Nullable final String value) {
         this.connectorId = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the hasPhysicalDevice property value. The hasPhysicalDevice property
      * @param value Value to set for the hasPhysicalDevice property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHasPhysicalDevice(@jakarta.annotation.Nullable final Boolean value) {
         this.hasPhysicalDevice = value;
     }
     /**
      * Sets the manufacturer property value. The manufacturer property
      * @param value Value to set for the manufacturer property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
      * Sets the model property value. The model property
      * @param value Value to set for the model property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
      * Sets the physicalDeviceId property value. The physicalDeviceId property
      * @param value Value to set for the physicalDeviceId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPhysicalDeviceId(@jakarta.annotation.Nullable final String value) {
         this.physicalDeviceId = value;
     }

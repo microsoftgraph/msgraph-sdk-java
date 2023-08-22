@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdministrativeUnit extends DirectoryObject implements Parsable {
     /**
      * An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search.
@@ -33,9 +34,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     private String visibility;
     /**
      * Instantiates a new administrativeUnit and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AdministrativeUnit() {
         super();
         this.setOdataType("#microsoft.graph.administrativeUnit");
@@ -116,9 +115,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -132,54 +129,42 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     /**
      * Sets the description property value. An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for this administrative unit. Nullable.
      * @param value Value to set for the extensions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
         this.extensions = value;
     }
     /**
      * Sets the members property value. Users and groups that are members of this administrative unit. Supports $expand.
      * @param value Value to set for the members property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.members = value;
     }
     /**
      * Sets the scopedRoleMembers property value. Scoped-role members of this administrative unit.
      * @param value Value to set for the scopedRoleMembers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScopedRoleMembers(@jakarta.annotation.Nullable final java.util.List<ScopedRoleMembership> value) {
         this.scopedRoleMembers = value;
     }
     /**
      * Sets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
      * @param value Value to set for the visibility property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVisibility(@jakarta.annotation.Nullable final String value) {
         this.visibility = value;
     }

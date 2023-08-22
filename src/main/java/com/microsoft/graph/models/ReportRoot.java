@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ReportRoot implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
     private SecurityReportsRoot security;
     /**
      * Instantiates a new reportRoot and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ReportRoot() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -141,9 +140,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("authenticationMethods", this.getAuthenticationMethods());
@@ -158,72 +155,56 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the authenticationMethods property value. Container for navigation properties for Azure AD authentication methods resources.
      * @param value Value to set for the authenticationMethods property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthenticationMethods(@jakarta.annotation.Nullable final AuthenticationMethodsRoot value) {
         this.authenticationMethods = value;
     }
     /**
      * Sets the dailyPrintUsageByPrinter property value. Retrieve a list of daily print usage summaries, grouped by printer.
      * @param value Value to set for the dailyPrintUsageByPrinter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDailyPrintUsageByPrinter(@jakarta.annotation.Nullable final java.util.List<PrintUsageByPrinter> value) {
         this.dailyPrintUsageByPrinter = value;
     }
     /**
      * Sets the dailyPrintUsageByUser property value. Retrieve a list of daily print usage summaries, grouped by user.
      * @param value Value to set for the dailyPrintUsageByUser property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDailyPrintUsageByUser(@jakarta.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
         this.dailyPrintUsageByUser = value;
     }
     /**
      * Sets the monthlyPrintUsageByPrinter property value. Retrieve a list of monthly print usage summaries, grouped by printer.
      * @param value Value to set for the monthlyPrintUsageByPrinter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMonthlyPrintUsageByPrinter(@jakarta.annotation.Nullable final java.util.List<PrintUsageByPrinter> value) {
         this.monthlyPrintUsageByPrinter = value;
     }
     /**
      * Sets the monthlyPrintUsageByUser property value. Retrieve a list of monthly print usage summaries, grouped by user.
      * @param value Value to set for the monthlyPrintUsageByUser property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMonthlyPrintUsageByUser(@jakarta.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
         this.monthlyPrintUsageByUser = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the security property value. Represents an abstract type that contains resources for attack simulation and training reports.
      * @param value Value to set for the security property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSecurity(@jakarta.annotation.Nullable final SecurityReportsRoot value) {
         this.security = value;
     }

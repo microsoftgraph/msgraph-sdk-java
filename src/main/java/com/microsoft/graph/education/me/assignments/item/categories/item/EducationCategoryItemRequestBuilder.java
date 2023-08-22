@@ -8,6 +8,7 @@ import java.util.Objects;
 /**
  * Builds and executes requests for operations under /education/me/assignments/{educationAssignment-id}/categories/{educationCategory-id}
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of educationRoot entities.
@@ -20,9 +21,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new EducationCategoryItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationCategoryItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/education/me/assignments/{educationAssignment%2Did}/categories/{educationCategory%2Did}", pathParameters);
     }
@@ -30,9 +29,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new EducationCategoryItemRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationCategoryItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/education/me/assignments/{educationAssignment%2Did}/categories/{educationCategory%2Did}", rawUrl);
     }

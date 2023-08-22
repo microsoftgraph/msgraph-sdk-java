@@ -9,12 +9,11 @@ import java.util.Objects;
 /**
  * Booking entities that provide a display name.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingStaffMemberBase extends Entity implements Parsable {
     /**
      * Instantiates a new bookingStaffMemberBase and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BookingStaffMemberBase() {
         super();
     }
@@ -47,9 +46,7 @@ public class BookingStaffMemberBase extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

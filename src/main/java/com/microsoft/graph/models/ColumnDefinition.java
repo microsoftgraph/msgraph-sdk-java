@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ColumnDefinition extends Entity implements Parsable {
     /**
      * This column stores boolean values.
@@ -137,9 +138,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     private ColumnValidation validation;
     /**
      * Instantiates a new columnDefinition and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ColumnDefinition() {
         super();
     }
@@ -453,9 +452,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -495,288 +492,224 @@ public class ColumnDefinition extends Entity implements Parsable {
     /**
      * Sets the boolean property value. This column stores boolean values.
      * @param value Value to set for the boolean property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBoolean(@jakarta.annotation.Nullable final BooleanColumn value) {
         this.booleanEscaped = value;
     }
     /**
      * Sets the calculated property value. This column's data is calculated based on other columns.
      * @param value Value to set for the calculated property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCalculated(@jakarta.annotation.Nullable final CalculatedColumn value) {
         this.calculated = value;
     }
     /**
      * Sets the choice property value. This column stores data from a list of choices.
      * @param value Value to set for the choice property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChoice(@jakarta.annotation.Nullable final ChoiceColumn value) {
         this.choice = value;
     }
     /**
      * Sets the columnGroup property value. For site columns, the name of the group this column belongs to. Helps organize related columns.
      * @param value Value to set for the columnGroup property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColumnGroup(@jakarta.annotation.Nullable final String value) {
         this.columnGroup = value;
     }
     /**
      * Sets the contentApprovalStatus property value. This column stores content approval status.
      * @param value Value to set for the contentApprovalStatus property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentApprovalStatus(@jakarta.annotation.Nullable final ContentApprovalStatusColumn value) {
         this.contentApprovalStatus = value;
     }
     /**
      * Sets the currency property value. This column stores currency values.
      * @param value Value to set for the currency property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCurrency(@jakarta.annotation.Nullable final CurrencyColumn value) {
         this.currency = value;
     }
     /**
      * Sets the dateTime property value. This column stores DateTime values.
      * @param value Value to set for the dateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDateTime(@jakarta.annotation.Nullable final DateTimeColumn value) {
         this.dateTime = value;
     }
     /**
      * Sets the defaultValue property value. The default value for this column.
      * @param value Value to set for the defaultValue property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDefaultValue(@jakarta.annotation.Nullable final DefaultColumnValue value) {
         this.defaultValue = value;
     }
     /**
      * Sets the description property value. The user-facing description of the column.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The user-facing name of the column.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the enforceUniqueValues property value. If true, no two list items may have the same value for this column.
      * @param value Value to set for the enforceUniqueValues property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEnforceUniqueValues(@jakarta.annotation.Nullable final Boolean value) {
         this.enforceUniqueValues = value;
     }
     /**
      * Sets the geolocation property value. This column stores a geolocation.
      * @param value Value to set for the geolocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGeolocation(@jakarta.annotation.Nullable final GeolocationColumn value) {
         this.geolocation = value;
     }
     /**
      * Sets the hidden property value. Specifies whether the column is displayed in the user interface.
      * @param value Value to set for the hidden property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.hidden = value;
     }
     /**
      * Sets the hyperlinkOrPicture property value. This column stores hyperlink or picture values.
      * @param value Value to set for the hyperlinkOrPicture property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHyperlinkOrPicture(@jakarta.annotation.Nullable final HyperlinkOrPictureColumn value) {
         this.hyperlinkOrPicture = value;
     }
     /**
      * Sets the indexed property value. Specifies whether the column values can be used for sorting and searching.
      * @param value Value to set for the indexed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIndexed(@jakarta.annotation.Nullable final Boolean value) {
         this.indexed = value;
     }
     /**
      * Sets the isDeletable property value. Indicates whether this column can be deleted.
      * @param value Value to set for the isDeletable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsDeletable(@jakarta.annotation.Nullable final Boolean value) {
         this.isDeletable = value;
     }
     /**
      * Sets the isReorderable property value. Indicates whether values in the column can be reordered. Read-only.
      * @param value Value to set for the isReorderable property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsReorderable(@jakarta.annotation.Nullable final Boolean value) {
         this.isReorderable = value;
     }
     /**
      * Sets the isSealed property value. Specifies whether the column can be changed.
      * @param value Value to set for the isSealed property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSealed(@jakarta.annotation.Nullable final Boolean value) {
         this.isSealed = value;
     }
     /**
      * Sets the lookup property value. This column's data is looked up from another source in the site.
      * @param value Value to set for the lookup property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLookup(@jakarta.annotation.Nullable final LookupColumn value) {
         this.lookup = value;
     }
     /**
      * Sets the name property value. The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the number property value. This column stores number values.
      * @param value Value to set for the number property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNumber(@jakarta.annotation.Nullable final NumberColumn value) {
         this.number = value;
     }
     /**
      * Sets the personOrGroup property value. This column stores Person or Group values.
      * @param value Value to set for the personOrGroup property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPersonOrGroup(@jakarta.annotation.Nullable final PersonOrGroupColumn value) {
         this.personOrGroup = value;
     }
     /**
      * Sets the propagateChanges property value. If 'true', changes to this column will be propagated to lists that implement the column.
      * @param value Value to set for the propagateChanges property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPropagateChanges(@jakarta.annotation.Nullable final Boolean value) {
         this.propagateChanges = value;
     }
     /**
      * Sets the readOnly property value. Specifies whether the column values can be modified.
      * @param value Value to set for the readOnly property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReadOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.readOnly = value;
     }
     /**
      * Sets the required property value. Specifies whether the column value isn't optional.
      * @param value Value to set for the required property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.required = value;
     }
     /**
      * Sets the sourceColumn property value. The source column for the content type column.
      * @param value Value to set for the sourceColumn property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceColumn(@jakarta.annotation.Nullable final ColumnDefinition value) {
         this.sourceColumn = value;
     }
     /**
      * Sets the sourceContentType property value. ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
      * @param value Value to set for the sourceContentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSourceContentType(@jakarta.annotation.Nullable final ContentTypeInfo value) {
         this.sourceContentType = value;
     }
     /**
      * Sets the term property value. This column stores taxonomy terms.
      * @param value Value to set for the term property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTerm(@jakarta.annotation.Nullable final TermColumn value) {
         this.term = value;
     }
     /**
      * Sets the text property value. This column stores text values.
      * @param value Value to set for the text property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setText(@jakarta.annotation.Nullable final TextColumn value) {
         this.text = value;
     }
     /**
      * Sets the thumbnail property value. This column stores thumbnail values.
      * @param value Value to set for the thumbnail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setThumbnail(@jakarta.annotation.Nullable final ThumbnailColumn value) {
         this.thumbnail = value;
     }
     /**
      * Sets the type property value. For site columns, the type of column. Read-only.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final ColumnTypes value) {
         this.type = value;
     }
     /**
      * Sets the validation property value. This column stores validation formula and message for the column.
      * @param value Value to set for the validation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValidation(@jakarta.annotation.Nullable final ColumnValidation value) {
         this.validation = value;
     }

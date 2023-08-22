@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintUsage extends Entity implements Parsable {
     /**
      * The blackAndWhitePageCount property
@@ -54,9 +55,7 @@ public class PrintUsage extends Entity implements Parsable {
     private LocalDate usageDate;
     /**
      * Instantiates a new printUsage and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PrintUsage() {
         super();
     }
@@ -189,9 +188,7 @@ public class PrintUsage extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -210,99 +207,77 @@ public class PrintUsage extends Entity implements Parsable {
     /**
      * Sets the blackAndWhitePageCount property value. The blackAndWhitePageCount property
      * @param value Value to set for the blackAndWhitePageCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBlackAndWhitePageCount(@jakarta.annotation.Nullable final Long value) {
         this.blackAndWhitePageCount = value;
     }
     /**
      * Sets the colorPageCount property value. The colorPageCount property
      * @param value Value to set for the colorPageCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setColorPageCount(@jakarta.annotation.Nullable final Long value) {
         this.colorPageCount = value;
     }
     /**
      * Sets the completedBlackAndWhiteJobCount property value. The completedBlackAndWhiteJobCount property
      * @param value Value to set for the completedBlackAndWhiteJobCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompletedBlackAndWhiteJobCount(@jakarta.annotation.Nullable final Long value) {
         this.completedBlackAndWhiteJobCount = value;
     }
     /**
      * Sets the completedColorJobCount property value. The completedColorJobCount property
      * @param value Value to set for the completedColorJobCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompletedColorJobCount(@jakarta.annotation.Nullable final Long value) {
         this.completedColorJobCount = value;
     }
     /**
      * Sets the completedJobCount property value. The completedJobCount property
      * @param value Value to set for the completedJobCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompletedJobCount(@jakarta.annotation.Nullable final Long value) {
         this.completedJobCount = value;
     }
     /**
      * Sets the doubleSidedSheetCount property value. The doubleSidedSheetCount property
      * @param value Value to set for the doubleSidedSheetCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDoubleSidedSheetCount(@jakarta.annotation.Nullable final Long value) {
         this.doubleSidedSheetCount = value;
     }
     /**
      * Sets the incompleteJobCount property value. The incompleteJobCount property
      * @param value Value to set for the incompleteJobCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncompleteJobCount(@jakarta.annotation.Nullable final Long value) {
         this.incompleteJobCount = value;
     }
     /**
      * Sets the mediaSheetCount property value. The mediaSheetCount property
      * @param value Value to set for the mediaSheetCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMediaSheetCount(@jakarta.annotation.Nullable final Long value) {
         this.mediaSheetCount = value;
     }
     /**
      * Sets the pageCount property value. The pageCount property
      * @param value Value to set for the pageCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPageCount(@jakarta.annotation.Nullable final Long value) {
         this.pageCount = value;
     }
     /**
      * Sets the singleSidedSheetCount property value. The singleSidedSheetCount property
      * @param value Value to set for the singleSidedSheetCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSingleSidedSheetCount(@jakarta.annotation.Nullable final Long value) {
         this.singleSidedSheetCount = value;
     }
     /**
      * Sets the usageDate property value. The usageDate property
      * @param value Value to set for the usageDate property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUsageDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.usageDate = value;
     }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TimeOffItem extends ScheduleEntity implements Parsable {
     /**
      * ID of the timeOffReason for this timeOffItem. Required.
@@ -13,9 +14,7 @@ public class TimeOffItem extends ScheduleEntity implements Parsable {
     private String timeOffReasonId;
     /**
      * Instantiates a new timeOffItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TimeOffItem() {
         super();
     }
@@ -50,9 +49,7 @@ public class TimeOffItem extends ScheduleEntity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -61,9 +58,7 @@ public class TimeOffItem extends ScheduleEntity implements Parsable {
     /**
      * Sets the timeOffReasonId property value. ID of the timeOffReason for this timeOffItem. Required.
      * @param value Value to set for the timeOffReasonId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeOffReasonId(@jakarta.annotation.Nullable final String value) {
         this.timeOffReasonId = value;
     }

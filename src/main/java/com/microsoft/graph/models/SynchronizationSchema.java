@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SynchronizationSchema extends Entity implements Parsable {
     /**
      * Contains the collection of directories and all of their objects.
@@ -21,9 +22,7 @@ public class SynchronizationSchema extends Entity implements Parsable {
     private String version;
     /**
      * Instantiates a new synchronizationSchema and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SynchronizationSchema() {
         super();
     }
@@ -76,9 +75,7 @@ public class SynchronizationSchema extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +86,21 @@ public class SynchronizationSchema extends Entity implements Parsable {
     /**
      * Sets the directories property value. Contains the collection of directories and all of their objects.
      * @param value Value to set for the directories property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDirectories(@jakarta.annotation.Nullable final java.util.List<DirectoryDefinition> value) {
         this.directories = value;
     }
     /**
      * Sets the synchronizationRules property value. A collection of synchronization rules configured for the synchronizationJob or synchronizationTemplate.
      * @param value Value to set for the synchronizationRules property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSynchronizationRules(@jakarta.annotation.Nullable final java.util.List<SynchronizationRule> value) {
         this.synchronizationRules = value;
     }
     /**
      * Sets the version property value. The version of the schema, updated automatically with every schema change.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }

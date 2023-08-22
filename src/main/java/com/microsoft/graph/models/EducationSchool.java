@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSchool extends EducationOrganization implements Parsable {
     /**
      * Address of the school.
@@ -65,9 +66,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
     private java.util.List<EducationUser> users;
     /**
      * Instantiates a new educationSchool and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EducationSchool() {
         super();
         this.setOdataType("#microsoft.graph.educationSchool");
@@ -220,9 +219,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -244,126 +241,98 @@ public class EducationSchool extends EducationOrganization implements Parsable {
     /**
      * Sets the address property value. Address of the school.
      * @param value Value to set for the address property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.address = value;
     }
     /**
      * Sets the administrativeUnit property value. The underlying administrativeUnit for this school.
      * @param value Value to set for the administrativeUnit property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdministrativeUnit(@jakarta.annotation.Nullable final AdministrativeUnit value) {
         this.administrativeUnit = value;
     }
     /**
      * Sets the classes property value. Classes taught at the school. Nullable.
      * @param value Value to set for the classes property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClasses(@jakarta.annotation.Nullable final java.util.List<EducationClass> value) {
         this.classes = value;
     }
     /**
      * Sets the createdBy property value. Entity who created the school.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the externalId property value. ID of school in syncing system.
      * @param value Value to set for the externalId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
      * Sets the externalPrincipalId property value. ID of principal in syncing system.
      * @param value Value to set for the externalPrincipalId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalPrincipalId(@jakarta.annotation.Nullable final String value) {
         this.externalPrincipalId = value;
     }
     /**
      * Sets the fax property value. The fax property
      * @param value Value to set for the fax property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFax(@jakarta.annotation.Nullable final String value) {
         this.fax = value;
     }
     /**
      * Sets the highestGrade property value. Highest grade taught.
      * @param value Value to set for the highestGrade property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setHighestGrade(@jakarta.annotation.Nullable final String value) {
         this.highestGrade = value;
     }
     /**
      * Sets the lowestGrade property value. Lowest grade taught.
      * @param value Value to set for the lowestGrade property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLowestGrade(@jakarta.annotation.Nullable final String value) {
         this.lowestGrade = value;
     }
     /**
      * Sets the phone property value. Phone number of school.
      * @param value Value to set for the phone property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPhone(@jakarta.annotation.Nullable final String value) {
         this.phone = value;
     }
     /**
      * Sets the principalEmail property value. Email address of the principal.
      * @param value Value to set for the principalEmail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrincipalEmail(@jakarta.annotation.Nullable final String value) {
         this.principalEmail = value;
     }
     /**
      * Sets the principalName property value. Name of the principal.
      * @param value Value to set for the principalName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.principalName = value;
     }
     /**
      * Sets the schoolNumber property value. School Number.
      * @param value Value to set for the schoolNumber property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSchoolNumber(@jakarta.annotation.Nullable final String value) {
         this.schoolNumber = value;
     }
     /**
      * Sets the users property value. Users in the school. Nullable.
      * @param value Value to set for the users property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUsers(@jakarta.annotation.Nullable final java.util.List<EducationUser> value) {
         this.users = value;
     }

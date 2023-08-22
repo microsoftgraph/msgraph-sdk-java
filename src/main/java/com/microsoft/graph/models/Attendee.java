@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Attendee extends AttendeeBase implements Parsable {
     /**
      * An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
@@ -17,9 +18,7 @@ public class Attendee extends AttendeeBase implements Parsable {
     private ResponseStatus status;
     /**
      * Instantiates a new attendee and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Attendee() {
         super();
         this.setOdataType("#microsoft.graph.attendee");
@@ -64,9 +63,7 @@ public class Attendee extends AttendeeBase implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,18 +73,14 @@ public class Attendee extends AttendeeBase implements Parsable {
     /**
      * Sets the proposedNewTime property value. An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
      * @param value Value to set for the proposedNewTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProposedNewTime(@jakarta.annotation.Nullable final TimeSlot value) {
         this.proposedNewTime = value;
     }
     /**
      * Sets the status property value. The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final ResponseStatus value) {
         this.status = value;
     }

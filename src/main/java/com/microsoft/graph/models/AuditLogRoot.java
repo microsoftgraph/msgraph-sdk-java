@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuditLogRoot extends Entity implements Parsable {
     /**
      * The directoryAudits property
@@ -21,9 +22,7 @@ public class AuditLogRoot extends Entity implements Parsable {
     private java.util.List<SignIn> signIns;
     /**
      * Instantiates a new auditLogRoot and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AuditLogRoot() {
         super();
     }
@@ -76,9 +75,7 @@ public class AuditLogRoot extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +86,21 @@ public class AuditLogRoot extends Entity implements Parsable {
     /**
      * Sets the directoryAudits property value. The directoryAudits property
      * @param value Value to set for the directoryAudits property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDirectoryAudits(@jakarta.annotation.Nullable final java.util.List<DirectoryAudit> value) {
         this.directoryAudits = value;
     }
     /**
      * Sets the provisioning property value. The provisioning property
      * @param value Value to set for the provisioning property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProvisioning(@jakarta.annotation.Nullable final java.util.List<ProvisioningObjectSummary> value) {
         this.provisioning = value;
     }
     /**
      * Sets the signIns property value. The signIns property
      * @param value Value to set for the signIns property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSignIns(@jakarta.annotation.Nullable final java.util.List<SignIn> value) {
         this.signIns = value;
     }

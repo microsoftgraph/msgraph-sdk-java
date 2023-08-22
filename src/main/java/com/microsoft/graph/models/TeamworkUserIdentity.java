@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamworkUserIdentity extends Identity implements Parsable {
     /**
      * Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, unknownFutureValue and emailUser.
@@ -13,9 +14,7 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
     private TeamworkUserIdentityType userIdentityType;
     /**
      * Instantiates a new teamworkUserIdentity and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamworkUserIdentity() {
         super();
         this.setOdataType("#microsoft.graph.teamworkUserIdentity");
@@ -51,9 +50,7 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,9 +59,7 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
     /**
      * Sets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, unknownFutureValue and emailUser.
      * @param value Value to set for the userIdentityType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserIdentityType(@jakarta.annotation.Nullable final TeamworkUserIdentityType value) {
         this.userIdentityType = value;
     }

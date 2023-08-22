@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Certification implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -39,9 +40,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new certification and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Certification() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -129,9 +128,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("certificationExpirationDateTime", this.getCertificationExpirationDateTime());
@@ -143,63 +140,49 @@ public class Certification implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the certificationDetailsUrl property value. URL that shows certification details for the application.
      * @param value Value to set for the certificationDetailsUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificationDetailsUrl(@jakarta.annotation.Nullable final String value) {
         this.certificationDetailsUrl = value;
     }
     /**
      * Sets the certificationExpirationDateTime property value. The timestamp when the current certification for the application will expire.
      * @param value Value to set for the certificationExpirationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificationExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.certificationExpirationDateTime = value;
     }
     /**
      * Sets the isCertifiedByMicrosoft property value. Indicates whether the application is certified by Microsoft.
      * @param value Value to set for the isCertifiedByMicrosoft property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsCertifiedByMicrosoft(@jakarta.annotation.Nullable final Boolean value) {
         this.isCertifiedByMicrosoft = value;
     }
     /**
      * Sets the isPublisherAttested property value. Indicates whether the application has been self-attested by the application developer or the publisher.
      * @param value Value to set for the isPublisherAttested property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsPublisherAttested(@jakarta.annotation.Nullable final Boolean value) {
         this.isPublisherAttested = value;
     }
     /**
      * Sets the lastCertificationDateTime property value. The timestamp when the certification for the application was most recently added or updated.
      * @param value Value to set for the lastCertificationDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastCertificationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastCertificationDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

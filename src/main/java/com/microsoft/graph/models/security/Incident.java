@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Incident extends Entity implements Parsable {
     /**
      * The list of related alerts. Supports $expand.
@@ -71,9 +72,7 @@ public class Incident extends Entity implements Parsable {
     private String tenantId;
     /**
      * Instantiates a new incident and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Incident() {
         super();
     }
@@ -234,9 +233,7 @@ public class Incident extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -259,135 +256,105 @@ public class Incident extends Entity implements Parsable {
     /**
      * Sets the alerts property value. The list of related alerts. Supports $expand.
      * @param value Value to set for the alerts property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAlerts(@jakarta.annotation.Nullable final java.util.List<Alert> value) {
         this.alerts = value;
     }
     /**
      * Sets the assignedTo property value. Owner of the incident, or null if no owner is assigned. Free editable text.
      * @param value Value to set for the assignedTo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignedTo(@jakarta.annotation.Nullable final String value) {
         this.assignedTo = value;
     }
     /**
      * Sets the classification property value. The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      * @param value Value to set for the classification property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClassification(@jakarta.annotation.Nullable final AlertClassification value) {
         this.classification = value;
     }
     /**
      * Sets the comments property value. Array of comments created by the Security Operations (SecOps) team when the incident is managed.
      * @param value Value to set for the comments property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComments(@jakarta.annotation.Nullable final java.util.List<AlertComment> value) {
         this.comments = value;
     }
     /**
      * Sets the createdDateTime property value. Time when the incident was first created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the customTags property value. Array of custom tags associated with an incident.
      * @param value Value to set for the customTags property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.customTags = value;
     }
     /**
      * Sets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      * @param value Value to set for the determination property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDetermination(@jakarta.annotation.Nullable final AlertDetermination value) {
         this.determination = value;
     }
     /**
      * Sets the displayName property value. The incident name.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the incidentWebUrl property value. The URL for the incident page in the Microsoft 365 Defender portal.
      * @param value Value to set for the incidentWebUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncidentWebUrl(@jakarta.annotation.Nullable final String value) {
         this.incidentWebUrl = value;
     }
     /**
      * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedBy(@jakarta.annotation.Nullable final String value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastUpdateDateTime property value. Time when the incident was last updated.
      * @param value Value to set for the lastUpdateDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdateDateTime = value;
     }
     /**
      * Sets the redirectIncidentId property value. Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
      * @param value Value to set for the redirectIncidentId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRedirectIncidentId(@jakarta.annotation.Nullable final String value) {
         this.redirectIncidentId = value;
     }
     /**
      * Sets the severity property value. The severity property
      * @param value Value to set for the severity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSeverity(@jakarta.annotation.Nullable final AlertSeverity value) {
         this.severity = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final IncidentStatus value) {
         this.status = value;
     }
     /**
      * Sets the tenantId property value. The Azure Active Directory tenant in which the alert was created.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }

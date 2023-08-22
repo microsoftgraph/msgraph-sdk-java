@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable {
     /**
      * The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
@@ -29,9 +30,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
     private String scopeType;
     /**
      * Instantiates a new unifiedRoleManagementPolicyAssignment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyAssignment() {
         super();
     }
@@ -102,9 +101,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -117,45 +114,35 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
     /**
      * Sets the policy property value. The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
      * @param value Value to set for the policy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPolicy(@jakarta.annotation.Nullable final UnifiedRoleManagementPolicy value) {
         this.policy = value;
     }
     /**
      * Sets the policyId property value. The id of the policy. Inherited from entity.
      * @param value Value to set for the policyId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPolicyId(@jakarta.annotation.Nullable final String value) {
         this.policyId = value;
     }
     /**
      * Sets the roleDefinitionId property value. The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
      * @param value Value to set for the roleDefinitionId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.roleDefinitionId = value;
     }
     /**
      * Sets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
      * @param value Value to set for the scopeId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScopeId(@jakarta.annotation.Nullable final String value) {
         this.scopeId = value;
     }
     /**
      * Sets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
      * @param value Value to set for the scopeType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScopeType(@jakarta.annotation.Nullable final String value) {
         this.scopeType = value;
     }

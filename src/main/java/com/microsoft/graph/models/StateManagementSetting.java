@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * State Management Setting.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum StateManagementSetting implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),

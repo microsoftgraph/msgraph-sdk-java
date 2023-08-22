@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookComment extends Entity implements Parsable {
     /**
      * The content of comment.
@@ -21,9 +22,7 @@ public class WorkbookComment extends Entity implements Parsable {
     private java.util.List<WorkbookCommentReply> replies;
     /**
      * Instantiates a new workbookComment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookComment() {
         super();
     }
@@ -76,9 +75,7 @@ public class WorkbookComment extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +86,21 @@ public class WorkbookComment extends Entity implements Parsable {
     /**
      * Sets the content property value. The content of comment.
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContent(@jakarta.annotation.Nullable final String value) {
         this.content = value;
     }
     /**
      * Sets the contentType property value. Indicates the type for the comment.
      * @param value Value to set for the contentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentType(@jakarta.annotation.Nullable final String value) {
         this.contentType = value;
     }
     /**
      * Sets the replies property value. The replies property
      * @param value Value to set for the replies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReplies(@jakarta.annotation.Nullable final java.util.List<WorkbookCommentReply> value) {
         this.replies = value;
     }

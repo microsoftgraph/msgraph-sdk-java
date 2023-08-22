@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * A managed (MAM) application's availability.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedAppAvailability implements ValuedEnum {
     /** A globally available app to all tenants. */
     Global("global"),

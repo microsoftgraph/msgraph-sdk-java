@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SimulationAutomation extends Entity implements Parsable {
     /**
      * Identity of the user who created the attack simulation automation.
@@ -50,9 +51,7 @@ public class SimulationAutomation extends Entity implements Parsable {
     private SimulationAutomationStatus status;
     /**
      * Instantiates a new simulationAutomation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SimulationAutomation() {
         super();
     }
@@ -168,9 +167,7 @@ public class SimulationAutomation extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -188,90 +185,70 @@ public class SimulationAutomation extends Entity implements Parsable {
     /**
      * Sets the createdBy property value. Identity of the user who created the attack simulation automation.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time when the attack simulation automation was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Description of the attack simulation automation.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Display name of the attack simulation automation. Supports $filter and $orderby.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation automation.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Date and time when the attack simulation automation was most recently modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the lastRunDateTime property value. Date and time of the latest run of the attack simulation automation.
      * @param value Value to set for the lastRunDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastRunDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastRunDateTime = value;
     }
     /**
      * Sets the nextRunDateTime property value. Date and time of the upcoming run of the attack simulation automation.
      * @param value Value to set for the nextRunDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNextRunDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.nextRunDateTime = value;
     }
     /**
      * Sets the runs property value. A collection of simulation automation runs.
      * @param value Value to set for the runs property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRuns(@jakarta.annotation.Nullable final java.util.List<SimulationAutomationRun> value) {
         this.runs = value;
     }
     /**
      * Sets the status property value. Status of the attack simulation automation. Supports $filter and $orderby. The possible values are: unknown, draft, notRunning, running, completed, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final SimulationAutomationStatus value) {
         this.status = value;
     }

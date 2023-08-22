@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DstDevPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -27,9 +28,7 @@ public class DstDevPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json field;
     /**
      * Instantiates a new dstDevPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DstDevPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +89,7 @@ public class DstDevPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("criteria", this.getCriteria());
@@ -103,36 +100,28 @@ public class DstDevPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the criteria property value. The criteria property
      * @param value Value to set for the criteria property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCriteria(@jakarta.annotation.Nullable final Json value) {
         this.criteria = value;
     }
     /**
      * Sets the database property value. The database property
      * @param value Value to set for the database property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDatabase(@jakarta.annotation.Nullable final Json value) {
         this.database = value;
     }
     /**
      * Sets the field property value. The field property
      * @param value Value to set for the field property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setField(@jakarta.annotation.Nullable final Json value) {
         this.field = value;
     }

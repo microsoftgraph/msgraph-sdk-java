@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     private java.util.List<String> termsOfUse;
     /**
      * Instantiates a new conditionalAccessGrantControls and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConditionalAccessGrantControls() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +127,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("authenticationStrength", this.getAuthenticationStrength());
@@ -144,63 +141,49 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the authenticationStrength property value. The authenticationStrength property
      * @param value Value to set for the authenticationStrength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthenticationStrength(@jakarta.annotation.Nullable final AuthenticationStrengthPolicy value) {
         this.authenticationStrength = value;
     }
     /**
      * Sets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
      * @param value Value to set for the builtInControls property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBuiltInControls(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessGrantControl> value) {
         this.builtInControls = value;
     }
     /**
      * Sets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. For more information, see Custom controls.
      * @param value Value to set for the customAuthenticationFactors property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomAuthenticationFactors(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.customAuthenticationFactors = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the operator property value. Defines the relationship of the grant controls. Possible values: AND, OR.
      * @param value Value to set for the operator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperator(@jakarta.annotation.Nullable final String value) {
         this.operator = value;
     }
     /**
      * Sets the termsOfUse property value. List of terms of use IDs required by the policy.
      * @param value Value to set for the termsOfUse property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTermsOfUse(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.termsOfUse = value;
     }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTimeZone extends TimeZoneBase implements Parsable {
     /**
      * The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes.Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset.
@@ -21,9 +22,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
     private StandardTimeZoneOffset standardOffset;
     /**
      * Instantiates a new customTimeZone and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CustomTimeZone() {
         super();
         this.setOdataType("#microsoft.graph.customTimeZone");
@@ -77,9 +76,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
     /**
      * Sets the bias property value. The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes.Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset.
      * @param value Value to set for the bias property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBias(@jakarta.annotation.Nullable final Integer value) {
         this.bias = value;
     }
     /**
      * Sets the daylightOffset property value. Specifies when the time zone switches from standard time to daylight saving time.
      * @param value Value to set for the daylightOffset property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDaylightOffset(@jakarta.annotation.Nullable final DaylightTimeZoneOffset value) {
         this.daylightOffset = value;
     }
     /**
      * Sets the standardOffset property value. Specifies when the time zone switches from daylight saving time to standard time.
      * @param value Value to set for the standardOffset property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStandardOffset(@jakarta.annotation.Nullable final StandardTimeZoneOffset value) {
         this.standardOffset = value;
     }

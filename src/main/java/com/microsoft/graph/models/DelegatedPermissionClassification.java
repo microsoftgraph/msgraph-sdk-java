@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedPermissionClassification extends Entity implements Parsable {
     /**
      * The classification value being given. Possible value: low. Does not support $filter.
@@ -21,9 +22,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
     private String permissionName;
     /**
      * Instantiates a new delegatedPermissionClassification and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DelegatedPermissionClassification() {
         super();
     }
@@ -76,9 +75,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,27 +86,21 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
     /**
      * Sets the classification property value. The classification value being given. Possible value: low. Does not support $filter.
      * @param value Value to set for the classification property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClassification(@jakarta.annotation.Nullable final PermissionClassificationType value) {
         this.classification = value;
     }
     /**
      * Sets the permissionId property value. The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
      * @param value Value to set for the permissionId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPermissionId(@jakarta.annotation.Nullable final String value) {
         this.permissionId = value;
     }
     /**
      * Sets the permissionName property value. The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter.
      * @param value Value to set for the permissionName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPermissionName(@jakarta.annotation.Nullable final String value) {
         this.permissionName = value;
     }

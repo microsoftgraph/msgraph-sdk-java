@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResourceRole extends Entity implements Parsable {
     /**
      * A description for the resource role.
@@ -29,9 +30,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     private AccessPackageResource resource;
     /**
      * Instantiates a new accessPackageResourceRole and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageResourceRole() {
         super();
     }
@@ -102,9 +101,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -117,45 +114,35 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     /**
      * Sets the description property value. A description for the resource role.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of the resource role such as the role defined by the application.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the originId property value. The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
      * @param value Value to set for the originId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOriginId(@jakarta.annotation.Nullable final String value) {
         this.originId = value;
     }
     /**
      * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      * @param value Value to set for the originSystem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOriginSystem(@jakarta.annotation.Nullable final String value) {
         this.originSystem = value;
     }
     /**
      * Sets the resource property value. The resource property
      * @param value Value to set for the resource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResource(@jakarta.annotation.Nullable final AccessPackageResource value) {
         this.resource = value;
     }

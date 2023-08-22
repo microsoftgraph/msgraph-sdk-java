@@ -3,6 +3,7 @@ package com.microsoft.graph.models.callrecords;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum NetworkTransportProtocol implements ValuedEnum {
     Unknown("unknown"),
     Udp("udp"),

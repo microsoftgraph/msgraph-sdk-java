@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the type of execution context the app runs in.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RunAsAccountType implements ValuedEnum {
     /** System context */
     System("system"),

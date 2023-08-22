@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookChartPoint extends Entity implements Parsable {
     /**
      * Encapsulates the format properties chart point. Read-only.
@@ -17,9 +18,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
     private Json value;
     /**
      * Instantiates a new workbookChartPoint and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookChartPoint() {
         super();
     }
@@ -63,9 +62,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class WorkbookChartPoint extends Entity implements Parsable {
     /**
      * Sets the format property value. Encapsulates the format properties chart point. Read-only.
      * @param value Value to set for the format property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFormat(@jakarta.annotation.Nullable final WorkbookChartPointFormat value) {
         this.format = value;
     }
     /**
      * Sets the value property value. Returns the value of a chart point. Read-only.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final Json value) {
         this.value = value;
     }

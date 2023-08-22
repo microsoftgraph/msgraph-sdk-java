@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleAssignment extends Entity implements Parsable {
     /**
      * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
@@ -45,9 +46,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
     private String roleDefinitionId;
     /**
      * Instantiates a new unifiedRoleAssignment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public UnifiedRoleAssignment() {
         super();
     }
@@ -154,9 +153,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -173,81 +170,63 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
     /**
      * Sets the appScope property value. Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
      * @param value Value to set for the appScope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppScope(@jakarta.annotation.Nullable final AppScope value) {
         this.appScope = value;
     }
     /**
      * Sets the appScopeId property value. Identifier of the app-specific scope when the assignment scope is app-specific.  Either this property or directoryScopeId is required. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, in).
      * @param value Value to set for the appScopeId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAppScopeId(@jakarta.annotation.Nullable final String value) {
         this.appScopeId = value;
     }
     /**
      * Sets the condition property value. The condition property
      * @param value Value to set for the condition property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCondition(@jakarta.annotation.Nullable final String value) {
         this.condition = value;
     }
     /**
      * Sets the directoryScope property value. The directory object that is the scope of the assignment. Read-only. Supports $expand.
      * @param value Value to set for the directoryScope property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDirectoryScope(@jakarta.annotation.Nullable final DirectoryObject value) {
         this.directoryScope = value;
     }
     /**
      * Sets the directoryScopeId property value. Identifier of the directory object representing the scope of the assignment.  Either this property or appScopeId is required. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, in).
      * @param value Value to set for the directoryScopeId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDirectoryScopeId(@jakarta.annotation.Nullable final String value) {
         this.directoryScopeId = value;
     }
     /**
      * Sets the principal property value. Referencing the assigned principal. Read-only. Supports $expand.
      * @param value Value to set for the principal property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
         this.principal = value;
     }
     /**
      * Sets the principalId property value. Identifier of the principal to which the assignment is granted. Supports $filter (eq, in).
      * @param value Value to set for the principalId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
         this.principalId = value;
     }
     /**
      * Sets the roleDefinition property value. The roleDefinition the assignment is for.  Supports $expand. roleDefinition.Id will be auto expanded.
      * @param value Value to set for the roleDefinition property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleDefinition(@jakarta.annotation.Nullable final UnifiedRoleDefinition value) {
         this.roleDefinition = value;
     }
     /**
      * Sets the roleDefinitionId property value. Identifier of the role definition the assignment is for. Read only. Supports $filter (eq, in).
      * @param value Value to set for the roleDefinitionId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.roleDefinitionId = value;
     }

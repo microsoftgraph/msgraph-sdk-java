@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Delivery optimization mode for peer distribution
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsDeliveryOptimizationMode implements ValuedEnum {
     /** Allow the user to set. */
     UserDefined("userDefined"),

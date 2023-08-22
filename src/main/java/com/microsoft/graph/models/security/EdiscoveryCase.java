@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryCase extends CaseEscaped implements Parsable {
     /**
      * The user who closed the case.
@@ -51,9 +52,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     private java.util.List<EdiscoveryReviewTag> tags;
     /**
      * Instantiates a new ediscoveryCase and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public EdiscoveryCase() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoveryCase");
@@ -170,9 +169,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -190,90 +187,70 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     /**
      * Sets the closedBy property value. The user who closed the case.
      * @param value Value to set for the closedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClosedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.closedBy = value;
     }
     /**
      * Sets the closedDateTime property value. The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the closedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setClosedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.closedDateTime = value;
     }
     /**
      * Sets the custodians property value. Returns a list of case ediscoveryCustodian objects for this case.
      * @param value Value to set for the custodians property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustodians(@jakarta.annotation.Nullable final java.util.List<EdiscoveryCustodian> value) {
         this.custodians = value;
     }
     /**
      * Sets the externalId property value. The external case number for customer reference.
      * @param value Value to set for the externalId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
      * Sets the noncustodialDataSources property value. Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
      * @param value Value to set for the noncustodialDataSources property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setNoncustodialDataSources(@jakarta.annotation.Nullable final java.util.List<EdiscoveryNoncustodialDataSource> value) {
         this.noncustodialDataSources = value;
     }
     /**
      * Sets the operations property value. Returns a list of case caseOperation objects for this case.
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<CaseOperation> value) {
         this.operations = value;
     }
     /**
      * Sets the reviewSets property value. Returns a list of eDiscoveryReviewSet objects in the case.
      * @param value Value to set for the reviewSets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReviewSets(@jakarta.annotation.Nullable final java.util.List<EdiscoveryReviewSet> value) {
         this.reviewSets = value;
     }
     /**
      * Sets the searches property value. Returns a list of eDiscoverySearch objects associated with this case.
      * @param value Value to set for the searches property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSearches(@jakarta.annotation.Nullable final java.util.List<EdiscoverySearch> value) {
         this.searches = value;
     }
     /**
      * Sets the settings property value. Returns a list of eDIscoverySettings objects in the case.
      * @param value Value to set for the settings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSettings(@jakarta.annotation.Nullable final EdiscoveryCaseSettings value) {
         this.settings = value;
     }
     /**
      * Sets the tags property value. Returns a list of ediscoveryReviewTag objects associated to this case.
      * @param value Value to set for the tags property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTags(@jakarta.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
         this.tags = value;
     }

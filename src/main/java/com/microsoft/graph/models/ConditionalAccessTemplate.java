@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessTemplate extends Entity implements Parsable {
     /**
      * The user-friendly name of the template.
@@ -25,9 +26,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     private TemplateScenarios scenarios;
     /**
      * Instantiates a new conditionalAccessTemplate and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConditionalAccessTemplate() {
         super();
     }
@@ -89,9 +88,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -103,36 +100,28 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     /**
      * Sets the description property value. The user-friendly name of the template.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the details property value. The details property
      * @param value Value to set for the details property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDetails(@jakarta.annotation.Nullable final ConditionalAccessPolicyDetail value) {
         this.details = value;
     }
     /**
      * Sets the name property value. The user-friendly name of the template.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the scenarios property value. The scenarios property
      * @param value Value to set for the scenarios property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScenarios(@jakarta.annotation.Nullable final TemplateScenarios value) {
         this.scenarios = value;
     }

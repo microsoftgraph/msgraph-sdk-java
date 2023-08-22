@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ControlScore implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
     private Double score;
     /**
      * Instantiates a new controlScore and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ControlScore() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("controlCategory", this.getControlCategory());
@@ -130,54 +127,42 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the controlCategory property value. Control action category (Identity, Data, Device, Apps, Infrastructure).
      * @param value Value to set for the controlCategory property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setControlCategory(@jakarta.annotation.Nullable final String value) {
         this.controlCategory = value;
     }
     /**
      * Sets the controlName property value. Control unique name.
      * @param value Value to set for the controlName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setControlName(@jakarta.annotation.Nullable final String value) {
         this.controlName = value;
     }
     /**
      * Sets the description property value. Description of the control.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the score property value. Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
      * @param value Value to set for the score property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScore(@jakarta.annotation.Nullable final Double value) {
         this.score = value;
     }

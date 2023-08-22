@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class X509CertificateRule implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
     private X509CertificateRuleType x509CertificateRuleType;
     /**
      * Instantiates a new x509CertificateRule and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public X509CertificateRule() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("identifier", this.getIdentifier());
@@ -116,45 +113,35 @@ public class X509CertificateRule implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the identifier property value. The identifier of the X.509 certificate. Required.
      * @param value Value to set for the identifier property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIdentifier(@jakarta.annotation.Nullable final String value) {
         this.identifier = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
      * @param value Value to set for the x509CertificateAuthenticationMode property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setX509CertificateAuthenticationMode(@jakarta.annotation.Nullable final X509CertificateAuthenticationMode value) {
         this.x509CertificateAuthenticationMode = value;
     }
     /**
      * Sets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
      * @param value Value to set for the x509CertificateRuleType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setX509CertificateRuleType(@jakarta.annotation.Nullable final X509CertificateRuleType value) {
         this.x509CertificateRuleType = value;
     }

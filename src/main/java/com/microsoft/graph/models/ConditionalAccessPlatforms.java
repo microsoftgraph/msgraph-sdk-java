@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
     private String odataType;
     /**
      * Instantiates a new conditionalAccessPlatforms and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ConditionalAccessPlatforms() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfEnumValues("excludePlatforms", this.getExcludePlatforms());
@@ -102,36 +99,28 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      * @param value Value to set for the excludePlatforms property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExcludePlatforms(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessDevicePlatform> value) {
         this.excludePlatforms = value;
     }
     /**
      * Sets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      * @param value Value to set for the includePlatforms property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludePlatforms(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessDevicePlatform> value) {
         this.includePlatforms = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

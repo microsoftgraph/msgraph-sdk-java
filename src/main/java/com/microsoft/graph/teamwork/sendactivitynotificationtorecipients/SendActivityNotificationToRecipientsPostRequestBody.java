@@ -11,6 +11,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * The activityType property
@@ -46,9 +47,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     private TeamworkActivityTopic topic;
     /**
      * Instantiates a new sendActivityNotificationToRecipientsPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SendActivityNotificationToRecipientsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -145,9 +144,7 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("activityType", this.getActivityType());
@@ -162,72 +159,56 @@ public class SendActivityNotificationToRecipientsPostRequestBody implements Addi
     /**
      * Sets the activityType property value. The activityType property
      * @param value Value to set for the activityType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivityType(@jakarta.annotation.Nullable final String value) {
         this.activityType = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the chainId property value. The chainId property
      * @param value Value to set for the chainId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChainId(@jakarta.annotation.Nullable final Long value) {
         this.chainId = value;
     }
     /**
      * Sets the previewText property value. The previewText property
      * @param value Value to set for the previewText property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPreviewText(@jakarta.annotation.Nullable final ItemBody value) {
         this.previewText = value;
     }
     /**
      * Sets the recipients property value. The recipients property
      * @param value Value to set for the recipients property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRecipients(@jakarta.annotation.Nullable final java.util.List<TeamworkNotificationRecipient> value) {
         this.recipients = value;
     }
     /**
      * Sets the teamsAppId property value. The teamsAppId property
      * @param value Value to set for the teamsAppId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTeamsAppId(@jakarta.annotation.Nullable final String value) {
         this.teamsAppId = value;
     }
     /**
      * Sets the templateParameters property value. The templateParameters property
      * @param value Value to set for the templateParameters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTemplateParameters(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this.templateParameters = value;
     }
     /**
      * Sets the topic property value. The topic property
      * @param value Value to set for the topic property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTopic(@jakarta.annotation.Nullable final TeamworkActivityTopic value) {
         this.topic = value;
     }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChannelAddedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
      * Display name of the channel.
@@ -21,9 +22,7 @@ public class ChannelAddedEventMessageDetail extends EventMessageDetail implement
     private IdentitySet initiator;
     /**
      * Instantiates a new channelAddedEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ChannelAddedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.channelAddedEventMessageDetail");
@@ -77,9 +76,7 @@ public class ChannelAddedEventMessageDetail extends EventMessageDetail implement
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class ChannelAddedEventMessageDetail extends EventMessageDetail implement
     /**
      * Sets the channelDisplayName property value. Display name of the channel.
      * @param value Value to set for the channelDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChannelDisplayName(@jakarta.annotation.Nullable final String value) {
         this.channelDisplayName = value;
     }
     /**
      * Sets the channelId property value. Unique identifier of the channel.
      * @param value Value to set for the channelId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChannelId(@jakarta.annotation.Nullable final String value) {
         this.channelId = value;
     }
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /**
      * A collection of Microsoft Authenticator settings such as application context and location context, and whether they are enabled for all users or specific users only.
@@ -21,9 +22,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
     private Boolean isSoftwareOathEnabled;
     /**
      * Instantiates a new microsoftAuthenticatorAuthenticationMethodConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMethodConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration");
@@ -77,9 +76,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
     /**
      * Sets the featureSettings property value. A collection of Microsoft Authenticator settings such as application context and location context, and whether they are enabled for all users or specific users only.
      * @param value Value to set for the featureSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFeatureSettings(@jakarta.annotation.Nullable final MicrosoftAuthenticatorFeatureSettings value) {
         this.featureSettings = value;
     }
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method. Expanded by default.
      * @param value Value to set for the includeTargets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<MicrosoftAuthenticatorAuthenticationMethodTarget> value) {
         this.includeTargets = value;
     }
     /**
      * Sets the isSoftwareOathEnabled property value. The isSoftwareOathEnabled property
      * @param value Value to set for the isSoftwareOathEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsSoftwareOathEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isSoftwareOathEnabled = value;
     }

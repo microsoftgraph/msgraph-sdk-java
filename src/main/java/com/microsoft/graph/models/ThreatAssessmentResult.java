@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ThreatAssessmentResult extends Entity implements Parsable {
     /**
      * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -22,9 +23,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
     private ThreatAssessmentResultType resultType;
     /**
      * Instantiates a new threatAssessmentResult and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ThreatAssessmentResult() {
         super();
     }
@@ -77,9 +76,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the message property value. The result message for each threat assessment.
      * @param value Value to set for the message property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessage(@jakarta.annotation.Nullable final String value) {
         this.message = value;
     }
     /**
      * Sets the resultType property value. The threat assessment result type. Possible values are: checkPolicy, rescan.
      * @param value Value to set for the resultType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResultType(@jakarta.annotation.Nullable final ThreatAssessmentResultType value) {
         this.resultType = value;
     }

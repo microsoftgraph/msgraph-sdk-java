@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemActivity extends Entity implements Parsable {
     /**
      * An item was accessed.
@@ -26,9 +27,7 @@ public class ItemActivity extends Entity implements Parsable {
     private DriveItem driveItem;
     /**
      * Instantiates a new itemActivity and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ItemActivity() {
         super();
     }
@@ -90,9 +89,7 @@ public class ItemActivity extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +101,28 @@ public class ItemActivity extends Entity implements Parsable {
     /**
      * Sets the access property value. An item was accessed.
      * @param value Value to set for the access property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccess(@jakarta.annotation.Nullable final AccessAction value) {
         this.access = value;
     }
     /**
      * Sets the activityDateTime property value. Details about when the activity took place. Read-only.
      * @param value Value to set for the activityDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.activityDateTime = value;
     }
     /**
      * Sets the actor property value. Identity of who performed the action. Read-only.
      * @param value Value to set for the actor property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActor(@jakarta.annotation.Nullable final IdentitySet value) {
         this.actor = value;
     }
     /**
      * Sets the driveItem property value. Exposes the driveItem that was the target of this activity.
      * @param value Value to set for the driveItem property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDriveItem(@jakarta.annotation.Nullable final DriveItem value) {
         this.driveItem = value;
     }

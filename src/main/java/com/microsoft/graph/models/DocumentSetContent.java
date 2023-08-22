@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DocumentSetContent implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new documentSetContent and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DocumentSetContent() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -102,9 +101,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("contentType", this.getContentType());
@@ -116,45 +113,35 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the contentType property value. Content type information of the file.
      * @param value Value to set for the contentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentType(@jakarta.annotation.Nullable final ContentTypeInfo value) {
         this.contentType = value;
     }
     /**
      * Sets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set.
      * @param value Value to set for the fileName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFileName(@jakarta.annotation.Nullable final String value) {
         this.fileName = value;
     }
     /**
      * Sets the folderName property value. Folder name in which the file will be placed when a new document set is created in the library.
      * @param value Value to set for the folderName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFolderName(@jakarta.annotation.Nullable final String value) {
         this.folderName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }

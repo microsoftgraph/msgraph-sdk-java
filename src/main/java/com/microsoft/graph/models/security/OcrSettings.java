@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class OcrSettings implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -31,9 +32,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
     private PeriodAndDuration timeout;
     /**
      * Instantiates a new ocrSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public OcrSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,9 +102,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
@@ -117,46 +114,36 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the isEnabled property value. Indicates whether or not OCR is enabled for the case.
      * @param value Value to set for the isEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
      * Sets the maxImageSize property value. Maximum image size that will be processed in KB).
      * @param value Value to set for the maxImageSize property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaxImageSize(@jakarta.annotation.Nullable final Integer value) {
         this.maxImageSize = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the timeout property value. The timeout duration for the OCR engine. A longer timeout might increase success of OCR, but might add to the total processing time.
      * @param value Value to set for the timeout property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeout(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.timeout = value;
+        this.timeout = PeriodAndDuration.ofPeriodAndDuration(value);
     }
 }

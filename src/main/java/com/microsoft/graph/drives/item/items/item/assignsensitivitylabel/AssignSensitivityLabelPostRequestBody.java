@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -27,9 +28,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
     private String sensitivityLabelId;
     /**
      * Instantiates a new assignSensitivityLabelPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AssignSensitivityLabelPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +89,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("assignmentMethod", this.getAssignmentMethod());
@@ -103,36 +100,28 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the assignmentMethod property value. The assignmentMethod property
      * @param value Value to set for the assignmentMethod property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignmentMethod(@jakarta.annotation.Nullable final SensitivityLabelAssignmentMethod value) {
         this.assignmentMethod = value;
     }
     /**
      * Sets the justificationText property value. The justificationText property
      * @param value Value to set for the justificationText property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setJustificationText(@jakarta.annotation.Nullable final String value) {
         this.justificationText = value;
     }
     /**
      * Sets the sensitivityLabelId property value. The sensitivityLabelId property
      * @param value Value to set for the sensitivityLabelId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSensitivityLabelId(@jakarta.annotation.Nullable final String value) {
         this.sensitivityLabelId = value;
     }

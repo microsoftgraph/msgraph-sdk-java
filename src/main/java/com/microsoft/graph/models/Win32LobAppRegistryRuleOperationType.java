@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Contains all supported registry data detection type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Win32LobAppRegistryRuleOperationType implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),

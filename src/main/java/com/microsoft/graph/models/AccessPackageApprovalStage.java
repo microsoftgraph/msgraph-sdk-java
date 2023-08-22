@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -51,9 +52,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
     private java.util.List<SubjectSet> primaryApprovers;
     /**
      * Instantiates a new accessPackageApprovalStage and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AccessPackageApprovalStage() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -168,9 +167,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writePeriodAndDurationValue("durationBeforeAutomaticDenial", this.getDurationBeforeAutomaticDenial());
@@ -187,90 +184,70 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the durationBeforeAutomaticDenial property value. The number of days that a request can be pending a response before it is automatically denied.
      * @param value Value to set for the durationBeforeAutomaticDenial property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDurationBeforeAutomaticDenial(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.durationBeforeAutomaticDenial = value;
+        this.durationBeforeAutomaticDenial = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the durationBeforeEscalation property value. If escalation is required, the time a request can be pending a response from a primary approver.
      * @param value Value to set for the durationBeforeEscalation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDurationBeforeEscalation(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.durationBeforeEscalation = value;
+        this.durationBeforeEscalation = PeriodAndDuration.ofPeriodAndDuration(value);
     }
     /**
      * Sets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
      * @param value Value to set for the escalationApprovers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEscalationApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
         this.escalationApprovers = value;
     }
     /**
      * Sets the fallbackEscalationApprovers property value. The subjects, typically users, who are the fallback escalation approvers.
      * @param value Value to set for the fallbackEscalationApprovers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFallbackEscalationApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
         this.fallbackEscalationApprovers = value;
     }
     /**
      * Sets the fallbackPrimaryApprovers property value. The subjects, typically users, who are the fallback primary approvers.
      * @param value Value to set for the fallbackPrimaryApprovers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFallbackPrimaryApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
         this.fallbackPrimaryApprovers = value;
     }
     /**
      * Sets the isApproverJustificationRequired property value. Indicates whether the approver is required to provide a justification for approving a request.
      * @param value Value to set for the isApproverJustificationRequired property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsApproverJustificationRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isApproverJustificationRequired = value;
     }
     /**
      * Sets the isEscalationEnabled property value. If true, then one or more escalationApprovers are configured in this approval stage.
      * @param value Value to set for the isEscalationEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsEscalationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEscalationEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.
      * @param value Value to set for the primaryApprovers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPrimaryApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
         this.primaryApprovers = value;
     }

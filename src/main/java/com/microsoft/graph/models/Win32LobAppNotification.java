@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Contains value for notification status.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Win32LobAppNotification implements ValuedEnum {
     /** Show all notifications. */
     ShowAll("showAll"),

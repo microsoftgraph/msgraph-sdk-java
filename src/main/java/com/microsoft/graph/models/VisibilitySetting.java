@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Generic visibility state.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum VisibilitySetting implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),

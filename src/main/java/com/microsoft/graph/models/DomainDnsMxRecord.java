@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
     /**
      * Value used when configuring the answer/destination/value of the MX record at the DNS host.
@@ -17,9 +18,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
     private Integer preference;
     /**
      * Instantiates a new domainDnsMxRecord and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DomainDnsMxRecord() {
         super();
     }
@@ -63,9 +62,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
     /**
      * Sets the mailExchange property value. Value used when configuring the answer/destination/value of the MX record at the DNS host.
      * @param value Value to set for the mailExchange property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMailExchange(@jakarta.annotation.Nullable final String value) {
         this.mailExchange = value;
     }
     /**
      * Sets the preference property value. Value used when configuring the Preference/Priority property of the MX record at the DNS host.
      * @param value Value to set for the preference property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPreference(@jakarta.annotation.Nullable final Integer value) {
         this.preference = value;
     }

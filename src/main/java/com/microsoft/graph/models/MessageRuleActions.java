@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -62,9 +63,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     private Boolean stopProcessingRules;
     /**
      * Instantiates a new messageRuleActions and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MessageRuleActions() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -206,9 +205,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("assignCategories", this.getAssignCategories());
@@ -228,117 +225,91 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the assignCategories property value. A list of categories to be assigned to a message.
      * @param value Value to set for the assignCategories property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAssignCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.assignCategories = value;
     }
     /**
      * Sets the copyToFolder property value. The ID of a folder that a message is to be copied to.
      * @param value Value to set for the copyToFolder property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCopyToFolder(@jakarta.annotation.Nullable final String value) {
         this.copyToFolder = value;
     }
     /**
      * Sets the delete property value. Indicates whether a message should be moved to the Deleted Items folder.
      * @param value Value to set for the delete property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDelete(@jakarta.annotation.Nullable final Boolean value) {
         this.delete = value;
     }
     /**
      * Sets the forwardAsAttachmentTo property value. The email addresses of the recipients to which a message should be forwarded as an attachment.
      * @param value Value to set for the forwardAsAttachmentTo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setForwardAsAttachmentTo(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.forwardAsAttachmentTo = value;
     }
     /**
      * Sets the forwardTo property value. The email addresses of the recipients to which a message should be forwarded.
      * @param value Value to set for the forwardTo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setForwardTo(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.forwardTo = value;
     }
     /**
      * Sets the markAsRead property value. Indicates whether a message should be marked as read.
      * @param value Value to set for the markAsRead property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMarkAsRead(@jakarta.annotation.Nullable final Boolean value) {
         this.markAsRead = value;
     }
     /**
      * Sets the markImportance property value. Sets the importance of the message, which can be: low, normal, high.
      * @param value Value to set for the markImportance property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMarkImportance(@jakarta.annotation.Nullable final Importance value) {
         this.markImportance = value;
     }
     /**
      * Sets the moveToFolder property value. The ID of the folder that a message will be moved to.
      * @param value Value to set for the moveToFolder property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMoveToFolder(@jakarta.annotation.Nullable final String value) {
         this.moveToFolder = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the permanentDelete property value. Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
      * @param value Value to set for the permanentDelete property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPermanentDelete(@jakarta.annotation.Nullable final Boolean value) {
         this.permanentDelete = value;
     }
     /**
      * Sets the redirectTo property value. The email addresses to which a message should be redirected.
      * @param value Value to set for the redirectTo property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRedirectTo(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.redirectTo = value;
     }
     /**
      * Sets the stopProcessingRules property value. Indicates whether subsequent rules should be evaluated.
      * @param value Value to set for the stopProcessingRules property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStopProcessingRules(@jakarta.annotation.Nullable final Boolean value) {
         this.stopProcessingRules = value;
     }

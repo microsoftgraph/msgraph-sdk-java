@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /**
      * Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings.
@@ -21,9 +22,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
     private java.util.List<AuthenticationMethodTarget> includeTargets;
     /**
      * Instantiates a new x509CertificateAuthenticationMethodConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public X509CertificateAuthenticationMethodConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.x509CertificateAuthenticationMethodConfiguration");
@@ -77,9 +76,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
     /**
      * Sets the authenticationModeConfiguration property value. Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings.
      * @param value Value to set for the authenticationModeConfiguration property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAuthenticationModeConfiguration(@jakarta.annotation.Nullable final X509CertificateAuthenticationModeConfiguration value) {
         this.authenticationModeConfiguration = value;
     }
     /**
      * Sets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
      * @param value Value to set for the certificateUserBindings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCertificateUserBindings(@jakarta.annotation.Nullable final java.util.List<X509CertificateUserBinding> value) {
         this.certificateUserBindings = value;
     }
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
      * @param value Value to set for the includeTargets property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
         this.includeTargets = value;
     }

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -46,9 +47,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     private String suggestionReason;
     /**
      * Instantiates a new meetingTimeSuggestion and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MeetingTimeSuggestion() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -154,9 +153,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("attendeeAvailability", this.getAttendeeAvailability());
@@ -172,81 +169,63 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the attendeeAvailability property value. An array that shows the availability status of each attendee for this meeting suggestion.
      * @param value Value to set for the attendeeAvailability property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAttendeeAvailability(@jakarta.annotation.Nullable final java.util.List<AttendeeAvailability> value) {
         this.attendeeAvailability = value;
     }
     /**
      * Sets the confidence property value. A percentage that represents the likelhood of all the attendees attending.
      * @param value Value to set for the confidence property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConfidence(@jakarta.annotation.Nullable final Double value) {
         this.confidence = value;
     }
     /**
      * Sets the locations property value. An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
      * @param value Value to set for the locations property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLocations(@jakarta.annotation.Nullable final java.util.List<Location> value) {
         this.locations = value;
     }
     /**
      * Sets the meetingTimeSlot property value. A time period suggested for the meeting.
      * @param value Value to set for the meetingTimeSlot property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMeetingTimeSlot(@jakarta.annotation.Nullable final TimeSlot value) {
         this.meetingTimeSlot = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the order property value. Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence.
      * @param value Value to set for the order property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrder(@jakarta.annotation.Nullable final Integer value) {
         this.order = value;
     }
     /**
      * Sets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @param value Value to set for the organizerAvailability property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrganizerAvailability(@jakarta.annotation.Nullable final FreeBusyStatus value) {
         this.organizerAvailability = value;
     }
     /**
      * Sets the suggestionReason property value. Reason for suggesting the meeting time.
      * @param value Value to set for the suggestionReason property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSuggestionReason(@jakarta.annotation.Nullable final String value) {
         this.suggestionReason = value;
     }

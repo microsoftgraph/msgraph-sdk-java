@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AppLogDecryptionAlgorithm implements ValuedEnum {
     /** decrypting using Aes256. */
     Aes256("aes256"),

@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Attachment extends Entity implements Parsable {
     /**
      * The MIME type.
@@ -30,9 +31,7 @@ public class Attachment extends Entity implements Parsable {
     private Integer size;
     /**
      * Instantiates a new attachment and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Attachment() {
         super();
     }
@@ -112,9 +111,7 @@ public class Attachment extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -127,45 +124,35 @@ public class Attachment extends Entity implements Parsable {
     /**
      * Sets the contentType property value. The MIME type.
      * @param value Value to set for the contentType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setContentType(@jakarta.annotation.Nullable final String value) {
         this.contentType = value;
     }
     /**
      * Sets the isInline property value. true if the attachment is an inline attachment; otherwise, false.
      * @param value Value to set for the isInline property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsInline(@jakarta.annotation.Nullable final Boolean value) {
         this.isInline = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the name property value. The attachment's file name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the size property value. The length of the attachment in bytes.
      * @param value Value to set for the size property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSize(@jakarta.annotation.Nullable final Integer value) {
         this.size = value;
     }

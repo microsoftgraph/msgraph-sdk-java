@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * The ManagedAppEntity is the base entity type for all other entity types under app management workflow.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable {
     /**
      * Not yet documented
@@ -33,9 +34,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     private String version;
     /**
      * Instantiates a new managedAppPolicyDeploymentSummary and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary() {
         super();
     }
@@ -106,9 +105,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -121,45 +118,35 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     /**
      * Sets the configurationDeployedUserCount property value. Not yet documented
      * @param value Value to set for the configurationDeployedUserCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConfigurationDeployedUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.configurationDeployedUserCount = value;
     }
     /**
      * Sets the configurationDeploymentSummaryPerApp property value. Not yet documented
      * @param value Value to set for the configurationDeploymentSummaryPerApp property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setConfigurationDeploymentSummaryPerApp(@jakarta.annotation.Nullable final java.util.List<ManagedAppPolicyDeploymentSummaryPerApp> value) {
         this.configurationDeploymentSummaryPerApp = value;
     }
     /**
      * Sets the displayName property value. Not yet documented
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lastRefreshTime property value. Not yet documented
      * @param value Value to set for the lastRefreshTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastRefreshTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastRefreshTime = value;
     }
     /**
      * Sets the version property value. Version of the entity.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }

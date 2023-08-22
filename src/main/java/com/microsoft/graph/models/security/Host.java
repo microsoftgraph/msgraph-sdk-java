@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Host extends Artifact implements Parsable {
     /**
      * The hostComponents that are associated with this host.
@@ -42,9 +43,7 @@ public class Host extends Artifact implements Parsable {
     private java.util.List<HostTracker> trackers;
     /**
      * Instantiates a new host and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Host() {
         super();
         this.setOdataType("#microsoft.graph.security.host");
@@ -151,9 +150,7 @@ public class Host extends Artifact implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -169,72 +166,56 @@ public class Host extends Artifact implements Parsable {
     /**
      * Sets the components property value. The hostComponents that are associated with this host.
      * @param value Value to set for the components property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setComponents(@jakarta.annotation.Nullable final java.util.List<HostComponent> value) {
         this.components = value;
     }
     /**
      * Sets the cookies property value. The hostCookies that are associated with this host.
      * @param value Value to set for the cookies property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCookies(@jakarta.annotation.Nullable final java.util.List<HostCookie> value) {
         this.cookies = value;
     }
     /**
      * Sets the firstSeenDateTime property value. The first date and time this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstSeenDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstSeenDateTime = value;
     }
     /**
      * Sets the lastSeenDateTime property value. The most recent date and time when this host was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSeenDateTime = value;
     }
     /**
      * Sets the passiveDns property value. Passive DNS retrieval about this host.
      * @param value Value to set for the passiveDns property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPassiveDns(@jakarta.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
         this.passiveDns = value;
     }
     /**
      * Sets the passiveDnsReverse property value. Reverse passive DNS retrieval about this host.
      * @param value Value to set for the passiveDnsReverse property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPassiveDnsReverse(@jakarta.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
         this.passiveDnsReverse = value;
     }
     /**
      * Sets the reputation property value. Represents a calculated reputation of this host.
      * @param value Value to set for the reputation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setReputation(@jakarta.annotation.Nullable final HostReputation value) {
         this.reputation = value;
     }
     /**
      * Sets the trackers property value. The hostTrackers that are associated with this host.
      * @param value Value to set for the trackers property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTrackers(@jakarta.annotation.Nullable final java.util.List<HostTracker> value) {
         this.trackers = value;
     }

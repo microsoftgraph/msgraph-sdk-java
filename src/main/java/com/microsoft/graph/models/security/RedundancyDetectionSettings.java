@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
     private Integer similarityThreshold;
     /**
      * Instantiates a new redundancyDetectionSettings and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RedundancyDetectionSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
@@ -130,54 +127,42 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the isEnabled property value. Indicates whether email threading and near duplicate detection are enabled.
      * @param value Value to set for the isEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
      * Sets the maxWords property value. Specifies the maximum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
      * @param value Value to set for the maxWords property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMaxWords(@jakarta.annotation.Nullable final Integer value) {
         this.maxWords = value;
     }
     /**
      * Sets the minWords property value. Specifies the minimum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
      * @param value Value to set for the minWords property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMinWords(@jakarta.annotation.Nullable final Integer value) {
         this.minWords = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the similarityThreshold property value. Specifies the similarity level for documents to be put in the same near duplicate set. To learn more, see Document and email similarity threshold.
      * @param value Value to set for the similarityThreshold property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSimilarityThreshold(@jakarta.annotation.Nullable final Integer value) {
         this.similarityThreshold = value;
     }

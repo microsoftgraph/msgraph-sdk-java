@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Windows Defender last scan result
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDefenderScanActionResult extends DeviceActionResult implements Parsable {
     /**
      * Scan type either full scan or quick scan
@@ -16,9 +17,7 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
     private String scanType;
     /**
      * Instantiates a new windowsDefenderScanActionResult and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsDefenderScanActionResult() {
         super();
     }
@@ -53,9 +52,7 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -64,9 +61,7 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
     /**
      * Sets the scanType property value. Scan type either full scan or quick scan
      * @param value Value to set for the scanType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScanType(@jakarta.annotation.Nullable final String value) {
         this.scanType = value;
     }

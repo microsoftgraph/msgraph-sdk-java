@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalActivity extends Entity implements Parsable {
     /**
      * Represents an identity used to identify who is responsible for the activity.
@@ -23,9 +24,7 @@ public class ExternalActivity extends Entity implements Parsable {
     private ExternalActivityType type;
     /**
      * Instantiates a new externalActivity and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ExternalActivity() {
         super();
     }
@@ -85,9 +84,7 @@ public class ExternalActivity extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,27 +95,21 @@ public class ExternalActivity extends Entity implements Parsable {
     /**
      * Sets the performedBy property value. Represents an identity used to identify who is responsible for the activity.
      * @param value Value to set for the performedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPerformedBy(@jakarta.annotation.Nullable final Identity value) {
         this.performedBy = value;
     }
     /**
      * Sets the startDateTime property value. The date and time when the particular activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final ExternalActivityType value) {
         this.type = value;
     }

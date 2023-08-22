@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsAppPermissionSet implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -22,9 +23,7 @@ public class TeamsAppPermissionSet implements AdditionalDataHolder, Parsable {
     private java.util.List<TeamsAppResourceSpecificPermission> resourceSpecificPermissions;
     /**
      * Instantiates a new teamsAppPermissionSet and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TeamsAppPermissionSet() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -76,9 +75,7 @@ public class TeamsAppPermissionSet implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -88,27 +85,21 @@ public class TeamsAppPermissionSet implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the resourceSpecificPermissions property value. A collection of resource-specific permissions.
      * @param value Value to set for the resourceSpecificPermissions property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceSpecificPermissions(@jakarta.annotation.Nullable final java.util.List<TeamsAppResourceSpecificPermission> value) {
         this.resourceSpecificPermissions = value;
     }

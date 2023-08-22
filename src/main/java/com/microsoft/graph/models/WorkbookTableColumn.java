@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookTableColumn extends Entity implements Parsable {
     /**
      * Retrieve the filter applied to the column. Read-only.
@@ -25,9 +26,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
     private Json values;
     /**
      * Instantiates a new workbookTableColumn and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookTableColumn() {
         super();
     }
@@ -89,9 +88,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -103,36 +100,28 @@ public class WorkbookTableColumn extends Entity implements Parsable {
     /**
      * Sets the filter property value. Retrieve the filter applied to the column. Read-only.
      * @param value Value to set for the filter property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setFilter(@jakarta.annotation.Nullable final WorkbookFilter value) {
         this.filter = value;
     }
     /**
      * Sets the index property value. Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
      * @param value Value to set for the index property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIndex(@jakarta.annotation.Nullable final Integer value) {
         this.index = value;
     }
     /**
      * Sets the name property value. Returns the name of the table column.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
      * @param value Value to set for the values property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValues(@jakarta.annotation.Nullable final Json value) {
         this.values = value;
     }

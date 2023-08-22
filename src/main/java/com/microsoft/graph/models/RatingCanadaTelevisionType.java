@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * TV content rating labels in Canada
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RatingCanadaTelevisionType implements ValuedEnum {
     /** Default value, allow all TV shows content */
     AllAllowed("allAllowed"),

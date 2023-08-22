@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpointConfiguration implements Parsable {
     /**
      * The name of the logic app.
@@ -25,9 +26,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
     private String url;
     /**
      * Instantiates a new logicAppTriggerEndpointConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public LogicAppTriggerEndpointConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.logicAppTriggerEndpointConfiguration");
@@ -90,9 +89,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +101,28 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
     /**
      * Sets the logicAppWorkflowName property value. The name of the logic app.
      * @param value Value to set for the logicAppWorkflowName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLogicAppWorkflowName(@jakarta.annotation.Nullable final String value) {
         this.logicAppWorkflowName = value;
     }
     /**
      * Sets the resourceGroupName property value. The Azure resource group name for the logic app.
      * @param value Value to set for the resourceGroupName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setResourceGroupName(@jakarta.annotation.Nullable final String value) {
         this.resourceGroupName = value;
     }
     /**
      * Sets the subscriptionId property value. Identifier of the Azure subscription for the logic app.
      * @param value Value to set for the subscriptionId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubscriptionId(@jakarta.annotation.Nullable final String value) {
         this.subscriptionId = value;
     }
     /**
      * Sets the url property value. The URL to the logic app endpoint that will be triggered. Only required for app-only token scenarios where app is creating a customCalloutExtension without a signed-in user.
      * @param value Value to set for the url property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUrl(@jakarta.annotation.Nullable final String value) {
         this.url = value;
     }

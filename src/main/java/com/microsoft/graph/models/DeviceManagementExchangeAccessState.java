@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Device Exchange Access State.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementExchangeAccessState implements ValuedEnum {
     /** No access state discovered from Exchange */
     None("none"),

@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PermissionScope implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -55,9 +56,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
     private String value;
     /**
      * Instantiates a new permissionScope and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public PermissionScope() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -181,9 +180,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("adminConsentDescription", this.getAdminConsentDescription());
@@ -201,99 +198,77 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the adminConsentDescription property value. A description of the delegated permissions, intended to be read by an administrator granting the permission on behalf of all users. This text appears in tenant-wide admin consent experiences.
      * @param value Value to set for the adminConsentDescription property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdminConsentDescription(@jakarta.annotation.Nullable final String value) {
         this.adminConsentDescription = value;
     }
     /**
      * Sets the adminConsentDisplayName property value. The permission's title, intended to be read by an administrator granting the permission on behalf of all users.
      * @param value Value to set for the adminConsentDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdminConsentDisplayName(@jakarta.annotation.Nullable final String value) {
         this.adminConsentDisplayName = value;
     }
     /**
      * Sets the id property value. Unique delegated permission identifier inside the collection of delegated permissions defined for a resource application.
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setId(@jakarta.annotation.Nullable final UUID value) {
         this.id = value;
     }
     /**
      * Sets the isEnabled property value. When creating or updating a permission, this property must be set to true (which is the default). To delete a permission, this property must first be set to false.  At that point, in a subsequent call, the permission may be removed.
      * @param value Value to set for the isEnabled property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the origin property value. The origin property
      * @param value Value to set for the origin property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOrigin(@jakarta.annotation.Nullable final String value) {
         this.origin = value;
     }
     /**
      * Sets the type property value. The possible values are: User and Admin. Specifies whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator consent should always be required. While Microsoft Graph defines the default consent requirement for each permission, the tenant administrator may override the behavior in their organization (by allowing, restricting, or limiting user consent to this delegated permission). For more information, see Configure how users consent to applications.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
     /**
      * Sets the userConsentDescription property value. A description of the delegated permissions, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.
      * @param value Value to set for the userConsentDescription property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserConsentDescription(@jakarta.annotation.Nullable final String value) {
         this.userConsentDescription = value;
     }
     /**
      * Sets the userConsentDisplayName property value. A title for the permission, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.
      * @param value Value to set for the userConsentDisplayName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserConsentDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userConsentDisplayName = value;
     }
     /**
      * Sets the value property value. Specifies the value to include in the scp (scope) claim in access tokens. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }

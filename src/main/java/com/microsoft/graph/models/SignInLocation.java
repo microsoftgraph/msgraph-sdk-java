@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SignInLocation implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class SignInLocation implements AdditionalDataHolder, Parsable {
     private String state;
     /**
      * Instantiates a new signInLocation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SignInLocation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class SignInLocation implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("city", this.getCity());
@@ -130,54 +127,42 @@ public class SignInLocation implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the city property value. Provides the city where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
      * @param value Value to set for the city property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCity(@jakarta.annotation.Nullable final String value) {
         this.city = value;
     }
     /**
      * Sets the countryOrRegion property value. Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
      * @param value Value to set for the countryOrRegion property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCountryOrRegion(@jakarta.annotation.Nullable final String value) {
         this.countryOrRegion = value;
     }
     /**
      * Sets the geoCoordinates property value. Provides the latitude, longitude and altitude where the sign-in originated.
      * @param value Value to set for the geoCoordinates property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGeoCoordinates(@jakarta.annotation.Nullable final GeoCoordinates value) {
         this.geoCoordinates = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the state property value. Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setState(@jakarta.annotation.Nullable final String value) {
         this.state = value;
     }

@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Contains properties and inherited properties for the Microsoft Edge app on Windows.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
     /**
      * The enum to specify the channels for Microsoft Edge apps.
@@ -20,9 +21,7 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
     private String displayLanguageLocale;
     /**
      * Instantiates a new windowsMicrosoftEdgeApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WindowsMicrosoftEdgeApp() {
         super();
         this.setOdataType("#microsoft.graph.windowsMicrosoftEdgeApp");
@@ -67,9 +66,7 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -79,18 +76,14 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
     /**
      * Sets the channel property value. The enum to specify the channels for Microsoft Edge apps.
      * @param value Value to set for the channel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setChannel(@jakarta.annotation.Nullable final MicrosoftEdgeChannel value) {
         this.channel = value;
     }
     /**
      * Sets the displayLanguageLocale property value. The language locale to use when the Edge app displays text to the user.
      * @param value Value to set for the displayLanguageLocale property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisplayLanguageLocale(@jakarta.annotation.Nullable final String value) {
         this.displayLanguageLocale = value;
     }

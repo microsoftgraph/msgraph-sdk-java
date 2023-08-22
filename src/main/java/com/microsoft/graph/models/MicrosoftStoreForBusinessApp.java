@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Microsoft Store for Business Apps. This class does not support Create, Delete, or Update.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable {
     /**
      * The licenseType property
@@ -32,9 +33,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     private Integer usedLicenseCount;
     /**
      * Instantiates a new microsoftStoreForBusinessApp and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public MicrosoftStoreForBusinessApp() {
         super();
         this.setOdataType("#microsoft.graph.microsoftStoreForBusinessApp");
@@ -106,9 +105,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -121,45 +118,35 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     /**
      * Sets the licenseType property value. The licenseType property
      * @param value Value to set for the licenseType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setLicenseType(@jakarta.annotation.Nullable final MicrosoftStoreForBusinessLicenseType value) {
         this.licenseType = value;
     }
     /**
      * Sets the packageIdentityName property value. The app package identifier
      * @param value Value to set for the packageIdentityName property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPackageIdentityName(@jakarta.annotation.Nullable final String value) {
         this.packageIdentityName = value;
     }
     /**
      * Sets the productKey property value. The app product key
      * @param value Value to set for the productKey property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProductKey(@jakarta.annotation.Nullable final String value) {
         this.productKey = value;
     }
     /**
      * Sets the totalLicenseCount property value. The total number of Microsoft Store for Business licenses.
      * @param value Value to set for the totalLicenseCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTotalLicenseCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalLicenseCount = value;
     }
     /**
      * Sets the usedLicenseCount property value. The number of Microsoft Store for Business licenses in use.
      * @param value Value to set for the usedLicenseCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUsedLicenseCount(@jakarta.annotation.Nullable final Integer value) {
         this.usedLicenseCount = value;
     }

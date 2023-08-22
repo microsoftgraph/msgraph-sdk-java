@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class FDistRTPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -27,9 +28,7 @@ public class FDistRTPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json x;
     /**
      * Instantiates a new FDistRTPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public FDistRTPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +89,7 @@ public class FDistRTPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("degFreedom1", this.getDegFreedom1());
@@ -103,36 +100,28 @@ public class FDistRTPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the degFreedom1 property value. The degFreedom1 property
      * @param value Value to set for the degFreedom1 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDegFreedom1(@jakarta.annotation.Nullable final Json value) {
         this.degFreedom1 = value;
     }
     /**
      * Sets the degFreedom2 property value. The degFreedom2 property
      * @param value Value to set for the degFreedom2 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDegFreedom2(@jakarta.annotation.Nullable final Json value) {
         this.degFreedom2 = value;
     }
     /**
      * Sets the x property value. The x property
      * @param value Value to set for the x property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setX(@jakarta.annotation.Nullable final Json value) {
         this.x = value;
     }

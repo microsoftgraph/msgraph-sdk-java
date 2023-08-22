@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AssignedLicense implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -27,9 +28,7 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
     private UUID skuId;
     /**
      * Instantiates a new assignedLicense and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AssignedLicense() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,9 +89,7 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("disabledPlans", this.getDisabledPlans());
@@ -103,36 +100,28 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled.
      * @param value Value to set for the disabledPlans property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDisabledPlans(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
         this.disabledPlans = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the skuId property value. The unique identifier for the SKU.
      * @param value Value to set for the skuId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSkuId(@jakarta.annotation.Nullable final UUID value) {
         this.skuId = value;
     }

@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DataPolicyOperation extends Entity implements Parsable {
     /**
      * Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Null until the operation completes.
@@ -34,9 +35,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     private String userId;
     /**
      * Instantiates a new dataPolicyOperation and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public DataPolicyOperation() {
         super();
     }
@@ -116,9 +115,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -132,54 +129,42 @@ public class DataPolicyOperation extends Entity implements Parsable {
     /**
      * Sets the completedDateTime property value. Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Null until the operation completes.
      * @param value Value to set for the completedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completedDateTime = value;
     }
     /**
      * Sets the progress property value. Specifies the progress of an operation.
      * @param value Value to set for the progress property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProgress(@jakarta.annotation.Nullable final Double value) {
         this.progress = value;
     }
     /**
      * Sets the status property value. Possible values are: notStarted, running, complete, failed, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final DataPolicyOperationStatus value) {
         this.status = value;
     }
     /**
      * Sets the storageLocation property value. The URL location to where data is being exported for export requests.
      * @param value Value to set for the storageLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStorageLocation(@jakarta.annotation.Nullable final String value) {
         this.storageLocation = value;
     }
     /**
      * Sets the submittedDateTime property value. Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the submittedDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSubmittedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.submittedDateTime = value;
     }
     /**
      * Sets the userId property value. The id for the user on whom the operation is performed.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }

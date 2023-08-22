@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class KubernetesClusterEvidence extends AlertEvidence implements Parsable {
     /**
      * The cloud identifier of the cluster. Can be either an amazonResourceEvidence, azureResourceEvidence, or googleCloudResourceEvidence object.
@@ -29,9 +30,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     private String version;
     /**
      * Instantiates a new kubernetesClusterEvidence and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public KubernetesClusterEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.kubernetesClusterEvidence");
@@ -103,9 +102,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,45 +115,35 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     /**
      * Sets the cloudResource property value. The cloud identifier of the cluster. Can be either an amazonResourceEvidence, azureResourceEvidence, or googleCloudResourceEvidence object.
      * @param value Value to set for the cloudResource property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCloudResource(@jakarta.annotation.Nullable final AlertEvidence value) {
         this.cloudResource = value;
     }
     /**
      * Sets the distribution property value. The distribution type of the cluster.
      * @param value Value to set for the distribution property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDistribution(@jakarta.annotation.Nullable final String value) {
         this.distribution = value;
     }
     /**
      * Sets the name property value. The cluster name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the platform property value. The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
      * @param value Value to set for the platform property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPlatform(@jakarta.annotation.Nullable final KubernetesPlatform value) {
         this.platform = value;
     }
     /**
      * Sets the version property value. The kubernetes version of the cluster.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal implements Parsable {
     /**
      * The activity related to service principal risk level change.
@@ -17,9 +18,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
     private String initiatedBy;
     /**
      * Instantiates a new riskyServicePrincipalHistoryItem and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public RiskyServicePrincipalHistoryItem() {
         super();
     }
@@ -63,9 +62,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
     /**
      * Sets the activity property value. The activity related to service principal risk level change.
      * @param value Value to set for the activity property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivity(@jakarta.annotation.Nullable final RiskServicePrincipalActivity value) {
         this.activity = value;
     }
     /**
      * Sets the initiatedBy property value. The identifier of the actor of the operation.
      * @param value Value to set for the initiatedBy property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setInitiatedBy(@jakarta.annotation.Nullable final String value) {
         this.initiatedBy = value;
     }

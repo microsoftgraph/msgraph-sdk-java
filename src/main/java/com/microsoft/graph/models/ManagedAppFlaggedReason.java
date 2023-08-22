@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The reason for which a user has been flagged
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedAppFlaggedReason implements ValuedEnum {
     /** No issue. */
     None("none"),

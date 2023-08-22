@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Par
     private CustomExtensionCalloutInstanceStatus status;
     /**
      * Instantiates a new customExtensionCalloutInstance and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CustomExtensionCalloutInstance() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -128,9 +127,7 @@ public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Par
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("customExtensionId", this.getCustomExtensionId());
@@ -144,63 +141,49 @@ public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Par
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the customExtensionId property value. Identification of the custom extension that was triggered at this instance.
      * @param value Value to set for the customExtensionId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCustomExtensionId(@jakarta.annotation.Nullable final String value) {
         this.customExtensionId = value;
     }
     /**
      * Sets the detail property value. Details provided by the logic app during the callback of the request instance.
      * @param value Value to set for the detail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDetail(@jakarta.annotation.Nullable final String value) {
         this.detail = value;
     }
     /**
      * Sets the externalCorrelationId property value. The unique run identifier for the logic app.
      * @param value Value to set for the externalCorrelationId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setExternalCorrelationId(@jakarta.annotation.Nullable final String value) {
         this.externalCorrelationId = value;
     }
     /**
      * Sets the id property value. Unique identifier for the callout instance. Read-only.
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the status property value. The status of the request to the custom extension. The possible values are: calloutSent, callbackReceived, calloutFailed, callbackTimedOut, waitingForCallback, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final CustomExtensionCalloutInstanceStatus value) {
         this.status = value;
     }

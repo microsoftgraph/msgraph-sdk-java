@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookWorksheetProtection extends Entity implements Parsable {
     /**
      * Sheet protection options. Read-only.
@@ -17,9 +18,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     private Boolean protectedEscaped;
     /**
      * Instantiates a new workbookWorksheetProtection and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public WorkbookWorksheetProtection() {
         super();
     }
@@ -63,9 +62,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,18 +72,14 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     /**
      * Sets the options property value. Sheet protection options. Read-only.
      * @param value Value to set for the options property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOptions(@jakarta.annotation.Nullable final WorkbookWorksheetProtectionOptions value) {
         this.options = value;
     }
     /**
      * Sets the protected property value. Indicates if the worksheet is protected.  Read-only.
      * @param value Value to set for the protected property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setProtected(@jakarta.annotation.Nullable final Boolean value) {
         this.protectedEscaped = value;
     }

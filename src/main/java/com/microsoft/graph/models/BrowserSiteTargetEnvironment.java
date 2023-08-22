@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum BrowserSiteTargetEnvironment implements ValuedEnum {
     /** Open in Internet Explorer Mode */
     InternetExplorerMode("internetExplorerMode"),

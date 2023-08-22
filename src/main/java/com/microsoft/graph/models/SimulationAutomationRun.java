@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SimulationAutomationRun extends Entity implements Parsable {
     /**
      * Date and time when the run ends in an attack simulation automation.
@@ -26,9 +27,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
     private SimulationAutomationRunStatus status;
     /**
      * Instantiates a new simulationAutomationRun and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SimulationAutomationRun() {
         super();
     }
@@ -90,9 +89,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -104,36 +101,28 @@ public class SimulationAutomationRun extends Entity implements Parsable {
     /**
      * Sets the endDateTime property value. Date and time when the run ends in an attack simulation automation.
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
      * Sets the simulationId property value. Unique identifier for the attack simulation campaign initiated in the attack simulation automation run.
      * @param value Value to set for the simulationId property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSimulationId(@jakarta.annotation.Nullable final String value) {
         this.simulationId = value;
     }
     /**
      * Sets the startDateTime property value. Date and time when the run starts in an attack simulation automation.
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
      * Sets the status property value. Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStatus(@jakarta.annotation.Nullable final SimulationAutomationRunStatus value) {
         this.status = value;
     }

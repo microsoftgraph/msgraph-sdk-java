@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TimeConstraint implements AdditionalDataHolder, Parsable {
     /**
      * The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
@@ -26,9 +27,7 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
     private java.util.List<TimeSlot> timeSlots;
     /**
      * Instantiates a new timeConstraint and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public TimeConstraint() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,9 +88,7 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("activityDomain", this.getActivityDomain());
@@ -102,36 +99,28 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
     /**
      * Sets the activityDomain property value. The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
      * @param value Value to set for the activityDomain property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setActivityDomain(@jakarta.annotation.Nullable final ActivityDomain value) {
         this.activityDomain = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the timeSlots property value. The timeSlots property
      * @param value Value to set for the timeSlots property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setTimeSlots(@jakarta.annotation.Nullable final java.util.List<TimeSlot> value) {
         this.timeSlots = value;
     }

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
     private DateTimeTimeZone scheduledStartTime;
     /**
      * Instantiates a new automaticRepliesMailTips and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public AutomaticRepliesMailTips() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -115,9 +114,7 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("message", this.getMessage());
@@ -130,54 +127,42 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the message property value. The automatic reply message.
      * @param value Value to set for the message property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessage(@jakarta.annotation.Nullable final String value) {
         this.message = value;
     }
     /**
      * Sets the messageLanguage property value. The language that the automatic reply message is in.
      * @param value Value to set for the messageLanguage property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setMessageLanguage(@jakarta.annotation.Nullable final LocaleInfo value) {
         this.messageLanguage = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the scheduledEndTime property value. The date and time that automatic replies are set to end.
      * @param value Value to set for the scheduledEndTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScheduledEndTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.scheduledEndTime = value;
     }
     /**
      * Sets the scheduledStartTime property value. The date and time that automatic replies are set to begin.
      * @param value Value to set for the scheduledStartTime property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setScheduledStartTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.scheduledStartTime = value;
     }

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CheckMemberGroupsPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -18,9 +19,7 @@ public class CheckMemberGroupsPostRequestBody implements AdditionalDataHolder, P
     private java.util.List<String> groupIds;
     /**
      * Instantiates a new checkMemberGroupsPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public CheckMemberGroupsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -63,9 +62,7 @@ public class CheckMemberGroupsPostRequestBody implements AdditionalDataHolder, P
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("groupIds", this.getGroupIds());
@@ -74,18 +71,14 @@ public class CheckMemberGroupsPostRequestBody implements AdditionalDataHolder, P
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the groupIds property value. The groupIds property
      * @param value Value to set for the groupIds property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroupIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.groupIds = value;
     }

@@ -9,12 +9,11 @@ import java.util.Objects;
 /**
  * Represents a group that should be excluded from an assignment.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExclusionGroupAssignmentTarget extends GroupAssignmentTarget implements Parsable {
     /**
      * Instantiates a new exclusionGroupAssignmentTarget and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ExclusionGroupAssignmentTarget() {
         super();
         this.setOdataType("#microsoft.graph.exclusionGroupAssignmentTarget");
@@ -41,9 +40,7 @@ public class ExclusionGroupAssignmentTarget extends GroupAssignmentTarget implem
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

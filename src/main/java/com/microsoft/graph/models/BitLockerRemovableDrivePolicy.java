@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * BitLocker Removable Drive Policies.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -33,9 +34,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
     private Boolean requireEncryptionForWriteAccess;
     /**
      * Instantiates a new bitLockerRemovableDrivePolicy and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public BitLockerRemovableDrivePolicy() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -105,9 +104,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("blockCrossOrganizationWriteAccess", this.getBlockCrossOrganizationWriteAccess());
@@ -119,45 +116,35 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the blockCrossOrganizationWriteAccess property value. This policy setting determines whether BitLocker protection is required for removable data drives to be writable on a computer.
      * @param value Value to set for the blockCrossOrganizationWriteAccess property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBlockCrossOrganizationWriteAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.blockCrossOrganizationWriteAccess = value;
     }
     /**
      * Sets the encryptionMethod property value. Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      * @param value Value to set for the encryptionMethod property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setEncryptionMethod(@jakarta.annotation.Nullable final BitLockerEncryptionMethod value) {
         this.encryptionMethod = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the requireEncryptionForWriteAccess property value. Indicates whether to block write access to devices configured in another organization.  If requireEncryptionForWriteAccess is false, this value does not affect.
      * @param value Value to set for the requireEncryptionForWriteAccess property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setRequireEncryptionForWriteAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.requireEncryptionForWriteAccess = value;
     }

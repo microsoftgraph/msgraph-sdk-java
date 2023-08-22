@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * This topic provides descriptions of the declared methods, properties and relationships exposed by the windows81GeneralConfiguration resource.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
@@ -144,9 +145,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     private String workFoldersUrl;
     /**
      * Instantiates a new windows81GeneralConfiguration and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public Windows81GeneralConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows81GeneralConfiguration");
@@ -470,9 +469,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -512,297 +509,231 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     /**
      * Sets the accountsBlockAddingNonMicrosoftAccountEmail property value. Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
      * @param value Value to set for the accountsBlockAddingNonMicrosoftAccountEmail property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAccountsBlockAddingNonMicrosoftAccountEmail(@jakarta.annotation.Nullable final Boolean value) {
         this.accountsBlockAddingNonMicrosoftAccountEmail = value;
     }
     /**
      * Sets the applyOnlyToWindows81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
      * @param value Value to set for the applyOnlyToWindows81 property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setApplyOnlyToWindows81(@jakarta.annotation.Nullable final Boolean value) {
         this.applyOnlyToWindows81 = value;
     }
     /**
      * Sets the browserBlockAutofill property value. Indicates whether or not to block auto fill.
      * @param value Value to set for the browserBlockAutofill property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserBlockAutofill(@jakarta.annotation.Nullable final Boolean value) {
         this.browserBlockAutofill = value;
     }
     /**
      * Sets the browserBlockAutomaticDetectionOfIntranetSites property value. Indicates whether or not to block automatic detection of Intranet sites.
      * @param value Value to set for the browserBlockAutomaticDetectionOfIntranetSites property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserBlockAutomaticDetectionOfIntranetSites(@jakarta.annotation.Nullable final Boolean value) {
         this.browserBlockAutomaticDetectionOfIntranetSites = value;
     }
     /**
      * Sets the browserBlockEnterpriseModeAccess property value. Indicates whether or not to block enterprise mode access.
      * @param value Value to set for the browserBlockEnterpriseModeAccess property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserBlockEnterpriseModeAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.browserBlockEnterpriseModeAccess = value;
     }
     /**
      * Sets the browserBlockJavaScript property value. Indicates whether or not to Block the user from using JavaScript.
      * @param value Value to set for the browserBlockJavaScript property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserBlockJavaScript(@jakarta.annotation.Nullable final Boolean value) {
         this.browserBlockJavaScript = value;
     }
     /**
      * Sets the browserBlockPlugins property value. Indicates whether or not to block plug-ins.
      * @param value Value to set for the browserBlockPlugins property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserBlockPlugins(@jakarta.annotation.Nullable final Boolean value) {
         this.browserBlockPlugins = value;
     }
     /**
      * Sets the browserBlockPopups property value. Indicates whether or not to block popups.
      * @param value Value to set for the browserBlockPopups property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserBlockPopups(@jakarta.annotation.Nullable final Boolean value) {
         this.browserBlockPopups = value;
     }
     /**
      * Sets the browserBlockSendingDoNotTrackHeader property value. Indicates whether or not to Block the user from sending the do not track header.
      * @param value Value to set for the browserBlockSendingDoNotTrackHeader property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserBlockSendingDoNotTrackHeader(@jakarta.annotation.Nullable final Boolean value) {
         this.browserBlockSendingDoNotTrackHeader = value;
     }
     /**
      * Sets the browserBlockSingleWordEntryOnIntranetSites property value. Indicates whether or not to block a single word entry on Intranet sites.
      * @param value Value to set for the browserBlockSingleWordEntryOnIntranetSites property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserBlockSingleWordEntryOnIntranetSites(@jakarta.annotation.Nullable final Boolean value) {
         this.browserBlockSingleWordEntryOnIntranetSites = value;
     }
     /**
      * Sets the browserEnterpriseModeSiteListLocation property value. The enterprise mode site list location. Could be a local file, local network or http location.
      * @param value Value to set for the browserEnterpriseModeSiteListLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserEnterpriseModeSiteListLocation(@jakarta.annotation.Nullable final String value) {
         this.browserEnterpriseModeSiteListLocation = value;
     }
     /**
      * Sets the browserInternetSecurityLevel property value. Possible values for internet site security level.
      * @param value Value to set for the browserInternetSecurityLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserInternetSecurityLevel(@jakarta.annotation.Nullable final InternetSiteSecurityLevel value) {
         this.browserInternetSecurityLevel = value;
     }
     /**
      * Sets the browserIntranetSecurityLevel property value. Possible values for site security level.
      * @param value Value to set for the browserIntranetSecurityLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserIntranetSecurityLevel(@jakarta.annotation.Nullable final SiteSecurityLevel value) {
         this.browserIntranetSecurityLevel = value;
     }
     /**
      * Sets the browserLoggingReportLocation property value. The logging report location.
      * @param value Value to set for the browserLoggingReportLocation property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserLoggingReportLocation(@jakarta.annotation.Nullable final String value) {
         this.browserLoggingReportLocation = value;
     }
     /**
      * Sets the browserRequireFirewall property value. Indicates whether or not to require a firewall.
      * @param value Value to set for the browserRequireFirewall property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserRequireFirewall(@jakarta.annotation.Nullable final Boolean value) {
         this.browserRequireFirewall = value;
     }
     /**
      * Sets the browserRequireFraudWarning property value. Indicates whether or not to require fraud warning.
      * @param value Value to set for the browserRequireFraudWarning property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserRequireFraudWarning(@jakarta.annotation.Nullable final Boolean value) {
         this.browserRequireFraudWarning = value;
     }
     /**
      * Sets the browserRequireHighSecurityForRestrictedSites property value. Indicates whether or not to require high security for restricted sites.
      * @param value Value to set for the browserRequireHighSecurityForRestrictedSites property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserRequireHighSecurityForRestrictedSites(@jakarta.annotation.Nullable final Boolean value) {
         this.browserRequireHighSecurityForRestrictedSites = value;
     }
     /**
      * Sets the browserRequireSmartScreen property value. Indicates whether or not to require the user to use the smart screen filter.
      * @param value Value to set for the browserRequireSmartScreen property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserRequireSmartScreen(@jakarta.annotation.Nullable final Boolean value) {
         this.browserRequireSmartScreen = value;
     }
     /**
      * Sets the browserTrustedSitesSecurityLevel property value. Possible values for site security level.
      * @param value Value to set for the browserTrustedSitesSecurityLevel property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setBrowserTrustedSitesSecurityLevel(@jakarta.annotation.Nullable final SiteSecurityLevel value) {
         this.browserTrustedSitesSecurityLevel = value;
     }
     /**
      * Sets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
      * @param value Value to set for the cellularBlockDataRoaming property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setCellularBlockDataRoaming(@jakarta.annotation.Nullable final Boolean value) {
         this.cellularBlockDataRoaming = value;
     }
     /**
      * Sets the diagnosticsBlockDataSubmission property value. Indicates whether or not to block diagnostic data submission.
      * @param value Value to set for the diagnosticsBlockDataSubmission property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setDiagnosticsBlockDataSubmission(@jakarta.annotation.Nullable final Boolean value) {
         this.diagnosticsBlockDataSubmission = value;
     }
     /**
      * Sets the passwordBlockPicturePasswordAndPin property value. Indicates whether or not to Block the user from using a pictures password and pin.
      * @param value Value to set for the passwordBlockPicturePasswordAndPin property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordBlockPicturePasswordAndPin(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordBlockPicturePasswordAndPin = value;
     }
     /**
      * Sets the passwordExpirationDays property value. Password expiration in days.
      * @param value Value to set for the passwordExpirationDays property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.passwordExpirationDays = value;
     }
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumCharacterSetCount = value;
     }
     /**
      * Sets the passwordMinimumLength property value. The minimum password length.
      * @param value Value to set for the passwordMinimumLength property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumLength = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. The minutes of inactivity before the screen times out.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of. Valid values 0 to 24
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
         this.passwordRequiredType = value;
     }
     /**
      * Sets the passwordSignInFailureCountBeforeFactoryReset property value. The number of sign in failures before factory reset.
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@jakarta.annotation.Nullable final Integer value) {
         this.passwordSignInFailureCountBeforeFactoryReset = value;
     }
     /**
      * Sets the storageRequireDeviceEncryption property value. Indicates whether or not to require encryption on a mobile device.
      * @param value Value to set for the storageRequireDeviceEncryption property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setStorageRequireDeviceEncryption(@jakarta.annotation.Nullable final Boolean value) {
         this.storageRequireDeviceEncryption = value;
     }
     /**
      * Sets the updatesRequireAutomaticUpdates property value. Indicates whether or not to require automatic updates.
      * @param value Value to set for the updatesRequireAutomaticUpdates property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUpdatesRequireAutomaticUpdates(@jakarta.annotation.Nullable final Boolean value) {
         this.updatesRequireAutomaticUpdates = value;
     }
     /**
      * Sets the userAccountControlSettings property value. Possible values for Windows user account control settings.
      * @param value Value to set for the userAccountControlSettings property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setUserAccountControlSettings(@jakarta.annotation.Nullable final WindowsUserAccountControlSettings value) {
         this.userAccountControlSettings = value;
     }
     /**
      * Sets the workFoldersUrl property value. The work folders url.
      * @param value Value to set for the workFoldersUrl property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setWorkFoldersUrl(@jakarta.annotation.Nullable final String value) {
         this.workFoldersUrl = value;
     }

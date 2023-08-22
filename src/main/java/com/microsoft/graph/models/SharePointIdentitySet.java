@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharePointIdentitySet extends IdentitySet implements Parsable {
     /**
      * The group associated with this action. Optional.
@@ -21,9 +22,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
     private SharePointIdentity siteUser;
     /**
      * Instantiates a new sharePointIdentitySet and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public SharePointIdentitySet() {
         super();
         this.setOdataType("#microsoft.graph.sharePointIdentitySet");
@@ -77,9 +76,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,27 +87,21 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
     /**
      * Sets the group property value. The group associated with this action. Optional.
      * @param value Value to set for the group property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setGroup(@jakarta.annotation.Nullable final Identity value) {
         this.group = value;
     }
     /**
      * Sets the siteGroup property value. The SharePoint group associated with this action. Optional.
      * @param value Value to set for the siteGroup property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSiteGroup(@jakarta.annotation.Nullable final SharePointIdentity value) {
         this.siteGroup = value;
     }
     /**
      * Sets the siteUser property value. The SharePoint user associated with this action. Optional.
      * @param value Value to set for the siteUser property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setSiteUser(@jakarta.annotation.Nullable final SharePointIdentity value) {
         this.siteUser = value;
     }

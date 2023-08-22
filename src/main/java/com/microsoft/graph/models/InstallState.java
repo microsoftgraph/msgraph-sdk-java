@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for install state.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum InstallState implements ValuedEnum {
     /** Not Applicable. */
     NotApplicable("notApplicable"),

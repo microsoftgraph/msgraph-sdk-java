@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProvisionOnDemandPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -19,9 +20,7 @@ public class ProvisionOnDemandPostRequestBody implements AdditionalDataHolder, P
     private java.util.List<SynchronizationJobApplicationParameters> parameters;
     /**
      * Instantiates a new provisionOnDemandPostRequestBody and sets the default values.
-     * @return a void
      */
-    @jakarta.annotation.Nullable
     public ProvisionOnDemandPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,9 +63,7 @@ public class ProvisionOnDemandPostRequestBody implements AdditionalDataHolder, P
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("parameters", this.getParameters());
@@ -75,18 +72,14 @@ public class ProvisionOnDemandPostRequestBody implements AdditionalDataHolder, P
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the parameters property value. The parameters property
      * @param value Value to set for the parameters property.
-     * @return a void
      */
-    @jakarta.annotation.Nonnull
     public void setParameters(@jakarta.annotation.Nullable final java.util.List<SynchronizationJobApplicationParameters> value) {
         this.parameters = value;
     }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the package type of an MSI Win32LobApp.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Win32LobAppMsiPackageType implements ValuedEnum {
     /** Indicates a per-machine app package. */
     PerMachine("perMachine"),
