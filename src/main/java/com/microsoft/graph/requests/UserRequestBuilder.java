@@ -1272,6 +1272,15 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the request builder
      */
     @Nonnull
+    public UserRetryServiceProvisioningRequestBuilder retryServiceProvisioning() {
+        return new UserRetryServiceProvisioningRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.retryServiceProvisioning"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
     public UserRevokeSignInSessionsRequestBuilder revokeSignInSessions() {
         return new UserRevokeSignInSessionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeSignInSessions"), getClient(), null);
     }

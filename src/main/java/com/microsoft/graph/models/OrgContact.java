@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PhysicalOfficeAddress;
 import com.microsoft.graph.models.OnPremisesProvisioningError;
 import com.microsoft.graph.models.Phone;
+import com.microsoft.graph.models.ServiceProvisioningError;
 import com.microsoft.graph.models.DirectoryObject;
 
 
@@ -145,6 +146,15 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<String> proxyAddresses;
+
+    /**
+     * The Service Provisioning Errors.
+     * 
+     */
+    @SerializedName(value = "serviceProvisioningErrors", alternate = {"ServiceProvisioningErrors"})
+    @Expose
+	@Nullable
+    public java.util.List<ServiceProvisioningError> serviceProvisioningErrors;
 
     /**
      * The Surname.
