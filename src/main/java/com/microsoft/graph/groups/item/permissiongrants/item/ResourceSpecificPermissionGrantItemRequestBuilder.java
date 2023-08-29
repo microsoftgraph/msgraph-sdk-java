@@ -96,7 +96,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * The permission that has been granted for a group to a specific application. Supports $expand.
+     * Get permissionGrants from groups
      * @return a CompletableFuture of resourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
@@ -104,7 +104,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
         return get(null);
     }
     /**
-     * The permission that has been granted for a group to a specific application. Supports $expand.
+     * Get permissionGrants from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of resourceSpecificPermissionGrant
      */
@@ -168,7 +168,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * The permission that has been granted for a group to a specific application. Supports $expand.
+     * Get permissionGrants from groups
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -176,7 +176,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * The permission that has been granted for a group to a specific application. Supports $expand.
+     * Get permissionGrants from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -235,7 +235,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The permission that has been granted for a group to a specific application. Supports $expand.
+     * Get permissionGrants from groups
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

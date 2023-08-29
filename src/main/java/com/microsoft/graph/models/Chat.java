@@ -42,7 +42,7 @@ public class Chat extends Entity implements Parsable {
      */
     private TeamworkOnlineMeetingInfo onlineMeetingInfo;
     /**
-     * The permissionGrants property
+     * A collection of permissions granted to apps for the chat.
      */
     private java.util.List<ResourceSpecificPermissionGrant> permissionGrants;
     /**
@@ -174,7 +174,7 @@ public class Chat extends Entity implements Parsable {
         return this.onlineMeetingInfo;
     }
     /**
-     * Gets the permissionGrants property value. The permissionGrants property
+     * Gets the permissionGrants property value. A collection of permissions granted to apps for the chat.
      * @return a resourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nullable
@@ -309,7 +309,7 @@ public class Chat extends Entity implements Parsable {
         this.onlineMeetingInfo = value;
     }
     /**
-     * Sets the permissionGrants property value. The permissionGrants property
+     * Sets the permissionGrants property value. A collection of permissions granted to apps for the chat.
      * @param value Value to set for the permissionGrants property.
      */
     public void setPermissionGrants(@jakarta.annotation.Nullable final java.util.List<ResourceSpecificPermissionGrant> value) {

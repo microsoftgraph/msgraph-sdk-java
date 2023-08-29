@@ -190,7 +190,7 @@ public class Group extends DirectoryObject implements Parsable {
      */
     private java.util.List<DirectoryObject> owners;
     /**
-     * The permission that has been granted for a group to a specific application. Supports $expand.
+     * The permissionGrants property
      */
     private java.util.List<ResourceSpecificPermissionGrant> permissionGrants;
     /**
@@ -726,7 +726,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.owners;
     }
     /**
-     * Gets the permissionGrants property value. The permission that has been granted for a group to a specific application. Supports $expand.
+     * Gets the permissionGrants property value. The permissionGrants property
      * @return a resourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nullable
@@ -1283,7 +1283,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.owners = value;
     }
     /**
-     * Sets the permissionGrants property value. The permission that has been granted for a group to a specific application. Supports $expand.
+     * Sets the permissionGrants property value. The permissionGrants property
      * @param value Value to set for the permissionGrants property.
      */
     public void setPermissionGrants(@jakarta.annotation.Nullable final java.util.List<ResourceSpecificPermissionGrant> value) {

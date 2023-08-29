@@ -96,7 +96,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get permissionGrants from users
+     * A collection of permissions granted to apps for the chat.
      * @return a CompletableFuture of resourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
@@ -104,7 +104,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
         return get(null);
     }
     /**
-     * Get permissionGrants from users
+     * A collection of permissions granted to apps for the chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of resourceSpecificPermissionGrant
      */
@@ -168,7 +168,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Get permissionGrants from users
+     * A collection of permissions granted to apps for the chat.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -176,7 +176,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * Get permissionGrants from users
+     * A collection of permissions granted to apps for the chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -235,7 +235,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get permissionGrants from users
+     * A collection of permissions granted to apps for the chat.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

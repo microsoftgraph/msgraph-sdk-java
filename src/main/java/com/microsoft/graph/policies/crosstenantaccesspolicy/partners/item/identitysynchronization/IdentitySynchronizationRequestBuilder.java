@@ -81,21 +81,21 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CrossTenantIdentitySyncPolicyPartner::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the user synchronization policy of a partner-specific configuration.
+     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
      * @param body The request body
      * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
-     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-put-identitysynchronization?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> patch(@jakarta.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body) {
         return patch(body, null);
     }
     /**
-     * Update the user synchronization policy of a partner-specific configuration.
+     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
-     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-put-identitysynchronization?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> patch(@jakarta.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -163,7 +163,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the user synchronization policy of a partner-specific configuration.
+     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the user synchronization policy of a partner-specific configuration.
+     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
