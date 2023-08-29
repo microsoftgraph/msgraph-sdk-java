@@ -30,7 +30,7 @@ public class BaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * Identity of the user, device, or application which created the item. Read-only.
+     * Identity of the user, device, or application that created the item. Read-only.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -66,7 +66,7 @@ public class BaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * Identity of the user, device, and application which last modified the item. Read-only.
+     * Identity of the user, device, and application that last modified the item. Read-only.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -102,7 +102,7 @@ public class BaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * URL that displays the resource in the browser. Read-only.
+     * URL that either displays the resource in the browser (for Office file formats), or is a direct link to the file (for other formats). Read-only.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

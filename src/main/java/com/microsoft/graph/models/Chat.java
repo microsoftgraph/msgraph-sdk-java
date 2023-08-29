@@ -146,7 +146,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Permission Grants.
-     * 
+     * A collection of permissions granted to apps for the chat.
      */
     @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
     @Expose

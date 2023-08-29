@@ -21,6 +21,7 @@ import com.microsoft.graph.models.PasswordCredential;
 import com.microsoft.graph.models.PublicClientApplication;
 import com.microsoft.graph.models.RequestSignatureVerification;
 import com.microsoft.graph.models.RequiredResourceAccess;
+import com.microsoft.graph.models.ServicePrincipalLockConfiguration;
 import com.microsoft.graph.models.SpaApplication;
 import com.microsoft.graph.models.VerifiedPublisher;
 import com.microsoft.graph.models.WebApplication;
@@ -299,6 +300,15 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String serviceManagementReference;
+
+    /**
+     * The Service Principal Lock Configuration.
+     * Specifies whether sensitive properties of a multi-tenant application should be locked for editing after the application is provisioned in a tenant. Nullable. null by default.
+     */
+    @SerializedName(value = "servicePrincipalLockConfiguration", alternate = {"ServicePrincipalLockConfiguration"})
+    @Expose
+	@Nullable
+    public ServicePrincipalLockConfiguration servicePrincipalLockConfiguration;
 
     /**
      * The Sign In Audience.

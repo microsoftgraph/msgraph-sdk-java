@@ -101,6 +101,15 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
 	@Nullable
     public ConditionalAccessPolicyState state;
 
+    /**
+     * The Template Id.
+     * 
+     */
+    @SerializedName(value = "templateId", alternate = {"TemplateId"})
+    @Expose
+	@Nullable
+    public String templateId;
+
 
     /**
      * Sets the raw JSON object
