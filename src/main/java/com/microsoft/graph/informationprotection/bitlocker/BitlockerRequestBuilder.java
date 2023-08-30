@@ -95,6 +95,16 @@ public class BitlockerRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a bitlockerRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public BitlockerRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new BitlockerRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get bitlocker from informationProtection
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

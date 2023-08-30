@@ -167,6 +167,16 @@ public class MethodsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a methodsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MethodsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MethodsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of authentication methods registered to a user. The authentication methods are defined by the types derived from the authenticationMethod resource type, and only the methods supported on this API version. See Azure AD authentication methods API overview for a list of currently supported methods.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

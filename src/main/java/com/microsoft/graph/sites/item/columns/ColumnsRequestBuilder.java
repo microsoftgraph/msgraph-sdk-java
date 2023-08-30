@@ -169,6 +169,16 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a columnsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ColumnsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ColumnsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [site][site].
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

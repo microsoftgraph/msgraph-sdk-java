@@ -178,6 +178,16 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a decisionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DecisionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DecisionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the decisions from a stage in a multi-stage access review. The decisions in an accessReviewStage object are represented by an accessReviewInstanceDecisionItem object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

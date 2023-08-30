@@ -87,6 +87,16 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a EducationSchoolItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public EducationSchoolItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new EducationSchoolItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * All schools that this class is associated with. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

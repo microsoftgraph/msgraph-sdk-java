@@ -87,6 +87,16 @@ public class GraphAdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a graphAdministrativeUnitRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GraphAdministrativeUnitRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GraphAdministrativeUnitRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the item of type microsoft.graph.directoryObject as microsoft.graph.administrativeUnit
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

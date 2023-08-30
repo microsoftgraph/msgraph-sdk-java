@@ -87,6 +87,16 @@ public class TaskRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a taskRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TaskRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TaskRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The related lifecycle workflow task.Supports $filter(eq, ne) and $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

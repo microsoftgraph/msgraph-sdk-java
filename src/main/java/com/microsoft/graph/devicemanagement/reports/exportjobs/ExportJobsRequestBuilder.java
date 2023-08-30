@@ -169,6 +169,16 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a exportJobsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ExportJobsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ExportJobsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List properties and relationships of the deviceManagementExportJob objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -165,6 +165,16 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a agreementAcceptancesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AgreementAcceptancesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AgreementAcceptancesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Represents the current status of a user's response to a company's customizable terms of use agreement.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

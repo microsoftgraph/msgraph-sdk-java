@@ -119,6 +119,16 @@ public class InReplyToRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a inReplyToRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public InReplyToRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new InReplyToRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Read-only. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

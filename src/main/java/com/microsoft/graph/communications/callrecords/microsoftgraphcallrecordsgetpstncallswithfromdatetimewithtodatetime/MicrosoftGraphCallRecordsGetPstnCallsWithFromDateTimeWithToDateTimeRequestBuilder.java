@@ -91,6 +91,16 @@ public class MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a microsoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function getPstnCalls
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -87,6 +87,16 @@ public class PerformedByRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a performedByRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PerformedByRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PerformedByRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Represents an identity used to identify who is responsible for the activity.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

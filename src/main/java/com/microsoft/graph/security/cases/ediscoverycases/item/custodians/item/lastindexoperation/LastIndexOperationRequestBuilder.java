@@ -89,6 +89,16 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a lastIndexOperationRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public LastIndexOperationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new LastIndexOperationRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -165,6 +165,16 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a presencesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PresencesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PresencesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a user's presence information.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

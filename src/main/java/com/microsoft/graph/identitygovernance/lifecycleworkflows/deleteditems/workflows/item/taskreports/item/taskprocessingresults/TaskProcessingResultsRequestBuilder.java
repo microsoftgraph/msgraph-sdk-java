@@ -110,6 +110,16 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a taskProcessingResultsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TaskProcessingResultsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TaskProcessingResultsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the task processing result resources from the taskReport.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

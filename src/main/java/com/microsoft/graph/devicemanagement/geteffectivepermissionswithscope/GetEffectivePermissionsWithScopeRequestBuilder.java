@@ -88,6 +88,16 @@ public class GetEffectivePermissionsWithScopeRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a getEffectivePermissionsWithScopeRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetEffectivePermissionsWithScopeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GetEffectivePermissionsWithScopeRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieves the effective permissions of the currently authenticated user
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

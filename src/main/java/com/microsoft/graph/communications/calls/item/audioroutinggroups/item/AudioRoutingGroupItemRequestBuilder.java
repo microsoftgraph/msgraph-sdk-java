@@ -195,6 +195,16 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a AudioRoutingGroupItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AudioRoutingGroupItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AudioRoutingGroupItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

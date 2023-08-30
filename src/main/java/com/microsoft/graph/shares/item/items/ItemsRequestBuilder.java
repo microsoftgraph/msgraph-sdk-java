@@ -108,6 +108,16 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a itemsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ItemsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ItemsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * All driveItems contained in the sharing root. This collection cannot be enumerated.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

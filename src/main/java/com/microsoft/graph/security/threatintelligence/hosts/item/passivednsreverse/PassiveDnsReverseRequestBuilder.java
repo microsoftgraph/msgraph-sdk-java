@@ -110,6 +110,16 @@ public class PassiveDnsReverseRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a passiveDnsReverseRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PassiveDnsReverseRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PassiveDnsReverseRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of passiveDnsRecord resources.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

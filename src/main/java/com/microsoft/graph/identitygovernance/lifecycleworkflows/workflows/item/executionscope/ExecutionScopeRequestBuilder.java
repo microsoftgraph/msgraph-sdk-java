@@ -108,6 +108,16 @@ public class ExecutionScopeRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a executionScopeRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ExecutionScopeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ExecutionScopeRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The unique identifier of the Azure AD identity that last modified the workflow object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

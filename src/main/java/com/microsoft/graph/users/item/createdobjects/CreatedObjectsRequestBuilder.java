@@ -118,6 +118,16 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a createdObjectsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CreatedObjectsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CreatedObjectsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -169,6 +169,16 @@ public class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a temporaryAccessPassMethodsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TemporaryAccessPassMethodsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TemporaryAccessPassMethodsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of a user's temporaryAccessPassAuthenticationMethod objects and their properties. This API will only return a single object in the collection as a user can have only one Temporary Access Pass method.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

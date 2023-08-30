@@ -167,6 +167,16 @@ public class ProvisioningRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a provisioningRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ProvisioningRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ProvisioningRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

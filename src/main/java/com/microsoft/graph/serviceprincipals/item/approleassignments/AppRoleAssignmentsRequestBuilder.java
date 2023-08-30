@@ -169,6 +169,16 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a appRoleAssignmentsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AppRoleAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AppRoleAssignmentsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * App role assignment for another app or service, granted to this service principal. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

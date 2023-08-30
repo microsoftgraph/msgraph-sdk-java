@@ -177,6 +177,16 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a contactsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ContactsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ContactsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a contact collection from the default contacts folder of the signed-in user. There are two scenarios where an app can get contacts in another user's contact folder:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

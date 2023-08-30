@@ -165,6 +165,16 @@ public class UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder extends
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userExperienceAnalyticsDeviceStartupProcessesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * User experience analytics device Startup Processes
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

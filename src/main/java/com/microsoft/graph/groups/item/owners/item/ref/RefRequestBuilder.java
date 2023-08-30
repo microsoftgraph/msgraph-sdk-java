@@ -85,6 +85,16 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a RefRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RefRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RefRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Remove an owner from a Microsoft 365 group or a security group through the owners navigation property. Once owners are assigned to a group, the last owner (a user object) of the group cannot be removed.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

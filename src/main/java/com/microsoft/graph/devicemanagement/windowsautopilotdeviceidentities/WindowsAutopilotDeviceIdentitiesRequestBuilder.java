@@ -169,6 +169,16 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a windowsAutopilotDeviceIdentitiesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public WindowsAutopilotDeviceIdentitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new WindowsAutopilotDeviceIdentitiesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List properties and relationships of the windowsAutopilotDeviceIdentity objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

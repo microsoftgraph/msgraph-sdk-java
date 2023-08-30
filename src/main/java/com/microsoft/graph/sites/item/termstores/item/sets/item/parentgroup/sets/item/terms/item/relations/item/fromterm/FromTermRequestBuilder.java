@@ -87,6 +87,16 @@ public class FromTermRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a fromTermRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public FromTermRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new FromTermRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

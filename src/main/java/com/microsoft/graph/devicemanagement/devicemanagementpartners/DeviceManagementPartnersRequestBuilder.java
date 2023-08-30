@@ -169,6 +169,16 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deviceManagementPartnersRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceManagementPartnersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeviceManagementPartnersRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List properties and relationships of the deviceManagementPartner objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

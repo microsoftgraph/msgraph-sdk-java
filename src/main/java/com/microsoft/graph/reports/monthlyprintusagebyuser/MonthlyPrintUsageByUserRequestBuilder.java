@@ -167,6 +167,16 @@ public class MonthlyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a monthlyPrintUsageByUserRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MonthlyPrintUsageByUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MonthlyPrintUsageByUserRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of monthly print usage summaries, grouped by user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -169,6 +169,16 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a siteListsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SiteListsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SiteListsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the browserSiteList objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

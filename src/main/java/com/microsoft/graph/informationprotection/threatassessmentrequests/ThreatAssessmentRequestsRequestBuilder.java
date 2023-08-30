@@ -169,6 +169,16 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a threatAssessmentRequestsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ThreatAssessmentRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ThreatAssessmentRequestsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

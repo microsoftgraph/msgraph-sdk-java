@@ -169,6 +169,16 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a calendarPermissionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CalendarPermissionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CalendarPermissionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a collection of calendarPermission resources that describe the identity and roles of users with whom the specified calendar has been shared or delegated. Here, the calendar can be a user calendar or group calendar.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

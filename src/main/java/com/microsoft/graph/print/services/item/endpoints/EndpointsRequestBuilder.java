@@ -167,6 +167,16 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a endpointsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public EndpointsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new EndpointsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of endpoints exposed by a print service.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

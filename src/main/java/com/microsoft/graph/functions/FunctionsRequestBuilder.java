@@ -165,6 +165,16 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a functionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public FunctionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new FunctionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get entities from functions
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -87,6 +87,16 @@ public class ParentSectionGroupRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a parentSectionGroupRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ParentSectionGroupRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ParentSectionGroupRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The section group that contains the section group. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

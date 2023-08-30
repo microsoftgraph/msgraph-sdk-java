@@ -134,6 +134,16 @@ public class OwnedObjectsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a ownedObjectsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public OwnedObjectsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new OwnedObjectsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand, $select nested in $expand, and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

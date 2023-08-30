@@ -87,6 +87,16 @@ public class LastSevenDaysRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a lastSevenDaysRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public LastSevenDaysRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new LastSevenDaysRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get lastSevenDays from drives
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

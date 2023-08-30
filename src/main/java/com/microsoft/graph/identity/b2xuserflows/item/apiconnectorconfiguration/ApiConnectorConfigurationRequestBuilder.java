@@ -103,6 +103,16 @@ public class ApiConnectorConfigurationRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a apiConnectorConfigurationRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ApiConnectorConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ApiConnectorConfigurationRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

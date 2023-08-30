@@ -167,6 +167,16 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a plansRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PlansRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PlansRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of plannerplan objects shared with a user object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -167,6 +167,16 @@ public class OverridesPagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a overridesPagesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public OverridesPagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new OverridesPagesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the userFlowLanguagePage resources from the overridesPages navigation property. These pages are used to customize the values shown to the user during a user journey in a user flow.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

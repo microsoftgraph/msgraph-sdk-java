@@ -173,6 +173,16 @@ public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a federationConfigurationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public FederationConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new FederationConfigurationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

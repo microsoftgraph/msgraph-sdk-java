@@ -175,6 +175,16 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a onlineMeetingsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public OnlineMeetingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new OnlineMeetingsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

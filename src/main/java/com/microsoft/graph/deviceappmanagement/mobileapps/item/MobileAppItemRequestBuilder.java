@@ -77,17 +77,17 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a managedAndroidStoreApp.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-managedandroidstoreapp-delete?view=graph-rest-1.0">Find more info here</a>
+     * Deletes a managedIOSLobApp.
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-managedioslobapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         return delete(null);
     }
     /**
-     * Deletes a managedAndroidStoreApp.
+     * Deletes a managedIOSLobApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-managedandroidstoreapp-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-managedioslobapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -98,19 +98,19 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read properties and relationships of the androidLobApp object.
+     * Read properties and relationships of the win32LobApp object.
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-androidlobapp-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-win32lobapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the androidLobApp object.
+     * Read properties and relationships of the win32LobApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-androidlobapp-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-win32lobapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,21 +121,21 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, MobileApp::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a iosLobApp object.
+     * Update the properties of a webApp object.
      * @param body The request body
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-ioslobapp-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-webapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> patch(@jakarta.annotation.Nonnull final MobileApp body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a iosLobApp object.
+     * Update the properties of a webApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-ioslobapp-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-webapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> patch(@jakarta.annotation.Nonnull final MobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -147,7 +147,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, MobileApp::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Deletes a managedAndroidStoreApp.
+     * Deletes a managedIOSLobApp.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +155,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a managedAndroidStoreApp.
+     * Deletes a managedIOSLobApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -174,7 +174,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the androidLobApp object.
+     * Read properties and relationships of the win32LobApp object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -182,7 +182,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the androidLobApp object.
+     * Read properties and relationships of the win32LobApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -203,7 +203,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a iosLobApp object.
+     * Update the properties of a webApp object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -212,7 +212,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a iosLobApp object.
+     * Update the properties of a webApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -235,13 +235,23 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a MobileAppItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MobileAppItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MobileAppItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the androidLobApp object.
+     * Read properties and relationships of the win32LobApp object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

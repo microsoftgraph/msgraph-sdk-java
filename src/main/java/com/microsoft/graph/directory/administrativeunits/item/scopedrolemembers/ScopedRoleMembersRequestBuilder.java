@@ -169,6 +169,16 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a scopedRoleMembersRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ScopedRoleMembersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ScopedRoleMembersRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List Azure Active Directory (Azure AD) role assignments with administrative unit scope.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

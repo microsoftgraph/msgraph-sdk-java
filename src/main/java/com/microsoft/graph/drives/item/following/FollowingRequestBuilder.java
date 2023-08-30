@@ -110,6 +110,16 @@ public class FollowingRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a followingRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public FollowingRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new FollowingRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

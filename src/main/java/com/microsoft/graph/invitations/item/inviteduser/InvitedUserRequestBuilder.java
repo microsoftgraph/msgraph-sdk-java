@@ -95,6 +95,16 @@ public class InvitedUserRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a invitedUserRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public InvitedUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new InvitedUserRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The user created as part of the invitation creation. Read-Only
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

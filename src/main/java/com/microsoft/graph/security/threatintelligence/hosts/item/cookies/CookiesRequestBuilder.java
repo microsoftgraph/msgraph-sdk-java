@@ -110,6 +110,16 @@ public class CookiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a cookiesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CookiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CookiesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of hostCookie resources.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

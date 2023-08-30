@@ -169,6 +169,16 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a listsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ListsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ListsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

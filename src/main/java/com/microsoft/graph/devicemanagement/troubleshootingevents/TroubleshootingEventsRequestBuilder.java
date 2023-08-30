@@ -165,6 +165,16 @@ public class TroubleshootingEventsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a troubleshootingEventsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TroubleshootingEventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TroubleshootingEventsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The list of troubleshooting events for the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

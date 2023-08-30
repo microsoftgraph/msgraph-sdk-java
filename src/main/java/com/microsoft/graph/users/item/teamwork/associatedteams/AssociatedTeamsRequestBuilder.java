@@ -167,6 +167,16 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a associatedTeamsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AssociatedTeamsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AssociatedTeamsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the list of teams in Microsoft Teams that a user is associated with.Currently, a user can be associated with a team in two different ways:* A user can be a direct member of a team.* A user can be a member of a shared channel that is hosted inside a team.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

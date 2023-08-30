@@ -167,6 +167,16 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a componentsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ComponentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ComponentsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the microsoft.graph.security.vulnerabilityComponent objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

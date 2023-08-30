@@ -87,6 +87,16 @@ public class RequestorRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a requestorRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RequestorRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RequestorRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

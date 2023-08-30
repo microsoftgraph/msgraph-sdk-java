@@ -90,7 +90,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The unique idenfier for an entity. Read-only.
+     * The unique identifier for an entity. Read-only.
      */
     private String id;
     /**
@@ -943,7 +943,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The unique idenfier for an entity. Read-only.
+     * Gets the id property value. The unique identifier for an entity. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -976,7 +976,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the id property value. The unique idenfier for an entity. Read-only.
+     * Sets the id property value. The unique identifier for an entity. Read-only.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {

@@ -86,6 +86,16 @@ public class GetActivitiesByIntervalRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a getActivitiesByIntervalRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetActivitiesByIntervalRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GetActivitiesByIntervalRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function getActivitiesByInterval
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -87,6 +87,16 @@ public class OAuth2PermissionGrantItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a OAuth2PermissionGrantItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public OAuth2PermissionGrantItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new OAuth2PermissionGrantItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get oauth2PermissionGrants from users
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

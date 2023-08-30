@@ -110,6 +110,16 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a indicatorsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public IndicatorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new IndicatorsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of articleIndicator objects that represent indicators of threat or compromise related to the contents of an article.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -165,6 +165,16 @@ public class AssignmentPoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a assignmentPoliciesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AssignmentPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AssignmentPoliciesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Read-only. Nullable. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

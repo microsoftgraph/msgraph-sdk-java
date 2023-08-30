@@ -165,6 +165,16 @@ public class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deviceCompliancePolicyStatesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceCompliancePolicyStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeviceCompliancePolicyStatesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Device compliance policy states for this device.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

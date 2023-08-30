@@ -190,6 +190,16 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a calendarRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CalendarRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CalendarRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the properties and relationships of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

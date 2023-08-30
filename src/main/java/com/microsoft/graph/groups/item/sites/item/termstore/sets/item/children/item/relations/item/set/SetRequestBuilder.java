@@ -87,6 +87,16 @@ public class SetRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a setRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SetRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SetRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The [set] in which the relation is relevant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

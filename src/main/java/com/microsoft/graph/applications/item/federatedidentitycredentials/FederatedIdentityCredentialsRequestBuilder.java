@@ -169,6 +169,16 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a federatedIdentityCredentialsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public FederatedIdentityCredentialsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new FederatedIdentityCredentialsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the federatedIdentityCredential objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

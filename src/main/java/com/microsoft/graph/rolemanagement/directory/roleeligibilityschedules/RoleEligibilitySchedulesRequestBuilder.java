@@ -178,6 +178,16 @@ public class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a roleEligibilitySchedulesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RoleEligibilitySchedulesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RoleEligibilitySchedulesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the unifiedRoleEligibilitySchedule resources from the roleEligibilitySchedules navigation property.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

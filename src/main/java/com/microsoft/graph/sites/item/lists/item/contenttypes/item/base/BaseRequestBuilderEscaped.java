@@ -87,6 +87,16 @@ public class BaseRequestBuilderEscaped extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a baseRequestBuilderEscaped
+     */
+    @jakarta.annotation.Nonnull
+    public BaseRequestBuilderEscaped withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new BaseRequestBuilderEscaped(rawUrl, requestAdapter);
+    }
+    /**
      * Parent contentType from which this content type is derived.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

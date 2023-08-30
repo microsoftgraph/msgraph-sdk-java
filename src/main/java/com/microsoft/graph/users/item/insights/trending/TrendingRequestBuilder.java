@@ -167,6 +167,16 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a trendingRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TrendingRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TrendingRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Calculated insight that includes a list of documents trending around the user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

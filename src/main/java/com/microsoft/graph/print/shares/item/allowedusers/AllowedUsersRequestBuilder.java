@@ -118,6 +118,16 @@ public class AllowedUsersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a allowedUsersRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AllowedUsersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AllowedUsersRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -91,17 +91,19 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/permissionGrants{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get permissionGrants from groups
+     * List all resource-specific permission grants on the team. This list specifies the Azure AD apps that have access to the team, along with each app's corresponding type of resource-specific access.
      * @return a CompletableFuture of resourceSpecificPermissionGrantCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/team-list-permissiongrants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrantCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Get permissionGrants from groups
+     * List all resource-specific permission grants on the team. This list specifies the Azure AD apps that have access to the team, along with each app's corresponding type of resource-specific access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of resourceSpecificPermissionGrantCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/team-list-permissiongrants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrantCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -136,7 +138,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ResourceSpecificPermissionGrant::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get permissionGrants from groups
+     * List all resource-specific permission grants on the team. This list specifies the Azure AD apps that have access to the team, along with each app's corresponding type of resource-specific access.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -144,7 +146,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get permissionGrants from groups
+     * List all resource-specific permission grants on the team. This list specifies the Azure AD apps that have access to the team, along with each app's corresponding type of resource-specific access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,7 +199,17 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get permissionGrants from groups
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a permissionGrantsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PermissionGrantsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PermissionGrantsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * List all resource-specific permission grants on the team. This list specifies the Azure AD apps that have access to the team, along with each app's corresponding type of resource-specific access.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

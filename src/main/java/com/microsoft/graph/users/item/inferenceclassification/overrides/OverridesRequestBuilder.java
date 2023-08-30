@@ -169,6 +169,16 @@ public class OverridesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a overridesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public OverridesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new OverridesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the overrides that a user has set up to always classify messages from certain senders in specific ways. Each override corresponds to an SMTP address of a sender. Initially, a user does not have any overrides.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

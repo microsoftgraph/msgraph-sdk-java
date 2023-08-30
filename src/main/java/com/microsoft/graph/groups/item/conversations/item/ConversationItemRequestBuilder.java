@@ -66,19 +66,19 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * The group's conversations.
+     * Retrieve the properties and relationships of conversation object.
      * @return a CompletableFuture of conversation
-     * @see <a href="https://learn.microsoft.com/graph/api/group-get-conversation?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conversation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Conversation> get() {
         return get(null);
     }
     /**
-     * The group's conversations.
+     * Retrieve the properties and relationships of conversation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conversation
-     * @see <a href="https://learn.microsoft.com/graph/api/group-get-conversation?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conversation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Conversation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -116,7 +116,7 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The group's conversations.
+     * Retrieve the properties and relationships of conversation object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The group's conversations.
+     * Retrieve the properties and relationships of conversation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,13 +145,23 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a ConversationItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ConversationItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ConversationItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The group's conversations.
+     * Retrieve the properties and relationships of conversation object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

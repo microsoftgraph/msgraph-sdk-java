@@ -110,6 +110,16 @@ public class DomainNameReferencesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a domainNameReferencesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DomainNameReferencesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DomainNameReferencesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

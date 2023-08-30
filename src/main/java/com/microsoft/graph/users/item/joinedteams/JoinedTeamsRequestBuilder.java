@@ -175,6 +175,16 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a joinedTeamsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public JoinedTeamsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new JoinedTeamsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the teams in Microsoft Teams that the user is a direct member of.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

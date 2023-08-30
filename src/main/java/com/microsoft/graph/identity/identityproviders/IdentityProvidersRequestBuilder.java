@@ -177,6 +177,16 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a identityProvidersRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public IdentityProvidersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new IdentityProvidersRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a collection of identity provider resources that are configured for a tenant, and that are derived from identityProviderBase. For an Azure AD tenant, the providers can be socialIdentityProviders or builtinIdentityProviders objects. For an Azure AD B2C, the providers can be socialIdentityProvider, or appleManagedIdentityProvider objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

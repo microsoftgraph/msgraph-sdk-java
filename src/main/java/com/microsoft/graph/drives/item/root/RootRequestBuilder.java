@@ -97,6 +97,16 @@ public class RootRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a rootRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RootRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RootRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the metadata for a driveItem in a drive by file system path or ID.item-id is the ID of a driveItem. It may also be the unique ID of a SharePoint list item.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

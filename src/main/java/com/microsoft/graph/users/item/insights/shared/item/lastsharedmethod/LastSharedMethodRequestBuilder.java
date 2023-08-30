@@ -87,6 +87,16 @@ public class LastSharedMethodRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a lastSharedMethodRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public LastSharedMethodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new LastSharedMethodRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get lastSharedMethod from users
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

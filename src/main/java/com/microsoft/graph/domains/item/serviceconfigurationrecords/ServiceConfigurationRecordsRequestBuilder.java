@@ -167,6 +167,16 @@ public class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a serviceConfigurationRecordsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceConfigurationRecordsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ServiceConfigurationRecordsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieves a list of domainDnsRecord objects needed to enable services for the domain. Use the returned list to add records to the zone file of the domain. This can be done through the domain registrar or DNS server configuration.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

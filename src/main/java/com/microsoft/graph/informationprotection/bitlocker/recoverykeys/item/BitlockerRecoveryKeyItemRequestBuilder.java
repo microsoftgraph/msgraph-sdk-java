@@ -89,6 +89,16 @@ public class BitlockerRecoveryKeyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a BitlockerRecoveryKeyItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public BitlockerRecoveryKeyItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new BitlockerRecoveryKeyItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the properties and relationships of a bitlockerRecoveryKey object.  By default, this operation does not return the key property that represents the actual recovery key. To include the key property in the response, use the $select OData query parameter. Including the $select query parameter triggers an Azure AD audit of the operation and generates an audit log. For more information on audit logs for bitlocker recovery keys, see the KeyManagement category filter of Azure AD audit logs.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

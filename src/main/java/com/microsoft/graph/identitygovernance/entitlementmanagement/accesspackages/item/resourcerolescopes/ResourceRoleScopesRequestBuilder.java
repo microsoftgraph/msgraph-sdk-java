@@ -167,6 +167,16 @@ public class ResourceRoleScopesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a resourceRoleScopesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ResourceRoleScopesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ResourceRoleScopesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The resource roles and scopes in this access package.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

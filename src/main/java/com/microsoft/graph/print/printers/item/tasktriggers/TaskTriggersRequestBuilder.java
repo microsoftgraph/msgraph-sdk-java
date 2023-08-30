@@ -169,6 +169,16 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a taskTriggersRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TaskTriggersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TaskTriggersRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of task triggers associated with the printer. The list of task triggers defines which tasks will be triggered as a result of events that occur during printing. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

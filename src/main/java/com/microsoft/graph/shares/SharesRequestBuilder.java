@@ -165,6 +165,16 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a sharesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SharesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SharesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Access a shared DriveItem or a collection of shared items by using a shareId or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

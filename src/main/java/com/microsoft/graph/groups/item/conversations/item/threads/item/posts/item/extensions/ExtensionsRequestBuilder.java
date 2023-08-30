@@ -165,6 +165,16 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a extensionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ExtensionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ExtensionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

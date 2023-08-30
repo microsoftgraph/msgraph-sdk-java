@@ -178,6 +178,16 @@ public class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a roleAssignmentScheduleInstancesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RoleAssignmentScheduleInstancesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RoleAssignmentScheduleInstancesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

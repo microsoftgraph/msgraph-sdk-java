@@ -87,6 +87,16 @@ public class HostRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a hostRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public HostRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new HostRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Indicates that a cookie of this name and domain was found related to this host.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

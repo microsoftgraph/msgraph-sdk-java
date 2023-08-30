@@ -93,6 +93,16 @@ public class GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTim
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a getGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function getGroupArchivedPrintJobs
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

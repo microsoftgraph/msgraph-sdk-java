@@ -169,6 +169,16 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a historyDefinitionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public HistoryDefinitionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new HistoryDefinitionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

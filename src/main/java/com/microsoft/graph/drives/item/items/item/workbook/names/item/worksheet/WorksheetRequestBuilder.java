@@ -87,6 +87,16 @@ public class WorksheetRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a worksheetRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public WorksheetRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new WorksheetRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

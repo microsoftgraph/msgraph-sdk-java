@@ -78,7 +78,7 @@ public class Team extends Entity implements Parsable {
      */
     private java.util.List<TeamsAsyncOperation> operations;
     /**
-     * The permissionGrants property
+     * A collection of permissions granted to apps to access the team.
      */
     private java.util.List<ResourceSpecificPermissionGrant> permissionGrants;
     /**
@@ -311,7 +311,7 @@ public class Team extends Entity implements Parsable {
         return this.operations;
     }
     /**
-     * Gets the permissionGrants property value. The permissionGrants property
+     * Gets the permissionGrants property value. A collection of permissions granted to apps to access the team.
      * @return a resourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nullable
@@ -554,7 +554,7 @@ public class Team extends Entity implements Parsable {
         this.operations = value;
     }
     /**
-     * Sets the permissionGrants property value. The permissionGrants property
+     * Sets the permissionGrants property value. A collection of permissions granted to apps to access the team.
      * @param value Value to set for the permissionGrants property.
      */
     public void setPermissionGrants(@jakarta.annotation.Nullable final java.util.List<ResourceSpecificPermissionGrant> value) {

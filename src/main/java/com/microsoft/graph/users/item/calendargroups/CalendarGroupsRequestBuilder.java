@@ -169,6 +169,16 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a calendarGroupsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CalendarGroupsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CalendarGroupsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the user's calendar groups.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

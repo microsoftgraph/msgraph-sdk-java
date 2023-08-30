@@ -167,6 +167,16 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a learningContentsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public LearningContentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new LearningContentsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

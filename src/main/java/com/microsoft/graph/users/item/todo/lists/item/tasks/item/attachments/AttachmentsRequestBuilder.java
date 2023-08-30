@@ -177,6 +177,16 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a attachmentsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AttachmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AttachmentsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the taskFileAttachment objects and their properties. The contentBytes property will not be returned in the response. Use the Get attachment API to view the contentBytes.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
