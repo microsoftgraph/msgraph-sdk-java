@@ -165,6 +165,16 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a operationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public OperationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new OperationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the status of a long-running operation, represented by a longRunningOperation object. A long-running operation is initiated when you reset a user's password. This resource type is also the base type for the richLongRunningOperation object that represents the status of a long-running operation on a site or a list. The possible states of the long-running operation are notStarted, running, succeeded, failed, unknownFutureValue where succeeded and failed are terminal states.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -177,6 +177,16 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a assignmentCategoriesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AssignmentCategoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AssignmentCategoriesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

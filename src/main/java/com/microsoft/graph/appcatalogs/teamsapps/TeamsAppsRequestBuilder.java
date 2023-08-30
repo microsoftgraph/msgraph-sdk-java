@@ -169,6 +169,16 @@ public class TeamsAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a teamsAppsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TeamsAppsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TeamsAppsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List apps from the Microsoft Teams app catalog.This includes apps from the Microsoft Teams store, as well as apps from your organization's app catalog (the tenant app catalog). To get apps from your organization's app catalog only, specify organization as the distributionMethod in the request.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

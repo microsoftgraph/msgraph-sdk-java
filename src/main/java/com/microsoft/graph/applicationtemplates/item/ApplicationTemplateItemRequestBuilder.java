@@ -97,6 +97,16 @@ public class ApplicationTemplateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a ApplicationTemplateItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ApplicationTemplateItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ApplicationTemplateItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the properties of an applicationTemplate object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

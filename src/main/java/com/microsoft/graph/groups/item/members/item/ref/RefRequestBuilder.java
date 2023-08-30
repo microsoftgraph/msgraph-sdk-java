@@ -85,6 +85,16 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a RefRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RefRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RefRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Remove a member from a group via the members navigation property. You can't remove a member from groups with dynamic memberships.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

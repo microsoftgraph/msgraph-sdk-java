@@ -87,6 +87,16 @@ public class GraphAppRoleAssignmentRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a graphAppRoleAssignmentRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GraphAppRoleAssignmentRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GraphAppRoleAssignmentRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the item of type microsoft.graph.directoryObject as microsoft.graph.appRoleAssignment
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

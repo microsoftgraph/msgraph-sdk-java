@@ -108,6 +108,16 @@ public class BaseTypesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a baseTypesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public BaseTypesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new BaseTypesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The collection of content types that are ancestors of this content type.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

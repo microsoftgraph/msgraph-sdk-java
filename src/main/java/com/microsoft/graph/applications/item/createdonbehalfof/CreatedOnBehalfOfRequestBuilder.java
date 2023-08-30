@@ -87,6 +87,16 @@ public class CreatedOnBehalfOfRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a createdOnBehalfOfRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CreatedOnBehalfOfRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CreatedOnBehalfOfRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Supports $filter (/$count eq 0, /$count ne 0). Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

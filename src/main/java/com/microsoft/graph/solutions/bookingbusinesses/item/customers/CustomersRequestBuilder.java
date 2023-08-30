@@ -169,6 +169,16 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a customersRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CustomersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CustomersRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of bookingCustomer objects of a business.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

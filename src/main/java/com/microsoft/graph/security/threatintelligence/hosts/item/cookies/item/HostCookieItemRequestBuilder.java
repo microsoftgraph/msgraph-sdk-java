@@ -87,6 +87,16 @@ public class HostCookieItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a HostCookieItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public HostCookieItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new HostCookieItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The hostCookies that are associated with this host.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

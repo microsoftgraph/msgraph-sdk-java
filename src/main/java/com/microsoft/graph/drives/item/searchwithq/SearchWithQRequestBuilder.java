@@ -88,6 +88,16 @@ public class SearchWithQRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a searchWithQRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SearchWithQRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SearchWithQRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function search
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

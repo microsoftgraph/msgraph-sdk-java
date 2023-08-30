@@ -126,6 +126,16 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a transitiveMemberOfRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TransitiveMemberOfRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TransitiveMemberOfRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

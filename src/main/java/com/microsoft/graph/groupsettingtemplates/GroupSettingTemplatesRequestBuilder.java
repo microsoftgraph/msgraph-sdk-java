@@ -199,6 +199,16 @@ public class GroupSettingTemplatesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a groupSettingTemplatesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GroupSettingTemplatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GroupSettingTemplatesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Group setting templates represents a set of templates from which group settings may be created and used within a tenant. This operation retrieves the list of available groupSettingTemplates objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

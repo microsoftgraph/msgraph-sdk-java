@@ -165,6 +165,16 @@ public class UserExperienceAnalyticsModelScoresRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userExperienceAnalyticsModelScoresRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserExperienceAnalyticsModelScoresRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserExperienceAnalyticsModelScoresRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * User experience analytics model scores
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -89,6 +89,16 @@ public class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a TaskDefinitionItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TaskDefinitionItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TaskDefinitionItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Read the details of a built-in workflow task.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

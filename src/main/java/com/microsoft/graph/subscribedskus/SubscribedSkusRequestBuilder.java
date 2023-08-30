@@ -159,6 +159,16 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a subscribedSkusRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SubscribedSkusRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SubscribedSkusRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Azure portal or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

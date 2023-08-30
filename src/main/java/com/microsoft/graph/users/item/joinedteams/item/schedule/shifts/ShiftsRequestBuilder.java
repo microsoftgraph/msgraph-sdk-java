@@ -169,6 +169,16 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a shiftsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ShiftsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ShiftsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the list of shift instances in a schedule.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

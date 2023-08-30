@@ -93,6 +93,16 @@ public class MarkReadRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a markReadRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MarkReadRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MarkReadRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

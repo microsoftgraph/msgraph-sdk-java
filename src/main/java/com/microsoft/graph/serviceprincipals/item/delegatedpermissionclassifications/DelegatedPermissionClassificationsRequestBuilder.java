@@ -169,6 +169,16 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a delegatedPermissionClassificationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DelegatedPermissionClassificationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DelegatedPermissionClassificationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

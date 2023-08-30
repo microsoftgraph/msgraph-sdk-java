@@ -169,6 +169,16 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a checklistItemsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ChecklistItemsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ChecklistItemsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

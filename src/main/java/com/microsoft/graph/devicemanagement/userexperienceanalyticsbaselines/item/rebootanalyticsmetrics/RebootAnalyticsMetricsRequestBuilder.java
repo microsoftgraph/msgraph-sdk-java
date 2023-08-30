@@ -87,6 +87,16 @@ public class RebootAnalyticsMetricsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a rebootAnalyticsMetricsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RebootAnalyticsMetricsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RebootAnalyticsMetricsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The scores and insights for the reboot analytics metrics.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

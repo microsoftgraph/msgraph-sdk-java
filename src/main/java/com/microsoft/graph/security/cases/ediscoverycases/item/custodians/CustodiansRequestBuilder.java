@@ -185,6 +185,16 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a custodiansRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CustodiansRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CustodiansRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the custodian objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

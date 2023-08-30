@@ -167,6 +167,16 @@ public class ContactedReviewersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a contactedReviewersRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ContactedReviewersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ContactedReviewersRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the reviewers for an access review instance, irrespective of whether or not they have received a notification. The reviewers are represented by an accessReviewReviewer object. A list of zero or more objects are returned, including all of their nested properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

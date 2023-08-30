@@ -92,6 +92,16 @@ public class LowerRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a lowerRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public LowerRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new LowerRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -145,6 +145,16 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a RefRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RefRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RefRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

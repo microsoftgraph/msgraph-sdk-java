@@ -185,6 +185,16 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userAttributeAssignmentsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserAttributeAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserAttributeAssignmentsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

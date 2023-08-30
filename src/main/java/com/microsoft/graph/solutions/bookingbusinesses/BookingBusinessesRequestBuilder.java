@@ -169,6 +169,16 @@ public class BookingBusinessesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a bookingBusinessesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public BookingBusinessesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new BookingBusinessesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a collection of bookingBusiness objects that has been created for the tenant. This operation returns only the id and displayName of each Microsoft Bookings business in the collection. For performance considerations, it does not return other properties. You can get the other properties of a Bookings business by specifying its id in a GET operation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

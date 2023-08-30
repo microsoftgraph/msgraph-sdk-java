@@ -87,6 +87,16 @@ public class ParentHostRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a parentHostRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ParentHostRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ParentHostRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The parent host related to this passiveDnsRecord entry. Generally, this is the value that you can search to discover this passiveDnsRecord value.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

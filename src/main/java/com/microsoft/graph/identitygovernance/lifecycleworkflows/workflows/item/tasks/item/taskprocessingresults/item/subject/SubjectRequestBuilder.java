@@ -95,6 +95,16 @@ public class SubjectRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a subjectRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SubjectRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SubjectRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The unique identifier of the Azure AD user targeted for the task execution.Supports $filter(eq, ne) and $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

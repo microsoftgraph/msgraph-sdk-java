@@ -165,6 +165,16 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a questionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public QuestionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new QuestionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Questions that are posed to the  requestor.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

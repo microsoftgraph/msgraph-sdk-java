@@ -97,6 +97,16 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the simple directory user that corresponds to this educationUser.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

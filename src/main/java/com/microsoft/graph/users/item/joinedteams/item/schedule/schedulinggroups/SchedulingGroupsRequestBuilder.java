@@ -169,6 +169,16 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a schedulingGroupsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SchedulingGroupsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SchedulingGroupsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the list of schedulingGroups in this schedule.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

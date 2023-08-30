@@ -62,7 +62,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of chartseries objects.
      * @return a CompletableFuture of workbookChartSeriesCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/chart-list-series?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chartseries-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartSeriesCollectionResponse> get() {
@@ -72,7 +72,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of chartseries objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartSeriesCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/chart-list-series?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chartseries-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartSeriesCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -178,6 +178,16 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a seriesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SeriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SeriesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Retrieve a list of chartseries objects.

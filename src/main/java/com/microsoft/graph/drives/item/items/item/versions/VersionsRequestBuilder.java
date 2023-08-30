@@ -167,6 +167,16 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a versionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public VersionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new VersionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * OneDrive and SharePoint can be configured to retain the history for files.Depending on the service and configuration, a new version can be created for each edit, each time the file is saved, manually, or never. Previous versions of a document may be retained for a finite period of time depending on admin settings which may be unique per user or location.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

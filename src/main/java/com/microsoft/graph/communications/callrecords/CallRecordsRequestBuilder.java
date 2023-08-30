@@ -192,6 +192,16 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a callRecordsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CallRecordsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CallRecordsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

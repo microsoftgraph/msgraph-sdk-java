@@ -209,6 +209,16 @@ public class InternalSponsorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a internalSponsorsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public InternalSponsorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new InternalSponsorsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of a connectedOrganization's internal sponsors.  The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

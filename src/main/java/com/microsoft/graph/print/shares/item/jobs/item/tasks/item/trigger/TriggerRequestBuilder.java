@@ -87,6 +87,16 @@ public class TriggerRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a triggerRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TriggerRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TriggerRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The printTaskTrigger that triggered this task's execution. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

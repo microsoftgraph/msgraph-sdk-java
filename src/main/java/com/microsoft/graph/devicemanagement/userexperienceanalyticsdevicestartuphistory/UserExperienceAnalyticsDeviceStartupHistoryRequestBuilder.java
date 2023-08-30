@@ -165,6 +165,16 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder extends B
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userExperienceAnalyticsDeviceStartupHistoryRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * User experience analytics device Startup History
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

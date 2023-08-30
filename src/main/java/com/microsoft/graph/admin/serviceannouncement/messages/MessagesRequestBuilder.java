@@ -215,6 +215,16 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a messagesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MessagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MessagesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the serviceUpdateMessage resources from the messages navigation property. This operation retrieves all service update messages that exist for the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

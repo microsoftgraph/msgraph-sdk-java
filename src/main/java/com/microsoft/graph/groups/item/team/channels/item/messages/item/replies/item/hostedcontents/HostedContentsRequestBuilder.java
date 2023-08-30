@@ -167,6 +167,16 @@ public class HostedContentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a hostedContentsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public HostedContentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new HostedContentsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

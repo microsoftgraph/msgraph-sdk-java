@@ -88,6 +88,16 @@ public class SupportedLanguagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a supportedLanguagesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SupportedLanguagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SupportedLanguagesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language by getting the user's mailbox settings.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

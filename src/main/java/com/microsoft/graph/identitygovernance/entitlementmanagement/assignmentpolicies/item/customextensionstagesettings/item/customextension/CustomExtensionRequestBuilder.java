@@ -87,6 +87,16 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a customExtensionRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CustomExtensionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CustomExtensionRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

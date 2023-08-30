@@ -169,6 +169,16 @@ public class AssignmentPoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a assignmentPoliciesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AssignmentPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AssignmentPoliciesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * In Azure AD entitlement management, retrieve a list of accessPackageAssignmentPolicy objects. If the delegated user is in a directory role, the resulting list includes all the assignment policies that the caller has access to read, across all catalogs and access packages. If the delegated user is an access package manager or catalog owner, they should instead retrieve the policies for the access packages they can read with list accessPackages by including $expand=accessPackageAssignmentPolicies as a query parameter.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

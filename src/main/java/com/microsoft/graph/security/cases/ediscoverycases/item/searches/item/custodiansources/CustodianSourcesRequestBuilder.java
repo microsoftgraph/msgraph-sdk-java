@@ -110,6 +110,16 @@ public class CustodianSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a custodianSourcesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CustodianSourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CustodianSourcesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the list of custodial data sources associated with an eDiscovery search.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -110,6 +110,16 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a peopleRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PeopleRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PeopleRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a collection of person objects ordered by their relevance to the user, which is determined by the user's communication and collaboration patterns, and business relationships. You can get this information via the People API. For examples, see the Examples section and the article Use the People API to get information about the people most relevant to you.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

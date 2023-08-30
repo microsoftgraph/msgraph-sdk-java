@@ -110,6 +110,16 @@ public class FollowedSitesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a followedSitesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public FollowedSitesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new FollowedSitesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List the sites that have been followed by the signed in user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

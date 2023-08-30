@@ -167,6 +167,16 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a attendanceReportsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AttendanceReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AttendanceReportsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of meetingAttendanceReport objects for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -86,6 +86,16 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a getAttackSimulationTrainingUserCoverageRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetAttackSimulationTrainingUserCoverageRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GetAttackSimulationTrainingUserCoverageRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function getAttackSimulationTrainingUserCoverage
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -88,6 +88,16 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deltaRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeltaRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeltaRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a set of contacts that have been added, deleted, or updated in a specified folder. A delta function call for contacts in a folder is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the contacts in that folder. This allows you to maintain and synchronize a local store of a user's contacts without having to fetch the entire set of contacts from the server every time.  
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

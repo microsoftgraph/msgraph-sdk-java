@@ -116,6 +116,16 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a createdObjectsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CreatedObjectsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CreatedObjectsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Directory objects created by this service principal. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

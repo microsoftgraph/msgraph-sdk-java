@@ -92,6 +92,16 @@ public class ImLog2RequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a imLog2RequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ImLog2RequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ImLog2RequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

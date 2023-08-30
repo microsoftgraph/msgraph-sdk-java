@@ -177,6 +177,16 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a repliesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RepliesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RepliesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -165,6 +165,16 @@ public class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a protectedAppLockerFilesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ProtectedAppLockerFilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ProtectedAppLockerFilesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Another way to input protected apps through xml files
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

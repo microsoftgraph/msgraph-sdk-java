@@ -67,19 +67,19 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/messages/{message%2Did}/attachments{?%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of attachment objects.
+     * Retrieve a list of attachment objects attached to a message.
      * @return a CompletableFuture of attachmentCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/eventmessage-list-attachments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/message-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Retrieve a list of attachment objects.
+     * Retrieve a list of attachment objects attached to a message.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of attachmentCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/eventmessage-list-attachments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/message-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -116,7 +116,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Attachment::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of attachment objects.
+     * Retrieve a list of attachment objects attached to a message.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of attachment objects.
+     * Retrieve a list of attachment objects attached to a message.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +177,17 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of attachment objects.
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a attachmentsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AttachmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AttachmentsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Retrieve a list of attachment objects attached to a message.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -178,6 +178,16 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a stagesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public StagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new StagesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the stages in a multi-stage access review instance.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -118,6 +118,16 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a calendarViewRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CalendarViewRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CalendarViewRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar (../me/calendarView) or some other calendar of the user's.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -108,6 +108,16 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a drivesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DrivesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DrivesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The group's drives. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

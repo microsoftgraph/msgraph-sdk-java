@@ -105,6 +105,16 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a UserProcessingResultItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserProcessingResultItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserProcessingResultItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the user processing result of a user processing result of a run.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

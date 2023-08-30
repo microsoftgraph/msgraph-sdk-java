@@ -169,6 +169,16 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a swapShiftsChangeRequestsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SwapShiftsChangeRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SwapShiftsChangeRequestsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of swapShiftsChangeRequest objects in the team.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

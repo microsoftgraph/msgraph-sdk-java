@@ -150,6 +150,16 @@ public class RegisteredOwnersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a registeredOwnersRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RegisteredOwnersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RegisteredOwnersRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Read-only. Nullable. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

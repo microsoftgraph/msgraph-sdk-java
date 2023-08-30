@@ -87,6 +87,16 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a TokenLifetimePolicyItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TokenLifetimePolicyItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TokenLifetimePolicyItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The tokenLifetimePolicies assigned to this service principal.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

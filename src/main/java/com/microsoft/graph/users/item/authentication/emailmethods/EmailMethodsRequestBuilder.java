@@ -169,6 +169,16 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a emailMethodsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public EmailMethodsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new EmailMethodsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of a user's emailAuthenticationMethod objects and their properties. This API will return only a single object in the collection as only one email method can be set for a user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

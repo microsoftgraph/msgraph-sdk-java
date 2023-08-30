@@ -167,6 +167,16 @@ public class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a roleManagementPolicyAssignmentsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RoleManagementPolicyAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RoleManagementPolicyAssignmentsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the details of all role management policy assignments including the policies and rules associated with the Azure AD roles.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

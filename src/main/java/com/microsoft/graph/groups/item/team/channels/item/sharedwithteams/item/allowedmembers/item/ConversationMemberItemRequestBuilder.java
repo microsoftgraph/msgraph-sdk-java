@@ -87,6 +87,16 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a ConversationMemberItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ConversationMemberItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ConversationMemberItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * A collection of team members who have access to the shared channel.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -87,6 +87,16 @@ public class ActivatedUsingRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a activatedUsingRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ActivatedUsingRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ActivatedUsingRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it's null. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

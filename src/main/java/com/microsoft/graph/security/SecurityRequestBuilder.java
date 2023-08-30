@@ -231,6 +231,16 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a securityRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SecurityRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SecurityRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get security
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

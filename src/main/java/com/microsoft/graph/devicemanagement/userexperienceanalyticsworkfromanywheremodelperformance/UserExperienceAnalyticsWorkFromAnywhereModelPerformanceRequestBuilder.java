@@ -165,6 +165,16 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuild
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The user experience analytics work from anywhere model performance
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

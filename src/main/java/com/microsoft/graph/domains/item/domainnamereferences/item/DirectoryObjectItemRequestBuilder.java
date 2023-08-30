@@ -87,6 +87,16 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a DirectoryObjectItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DirectoryObjectItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DirectoryObjectItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The objects such as users and groups that reference the domain ID. Read-only, Nullable. Supports $expand and $filter by the OData type of objects returned. For example /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

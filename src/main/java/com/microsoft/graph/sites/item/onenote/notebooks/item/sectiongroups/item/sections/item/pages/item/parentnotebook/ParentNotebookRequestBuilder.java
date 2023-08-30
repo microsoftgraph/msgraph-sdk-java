@@ -87,6 +87,16 @@ public class ParentNotebookRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a parentNotebookRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ParentNotebookRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ParentNotebookRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The notebook that contains the page.  Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

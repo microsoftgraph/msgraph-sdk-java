@@ -165,6 +165,16 @@ public class UserExperienceAnalyticsCategoriesRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userExperienceAnalyticsCategoriesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserExperienceAnalyticsCategoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserExperienceAnalyticsCategoriesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * User experience analytics categories
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -87,6 +87,16 @@ public class UserAttributeRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userAttributeRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserAttributeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserAttributeRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The user attribute that you want to add to your user flow.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

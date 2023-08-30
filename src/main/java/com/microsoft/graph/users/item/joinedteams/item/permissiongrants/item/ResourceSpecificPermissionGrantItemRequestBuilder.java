@@ -96,7 +96,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get permissionGrants from users
+     * A collection of permissions granted to apps to access the team.
      * @return a CompletableFuture of resourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
@@ -104,7 +104,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
         return get(null);
     }
     /**
-     * Get permissionGrants from users
+     * A collection of permissions granted to apps to access the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of resourceSpecificPermissionGrant
      */
@@ -168,7 +168,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Get permissionGrants from users
+     * A collection of permissions granted to apps to access the team.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -176,7 +176,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * Get permissionGrants from users
+     * A collection of permissions granted to apps to access the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -229,13 +229,23 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a ResourceSpecificPermissionGrantItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ResourceSpecificPermissionGrantItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ResourceSpecificPermissionGrantItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get permissionGrants from users
+     * A collection of permissions granted to apps to access the team.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

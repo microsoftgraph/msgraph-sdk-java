@@ -108,6 +108,16 @@ public class ColumnPositionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a columnPositionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ColumnPositionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ColumnPositionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Column order information in a content type.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -177,6 +177,16 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a messagesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MessagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MessagesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The messages in a mailbox or folder. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

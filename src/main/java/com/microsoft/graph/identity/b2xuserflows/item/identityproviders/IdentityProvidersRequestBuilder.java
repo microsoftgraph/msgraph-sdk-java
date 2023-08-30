@@ -128,6 +128,19 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a identityProvidersRequestBuilder
+     * @deprecated
+     * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public IdentityProvidersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new IdentityProvidersRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the identity providers in a b2xIdentityUserFlow object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

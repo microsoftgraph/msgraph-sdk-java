@@ -71,7 +71,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of chart objects.
      * @return a CompletableFuture of workbookChartCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list-charts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chart-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartCollectionResponse> get() {
@@ -81,7 +81,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of chart objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list-charts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chart-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -197,6 +197,16 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a chartsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ChartsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ChartsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Retrieve a list of chart objects.

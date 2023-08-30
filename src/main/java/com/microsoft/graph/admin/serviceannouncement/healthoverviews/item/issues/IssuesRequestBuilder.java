@@ -165,6 +165,16 @@ public class IssuesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a issuesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public IssuesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new IssuesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * A collection of issues that happened on the service, with detailed information for each issue.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

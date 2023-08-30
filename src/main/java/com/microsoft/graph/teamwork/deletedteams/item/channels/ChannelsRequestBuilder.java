@@ -173,6 +173,16 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a channelsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ChannelsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ChannelsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The channels that are either shared with this deleted team or created in this deleted team.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

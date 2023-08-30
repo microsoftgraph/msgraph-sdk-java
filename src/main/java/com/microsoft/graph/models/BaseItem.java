@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BaseItem extends Entity implements Parsable {
     /**
-     * Identity of the user, device, or application which created the item. Read-only.
+     * Identity of the user, device, or application that created the item. Read-only.
      */
     private IdentitySet createdBy;
     /**
@@ -30,7 +30,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     private String eTag;
     /**
-     * Identity of the user, device, and application which last modified the item. Read-only.
+     * Identity of the user, device, and application that last modified the item. Read-only.
      */
     private IdentitySet lastModifiedBy;
     /**
@@ -50,7 +50,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     private ItemReference parentReference;
     /**
-     * URL that displays the resource in the browser. Read-only.
+     * URL that either displays the resource in the browser (for Office file formats), or is a direct link to the file (for other formats). Read-only.
      */
     private String webUrl;
     /**
@@ -82,7 +82,7 @@ public class BaseItem extends Entity implements Parsable {
         return new BaseItem();
     }
     /**
-     * Gets the createdBy property value. Identity of the user, device, or application which created the item. Read-only.
+     * Gets the createdBy property value. Identity of the user, device, or application that created the item. Read-only.
      * @return a identitySet
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class BaseItem extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
+     * Gets the lastModifiedBy property value. Identity of the user, device, and application that last modified the item. Read-only.
      * @return a identitySet
      */
     @jakarta.annotation.Nullable
@@ -182,7 +182,7 @@ public class BaseItem extends Entity implements Parsable {
         return this.parentReference;
     }
     /**
-     * Gets the webUrl property value. URL that displays the resource in the browser. Read-only.
+     * Gets the webUrl property value. URL that either displays the resource in the browser (for Office file formats), or is a direct link to the file (for other formats). Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -209,7 +209,7 @@ public class BaseItem extends Entity implements Parsable {
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
-     * Sets the createdBy property value. Identity of the user, device, or application which created the item. Read-only.
+     * Sets the createdBy property value. Identity of the user, device, or application that created the item. Read-only.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
@@ -244,7 +244,7 @@ public class BaseItem extends Entity implements Parsable {
         this.eTag = value;
     }
     /**
-     * Sets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
+     * Sets the lastModifiedBy property value. Identity of the user, device, and application that last modified the item. Read-only.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
@@ -279,7 +279,7 @@ public class BaseItem extends Entity implements Parsable {
         this.parentReference = value;
     }
     /**
-     * Sets the webUrl property value. URL that displays the resource in the browser. Read-only.
+     * Sets the webUrl property value. URL that either displays the resource in the browser (for Office file formats), or is a direct link to the file (for other formats). Read-only.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

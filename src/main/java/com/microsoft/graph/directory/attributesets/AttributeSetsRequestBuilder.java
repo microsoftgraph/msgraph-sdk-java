@@ -169,6 +169,16 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a attributeSetsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AttributeSetsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AttributeSetsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the attributeSet objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

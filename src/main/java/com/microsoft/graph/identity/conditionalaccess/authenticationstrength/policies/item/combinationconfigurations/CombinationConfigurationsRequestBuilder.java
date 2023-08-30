@@ -169,6 +169,16 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a combinationConfigurationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CombinationConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CombinationConfigurationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the authenticationCombinationConfiguration objects for an authentication strength policy. authenticationCombinationConfiguration represents requirements placed on specific authentication method combinations that require specified variants of those authentication methods to be used when authenticating. Currently, only fido2combinationConfigurations objects are supported. authenticationCombinationConfiguration objects are supported only for custom authentication strengths.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

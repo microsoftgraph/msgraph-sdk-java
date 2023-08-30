@@ -87,6 +87,16 @@ public class AppHealthMetricsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a appHealthMetricsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AppHealthMetricsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AppHealthMetricsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The scores and insights for the application health metrics.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

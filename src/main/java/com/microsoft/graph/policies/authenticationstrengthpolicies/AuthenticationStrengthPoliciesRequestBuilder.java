@@ -169,6 +169,16 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a authenticationStrengthPoliciesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AuthenticationStrengthPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AuthenticationStrengthPoliciesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

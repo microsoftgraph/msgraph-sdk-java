@@ -169,6 +169,16 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a childrenRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ChildrenRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ChildrenRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Return a collection of DriveItems in the children relationship of a DriveItem. DriveItems with a non-null folder or package facet can have one or more child DriveItems.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

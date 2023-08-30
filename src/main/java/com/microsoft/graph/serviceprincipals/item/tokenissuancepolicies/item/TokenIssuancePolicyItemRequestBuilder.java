@@ -87,6 +87,16 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a TokenIssuancePolicyItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TokenIssuancePolicyItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TokenIssuancePolicyItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The tokenIssuancePolicies assigned to this service principal.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -87,6 +87,16 @@ public class AssignmentRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a assignmentRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AssignmentRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AssignmentRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created.  For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

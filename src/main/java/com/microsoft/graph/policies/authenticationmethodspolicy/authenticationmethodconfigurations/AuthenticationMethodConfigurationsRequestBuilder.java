@@ -165,6 +165,16 @@ public class AuthenticationMethodConfigurationsRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a authenticationMethodConfigurationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AuthenticationMethodConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AuthenticationMethodConfigurationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

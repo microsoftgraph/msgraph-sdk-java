@@ -176,6 +176,16 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userExperienceAnalyticsDevicePerformanceRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserExperienceAnalyticsDevicePerformanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserExperienceAnalyticsDevicePerformanceRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * User experience analytics device performance
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

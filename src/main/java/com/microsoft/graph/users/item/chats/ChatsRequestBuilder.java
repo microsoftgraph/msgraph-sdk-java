@@ -175,6 +175,16 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a chatsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ChatsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ChatsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the list of chats that the user is part of. This method supports federation. When a user ID is provided, the calling application must belong to the same tenant that the user belongs to.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

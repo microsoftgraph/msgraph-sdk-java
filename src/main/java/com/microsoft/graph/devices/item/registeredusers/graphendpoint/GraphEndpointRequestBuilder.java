@@ -95,6 +95,16 @@ public class GraphEndpointRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a graphEndpointRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GraphEndpointRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GraphEndpointRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the items of type microsoft.graph.endpoint in the microsoft.graph.directoryObject collection
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

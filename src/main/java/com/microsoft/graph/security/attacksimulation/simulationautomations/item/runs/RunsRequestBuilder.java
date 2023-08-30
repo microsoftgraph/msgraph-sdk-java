@@ -167,6 +167,16 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a runsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RunsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RunsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the attack simulation automation runs for a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -167,6 +167,16 @@ public class IntelProfilesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a intelProfilesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public IntelProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new IntelProfilesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the intelligenceProfile objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

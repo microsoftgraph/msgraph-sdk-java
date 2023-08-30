@@ -87,6 +87,16 @@ public class BaseItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a BaseItemItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public BaseItemItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new BaseItemItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Used to address any item contained in this site. This collection can't be enumerated.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

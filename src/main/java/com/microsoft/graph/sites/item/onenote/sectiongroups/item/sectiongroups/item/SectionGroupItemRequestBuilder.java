@@ -87,6 +87,16 @@ public class SectionGroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a SectionGroupItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SectionGroupItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SectionGroupItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The section groups in the section. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

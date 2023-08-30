@@ -81,21 +81,21 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ConversationMember::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the role of a conversationMember in a team or channel.
+     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param body The request body
      * @return a CompletableFuture of conversationMember
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> patch(@jakarta.annotation.Nonnull final ConversationMember body) {
         return patch(body, null);
     }
     /**
-     * Update the role of a conversationMember in a team or channel.
+     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conversationMember
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> patch(@jakarta.annotation.Nonnull final ConversationMember body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -163,7 +163,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the role of a conversationMember in a team or channel.
+     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the role of a conversationMember in a team or channel.
+     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -193,6 +193,16 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a ConversationMemberItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ConversationMemberItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ConversationMemberItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

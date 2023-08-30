@@ -169,6 +169,16 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a apiConnectorsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ApiConnectorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ApiConnectorsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Read the properties of an identityApiConnector object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

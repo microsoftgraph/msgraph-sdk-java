@@ -87,6 +87,16 @@ public class DeviceRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deviceRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeviceRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
