@@ -201,6 +201,16 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a directoryRolesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DirectoryRolesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DirectoryRolesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List the directory roles that are activated in the tenant. This operation only returns roles that have been activated. A role becomes activated when an admin activates the role using the Activate directoryRole API. Not all built-in roles are initially activated.  When assigning a role using the Azure portal, the role activation step is implicitly done on the admin's behalf. To get the full list of roles that are available in Azure AD, use List directoryRoleTemplates.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

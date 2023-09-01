@@ -175,6 +175,16 @@ public class IdentityProtectionRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a identityProtectionRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public IdentityProtectionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new IdentityProtectionRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get identityProtection
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

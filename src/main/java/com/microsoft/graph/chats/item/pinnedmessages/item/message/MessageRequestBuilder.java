@@ -87,6 +87,16 @@ public class MessageRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a messageRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MessageRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MessageRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Represents details about the chat message that is pinned.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

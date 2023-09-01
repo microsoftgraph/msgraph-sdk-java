@@ -87,6 +87,16 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a teamsAppRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TeamsAppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TeamsAppRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The app that is installed.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

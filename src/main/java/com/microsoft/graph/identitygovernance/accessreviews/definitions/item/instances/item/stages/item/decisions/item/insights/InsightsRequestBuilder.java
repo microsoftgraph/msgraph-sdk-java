@@ -165,6 +165,16 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a insightsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public InsightsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new InsightsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

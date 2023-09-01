@@ -167,6 +167,16 @@ public class AuditLogsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a auditLogsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AuditLogsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AuditLogsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get auditLogs
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -111,6 +111,16 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a DirectoryObjectItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DirectoryObjectItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DirectoryObjectItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

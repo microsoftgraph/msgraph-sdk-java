@@ -167,6 +167,16 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a filesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public FilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new FilesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

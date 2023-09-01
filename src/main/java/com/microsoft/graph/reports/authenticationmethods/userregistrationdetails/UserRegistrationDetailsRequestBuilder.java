@@ -167,6 +167,16 @@ public class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userRegistrationDetailsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserRegistrationDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserRegistrationDetailsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

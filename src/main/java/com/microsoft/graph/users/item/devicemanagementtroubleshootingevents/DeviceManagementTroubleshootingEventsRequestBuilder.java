@@ -165,6 +165,16 @@ public class DeviceManagementTroubleshootingEventsRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deviceManagementTroubleshootingEventsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceManagementTroubleshootingEventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeviceManagementTroubleshootingEventsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The list of troubleshooting events for this user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

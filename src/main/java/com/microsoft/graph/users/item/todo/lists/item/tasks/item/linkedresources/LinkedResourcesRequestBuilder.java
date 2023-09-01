@@ -169,6 +169,16 @@ public class LinkedResourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a linkedResourcesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public LinkedResourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new LinkedResourcesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get information of one or more items in a partner application, based on which a specified task was created. The information is represented in a linkedResource object for each item. It includes an external ID for the item in the partner application, and if applicable, a deep link to that item in the application.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

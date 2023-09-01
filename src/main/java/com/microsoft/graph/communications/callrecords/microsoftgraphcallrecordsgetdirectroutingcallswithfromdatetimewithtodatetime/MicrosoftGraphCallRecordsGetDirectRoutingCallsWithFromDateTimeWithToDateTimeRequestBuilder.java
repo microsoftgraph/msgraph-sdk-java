@@ -91,6 +91,16 @@ public class MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithT
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a microsoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function getDirectRoutingCalls
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

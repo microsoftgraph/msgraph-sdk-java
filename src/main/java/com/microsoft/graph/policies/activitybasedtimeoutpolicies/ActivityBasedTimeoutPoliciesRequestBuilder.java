@@ -169,6 +169,16 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a activityBasedTimeoutPoliciesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ActivityBasedTimeoutPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ActivityBasedTimeoutPoliciesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of activityBasedTimeoutPolicy objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

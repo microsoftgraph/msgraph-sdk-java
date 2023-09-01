@@ -169,6 +169,16 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userSourcesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserSourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserSourcesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the userSource objects associated with an ediscoveryCustodian.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

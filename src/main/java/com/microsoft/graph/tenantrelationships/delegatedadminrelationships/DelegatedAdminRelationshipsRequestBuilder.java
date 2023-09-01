@@ -169,6 +169,16 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a delegatedAdminRelationshipsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DelegatedAdminRelationshipsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DelegatedAdminRelationshipsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the delegatedAdminRelationship objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

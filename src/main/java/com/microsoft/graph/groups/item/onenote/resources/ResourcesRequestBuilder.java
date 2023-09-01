@@ -165,6 +165,16 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a resourcesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ResourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ResourcesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

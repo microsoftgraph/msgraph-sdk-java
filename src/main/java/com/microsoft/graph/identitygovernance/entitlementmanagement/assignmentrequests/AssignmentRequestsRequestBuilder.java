@@ -180,6 +180,16 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a assignmentRequestsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AssignmentRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AssignmentRequestsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * In Azure AD entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

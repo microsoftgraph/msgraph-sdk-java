@@ -199,6 +199,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+
      * List all resource-specific permission grants on the chat. This list specifies the Azure AD apps that have access to the chat, along with the corresponding kind of resource-specific access that each app has.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

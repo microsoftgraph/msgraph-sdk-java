@@ -95,6 +95,16 @@ public class GraphRoomListRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a graphRoomListRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GraphRoomListRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GraphRoomListRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the items of type microsoft.graph.roomList in the microsoft.graph.place collection
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

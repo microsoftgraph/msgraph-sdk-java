@@ -169,6 +169,16 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userStatusesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserStatusesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserStatusesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List properties and relationships of the managedDeviceMobileAppConfigurationUserStatus objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

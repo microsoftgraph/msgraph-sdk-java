@@ -143,6 +143,16 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a mailboxSettingsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MailboxSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MailboxSettingsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale and time zone. Returned only on $select.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

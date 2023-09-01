@@ -111,6 +111,16 @@ public class TaskReportItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a TaskReportItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TaskReportItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TaskReportItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Represents the aggregation of task execution data for tasks within a workflow object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

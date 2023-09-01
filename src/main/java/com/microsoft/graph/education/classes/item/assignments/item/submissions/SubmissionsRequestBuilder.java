@@ -167,6 +167,16 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a submissionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SubmissionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SubmissionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the submissions while a student can only get submissions that they are associated with.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

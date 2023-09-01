@@ -108,6 +108,16 @@ public class ArticlesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a articlesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ArticlesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ArticlesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Articles related to this vulnerability.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

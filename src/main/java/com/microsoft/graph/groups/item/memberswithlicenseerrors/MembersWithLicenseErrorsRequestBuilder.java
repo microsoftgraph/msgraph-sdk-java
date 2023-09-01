@@ -156,6 +156,16 @@ public class MembersWithLicenseErrorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a membersWithLicenseErrorsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MembersWithLicenseErrorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MembersWithLicenseErrorsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * A list of group members with license errors from this group-based license assignment. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

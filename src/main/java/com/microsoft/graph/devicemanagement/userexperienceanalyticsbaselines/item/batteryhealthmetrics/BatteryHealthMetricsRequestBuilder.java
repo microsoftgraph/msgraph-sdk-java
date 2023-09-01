@@ -87,6 +87,16 @@ public class BatteryHealthMetricsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a batteryHealthMetricsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public BatteryHealthMetricsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new BatteryHealthMetricsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The scores and insights for the battery health metrics.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

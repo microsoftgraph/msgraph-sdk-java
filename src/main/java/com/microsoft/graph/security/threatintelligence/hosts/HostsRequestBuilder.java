@@ -165,6 +165,16 @@ public class HostsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a hostsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public HostsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new HostsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

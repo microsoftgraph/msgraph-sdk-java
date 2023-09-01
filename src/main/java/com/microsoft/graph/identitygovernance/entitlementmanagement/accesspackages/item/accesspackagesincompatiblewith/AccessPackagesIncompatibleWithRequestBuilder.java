@@ -110,6 +110,16 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a accessPackagesIncompatibleWithRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AccessPackagesIncompatibleWithRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AccessPackagesIncompatibleWithRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

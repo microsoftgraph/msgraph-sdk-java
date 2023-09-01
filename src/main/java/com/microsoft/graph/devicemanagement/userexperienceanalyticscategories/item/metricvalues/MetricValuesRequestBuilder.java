@@ -165,6 +165,16 @@ public class MetricValuesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a metricValuesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MetricValuesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MetricValuesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The metric values for the user experience analytics category. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -167,6 +167,16 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a contentSharingSessionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ContentSharingSessionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ContentSharingSessionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of contentSharingSession objects in a call.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

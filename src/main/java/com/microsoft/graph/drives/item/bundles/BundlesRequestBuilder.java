@@ -165,6 +165,16 @@ public class BundlesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a bundlesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public BundlesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new BundlesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

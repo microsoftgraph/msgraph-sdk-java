@@ -95,6 +95,16 @@ public class CreatedByRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a createdByRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CreatedByRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CreatedByRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The user who created the workflow.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

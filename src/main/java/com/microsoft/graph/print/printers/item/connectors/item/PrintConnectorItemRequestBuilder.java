@@ -87,6 +87,16 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a PrintConnectorItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PrintConnectorItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PrintConnectorItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The connectors that are associated with the printer.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

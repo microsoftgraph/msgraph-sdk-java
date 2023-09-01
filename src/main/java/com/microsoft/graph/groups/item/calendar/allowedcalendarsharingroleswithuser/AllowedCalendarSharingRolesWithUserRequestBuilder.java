@@ -88,6 +88,16 @@ public class AllowedCalendarSharingRolesWithUserRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a allowedCalendarSharingRolesWithUserRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AllowedCalendarSharingRolesWithUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AllowedCalendarSharingRolesWithUserRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function allowedCalendarSharingRoles
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

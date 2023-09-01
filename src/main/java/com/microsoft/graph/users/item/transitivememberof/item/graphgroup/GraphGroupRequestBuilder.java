@@ -87,6 +87,16 @@ public class GraphGroupRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a graphGroupRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GraphGroupRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GraphGroupRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the item of type microsoft.graph.directoryObject as microsoft.graph.group
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

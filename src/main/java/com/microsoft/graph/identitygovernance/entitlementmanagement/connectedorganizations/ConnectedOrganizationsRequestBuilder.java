@@ -169,6 +169,16 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a connectedOrganizationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ConnectedOrganizationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ConnectedOrganizationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of connectedOrganization objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

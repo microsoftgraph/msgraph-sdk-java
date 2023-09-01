@@ -169,6 +169,16 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a appointmentsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AppointmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AppointmentsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of bookingAppointment objects for the specified bookingBusiness.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

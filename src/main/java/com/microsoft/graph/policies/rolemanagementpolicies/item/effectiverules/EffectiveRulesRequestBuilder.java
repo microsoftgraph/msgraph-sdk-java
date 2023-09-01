@@ -165,6 +165,16 @@ public class EffectiveRulesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a effectiveRulesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public EffectiveRulesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new EffectiveRulesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -110,6 +110,16 @@ public class AllowedMembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a allowedMembersRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AllowedMembersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AllowedMembersRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the list of conversationMembers who can access a shared channel. This method does not return the following conversationMembers from the team:- Users with Guest role- Users who are externally authenticated in the tenant
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

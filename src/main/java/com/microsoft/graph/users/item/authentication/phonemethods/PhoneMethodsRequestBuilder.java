@@ -169,6 +169,16 @@ public class PhoneMethodsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a phoneMethodsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PhoneMethodsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PhoneMethodsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of phone authentication method objects for a user. This will return up to three objects, as a user can have up to three phones usable for authentication. This method is available only for standard Azure AD and B2B users, but not B2C users.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

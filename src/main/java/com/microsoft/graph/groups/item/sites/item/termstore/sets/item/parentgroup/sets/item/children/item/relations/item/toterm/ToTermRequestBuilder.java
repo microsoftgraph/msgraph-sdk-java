@@ -87,6 +87,16 @@ public class ToTermRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a toTermRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ToTermRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ToTermRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The to [term] of the relation. The term to which the relationship is defined.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

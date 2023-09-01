@@ -167,6 +167,16 @@ public class SharedRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a sharedRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SharedRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SharedRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Calculated insight that includes the list of documents shared with a user. This insight includes documents hosted on OneDrive/SharePoint in the user's Microsoft 365 tenant that are shared with the user, and documents that are attached as files and sent to the user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -167,6 +167,16 @@ public class AuthenticationContextClassReferencesRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a authenticationContextClassReferencesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AuthenticationContextClassReferencesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AuthenticationContextClassReferencesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of authenticationContextClassReference objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

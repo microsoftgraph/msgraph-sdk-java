@@ -165,6 +165,16 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRe
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * User experience analytics appHealth Application Performance by OS Version
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

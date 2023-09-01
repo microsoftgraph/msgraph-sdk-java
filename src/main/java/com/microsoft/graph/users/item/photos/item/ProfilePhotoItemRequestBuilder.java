@@ -95,6 +95,16 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a ProfilePhotoItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ProfilePhotoItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ProfilePhotoItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get photos from users
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

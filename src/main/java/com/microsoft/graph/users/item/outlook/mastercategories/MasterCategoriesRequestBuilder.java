@@ -169,6 +169,16 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a masterCategoriesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MasterCategoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MasterCategoriesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get all the categories that have been defined for the user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -165,6 +165,16 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a defaultPagesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DefaultPagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DefaultPagesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

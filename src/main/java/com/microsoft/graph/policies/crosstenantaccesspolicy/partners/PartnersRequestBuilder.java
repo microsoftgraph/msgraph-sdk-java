@@ -169,6 +169,16 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a partnersRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PartnersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PartnersRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of all partner configurations within a cross-tenant access policy. You can also use the $expand parameter to list the user synchronization policy for all partner configurations.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

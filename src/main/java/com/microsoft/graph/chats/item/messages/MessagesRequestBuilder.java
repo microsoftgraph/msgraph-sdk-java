@@ -177,6 +177,16 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a messagesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MessagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MessagesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the list of messages in a chat. This method supports federation. To list chat messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the tenantId property on the channel).
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

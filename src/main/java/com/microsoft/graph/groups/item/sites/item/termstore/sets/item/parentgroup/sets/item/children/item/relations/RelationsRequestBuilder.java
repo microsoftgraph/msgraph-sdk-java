@@ -165,6 +165,16 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a relationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RelationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RelationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * To indicate which terms are related to the current term as either pinned or reused.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

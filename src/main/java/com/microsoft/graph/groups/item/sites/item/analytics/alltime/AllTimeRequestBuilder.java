@@ -89,6 +89,16 @@ public class AllTimeRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a allTimeRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AllTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AllTimeRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get [itemAnalytics][] about the views that took place under this resource.The itemAnalytics resource is a convenient way to get activity stats for allTime and the lastSevenDays.For a custom time range or interval, use the [getActivitiesByInterval][] API.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

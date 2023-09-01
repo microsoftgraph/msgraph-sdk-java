@@ -110,6 +110,16 @@ public class RecoveryKeysRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a recoveryKeysRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RecoveryKeysRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RecoveryKeysRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

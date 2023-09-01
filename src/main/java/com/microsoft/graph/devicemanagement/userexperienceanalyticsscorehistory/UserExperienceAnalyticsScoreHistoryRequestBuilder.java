@@ -165,6 +165,16 @@ public class UserExperienceAnalyticsScoreHistoryRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userExperienceAnalyticsScoreHistoryRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserExperienceAnalyticsScoreHistoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserExperienceAnalyticsScoreHistoryRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * User experience analytics device Startup Score History
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

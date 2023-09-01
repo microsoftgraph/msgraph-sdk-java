@@ -86,6 +86,16 @@ public class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a getManagedDevicesWithAppFailuresRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetManagedDevicesWithAppFailuresRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GetManagedDevicesWithAppFailuresRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieves the list of devices with failed apps
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

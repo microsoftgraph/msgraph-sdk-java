@@ -110,6 +110,16 @@ public class TaughtClassesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a taughtClassesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TaughtClassesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TaughtClassesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the educationClass resources owned by an educationUser.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

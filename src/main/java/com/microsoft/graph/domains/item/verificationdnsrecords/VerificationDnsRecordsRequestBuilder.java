@@ -167,6 +167,16 @@ public class VerificationDnsRecordsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a verificationDnsRecordsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public VerificationDnsRecordsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new VerificationDnsRecordsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of domainDnsRecord objects. You cannot use an associated domain with your Azure AD tenant until ownership is verified. To verify the ownership of the domain, retrieve the domain verification records and add the details to the zone file of the domain. This can be done through the domain registrar or DNS server configuration. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

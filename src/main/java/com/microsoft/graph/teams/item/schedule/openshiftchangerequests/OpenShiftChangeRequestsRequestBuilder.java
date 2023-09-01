@@ -169,6 +169,16 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a openShiftChangeRequestsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public OpenShiftChangeRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new OpenShiftChangeRequestsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of openShiftChangeRequest objects in a team.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

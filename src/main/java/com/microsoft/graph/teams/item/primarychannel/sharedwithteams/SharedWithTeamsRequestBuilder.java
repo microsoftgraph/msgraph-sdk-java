@@ -167,6 +167,16 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a sharedWithTeamsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SharedWithTeamsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SharedWithTeamsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

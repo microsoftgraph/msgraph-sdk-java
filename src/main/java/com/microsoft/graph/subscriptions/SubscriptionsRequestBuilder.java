@@ -161,6 +161,16 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a subscriptionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SubscriptionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SubscriptionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the properties and relationships of webhook subscriptions, based on the app ID, the user, and the user's role with a tenant. The content of the response depends on the context in which the app is calling; for details, see the scenarios in the Permissions section.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

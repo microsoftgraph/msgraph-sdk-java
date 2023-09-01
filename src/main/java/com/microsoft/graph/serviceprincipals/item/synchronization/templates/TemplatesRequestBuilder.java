@@ -167,6 +167,16 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a templatesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TemplatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TemplatesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List the synchronization templates associated with a given application or service principal.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

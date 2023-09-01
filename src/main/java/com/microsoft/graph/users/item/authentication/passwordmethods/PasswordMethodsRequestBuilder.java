@@ -167,6 +167,16 @@ public class PasswordMethodsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a passwordMethodsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PasswordMethodsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PasswordMethodsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of the passwords registered to a user, represented by a passwordAuthenticationMethod object. This will return exactly one object, as a user can have exactly one password. For security, the password itself will never be returned in the object and the password property is always null.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

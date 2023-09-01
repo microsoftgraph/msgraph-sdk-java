@@ -165,6 +165,16 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deviceSettingStateSummariesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceSettingStateSummariesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeviceSettingStateSummariesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Compliance Setting State Device Summary
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

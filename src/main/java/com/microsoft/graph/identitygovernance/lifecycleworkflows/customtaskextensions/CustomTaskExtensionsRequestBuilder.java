@@ -169,6 +169,16 @@ public class CustomTaskExtensionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a customTaskExtensionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CustomTaskExtensionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CustomTaskExtensionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the customTaskExtension objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

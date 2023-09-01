@@ -318,6 +318,16 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a SiteItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SiteItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SiteItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve properties and relationships for a [site][] resource.A site resource represents a team site in SharePoint.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

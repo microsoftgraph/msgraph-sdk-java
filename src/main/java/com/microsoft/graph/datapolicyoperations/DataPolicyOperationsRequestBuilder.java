@@ -165,6 +165,16 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a dataPolicyOperationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DataPolicyOperationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DataPolicyOperationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the properties of a dataPolicyOperation object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

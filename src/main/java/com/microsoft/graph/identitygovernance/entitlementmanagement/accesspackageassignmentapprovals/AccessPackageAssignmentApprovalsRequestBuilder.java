@@ -176,6 +176,16 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a accessPackageAssignmentApprovalsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AccessPackageAssignmentApprovalsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AccessPackageAssignmentApprovalsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

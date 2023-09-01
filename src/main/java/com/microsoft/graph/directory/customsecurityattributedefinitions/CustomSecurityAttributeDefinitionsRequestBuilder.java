@@ -169,6 +169,16 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a customSecurityAttributeDefinitionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CustomSecurityAttributeDefinitionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CustomSecurityAttributeDefinitionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the customSecurityAttributeDefinition objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
