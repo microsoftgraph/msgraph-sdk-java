@@ -1109,6 +1109,15 @@ public class GroupRequestBuilder extends BaseRequestBuilder<Group> {
 
     /**
      * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public GroupRetryServiceProvisioningRequestBuilder retryServiceProvisioning() {
+        return new GroupRetryServiceProvisioningRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.retryServiceProvisioning"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
      * @return the request builder collection
      */
     @Nonnull

@@ -91,7 +91,7 @@ public class Alert extends Entity implements IJsonBackedObject {
 
     /**
      * The Classification.
-     * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue.
+     * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      */
     @SerializedName(value = "classification", alternate = {"Classification"})
     @Expose

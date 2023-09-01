@@ -13,6 +13,7 @@ import com.microsoft.graph.models.AssignedLabel;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.LicenseProcessingState;
 import com.microsoft.graph.models.OnPremisesProvisioningError;
+import com.microsoft.graph.models.ServiceProvisioningError;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.Calendar;
 import com.microsoft.graph.models.Drive;
@@ -306,6 +307,15 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public String securityIdentifier;
 
     /**
+     * The Service Provisioning Errors.
+     * 
+     */
+    @SerializedName(value = "serviceProvisioningErrors", alternate = {"ServiceProvisioningErrors"})
+    @Expose
+	@Nullable
+    public java.util.List<ServiceProvisioningError> serviceProvisioningErrors;
+
+    /**
      * The Theme.
      * Specifies a Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
      */
@@ -316,7 +326,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Visibility.
-     * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
+     * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
      */
     @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose
@@ -434,7 +444,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Permission Grants.
-     * The permission that has been granted for a group to a specific application. Supports $expand.
+     * 
      */
     @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
     @Expose

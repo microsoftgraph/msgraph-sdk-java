@@ -21,6 +21,7 @@ import com.microsoft.graph.models.OnPremisesExtensionAttributes;
 import com.microsoft.graph.models.OnPremisesProvisioningError;
 import com.microsoft.graph.models.PasswordProfile;
 import com.microsoft.graph.models.ProvisionedPlan;
+import com.microsoft.graph.models.ServiceProvisioningError;
 import com.microsoft.graph.models.MailboxSettings;
 import com.microsoft.graph.models.UserPrint;
 import com.microsoft.graph.models.DirectoryObject;
@@ -192,7 +193,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Custom Security Attributes.
-     * 
+     * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). Filter value is case sensitive.
      */
     @SerializedName(value = "customSecurityAttributes", alternate = {"CustomSecurityAttributes"})
     @Expose
@@ -569,6 +570,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public String securityIdentifier;
 
     /**
+     * The Service Provisioning Errors.
+     * 
+     */
+    @SerializedName(value = "serviceProvisioningErrors", alternate = {"ServiceProvisioningErrors"})
+    @Expose
+	@Nullable
+    public java.util.List<ServiceProvisioningError> serviceProvisioningErrors;
+
+    /**
      * The Show In Address List.
      * Do not use in Microsoft Graph. Manage this property through the Microsoft 365 admin center instead. Represents whether the user should be included in the Outlook global address list. See Known issue.
      */
@@ -821,7 +831,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Owned Objects.
-     * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
+     * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand, $select nested in $expand, and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage ownedObjects;
