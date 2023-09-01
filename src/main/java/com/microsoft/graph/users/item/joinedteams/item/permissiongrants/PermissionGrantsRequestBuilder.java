@@ -199,16 +199,6 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
-     * @param rawUrl The raw URL to use for the request builder.
-     * @return a permissionGrantsRequestBuilder
-     */
-    @jakarta.annotation.Nonnull
-    public PermissionGrantsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
-        Objects.requireNonNull(rawUrl);
-        return new PermissionGrantsRequestBuilder(rawUrl, requestAdapter);
-    }
-    /**
      * List all resource-specific permission grants on the team. This list specifies the Azure AD apps that have access to the team, along with each app's corresponding type of resource-specific access.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -134,16 +134,6 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
-     * @param rawUrl The raw URL to use for the request builder.
-     * @return a sitesRequestBuilder
-     */
-    @jakarta.annotation.Nonnull
-    public SitesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
-        Objects.requireNonNull(rawUrl);
-        return new SitesRequestBuilder(rawUrl, requestAdapter);
-    }
-    /**
      * List all available [sites][] in an organization. Specific filter criteria and query options are also supported and described below: In addition, you can use a [$search][] query against the /sites collection to find sites matching given keywords.If you want to list all sites across all geographies, refer to getAllSites][]. For more guidance about building applications that use site discovery for scanning purposes, see [Best practices for discovering files and detecting changes at scale.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -169,16 +169,6 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
-     * @param rawUrl The raw URL to use for the request builder.
-     * @return a mobileAppConfigurationsRequestBuilder
-     */
-    @jakarta.annotation.Nonnull
-    public MobileAppConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
-        Objects.requireNonNull(rawUrl);
-        return new MobileAppConfigurationsRequestBuilder(rawUrl, requestAdapter);
-    }
-    /**
      * List properties and relationships of the managedDeviceMobileAppConfiguration objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

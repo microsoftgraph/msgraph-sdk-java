@@ -110,16 +110,6 @@ public class PostsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
-     * @param rawUrl The raw URL to use for the request builder.
-     * @return a postsRequestBuilder
-     */
-    @jakarta.annotation.Nonnull
-    public PostsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
-        Objects.requireNonNull(rawUrl);
-        return new PostsRequestBuilder(rawUrl, requestAdapter);
-    }
-    /**
      * Get the posts of the specified thread. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
