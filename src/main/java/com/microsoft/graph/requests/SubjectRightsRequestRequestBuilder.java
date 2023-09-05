@@ -57,6 +57,46 @@ public class SubjectRightsRequestRequestBuilder extends BaseRequestBuilder<Subje
 
 
     /**
+     *  Gets a request builder for the User collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder approvers() {
+        return new com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("approvers"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the User item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder approvers(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("approvers") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the User collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder collaborators() {
+        return new com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("collaborators"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the User item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder collaborators(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("collaborators") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the AuthoredNote collection
      *
      * @return the collection request builder

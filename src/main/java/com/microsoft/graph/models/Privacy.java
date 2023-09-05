@@ -42,7 +42,9 @@ public class Privacy implements IJsonBackedObject {
     /**
      * The Subject Rights Requests.
      * 
+     * @deprecated The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security.
      */
+    @Deprecated
     @SerializedName(value = "subjectRightsRequests", alternate = {"SubjectRightsRequests"})
     @Expose
 	@Nullable

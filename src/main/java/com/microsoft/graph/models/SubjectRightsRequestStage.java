@@ -40,6 +40,10 @@ public enum SubjectRightsRequestStage
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * approval
+    */
+    APPROVAL,
+    /**
     * For SubjectRightsRequestStage values that were not expected from the service
     */
     UNEXPECTED_VALUE

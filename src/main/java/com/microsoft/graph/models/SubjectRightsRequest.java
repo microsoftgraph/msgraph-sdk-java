@@ -15,6 +15,8 @@ import com.microsoft.graph.models.DataSubject;
 import com.microsoft.graph.models.DataSubjectType;
 import com.microsoft.graph.models.SubjectRightsRequestHistory;
 import com.microsoft.graph.models.SubjectRightsRequestDetail;
+import com.microsoft.graph.models.SubjectRightsRequestMailboxLocation;
+import com.microsoft.graph.models.SubjectRightsRequestSiteLocation;
 import com.microsoft.graph.models.SubjectRightsRequestStageDetail;
 import com.microsoft.graph.models.SubjectRightsRequestStatus;
 import com.microsoft.graph.models.SubjectRightsRequestType;
@@ -54,6 +56,15 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime closedDateTime;
+
+    /**
+     * The Content Query.
+     * 
+     */
+    @SerializedName(value = "contentQuery", alternate = {"ContentQuery"})
+    @Expose
+	@Nullable
+    public String contentQuery;
 
     /**
      * The Created By.
@@ -110,6 +121,15 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The External Id.
+     * 
+     */
+    @SerializedName(value = "externalId", alternate = {"ExternalId"})
+    @Expose
+	@Nullable
+    public String externalId;
+
+    /**
      * The History.
      * Collection of history change events.
      */
@@ -117,6 +137,24 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<SubjectRightsRequestHistory> history;
+
+    /**
+     * The Include All Versions.
+     * 
+     */
+    @SerializedName(value = "includeAllVersions", alternate = {"IncludeAllVersions"})
+    @Expose
+	@Nullable
+    public Boolean includeAllVersions;
+
+    /**
+     * The Include Authored Content.
+     * 
+     */
+    @SerializedName(value = "includeAuthoredContent", alternate = {"IncludeAuthoredContent"})
+    @Expose
+	@Nullable
+    public Boolean includeAuthoredContent;
 
     /**
      * The Insight.
@@ -155,6 +193,24 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
+     * The Mailboxlocations.
+     * 
+     */
+    @SerializedName(value = "mailboxlocations", alternate = {"Mailboxlocations"})
+    @Expose
+	@Nullable
+    public SubjectRightsRequestMailboxLocation mailboxlocations;
+
+    /**
+     * The Pause After Estimate.
+     * 
+     */
+    @SerializedName(value = "pauseAfterEstimate", alternate = {"PauseAfterEstimate"})
+    @Expose
+	@Nullable
+    public Boolean pauseAfterEstimate;
+
+    /**
      * The Regulations.
      * List of regulations that this request will fulfill.
      */
@@ -162,6 +218,15 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<String> regulations;
+
+    /**
+     * The Sitelocations.
+     * 
+     */
+    @SerializedName(value = "sitelocations", alternate = {"Sitelocations"})
+    @Expose
+	@Nullable
+    public SubjectRightsRequestSiteLocation sitelocations;
 
     /**
      * The Stages.
@@ -191,6 +256,20 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
     public SubjectRightsRequestType type;
 
     /**
+     * The Approvers.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.UserCollectionPage approvers;
+
+    /**
+     * The Collaborators.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.UserCollectionPage collaborators;
+
+    /**
      * The Notes.
      * List of notes associcated with the request.
      */
@@ -217,6 +296,14 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("approvers")) {
+            approvers = serializer.deserializeObject(json.get("approvers"), com.microsoft.graph.requests.UserCollectionPage.class);
+        }
+
+        if (json.has("collaborators")) {
+            collaborators = serializer.deserializeObject(json.get("collaborators"), com.microsoft.graph.requests.UserCollectionPage.class);
+        }
 
         if (json.has("notes")) {
             notes = serializer.deserializeObject(json.get("notes"), com.microsoft.graph.requests.AuthoredNoteCollectionPage.class);

@@ -1061,21 +1061,21 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the Compliance
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.ComplianceRequestBuilder compliance() {
-        return new com.microsoft.graph.requests.ComplianceRequestBuilder(getServiceRoot() + "/compliance", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
      * @return the Security
      */
     @Nonnull
     public com.microsoft.graph.requests.SecurityRequestBuilder security() {
         return new com.microsoft.graph.requests.SecurityRequestBuilder(getServiceRoot() + "/security", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the Compliance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ComplianceRequestBuilder compliance() {
+        return new com.microsoft.graph.requests.ComplianceRequestBuilder(getServiceRoot() + "/compliance", this, null);
     }
 
     /**

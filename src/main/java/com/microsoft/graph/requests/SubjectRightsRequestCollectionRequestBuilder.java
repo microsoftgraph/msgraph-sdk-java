@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.Privacy;
+import com.microsoft.graph.models.Security;
 import com.microsoft.graph.models.SubjectRightsRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +28,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class SubjectRightsRequestCollectionRequestBuilder extends BaseCollectionRequestBuilder<SubjectRightsRequest, SubjectRightsRequestRequestBuilder, SubjectRightsRequestCollectionResponse, SubjectRightsRequestCollectionPage, SubjectRightsRequestCollectionRequest> {
 
     /**
-     * The request builder for this collection of Privacy
+     * The request builder for this collection of Security
      *
      * @param requestUrl     the request URL
      * @param client         the service client

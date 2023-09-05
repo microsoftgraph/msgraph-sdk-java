@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Presence;
+import com.microsoft.graph.models.PresenceStatusMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
