@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -12,7 +13,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
     /**
      * The discoverabilities property
      */
-    private DirectoryDefinitionDiscoverabilities discoverabilities;
+    private EnumSet<DirectoryDefinitionDiscoverabilities> discoverabilities;
     /**
      * Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
@@ -72,7 +73,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("discoverabilities", (n) -> { this.setDiscoverabilities(n.getEnumValue(DirectoryDefinitionDiscoverabilities.class)); });
+        deserializerMap.put("discoverabilities", (n) -> { this.setDiscoverabilities(n.getEnumSetValue(DirectoryDefinitionDiscoverabilities.class)); });
         deserializerMap.put("discoveryDateTime", (n) -> { this.setDiscoveryDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("objects", (n) -> { this.setObjects(n.getCollectionOfObjectValues(ObjectDefinition::createFromDiscriminatorValue)); });
@@ -119,7 +120,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("discoverabilities", this.getDiscoverabilities());
+        writer.writeEnumSetValue("discoverabilities", this.getDiscoverabilities());
         writer.writeOffsetDateTimeValue("discoveryDateTime", this.getDiscoveryDateTime());
         writer.writeStringValue("name", this.getName());
         writer.writeCollectionOfObjectValues("objects", this.getObjects());

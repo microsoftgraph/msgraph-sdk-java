@@ -75,19 +75,19 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the win32LobApp objects.
+     * List properties and relationships of the windowsUniversalAppX objects.
      * @return a CompletableFuture of mobileAppCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-win32lobapp-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsuniversalappx-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCollectionResponse> get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the win32LobApp objects.
+     * List properties and relationships of the windowsUniversalAppX objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileAppCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-win32lobapp-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsuniversalappx-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,21 +98,21 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, MobileAppCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new webApp object.
+     * Create a new macOSOfficeSuiteApp object.
      * @param body The request body
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-webapp-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macosofficesuiteapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> post(@jakarta.annotation.Nonnull final MobileApp body) {
         return post(body, null);
     }
     /**
-     * Create a new webApp object.
+     * Create a new macOSOfficeSuiteApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-webapp-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macosofficesuiteapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> post(@jakarta.annotation.Nonnull final MobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -124,7 +124,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, MobileApp::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List properties and relationships of the win32LobApp objects.
+     * List properties and relationships of the windowsUniversalAppX objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the win32LobApp objects.
+     * List properties and relationships of the windowsUniversalAppX objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new webApp object.
+     * Create a new macOSOfficeSuiteApp object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new webApp object.
+     * Create a new macOSOfficeSuiteApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,17 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the win32LobApp objects.
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a mobileAppsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MobileAppsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MobileAppsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * List properties and relationships of the windowsUniversalAppX objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

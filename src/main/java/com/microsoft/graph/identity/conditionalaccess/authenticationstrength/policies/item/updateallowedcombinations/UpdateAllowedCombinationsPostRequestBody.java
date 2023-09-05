@@ -5,6 +5,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +18,7 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
     /**
      * The allowedCombinations property
      */
-    private java.util.List<AuthenticationMethodModes> allowedCombinations;
+    private EnumSet<java.util.List<AuthenticationMethodModes>> allowedCombinations;
     /**
      * Instantiates a new updateAllowedCombinationsPostRequestBody and sets the default values.
      */

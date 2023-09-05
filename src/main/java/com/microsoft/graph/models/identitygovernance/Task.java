@@ -5,6 +5,7 @@ import com.microsoft.graph.models.KeyValuePair;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +18,7 @@ public class Task extends Entity implements Parsable {
     /**
      * The category property
      */
-    private LifecycleTaskCategory category;
+    private EnumSet<LifecycleTaskCategory> category;
     /**
      * A boolean value that specifies whether, if this task fails, the workflow will stop, and subsequent tasks will not run. Optional.
      */
@@ -118,7 +119,7 @@ public class Task extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("arguments", (n) -> { this.setArguments(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(LifecycleTaskCategory.class)); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumSetValue(LifecycleTaskCategory.class)); });
         deserializerMap.put("continueOnError", (n) -> { this.setContinueOnError(n.getBooleanValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -160,7 +161,7 @@ public class Task extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("arguments", this.getArguments());
-        writer.writeEnumValue("category", this.getCategory());
+        writer.writeEnumSetValue("category", this.getCategory());
         writer.writeBooleanValue("continueOnError", this.getContinueOnError());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());

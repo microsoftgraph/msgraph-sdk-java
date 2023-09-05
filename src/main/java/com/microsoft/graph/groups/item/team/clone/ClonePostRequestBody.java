@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * The partsToClone property
      */
-    private ClonableTeamParts partsToClone;
+    private EnumSet<ClonableTeamParts> partsToClone;
     /**
      * The visibility property
      */
@@ -98,7 +99,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("mailNickname", (n) -> { this.setMailNickname(n.getStringValue()); });
-        deserializerMap.put("partsToClone", (n) -> { this.setPartsToClone(n.getEnumValue(ClonableTeamParts.class)); });
+        deserializerMap.put("partsToClone", (n) -> { this.setPartsToClone(n.getEnumSetValue(ClonableTeamParts.class)); });
         deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getEnumValue(TeamVisibilityType.class)); });
         return deserializerMap;
     }
@@ -136,7 +137,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("mailNickname", this.getMailNickname());
-        writer.writeEnumValue("partsToClone", this.getPartsToClone());
+        writer.writeEnumSetValue("partsToClone", this.getPartsToClone());
         writer.writeEnumValue("visibility", this.getVisibility());
         writer.writeAdditionalData(this.getAdditionalData());
     }

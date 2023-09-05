@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +16,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
     /**
      * The combinations property
      */
-    private java.util.List<AuthenticationMethodModes> combinations;
+    private EnumSet<java.util.List<AuthenticationMethodModes>> combinations;
     /**
      * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      */

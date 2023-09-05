@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +12,7 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
     /**
      * Which authentication method combinations this configuration applies to. Must be an allowedCombinations object that's defined for the authenticationStrengthPolicy. The only possible value for fido2combinationConfigurations is 'fido2'.
      */
-    private java.util.List<AuthenticationMethodModes> appliesToCombinations;
+    private EnumSet<java.util.List<AuthenticationMethodModes>> appliesToCombinations;
     /**
      * Instantiates a new authenticationCombinationConfiguration and sets the default values.
      */

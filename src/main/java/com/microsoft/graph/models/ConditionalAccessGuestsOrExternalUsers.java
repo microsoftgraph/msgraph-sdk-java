@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +21,7 @@ public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHol
     /**
      * The guestOrExternalUserTypes property
      */
-    private ConditionalAccessGuestOrExternalUserTypes guestOrExternalUserTypes;
+    private EnumSet<ConditionalAccessGuestOrExternalUserTypes> guestOrExternalUserTypes;
     /**
      * The OdataType property
      */
@@ -65,7 +66,7 @@ public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHol
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("externalTenants", (n) -> { this.setExternalTenants(n.getObjectValue(ConditionalAccessExternalTenants::createFromDiscriminatorValue)); });
-        deserializerMap.put("guestOrExternalUserTypes", (n) -> { this.setGuestOrExternalUserTypes(n.getEnumValue(ConditionalAccessGuestOrExternalUserTypes.class)); });
+        deserializerMap.put("guestOrExternalUserTypes", (n) -> { this.setGuestOrExternalUserTypes(n.getEnumSetValue(ConditionalAccessGuestOrExternalUserTypes.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -92,7 +93,7 @@ public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHol
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("externalTenants", this.getExternalTenants());
-        writer.writeEnumValue("guestOrExternalUserTypes", this.getGuestOrExternalUserTypes());
+        writer.writeEnumSetValue("guestOrExternalUserTypes", this.getGuestOrExternalUserTypes());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }

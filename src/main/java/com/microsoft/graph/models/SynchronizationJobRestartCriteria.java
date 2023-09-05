@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +21,7 @@ public class SynchronizationJobRestartCriteria implements AdditionalDataHolder, 
     /**
      * Comma-separated combination of the following values: None, ConnectorDataStore, Escrows, Watermark, QuarantineState, Full, ForceDeletes. The property can also be empty.   None: Starts a paused or quarantined provisioning job. DO NOT USE. Use the Start synchronizationJob API instead.ConnectorDataStore - Clears the underlying cache for all users. DO NOT USE. Contact Microsoft Support for guidance.Escrows - Provisioning failures are marked as escrows and retried. Clearing escrows will stop the service from retrying failures.Watermark - Removing the watermark causes the service to re-evaluate all the users again, rather than just processing changes.QuarantineState - Temporarily lifts the quarantine.Use Full if you want all of the options.ForceDeletes - Forces the system to delete the pending deleted users when using the accidental deletions prevention feature and the deletion threshold is exceeded. Leaving this property empty emulates the Restart provisioning option in the Azure portal. It is similar to setting the resetScope to include QuarantineState, Watermark, and Escrows. This option meets most customer needs.
      */
-    private SynchronizationJobRestartScope resetScope;
+    private EnumSet<SynchronizationJobRestartScope> resetScope;
     /**
      * Instantiates a new synchronizationJobRestartCriteria and sets the default values.
      */
@@ -53,7 +54,7 @@ public class SynchronizationJobRestartCriteria implements AdditionalDataHolder, 
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("resetScope", (n) -> { this.setResetScope(n.getEnumValue(SynchronizationJobRestartScope.class)); });
+        deserializerMap.put("resetScope", (n) -> { this.setResetScope(n.getEnumSetValue(SynchronizationJobRestartScope.class)); });
         return deserializerMap;
     }
     /**
@@ -79,7 +80,7 @@ public class SynchronizationJobRestartCriteria implements AdditionalDataHolder, 
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeEnumValue("resetScope", this.getResetScope());
+        writer.writeEnumSetValue("resetScope", this.getResetScope());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**

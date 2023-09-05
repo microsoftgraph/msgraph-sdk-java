@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ public class PurgeDataPostRequestBody implements AdditionalDataHolder, Parsable 
     /**
      * The purgeAreas property
      */
-    private PurgeAreas purgeAreas;
+    private EnumSet<PurgeAreas> purgeAreas;
     /**
      * The purgeType property
      */
@@ -54,7 +55,7 @@ public class PurgeDataPostRequestBody implements AdditionalDataHolder, Parsable 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("purgeAreas", (n) -> { this.setPurgeAreas(n.getEnumValue(PurgeAreas.class)); });
+        deserializerMap.put("purgeAreas", (n) -> { this.setPurgeAreas(n.getEnumSetValue(PurgeAreas.class)); });
         deserializerMap.put("purgeType", (n) -> { this.setPurgeType(n.getEnumValue(PurgeType.class)); });
         return deserializerMap;
     }
@@ -80,7 +81,7 @@ public class PurgeDataPostRequestBody implements AdditionalDataHolder, Parsable 
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeEnumValue("purgeAreas", this.getPurgeAreas());
+        writer.writeEnumSetValue("purgeAreas", this.getPurgeAreas());
         writer.writeEnumValue("purgeType", this.getPurgeType());
         writer.writeAdditionalData(this.getAdditionalData());
     }

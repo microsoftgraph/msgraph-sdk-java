@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
     /**
      * The list of current authentication method combinations allowed by the authentication strength.
      */
-    private java.util.List<AuthenticationMethodModes> currentCombinations;
+    private EnumSet<java.util.List<AuthenticationMethodModes>> currentCombinations;
     /**
      * The OdataType property
      */
@@ -32,7 +33,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
     /**
      * The list of former authentication method combinations allowed by the authentication strength before they were updated through the updateAllowedCombinations action.
      */
-    private java.util.List<AuthenticationMethodModes> previousCombinations;
+    private EnumSet<java.util.List<AuthenticationMethodModes>> previousCombinations;
     /**
      * Instantiates a new updateAllowedCombinationsResult and sets the default values.
      */

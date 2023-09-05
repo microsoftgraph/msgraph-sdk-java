@@ -17,6 +17,10 @@ public class Presence extends Entity implements Parsable {
      */
     private String availability;
     /**
+     * The statusMessage property
+     */
+    private PresenceStatusMessage statusMessage;
+    /**
      * Instantiates a new presence and sets the default values.
      */
     public Presence() {
@@ -57,7 +61,16 @@ public class Presence extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activity", (n) -> { this.setActivity(n.getStringValue()); });
         deserializerMap.put("availability", (n) -> { this.setAvailability(n.getStringValue()); });
+        deserializerMap.put("statusMessage", (n) -> { this.setStatusMessage(n.getObjectValue(PresenceStatusMessage::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the statusMessage property value. The statusMessage property
+     * @return a presenceStatusMessage
+     */
+    @jakarta.annotation.Nullable
+    public PresenceStatusMessage getStatusMessage() {
+        return this.statusMessage;
     }
     /**
      * Serializes information the current object
@@ -68,6 +81,7 @@ public class Presence extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("activity", this.getActivity());
         writer.writeStringValue("availability", this.getAvailability());
+        writer.writeObjectValue("statusMessage", this.getStatusMessage());
     }
     /**
      * Sets the activity property value. The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive, InAMeeting, Offline, OffWork, OutOfOffice, PresenceUnknown, Presenting, UrgentInterruptionsOnly.
@@ -82,5 +96,12 @@ public class Presence extends Entity implements Parsable {
      */
     public void setAvailability(@jakarta.annotation.Nullable final String value) {
         this.availability = value;
+    }
+    /**
+     * Sets the statusMessage property value. The statusMessage property
+     * @param value Value to set for the statusMessage property.
+     */
+    public void setStatusMessage(@jakarta.annotation.Nullable final PresenceStatusMessage value) {
+        this.statusMessage = value;
     }
 }

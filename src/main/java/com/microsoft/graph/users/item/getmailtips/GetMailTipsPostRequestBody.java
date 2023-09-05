@@ -5,6 +5,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * The MailTipsOptions property
      */
-    private MailTipsType mailTipsOptions;
+    private EnumSet<MailTipsType> mailTipsOptions;
     /**
      * Instantiates a new getMailTipsPostRequestBody and sets the default values.
      */
@@ -62,7 +63,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("EmailAddresses", (n) -> { this.setEmailAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("MailTipsOptions", (n) -> { this.setMailTipsOptions(n.getEnumValue(MailTipsType.class)); });
+        deserializerMap.put("MailTipsOptions", (n) -> { this.setMailTipsOptions(n.getEnumSetValue(MailTipsType.class)); });
         return deserializerMap;
     }
     /**
@@ -80,7 +81,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("EmailAddresses", this.getEmailAddresses());
-        writer.writeEnumValue("MailTipsOptions", this.getMailTipsOptions());
+        writer.writeEnumSetValue("MailTipsOptions", this.getMailTipsOptions());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
     /**
      * The additionalDataOptions property
      */
-    private AdditionalDataOptions additionalDataOptions;
+    private EnumSet<AdditionalDataOptions> additionalDataOptions;
     /**
      * The search property
      */
@@ -62,7 +63,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("additionalDataOptions", (n) -> { this.setAdditionalDataOptions(n.getEnumValue(AdditionalDataOptions.class)); });
+        deserializerMap.put("additionalDataOptions", (n) -> { this.setAdditionalDataOptions(n.getEnumSetValue(AdditionalDataOptions.class)); });
         deserializerMap.put("search", (n) -> { this.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -80,7 +81,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeEnumValue("additionalDataOptions", this.getAdditionalDataOptions());
+        writer.writeEnumSetValue("additionalDataOptions", this.getAdditionalDataOptions());
         writer.writeObjectValue("search", this.getSearch());
         writer.writeAdditionalData(this.getAdditionalData());
     }

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -14,11 +15,11 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     /**
      * Contains properties for Windows architecture.
      */
-    private WindowsArchitecture applicableArchitectures;
+    private EnumSet<WindowsArchitecture> applicableArchitectures;
     /**
      * Contains properties for Windows device type.
      */
-    private WindowsDeviceType applicableDeviceTypes;
+    private EnumSet<WindowsDeviceType> applicableDeviceTypes;
     /**
      * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
      */
@@ -95,8 +96,8 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumValue(WindowsArchitecture.class)); });
-        deserializerMap.put("applicableDeviceTypes", (n) -> { this.setApplicableDeviceTypes(n.getEnumValue(WindowsDeviceType.class)); });
+        deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumSetValue(WindowsArchitecture.class)); });
+        deserializerMap.put("applicableDeviceTypes", (n) -> { this.setApplicableDeviceTypes(n.getEnumSetValue(WindowsDeviceType.class)); });
         deserializerMap.put("committedContainedApps", (n) -> { this.setCommittedContainedApps(n.getCollectionOfObjectValues(MobileContainedApp::createFromDiscriminatorValue)); });
         deserializerMap.put("identityName", (n) -> { this.setIdentityName(n.getStringValue()); });
         deserializerMap.put("identityPublisherHash", (n) -> { this.setIdentityPublisherHash(n.getStringValue()); });
@@ -161,8 +162,8 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("applicableArchitectures", this.getApplicableArchitectures());
-        writer.writeEnumValue("applicableDeviceTypes", this.getApplicableDeviceTypes());
+        writer.writeEnumSetValue("applicableArchitectures", this.getApplicableArchitectures());
+        writer.writeEnumSetValue("applicableDeviceTypes", this.getApplicableDeviceTypes());
         writer.writeCollectionOfObjectValues("committedContainedApps", this.getCommittedContainedApps());
         writer.writeStringValue("identityName", this.getIdentityName());
         writer.writeStringValue("identityPublisherHash", this.getIdentityPublisherHash());

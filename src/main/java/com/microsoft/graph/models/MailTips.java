@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -56,7 +57,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
     /**
      * The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
      */
-    private RecipientScopeType recipientScope;
+    private EnumSet<RecipientScopeType> recipientScope;
     /**
      * Recipients suggested based on previous contexts where they appear in the same message.
      */
@@ -154,7 +155,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
         deserializerMap.put("mailboxFull", (n) -> { this.setMailboxFull(n.getBooleanValue()); });
         deserializerMap.put("maxMessageSize", (n) -> { this.setMaxMessageSize(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("recipientScope", (n) -> { this.setRecipientScope(n.getEnumValue(RecipientScopeType.class)); });
+        deserializerMap.put("recipientScope", (n) -> { this.setRecipientScope(n.getEnumSetValue(RecipientScopeType.class)); });
         deserializerMap.put("recipientSuggestions", (n) -> { this.setRecipientSuggestions(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
         deserializerMap.put("totalMemberCount", (n) -> { this.setTotalMemberCount(n.getIntegerValue()); });
         return deserializerMap;
@@ -231,7 +232,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("mailboxFull", this.getMailboxFull());
         writer.writeIntegerValue("maxMessageSize", this.getMaxMessageSize());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeEnumValue("recipientScope", this.getRecipientScope());
+        writer.writeEnumSetValue("recipientScope", this.getRecipientScope());
         writer.writeCollectionOfObjectValues("recipientSuggestions", this.getRecipientSuggestions());
         writer.writeIntegerValue("totalMemberCount", this.getTotalMemberCount());
         writer.writeAdditionalData(this.getAdditionalData());

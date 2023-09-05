@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -12,7 +13,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     /**
      * A collection of authentication method modes that are required be used to satify this authentication strength.
      */
-    private java.util.List<AuthenticationMethodModes> allowedCombinations;
+    private EnumSet<java.util.List<AuthenticationMethodModes>> allowedCombinations;
     /**
      * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      */
@@ -40,7 +41,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     /**
      * The requirementsSatisfied property
      */
-    private AuthenticationStrengthRequirements requirementsSatisfied;
+    private EnumSet<AuthenticationStrengthRequirements> requirementsSatisfied;
     /**
      * Instantiates a new authenticationStrengthPolicy and sets the default values.
      */
@@ -111,7 +112,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("policyType", (n) -> { this.setPolicyType(n.getEnumValue(AuthenticationStrengthPolicyType.class)); });
-        deserializerMap.put("requirementsSatisfied", (n) -> { this.setRequirementsSatisfied(n.getEnumValue(AuthenticationStrengthRequirements.class)); });
+        deserializerMap.put("requirementsSatisfied", (n) -> { this.setRequirementsSatisfied(n.getEnumSetValue(AuthenticationStrengthRequirements.class)); });
         return deserializerMap;
     }
     /**
@@ -152,7 +153,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("modifiedDateTime", this.getModifiedDateTime());
         writer.writeEnumValue("policyType", this.getPolicyType());
-        writer.writeEnumValue("requirementsSatisfied", this.getRequirementsSatisfied());
+        writer.writeEnumSetValue("requirementsSatisfied", this.getRequirementsSatisfied());
     }
     /**
      * Sets the allowedCombinations property value. A collection of authentication method modes that are required be used to satify this authentication strength.

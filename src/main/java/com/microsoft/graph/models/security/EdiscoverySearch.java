@@ -3,6 +3,7 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public class EdiscoverySearch extends Search implements Parsable {
     /**
      * When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
      */
-    private DataSourceScopes dataSourceScopes;
+    private EnumSet<DataSourceScopes> dataSourceScopes;
     /**
      * The last estimate operation associated with the eDiscovery search.
      */
@@ -91,7 +92,7 @@ public class EdiscoverySearch extends Search implements Parsable {
         deserializerMap.put("additionalSources", (n) -> { this.setAdditionalSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
         deserializerMap.put("addToReviewSetOperation", (n) -> { this.setAddToReviewSetOperation(n.getObjectValue(EdiscoveryAddToReviewSetOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("custodianSources", (n) -> { this.setCustodianSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
-        deserializerMap.put("dataSourceScopes", (n) -> { this.setDataSourceScopes(n.getEnumValue(DataSourceScopes.class)); });
+        deserializerMap.put("dataSourceScopes", (n) -> { this.setDataSourceScopes(n.getEnumSetValue(DataSourceScopes.class)); });
         deserializerMap.put("lastEstimateStatisticsOperation", (n) -> { this.setLastEstimateStatisticsOperation(n.getObjectValue(EdiscoveryEstimateOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("noncustodialSources", (n) -> { this.setNoncustodialSources(n.getCollectionOfObjectValues(EdiscoveryNoncustodialDataSource::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -122,7 +123,7 @@ public class EdiscoverySearch extends Search implements Parsable {
         writer.writeCollectionOfObjectValues("additionalSources", this.getAdditionalSources());
         writer.writeObjectValue("addToReviewSetOperation", this.getAddToReviewSetOperation());
         writer.writeCollectionOfObjectValues("custodianSources", this.getCustodianSources());
-        writer.writeEnumValue("dataSourceScopes", this.getDataSourceScopes());
+        writer.writeEnumSetValue("dataSourceScopes", this.getDataSourceScopes());
         writer.writeObjectValue("lastEstimateStatisticsOperation", this.getLastEstimateStatisticsOperation());
         writer.writeCollectionOfObjectValues("noncustodialSources", this.getNoncustodialSources());
     }

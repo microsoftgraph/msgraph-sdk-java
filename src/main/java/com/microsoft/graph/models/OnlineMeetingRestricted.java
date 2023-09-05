@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
     /**
      * Specifies the reason shared content from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
      */
-    private OnlineMeetingContentSharingDisabledReason contentSharingDisabled;
+    private EnumSet<OnlineMeetingContentSharingDisabledReason> contentSharingDisabled;
     /**
      * The OdataType property
      */
@@ -24,7 +25,7 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
     /**
      * Specifies the reason video from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
      */
-    private OnlineMeetingVideoDisabledReason videoDisabled;
+    private EnumSet<OnlineMeetingVideoDisabledReason> videoDisabled;
     /**
      * Instantiates a new onlineMeetingRestricted and sets the default values.
      */
@@ -64,9 +65,9 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("contentSharingDisabled", (n) -> { this.setContentSharingDisabled(n.getEnumValue(OnlineMeetingContentSharingDisabledReason.class)); });
+        deserializerMap.put("contentSharingDisabled", (n) -> { this.setContentSharingDisabled(n.getEnumSetValue(OnlineMeetingContentSharingDisabledReason.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("videoDisabled", (n) -> { this.setVideoDisabled(n.getEnumValue(OnlineMeetingVideoDisabledReason.class)); });
+        deserializerMap.put("videoDisabled", (n) -> { this.setVideoDisabled(n.getEnumSetValue(OnlineMeetingVideoDisabledReason.class)); });
         return deserializerMap;
     }
     /**
@@ -91,9 +92,9 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeEnumValue("contentSharingDisabled", this.getContentSharingDisabled());
+        writer.writeEnumSetValue("contentSharingDisabled", this.getContentSharingDisabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeEnumValue("videoDisabled", this.getVideoDisabled());
+        writer.writeEnumSetValue("videoDisabled", this.getVideoDisabled());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**

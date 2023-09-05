@@ -4,6 +4,7 @@ import com.microsoft.graph.models.Group;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
     /**
      * Specifies which sources are included in this group. Possible values are: mailbox, site.
      */
-    private SourceType includedSources;
+    private EnumSet<SourceType> includedSources;
     /**
      * Instantiates a new unifiedGroupSource and sets the default values.
      */
@@ -42,7 +43,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("group", (n) -> { this.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
-        deserializerMap.put("includedSources", (n) -> { this.setIncludedSources(n.getEnumValue(SourceType.class)); });
+        deserializerMap.put("includedSources", (n) -> { this.setIncludedSources(n.getEnumSetValue(SourceType.class)); });
         return deserializerMap;
     }
     /**
@@ -69,7 +70,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("group", this.getGroup());
-        writer.writeEnumValue("includedSources", this.getIncludedSources());
+        writer.writeEnumSetValue("includedSources", this.getIncludedSources());
     }
     /**
      * Sets the group property value. The group property

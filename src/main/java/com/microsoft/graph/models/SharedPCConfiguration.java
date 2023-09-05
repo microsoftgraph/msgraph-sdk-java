@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
     /**
      * Type of accounts that are allowed to share the PC.
      */
-    private SharedPCAllowedAccountType allowedAccounts;
+    private EnumSet<SharedPCAllowedAccountType> allowedAccounts;
     /**
      * Specifies whether local storage is allowed on a shared PC.
      */
@@ -149,7 +150,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountManagerPolicy", (n) -> { this.setAccountManagerPolicy(n.getObjectValue(SharedPCAccountManagerPolicy::createFromDiscriminatorValue)); });
-        deserializerMap.put("allowedAccounts", (n) -> { this.setAllowedAccounts(n.getEnumValue(SharedPCAllowedAccountType.class)); });
+        deserializerMap.put("allowedAccounts", (n) -> { this.setAllowedAccounts(n.getEnumSetValue(SharedPCAllowedAccountType.class)); });
         deserializerMap.put("allowLocalStorage", (n) -> { this.setAllowLocalStorage(n.getBooleanValue()); });
         deserializerMap.put("disableAccountManager", (n) -> { this.setDisableAccountManager(n.getBooleanValue()); });
         deserializerMap.put("disableEduPolicies", (n) -> { this.setDisableEduPolicies(n.getBooleanValue()); });
@@ -202,7 +203,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("accountManagerPolicy", this.getAccountManagerPolicy());
-        writer.writeEnumValue("allowedAccounts", this.getAllowedAccounts());
+        writer.writeEnumSetValue("allowedAccounts", this.getAllowedAccounts());
         writer.writeBooleanValue("allowLocalStorage", this.getAllowLocalStorage());
         writer.writeBooleanValue("disableAccountManager", this.getDisableAccountManager());
         writer.writeBooleanValue("disableEduPolicies", this.getDisableEduPolicies());
