@@ -15,6 +15,7 @@ import com.microsoft.graph.security.models.TriggersRoot;
 import com.microsoft.graph.security.models.TriggerTypesRoot;
 import com.microsoft.graph.security.models.ThreatIntelligence;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.SubjectRightsRequestCollectionPage;
 import com.microsoft.graph.security.requests.IncidentCollectionPage;
 import com.microsoft.graph.requests.SecureScoreControlProfileCollectionPage;
 import com.microsoft.graph.requests.SecureScoreCollectionPage;
@@ -33,6 +34,15 @@ import javax.annotation.Nonnull;
  */
 public class Security extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Subject Rights Requests.
+     * 
+     */
+    @SerializedName(value = "subjectRightsRequests", alternate = {"SubjectRightsRequests"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.SubjectRightsRequestCollectionPage subjectRightsRequests;
 
     /**
      * The Cases.
@@ -133,6 +143,10 @@ public class Security extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("subjectRightsRequests")) {
+            subjectRightsRequests = serializer.deserializeObject(json.get("subjectRightsRequests"), com.microsoft.graph.requests.SubjectRightsRequestCollectionPage.class);
+        }
 
         if (json.has("alerts_v2")) {
             alerts_v2 = serializer.deserializeObject(json.get("alerts_v2"), com.microsoft.graph.security.requests.AlertCollectionPage.class);

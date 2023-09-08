@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.70.0] - 2023-09-08
+
+### Added 
+
+- PresenceStatusMessage derived types and requests.
+- SubjectRightsRequest derived types. 
+
 ## [5.69.0] - 2023-09-01
 
 ### Added 
