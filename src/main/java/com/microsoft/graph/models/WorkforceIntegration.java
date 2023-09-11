@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
     /**
      * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, userShiftPreferences, openshift, openShiftRequest, offerShiftRequest, unknownFutureValue.
      */
-    private WorkforceIntegrationSupportedEntities supportedEntities;
+    private EnumSet<WorkforceIntegrationSupportedEntities> supportedEntities;
     /**
      * Workforce Integration URL for callbacks from the Shifts service.
      */
@@ -84,7 +85,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("encryption", (n) -> { this.setEncryption(n.getObjectValue(WorkforceIntegrationEncryption::createFromDiscriminatorValue)); });
         deserializerMap.put("isActive", (n) -> { this.setIsActive(n.getBooleanValue()); });
-        deserializerMap.put("supportedEntities", (n) -> { this.setSupportedEntities(n.getEnumValue(WorkforceIntegrationSupportedEntities.class)); });
+        deserializerMap.put("supportedEntities", (n) -> { this.setSupportedEntities(n.getEnumSetValue(WorkforceIntegrationSupportedEntities.class)); });
         deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
         return deserializerMap;
     }
@@ -101,7 +102,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @return a workforceIntegrationSupportedEntities
      */
     @jakarta.annotation.Nullable
-    public WorkforceIntegrationSupportedEntities getSupportedEntities() {
+    public EnumSet<WorkforceIntegrationSupportedEntities> getSupportedEntities() {
         return this.supportedEntities;
     }
     /**
@@ -123,7 +124,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("encryption", this.getEncryption());
         writer.writeBooleanValue("isActive", this.getIsActive());
-        writer.writeEnumValue("supportedEntities", this.getSupportedEntities());
+        writer.writeEnumSetValue("supportedEntities", this.getSupportedEntities());
         writer.writeStringValue("url", this.getUrl());
     }
     /**
@@ -158,7 +159,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * Sets the supportedEntities property value. The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, userShiftPreferences, openshift, openShiftRequest, offerShiftRequest, unknownFutureValue.
      * @param value Value to set for the supportedEntities property.
      */
-    public void setSupportedEntities(@jakarta.annotation.Nullable final WorkforceIntegrationSupportedEntities value) {
+    public void setSupportedEntities(@jakarta.annotation.Nullable final EnumSet<WorkforceIntegrationSupportedEntities> value) {
         this.supportedEntities = value;
     }
     /**

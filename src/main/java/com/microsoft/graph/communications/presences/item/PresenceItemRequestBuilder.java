@@ -3,6 +3,7 @@ package com.microsoft.graph.communications.presences.item;
 import com.microsoft.graph.communications.presences.item.clearpresence.ClearPresenceRequestBuilder;
 import com.microsoft.graph.communications.presences.item.clearuserpreferredpresence.ClearUserPreferredPresenceRequestBuilder;
 import com.microsoft.graph.communications.presences.item.setpresence.SetPresenceRequestBuilder;
+import com.microsoft.graph.communications.presences.item.setstatusmessage.SetStatusMessageRequestBuilder;
 import com.microsoft.graph.communications.presences.item.setuserpreferredpresence.SetUserPreferredPresenceRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Presence;
@@ -44,6 +45,13 @@ public class PresenceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SetPresenceRequestBuilder setPresence() {
         return new SetPresenceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the setStatusMessage method.
+     */
+    @jakarta.annotation.Nonnull
+    public SetStatusMessageRequestBuilder setStatusMessage() {
+        return new SetStatusMessageRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the setUserPreferredPresence method.

@@ -39,8 +39,11 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
     /**
      * Information about the Microsoft Teams team that was created for the request.
      * @return a CompletableFuture of team
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<Team> get() {
         return get(null);
     }
@@ -48,8 +51,11 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
      * Information about the Microsoft Teams team that was created for the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of team
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<Team> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -60,8 +66,11 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
     /**
      * Information about the Microsoft Teams team that was created for the request.
      * @return a RequestInformation
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -69,8 +78,11 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
      * Information about the Microsoft Teams team that was created for the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
@@ -90,8 +102,11 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a teamRequestBuilder
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public TeamRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new TeamRequestBuilder(rawUrl, requestAdapter);

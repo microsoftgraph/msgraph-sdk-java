@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
     /**
      * Specifies which weak algorithms are allowed.  The possible values are: rsaSha1, unknownFutureValue.
      */
-    private WeakAlgorithms allowedWeakAlgorithms;
+    private EnumSet<WeakAlgorithms> allowedWeakAlgorithms;
     /**
      * Specifies whether signed authentication requests for this application should be required.
      */
@@ -54,7 +55,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
      * @return a weakAlgorithms
      */
     @jakarta.annotation.Nullable
-    public WeakAlgorithms getAllowedWeakAlgorithms() {
+    public EnumSet<WeakAlgorithms> getAllowedWeakAlgorithms() {
         return this.allowedWeakAlgorithms;
     }
     /**
@@ -64,7 +65,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("allowedWeakAlgorithms", (n) -> { this.setAllowedWeakAlgorithms(n.getEnumValue(WeakAlgorithms.class)); });
+        deserializerMap.put("allowedWeakAlgorithms", (n) -> { this.setAllowedWeakAlgorithms(n.getEnumSetValue(WeakAlgorithms.class)); });
         deserializerMap.put("isSignedRequestRequired", (n) -> { this.setIsSignedRequestRequired(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
@@ -91,7 +92,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeEnumValue("allowedWeakAlgorithms", this.getAllowedWeakAlgorithms());
+        writer.writeEnumSetValue("allowedWeakAlgorithms", this.getAllowedWeakAlgorithms());
         writer.writeBooleanValue("isSignedRequestRequired", this.getIsSignedRequestRequired());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -107,7 +108,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
      * Sets the allowedWeakAlgorithms property value. Specifies which weak algorithms are allowed.  The possible values are: rsaSha1, unknownFutureValue.
      * @param value Value to set for the allowedWeakAlgorithms property.
      */
-    public void setAllowedWeakAlgorithms(@jakarta.annotation.Nullable final WeakAlgorithms value) {
+    public void setAllowedWeakAlgorithms(@jakarta.annotation.Nullable final EnumSet<WeakAlgorithms> value) {
         this.allowedWeakAlgorithms = value;
     }
     /**

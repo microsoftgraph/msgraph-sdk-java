@@ -3,6 +3,7 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
     /**
      * The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement,  tags.
      */
-    private ExportOptions exportOptions;
+    private EnumSet<ExportOptions> exportOptions;
     /**
      * The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
      */
@@ -73,7 +74,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * @return a exportOptions
      */
     @jakarta.annotation.Nullable
-    public ExportOptions getExportOptions() {
+    public EnumSet<ExportOptions> getExportOptions() {
         return this.exportOptions;
     }
     /**
@@ -93,7 +94,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("exportFileMetadata", (n) -> { this.setExportFileMetadata(n.getCollectionOfObjectValues(ExportFileMetadata::createFromDiscriminatorValue)); });
-        deserializerMap.put("exportOptions", (n) -> { this.setExportOptions(n.getEnumValue(ExportOptions.class)); });
+        deserializerMap.put("exportOptions", (n) -> { this.setExportOptions(n.getEnumSetValue(ExportOptions.class)); });
         deserializerMap.put("exportStructure", (n) -> { this.setExportStructure(n.getEnumValue(ExportFileStructure.class)); });
         deserializerMap.put("outputName", (n) -> { this.setOutputName(n.getStringValue()); });
         deserializerMap.put("reviewSet", (n) -> { this.setReviewSet(n.getObjectValue(EdiscoveryReviewSet::createFromDiscriminatorValue)); });
@@ -133,7 +134,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeCollectionOfObjectValues("exportFileMetadata", this.getExportFileMetadata());
-        writer.writeEnumValue("exportOptions", this.getExportOptions());
+        writer.writeEnumSetValue("exportOptions", this.getExportOptions());
         writer.writeEnumValue("exportStructure", this.getExportStructure());
         writer.writeStringValue("outputName", this.getOutputName());
         writer.writeObjectValue("reviewSet", this.getReviewSet());
@@ -157,7 +158,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * Sets the exportOptions property value. The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement,  tags.
      * @param value Value to set for the exportOptions property.
      */
-    public void setExportOptions(@jakarta.annotation.Nullable final ExportOptions value) {
+    public void setExportOptions(@jakarta.annotation.Nullable final EnumSet<ExportOptions> value) {
         this.exportOptions = value;
     }
     /**

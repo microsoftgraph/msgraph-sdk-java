@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -607,7 +608,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     /**
      * Type of start menu app list visibility.
      */
-    private WindowsStartMenuAppListVisibilityType startMenuAppListVisibility;
+    private EnumSet<WindowsStartMenuAppListVisibilityType> startMenuAppListVisibility;
     /**
      * Enabling this policy hides the change account setting from appearing in the user tile in the start menu.
      */
@@ -1644,7 +1645,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         deserializerMap.put("smartScreenBlockPromptOverrideForFiles", (n) -> { this.setSmartScreenBlockPromptOverrideForFiles(n.getBooleanValue()); });
         deserializerMap.put("smartScreenEnableAppInstallControl", (n) -> { this.setSmartScreenEnableAppInstallControl(n.getBooleanValue()); });
         deserializerMap.put("startBlockUnpinningAppsFromTaskbar", (n) -> { this.setStartBlockUnpinningAppsFromTaskbar(n.getBooleanValue()); });
-        deserializerMap.put("startMenuAppListVisibility", (n) -> { this.setStartMenuAppListVisibility(n.getEnumValue(WindowsStartMenuAppListVisibilityType.class)); });
+        deserializerMap.put("startMenuAppListVisibility", (n) -> { this.setStartMenuAppListVisibility(n.getEnumSetValue(WindowsStartMenuAppListVisibilityType.class)); });
         deserializerMap.put("startMenuHideChangeAccountSettings", (n) -> { this.setStartMenuHideChangeAccountSettings(n.getBooleanValue()); });
         deserializerMap.put("startMenuHideFrequentlyUsedApps", (n) -> { this.setStartMenuHideFrequentlyUsedApps(n.getBooleanValue()); });
         deserializerMap.put("startMenuHideHibernate", (n) -> { this.setStartMenuHideHibernate(n.getBooleanValue()); });
@@ -2232,7 +2233,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @return a windowsStartMenuAppListVisibilityType
      */
     @jakarta.annotation.Nullable
-    public WindowsStartMenuAppListVisibilityType getStartMenuAppListVisibility() {
+    public EnumSet<WindowsStartMenuAppListVisibilityType> getStartMenuAppListVisibility() {
         return this.startMenuAppListVisibility;
     }
     /**
@@ -2806,7 +2807,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         writer.writeBooleanValue("smartScreenBlockPromptOverrideForFiles", this.getSmartScreenBlockPromptOverrideForFiles());
         writer.writeBooleanValue("smartScreenEnableAppInstallControl", this.getSmartScreenEnableAppInstallControl());
         writer.writeBooleanValue("startBlockUnpinningAppsFromTaskbar", this.getStartBlockUnpinningAppsFromTaskbar());
-        writer.writeEnumValue("startMenuAppListVisibility", this.getStartMenuAppListVisibility());
+        writer.writeEnumSetValue("startMenuAppListVisibility", this.getStartMenuAppListVisibility());
         writer.writeBooleanValue("startMenuHideChangeAccountSettings", this.getStartMenuHideChangeAccountSettings());
         writer.writeBooleanValue("startMenuHideFrequentlyUsedApps", this.getStartMenuHideFrequentlyUsedApps());
         writer.writeBooleanValue("startMenuHideHibernate", this.getStartMenuHideHibernate());
@@ -3900,7 +3901,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * Sets the startMenuAppListVisibility property value. Type of start menu app list visibility.
      * @param value Value to set for the startMenuAppListVisibility property.
      */
-    public void setStartMenuAppListVisibility(@jakarta.annotation.Nullable final WindowsStartMenuAppListVisibilityType value) {
+    public void setStartMenuAppListVisibility(@jakarta.annotation.Nullable final EnumSet<WindowsStartMenuAppListVisibilityType> value) {
         this.startMenuAppListVisibility = value;
     }
     /**

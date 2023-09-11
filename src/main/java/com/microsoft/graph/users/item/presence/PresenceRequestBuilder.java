@@ -5,6 +5,7 @@ import com.microsoft.graph.models.Presence;
 import com.microsoft.graph.users.item.presence.clearpresence.ClearPresenceRequestBuilder;
 import com.microsoft.graph.users.item.presence.clearuserpreferredpresence.ClearUserPreferredPresenceRequestBuilder;
 import com.microsoft.graph.users.item.presence.setpresence.SetPresenceRequestBuilder;
+import com.microsoft.graph.users.item.presence.setstatusmessage.SetStatusMessageRequestBuilder;
 import com.microsoft.graph.users.item.presence.setuserpreferredpresence.SetUserPreferredPresenceRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -44,6 +45,13 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SetPresenceRequestBuilder setPresence() {
         return new SetPresenceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the setStatusMessage method.
+     */
+    @jakarta.annotation.Nonnull
+    public SetStatusMessageRequestBuilder setStatusMessage() {
+        return new SetStatusMessageRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the setUserPreferredPresence method.

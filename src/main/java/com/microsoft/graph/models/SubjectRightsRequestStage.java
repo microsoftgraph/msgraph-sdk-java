@@ -11,7 +11,8 @@ public enum SubjectRightsRequestStage implements ValuedEnum {
     ContentDeletion("contentDeletion"),
     CaseResolved("caseResolved"),
     ContentEstimate("contentEstimate"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Approval("approval");
     public final String value;
     SubjectRightsRequestStage(final String value) {
         this.value = value;
@@ -29,6 +30,7 @@ public enum SubjectRightsRequestStage implements ValuedEnum {
             case "caseResolved": return CaseResolved;
             case "contentEstimate": return ContentEstimate;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "approval": return Approval;
             default: return null;
         }
     }
