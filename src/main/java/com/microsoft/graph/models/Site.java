@@ -42,6 +42,10 @@ public class Site extends BaseItem implements Parsable {
      */
     private java.util.List<ColumnDefinition> externalColumns;
     /**
+     * The isPersonalSite property
+     */
+    private Boolean isPersonalSite;
+    /**
      * Used to address any item contained in this site. This collection can't be enumerated.
      */
     private java.util.List<BaseItem> items;
@@ -181,6 +185,7 @@ public class Site extends BaseItem implements Parsable {
         deserializerMap.put("drives", (n) -> { this.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
         deserializerMap.put("externalColumns", (n) -> { this.setExternalColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("isPersonalSite", (n) -> { this.setIsPersonalSite(n.getBooleanValue()); });
         deserializerMap.put("items", (n) -> { this.setItems(n.getCollectionOfObjectValues(BaseItem::createFromDiscriminatorValue)); });
         deserializerMap.put("lists", (n) -> { this.setLists(n.getCollectionOfObjectValues(List::createFromDiscriminatorValue)); });
         deserializerMap.put("onenote", (n) -> { this.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
@@ -193,6 +198,14 @@ public class Site extends BaseItem implements Parsable {
         deserializerMap.put("termStore", (n) -> { this.setTermStore(n.getObjectValue(Store::createFromDiscriminatorValue)); });
         deserializerMap.put("termStores", (n) -> { this.setTermStores(n.getCollectionOfObjectValues(Store::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isPersonalSite property value. The isPersonalSite property
+     * @return a boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsPersonalSite() {
+        return this.isPersonalSite;
     }
     /**
      * Gets the items property value. Used to address any item contained in this site. This collection can't be enumerated.
@@ -297,6 +310,7 @@ public class Site extends BaseItem implements Parsable {
         writer.writeCollectionOfObjectValues("drives", this.getDrives());
         writer.writeObjectValue("error", this.getError());
         writer.writeCollectionOfObjectValues("externalColumns", this.getExternalColumns());
+        writer.writeBooleanValue("isPersonalSite", this.getIsPersonalSite());
         writer.writeCollectionOfObjectValues("items", this.getItems());
         writer.writeCollectionOfObjectValues("lists", this.getLists());
         writer.writeObjectValue("onenote", this.getOnenote());
@@ -364,6 +378,13 @@ public class Site extends BaseItem implements Parsable {
      */
     public void setExternalColumns(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
         this.externalColumns = value;
+    }
+    /**
+     * Sets the isPersonalSite property value. The isPersonalSite property
+     * @param value Value to set for the isPersonalSite property.
+     */
+    public void setIsPersonalSite(@jakarta.annotation.Nullable final Boolean value) {
+        this.isPersonalSite = value;
     }
     /**
      * Sets the items property value. Used to address any item contained in this site. This collection can't be enumerated.

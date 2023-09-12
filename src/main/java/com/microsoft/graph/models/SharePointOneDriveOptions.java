@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ public class SharePointOneDriveOptions implements AdditionalDataHolder, Parsable
     /**
      * The type of search content. The possible values are: sharedContent, privateContent, unknownFutureValue. Read-only.
      */
-    private SearchContent includeContent;
+    private EnumSet<SearchContent> includeContent;
     /**
      * The OdataType property
      */
@@ -52,7 +53,7 @@ public class SharePointOneDriveOptions implements AdditionalDataHolder, Parsable
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("includeContent", (n) -> { this.setIncludeContent(n.getEnumValue(SearchContent.class)); });
+        deserializerMap.put("includeContent", (n) -> { this.setIncludeContent(n.getEnumSetValue(SearchContent.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -61,7 +62,7 @@ public class SharePointOneDriveOptions implements AdditionalDataHolder, Parsable
      * @return a searchContent
      */
     @jakarta.annotation.Nullable
-    public SearchContent getIncludeContent() {
+    public EnumSet<SearchContent> getIncludeContent() {
         return this.includeContent;
     }
     /**
@@ -78,7 +79,7 @@ public class SharePointOneDriveOptions implements AdditionalDataHolder, Parsable
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeEnumValue("includeContent", this.getIncludeContent());
+        writer.writeEnumSetValue("includeContent", this.getIncludeContent());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -93,7 +94,7 @@ public class SharePointOneDriveOptions implements AdditionalDataHolder, Parsable
      * Sets the includeContent property value. The type of search content. The possible values are: sharedContent, privateContent, unknownFutureValue. Read-only.
      * @param value Value to set for the includeContent property.
      */
-    public void setIncludeContent(@jakarta.annotation.Nullable final SearchContent value) {
+    public void setIncludeContent(@jakarta.annotation.Nullable final EnumSet<SearchContent> value) {
         this.includeContent = value;
     }
     /**

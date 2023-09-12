@@ -2,6 +2,7 @@ package com.microsoft.graph.security.incidents.item.alerts.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.Alert;
+import com.microsoft.graph.security.incidents.item.alerts.item.comments.CommentsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +21,13 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AlertItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * The comments property
+     */
+    @jakarta.annotation.Nonnull
+    public CommentsRequestBuilder comments() {
+        return new CommentsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new AlertItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

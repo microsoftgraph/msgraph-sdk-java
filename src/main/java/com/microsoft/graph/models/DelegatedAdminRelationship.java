@@ -55,7 +55,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     private java.util.List<DelegatedAdminRelationshipRequest> requests;
     /**
-     * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy.
+     * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
      */
     private DelegatedAdminRelationshipStatus status;
     /**
@@ -184,7 +184,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
         return this.requests;
     }
     /**
-     * Gets the status property value. The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy.
+     * Gets the status property value. The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
      * @return a delegatedAdminRelationshipStatus
      */
     @jakarta.annotation.Nullable
@@ -289,7 +289,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
         this.requests = value;
     }
     /**
-     * Sets the status property value. The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy.
+     * Sets the status property value. The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DelegatedAdminRelationshipStatus value) {

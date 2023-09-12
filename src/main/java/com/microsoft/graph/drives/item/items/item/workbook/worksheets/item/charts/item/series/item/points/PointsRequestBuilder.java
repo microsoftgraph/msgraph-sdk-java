@@ -180,6 +180,16 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a pointsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PointsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PointsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of chartpoints objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

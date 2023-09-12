@@ -86,7 +86,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     private String disabledByMicrosoftStatus;
     /**
-     * The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      */
     private String displayName;
     /**
@@ -383,7 +383,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.disabledByMicrosoftStatus;
     }
     /**
-     * Gets the displayName property value. The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * Gets the displayName property value. The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -891,7 +891,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.disabledByMicrosoftStatus = value;
     }
     /**
-     * Sets the displayName property value. The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * Sets the displayName property value. The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

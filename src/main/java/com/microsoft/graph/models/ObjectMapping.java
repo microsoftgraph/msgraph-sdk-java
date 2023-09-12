@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     /**
      * The flowTypes property
      */
-    private ObjectFlowTypes flowTypes;
+    private EnumSet<ObjectFlowTypes> flowTypes;
     /**
      * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      */
@@ -98,7 +99,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("attributeMappings", (n) -> { this.setAttributeMappings(n.getCollectionOfObjectValues(AttributeMapping::createFromDiscriminatorValue)); });
         deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
-        deserializerMap.put("flowTypes", (n) -> { this.setFlowTypes(n.getEnumValue(ObjectFlowTypes.class)); });
+        deserializerMap.put("flowTypes", (n) -> { this.setFlowTypes(n.getEnumSetValue(ObjectFlowTypes.class)); });
         deserializerMap.put("metadata", (n) -> { this.setMetadata(n.getCollectionOfObjectValues(ObjectMappingMetadataEntry::createFromDiscriminatorValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -112,7 +113,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      * @return a objectFlowTypes
      */
     @jakarta.annotation.Nullable
-    public ObjectFlowTypes getFlowTypes() {
+    public EnumSet<ObjectFlowTypes> getFlowTypes() {
         return this.flowTypes;
     }
     /**
@@ -171,7 +172,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("attributeMappings", this.getAttributeMappings());
         writer.writeBooleanValue("enabled", this.getEnabled());
-        writer.writeEnumValue("flowTypes", this.getFlowTypes());
+        writer.writeEnumSetValue("flowTypes", this.getFlowTypes());
         writer.writeCollectionOfObjectValues("metadata", this.getMetadata());
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -205,7 +206,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      * Sets the flowTypes property value. The flowTypes property
      * @param value Value to set for the flowTypes property.
      */
-    public void setFlowTypes(@jakarta.annotation.Nullable final ObjectFlowTypes value) {
+    public void setFlowTypes(@jakarta.annotation.Nullable final EnumSet<ObjectFlowTypes> value) {
         this.flowTypes = value;
     }
     /**

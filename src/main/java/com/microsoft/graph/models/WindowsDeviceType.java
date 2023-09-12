@@ -4,20 +4,22 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Contains properties for Windows device type.
+ * Contains properties for Windows device type. Multiple values can be selected. Default value is `none`.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsDeviceType implements ValuedEnum {
-    /** No flags set. */
+    /** No device types supported. Default value. */
     None("none"),
-    /** Whether or not the Desktop Windows device type is supported. */
+    /** Indicates support for Desktop Windows device type. */
     Desktop("desktop"),
-    /** Whether or not the Mobile Windows device type is supported. */
+    /** Indicates support for Mobile Windows device type. */
     Mobile("mobile"),
-    /** Whether or not the Holographic Windows device type is supported. */
+    /** Indicates support for Holographic Windows device type. */
     Holographic("holographic"),
-    /** Whether or not the Team Windows device type is supported. */
-    Team("team");
+    /** Indicates support for Team Windows device type. */
+    Team("team"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     WindowsDeviceType(final String value) {
         this.value = value;
@@ -33,6 +35,7 @@ public enum WindowsDeviceType implements ValuedEnum {
             case "mobile": return Mobile;
             case "holographic": return Holographic;
             case "team": return Team;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

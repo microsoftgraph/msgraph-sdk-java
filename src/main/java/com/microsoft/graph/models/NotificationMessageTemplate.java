@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +16,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
     /**
      * Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
      */
-    private NotificationTemplateBrandingOptions brandingOptions;
+    private EnumSet<NotificationTemplateBrandingOptions> brandingOptions;
     /**
      * The default locale to fallback onto when the requested locale is not available.
      */
@@ -57,7 +58,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      * @return a notificationTemplateBrandingOptions
      */
     @jakarta.annotation.Nullable
-    public NotificationTemplateBrandingOptions getBrandingOptions() {
+    public EnumSet<NotificationTemplateBrandingOptions> getBrandingOptions() {
         return this.brandingOptions;
     }
     /**
@@ -83,7 +84,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("brandingOptions", (n) -> { this.setBrandingOptions(n.getEnumValue(NotificationTemplateBrandingOptions.class)); });
+        deserializerMap.put("brandingOptions", (n) -> { this.setBrandingOptions(n.getEnumSetValue(NotificationTemplateBrandingOptions.class)); });
         deserializerMap.put("defaultLocale", (n) -> { this.setDefaultLocale(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -122,7 +123,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("brandingOptions", this.getBrandingOptions());
+        writer.writeEnumSetValue("brandingOptions", this.getBrandingOptions());
         writer.writeStringValue("defaultLocale", this.getDefaultLocale());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
@@ -133,7 +134,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      * Sets the brandingOptions property value. Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
      * @param value Value to set for the brandingOptions property.
      */
-    public void setBrandingOptions(@jakarta.annotation.Nullable final NotificationTemplateBrandingOptions value) {
+    public void setBrandingOptions(@jakarta.annotation.Nullable final EnumSet<NotificationTemplateBrandingOptions> value) {
         this.brandingOptions = value;
     }
     /**

@@ -61,6 +61,15 @@ public class ODataError extends ApiException implements AdditionalDataHolder, Pa
         return deserializerMap;
     }
     /**
+     * The primary error message.
+     * @return a string
+     */
+    @jakarta.annotation.Nonnull
+    @Override
+    public String getMessage() {
+        return this.error.getMessage();
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */

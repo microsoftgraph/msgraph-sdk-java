@@ -13,7 +13,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      */
     private String description;
     /**
-     * Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      */
     private String displayName;
     /**
@@ -58,7 +58,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         return this.description;
     }
     /**
-     * Gets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * Gets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -134,7 +134,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * Sets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
