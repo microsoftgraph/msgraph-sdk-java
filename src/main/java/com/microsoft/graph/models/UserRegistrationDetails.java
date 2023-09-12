@@ -129,7 +129,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The User Display Name.
-     * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
+     * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderby.
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
@@ -147,7 +147,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The User Principal Name.
-     * The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
+     * The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderby.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

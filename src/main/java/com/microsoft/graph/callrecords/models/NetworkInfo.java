@@ -108,7 +108,7 @@ public class NetworkInfo implements IJsonBackedObject {
 
     /**
      * The Mac Address.
-     * The media access control (MAC) address of the media endpoint's network device.
+     * The media access control (MAC) address of the media endpoint's network device. This value may be missing or shown as 02:00:00:00:00:00 due to operating system privacy policies.
      */
     @SerializedName(value = "macAddress", alternate = {"MacAddress"})
     @Expose

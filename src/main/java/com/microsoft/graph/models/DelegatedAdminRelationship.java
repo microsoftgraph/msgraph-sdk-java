@@ -106,7 +106,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Status.
-     * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy.
+     * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

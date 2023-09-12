@@ -80,7 +80,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Display Name.
-     * Name of the access review series. Supports $select and $orderBy. Required on create.
+     * Name of the access review series. Supports $select and $orderby. Required on create.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
