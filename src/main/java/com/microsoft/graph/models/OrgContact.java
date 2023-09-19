@@ -26,7 +26,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      */
     private java.util.List<DirectoryObject> directReports;
     /**
-     * Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderBy.
+     * Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderby.
      */
     private String displayName;
     /**
@@ -135,7 +135,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this.directReports;
     }
     /**
-     * Gets the displayName property value. Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderBy.
+     * Gets the displayName property value. Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderby.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -338,7 +338,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this.directReports = value;
     }
     /**
-     * Sets the displayName property value. Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderBy.
+     * Sets the displayName property value. Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

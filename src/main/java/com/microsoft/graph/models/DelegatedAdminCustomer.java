@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminCustomer extends Entity implements Parsable {
     /**
-     * The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
+     * The Azure AD display name of the customer tenant. Read-only. Supports $orderby.
      */
     private String displayName;
     /**
@@ -37,7 +37,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
         return new DelegatedAdminCustomer();
     }
     /**
-     * Gets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
+     * Gets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderby.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
+     * Sets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

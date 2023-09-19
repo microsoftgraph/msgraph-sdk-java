@@ -3,22 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Contains properties and inherited properties for Windows Universal AppX Line Of Business apps.
+ * Contains properties and inherited properties for Windows Universal AppX Line Of Business apps. Inherits from `mobileLobApp`.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     /**
      * Contains properties for Windows architecture.
      */
-    private WindowsArchitecture applicableArchitectures;
+    private EnumSet<WindowsArchitecture> applicableArchitectures;
     /**
-     * Contains properties for Windows device type.
+     * Contains properties for Windows device type. Multiple values can be selected. Default value is `none`.
      */
-    private WindowsDeviceType applicableDeviceTypes;
+    private EnumSet<WindowsDeviceType> applicableDeviceTypes;
     /**
      * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
      */
@@ -69,15 +70,15 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
      * @return a windowsArchitecture
      */
     @jakarta.annotation.Nullable
-    public WindowsArchitecture getApplicableArchitectures() {
+    public EnumSet<WindowsArchitecture> getApplicableArchitectures() {
         return this.applicableArchitectures;
     }
     /**
-     * Gets the applicableDeviceTypes property value. Contains properties for Windows device type.
+     * Gets the applicableDeviceTypes property value. Contains properties for Windows device type. Multiple values can be selected. Default value is `none`.
      * @return a windowsDeviceType
      */
     @jakarta.annotation.Nullable
-    public WindowsDeviceType getApplicableDeviceTypes() {
+    public EnumSet<WindowsDeviceType> getApplicableDeviceTypes() {
         return this.applicableDeviceTypes;
     }
     /**
@@ -95,8 +96,8 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumValue(WindowsArchitecture.class)); });
-        deserializerMap.put("applicableDeviceTypes", (n) -> { this.setApplicableDeviceTypes(n.getEnumValue(WindowsDeviceType.class)); });
+        deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumSetValue(WindowsArchitecture.class)); });
+        deserializerMap.put("applicableDeviceTypes", (n) -> { this.setApplicableDeviceTypes(n.getEnumSetValue(WindowsDeviceType.class)); });
         deserializerMap.put("committedContainedApps", (n) -> { this.setCommittedContainedApps(n.getCollectionOfObjectValues(MobileContainedApp::createFromDiscriminatorValue)); });
         deserializerMap.put("identityName", (n) -> { this.setIdentityName(n.getStringValue()); });
         deserializerMap.put("identityPublisherHash", (n) -> { this.setIdentityPublisherHash(n.getStringValue()); });
@@ -161,8 +162,8 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("applicableArchitectures", this.getApplicableArchitectures());
-        writer.writeEnumValue("applicableDeviceTypes", this.getApplicableDeviceTypes());
+        writer.writeEnumSetValue("applicableArchitectures", this.getApplicableArchitectures());
+        writer.writeEnumSetValue("applicableDeviceTypes", this.getApplicableDeviceTypes());
         writer.writeCollectionOfObjectValues("committedContainedApps", this.getCommittedContainedApps());
         writer.writeStringValue("identityName", this.getIdentityName());
         writer.writeStringValue("identityPublisherHash", this.getIdentityPublisherHash());
@@ -175,14 +176,14 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
      * Sets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @param value Value to set for the applicableArchitectures property.
      */
-    public void setApplicableArchitectures(@jakarta.annotation.Nullable final WindowsArchitecture value) {
+    public void setApplicableArchitectures(@jakarta.annotation.Nullable final EnumSet<WindowsArchitecture> value) {
         this.applicableArchitectures = value;
     }
     /**
-     * Sets the applicableDeviceTypes property value. Contains properties for Windows device type.
+     * Sets the applicableDeviceTypes property value. Contains properties for Windows device type. Multiple values can be selected. Default value is `none`.
      * @param value Value to set for the applicableDeviceTypes property.
      */
-    public void setApplicableDeviceTypes(@jakarta.annotation.Nullable final WindowsDeviceType value) {
+    public void setApplicableDeviceTypes(@jakarta.annotation.Nullable final EnumSet<WindowsDeviceType> value) {
         this.applicableDeviceTypes = value;
     }
     /**

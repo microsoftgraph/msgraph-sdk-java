@@ -54,7 +54,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      */
     private java.util.List<String> systemPreferredAuthenticationMethods;
     /**
-     * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
+     * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderby.
      */
     private String userDisplayName;
     /**
@@ -62,7 +62,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      */
     private UserDefaultAuthenticationMethod userPreferredMethodForSecondaryAuthentication;
     /**
-     * The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
+     * The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderby.
      */
     private String userPrincipalName;
     /**
@@ -198,7 +198,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         return this.systemPreferredAuthenticationMethods;
     }
     /**
-     * Gets the userDisplayName property value. The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
+     * Gets the userDisplayName property value. The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderby.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -214,7 +214,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         return this.userPreferredMethodForSecondaryAuthentication;
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
+     * Gets the userPrincipalName property value. The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderby.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -330,7 +330,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         this.systemPreferredAuthenticationMethods = value;
     }
     /**
-     * Sets the userDisplayName property value. The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
+     * Sets the userDisplayName property value. The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderby.
      * @param value Value to set for the userDisplayName property.
      */
     public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -344,7 +344,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         this.userPreferredMethodForSecondaryAuthentication = value;
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
+     * Sets the userPrincipalName property value. The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderby.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

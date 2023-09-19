@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     /**
      * The scenarios property
      */
-    private TemplateScenarios scenarios;
+    private EnumSet<TemplateScenarios> scenarios;
     /**
      * Instantiates a new conditionalAccessTemplate and sets the default values.
      */
@@ -66,7 +67,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(ConditionalAccessPolicyDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
-        deserializerMap.put("scenarios", (n) -> { this.setScenarios(n.getEnumValue(TemplateScenarios.class)); });
+        deserializerMap.put("scenarios", (n) -> { this.setScenarios(n.getEnumSetValue(TemplateScenarios.class)); });
         return deserializerMap;
     }
     /**
@@ -82,7 +83,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      * @return a templateScenarios
      */
     @jakarta.annotation.Nullable
-    public TemplateScenarios getScenarios() {
+    public EnumSet<TemplateScenarios> getScenarios() {
         return this.scenarios;
     }
     /**
@@ -95,7 +96,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeObjectValue("details", this.getDetails());
         writer.writeStringValue("name", this.getName());
-        writer.writeEnumValue("scenarios", this.getScenarios());
+        writer.writeEnumSetValue("scenarios", this.getScenarios());
     }
     /**
      * Sets the description property value. The user-friendly name of the template.
@@ -122,7 +123,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
      * Sets the scenarios property value. The scenarios property
      * @param value Value to set for the scenarios property.
      */
-    public void setScenarios(@jakarta.annotation.Nullable final TemplateScenarios value) {
+    public void setScenarios(@jakarta.annotation.Nullable final EnumSet<TemplateScenarios> value) {
         this.scenarios = value;
     }
 }

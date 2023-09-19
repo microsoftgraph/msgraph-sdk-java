@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     /**
      * Indicates device's health state. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
      */
-    private WindowsDeviceHealthState deviceState;
+    private EnumSet<WindowsDeviceHealthState> deviceState;
     /**
      * Current endpoint protection engine's version
      */
@@ -71,7 +72,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     /**
      * Product Status of Windows Defender Antivirus. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall.
      */
-    private WindowsDefenderProductStatus productStatus;
+    private EnumSet<WindowsDefenderProductStatus> productStatus;
     /**
      * When TRUE indicates quick scan is overdue, when FALSE indicates quick scan is not overdue. Defaults to setting on client device.
      */
@@ -133,7 +134,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @return a windowsDeviceHealthState
      */
     @jakarta.annotation.Nullable
-    public WindowsDeviceHealthState getDeviceState() {
+    public EnumSet<WindowsDeviceHealthState> getDeviceState() {
         return this.deviceState;
     }
     /**
@@ -153,7 +154,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("antiMalwareVersion", (n) -> { this.setAntiMalwareVersion(n.getStringValue()); });
         deserializerMap.put("detectedMalwareState", (n) -> { this.setDetectedMalwareState(n.getCollectionOfObjectValues(WindowsDeviceMalwareState::createFromDiscriminatorValue)); });
-        deserializerMap.put("deviceState", (n) -> { this.setDeviceState(n.getEnumValue(WindowsDeviceHealthState.class)); });
+        deserializerMap.put("deviceState", (n) -> { this.setDeviceState(n.getEnumSetValue(WindowsDeviceHealthState.class)); });
         deserializerMap.put("engineVersion", (n) -> { this.setEngineVersion(n.getStringValue()); });
         deserializerMap.put("fullScanOverdue", (n) -> { this.setFullScanOverdue(n.getBooleanValue()); });
         deserializerMap.put("fullScanRequired", (n) -> { this.setFullScanRequired(n.getBooleanValue()); });
@@ -165,7 +166,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
         deserializerMap.put("lastReportedDateTime", (n) -> { this.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("malwareProtectionEnabled", (n) -> { this.setMalwareProtectionEnabled(n.getBooleanValue()); });
         deserializerMap.put("networkInspectionSystemEnabled", (n) -> { this.setNetworkInspectionSystemEnabled(n.getBooleanValue()); });
-        deserializerMap.put("productStatus", (n) -> { this.setProductStatus(n.getEnumValue(WindowsDefenderProductStatus.class)); });
+        deserializerMap.put("productStatus", (n) -> { this.setProductStatus(n.getEnumSetValue(WindowsDefenderProductStatus.class)); });
         deserializerMap.put("quickScanOverdue", (n) -> { this.setQuickScanOverdue(n.getBooleanValue()); });
         deserializerMap.put("realTimeProtectionEnabled", (n) -> { this.setRealTimeProtectionEnabled(n.getBooleanValue()); });
         deserializerMap.put("rebootRequired", (n) -> { this.setRebootRequired(n.getBooleanValue()); });
@@ -259,7 +260,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @return a windowsDefenderProductStatus
      */
     @jakarta.annotation.Nullable
-    public WindowsDefenderProductStatus getProductStatus() {
+    public EnumSet<WindowsDefenderProductStatus> getProductStatus() {
         return this.productStatus;
     }
     /**
@@ -319,7 +320,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("antiMalwareVersion", this.getAntiMalwareVersion());
         writer.writeCollectionOfObjectValues("detectedMalwareState", this.getDetectedMalwareState());
-        writer.writeEnumValue("deviceState", this.getDeviceState());
+        writer.writeEnumSetValue("deviceState", this.getDeviceState());
         writer.writeStringValue("engineVersion", this.getEngineVersion());
         writer.writeBooleanValue("fullScanOverdue", this.getFullScanOverdue());
         writer.writeBooleanValue("fullScanRequired", this.getFullScanRequired());
@@ -331,7 +332,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("lastReportedDateTime", this.getLastReportedDateTime());
         writer.writeBooleanValue("malwareProtectionEnabled", this.getMalwareProtectionEnabled());
         writer.writeBooleanValue("networkInspectionSystemEnabled", this.getNetworkInspectionSystemEnabled());
-        writer.writeEnumValue("productStatus", this.getProductStatus());
+        writer.writeEnumSetValue("productStatus", this.getProductStatus());
         writer.writeBooleanValue("quickScanOverdue", this.getQuickScanOverdue());
         writer.writeBooleanValue("realTimeProtectionEnabled", this.getRealTimeProtectionEnabled());
         writer.writeBooleanValue("rebootRequired", this.getRebootRequired());
@@ -357,7 +358,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Sets the deviceState property value. Indicates device's health state. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
      * @param value Value to set for the deviceState property.
      */
-    public void setDeviceState(@jakarta.annotation.Nullable final WindowsDeviceHealthState value) {
+    public void setDeviceState(@jakarta.annotation.Nullable final EnumSet<WindowsDeviceHealthState> value) {
         this.deviceState = value;
     }
     /**
@@ -441,7 +442,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Sets the productStatus property value. Product Status of Windows Defender Antivirus. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall.
      * @param value Value to set for the productStatus property.
      */
-    public void setProductStatus(@jakarta.annotation.Nullable final WindowsDefenderProductStatus value) {
+    public void setProductStatus(@jakarta.annotation.Nullable final EnumSet<WindowsDefenderProductStatus> value) {
         this.productStatus = value;
     }
     /**

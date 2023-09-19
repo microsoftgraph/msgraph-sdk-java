@@ -26,7 +26,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     private AccessPackageResource resource;
     /**
-     * The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
+     * The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed, and deliveryFailed if it could not be added or removed. Read-only.
      */
     private AccessPackageRequestState state;
     /**
@@ -92,7 +92,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         return this.resource;
     }
     /**
-     * Gets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
+     * Gets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed, and deliveryFailed if it could not be added or removed. Read-only.
      * @return a accessPackageRequestState
      */
     @jakarta.annotation.Nullable
@@ -141,7 +141,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         this.resource = value;
     }
     /**
-     * Sets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
+     * Sets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed, and deliveryFailed if it could not be added or removed. Read-only.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final AccessPackageRequestState value) {

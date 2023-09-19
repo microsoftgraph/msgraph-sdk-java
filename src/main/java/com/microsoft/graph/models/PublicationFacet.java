@@ -14,7 +14,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The checkedOutBy property
+     * User who has checked out the file.
      */
     private IdentitySet checkedOutBy;
     /**
@@ -54,7 +54,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the checkedOutBy property value. The checkedOutBy property
+     * Gets the checkedOutBy property value. User who has checked out the file.
      * @return a identitySet
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the checkedOutBy property value. The checkedOutBy property
+     * Sets the checkedOutBy property value. User who has checked out the file.
      * @param value Value to set for the checkedOutBy property.
      */
     public void setCheckedOutBy(@jakarta.annotation.Nullable final IdentitySet value) {

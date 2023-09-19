@@ -22,7 +22,7 @@ public class Workflow extends WorkflowBase implements Parsable {
      */
     private String id;
     /**
-     * The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderBy.
+     * The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderby.
      */
     private OffsetDateTime nextScheduleRunDateTime;
     /**
@@ -105,7 +105,7 @@ public class Workflow extends WorkflowBase implements Parsable {
         return this.id;
     }
     /**
-     * Gets the nextScheduleRunDateTime property value. The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderBy.
+     * Gets the nextScheduleRunDateTime property value. The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderby.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -191,7 +191,7 @@ public class Workflow extends WorkflowBase implements Parsable {
         this.id = value;
     }
     /**
-     * Sets the nextScheduleRunDateTime property value. The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderBy.
+     * Sets the nextScheduleRunDateTime property value. The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderby.
      * @param value Value to set for the nextScheduleRunDateTime property.
      */
     public void setNextScheduleRunDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

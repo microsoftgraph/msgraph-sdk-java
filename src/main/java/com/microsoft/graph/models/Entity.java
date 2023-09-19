@@ -473,6 +473,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.macOSCompliancePolicy": return new MacOSCompliancePolicy();
             case "#microsoft.graph.macOSCustomConfiguration": return new MacOSCustomConfiguration();
             case "#microsoft.graph.macOSDeviceFeaturesConfiguration": return new MacOSDeviceFeaturesConfiguration();
+            case "#microsoft.graph.macOSDmgApp": return new MacOSDmgApp();
             case "#microsoft.graph.macOSGeneralDeviceConfiguration": return new MacOSGeneralDeviceConfiguration();
             case "#microsoft.graph.macOSLobApp": return new MacOSLobApp();
             case "#microsoft.graph.macOSMicrosoftDefenderApp": return new MacOSMicrosoftDefenderApp();
@@ -632,7 +633,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.secureScoreControlProfile": return new SecureScoreControlProfile();
             case "#microsoft.graph.security": return new Security();
             case "#microsoft.graph.security.alert": return new Alert();
-            case "#microsoft.graph.security.article": return new Article();
         }
         return null;
     }
@@ -644,6 +644,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.security.article": return new Article();
             case "#microsoft.graph.security.articleIndicator": return new ArticleIndicator();
             case "#microsoft.graph.security.artifact": return new Artifact();
             case "#microsoft.graph.security.case": return new CaseEscaped();
@@ -820,6 +821,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.userExperienceAnalyticsDeviceScores": return new UserExperienceAnalyticsDeviceScores();
             case "#microsoft.graph.userExperienceAnalyticsDeviceStartupHistory": return new UserExperienceAnalyticsDeviceStartupHistory();
             case "#microsoft.graph.userExperienceAnalyticsDeviceStartupProcess": return new UserExperienceAnalyticsDeviceStartupProcess();
+            case "#microsoft.graph.userExperienceAnalyticsDeviceStartupProcessPerformance": return new UserExperienceAnalyticsDeviceStartupProcessPerformance();
             case "#microsoft.graph.userExperienceAnalyticsMetric": return new UserExperienceAnalyticsMetric();
             case "#microsoft.graph.userExperienceAnalyticsMetricHistory": return new UserExperienceAnalyticsMetricHistory();
             case "#microsoft.graph.userExperienceAnalyticsModelScores": return new UserExperienceAnalyticsModelScores();

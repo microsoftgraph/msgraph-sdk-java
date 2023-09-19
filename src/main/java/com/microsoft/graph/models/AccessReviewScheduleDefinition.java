@@ -30,7 +30,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      */
     private String descriptionForReviewers;
     /**
-     * Name of the access review series. Supports $select and $orderBy. Required on create.
+     * Name of the access review series. Supports $select and $orderby. Required on create.
      */
     private String displayName;
     /**
@@ -126,7 +126,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
         return this.descriptionForReviewers;
     }
     /**
-     * Gets the displayName property value. Name of the access review series. Supports $select and $orderBy. Required on create.
+     * Gets the displayName property value. Name of the access review series. Supports $select and $orderby. Required on create.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -288,7 +288,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
         this.descriptionForReviewers = value;
     }
     /**
-     * Sets the displayName property value. Name of the access review series. Supports $select and $orderBy. Required on create.
+     * Sets the displayName property value. Name of the access review series. Supports $select and $orderby. Required on create.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

@@ -2,6 +2,8 @@ package com.microsoft.graph.privacy.subjectrightsrequests.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SubjectRightsRequest;
+import com.microsoft.graph.privacy.subjectrightsrequests.item.approvers.ApproversRequestBuilder;
+import com.microsoft.graph.privacy.subjectrightsrequests.item.collaborators.CollaboratorsRequestBuilder;
 import com.microsoft.graph.privacy.subjectrightsrequests.item.getfinalattachment.GetFinalAttachmentRequestBuilder;
 import com.microsoft.graph.privacy.subjectrightsrequests.item.getfinalreport.GetFinalReportRequestBuilder;
 import com.microsoft.graph.privacy.subjectrightsrequests.item.notes.NotesRequestBuilder;
@@ -25,29 +27,61 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to call the getFinalAttachment method.
+     * Provides operations to manage the approvers property of the microsoft.graph.subjectRightsRequest entity.
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public ApproversRequestBuilder approvers() {
+        return new ApproversRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collaborators property of the microsoft.graph.subjectRightsRequest entity.
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public CollaboratorsRequestBuilder collaborators() {
+        return new CollaboratorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getFinalAttachment method.
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
+     */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetFinalAttachmentRequestBuilder getFinalAttachment() {
         return new GetFinalAttachmentRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getFinalReport method.
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetFinalReportRequestBuilder getFinalReport() {
         return new GetFinalReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity.
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public NotesRequestBuilder notes() {
         return new NotesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the team property of the microsoft.graph.subjectRightsRequest entity.
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TeamRequestBuilder team() {
         return new TeamRequestBuilder(pathParameters, requestAdapter);
@@ -70,16 +104,22 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property subjectRightsRequests for privacy
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<Void> delete() {
         return delete(null);
     }
     /**
      * Delete navigation property subjectRightsRequests for privacy
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -90,9 +130,12 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a subjectRightsRequest object.
      * @return a CompletableFuture of subjectRightsRequest
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<SubjectRightsRequest> get() {
         return get(null);
     }
@@ -100,9 +143,12 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a subjectRightsRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of subjectRightsRequest
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<SubjectRightsRequest> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -114,9 +160,12 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a subjectRightsRequest object.
      * @param body The request body
      * @return a CompletableFuture of subjectRightsRequest
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<SubjectRightsRequest> patch(@jakarta.annotation.Nonnull final SubjectRightsRequest body) {
         return patch(body, null);
     }
@@ -125,9 +174,12 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of subjectRightsRequest
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<SubjectRightsRequest> patch(@jakarta.annotation.Nonnull final SubjectRightsRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -139,8 +191,11 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property subjectRightsRequests for privacy
      * @return a RequestInformation
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -148,8 +203,11 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property subjectRightsRequests for privacy
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
@@ -166,8 +224,11 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a subjectRightsRequest object.
      * @return a RequestInformation
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -175,8 +236,11 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a subjectRightsRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
@@ -196,8 +260,11 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a subjectRightsRequest object.
      * @param body The request body
      * @return a RequestInformation
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SubjectRightsRequest body) {
         return toPatchRequestInformation(body, null);
     }
@@ -206,8 +273,11 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SubjectRightsRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
@@ -228,8 +298,11 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a SubjectRightsRequestItemRequestBuilder
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SubjectRightsRequestItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SubjectRightsRequestItemRequestBuilder(rawUrl, requestAdapter);

@@ -42,7 +42,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     private Long linkSpeed;
     /**
-     * The media access control (MAC) address of the media endpoint's network device.
+     * The media access control (MAC) address of the media endpoint's network device. This value may be missing or shown as 02:00:00:00:00:00 due to operating system privacy policies.
      */
     private String macAddress;
     /**
@@ -238,7 +238,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         return this.linkSpeed;
     }
     /**
-     * Gets the macAddress property value. The media access control (MAC) address of the media endpoint's network device.
+     * Gets the macAddress property value. The media access control (MAC) address of the media endpoint's network device. This value may be missing or shown as 02:00:00:00:00:00 due to operating system privacy policies.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -489,7 +489,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         this.linkSpeed = value;
     }
     /**
-     * Sets the macAddress property value. The media access control (MAC) address of the media endpoint's network device.
+     * Sets the macAddress property value. The media access control (MAC) address of the media endpoint's network device. This value may be missing or shown as 02:00:00:00:00:00 due to operating system privacy policies.
      * @param value Value to set for the macAddress property.
      */
     public void setMacAddress(@jakarta.annotation.Nullable final String value) {

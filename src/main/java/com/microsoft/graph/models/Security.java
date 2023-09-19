@@ -43,6 +43,10 @@ public class Security extends Entity implements Parsable {
      */
     private java.util.List<SecureScore> secureScores;
     /**
+     * The subjectRightsRequests property
+     */
+    private java.util.List<SubjectRightsRequest> subjectRightsRequests;
+    /**
      * The threatIntelligence property
      */
     private ThreatIntelligence threatIntelligence;
@@ -116,6 +120,7 @@ public class Security extends Entity implements Parsable {
         deserializerMap.put("incidents", (n) -> { this.setIncidents(n.getCollectionOfObjectValues(Incident::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScoreControlProfiles", (n) -> { this.setSecureScoreControlProfiles(n.getCollectionOfObjectValues(SecureScoreControlProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScores", (n) -> { this.setSecureScores(n.getCollectionOfObjectValues(SecureScore::createFromDiscriminatorValue)); });
+        deserializerMap.put("subjectRightsRequests", (n) -> { this.setSubjectRightsRequests(n.getCollectionOfObjectValues(SubjectRightsRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("threatIntelligence", (n) -> { this.setThreatIntelligence(n.getObjectValue(ThreatIntelligence::createFromDiscriminatorValue)); });
         deserializerMap.put("triggers", (n) -> { this.setTriggers(n.getObjectValue(TriggersRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("triggerTypes", (n) -> { this.setTriggerTypes(n.getObjectValue(TriggerTypesRoot::createFromDiscriminatorValue)); });
@@ -144,6 +149,14 @@ public class Security extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<SecureScore> getSecureScores() {
         return this.secureScores;
+    }
+    /**
+     * Gets the subjectRightsRequests property value. The subjectRightsRequests property
+     * @return a subjectRightsRequest
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SubjectRightsRequest> getSubjectRightsRequests() {
+        return this.subjectRightsRequests;
     }
     /**
      * Gets the threatIntelligence property value. The threatIntelligence property
@@ -183,6 +196,7 @@ public class Security extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("incidents", this.getIncidents());
         writer.writeCollectionOfObjectValues("secureScoreControlProfiles", this.getSecureScoreControlProfiles());
         writer.writeCollectionOfObjectValues("secureScores", this.getSecureScores());
+        writer.writeCollectionOfObjectValues("subjectRightsRequests", this.getSubjectRightsRequests());
         writer.writeObjectValue("threatIntelligence", this.getThreatIntelligence());
         writer.writeObjectValue("triggers", this.getTriggers());
         writer.writeObjectValue("triggerTypes", this.getTriggerTypes());
@@ -235,6 +249,13 @@ public class Security extends Entity implements Parsable {
      */
     public void setSecureScores(@jakarta.annotation.Nullable final java.util.List<SecureScore> value) {
         this.secureScores = value;
+    }
+    /**
+     * Sets the subjectRightsRequests property value. The subjectRightsRequests property
+     * @param value Value to set for the subjectRightsRequests property.
+     */
+    public void setSubjectRightsRequests(@jakarta.annotation.Nullable final java.util.List<SubjectRightsRequest> value) {
+        this.subjectRightsRequests = value;
     }
     /**
      * Sets the threatIntelligence property value. The threatIntelligence property
