@@ -64,7 +64,7 @@ public class WorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Value.
-     * Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
+     * Represents the formula that the name is defined to refer to. for example, =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

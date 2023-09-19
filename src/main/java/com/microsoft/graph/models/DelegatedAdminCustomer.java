@@ -29,7 +29,7 @@ public class DelegatedAdminCustomer extends Entity implements IJsonBackedObject 
 
     /**
      * The Display Name.
-     * The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
+     * The Azure AD display name of the customer tenant. Read-only. Supports $orderby.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

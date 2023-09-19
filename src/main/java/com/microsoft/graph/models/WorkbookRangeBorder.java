@@ -27,7 +27,7 @@ public class WorkbookRangeBorder extends Entity implements IJsonBackedObject {
 
     /**
      * The Color.
-     * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange').
+     * HTML color code representing the color of the border line, of the form #RRGGBB (for example 'FFA500') or as a named HTML color (for example 'orange').
      */
     @SerializedName(value = "color", alternate = {"Color"})
     @Expose

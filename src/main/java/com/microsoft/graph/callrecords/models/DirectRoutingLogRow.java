@@ -39,7 +39,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Callee Number.
-     * Number of the user or bot who received the call. E.164 format, but may include additional data.
+     * Number of the user or bot who received the call. E.164 format, but may include other data.
      */
     @SerializedName(value = "calleeNumber", alternate = {"CalleeNumber"})
     @Expose
@@ -57,7 +57,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Caller Number.
-     * Number of the user or bot who made the call. E.164 format, but may include additional data.
+     * Number of the user or bot who made the call. E.164 format, but may include other data.
      */
     @SerializedName(value = "callerNumber", alternate = {"CallerNumber"})
     @Expose
@@ -111,7 +111,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Final Sip Code.
-     * The code with which the call ended, RFC 3261.
+     * The code with which the call ended, see RFC 3261.
      */
     @SerializedName(value = "finalSipCode", alternate = {"FinalSipCode"})
     @Expose
@@ -156,7 +156,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Media Path Location.
-     * The datacenter used for media path in non-bypass call.
+     * The datacenter used for media path in nonbypass call.
      */
     @SerializedName(value = "mediaPathLocation", alternate = {"MediaPathLocation"})
     @Expose
@@ -165,7 +165,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Signaling Location.
-     * The datacenter used for signaling for both bypass and non-bypass calls.
+     * The datacenter used for signaling for both bypass and nonbypass calls.
      */
     @SerializedName(value = "signalingLocation", alternate = {"SignalingLocation"})
     @Expose

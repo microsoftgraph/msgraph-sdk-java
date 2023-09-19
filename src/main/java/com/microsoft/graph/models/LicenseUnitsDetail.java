@@ -48,7 +48,7 @@ public class LicenseUnitsDetail implements IJsonBackedObject {
 
     /**
      * The Locked Out.
-     * The number of units that are locked out because the customer cancelled their subscription of the service SKU.
+     * The number of units that are locked out because the customer canceled their subscription of the service SKU.
      */
     @SerializedName(value = "lockedOut", alternate = {"LockedOut"})
     @Expose
@@ -57,7 +57,7 @@ public class LicenseUnitsDetail implements IJsonBackedObject {
 
     /**
      * The Suspended.
-     * The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
+     * The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
      */
     @SerializedName(value = "suspended", alternate = {"Suspended"})
     @Expose
@@ -66,7 +66,7 @@ public class LicenseUnitsDetail implements IJsonBackedObject {
 
     /**
      * The Warning.
-     * The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state).
+     * The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
      */
     @SerializedName(value = "warning", alternate = {"Warning"})
     @Expose

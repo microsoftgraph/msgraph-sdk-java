@@ -50,7 +50,7 @@ public class OnlineMeetingInfo implements IJsonBackedObject {
 
     /**
      * The Join Url.
-     * The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
+     * The external link that launches the online meeting. This is a URL that clients launch into a browser and will redirect the user to join the meeting.
      */
     @SerializedName(value = "joinUrl", alternate = {"JoinUrl"})
     @Expose
@@ -68,7 +68,7 @@ public class OnlineMeetingInfo implements IJsonBackedObject {
 
     /**
      * The Quick Dial.
-     * The pre-formatted quickdial for this call.
+     * The preformatted quick dial for this call.
      */
     @SerializedName(value = "quickDial", alternate = {"QuickDial"})
     @Expose

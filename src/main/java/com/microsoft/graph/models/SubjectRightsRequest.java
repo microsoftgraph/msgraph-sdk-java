@@ -212,7 +212,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Regulations.
-     * List of regulations that this request will fulfill.
+     * List of regulations that this request fulfills.
      */
     @SerializedName(value = "regulations", alternate = {"Regulations"})
     @Expose
@@ -239,7 +239,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The status of the request.. Possible values are: active, closed, unknownFutureValue.
+     * The status of the request. Possible values are: active, closed, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -271,7 +271,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Notes.
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      */
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose

@@ -65,7 +65,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements IJson
 
     /**
      * The Status.
-     * The status of the operation. Read-only. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only. Supports $orderBy.
+     * The status of the operation. Read-only. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only. Supports $orderby.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

@@ -60,7 +60,7 @@ public class WebApplication implements IJsonBackedObject {
 
     /**
      * The Logout Url.
-     * Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols.
+     * Specifies the URL that is used by Microsoft's authorization service to log out a user using front-channel, back-channel or SAML logout protocols.
      */
     @SerializedName(value = "logoutUrl", alternate = {"LogoutUrl"})
     @Expose

@@ -49,7 +49,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The State.
-     * The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
+     * The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed, and deliveryFailed if it could not be added or removed. Read-only.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

@@ -137,46 +137,6 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
         return new com.microsoft.graph.requests.MobileAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id, getClient(), null);
     }
     /**
-     *  Gets a request builder for the MobileLobApp collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.MobileLobAppCollectionRequestBuilder mobileAppsAsMobileLobApp() {
-        return new com.microsoft.graph.requests.MobileLobAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.mobileLobApp", getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the MobileLobApp item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.MobileLobAppRequestBuilder mobileAppsAsMobileLobApp(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.MobileLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.mobileLobApp", getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the ManagedMobileLobApp collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.ManagedMobileLobAppCollectionRequestBuilder mobileAppsAsManagedMobileLobApp() {
-        return new com.microsoft.graph.requests.ManagedMobileLobAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.managedMobileLobApp", getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the ManagedMobileLobApp item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.ManagedMobileLobAppRequestBuilder mobileAppsAsManagedMobileLobApp(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.ManagedMobileLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.managedMobileLobApp", getClient(), null);
-    }
-    /**
      *  Gets a request builder for the VppToken collection
      *
      * @return the collection request builder

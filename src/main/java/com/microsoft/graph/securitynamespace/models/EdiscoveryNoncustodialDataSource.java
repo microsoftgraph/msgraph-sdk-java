@@ -29,7 +29,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
 
     /**
      * The Data Source.
-     * User source or SharePoint site data source as non-custodial data source.
+     * User source or SharePoint site data source as noncustodial data source.
      */
     @SerializedName(value = "dataSource", alternate = {"DataSource"})
     @Expose
@@ -38,7 +38,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
 
     /**
      * The Last Index Operation.
-     * Operation entity that represents the latest indexing for the non-custodial data source.
+     * Operation entity that represents the latest indexing for the noncustodial data source.
      */
     @SerializedName(value = "lastIndexOperation", alternate = {"LastIndexOperation"})
     @Expose

@@ -36,7 +36,7 @@ public class AppScope extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. Read-only.
+     * Describes the type of app-specific resource represented by the app scope and is provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. Read-only.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

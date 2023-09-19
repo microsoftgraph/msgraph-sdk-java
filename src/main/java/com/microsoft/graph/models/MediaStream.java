@@ -59,7 +59,7 @@ public class MediaStream implements IJsonBackedObject {
 
     /**
      * The Media Type.
-     * The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
+     * The media type. The possible values are unknown, audio, video, videoBasedScreenSharing, data.
      */
     @SerializedName(value = "mediaType", alternate = {"MediaType"})
     @Expose

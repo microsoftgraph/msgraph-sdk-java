@@ -28,7 +28,7 @@ public class AccessReviewHistoryInstance extends Entity implements IJsonBackedOb
 
     /**
      * The Download Uri.
-     * Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
+     * Uri that can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
      */
     @SerializedName(value = "downloadUri", alternate = {"DownloadUri"})
     @Expose
@@ -46,7 +46,7 @@ public class AccessReviewHistoryInstance extends Entity implements IJsonBackedOb
 
     /**
      * The Fulfilled Date Time.
-     * Timestamp when all of the available data for this instance was collected. This will be set after this instance's status is set to done. Required.
+     * Timestamp when all of the available data for this instance was collected and is set after this instance's status is set to done. Required.
      */
     @SerializedName(value = "fulfilledDateTime", alternate = {"FulfilledDateTime"})
     @Expose
@@ -55,7 +55,7 @@ public class AccessReviewHistoryInstance extends Entity implements IJsonBackedOb
 
     /**
      * The Review History Period End Date Time.
-     * Timestamp, reviews ending on or before this date will be included in the fetched history data.
+     * Timestamp reviews ending on or before this date will be included in the fetched history data.
      */
     @SerializedName(value = "reviewHistoryPeriodEndDateTime", alternate = {"ReviewHistoryPeriodEndDateTime"})
     @Expose
@@ -64,7 +64,7 @@ public class AccessReviewHistoryInstance extends Entity implements IJsonBackedOb
 
     /**
      * The Review History Period Start Date Time.
-     * Timestamp, reviews starting on or after this date will be included in the fetched history data.
+     * Timestamp reviews starting on or after this date will be included in the fetched history data.
      */
     @SerializedName(value = "reviewHistoryPeriodStartDateTime", alternate = {"ReviewHistoryPeriodStartDateTime"})
     @Expose

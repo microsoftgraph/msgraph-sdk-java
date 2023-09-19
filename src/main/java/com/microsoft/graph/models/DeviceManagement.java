@@ -54,6 +54,7 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceColl
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryCollectionPage;
@@ -475,6 +476,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionPage userExperienceAnalyticsDeviceStartupProcesses;
 
     /**
+     * The User Experience Analytics Device Startup Process Performance.
+     * User experience analytics device Startup Process Performance
+     */
+    @SerializedName(value = "userExperienceAnalyticsDeviceStartupProcessPerformance", alternate = {"UserExperienceAnalyticsDeviceStartupProcessPerformance"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage userExperienceAnalyticsDeviceStartupProcessPerformance;
+
+    /**
      * The User Experience Analytics Metric History.
      * User experience analytics metric history
      */
@@ -778,6 +788,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("userExperienceAnalyticsDeviceStartupProcesses")) {
             userExperienceAnalyticsDeviceStartupProcesses = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceStartupProcesses"), com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsDeviceStartupProcessPerformance")) {
+            userExperienceAnalyticsDeviceStartupProcessPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceStartupProcessPerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsMetricHistory")) {

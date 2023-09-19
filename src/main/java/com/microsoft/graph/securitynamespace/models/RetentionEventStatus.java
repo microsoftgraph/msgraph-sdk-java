@@ -41,7 +41,7 @@ public class RetentionEventStatus implements IJsonBackedObject {
 
     /**
      * The Error.
-     * The error if the status is not successful.
+     * The error if the status isn't successful.
      */
     @SerializedName(value = "error", alternate = {"Error"})
     @Expose

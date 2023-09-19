@@ -47,7 +47,7 @@ public class DataSource extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the dataSource. This will be the name of the SharePoint site.
+     * The display name of the dataSource and is the name of the SharePoint site.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
