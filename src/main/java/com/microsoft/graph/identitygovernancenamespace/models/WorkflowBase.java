@@ -98,7 +98,7 @@ public class WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Is Scheduling Enabled.
-     * If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
+     * If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can't be true for a disabled workflow (where isEnabled is false).
      */
     @SerializedName(value = "isSchedulingEnabled", alternate = {"IsSchedulingEnabled"})
     @Expose
@@ -125,7 +125,7 @@ public class WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * The unique identifier of the AAD identity that last modified the workflow.
+     * The unique identifier of the Azure Active Directory identity that last modified the workflow.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose

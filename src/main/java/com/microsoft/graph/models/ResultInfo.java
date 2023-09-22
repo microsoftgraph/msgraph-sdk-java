@@ -57,7 +57,7 @@ public class ResultInfo implements IJsonBackedObject {
 
     /**
      * The Subcode.
-     * The result sub-code.
+     * The result subcode.
      */
     @SerializedName(value = "subcode", alternate = {"Subcode"})
     @Expose

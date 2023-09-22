@@ -45,7 +45,7 @@ public class FileAttachment extends Attachment implements IJsonBackedObject {
 
     /**
      * The Content Location.
-     * Do not use this property as it is not supported.
+     * Don't use this property as it isn't supported.
      */
     @SerializedName(value = "contentLocation", alternate = {"ContentLocation"})
     @Expose

@@ -39,7 +39,7 @@ public class CalendarPermission extends Entity implements IJsonBackedObject {
 
     /**
      * The Email Address.
-     * Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only.
+     * Represents a share recipient or delegate who has access to the calendar. For the 'My Organization' share recipient, the address property is null. Read-only.
      */
     @SerializedName(value = "emailAddress", alternate = {"EmailAddress"})
     @Expose
@@ -48,7 +48,7 @@ public class CalendarPermission extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Inside Organization.
-     * True if the user in context (sharee or delegate) is inside the same organization as the calendar owner.
+     * True if the user in context (recipient or delegate) is inside the same organization as the calendar owner.
      */
     @SerializedName(value = "isInsideOrganization", alternate = {"IsInsideOrganization"})
     @Expose
@@ -57,7 +57,7 @@ public class CalendarPermission extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Removable.
-     * True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar.
+     * True if the user can be removed from the list of recipients or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You can't remove 'My organization' as a share recipient to a calendar.
      */
     @SerializedName(value = "isRemovable", alternate = {"IsRemovable"})
     @Expose
@@ -66,7 +66,7 @@ public class CalendarPermission extends Entity implements IJsonBackedObject {
 
     /**
      * The Role.
-     * Current permission level of the calendar sharee or delegate.
+     * Current permission level of the calendar share recipient or delegate.
      */
     @SerializedName(value = "role", alternate = {"Role"})
     @Expose

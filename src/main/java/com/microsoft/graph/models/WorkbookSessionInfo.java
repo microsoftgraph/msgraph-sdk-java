@@ -39,7 +39,7 @@ public class WorkbookSessionInfo implements IJsonBackedObject {
 
     /**
      * The Id.
-     * Id of the workbook session.
+     * ID of the workbook session.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

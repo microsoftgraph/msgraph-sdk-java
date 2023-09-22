@@ -29,7 +29,7 @@ public class ServiceAnnouncementBase extends Entity implements IJsonBackedObject
 
     /**
      * The Details.
-     * Additional details about service event. This property doesn't support filters.
+     * More details about service event. This property doesn't support filters.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose

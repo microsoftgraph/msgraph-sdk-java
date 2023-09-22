@@ -41,7 +41,7 @@ public class InvitedUserMessageInfo implements IJsonBackedObject {
 
     /**
      * The Cc Recipients.
-     * Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
+     * Additional recipients the invitation message should be sent to. Currently only one additional recipient is supported.
      */
     @SerializedName(value = "ccRecipients", alternate = {"CcRecipients"})
     @Expose

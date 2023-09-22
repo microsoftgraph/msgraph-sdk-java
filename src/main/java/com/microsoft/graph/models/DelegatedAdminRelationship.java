@@ -61,7 +61,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Customer.
-     * The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Cannot be changed by the customer.
+     * The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Can't be changed by the customer.
      */
     @SerializedName(value = "customer", alternate = {"Customer"})
     @Expose
@@ -70,7 +70,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Display Name.
-     * The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+     * The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner and is set by the partner only when the relationship is in the created status and can't be changed by the customer.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -79,7 +79,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Duration.
-     * The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+     * The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and can't be changed by the customer.
      */
     @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
@@ -106,7 +106,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Status.
-     * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy.
+     * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

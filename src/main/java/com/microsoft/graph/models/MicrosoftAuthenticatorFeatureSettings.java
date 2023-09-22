@@ -40,7 +40,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements IJsonBackedObject 
 
     /**
      * The Display App Information Required State.
-     * Determines whether the user's Authenticator app will show them the client app they are signing into.
+     * Determines whether the user's Authenticator app shows them the client app they're signing into.
      */
     @SerializedName(value = "displayAppInformationRequiredState", alternate = {"DisplayAppInformationRequiredState"})
     @Expose
@@ -49,7 +49,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements IJsonBackedObject 
 
     /**
      * The Display Location Information Required State.
-     * Determines whether the user's Authenticator app will show them the geographic location of where the authentication request originated from.
+     * Determines whether the user's Authenticator app shows them the geographic location of where the authentication request originated from.
      */
     @SerializedName(value = "displayLocationInformationRequiredState", alternate = {"DisplayLocationInformationRequiredState"})
     @Expose

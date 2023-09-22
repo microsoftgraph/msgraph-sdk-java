@@ -33,7 +33,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Expiration Date Time.
-     * A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
+     * A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there's no expiration set for this permission. Optional.
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -91,7 +91,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Inherited From.
-     * Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
+     * Provides a reference to the ancestor of the current permission, if it's inherited from an ancestor. Read-only.
      */
     @SerializedName(value = "inheritedFrom", alternate = {"InheritedFrom"})
     @Expose
@@ -109,7 +109,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Link.
-     * Provides the link details of the current permission, if it is a link type permissions. Read-only.
+     * Provides the link details of the current permission, if it's a link type permission. Read-only.
      */
     @SerializedName(value = "link", alternate = {"Link"})
     @Expose

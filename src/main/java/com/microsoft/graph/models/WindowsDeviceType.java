@@ -32,6 +32,10 @@ public enum WindowsDeviceType
     */
     TEAM,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For WindowsDeviceType values that were not expected from the service
     */
     UNEXPECTED_VALUE
