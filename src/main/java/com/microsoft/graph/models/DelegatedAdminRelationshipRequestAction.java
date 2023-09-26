@@ -28,6 +28,10 @@ public enum DelegatedAdminRelationshipRequestAction
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * reject
+    */
+    REJECT,
+    /**
     * For DelegatedAdminRelationshipRequestAction values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -122,8 +122,8 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder deletedItems() {
-        return new com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems"), getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder deletedItems() {
+        return new com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems"), getClient(), null);
     }
 
     /**
@@ -133,8 +133,8 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.DirectoryObjectRequestBuilder deletedItems(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder deletedItems(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the User collection

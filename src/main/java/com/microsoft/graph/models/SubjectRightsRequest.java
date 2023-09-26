@@ -193,13 +193,13 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
-     * The Mailboxlocations.
+     * The Mailbox Locations.
      * 
      */
-    @SerializedName(value = "mailboxlocations", alternate = {"Mailboxlocations"})
+    @SerializedName(value = "mailboxLocations", alternate = {"MailboxLocations"})
     @Expose
 	@Nullable
-    public SubjectRightsRequestMailboxLocation mailboxlocations;
+    public SubjectRightsRequestMailboxLocation mailboxLocations;
 
     /**
      * The Pause After Estimate.
@@ -220,13 +220,13 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
     public java.util.List<String> regulations;
 
     /**
-     * The Sitelocations.
+     * The Site Locations.
      * 
      */
-    @SerializedName(value = "sitelocations", alternate = {"Sitelocations"})
+    @SerializedName(value = "siteLocations", alternate = {"SiteLocations"})
     @Expose
 	@Nullable
-    public SubjectRightsRequestSiteLocation sitelocations;
+    public SubjectRightsRequestSiteLocation siteLocations;
 
     /**
      * The Stages.

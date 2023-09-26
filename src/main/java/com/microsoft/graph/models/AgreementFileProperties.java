@@ -28,7 +28,7 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
 
     /**
      * The Created Date Time.
-     * The date time representing when the file was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * The date time representing when the file was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -64,7 +64,7 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
 
     /**
      * The Is Default.
-     * If none of the languages matches the client preference, indicates whether this is the default agreement file . If none of the files are marked as default, the first one is treated as the default. Read-only.
+     * If none of the languages matches the client preference, indicates whether this is the default agreement file. If none of the files are marked as default, the first one is treated as the default. Read-only.
      */
     @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose

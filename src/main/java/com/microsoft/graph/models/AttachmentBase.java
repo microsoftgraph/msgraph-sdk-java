@@ -45,7 +45,7 @@ public class AttachmentBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The display name of the attachment. This does not need to be the actual file name.
+     * The display name of the attachment. This doesn't need to be the actual file name.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose

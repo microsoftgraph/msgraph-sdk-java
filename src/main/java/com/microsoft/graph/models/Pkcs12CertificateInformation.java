@@ -39,7 +39,7 @@ public class Pkcs12CertificateInformation implements IJsonBackedObject {
 
     /**
      * The Is Active.
-     * Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past.
+     * Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate that isn't yet expired but whose notBefore time is in the past.
      */
     @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose

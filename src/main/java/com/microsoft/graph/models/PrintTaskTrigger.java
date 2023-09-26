@@ -29,7 +29,7 @@ public class PrintTaskTrigger extends Entity implements IJsonBackedObject {
 
     /**
      * The Event.
-     * The Universal Print event that will cause a new printTask to be triggered. Valid values are described in the following table.
+     * The Universal Print event that causes a new printTask to be triggered. Valid values are described in the following table.
      */
     @SerializedName(value = "event", alternate = {"Event"})
     @Expose
@@ -38,7 +38,7 @@ public class PrintTaskTrigger extends Entity implements IJsonBackedObject {
 
     /**
      * The Definition.
-     * An abstract definition that will be used to create a printTask when triggered by a print event. Read-only.
+     * An abstract definition that is used to create a printTask when triggered by a print event. Read-only.
      */
     @SerializedName(value = "definition", alternate = {"Definition"})
     @Expose

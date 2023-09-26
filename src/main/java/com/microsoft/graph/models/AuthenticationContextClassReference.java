@@ -45,7 +45,7 @@ public class AuthenticationContextClassReference extends Entity implements IJson
 
     /**
      * The Is Available.
-     * Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it is set to false, it should not be shown in authentication context selection UX, or used to protect app resources. It will be shown and available for Conditional Access policy authoring. The default value is false.  Supports $filter (eq).
+     * Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it's set to false, it shouldn't be shown in authentication context selection UX, or used to protect app resources. It's shown and available for Conditional Access policy authoring. The default value is false.  Supports $filter (eq).
      */
     @SerializedName(value = "isAvailable", alternate = {"IsAvailable"})
     @Expose

@@ -37,7 +37,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The App Display Name.
-     * App name displayed in the Azure portal.  Supports $filter (eq, startsWith).
+     * App name displayed in the Microsoft Entra admin center.  Supports $filter (eq, startsWith).
      */
     @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose

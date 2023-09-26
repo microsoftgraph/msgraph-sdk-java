@@ -29,7 +29,7 @@ public class IdentityUserFlowAttribute extends Entity implements IJsonBackedObje
 
     /**
      * The Data Type.
-     * The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime.
+     * The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime, unknownFutureValue.  Supports $filter (eq, ne).
      */
     @SerializedName(value = "dataType", alternate = {"DataType"})
     @Expose
@@ -47,7 +47,7 @@ public class IdentityUserFlowAttribute extends Entity implements IJsonBackedObje
 
     /**
      * The Display Name.
-     * The display name of the user flow attribute.
+     * The display name of the user flow attribute.  Supports $filter (eq, ne).
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -56,7 +56,7 @@ public class IdentityUserFlowAttribute extends Entity implements IJsonBackedObje
 
     /**
      * The User Flow Attribute Type.
-     * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn, custom, or required.
+     * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn, custom, required, unknownFutureValue.  Supports $filter (eq, ne).
      */
     @SerializedName(value = "userFlowAttributeType", alternate = {"UserFlowAttributeType"})
     @Expose

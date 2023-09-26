@@ -13,6 +13,7 @@ import com.microsoft.graph.models.AccessReviewSet;
 import com.microsoft.graph.models.AppConsentApprovalRoute;
 import com.microsoft.graph.models.TermsOfUseContainer;
 import com.microsoft.graph.models.EntitlementManagement;
+import com.microsoft.graph.models.PrivilegedAccessRoot;
 
 
 import com.google.gson.JsonObject;
@@ -86,6 +87,15 @@ public class IdentityGovernance implements IJsonBackedObject {
     @Expose
 	@Nullable
     public EntitlementManagement entitlementManagement;
+
+    /**
+     * The Privileged Access.
+     * 
+     */
+    @SerializedName(value = "privilegedAccess", alternate = {"PrivilegedAccess"})
+    @Expose
+	@Nullable
+    public PrivilegedAccessRoot privilegedAccess;
 
 
     /**
