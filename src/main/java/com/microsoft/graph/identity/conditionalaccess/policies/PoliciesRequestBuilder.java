@@ -60,7 +60,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of conditionalAccessPolicy objects.
-     * @return a CompletableFuture of conditionalAccessPolicyCollectionResponse
+     * @return a CompletableFuture of ConditionalAccessPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of conditionalAccessPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessPolicyCollectionResponse
+     * @return a CompletableFuture of ConditionalAccessPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new conditionalAccessPolicy.
      * @param body The request body
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a CompletableFuture of ConditionalAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-post-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
      * Create a new conditionalAccessPolicy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a CompletableFuture of ConditionalAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-post-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a policiesRequestBuilder
+     * @return a PoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

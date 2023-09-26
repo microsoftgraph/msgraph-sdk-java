@@ -29,7 +29,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      */
     private String text;
     /**
-     * Instantiates a new accessPackageQuestion and sets the default values.
+     * Instantiates a new AccessPackageQuestion and sets the default values.
      */
     public AccessPackageQuestion() {
         super();
@@ -37,7 +37,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageQuestion
+     * @return a AccessPackageQuestion
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageQuestion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -68,7 +68,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
     }
     /**
      * Gets the isAnswerEditable property value. Specifies whether the requestor is allowed to edit answers to questions for an assignment by posting an update to accessPackageAssignmentRequest.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAnswerEditable() {
@@ -76,7 +76,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
     }
     /**
      * Gets the isRequired property value. Whether the requestor is required to supply an answer or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
@@ -84,7 +84,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
     }
     /**
      * Gets the localizations property value. The text of the question represented in a format for a specific locale.
-     * @return a accessPackageLocalizedText
+     * @return a java.util.List<AccessPackageLocalizedText>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageLocalizedText> getLocalizations() {
@@ -92,7 +92,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
     }
     /**
      * Gets the sequence property value. Relative position of this question when displaying a list of questions to the requestor.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSequence() {
@@ -100,7 +100,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
     }
     /**
      * Gets the text property value. The text of the question to show to the requestor.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getText() {

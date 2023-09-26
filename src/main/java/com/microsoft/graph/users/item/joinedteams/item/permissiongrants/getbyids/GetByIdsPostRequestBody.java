@@ -22,7 +22,7 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<String> types;
     /**
-     * Instantiates a new getByIdsPostRequestBody and sets the default values.
+     * Instantiates a new GetByIdsPostRequestBody and sets the default values.
      */
     public GetByIdsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -30,7 +30,7 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getByIdsPostRequestBody
+     * @return a GetByIdsPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static GetByIdsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
         return new GetByIdsPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ids property value. The ids property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIds() {
@@ -66,7 +66,7 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the types property value. The types property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTypes() {
@@ -83,8 +83,8 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

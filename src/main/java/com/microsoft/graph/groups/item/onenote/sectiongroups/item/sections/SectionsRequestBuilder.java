@@ -60,7 +60,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of onenoteSection objects from the specified section group.
-     * @return a CompletableFuture of onenoteSectionCollectionResponse
+     * @return a CompletableFuture of OnenoteSectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/sectiongroup-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of onenoteSection objects from the specified section group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenoteSectionCollectionResponse
+     * @return a CompletableFuture of OnenoteSectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/sectiongroup-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new onenoteSection in the specified section group.
      * @param body The request body
-     * @return a CompletableFuture of onenoteSection
+     * @return a CompletableFuture of OnenoteSection
      * @see <a href="https://learn.microsoft.com/graph/api/sectiongroup-post-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
      * Create a new onenoteSection in the specified section group.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenoteSection
+     * @return a CompletableFuture of OnenoteSection
      * @see <a href="https://learn.microsoft.com/graph/api/sectiongroup-post-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sectionsRequestBuilder
+     * @return a SectionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

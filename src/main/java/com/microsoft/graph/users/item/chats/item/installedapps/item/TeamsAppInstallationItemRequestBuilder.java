@@ -83,7 +83,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get an app installed in a chat.
-     * @return a CompletableFuture of teamsAppInstallation
+     * @return a CompletableFuture of TeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/chat-get-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get an app installed in a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAppInstallation
+     * @return a CompletableFuture of TeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/chat-get-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property installedApps in users
      * @param body The request body
-     * @return a CompletableFuture of teamsAppInstallation
+     * @return a CompletableFuture of TeamsAppInstallation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppInstallation> patch(@jakarta.annotation.Nonnull final TeamsAppInstallation body) {
@@ -117,7 +117,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property installedApps in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAppInstallation
+     * @return a CompletableFuture of TeamsAppInstallation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppInstallation> patch(@jakarta.annotation.Nonnull final TeamsAppInstallation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

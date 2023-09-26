@@ -15,7 +15,7 @@ public class GetByIdsResponse extends BaseCollectionPaginationCountResponse impl
      */
     private java.util.List<DirectoryObject> value;
     /**
-     * Instantiates a new getByIdsResponse and sets the default values.
+     * Instantiates a new GetByIdsResponse and sets the default values.
      */
     public GetByIdsResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetByIdsResponse extends BaseCollectionPaginationCountResponse impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getByIdsResponse
+     * @return a GetByIdsResponse
      */
     @jakarta.annotation.Nonnull
     public static GetByIdsResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetByIdsResponse extends BaseCollectionPaginationCountResponse impl
     }
     /**
      * Gets the value property value. The value property
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getValue() {

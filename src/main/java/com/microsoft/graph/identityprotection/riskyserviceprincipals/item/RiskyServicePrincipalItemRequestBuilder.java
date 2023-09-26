@@ -65,7 +65,7 @@ public class RiskyServicePrincipalItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Read the properties and relationships of a riskyServicePrincipal object.
-     * @return a CompletableFuture of riskyServicePrincipal
+     * @return a CompletableFuture of RiskyServicePrincipal
      * @see <a href="https://learn.microsoft.com/graph/api/riskyserviceprincipal-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class RiskyServicePrincipalItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Read the properties and relationships of a riskyServicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskyServicePrincipal
+     * @return a CompletableFuture of RiskyServicePrincipal
      * @see <a href="https://learn.microsoft.com/graph/api/riskyserviceprincipal-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class RiskyServicePrincipalItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property riskyServicePrincipals in identityProtection
      * @param body The request body
-     * @return a CompletableFuture of riskyServicePrincipal
+     * @return a CompletableFuture of RiskyServicePrincipal
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyServicePrincipal> patch(@jakarta.annotation.Nonnull final RiskyServicePrincipal body) {
@@ -99,7 +99,7 @@ public class RiskyServicePrincipalItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property riskyServicePrincipals in identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskyServicePrincipal
+     * @return a CompletableFuture of RiskyServicePrincipal
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyServicePrincipal> patch(@jakarta.annotation.Nonnull final RiskyServicePrincipal body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

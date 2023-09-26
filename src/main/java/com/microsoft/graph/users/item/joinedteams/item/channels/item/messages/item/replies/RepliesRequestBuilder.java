@@ -68,7 +68,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
-     * @return a CompletableFuture of chatMessageCollectionResponse
+     * @return a CompletableFuture of ChatMessageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-list-replies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     /**
      * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of chatMessageCollectionResponse
+     * @return a CompletableFuture of ChatMessageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-list-replies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -90,21 +90,21 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ChatMessageCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Send a new reply to a chatMessage in a specified channel.
+     * Create a new reply to a chatMessage in a specified channel.
      * @param body The request body
-     * @return a CompletableFuture of chatMessage
-     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of ChatMessage
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> post(@jakarta.annotation.Nonnull final ChatMessage body) {
         return post(body, null);
     }
     /**
-     * Send a new reply to a chatMessage in a specified channel.
+     * Create a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of chatMessage
-     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of ChatMessage
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> post(@jakarta.annotation.Nonnull final ChatMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -145,7 +145,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Send a new reply to a chatMessage in a specified channel.
+     * Create a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Send a new reply to a chatMessage in a specified channel.
+     * Create a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -179,7 +179,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a repliesRequestBuilder
+     * @return a RepliesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RepliesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

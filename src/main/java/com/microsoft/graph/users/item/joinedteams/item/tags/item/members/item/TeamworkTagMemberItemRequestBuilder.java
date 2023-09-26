@@ -59,7 +59,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of a member of a standard tag in a team.
-     * @return a CompletableFuture of teamworkTagMember
+     * @return a CompletableFuture of TeamworkTagMember
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktagmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a member of a standard tag in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamworkTagMember
+     * @return a CompletableFuture of TeamworkTagMember
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktagmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property members in users
      * @param body The request body
-     * @return a CompletableFuture of teamworkTagMember
+     * @return a CompletableFuture of TeamworkTagMember
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagMember> patch(@jakarta.annotation.Nonnull final TeamworkTagMember body) {
@@ -93,7 +93,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property members in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamworkTagMember
+     * @return a CompletableFuture of TeamworkTagMember
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagMember> patch(@jakarta.annotation.Nonnull final TeamworkTagMember body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

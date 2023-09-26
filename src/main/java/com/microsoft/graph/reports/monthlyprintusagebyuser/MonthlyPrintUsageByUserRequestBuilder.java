@@ -60,7 +60,7 @@ public class MonthlyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of monthly print usage summaries, grouped by user.
-     * @return a CompletableFuture of printUsageByUserCollectionResponse
+     * @return a CompletableFuture of PrintUsageByUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-monthlyprintusagebyuser?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class MonthlyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of monthly print usage summaries, grouped by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printUsageByUserCollectionResponse
+     * @return a CompletableFuture of PrintUsageByUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-monthlyprintusagebyuser?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class MonthlyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to monthlyPrintUsageByUser for reports
      * @param body The request body
-     * @return a CompletableFuture of printUsageByUser
+     * @return a CompletableFuture of PrintUsageByUser
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintUsageByUser> post(@jakarta.annotation.Nonnull final PrintUsageByUser body) {
@@ -94,7 +94,7 @@ public class MonthlyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to monthlyPrintUsageByUser for reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printUsageByUser
+     * @return a CompletableFuture of PrintUsageByUser
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintUsageByUser> post(@jakarta.annotation.Nonnull final PrintUsageByUser body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class MonthlyPrintUsageByUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a monthlyPrintUsageByUserRequestBuilder
+     * @return a MonthlyPrintUsageByUserRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MonthlyPrintUsageByUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

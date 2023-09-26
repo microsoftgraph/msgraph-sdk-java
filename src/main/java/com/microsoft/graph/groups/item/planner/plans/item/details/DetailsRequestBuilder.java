@@ -57,7 +57,7 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a plannerPlanDetails object.
-     * @return a CompletableFuture of plannerPlanDetails
+     * @return a CompletableFuture of PlannerPlanDetails
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplandetails-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a plannerPlanDetails object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerPlanDetails
+     * @return a CompletableFuture of PlannerPlanDetails
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplandetails-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property details in groups
      * @param body The request body
-     * @return a CompletableFuture of plannerPlanDetails
+     * @return a CompletableFuture of PlannerPlanDetails
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplandetails-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property details in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerPlanDetails
+     * @return a CompletableFuture of PlannerPlanDetails
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplandetails-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class DetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a detailsRequestBuilder
+     * @return a DetailsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

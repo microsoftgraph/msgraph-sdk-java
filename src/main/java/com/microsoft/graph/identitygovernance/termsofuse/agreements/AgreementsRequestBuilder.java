@@ -60,7 +60,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of agreement objects.
-     * @return a CompletableFuture of agreementCollectionResponse
+     * @return a CompletableFuture of AgreementCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of agreement objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementCollectionResponse
+     * @return a CompletableFuture of AgreementCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new agreement object.
      * @param body The request body
-     * @return a CompletableFuture of agreement
+     * @return a CompletableFuture of Agreement
      * @see <a href="https://learn.microsoft.com/graph/api/termsofusecontainer-post-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
      * Create a new agreement object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreement
+     * @return a CompletableFuture of Agreement
      * @see <a href="https://learn.microsoft.com/graph/api/termsofusecontainer-post-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a agreementsRequestBuilder
+     * @return a AgreementsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AgreementsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

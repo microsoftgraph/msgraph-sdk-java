@@ -18,7 +18,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     /**
      * The customKeyIdentifier property
      */
-    private byte[] customKeyIdentifier;
+    private Base64url customKeyIdentifier;
     /**
      * The displayName property
      */
@@ -30,7 +30,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     /**
      * The key property
      */
-    private byte[] key;
+    private Base64url key;
     /**
      * The keyId property
      */
@@ -56,7 +56,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      */
     private String usage;
     /**
-     * Instantiates a new selfSignedCertificate and sets the default values.
+     * Instantiates a new SelfSignedCertificate and sets the default values.
      */
     public SelfSignedCertificate() {
         this.setAdditionalData(new HashMap<>());
@@ -64,7 +64,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a selfSignedCertificate
+     * @return a SelfSignedCertificate
      */
     @jakarta.annotation.Nonnull
     public static SelfSignedCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -72,7 +72,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         return new SelfSignedCertificate();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -81,15 +81,15 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the customKeyIdentifier property value. The customKeyIdentifier property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getCustomKeyIdentifier() {
+    public Base64url getCustomKeyIdentifier() {
         return this.customKeyIdentifier;
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -110,10 +110,10 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
-        deserializerMap.put("customKeyIdentifier", (n) -> { this.setCustomKeyIdentifier(n.getByteArrayValue()); });
+        deserializerMap.put("customKeyIdentifier", (n) -> { this.setCustomKeyIdentifier(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("key", (n) -> { this.setKey(n.getByteArrayValue()); });
+        deserializerMap.put("key", (n) -> { this.setKey(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("keyId", (n) -> { this.setKeyId(n.getUUIDValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
@@ -124,10 +124,10 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the key property value. The key property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getKey() {
+    public Base64url getKey() {
         return this.key;
     }
     /**
@@ -140,7 +140,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -156,7 +156,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the thumbprint property value. The thumbprint property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThumbprint() {
@@ -164,7 +164,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -172,7 +172,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the usage property value. The usage property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUsage() {
@@ -184,10 +184,10 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeByteArrayValue("customKeyIdentifier", this.getCustomKeyIdentifier());
+        writer.writeObjectValue("customKeyIdentifier", this.getCustomKeyIdentifier());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
-        writer.writeByteArrayValue("key", this.getKey());
+        writer.writeObjectValue("key", this.getKey());
         writer.writeUUIDValue("keyId", this.getKeyId());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
@@ -197,8 +197,8 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -207,7 +207,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      * Sets the customKeyIdentifier property value. The customKeyIdentifier property
      * @param value Value to set for the customKeyIdentifier property.
      */
-    public void setCustomKeyIdentifier(@jakarta.annotation.Nullable final byte[] value) {
+    public void setCustomKeyIdentifier(@jakarta.annotation.Nullable final Base64url value) {
         this.customKeyIdentifier = value;
     }
     /**
@@ -228,7 +228,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      * Sets the key property value. The key property
      * @param value Value to set for the key property.
      */
-    public void setKey(@jakarta.annotation.Nullable final byte[] value) {
+    public void setKey(@jakarta.annotation.Nullable final Base64url value) {
         this.key = value;
     }
     /**

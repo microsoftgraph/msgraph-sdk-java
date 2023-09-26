@@ -36,7 +36,7 @@ public class GetApplicablePolicyRequirementsRequestBuilder extends BaseRequestBu
     }
     /**
      * In Azure AD entitlement management, this action retrieves a list of accessPackageAssignmentRequestRequirements objects that the currently signed-in user can use to create an accessPackageAssignmentRequest.  Each requirement object corresponds to an access package assignment policy that the currently signed-in user is allowed to request an assignment for.
-     * @return a CompletableFuture of getApplicablePolicyRequirementsResponse
+     * @return a CompletableFuture of GetApplicablePolicyRequirementsResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-getapplicablepolicyrequirements?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,7 +46,7 @@ public class GetApplicablePolicyRequirementsRequestBuilder extends BaseRequestBu
     /**
      * In Azure AD entitlement management, this action retrieves a list of accessPackageAssignmentRequestRequirements objects that the currently signed-in user can use to create an accessPackageAssignmentRequest.  Each requirement object corresponds to an access package assignment policy that the currently signed-in user is allowed to request an assignment for.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getApplicablePolicyRequirementsResponse
+     * @return a CompletableFuture of GetApplicablePolicyRequirementsResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-getapplicablepolicyrequirements?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -88,7 +88,7 @@ public class GetApplicablePolicyRequirementsRequestBuilder extends BaseRequestBu
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getApplicablePolicyRequirementsRequestBuilder
+     * @return a GetApplicablePolicyRequirementsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetApplicablePolicyRequirementsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents the app roles a user has been granted for an application. Supports $expand.
-     * @return a CompletableFuture of appRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of AppRoleAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the app roles a user has been granted for an application. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of AppRoleAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
      * @param body The request body
-     * @return a CompletableFuture of appRoleAssignment
+     * @return a CompletableFuture of AppRoleAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appRoleAssignment
+     * @return a CompletableFuture of AppRoleAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appRoleAssignmentsRequestBuilder
+     * @return a AppRoleAssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppRoleAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

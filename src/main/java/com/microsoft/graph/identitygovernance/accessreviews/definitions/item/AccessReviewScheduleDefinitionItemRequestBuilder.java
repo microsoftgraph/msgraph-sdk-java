@@ -75,7 +75,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
     }
     /**
      * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
-     * @return a CompletableFuture of accessReviewScheduleDefinition
+     * @return a CompletableFuture of AccessReviewScheduleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
     /**
      * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewScheduleDefinition
+     * @return a CompletableFuture of AccessReviewScheduleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
     /**
      * Update an existing accessReviewScheduleDefinition object to change one or more of its properties.
      * @param body The request body
-     * @return a CompletableFuture of accessReviewScheduleDefinition
+     * @return a CompletableFuture of AccessReviewScheduleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +110,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
      * Update an existing accessReviewScheduleDefinition object to change one or more of its properties.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewScheduleDefinition
+     * @return a CompletableFuture of AccessReviewScheduleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

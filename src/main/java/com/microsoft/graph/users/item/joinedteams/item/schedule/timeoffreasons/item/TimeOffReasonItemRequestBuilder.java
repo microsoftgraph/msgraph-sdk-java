@@ -59,7 +59,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a timeOffReason object by ID.
-     * @return a CompletableFuture of timeOffReason
+     * @return a CompletableFuture of TimeOffReason
      * @see <a href="https://learn.microsoft.com/graph/api/timeoffreason-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a timeOffReason object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeOffReason
+     * @return a CompletableFuture of TimeOffReason
      * @see <a href="https://learn.microsoft.com/graph/api/timeoffreason-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Replace an existing timeOffReason. If the specified timeOffReason doesn't exist, this method returns 404 Not found.
      * @param body The request body
-     * @return a CompletableFuture of timeOffReason
+     * @return a CompletableFuture of TimeOffReason
      * @see <a href="https://learn.microsoft.com/graph/api/timeoffreason-put?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
      * Replace an existing timeOffReason. If the specified timeOffReason doesn't exist, this method returns 404 Not found.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeOffReason
+     * @return a CompletableFuture of TimeOffReason
      * @see <a href="https://learn.microsoft.com/graph/api/timeoffreason-put?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

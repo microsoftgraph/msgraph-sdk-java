@@ -76,7 +76,7 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the riskyUser objects and their properties.
-     * @return a CompletableFuture of riskyUserCollectionResponse
+     * @return a CompletableFuture of RiskyUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/riskyuser-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -86,7 +86,7 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the riskyUser objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskyUserCollectionResponse
+     * @return a CompletableFuture of RiskyUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/riskyuser-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to riskyUsers for identityProtection
      * @param body The request body
-     * @return a CompletableFuture of riskyUser
+     * @return a CompletableFuture of RiskyUser
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyUser> post(@jakarta.annotation.Nonnull final RiskyUser body) {
@@ -110,7 +110,7 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to riskyUsers for identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskyUser
+     * @return a CompletableFuture of RiskyUser
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyUser> post(@jakarta.annotation.Nonnull final RiskyUser body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -185,7 +185,7 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a riskyUsersRequestBuilder
+     * @return a RiskyUsersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RiskyUsersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

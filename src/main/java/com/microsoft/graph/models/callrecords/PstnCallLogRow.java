@@ -38,7 +38,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     /**
      * Amount of money or cost of the call that is charged to your account.
      */
-    private BigDecimal charge;
+    private Decimal charge;
     /**
      * ID of the audio conference.
      */
@@ -46,7 +46,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     /**
      * Connection fee price.
      */
-    private BigDecimal connectionCharge;
+    private Decimal connectionCharge;
     /**
      * Type of currency used to calculate the cost of the call. For details, see (ISO 4217.
      */
@@ -112,7 +112,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new pstnCallLogRow and sets the default values.
+     * Instantiates a new PstnCallLogRow and sets the default values.
      */
     public PstnCallLogRow() {
         this.setAdditionalData(new HashMap<>());
@@ -120,7 +120,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a pstnCallLogRow
+     * @return a PstnCallLogRow
      */
     @jakarta.annotation.Nonnull
     public static PstnCallLogRow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -128,7 +128,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         return new PstnCallLogRow();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator may provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
-     * @return a pstnCallDurationSource
+     * @return a PstnCallDurationSource
      */
     @jakarta.annotation.Nullable
     public PstnCallDurationSource getCallDurationSource() {
@@ -145,7 +145,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the calleeNumber property value. Number dialed in E.164 format.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCalleeNumber() {
@@ -153,7 +153,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callerNumber property value. Number that received the call for inbound calls or the number dialed for outbound calls. E.164 format.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallerNumber() {
@@ -161,7 +161,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callId property value. Call identifier. Not guaranteed to be unique.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallId() {
@@ -169,7 +169,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callType property value. Whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallType() {
@@ -177,15 +177,15 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the charge property value. Amount of money or cost of the call that is charged to your account.
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getCharge() {
+    public Decimal getCharge() {
         return this.charge;
     }
     /**
      * Gets the conferenceId property value. ID of the audio conference.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConferenceId() {
@@ -193,15 +193,15 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the connectionCharge property value. Connection fee price.
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getConnectionCharge() {
+    public Decimal getConnectionCharge() {
         return this.connectionCharge;
     }
     /**
      * Gets the currency property value. Type of currency used to calculate the cost of the call. For details, see (ISO 4217.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCurrency() {
@@ -209,7 +209,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the destinationContext property value. Whether the call was domestic (within a country or region) or international (outside a country or region) based on the user's location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationContext() {
@@ -217,7 +217,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the destinationName property value. Country or region dialed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationName() {
@@ -225,7 +225,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the duration property value. How long the call was connected, in seconds.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDuration() {
@@ -251,9 +251,9 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         deserializerMap.put("callerNumber", (n) -> { this.setCallerNumber(n.getStringValue()); });
         deserializerMap.put("callId", (n) -> { this.setCallId(n.getStringValue()); });
         deserializerMap.put("callType", (n) -> { this.setCallType(n.getStringValue()); });
-        deserializerMap.put("charge", (n) -> { this.setCharge(n.getBigDecimalValue()); });
+        deserializerMap.put("charge", (n) -> { this.setCharge(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
         deserializerMap.put("conferenceId", (n) -> { this.setConferenceId(n.getStringValue()); });
-        deserializerMap.put("connectionCharge", (n) -> { this.setConnectionCharge(n.getBigDecimalValue()); });
+        deserializerMap.put("connectionCharge", (n) -> { this.setConnectionCharge(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
         deserializerMap.put("currency", (n) -> { this.setCurrency(n.getStringValue()); });
         deserializerMap.put("destinationContext", (n) -> { this.setDestinationContext(n.getStringValue()); });
         deserializerMap.put("destinationName", (n) -> { this.setDestinationName(n.getStringValue()); });
@@ -274,7 +274,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. Unique call identifier. GUID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -282,7 +282,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the inventoryType property value. User's phone number type, such as a service of toll-free number.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInventoryType() {
@@ -290,7 +290,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the licenseCapability property value. The license used for the call.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLicenseCapability() {
@@ -298,7 +298,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -306,7 +306,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the operator property value. The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperator() {
@@ -322,7 +322,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tenantCountryCode property value. Country code of the tenant. For details, see ISO 3166-1 alpha-2.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantCountryCode() {
@@ -330,7 +330,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the usageCountryCode property value. Country code of the user. For details, see ISO 3166-1 alpha-2.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUsageCountryCode() {
@@ -338,7 +338,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userDisplayName property value. Display name of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -346,7 +346,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userId property value. Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -354,7 +354,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -371,9 +371,9 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("callerNumber", this.getCallerNumber());
         writer.writeStringValue("callId", this.getCallId());
         writer.writeStringValue("callType", this.getCallType());
-        writer.writeBigDecimalValue("charge", this.getCharge());
+        writer.writeObjectValue("charge", this.getCharge());
         writer.writeStringValue("conferenceId", this.getConferenceId());
-        writer.writeBigDecimalValue("connectionCharge", this.getConnectionCharge());
+        writer.writeObjectValue("connectionCharge", this.getConnectionCharge());
         writer.writeStringValue("currency", this.getCurrency());
         writer.writeStringValue("destinationContext", this.getDestinationContext());
         writer.writeStringValue("destinationName", this.getDestinationName());
@@ -393,8 +393,8 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -438,7 +438,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      * Sets the charge property value. Amount of money or cost of the call that is charged to your account.
      * @param value Value to set for the charge property.
      */
-    public void setCharge(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setCharge(@jakarta.annotation.Nullable final Decimal value) {
         this.charge = value;
     }
     /**
@@ -452,7 +452,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      * Sets the connectionCharge property value. Connection fee price.
      * @param value Value to set for the connectionCharge property.
      */
-    public void setConnectionCharge(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setConnectionCharge(@jakarta.annotation.Nullable final Decimal value) {
         this.connectionCharge = value;
     }
     /**

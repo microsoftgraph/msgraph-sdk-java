@@ -59,7 +59,7 @@ public class OAuth2PermissionGrantItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Retrieve the properties of a single delegated permission grant represented by an oAuth2PermissionGrant object. An oAuth2PermissionGrant represents delegated permissions which have been granted for a client application to access an API on behalf of a signed-in user.
-     * @return a CompletableFuture of oAuth2PermissionGrant
+     * @return a CompletableFuture of OAuth2PermissionGrant
      * @see <a href="https://learn.microsoft.com/graph/api/oauth2permissiongrant-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class OAuth2PermissionGrantItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Retrieve the properties of a single delegated permission grant represented by an oAuth2PermissionGrant object. An oAuth2PermissionGrant represents delegated permissions which have been granted for a client application to access an API on behalf of a signed-in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of oAuth2PermissionGrant
+     * @return a CompletableFuture of OAuth2PermissionGrant
      * @see <a href="https://learn.microsoft.com/graph/api/oauth2permissiongrant-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class OAuth2PermissionGrantItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the properties of oAuth2PermissionGrant object, representing a delegated permission grant. An oAuth2PermissionGrant can be updated to change which delegated permissions are granted, by adding or removing items from the list in scopes.
      * @param body The request body
-     * @return a CompletableFuture of oAuth2PermissionGrant
+     * @return a CompletableFuture of OAuth2PermissionGrant
      * @see <a href="https://learn.microsoft.com/graph/api/oauth2permissiongrant-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class OAuth2PermissionGrantItemRequestBuilder extends BaseRequestBuilder 
      * Update the properties of oAuth2PermissionGrant object, representing a delegated permission grant. An oAuth2PermissionGrant can be updated to change which delegated permissions are granted, by adding or removing items from the list in scopes.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of oAuth2PermissionGrant
+     * @return a CompletableFuture of OAuth2PermissionGrant
      * @see <a href="https://learn.microsoft.com/graph/api/oauth2permissiongrant-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

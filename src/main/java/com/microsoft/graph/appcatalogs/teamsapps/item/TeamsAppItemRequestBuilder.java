@@ -67,7 +67,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get teamsApps from appCatalogs
-     * @return a CompletableFuture of teamsApp
+     * @return a CompletableFuture of TeamsApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsApp> get() {
@@ -76,7 +76,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get teamsApps from appCatalogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsApp
+     * @return a CompletableFuture of TeamsApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property teamsApps in appCatalogs
      * @param body The request body
-     * @return a CompletableFuture of teamsApp
+     * @return a CompletableFuture of TeamsApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsApp> patch(@jakarta.annotation.Nonnull final TeamsApp body) {
@@ -99,7 +99,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property teamsApps in appCatalogs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsApp
+     * @return a CompletableFuture of TeamsApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsApp> patch(@jakarta.annotation.Nonnull final TeamsApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

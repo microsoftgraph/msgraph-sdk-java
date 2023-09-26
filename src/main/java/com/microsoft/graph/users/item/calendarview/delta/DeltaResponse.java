@@ -15,7 +15,7 @@ public class DeltaResponse extends BaseDeltaFunctionResponse implements Parsable
      */
     private java.util.List<Event> value;
     /**
-     * Instantiates a new deltaResponse and sets the default values.
+     * Instantiates a new DeltaResponse and sets the default values.
      */
     public DeltaResponse() {
         super();
@@ -23,7 +23,7 @@ public class DeltaResponse extends BaseDeltaFunctionResponse implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deltaResponse
+     * @return a DeltaResponse
      */
     @jakarta.annotation.Nonnull
     public static DeltaResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class DeltaResponse extends BaseDeltaFunctionResponse implements Parsable
     }
     /**
      * Gets the value property value. The value property
-     * @return a event
+     * @return a java.util.List<Event>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Event> getValue() {

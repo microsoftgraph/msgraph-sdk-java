@@ -60,7 +60,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of featureRolloutPolicy objects.
-     * @return a CompletableFuture of featureRolloutPolicyCollectionResponse
+     * @return a CompletableFuture of FeatureRolloutPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicies-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of featureRolloutPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of featureRolloutPolicyCollectionResponse
+     * @return a CompletableFuture of FeatureRolloutPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicies-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new featureRolloutPolicy object.
      * @param body The request body
-     * @return a CompletableFuture of featureRolloutPolicy
+     * @return a CompletableFuture of FeatureRolloutPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicies-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
      * Create a new featureRolloutPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of featureRolloutPolicy
+     * @return a CompletableFuture of FeatureRolloutPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicies-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a featureRolloutPoliciesRequestBuilder
+     * @return a FeatureRolloutPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FeatureRolloutPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

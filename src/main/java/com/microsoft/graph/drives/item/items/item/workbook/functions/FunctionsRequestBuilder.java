@@ -593,14 +593,14 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the beta_Dist method.
      */
     @jakarta.annotation.Nonnull
-    public BetaDistRequestBuilder beta_Dist() {
+    public BetaDistRequestBuilder betaDist() {
         return new BetaDistRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the beta_Inv method.
      */
     @jakarta.annotation.Nonnull
-    public BetaInvRequestBuilder beta_Inv() {
+    public BetaInvRequestBuilder betaInv() {
         return new BetaInvRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -628,21 +628,21 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the binom_Dist method.
      */
     @jakarta.annotation.Nonnull
-    public BinomDistRequestBuilder binom_Dist() {
+    public BinomDistRequestBuilder binomDist() {
         return new BinomDistRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the binom_Dist_Range method.
      */
     @jakarta.annotation.Nonnull
-    public BinomDistRangeRequestBuilder binom_Dist_Range() {
+    public BinomDistRangeRequestBuilder binomDistRange() {
         return new BinomDistRangeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the binom_Inv method.
      */
     @jakarta.annotation.Nonnull
-    public BinomInvRequestBuilder binom_Inv() {
+    public BinomInvRequestBuilder binomInv() {
         return new BinomInvRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -684,14 +684,14 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the ceiling_Math method.
      */
     @jakarta.annotation.Nonnull
-    public CeilingMathRequestBuilder ceiling_Math() {
+    public CeilingMathRequestBuilder ceilingMath() {
         return new CeilingMathRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the ceiling_Precise method.
      */
     @jakarta.annotation.Nonnull
-    public CeilingPreciseRequestBuilder ceiling_Precise() {
+    public CeilingPreciseRequestBuilder ceilingPrecise() {
         return new CeilingPreciseRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -705,28 +705,28 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the chiSq_Dist method.
      */
     @jakarta.annotation.Nonnull
-    public ChiSqDistRequestBuilder chiSq_Dist() {
+    public ChiSqDistRequestBuilder chiSqDist() {
         return new ChiSqDistRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the chiSq_Dist_RT method.
      */
     @jakarta.annotation.Nonnull
-    public ChiSqDistRTRequestBuilder chiSq_Dist_RT() {
+    public ChiSqDistRTRequestBuilder chiSqDistRT() {
         return new ChiSqDistRTRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the chiSq_Inv method.
      */
     @jakarta.annotation.Nonnull
-    public ChiSqInvRequestBuilder chiSq_Inv() {
+    public ChiSqInvRequestBuilder chiSqInv() {
         return new ChiSqInvRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the chiSq_Inv_RT method.
      */
     @jakarta.annotation.Nonnull
-    public ChiSqInvRTRequestBuilder chiSq_Inv_RT() {
+    public ChiSqInvRTRequestBuilder chiSqInvRT() {
         return new ChiSqInvRTRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -789,14 +789,14 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the confidence_Norm method.
      */
     @jakarta.annotation.Nonnull
-    public ConfidenceNormRequestBuilder confidence_Norm() {
+    public ConfidenceNormRequestBuilder confidenceNorm() {
         return new ConfidenceNormRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the confidence_T method.
      */
     @jakarta.annotation.Nonnull
-    public ConfidenceTRequestBuilder confidence_T() {
+    public ConfidenceTRequestBuilder confidenceT() {
         return new ConfidenceTRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -1167,7 +1167,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the ecma_Ceiling method.
      */
     @jakarta.annotation.Nonnull
-    public EcmaCeilingRequestBuilder ecma_Ceiling() {
+    public EcmaCeilingRequestBuilder ecmaCeiling() {
         return new EcmaCeilingRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -1199,13 +1199,6 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
         return new ErfRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the erf_Precise method.
-     */
-    @jakarta.annotation.Nonnull
-    public ErfPreciseRequestBuilder erf_Precise() {
-        return new ErfPreciseRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to call the erfC method.
      */
     @jakarta.annotation.Nonnull
@@ -1216,14 +1209,21 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the erfC_Precise method.
      */
     @jakarta.annotation.Nonnull
-    public ErfCPreciseRequestBuilder erfC_Precise() {
+    public ErfCPreciseRequestBuilder erfCPrecise() {
         return new ErfCPreciseRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the erf_Precise method.
+     */
+    @jakarta.annotation.Nonnull
+    public ErfPreciseRequestBuilder erfPrecise() {
+        return new ErfPreciseRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the error_Type method.
      */
     @jakarta.annotation.Nonnull
-    public ErrorTypeRequestBuilder error_Type() {
+    public ErrorTypeRequestBuilder errorType() {
         return new ErrorTypeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -1251,36 +1251,8 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the expon_Dist method.
      */
     @jakarta.annotation.Nonnull
-    public ExponDistRequestBuilder expon_Dist() {
+    public ExponDistRequestBuilder exponDist() {
         return new ExponDistRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the f_Dist method.
-     */
-    @jakarta.annotation.Nonnull
-    public FDistRequestBuilder f_Dist() {
-        return new FDistRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the f_Dist_RT method.
-     */
-    @jakarta.annotation.Nonnull
-    public FDistRTRequestBuilder f_Dist_RT() {
-        return new FDistRTRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the f_Inv method.
-     */
-    @jakarta.annotation.Nonnull
-    public FInvRequestBuilder f_Inv() {
-        return new FInvRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the f_Inv_RT method.
-     */
-    @jakarta.annotation.Nonnull
-    public FInvRTRequestBuilder f_Inv_RT() {
-        return new FInvRTRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the fact method.
@@ -1304,6 +1276,20 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
         return new FalseRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the f_Dist method.
+     */
+    @jakarta.annotation.Nonnull
+    public FDistRequestBuilder fDist() {
+        return new FDistRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the f_Dist_RT method.
+     */
+    @jakarta.annotation.Nonnull
+    public FDistRTRequestBuilder fDistRT() {
+        return new FDistRTRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the find method.
      */
     @jakarta.annotation.Nonnull
@@ -1316,6 +1302,20 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public FindBRequestBuilder findB() {
         return new FindBRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the f_Inv method.
+     */
+    @jakarta.annotation.Nonnull
+    public FInvRequestBuilder fInv() {
+        return new FInvRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the f_Inv_RT method.
+     */
+    @jakarta.annotation.Nonnull
+    public FInvRTRequestBuilder fInvRT() {
+        return new FInvRTRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the fisher method.
@@ -1342,14 +1342,14 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the floor_Math method.
      */
     @jakarta.annotation.Nonnull
-    public FloorMathRequestBuilder floor_Math() {
+    public FloorMathRequestBuilder floorMath() {
         return new FloorMathRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the floor_Precise method.
      */
     @jakarta.annotation.Nonnull
-    public FloorPreciseRequestBuilder floor_Precise() {
+    public FloorPreciseRequestBuilder floorPrecise() {
         return new FloorPreciseRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -1377,14 +1377,14 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the gamma_Dist method.
      */
     @jakarta.annotation.Nonnull
-    public GammaDistRequestBuilder gamma_Dist() {
+    public GammaDistRequestBuilder gammaDist() {
         return new GammaDistRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the gamma_Inv method.
      */
     @jakarta.annotation.Nonnull
-    public GammaInvRequestBuilder gamma_Inv() {
+    public GammaInvRequestBuilder gammaInv() {
         return new GammaInvRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -1398,7 +1398,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the gammaLn_Precise method.
      */
     @jakarta.annotation.Nonnull
-    public GammaLnPreciseRequestBuilder gammaLn_Precise() {
+    public GammaLnPreciseRequestBuilder gammaLnPrecise() {
         return new GammaLnPreciseRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -1482,7 +1482,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the hypGeom_Dist method.
      */
     @jakarta.annotation.Nonnull
-    public HypGeomDistRequestBuilder hypGeom_Dist() {
+    public HypGeomDistRequestBuilder hypGeomDist() {
         return new HypGeomDistRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -1755,7 +1755,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the iso_Ceiling method.
      */
     @jakarta.annotation.Nonnull
-    public IsoCeilingRequestBuilder iso_Ceiling() {
+    public IsoCeilingRequestBuilder isoCeiling() {
         return new IsoCeilingRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -1867,14 +1867,14 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the logNorm_Dist method.
      */
     @jakarta.annotation.Nonnull
-    public LogNormDistRequestBuilder logNorm_Dist() {
+    public LogNormDistRequestBuilder logNormDist() {
         return new LogNormDistRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the logNorm_Inv method.
      */
     @jakarta.annotation.Nonnull
-    public LogNormInvRequestBuilder logNorm_Inv() {
+    public LogNormInvRequestBuilder logNormInv() {
         return new LogNormInvRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -2014,7 +2014,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the negBinom_Dist method.
      */
     @jakarta.annotation.Nonnull
-    public NegBinomDistRequestBuilder negBinom_Dist() {
+    public NegBinomDistRequestBuilder negBinomDist() {
         return new NegBinomDistRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -2028,7 +2028,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the networkDays_Intl method.
      */
     @jakarta.annotation.Nonnull
-    public NetworkDaysIntlRequestBuilder networkDays_Intl() {
+    public NetworkDaysIntlRequestBuilder networkDaysIntl() {
         return new NetworkDaysIntlRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -2042,28 +2042,28 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the norm_Dist method.
      */
     @jakarta.annotation.Nonnull
-    public NormDistRequestBuilder norm_Dist() {
+    public NormDistRequestBuilder normDist() {
         return new NormDistRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the norm_Inv method.
      */
     @jakarta.annotation.Nonnull
-    public NormInvRequestBuilder norm_Inv() {
+    public NormInvRequestBuilder normInv() {
         return new NormInvRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the norm_S_Dist method.
      */
     @jakarta.annotation.Nonnull
-    public NormSDistRequestBuilder norm_S_Dist() {
+    public NormSDistRequestBuilder normSDist() {
         return new NormSDistRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the norm_S_Inv method.
      */
     @jakarta.annotation.Nonnull
-    public NormSInvRequestBuilder norm_S_Inv() {
+    public NormSInvRequestBuilder normSInv() {
         return new NormSInvRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -2175,28 +2175,28 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the percentile_Exc method.
      */
     @jakarta.annotation.Nonnull
-    public PercentileExcRequestBuilder percentile_Exc() {
+    public PercentileExcRequestBuilder percentileExc() {
         return new PercentileExcRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the percentile_Inc method.
      */
     @jakarta.annotation.Nonnull
-    public PercentileIncRequestBuilder percentile_Inc() {
+    public PercentileIncRequestBuilder percentileInc() {
         return new PercentileIncRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the percentRank_Exc method.
      */
     @jakarta.annotation.Nonnull
-    public PercentRankExcRequestBuilder percentRank_Exc() {
+    public PercentRankExcRequestBuilder percentRankExc() {
         return new PercentRankExcRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the percentRank_Inc method.
      */
     @jakarta.annotation.Nonnull
-    public PercentRankIncRequestBuilder percentRank_Inc() {
+    public PercentRankIncRequestBuilder percentRankInc() {
         return new PercentRankIncRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -2238,7 +2238,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the poisson_Dist method.
      */
     @jakarta.annotation.Nonnull
-    public PoissonDistRequestBuilder poisson_Dist() {
+    public PoissonDistRequestBuilder poissonDist() {
         return new PoissonDistRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -2301,14 +2301,14 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the quartile_Exc method.
      */
     @jakarta.annotation.Nonnull
-    public QuartileExcRequestBuilder quartile_Exc() {
+    public QuartileExcRequestBuilder quartileExc() {
         return new QuartileExcRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the quartile_Inc method.
      */
     @jakarta.annotation.Nonnull
-    public QuartileIncRequestBuilder quartile_Inc() {
+    public QuartileIncRequestBuilder quartileInc() {
         return new QuartileIncRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -2343,14 +2343,14 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the rank_Avg method.
      */
     @jakarta.annotation.Nonnull
-    public RankAvgRequestBuilder rank_Avg() {
+    public RankAvgRequestBuilder rankAvg() {
         return new RankAvgRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the rank_Eq method.
      */
     @jakarta.annotation.Nonnull
-    public RankEqRequestBuilder rank_Eq() {
+    public RankEqRequestBuilder rankEq() {
         return new RankEqRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -2518,7 +2518,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the skew_p method.
      */
     @jakarta.annotation.Nonnull
-    public SkewPRequestBuilder skew_p() {
+    public SkewPRequestBuilder skewP() {
         return new SkewPRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -2557,20 +2557,6 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
         return new StandardizeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the stDev_P method.
-     */
-    @jakarta.annotation.Nonnull
-    public StDevPRequestBuilder stDev_P() {
-        return new StDevPRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the stDev_S method.
-     */
-    @jakarta.annotation.Nonnull
-    public StDevSRequestBuilder stDev_S() {
-        return new StDevSRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to call the stDevA method.
      */
     @jakarta.annotation.Nonnull
@@ -2578,11 +2564,25 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
         return new StDevARequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the stDev_P method.
+     */
+    @jakarta.annotation.Nonnull
+    public StDevPRequestBuilder stDevP() {
+        return new StDevPRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the stDevPA method.
      */
     @jakarta.annotation.Nonnull
     public StDevPARequestBuilder stDevPA() {
         return new StDevPARequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the stDev_S method.
+     */
+    @jakarta.annotation.Nonnull
+    public StDevSRequestBuilder stDevS() {
+        return new StDevSRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the substitute method.
@@ -2641,41 +2641,6 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
         return new TRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the t_Dist method.
-     */
-    @jakarta.annotation.Nonnull
-    public TDistRequestBuilder t_Dist() {
-        return new TDistRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the t_Dist_2T method.
-     */
-    @jakarta.annotation.Nonnull
-    public TDist2TRequestBuilder t_Dist_2T() {
-        return new TDist2TRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the t_Dist_RT method.
-     */
-    @jakarta.annotation.Nonnull
-    public TDistRTRequestBuilder t_Dist_RT() {
-        return new TDistRTRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the t_Inv method.
-     */
-    @jakarta.annotation.Nonnull
-    public TInvRequestBuilder t_Inv() {
-        return new TInvRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the t_Inv_2T method.
-     */
-    @jakarta.annotation.Nonnull
-    public TInv2TRequestBuilder t_Inv_2T() {
-        return new TInv2TRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to call the tan method.
      */
     @jakarta.annotation.Nonnull
@@ -2711,6 +2676,27 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
         return new TbillYieldRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the t_Dist method.
+     */
+    @jakarta.annotation.Nonnull
+    public TDistRequestBuilder tDist() {
+        return new TDistRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the t_Dist_2T method.
+     */
+    @jakarta.annotation.Nonnull
+    public TDist2TRequestBuilder tDist2T() {
+        return new TDist2TRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the t_Dist_RT method.
+     */
+    @jakarta.annotation.Nonnull
+    public TDistRTRequestBuilder tDistRT() {
+        return new TDistRTRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the text method.
      */
     @jakarta.annotation.Nonnull
@@ -2730,6 +2716,20 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TimevalueRequestBuilder timevalue() {
         return new TimevalueRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the t_Inv method.
+     */
+    @jakarta.annotation.Nonnull
+    public TInvRequestBuilder tInv() {
+        return new TInvRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the t_Inv_2T method.
+     */
+    @jakarta.annotation.Nonnull
+    public TInv2TRequestBuilder tInv2T() {
+        return new TInv2TRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the today method.
@@ -2809,20 +2809,6 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
         return new ValueRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the var_P method.
-     */
-    @jakarta.annotation.Nonnull
-    public VarPRequestBuilder var_P() {
-        return new VarPRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the var_S method.
-     */
-    @jakarta.annotation.Nonnull
-    public VarSRequestBuilder var_S() {
-        return new VarSRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to call the varA method.
      */
     @jakarta.annotation.Nonnull
@@ -2830,11 +2816,25 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
         return new VarARequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the var_P method.
+     */
+    @jakarta.annotation.Nonnull
+    public VarPRequestBuilder varP() {
+        return new VarPRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the varPA method.
      */
     @jakarta.annotation.Nonnull
     public VarPARequestBuilder varPA() {
         return new VarPARequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the var_S method.
+     */
+    @jakarta.annotation.Nonnull
+    public VarSRequestBuilder varS() {
+        return new VarSRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the vdb method.
@@ -2868,7 +2868,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the weibull_Dist method.
      */
     @jakarta.annotation.Nonnull
-    public WeibullDistRequestBuilder weibull_Dist() {
+    public WeibullDistRequestBuilder weibullDist() {
         return new WeibullDistRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -2882,7 +2882,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the workDay_Intl method.
      */
     @jakarta.annotation.Nonnull
-    public WorkDayIntlRequestBuilder workDay_Intl() {
+    public WorkDayIntlRequestBuilder workDayIntl() {
         return new WorkDayIntlRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -2945,7 +2945,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the z_Test method.
      */
     @jakarta.annotation.Nonnull
-    public ZTestRequestBuilder z_Test() {
+    public ZTestRequestBuilder zTest() {
         return new ZTestRequestBuilder(pathParameters, requestAdapter);
     }
     /**
@@ -2985,7 +2985,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get functions from drives
-     * @return a CompletableFuture of workbookFunctions
+     * @return a CompletableFuture of WorkbookFunctions
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookFunctions> get() {
@@ -2994,7 +2994,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get functions from drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookFunctions
+     * @return a CompletableFuture of WorkbookFunctions
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookFunctions> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -3007,7 +3007,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property functions in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookFunctions
+     * @return a CompletableFuture of WorkbookFunctions
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookFunctions> patch(@jakarta.annotation.Nonnull final WorkbookFunctions body) {
@@ -3017,7 +3017,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property functions in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookFunctions
+     * @return a CompletableFuture of WorkbookFunctions
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookFunctions> patch(@jakarta.annotation.Nonnull final WorkbookFunctions body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -3119,7 +3119,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a functionsRequestBuilder
+     * @return a FunctionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FunctionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

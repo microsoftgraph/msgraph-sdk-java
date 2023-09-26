@@ -59,7 +59,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
     }
     /**
      * Get the properties of a certificateBasedAuthConfiguration object.
-     * @return a CompletableFuture of certificateBasedAuthConfiguration
+     * @return a CompletableFuture of CertificateBasedAuthConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
     /**
      * Get the properties of a certificateBasedAuthConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateBasedAuthConfiguration
+     * @return a CompletableFuture of CertificateBasedAuthConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

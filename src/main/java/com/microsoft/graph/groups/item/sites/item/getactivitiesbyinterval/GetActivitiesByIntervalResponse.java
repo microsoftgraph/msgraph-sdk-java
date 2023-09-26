@@ -15,7 +15,7 @@ public class GetActivitiesByIntervalResponse extends BaseCollectionPaginationCou
      */
     private java.util.List<ItemActivityStat> value;
     /**
-     * Instantiates a new getActivitiesByIntervalResponse and sets the default values.
+     * Instantiates a new GetActivitiesByIntervalResponse and sets the default values.
      */
     public GetActivitiesByIntervalResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetActivitiesByIntervalResponse extends BaseCollectionPaginationCou
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getActivitiesByIntervalResponse
+     * @return a GetActivitiesByIntervalResponse
      */
     @jakarta.annotation.Nonnull
     public static GetActivitiesByIntervalResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetActivitiesByIntervalResponse extends BaseCollectionPaginationCou
     }
     /**
      * Gets the value property value. The value property
-     * @return a itemActivityStat
+     * @return a java.util.List<ItemActivityStat>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemActivityStat> getValue() {

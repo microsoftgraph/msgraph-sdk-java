@@ -22,7 +22,7 @@ public class Operation extends Entity implements Parsable {
      */
     private OperationStatus status;
     /**
-     * Instantiates a new operation and sets the default values.
+     * Instantiates a new Operation and sets the default values.
      */
     public Operation() {
         super();
@@ -30,7 +30,7 @@ public class Operation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a operation
+     * @return a Operation
      */
     @jakarta.annotation.Nonnull
     public static Operation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class Operation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The current status of the operation: notStarted, running, completed, failed
-     * @return a operationStatus
+     * @return a OperationStatus
      */
     @jakarta.annotation.Nullable
     public OperationStatus getStatus() {

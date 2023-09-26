@@ -38,7 +38,7 @@ public class BitlockerRecoveryKeyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a bitlockerRecoveryKey object.  By default, this operation does not return the key property that represents the actual recovery key. To include the key property in the response, use the $select OData query parameter. Including the $select query parameter triggers an Azure AD audit of the operation and generates an audit log. For more information on audit logs for bitlocker recovery keys, see the KeyManagement category filter of Azure AD audit logs.
-     * @return a CompletableFuture of bitlockerRecoveryKey
+     * @return a CompletableFuture of BitlockerRecoveryKey
      * @see <a href="https://learn.microsoft.com/graph/api/bitlockerrecoverykey-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class BitlockerRecoveryKeyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a bitlockerRecoveryKey object.  By default, this operation does not return the key property that represents the actual recovery key. To include the key property in the response, use the $select OData query parameter. Including the $select query parameter triggers an Azure AD audit of the operation and generates an audit log. For more information on audit logs for bitlocker recovery keys, see the KeyManagement category filter of Azure AD audit logs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bitlockerRecoveryKey
+     * @return a CompletableFuture of BitlockerRecoveryKey
      * @see <a href="https://learn.microsoft.com/graph/api/bitlockerrecoverykey-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

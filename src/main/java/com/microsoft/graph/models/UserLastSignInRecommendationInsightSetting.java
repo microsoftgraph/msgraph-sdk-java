@@ -18,7 +18,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
      */
     private UserSignInRecommendationScope signInScope;
     /**
-     * Instantiates a new userLastSignInRecommendationInsightSetting and sets the default values.
+     * Instantiates a new UserLastSignInRecommendationInsightSetting and sets the default values.
      */
     public UserLastSignInRecommendationInsightSetting() {
         super();
@@ -27,7 +27,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userLastSignInRecommendationInsightSetting
+     * @return a UserLastSignInRecommendationInsightSetting
      */
     @jakarta.annotation.Nonnull
     public static UserLastSignInRecommendationInsightSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     }
     /**
      * Gets the signInScope property value. Indicates whether inactivity is calculated based on the user's inactivity in the tenant or in the application. The possible values are tenant, application, unknownFutureValue. application is only relevant when the access review is a review of an assignment to an application.
-     * @return a userSignInRecommendationScope
+     * @return a UserSignInRecommendationScope
      */
     @jakarta.annotation.Nullable
     public UserSignInRecommendationScope getSignInScope() {

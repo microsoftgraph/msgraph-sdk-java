@@ -43,7 +43,7 @@ public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval
     }
     /**
      * Invoke function getActivitiesByInterval
-     * @return a CompletableFuture of getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalResponse
+     * @return a CompletableFuture of GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalResponse> get() {
@@ -52,7 +52,7 @@ public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval
     /**
      * Invoke function getActivitiesByInterval
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalResponse
+     * @return a CompletableFuture of GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -94,7 +94,7 @@ public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+     * @return a GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

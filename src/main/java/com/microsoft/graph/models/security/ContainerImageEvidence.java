@@ -21,7 +21,7 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
      */
     private ContainerRegistryEvidence registry;
     /**
-     * Instantiates a new containerImageEvidence and sets the default values.
+     * Instantiates a new ContainerImageEvidence and sets the default values.
      */
     public ContainerImageEvidence() {
         super();
@@ -30,7 +30,7 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a containerImageEvidence
+     * @return a ContainerImageEvidence
      */
     @jakarta.annotation.Nonnull
     public static ContainerImageEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the digestImage property value. The digest image entity, in case this is a tag image.
-     * @return a containerImageEvidence
+     * @return a ContainerImageEvidence
      */
     @jakarta.annotation.Nullable
     public ContainerImageEvidence getDigestImage() {
@@ -59,7 +59,7 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the imageId property value. The unique identifier for the container image entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getImageId() {
@@ -67,7 +67,7 @@ public class ContainerImageEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the registry property value. The container registry for this image.
-     * @return a containerRegistryEvidence
+     * @return a ContainerRegistryEvidence
      */
     @jakarta.annotation.Nullable
     public ContainerRegistryEvidence getRegistry() {

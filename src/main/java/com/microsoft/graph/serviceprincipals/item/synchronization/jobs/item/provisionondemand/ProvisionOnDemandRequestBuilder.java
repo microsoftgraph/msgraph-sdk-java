@@ -38,7 +38,7 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
     /**
      * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body The request body
-     * @return a CompletableFuture of stringKeyStringValuePair
+     * @return a CompletableFuture of StringKeyStringValuePair
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-provisionondemand?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
      * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of stringKeyStringValuePair
+     * @return a CompletableFuture of StringKeyStringValuePair
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-provisionondemand?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a provisionOnDemandRequestBuilder
+     * @return a ProvisionOnDemandRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ProvisionOnDemandRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

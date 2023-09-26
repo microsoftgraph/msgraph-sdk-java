@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
-     * The phone number to text or call for authentication. Phone numbers use the format +{country code} {number}x{extension}, with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating or updating if they do not match the required format.
+     * The phone number to text or call for authentication. Phone numbers use the format +{country code} {number}x{extension}, with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating or updating if they don't match the required format.
      */
     private String phoneNumber;
     /**
@@ -21,7 +21,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      */
     private AuthenticationMethodSignInState smsSignInState;
     /**
-     * Instantiates a new phoneAuthenticationMethod and sets the default values.
+     * Instantiates a new PhoneAuthenticationMethod and sets the default values.
      */
     public PhoneAuthenticationMethod() {
         super();
@@ -30,7 +30,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a phoneAuthenticationMethod
+     * @return a PhoneAuthenticationMethod
      */
     @jakarta.annotation.Nonnull
     public static PhoneAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,8 +50,8 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
         return deserializerMap;
     }
     /**
-     * Gets the phoneNumber property value. The phone number to text or call for authentication. Phone numbers use the format +{country code} {number}x{extension}, with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating or updating if they do not match the required format.
-     * @return a string
+     * Gets the phoneNumber property value. The phone number to text or call for authentication. Phone numbers use the format +{country code} {number}x{extension}, with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating or updating if they don't match the required format.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
@@ -59,7 +59,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     }
     /**
      * Gets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
-     * @return a authenticationPhoneType
+     * @return a AuthenticationPhoneType
      */
     @jakarta.annotation.Nullable
     public AuthenticationPhoneType getPhoneType() {
@@ -67,7 +67,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     }
     /**
      * Gets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
-     * @return a authenticationMethodSignInState
+     * @return a AuthenticationMethodSignInState
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodSignInState getSmsSignInState() {
@@ -85,7 +85,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
         writer.writeEnumValue("smsSignInState", this.getSmsSignInState());
     }
     /**
-     * Sets the phoneNumber property value. The phone number to text or call for authentication. Phone numbers use the format +{country code} {number}x{extension}, with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating or updating if they do not match the required format.
+     * Sets the phoneNumber property value. The phone number to text or call for authentication. Phone numbers use the format +{country code} {number}x{extension}, with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating or updating if they don't match the required format.
      * @param value Value to set for the phoneNumber property.
      */
     public void setPhoneNumber(@jakarta.annotation.Nullable final String value) {

@@ -83,7 +83,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Read properties and relationships of the androidManagedAppProtection object.
-     * @return a CompletableFuture of androidManagedAppProtection
+     * @return a CompletableFuture of AndroidManagedAppProtection
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     /**
      * Read properties and relationships of the androidManagedAppProtection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidManagedAppProtection
+     * @return a CompletableFuture of AndroidManagedAppProtection
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     /**
      * Update the properties of a androidManagedAppProtection object.
      * @param body The request body
-     * @return a CompletableFuture of androidManagedAppProtection
+     * @return a CompletableFuture of AndroidManagedAppProtection
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -118,7 +118,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
      * Update the properties of a androidManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidManagedAppProtection
+     * @return a CompletableFuture of AndroidManagedAppProtection
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

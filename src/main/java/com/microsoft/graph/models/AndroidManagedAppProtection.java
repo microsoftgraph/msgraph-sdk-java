@@ -52,7 +52,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     private Boolean screenCaptureBlocked;
     /**
-     * Instantiates a new androidManagedAppProtection and sets the default values.
+     * Instantiates a new AndroidManagedAppProtection and sets the default values.
      */
     public AndroidManagedAppProtection() {
         super();
@@ -61,7 +61,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidManagedAppProtection
+     * @return a AndroidManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public static AndroidManagedAppProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +70,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the apps property value. List of apps to which the policy is deployed.
-     * @return a managedMobileApp
+     * @return a java.util.List<ManagedMobileApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
@@ -78,7 +78,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomBrowserDisplayName() {
@@ -86,7 +86,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the customBrowserPackageId property value. Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomBrowserPackageId() {
@@ -94,7 +94,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeployedAppCount() {
@@ -102,7 +102,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
-     * @return a managedAppPolicyDeploymentSummary
+     * @return a ManagedAppPolicyDeploymentSummary
      */
     @jakarta.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
@@ -110,7 +110,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableAppEncryptionIfDeviceEncryptionIsEnabled() {
@@ -118,7 +118,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the encryptAppData property value. Indicates whether application data for managed apps should be encrypted
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEncryptAppData() {
@@ -145,7 +145,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the minimumRequiredPatchVersion property value. Define the oldest required Android security patch level a user can have to gain secure access to the app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredPatchVersion() {
@@ -153,7 +153,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumWarningPatchVersion() {
@@ -161,7 +161,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether a managed user can take screen captures of managed apps
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {

@@ -65,7 +65,7 @@ public class UserFlowLanguagePageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
-     * @return a CompletableFuture of userFlowLanguagePage
+     * @return a CompletableFuture of UserFlowLanguagePage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguagePage> get() {
@@ -74,7 +74,7 @@ public class UserFlowLanguagePageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userFlowLanguagePage
+     * @return a CompletableFuture of UserFlowLanguagePage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguagePage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class UserFlowLanguagePageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property overridesPages in identity
      * @param body The request body
-     * @return a CompletableFuture of userFlowLanguagePage
+     * @return a CompletableFuture of UserFlowLanguagePage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguagePage> patch(@jakarta.annotation.Nonnull final UserFlowLanguagePage body) {
@@ -97,7 +97,7 @@ public class UserFlowLanguagePageItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property overridesPages in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userFlowLanguagePage
+     * @return a CompletableFuture of UserFlowLanguagePage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguagePage> patch(@jakarta.annotation.Nonnull final UserFlowLanguagePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

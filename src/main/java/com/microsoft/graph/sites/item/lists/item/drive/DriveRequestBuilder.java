@@ -38,7 +38,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
-     * @return a CompletableFuture of drive
+     * @return a CompletableFuture of Drive
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Drive> get() {
@@ -47,7 +47,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder {
     /**
      * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of drive
+     * @return a CompletableFuture of Drive
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Drive> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a driveRequestBuilder
+     * @return a DriveRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DriveRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

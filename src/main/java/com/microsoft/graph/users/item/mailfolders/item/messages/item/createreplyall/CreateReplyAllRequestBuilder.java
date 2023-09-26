@@ -38,7 +38,7 @@ public class CreateReplyAllRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a draft to reply to the sender and all recipients of a message in either JSON or MIME format. When using JSON format:- Specify either a comment or the body property of the message parameter. Specifying both will return an HTTP 400 Bad Request error.- If the original message specifies a recipient in the replyTo property, per Internet Message Format (RFC 2822), you should send the reply to the recipients in the replyTo and toRecipients properties, and not the recipients in the from and toRecipients properties.- You can update the draft later to add reply content to the body or change other message properties. When using MIME format:- Provide the applicable Internet message headers and the MIME content, all encoded in base64 format in the request body.- Add any attachments and S/MIME properties to the MIME content. Send the draft message in a subsequent operation. Alternatively, reply-all to a message in a single action.
      * @param body The request body
-     * @return a CompletableFuture of message
+     * @return a CompletableFuture of Message
      * @see <a href="https://learn.microsoft.com/graph/api/message-createreplyall?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class CreateReplyAllRequestBuilder extends BaseRequestBuilder {
      * Create a draft to reply to the sender and all recipients of a message in either JSON or MIME format. When using JSON format:- Specify either a comment or the body property of the message parameter. Specifying both will return an HTTP 400 Bad Request error.- If the original message specifies a recipient in the replyTo property, per Internet Message Format (RFC 2822), you should send the reply to the recipients in the replyTo and toRecipients properties, and not the recipients in the from and toRecipients properties.- You can update the draft later to add reply content to the body or change other message properties. When using MIME format:- Provide the applicable Internet message headers and the MIME content, all encoded in base64 format in the request body.- Add any attachments and S/MIME properties to the MIME content. Send the draft message in a subsequent operation. Alternatively, reply-all to a message in a single action.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of message
+     * @return a CompletableFuture of Message
      * @see <a href="https://learn.microsoft.com/graph/api/message-createreplyall?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class CreateReplyAllRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a createReplyAllRequestBuilder
+     * @return a CreateReplyAllRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CreateReplyAllRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

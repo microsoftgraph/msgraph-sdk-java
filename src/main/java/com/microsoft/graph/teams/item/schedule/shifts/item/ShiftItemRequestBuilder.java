@@ -59,7 +59,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a shift object by ID.
-     * @return a CompletableFuture of shift
+     * @return a CompletableFuture of Shift
      * @see <a href="https://learn.microsoft.com/graph/api/shift-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a shift object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of shift
+     * @return a CompletableFuture of Shift
      * @see <a href="https://learn.microsoft.com/graph/api/shift-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Replace an existing shift. If the specified shift doesn't exist, this method returns 404 Not found. The duration of a shift can't be less than 1 minute or longer than 24 hours.
      * @param body The request body
-     * @return a CompletableFuture of shift
+     * @return a CompletableFuture of Shift
      * @see <a href="https://learn.microsoft.com/graph/api/shift-put?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
      * Replace an existing shift. If the specified shift doesn't exist, this method returns 404 Not found. The duration of a shift can't be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of shift
+     * @return a CompletableFuture of Shift
      * @see <a href="https://learn.microsoft.com/graph/api/shift-put?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

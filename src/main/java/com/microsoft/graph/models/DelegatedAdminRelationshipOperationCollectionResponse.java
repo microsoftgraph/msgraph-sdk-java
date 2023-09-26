@@ -13,7 +13,7 @@ public class DelegatedAdminRelationshipOperationCollectionResponse extends BaseC
      */
     private java.util.List<DelegatedAdminRelationshipOperation> value;
     /**
-     * Instantiates a new delegatedAdminRelationshipOperationCollectionResponse and sets the default values.
+     * Instantiates a new DelegatedAdminRelationshipOperationCollectionResponse and sets the default values.
      */
     public DelegatedAdminRelationshipOperationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DelegatedAdminRelationshipOperationCollectionResponse extends BaseC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a delegatedAdminRelationshipOperationCollectionResponse
+     * @return a DelegatedAdminRelationshipOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DelegatedAdminRelationshipOperationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DelegatedAdminRelationshipOperationCollectionResponse extends BaseC
     }
     /**
      * Gets the value property value. The value property
-     * @return a delegatedAdminRelationshipOperation
+     * @return a java.util.List<DelegatedAdminRelationshipOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminRelationshipOperation> getValue() {

@@ -60,7 +60,7 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a hostCookie object.
-     * @return a CompletableFuture of hostCookieCollectionResponse
+     * @return a CompletableFuture of HostCookieCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostCookieCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a hostCookie object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostCookieCollectionResponse
+     * @return a CompletableFuture of HostCookieCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostCookieCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to hostCookies for security
      * @param body The request body
-     * @return a CompletableFuture of hostCookie
+     * @return a CompletableFuture of HostCookie
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostCookie> post(@jakarta.annotation.Nonnull final HostCookie body) {
@@ -92,7 +92,7 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to hostCookies for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostCookie
+     * @return a CompletableFuture of HostCookie
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostCookie> post(@jakarta.annotation.Nonnull final HostCookie body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a hostCookiesRequestBuilder
+     * @return a HostCookiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HostCookiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

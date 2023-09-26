@@ -62,7 +62,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObject> get() {
@@ -71,7 +71,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObject> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

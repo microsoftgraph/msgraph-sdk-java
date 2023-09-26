@@ -57,7 +57,7 @@ public class SecureScoreItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a secureScore object.
-     * @return a CompletableFuture of secureScore
+     * @return a CompletableFuture of SecureScore
      * @see <a href="https://learn.microsoft.com/graph/api/securescore-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class SecureScoreItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a secureScore object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of secureScore
+     * @return a CompletableFuture of SecureScore
      * @see <a href="https://learn.microsoft.com/graph/api/securescore-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class SecureScoreItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property secureScores in security
      * @param body The request body
-     * @return a CompletableFuture of secureScore
+     * @return a CompletableFuture of SecureScore
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecureScore> patch(@jakarta.annotation.Nonnull final SecureScore body) {
@@ -91,7 +91,7 @@ public class SecureScoreItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property secureScores in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of secureScore
+     * @return a CompletableFuture of SecureScore
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecureScore> patch(@jakarta.annotation.Nonnull final SecureScore body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

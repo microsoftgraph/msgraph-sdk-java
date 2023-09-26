@@ -62,7 +62,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -71,7 +71,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the accessReviewScheduleDefinition objects and their properties.
-     * @return a CompletableFuture of accessReviewScheduleDefinitionCollectionResponse
+     * @return a CompletableFuture of AccessReviewScheduleDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the accessReviewScheduleDefinition objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewScheduleDefinitionCollectionResponse
+     * @return a CompletableFuture of AccessReviewScheduleDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new accessReviewScheduleDefinition object.
      * @param body The request body
-     * @return a CompletableFuture of accessReviewScheduleDefinition
+     * @return a CompletableFuture of AccessReviewScheduleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-definitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -106,7 +106,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
      * Create a new accessReviewScheduleDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewScheduleDefinition
+     * @return a CompletableFuture of AccessReviewScheduleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-definitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -182,7 +182,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a definitionsRequestBuilder
+     * @return a DefinitionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DefinitionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

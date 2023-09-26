@@ -60,7 +60,7 @@ public class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object.
-     * @return a CompletableFuture of userRegistrationDetailsCollectionResponse
+     * @return a CompletableFuture of UserRegistrationDetailsCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodsroot-list-userregistrationdetails?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userRegistrationDetailsCollectionResponse
+     * @return a CompletableFuture of UserRegistrationDetailsCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodsroot-list-userregistrationdetails?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to userRegistrationDetails for reports
      * @param body The request body
-     * @return a CompletableFuture of userRegistrationDetails
+     * @return a CompletableFuture of UserRegistrationDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserRegistrationDetails> post(@jakarta.annotation.Nonnull final UserRegistrationDetails body) {
@@ -94,7 +94,7 @@ public class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to userRegistrationDetails for reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userRegistrationDetails
+     * @return a CompletableFuture of UserRegistrationDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserRegistrationDetails> post(@jakarta.annotation.Nonnull final UserRegistrationDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userRegistrationDetailsRequestBuilder
+     * @return a UserRegistrationDetailsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserRegistrationDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -36,7 +36,7 @@ public class IsPublishedRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function isPublished
-     * @return a CompletableFuture of isPublishedResponse
+     * @return a CompletableFuture of IsPublishedResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IsPublishedResponse> get() {
@@ -45,7 +45,7 @@ public class IsPublishedRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function isPublished
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of isPublishedResponse
+     * @return a CompletableFuture of IsPublishedResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IsPublishedResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,7 +86,7 @@ public class IsPublishedRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a isPublishedRequestBuilder
+     * @return a IsPublishedRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IsPublishedRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

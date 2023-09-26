@@ -42,7 +42,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
      */
     private Long size;
     /**
-     * Instantiates a new attachmentItem and sets the default values.
+     * Instantiates a new AttachmentItem and sets the default values.
      */
     public AttachmentItem() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attachmentItem
+     * @return a AttachmentItem
      */
     @jakarta.annotation.Nonnull
     public static AttachmentItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
         return new AttachmentItem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the attachmentType property value. The type of attachment. Possible values are: file, item, reference. Required.
-     * @return a attachmentType
+     * @return a AttachmentType
      */
     @jakarta.annotation.Nullable
     public AttachmentType getAttachmentType() {
@@ -75,7 +75,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the contentId property value. The CID or Content-Id of the attachment for referencing in case of in-line attachments using <img src='cid:contentId'> tag in HTML messages. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentId() {
@@ -83,7 +83,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the contentType property value. The nature of the data in the attachment. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
@@ -107,7 +107,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isInline property value. true if the attachment is an inline attachment; otherwise, false. Optional.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInline() {
@@ -115,7 +115,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -123,7 +123,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -131,7 +131,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the size property value. The length of the attachment in bytes. Required.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
@@ -153,8 +153,8 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

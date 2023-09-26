@@ -61,7 +61,7 @@ public class TaskReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the taskReport objects and their properties.
-     * @return a CompletableFuture of taskReportCollectionResponse
+     * @return a CompletableFuture of TaskReportCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-taskreports?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class TaskReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the taskReport objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of taskReportCollectionResponse
+     * @return a CompletableFuture of TaskReportCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-taskreports?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -86,7 +86,7 @@ public class TaskReportsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the summary method.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a microsoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return a MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
@@ -126,7 +126,7 @@ public class TaskReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a taskReportsRequestBuilder
+     * @return a TaskReportsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TaskReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

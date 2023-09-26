@@ -60,7 +60,7 @@ public class AssignmentPoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only. Nullable. Supports $expand.
-     * @return a CompletableFuture of accessPackageAssignmentPolicyCollectionResponse
+     * @return a CompletableFuture of AccessPackageAssignmentPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentPolicyCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AssignmentPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentPolicyCollectionResponse
+     * @return a CompletableFuture of AccessPackageAssignmentPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AssignmentPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to assignmentPolicies for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @return a CompletableFuture of AccessPackageAssignmentPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentPolicy> post(@jakarta.annotation.Nonnull final AccessPackageAssignmentPolicy body) {
@@ -92,7 +92,7 @@ public class AssignmentPoliciesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to assignmentPolicies for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @return a CompletableFuture of AccessPackageAssignmentPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentPolicy> post(@jakarta.annotation.Nonnull final AccessPackageAssignmentPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AssignmentPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignmentPoliciesRequestBuilder
+     * @return a AssignmentPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignmentPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

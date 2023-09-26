@@ -38,7 +38,7 @@ public class AddToReviewSetOperationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Adds the results of the eDiscovery search to the specified reviewSet.
-     * @return a CompletableFuture of ediscoveryAddToReviewSetOperation
+     * @return a CompletableFuture of EdiscoveryAddToReviewSetOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryAddToReviewSetOperation> get() {
@@ -47,7 +47,7 @@ public class AddToReviewSetOperationRequestBuilder extends BaseRequestBuilder {
     /**
      * Adds the results of the eDiscovery search to the specified reviewSet.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryAddToReviewSetOperation
+     * @return a CompletableFuture of EdiscoveryAddToReviewSetOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryAddToReviewSetOperation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class AddToReviewSetOperationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a addToReviewSetOperationRequestBuilder
+     * @return a AddToReviewSetOperationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AddToReviewSetOperationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

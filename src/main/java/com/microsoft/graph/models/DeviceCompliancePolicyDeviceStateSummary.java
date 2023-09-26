@@ -45,7 +45,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      */
     private Integer unknownDeviceCount;
     /**
-     * Instantiates a new deviceCompliancePolicyDeviceStateSummary and sets the default values.
+     * Instantiates a new DeviceCompliancePolicyDeviceStateSummary and sets the default values.
      */
     public DeviceCompliancePolicyDeviceStateSummary() {
         super();
@@ -53,7 +53,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceCompliancePolicyDeviceStateSummary
+     * @return a DeviceCompliancePolicyDeviceStateSummary
      */
     @jakarta.annotation.Nonnull
     public static DeviceCompliancePolicyDeviceStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
     }
     /**
      * Gets the compliantDeviceCount property value. Number of compliant devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantDeviceCount() {
@@ -70,7 +70,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
     }
     /**
      * Gets the configManagerCount property value. Number of devices that have compliance managed by System Center Configuration Manager
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfigManagerCount() {
@@ -78,7 +78,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
     }
     /**
      * Gets the conflictDeviceCount property value. Number of conflict devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConflictDeviceCount() {
@@ -86,7 +86,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
     }
     /**
      * Gets the errorDeviceCount property value. Number of error devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
@@ -112,7 +112,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
     }
     /**
      * Gets the inGracePeriodCount property value. Number of devices that are in grace period
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInGracePeriodCount() {
@@ -120,7 +120,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
     }
     /**
      * Gets the nonCompliantDeviceCount property value. Number of NonCompliant devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
@@ -128,7 +128,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
     }
     /**
      * Gets the notApplicableDeviceCount property value. Number of not applicable devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
@@ -136,7 +136,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
     }
     /**
      * Gets the remediatedDeviceCount property value. Number of remediated devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRemediatedDeviceCount() {
@@ -144,7 +144,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
     }
     /**
      * Gets the unknownDeviceCount property value. Number of unknown devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {

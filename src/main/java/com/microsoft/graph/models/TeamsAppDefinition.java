@@ -34,7 +34,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
+     * The published status of a specific version of a Teams app. Possible values are:submittedThe specific version of the Teams app has been submitted and is under review. publishedThe request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejectedThe admin rejected the request to publish the specific version of the Teams app.
      */
     private TeamsAppPublishingState publishingState;
     /**
@@ -50,7 +50,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     private String version;
     /**
-     * Instantiates a new teamsAppDefinition and sets the default values.
+     * Instantiates a new TeamsAppDefinition and sets the default values.
      */
     public TeamsAppDefinition() {
         super();
@@ -58,7 +58,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamsAppDefinition
+     * @return a TeamsAppDefinition
      */
     @jakarta.annotation.Nonnull
     public static TeamsAppDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the authorization property value. Authorization requirements specified in the Teams app manifest.
-     * @return a teamsAppAuthorization
+     * @return a TeamsAppAuthorization
      */
     @jakarta.annotation.Nullable
     public TeamsAppAuthorization getAuthorization() {
@@ -75,7 +75,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the bot property value. The details of the bot specified in the Teams app manifest.
-     * @return a teamworkBot
+     * @return a TeamworkBot
      */
     @jakarta.annotation.Nullable
     public TeamworkBot getBot() {
@@ -83,7 +83,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -91,7 +91,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Verbose description of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -99,7 +99,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the app provided by the app developer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -133,8 +133,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         return this.lastModifiedDateTime;
     }
     /**
-     * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
-     * @return a teamsAppPublishingState
+     * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submittedThe specific version of the Teams app has been submitted and is under review. publishedThe request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejectedThe admin rejected the request to publish the specific version of the Teams app.
+     * @return a TeamsAppPublishingState
      */
     @jakarta.annotation.Nullable
     public TeamsAppPublishingState getPublishingState() {
@@ -142,7 +142,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the shortDescription property value. Short description of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getShortDescription() {
@@ -150,7 +150,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the teamsAppId property value. The ID from the Teams app manifest.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamsAppId() {
@@ -158,7 +158,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The version number of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
@@ -225,7 +225,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         this.lastModifiedDateTime = value;
     }
     /**
-     * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
+     * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submittedThe specific version of the Teams app has been submitted and is under review. publishedThe request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejectedThe admin rejected the request to publish the specific version of the Teams app.
      * @param value Value to set for the publishingState property.
      */
     public void setPublishingState(@jakarta.annotation.Nullable final TeamsAppPublishingState value) {

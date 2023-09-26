@@ -38,7 +38,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of an alert object.
-     * @return a CompletableFuture of alert
+     * @return a CompletableFuture of Alert
      * @see <a href="https://learn.microsoft.com/graph/api/alert-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an alert object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alert
+     * @return a CompletableFuture of Alert
      * @see <a href="https://learn.microsoft.com/graph/api/alert-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update an editable alert property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID.
      * @param body The request body
-     * @return a CompletableFuture of alert
+     * @return a CompletableFuture of Alert
      * @see <a href="https://learn.microsoft.com/graph/api/alert-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
      * Update an editable alert property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alert
+     * @return a CompletableFuture of Alert
      * @see <a href="https://learn.microsoft.com/graph/api/alert-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

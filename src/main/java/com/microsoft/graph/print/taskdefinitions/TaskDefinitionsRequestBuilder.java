@@ -60,7 +60,7 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of task definitions that the requesting app defined in the tenant. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
-     * @return a CompletableFuture of printTaskDefinitionCollectionResponse
+     * @return a CompletableFuture of PrintTaskDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/print-list-taskdefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of task definitions that the requesting app defined in the tenant. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printTaskDefinitionCollectionResponse
+     * @return a CompletableFuture of PrintTaskDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/print-list-taskdefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param body The request body
-     * @return a CompletableFuture of printTaskDefinition
+     * @return a CompletableFuture of PrintTaskDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/print-post-taskdefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
      * Create a new task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printTaskDefinition
+     * @return a CompletableFuture of PrintTaskDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/print-post-taskdefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a taskDefinitionsRequestBuilder
+     * @return a TaskDefinitionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TaskDefinitionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

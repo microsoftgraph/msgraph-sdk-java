@@ -89,7 +89,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     }
     /**
      * Read-only. Nullable. Supports $expand.
-     * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @return a CompletableFuture of AccessPackageAssignmentPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentPolicy> get() {
@@ -98,7 +98,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     /**
      * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @return a CompletableFuture of AccessPackageAssignmentPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property assignmentPolicies in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @return a CompletableFuture of AccessPackageAssignmentPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentPolicy> patch(@jakarta.annotation.Nonnull final AccessPackageAssignmentPolicy body) {
@@ -121,7 +121,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * Update the navigation property assignmentPolicies in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @return a CompletableFuture of AccessPackageAssignmentPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentPolicy> patch(@jakarta.annotation.Nonnull final AccessPackageAssignmentPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

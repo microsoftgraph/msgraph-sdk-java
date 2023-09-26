@@ -1,16 +1,11 @@
 package com.microsoft.graph.directory.deleteditems.item;
 
-import com.microsoft.graph.directory.deleteditems.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import com.microsoft.graph.directory.deleteditems.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import com.microsoft.graph.directory.deleteditems.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import com.microsoft.graph.directory.deleteditems.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.item.graphadministrativeunit.GraphAdministrativeUnitRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.item.graphapplication.GraphApplicationRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.item.graphdevice.GraphDeviceRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.item.graphgroup.GraphGroupRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.item.graphserviceprincipal.GraphServicePrincipalRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.item.graphuser.GraphUserRequestBuilder;
-import com.microsoft.graph.directory.deleteditems.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -31,34 +26,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
-    /**
-     * Provides operations to call the checkMemberGroups method.
-     */
-    @jakarta.annotation.Nonnull
-    public CheckMemberGroupsRequestBuilder checkMemberGroups() {
-        return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the checkMemberObjects method.
-     */
-    @jakarta.annotation.Nonnull
-    public CheckMemberObjectsRequestBuilder checkMemberObjects() {
-        return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getMemberGroups method.
-     */
-    @jakarta.annotation.Nonnull
-    public GetMemberGroupsRequestBuilder getMemberGroups() {
-        return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getMemberObjects method.
-     */
-    @jakarta.annotation.Nonnull
-    public GetMemberObjectsRequestBuilder getMemberObjects() {
-        return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Casts the previous resource to administrativeUnit.
      */
@@ -102,13 +69,6 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return new GraphUserRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the restore method.
-     */
-    @jakarta.annotation.Nonnull
-    public RestoreRequestBuilder restore() {
-        return new RestoreRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -147,7 +107,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties of a recently deleted application, group, servicePrincipal, administrative unit, or user object from deleted items.
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      * @see <a href="https://learn.microsoft.com/graph/api/directory-deleteditems-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -157,36 +117,12 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties of a recently deleted application, group, servicePrincipal, administrative unit, or user object from deleted items.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      * @see <a href="https://learn.microsoft.com/graph/api/directory-deleteditems-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObject> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
-        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DirectoryObject::createFromDiscriminatorValue, errorMapping);
-    }
-    /**
-     * Update the navigation property deletedItems in directory
-     * @param body The request body
-     * @return a CompletableFuture of directoryObject
-     */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObject> patch(@jakarta.annotation.Nonnull final DirectoryObject body) {
-        return patch(body, null);
-    }
-    /**
-     * Update the navigation property deletedItems in directory
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObject
-     */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObject> patch(@jakarta.annotation.Nonnull final DirectoryObject body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -249,38 +185,6 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property deletedItems in directory
-     * @param body The request body
-     * @return a RequestInformation
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DirectoryObject body) {
-        return toPatchRequestInformation(body, null);
-    }
-    /**
-     * Update the navigation property deletedItems in directory
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DirectoryObject body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a DirectoryObjectItemRequestBuilder
@@ -324,11 +228,5 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
          */
         @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
-    }
-    /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }

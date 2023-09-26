@@ -89,7 +89,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the schema for a given synchronization job or template.
-     * @return a CompletableFuture of synchronizationSchema
+     * @return a CompletableFuture of SynchronizationSchema
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the schema for a given synchronization job or template.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of synchronizationSchema
+     * @return a CompletableFuture of SynchronizationSchema
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the synchronization schema for a given job or template. This method fully replaces the current schema with the one provided in the request. To update the schema of a template, make the call on the application object. You must be the owner of the application.
      * @param body The request body
-     * @return a CompletableFuture of synchronizationSchema
+     * @return a CompletableFuture of SynchronizationSchema
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * Update the synchronization schema for a given job or template. This method fully replaces the current schema with the one provided in the request. To update the schema of a template, make the call on the application object. You must be the owner of the application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of synchronizationSchema
+     * @return a CompletableFuture of SynchronizationSchema
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -227,7 +227,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a schemaRequestBuilder
+     * @return a SchemaRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SchemaRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

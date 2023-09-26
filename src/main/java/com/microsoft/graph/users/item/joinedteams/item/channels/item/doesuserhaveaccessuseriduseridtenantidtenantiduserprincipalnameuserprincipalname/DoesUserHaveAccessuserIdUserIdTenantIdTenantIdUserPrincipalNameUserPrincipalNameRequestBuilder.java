@@ -36,7 +36,7 @@ public class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUser
     }
     /**
      * Invoke function doesUserHaveAccess
-     * @return a CompletableFuture of doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameResponse
+     * @return a CompletableFuture of DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameResponse> get() {
@@ -45,7 +45,7 @@ public class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUser
     /**
      * Invoke function doesUserHaveAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameResponse
+     * @return a CompletableFuture of DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUser
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder
+     * @return a DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

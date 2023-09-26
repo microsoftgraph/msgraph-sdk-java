@@ -201,7 +201,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of the specified team.
-     * @return a CompletableFuture of team
+     * @return a CompletableFuture of Team
      * @see <a href="https://learn.microsoft.com/graph/api/team-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -211,7 +211,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of the specified team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of team
+     * @return a CompletableFuture of Team
      * @see <a href="https://learn.microsoft.com/graph/api/team-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -225,7 +225,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of the specified team.
      * @param body The request body
-     * @return a CompletableFuture of team
+     * @return a CompletableFuture of Team
      * @see <a href="https://learn.microsoft.com/graph/api/team-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -236,7 +236,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the specified team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of team
+     * @return a CompletableFuture of Team
      * @see <a href="https://learn.microsoft.com/graph/api/team-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

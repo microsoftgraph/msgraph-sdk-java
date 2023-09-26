@@ -59,7 +59,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Get learningCourseActivities from employeeExperience
-     * @return a CompletableFuture of learningCourseActivity
+     * @return a CompletableFuture of LearningCourseActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningCourseActivity> get() {
@@ -68,7 +68,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
     /**
      * Get learningCourseActivities from employeeExperience
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of learningCourseActivity
+     * @return a CompletableFuture of LearningCourseActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningCourseActivity> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a learningCourseActivity object. 
      * @param body The request body
-     * @return a CompletableFuture of learningCourseActivity
+     * @return a CompletableFuture of LearningCourseActivity
      * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
      * Update the properties of a learningCourseActivity object. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of learningCourseActivity
+     * @return a CompletableFuture of LearningCourseActivity
      * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

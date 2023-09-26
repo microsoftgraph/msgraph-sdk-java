@@ -115,7 +115,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
     }
     /**
      * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
-     * @return a CompletableFuture of organizationalBrandingLocalization
+     * @return a CompletableFuture of OrganizationalBrandingLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
     /**
      * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of organizationalBrandingLocalization
+     * @return a CompletableFuture of OrganizationalBrandingLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
     /**
      * Update the properties of an organizationalBrandingLocalization object for a specific localization.
      * @param body The request body
-     * @return a CompletableFuture of organizationalBrandingLocalization
+     * @return a CompletableFuture of OrganizationalBrandingLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -150,7 +150,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
      * Update the properties of an organizationalBrandingLocalization object for a specific localization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of organizationalBrandingLocalization
+     * @return a CompletableFuture of OrganizationalBrandingLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

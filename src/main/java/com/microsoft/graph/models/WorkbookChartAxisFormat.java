@@ -17,7 +17,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
      */
     private WorkbookChartLineFormat line;
     /**
-     * Instantiates a new workbookChartAxisFormat and sets the default values.
+     * Instantiates a new WorkbookChartAxisFormat and sets the default values.
      */
     public WorkbookChartAxisFormat() {
         super();
@@ -25,7 +25,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookChartAxisFormat
+     * @return a WorkbookChartAxisFormat
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartAxisFormat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
     }
     /**
      * Gets the font property value. Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
-     * @return a workbookChartFont
+     * @return a WorkbookChartFont
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFont getFont() {
@@ -53,7 +53,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
     }
     /**
      * Gets the line property value. Represents chart line formatting. Read-only.
-     * @return a workbookChartLineFormat
+     * @return a WorkbookChartLineFormat
      */
     @jakarta.annotation.Nullable
     public WorkbookChartLineFormat getLine() {

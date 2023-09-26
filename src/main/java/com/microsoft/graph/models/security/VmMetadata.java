@@ -34,7 +34,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
      */
     private String vmId;
     /**
-     * Instantiates a new vmMetadata and sets the default values.
+     * Instantiates a new VmMetadata and sets the default values.
      */
     public VmMetadata() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a vmMetadata
+     * @return a VmMetadata
      */
     @jakarta.annotation.Nonnull
     public static VmMetadata createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
         return new VmMetadata();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the cloudProvider property value. The cloudProvider property
-     * @return a vmCloudProvider
+     * @return a VmCloudProvider
      */
     @jakarta.annotation.Nullable
     public VmCloudProvider getCloudProvider() {
@@ -81,7 +81,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -89,7 +89,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the resourceId property value. Unique identifier of the Azure resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
@@ -97,7 +97,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the subscriptionId property value. Unique identifier of the Azure subscription the customer tenant belongs to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubscriptionId() {
@@ -105,7 +105,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the vmId property value. Unique identifier of the virtual machine instance.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVmId() {
@@ -125,8 +125,8 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

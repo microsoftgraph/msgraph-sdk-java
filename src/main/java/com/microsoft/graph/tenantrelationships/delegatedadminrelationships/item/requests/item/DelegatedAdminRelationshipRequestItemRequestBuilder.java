@@ -57,7 +57,7 @@ public class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseReq
     }
     /**
      * Read the properties and relationships of a delegatedAdminRelationshipRequest object.
-     * @return a CompletableFuture of delegatedAdminRelationshipRequest
+     * @return a CompletableFuture of DelegatedAdminRelationshipRequest
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationshiprequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseReq
     /**
      * Read the properties and relationships of a delegatedAdminRelationshipRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedAdminRelationshipRequest
+     * @return a CompletableFuture of DelegatedAdminRelationshipRequest
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationshiprequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property requests in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of delegatedAdminRelationshipRequest
+     * @return a CompletableFuture of DelegatedAdminRelationshipRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipRequest> patch(@jakarta.annotation.Nonnull final DelegatedAdminRelationshipRequest body) {
@@ -91,7 +91,7 @@ public class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseReq
      * Update the navigation property requests in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedAdminRelationshipRequest
+     * @return a CompletableFuture of DelegatedAdminRelationshipRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipRequest> patch(@jakarta.annotation.Nonnull final DelegatedAdminRelationshipRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

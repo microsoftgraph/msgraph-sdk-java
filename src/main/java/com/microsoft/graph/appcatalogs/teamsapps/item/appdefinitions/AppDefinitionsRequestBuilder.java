@@ -60,7 +60,7 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The details for each version of the app.
-     * @return a CompletableFuture of teamsAppDefinitionCollectionResponse
+     * @return a CompletableFuture of TeamsAppDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppDefinitionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * The details for each version of the app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAppDefinitionCollectionResponse
+     * @return a CompletableFuture of TeamsAppDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppDefinitionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update an app previously published to the Microsoft Teams app catalog. To update an app, the distributionMethod property for the app must be set to organization. This API specifically updates an app published to your organization's app catalog (the tenant app catalog).
      * @param body The request body
-     * @return a CompletableFuture of teamsAppDefinition
+     * @return a CompletableFuture of TeamsAppDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/teamsapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
      * Update an app previously published to the Microsoft Teams app catalog. To update an app, the distributionMethod property for the app must be set to organization. This API specifically updates an app published to your organization's app catalog (the tenant app catalog).
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAppDefinition
+     * @return a CompletableFuture of TeamsAppDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/teamsapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appDefinitionsRequestBuilder
+     * @return a AppDefinitionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppDefinitionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

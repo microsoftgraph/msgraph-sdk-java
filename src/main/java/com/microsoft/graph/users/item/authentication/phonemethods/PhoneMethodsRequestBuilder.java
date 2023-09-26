@@ -60,7 +60,7 @@ public class PhoneMethodsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of phone authentication method objects for a user. This will return up to three objects, as a user can have up to three phones usable for authentication. This method is available only for standard Azure AD and B2B users, but not B2C users.
-     * @return a CompletableFuture of phoneAuthenticationMethodCollectionResponse
+     * @return a CompletableFuture of PhoneAuthenticationMethodCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-phonemethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class PhoneMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of phone authentication method objects for a user. This will return up to three objects, as a user can have up to three phones usable for authentication. This method is available only for standard Azure AD and B2B users, but not B2C users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of phoneAuthenticationMethodCollectionResponse
+     * @return a CompletableFuture of PhoneAuthenticationMethodCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-phonemethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class PhoneMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add a new phone authentication method for a user. A user may only have one phone of each type, captured in the phoneType property. This means, for example, adding a mobile phone to a user with a preexisting mobile phone will fail. Additionally, a user must always have a mobile phone before adding an alternateMobile phone. Adding a phone number makes it available for use in both Azure multi-factor authentication (MFA) and self-service password reset (SSPR), if enabled. Additionally, if a user is enabled by policy to use SMS sign-in and a mobile number is added, the system will attempt to register the number for use in that system.
      * @param body The request body
-     * @return a CompletableFuture of phoneAuthenticationMethod
+     * @return a CompletableFuture of PhoneAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-post-phonemethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class PhoneMethodsRequestBuilder extends BaseRequestBuilder {
      * Add a new phone authentication method for a user. A user may only have one phone of each type, captured in the phoneType property. This means, for example, adding a mobile phone to a user with a preexisting mobile phone will fail. Additionally, a user must always have a mobile phone before adding an alternateMobile phone. Adding a phone number makes it available for use in both Azure multi-factor authentication (MFA) and self-service password reset (SSPR), if enabled. Additionally, if a user is enabled by policy to use SMS sign-in and a mobile number is added, the system will attempt to register the number for use in that system.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of phoneAuthenticationMethod
+     * @return a CompletableFuture of PhoneAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-post-phonemethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class PhoneMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a phoneMethodsRequestBuilder
+     * @return a PhoneMethodsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PhoneMethodsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

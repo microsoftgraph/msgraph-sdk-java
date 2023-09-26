@@ -38,7 +38,7 @@ public class MuteRequestBuilder extends BaseRequestBuilder {
     /**
      * Mute a specific participant in the call. This is a server mute, meaning that the server will drop all audio packets for this participant, even if the participant continues to stream audio. For more information about how to handle mute operations, see muteParticipantOperation.
      * @param body The request body
-     * @return a CompletableFuture of muteParticipantOperation
+     * @return a CompletableFuture of MuteParticipantOperation
      * @see <a href="https://learn.microsoft.com/graph/api/participant-mute?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class MuteRequestBuilder extends BaseRequestBuilder {
      * Mute a specific participant in the call. This is a server mute, meaning that the server will drop all audio packets for this participant, even if the participant continues to stream audio. For more information about how to handle mute operations, see muteParticipantOperation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of muteParticipantOperation
+     * @return a CompletableFuture of MuteParticipantOperation
      * @see <a href="https://learn.microsoft.com/graph/api/participant-mute?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class MuteRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a muteRequestBuilder
+     * @return a MuteRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MuteRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

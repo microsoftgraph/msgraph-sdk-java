@@ -99,7 +99,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
-     * @return a CompletableFuture of b2xIdentityUserFlow
+     * @return a CompletableFuture of B2xIdentityUserFlow
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +109,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of b2xIdentityUserFlow
+     * @return a CompletableFuture of B2xIdentityUserFlow
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property b2xUserFlows in identity
      * @param body The request body
-     * @return a CompletableFuture of b2xIdentityUserFlow
+     * @return a CompletableFuture of B2xIdentityUserFlow
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2xIdentityUserFlow> patch(@jakarta.annotation.Nonnull final B2xIdentityUserFlow body) {
@@ -133,7 +133,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property b2xUserFlows in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of b2xIdentityUserFlow
+     * @return a CompletableFuture of B2xIdentityUserFlow
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2xIdentityUserFlow> patch(@jakarta.annotation.Nonnull final B2xIdentityUserFlow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

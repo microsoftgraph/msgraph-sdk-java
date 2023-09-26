@@ -60,7 +60,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get all the messageRule objects defined for the user's inbox.
-     * @return a CompletableFuture of messageRuleCollectionResponse
+     * @return a CompletableFuture of MessageRuleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-list-messagerules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all the messageRule objects defined for the user's inbox.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of messageRuleCollectionResponse
+     * @return a CompletableFuture of MessageRuleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-list-messagerules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a messageRule object by specifying a set of conditions and actions. Outlook carries out those actions if an incoming message in the user's Inbox meets the specified conditions.
      * @param body The request body
-     * @return a CompletableFuture of messageRule
+     * @return a CompletableFuture of MessageRule
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-post-messagerules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
      * Create a messageRule object by specifying a set of conditions and actions. Outlook carries out those actions if an incoming message in the user's Inbox meets the specified conditions.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of messageRule
+     * @return a CompletableFuture of MessageRule
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-post-messagerules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a messageRulesRequestBuilder
+     * @return a MessageRulesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MessageRulesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of domain objects.
-     * @return a CompletableFuture of domainCollectionResponse
+     * @return a CompletableFuture of DomainCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of domain objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of domainCollectionResponse
+     * @return a CompletableFuture of DomainCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
     /**
      * Adds a domain to the tenant. Important: You cannot use an associated domain with your Azure AD tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified.
      * @param body The request body
-     * @return a CompletableFuture of domain
+     * @return a CompletableFuture of Domain
      * @see <a href="https://learn.microsoft.com/graph/api/domain-post-domains?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
      * Adds a domain to the tenant. Important: You cannot use an associated domain with your Azure AD tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of domain
+     * @return a CompletableFuture of Domain
      * @see <a href="https://learn.microsoft.com/graph/api/domain-post-domains?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a domainsRequestBuilder
+     * @return a DomainsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DomainsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

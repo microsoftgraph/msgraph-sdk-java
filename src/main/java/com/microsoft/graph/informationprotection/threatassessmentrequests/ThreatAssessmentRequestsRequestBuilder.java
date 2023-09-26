@@ -60,7 +60,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
-     * @return a CompletableFuture of threatAssessmentRequestCollectionResponse
+     * @return a CompletableFuture of ThreatAssessmentRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotection-list-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of threatAssessmentRequestCollectionResponse
+     * @return a CompletableFuture of ThreatAssessmentRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotection-list-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new threat assessment request. A threat assessment request can be one of the following types:
      * @param body The request body
-     * @return a CompletableFuture of threatAssessmentRequest
+     * @return a CompletableFuture of ThreatAssessmentRequest
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotection-post-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
      * Create a new threat assessment request. A threat assessment request can be one of the following types:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of threatAssessmentRequest
+     * @return a CompletableFuture of ThreatAssessmentRequest
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotection-post-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a threatAssessmentRequestsRequestBuilder
+     * @return a ThreatAssessmentRequestsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ThreatAssessmentRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

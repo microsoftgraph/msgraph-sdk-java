@@ -99,7 +99,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a printer object.
-     * @return a CompletableFuture of printer
+     * @return a CompletableFuture of Printer
      * @see <a href="https://learn.microsoft.com/graph/api/printer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +109,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a printer object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printer
+     * @return a CompletableFuture of Printer
      * @see <a href="https://learn.microsoft.com/graph/api/printer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a printer object.
      * @param body The request body
-     * @return a CompletableFuture of printer
+     * @return a CompletableFuture of Printer
      * @see <a href="https://learn.microsoft.com/graph/api/printer-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +134,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a printer object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printer
+     * @return a CompletableFuture of Printer
      * @see <a href="https://learn.microsoft.com/graph/api/printer-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

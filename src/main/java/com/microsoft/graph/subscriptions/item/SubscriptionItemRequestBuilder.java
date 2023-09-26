@@ -67,7 +67,7 @@ public class SubscriptionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a subscription. See the table in the Permissions section for the list of resources that support subscribing to change notifications.
-     * @return a CompletableFuture of subscription
+     * @return a CompletableFuture of Subscription
      * @see <a href="https://learn.microsoft.com/graph/api/subscription-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class SubscriptionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a subscription. See the table in the Permissions section for the list of resources that support subscribing to change notifications.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subscription
+     * @return a CompletableFuture of Subscription
      * @see <a href="https://learn.microsoft.com/graph/api/subscription-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class SubscriptionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Renew a subscription by extending its expiry time. The table in the Permissions section lists the resources that support subscribing to change notifications. Subscriptions expire after a length of time that varies by resource type. In order to avoid missing change notifications, an app should renew its subscriptions well in advance of their expiry date. See subscription for maximum length of a subscription for each resource type.
      * @param body The request body
-     * @return a CompletableFuture of subscription
+     * @return a CompletableFuture of Subscription
      * @see <a href="https://learn.microsoft.com/graph/api/subscription-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class SubscriptionItemRequestBuilder extends BaseRequestBuilder {
      * Renew a subscription by extending its expiry time. The table in the Permissions section lists the resources that support subscribing to change notifications. Subscriptions expire after a length of time that varies by resource type. In order to avoid missing change notifications, an app should renew its subscriptions well in advance of their expiry date. See subscription for maximum length of a subscription for each resource type.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subscription
+     * @return a CompletableFuture of Subscription
      * @see <a href="https://learn.microsoft.com/graph/api/subscription-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

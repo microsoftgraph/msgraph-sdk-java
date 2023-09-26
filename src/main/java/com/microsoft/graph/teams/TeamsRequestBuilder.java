@@ -68,7 +68,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List all teams in an organization.
-     * @return a CompletableFuture of teamCollectionResponse
+     * @return a CompletableFuture of TeamCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teams-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
     /**
      * List all teams in an organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamCollectionResponse
+     * @return a CompletableFuture of TeamCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teams-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new team.
      * @param body The request body
-     * @return a CompletableFuture of team
+     * @return a CompletableFuture of Team
      * @see <a href="https://learn.microsoft.com/graph/api/team-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
      * Create a new team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of team
+     * @return a CompletableFuture of Team
      * @see <a href="https://learn.microsoft.com/graph/api/team-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a teamsRequestBuilder
+     * @return a TeamsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TeamsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -62,7 +62,7 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -71,7 +71,7 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * In Azure AD entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
-     * @return a CompletableFuture of accessPackageAssignmentRequestCollectionResponse
+     * @return a CompletableFuture of AccessPackageAssignmentRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-assignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * In Azure AD entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentRequestCollectionResponse
+     * @return a CompletableFuture of AccessPackageAssignmentRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-assignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * In Azure AD Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, update the assignment, or to remove an access package assignment.
      * @param body The request body
-     * @return a CompletableFuture of accessPackageAssignmentRequest
+     * @return a CompletableFuture of AccessPackageAssignmentRequest
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-assignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -106,7 +106,7 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
      * In Azure AD Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, update the assignment, or to remove an access package assignment.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentRequest
+     * @return a CompletableFuture of AccessPackageAssignmentRequest
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-assignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -182,7 +182,7 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignmentRequestsRequestBuilder
+     * @return a AssignmentRequestsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignmentRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

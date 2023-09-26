@@ -60,7 +60,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of shift instances in a schedule.
-     * @return a CompletableFuture of shiftCollectionResponse
+     * @return a CompletableFuture of ShiftCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-shifts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of shift instances in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of shiftCollectionResponse
+     * @return a CompletableFuture of ShiftCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-shifts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new shift instance in a schedule. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param body The request body
-     * @return a CompletableFuture of shift
+     * @return a CompletableFuture of Shift
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-shifts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
      * Create a new shift instance in a schedule. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of shift
+     * @return a CompletableFuture of Shift
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-shifts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a shiftsRequestBuilder
+     * @return a ShiftsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ShiftsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

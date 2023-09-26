@@ -38,7 +38,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Returns the tags that are a child of a tag.
-     * @return a CompletableFuture of ediscoveryReviewTag
+     * @return a CompletableFuture of EdiscoveryReviewTag
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewTag> get() {
@@ -47,7 +47,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns the tags that are a child of a tag.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryReviewTag
+     * @return a CompletableFuture of EdiscoveryReviewTag
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewTag> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

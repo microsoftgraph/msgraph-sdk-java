@@ -60,7 +60,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
-     * @return a CompletableFuture of extensionPropertyCollectionResponse
+     * @return a CompletableFuture of ExtensionPropertyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/application-list-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of extensionPropertyCollectionResponse
+     * @return a CompletableFuture of ExtensionPropertyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/application-list-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new directory extension definition, represented by an extensionProperty object.
      * @param body The request body
-     * @return a CompletableFuture of extensionProperty
+     * @return a CompletableFuture of ExtensionProperty
      * @see <a href="https://learn.microsoft.com/graph/api/application-post-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
      * Create a new directory extension definition, represented by an extensionProperty object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of extensionProperty
+     * @return a CompletableFuture of ExtensionProperty
      * @see <a href="https://learn.microsoft.com/graph/api/application-post-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a extensionPropertiesRequestBuilder
+     * @return a ExtensionPropertiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ExtensionPropertiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

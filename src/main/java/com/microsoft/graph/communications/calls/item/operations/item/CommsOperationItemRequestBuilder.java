@@ -57,7 +57,7 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the status of an operation that adds the large gallery view to a call.
-     * @return a CompletableFuture of commsOperation
+     * @return a CompletableFuture of CommsOperation
      * @see <a href="https://learn.microsoft.com/graph/api/addlargegalleryviewoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the status of an operation that adds the large gallery view to a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of commsOperation
+     * @return a CompletableFuture of CommsOperation
      * @see <a href="https://learn.microsoft.com/graph/api/addlargegalleryviewoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property operations in communications
      * @param body The request body
-     * @return a CompletableFuture of commsOperation
+     * @return a CompletableFuture of CommsOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommsOperation> patch(@jakarta.annotation.Nonnull final CommsOperation body) {
@@ -91,7 +91,7 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property operations in communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of commsOperation
+     * @return a CompletableFuture of CommsOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommsOperation> patch(@jakarta.annotation.Nonnull final CommsOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

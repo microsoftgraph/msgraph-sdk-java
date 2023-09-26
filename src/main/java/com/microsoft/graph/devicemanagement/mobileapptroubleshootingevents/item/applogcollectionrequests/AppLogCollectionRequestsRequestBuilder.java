@@ -60,7 +60,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the appLogCollectionRequest objects.
-     * @return a CompletableFuture of appLogCollectionRequestCollectionResponse
+     * @return a CompletableFuture of AppLogCollectionRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the appLogCollectionRequest objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appLogCollectionRequestCollectionResponse
+     * @return a CompletableFuture of AppLogCollectionRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new appLogCollectionRequest object.
      * @param body The request body
-     * @return a CompletableFuture of appLogCollectionRequest
+     * @return a CompletableFuture of AppLogCollectionRequest
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
      * Create a new appLogCollectionRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appLogCollectionRequest
+     * @return a CompletableFuture of AppLogCollectionRequest
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appLogCollectionRequestsRequestBuilder
+     * @return a AppLogCollectionRequestsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppLogCollectionRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class ContactedReviewersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the reviewers for an access review instance, irrespective of whether or not they have received a notification. The reviewers are represented by an accessReviewReviewer object. A list of zero or more objects are returned, including all of their nested properties.
-     * @return a CompletableFuture of accessReviewReviewerCollectionResponse
+     * @return a CompletableFuture of AccessReviewReviewerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-list-contactedreviewers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ContactedReviewersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the reviewers for an access review instance, irrespective of whether or not they have received a notification. The reviewers are represented by an accessReviewReviewer object. A list of zero or more objects are returned, including all of their nested properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewReviewerCollectionResponse
+     * @return a CompletableFuture of AccessReviewReviewerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-list-contactedreviewers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ContactedReviewersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to contactedReviewers for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessReviewReviewer
+     * @return a CompletableFuture of AccessReviewReviewer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewReviewer> post(@jakarta.annotation.Nonnull final AccessReviewReviewer body) {
@@ -94,7 +94,7 @@ public class ContactedReviewersRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to contactedReviewers for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewReviewer
+     * @return a CompletableFuture of AccessReviewReviewer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewReviewer> post(@jakarta.annotation.Nonnull final AccessReviewReviewer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class ContactedReviewersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a contactedReviewersRequestBuilder
+     * @return a ContactedReviewersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ContactedReviewersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -16,7 +16,7 @@ public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionRes
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new deleteUserFromSharedAppleDeviceActionResult and sets the default values.
+     * Instantiates a new DeleteUserFromSharedAppleDeviceActionResult and sets the default values.
      */
     public DeleteUserFromSharedAppleDeviceActionResult() {
         super();
@@ -24,7 +24,7 @@ public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deleteUserFromSharedAppleDeviceActionResult
+     * @return a DeleteUserFromSharedAppleDeviceActionResult
      */
     @jakarta.annotation.Nonnull
     public static DeleteUserFromSharedAppleDeviceActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionRes
     }
     /**
      * Gets the userPrincipalName property value. User principal name of the user to be deleted
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

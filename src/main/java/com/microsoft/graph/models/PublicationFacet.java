@@ -30,7 +30,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
      */
     private String versionId;
     /**
-     * Instantiates a new publicationFacet and sets the default values.
+     * Instantiates a new PublicationFacet and sets the default values.
      */
     public PublicationFacet() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a publicationFacet
+     * @return a PublicationFacet
      */
     @jakarta.annotation.Nonnull
     public static PublicationFacet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
         return new PublicationFacet();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the checkedOutBy property value. User who has checked out the file.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCheckedOutBy() {
@@ -76,7 +76,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the level property value. The state of publication for this document. Either published or checkout. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLevel() {
@@ -84,7 +84,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -92,7 +92,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the versionId property value. The unique identifier for the version that is visible to the current caller. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersionId() {
@@ -111,8 +111,8 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

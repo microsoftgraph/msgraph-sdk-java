@@ -65,7 +65,7 @@ public class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequest
     }
     /**
      * Read the properties and relationships of a serviceAnnouncementAttachment object.
-     * @return a CompletableFuture of serviceAnnouncementAttachment
+     * @return a CompletableFuture of ServiceAnnouncementAttachment
      * @see <a href="https://learn.microsoft.com/graph/api/serviceannouncementattachment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequest
     /**
      * Read the properties and relationships of a serviceAnnouncementAttachment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of serviceAnnouncementAttachment
+     * @return a CompletableFuture of ServiceAnnouncementAttachment
      * @see <a href="https://learn.microsoft.com/graph/api/serviceannouncementattachment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property attachments in admin
      * @param body The request body
-     * @return a CompletableFuture of serviceAnnouncementAttachment
+     * @return a CompletableFuture of ServiceAnnouncementAttachment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceAnnouncementAttachment> patch(@jakarta.annotation.Nonnull final ServiceAnnouncementAttachment body) {
@@ -99,7 +99,7 @@ public class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequest
      * Update the navigation property attachments in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of serviceAnnouncementAttachment
+     * @return a CompletableFuture of ServiceAnnouncementAttachment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceAnnouncementAttachment> patch(@jakarta.annotation.Nonnull final ServiceAnnouncementAttachment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

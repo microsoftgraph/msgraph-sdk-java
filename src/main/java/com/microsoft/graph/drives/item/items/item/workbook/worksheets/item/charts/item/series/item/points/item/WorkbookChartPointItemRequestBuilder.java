@@ -65,7 +65,7 @@ public class WorkbookChartPointItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of chartpoint object.
-     * @return a CompletableFuture of workbookChartPoint
+     * @return a CompletableFuture of WorkbookChartPoint
      * @see <a href="https://learn.microsoft.com/graph/api/chartpoint-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class WorkbookChartPointItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of chartpoint object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartPoint
+     * @return a CompletableFuture of WorkbookChartPoint
      * @see <a href="https://learn.microsoft.com/graph/api/chartpoint-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class WorkbookChartPointItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property points in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookChartPoint
+     * @return a CompletableFuture of WorkbookChartPoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartPoint> patch(@jakarta.annotation.Nonnull final WorkbookChartPoint body) {
@@ -99,7 +99,7 @@ public class WorkbookChartPointItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property points in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartPoint
+     * @return a CompletableFuture of WorkbookChartPoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartPoint> patch(@jakarta.annotation.Nonnull final WorkbookChartPoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

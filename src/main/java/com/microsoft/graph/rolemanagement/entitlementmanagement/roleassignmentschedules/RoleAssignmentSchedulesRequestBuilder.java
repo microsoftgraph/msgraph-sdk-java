@@ -62,7 +62,7 @@ public class RoleAssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -71,7 +71,7 @@ public class RoleAssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the schedules for active role assignment operations.
-     * @return a CompletableFuture of unifiedRoleAssignmentScheduleCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleAssignmentScheduleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleassignmentschedules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class RoleAssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the schedules for active role assignment operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleAssignmentScheduleCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleAssignmentScheduleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleassignmentschedules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class RoleAssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to roleAssignmentSchedules for roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleAssignmentSchedule
+     * @return a CompletableFuture of UnifiedRoleAssignmentSchedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentSchedule> post(@jakarta.annotation.Nonnull final UnifiedRoleAssignmentSchedule body) {
@@ -105,7 +105,7 @@ public class RoleAssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to roleAssignmentSchedules for roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleAssignmentSchedule
+     * @return a CompletableFuture of UnifiedRoleAssignmentSchedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentSchedule> post(@jakarta.annotation.Nonnull final UnifiedRoleAssignmentSchedule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -180,7 +180,7 @@ public class RoleAssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleAssignmentSchedulesRequestBuilder
+     * @return a RoleAssignmentSchedulesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentSchedulesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

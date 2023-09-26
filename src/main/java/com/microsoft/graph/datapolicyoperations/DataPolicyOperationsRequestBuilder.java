@@ -60,7 +60,7 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties of a dataPolicyOperation object.
-     * @return a CompletableFuture of dataPolicyOperationCollectionResponse
+     * @return a CompletableFuture of DataPolicyOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataPolicyOperationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties of a dataPolicyOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataPolicyOperationCollectionResponse
+     * @return a CompletableFuture of DataPolicyOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataPolicyOperationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to dataPolicyOperations
      * @param body The request body
-     * @return a CompletableFuture of dataPolicyOperation
+     * @return a CompletableFuture of DataPolicyOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataPolicyOperation> post(@jakarta.annotation.Nonnull final DataPolicyOperation body) {
@@ -92,7 +92,7 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to dataPolicyOperations
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataPolicyOperation
+     * @return a CompletableFuture of DataPolicyOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataPolicyOperation> post(@jakarta.annotation.Nonnull final DataPolicyOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a dataPolicyOperationsRequestBuilder
+     * @return a DataPolicyOperationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DataPolicyOperationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

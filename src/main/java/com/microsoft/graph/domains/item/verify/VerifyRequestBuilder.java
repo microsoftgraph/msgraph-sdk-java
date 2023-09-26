@@ -37,7 +37,7 @@ public class VerifyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Validates the ownership of the domain.
-     * @return a CompletableFuture of domain
+     * @return a CompletableFuture of Domain
      * @see <a href="https://learn.microsoft.com/graph/api/domain-verify?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class VerifyRequestBuilder extends BaseRequestBuilder {
     /**
      * Validates the ownership of the domain.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of domain
+     * @return a CompletableFuture of Domain
      * @see <a href="https://learn.microsoft.com/graph/api/domain-verify?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class VerifyRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a verifyRequestBuilder
+     * @return a VerifyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public VerifyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

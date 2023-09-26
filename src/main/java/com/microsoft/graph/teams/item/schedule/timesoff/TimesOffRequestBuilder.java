@@ -60,7 +60,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of timeOff instances in a schedule.
-     * @return a CompletableFuture of timeOffCollectionResponse
+     * @return a CompletableFuture of TimeOffCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of timeOff instances in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeOffCollectionResponse
+     * @return a CompletableFuture of TimeOffCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new timeOff instance in a schedule.
      * @param body The request body
-     * @return a CompletableFuture of timeOff
+     * @return a CompletableFuture of TimeOff
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
      * Create a new timeOff instance in a schedule.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeOff
+     * @return a CompletableFuture of TimeOff
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a timesOffRequestBuilder
+     * @return a TimesOffRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TimesOffRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

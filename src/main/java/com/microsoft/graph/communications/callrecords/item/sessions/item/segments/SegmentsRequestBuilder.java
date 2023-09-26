@@ -60,7 +60,7 @@ public class SegmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of segments involved in the session. Read-only. Nullable.
-     * @return a CompletableFuture of segmentCollectionResponse
+     * @return a CompletableFuture of SegmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SegmentCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class SegmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of segments involved in the session. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of segmentCollectionResponse
+     * @return a CompletableFuture of SegmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SegmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class SegmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to segments for communications
      * @param body The request body
-     * @return a CompletableFuture of segment
+     * @return a CompletableFuture of Segment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Segment> post(@jakarta.annotation.Nonnull final Segment body) {
@@ -92,7 +92,7 @@ public class SegmentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to segments for communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of segment
+     * @return a CompletableFuture of Segment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Segment> post(@jakarta.annotation.Nonnull final Segment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class SegmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a segmentsRequestBuilder
+     * @return a SegmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SegmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

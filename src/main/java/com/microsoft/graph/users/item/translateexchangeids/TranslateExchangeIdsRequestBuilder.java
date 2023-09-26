@@ -37,7 +37,7 @@ public class TranslateExchangeIdsRequestBuilder extends BaseRequestBuilder {
     /**
      * Translate identifiers of Outlook-related resources between formats.
      * @param body The request body
-     * @return a CompletableFuture of translateExchangeIdsResponse
+     * @return a CompletableFuture of TranslateExchangeIdsResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-translateexchangeids?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class TranslateExchangeIdsRequestBuilder extends BaseRequestBuilder {
      * Translate identifiers of Outlook-related resources between formats.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of translateExchangeIdsResponse
+     * @return a CompletableFuture of TranslateExchangeIdsResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-translateexchangeids?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class TranslateExchangeIdsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a translateExchangeIdsRequestBuilder
+     * @return a TranslateExchangeIdsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TranslateExchangeIdsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

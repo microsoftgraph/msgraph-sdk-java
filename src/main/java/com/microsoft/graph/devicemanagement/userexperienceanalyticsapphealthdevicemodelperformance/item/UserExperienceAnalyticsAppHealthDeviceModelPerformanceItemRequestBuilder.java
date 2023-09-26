@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformanceItemRequestBu
     }
     /**
      * User experience analytics appHealth Model Performance
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthDeviceModelPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthDeviceModelPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthDeviceModelPerformance> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformanceItemRequestBu
     /**
      * User experience analytics appHealth Model Performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthDeviceModelPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthDeviceModelPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthDeviceModelPerformance> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformanceItemRequestBu
     /**
      * Update the navigation property userExperienceAnalyticsAppHealthDeviceModelPerformance in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthDeviceModelPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthDeviceModelPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthDeviceModelPerformance> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthDeviceModelPerformance body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformanceItemRequestBu
      * Update the navigation property userExperienceAnalyticsAppHealthDeviceModelPerformance in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthDeviceModelPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthDeviceModelPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthDeviceModelPerformance> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthDeviceModelPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

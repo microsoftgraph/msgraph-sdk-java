@@ -38,7 +38,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
      */
     private Integer successCount;
     /**
-     * Instantiates a new deviceConfigurationUserOverview and sets the default values.
+     * Instantiates a new DeviceConfigurationUserOverview and sets the default values.
      */
     public DeviceConfigurationUserOverview() {
         super();
@@ -46,7 +46,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceConfigurationUserOverview
+     * @return a DeviceConfigurationUserOverview
      */
     @jakarta.annotation.Nonnull
     public static DeviceConfigurationUserOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     }
     /**
      * Gets the configurationVersion property value. Version of the policy for that overview
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfigurationVersion() {
@@ -63,7 +63,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     }
     /**
      * Gets the errorCount property value. Number of error Users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCount() {
@@ -71,7 +71,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     }
     /**
      * Gets the failedCount property value. Number of failed Users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedCount() {
@@ -103,7 +103,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
@@ -111,7 +111,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     }
     /**
      * Gets the pendingCount property value. Number of pending Users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingCount() {
@@ -119,7 +119,7 @@ public class DeviceConfigurationUserOverview extends Entity implements Parsable 
     }
     /**
      * Gets the successCount property value. Number of succeeded Users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessCount() {

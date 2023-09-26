@@ -42,7 +42,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     private String sessionInitiationProtocalAddress;
     /**
-     * Instantiates a new updateWindowsDeviceAccountActionParameter and sets the default values.
+     * Instantiates a new UpdateWindowsDeviceAccountActionParameter and sets the default values.
      */
     public UpdateWindowsDeviceAccountActionParameter() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updateWindowsDeviceAccountActionParameter
+     * @return a UpdateWindowsDeviceAccountActionParameter
      */
     @jakarta.annotation.Nonnull
     public static UpdateWindowsDeviceAccountActionParameter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
         return new UpdateWindowsDeviceAccountActionParameter();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     }
     /**
      * Gets the calendarSyncEnabled property value. Not yet documented
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCalendarSyncEnabled() {
@@ -75,7 +75,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     }
     /**
      * Gets the deviceAccount property value. Not yet documented
-     * @return a windowsDeviceAccount
+     * @return a WindowsDeviceAccount
      */
     @jakarta.annotation.Nullable
     public WindowsDeviceAccount getDeviceAccount() {
@@ -83,7 +83,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     }
     /**
      * Gets the deviceAccountEmail property value. Not yet documented
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceAccountEmail() {
@@ -91,7 +91,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     }
     /**
      * Gets the exchangeServer property value. Not yet documented
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExchangeServer() {
@@ -115,7 +115,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -123,7 +123,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     }
     /**
      * Gets the passwordRotationEnabled property value. Not yet documented
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRotationEnabled() {
@@ -131,7 +131,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     }
     /**
      * Gets the sessionInitiationProtocalAddress property value. Not yet documented
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSessionInitiationProtocalAddress() {
@@ -153,8 +153,8 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

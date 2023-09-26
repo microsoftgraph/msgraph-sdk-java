@@ -60,7 +60,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of audioRoutingGroup objects.
-     * @return a CompletableFuture of audioRoutingGroupCollectionResponse
+     * @return a CompletableFuture of AudioRoutingGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/call-list-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of audioRoutingGroup objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of audioRoutingGroupCollectionResponse
+     * @return a CompletableFuture of AudioRoutingGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/call-list-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new audioRoutingGroup.
      * @param body The request body
-     * @return a CompletableFuture of audioRoutingGroup
+     * @return a CompletableFuture of AudioRoutingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/call-post-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
      * Create a new audioRoutingGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of audioRoutingGroup
+     * @return a CompletableFuture of AudioRoutingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/call-post-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a audioRoutingGroupsRequestBuilder
+     * @return a AudioRoutingGroupsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AudioRoutingGroupsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

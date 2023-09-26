@@ -57,7 +57,7 @@ public class SignInItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a specific Azure AD user sign-in event for your tenant. Sign-ins that are interactive in nature (where a username/password is passed as part of auth token) and successful federated sign-ins are currently included in the sign-in logs.
-     * @return a CompletableFuture of signIn
+     * @return a CompletableFuture of SignIn
      * @see <a href="https://learn.microsoft.com/graph/api/signin-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class SignInItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a specific Azure AD user sign-in event for your tenant. Sign-ins that are interactive in nature (where a username/password is passed as part of auth token) and successful federated sign-ins are currently included in the sign-in logs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of signIn
+     * @return a CompletableFuture of SignIn
      * @see <a href="https://learn.microsoft.com/graph/api/signin-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class SignInItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property signIns in auditLogs
      * @param body The request body
-     * @return a CompletableFuture of signIn
+     * @return a CompletableFuture of SignIn
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SignIn> patch(@jakarta.annotation.Nonnull final SignIn body) {
@@ -91,7 +91,7 @@ public class SignInItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property signIns in auditLogs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of signIn
+     * @return a CompletableFuture of SignIn
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SignIn> patch(@jakarta.annotation.Nonnull final SignIn body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

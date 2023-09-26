@@ -67,7 +67,7 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a taskFileAttachment object.
-     * @return a CompletableFuture of attachmentBase
+     * @return a CompletableFuture of AttachmentBase
      * @see <a href="https://learn.microsoft.com/graph/api/taskfileattachment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a taskFileAttachment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attachmentBase
+     * @return a CompletableFuture of AttachmentBase
      * @see <a href="https://learn.microsoft.com/graph/api/taskfileattachment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

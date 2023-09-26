@@ -59,7 +59,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
-     * @return a CompletableFuture of intelligenceProfileIndicatorCollectionResponse
+     * @return a CompletableFuture of IntelligenceProfileIndicatorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-intelligenceprofile-list-indicators?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of intelligenceProfileIndicatorCollectionResponse
+     * @return a CompletableFuture of IntelligenceProfileIndicatorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-intelligenceprofile-list-indicators?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a indicatorsRequestBuilder
+     * @return a IndicatorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IndicatorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

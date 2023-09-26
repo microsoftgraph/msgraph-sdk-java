@@ -68,7 +68,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of eDiscoveryReviewTag objects and their properties.
-     * @return a CompletableFuture of ediscoveryReviewTagCollectionResponse
+     * @return a CompletableFuture of EdiscoveryReviewTagCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-tags?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of eDiscoveryReviewTag objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryReviewTagCollectionResponse
+     * @return a CompletableFuture of EdiscoveryReviewTagCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-tags?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new ediscoveryReviewTag object.
      * @param body The request body
-     * @return a CompletableFuture of ediscoveryReviewTag
+     * @return a CompletableFuture of EdiscoveryReviewTag
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-tags?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
      * Create a new ediscoveryReviewTag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryReviewTag
+     * @return a CompletableFuture of EdiscoveryReviewTag
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-tags?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a tagsRequestBuilder
+     * @return a TagsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TagsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -59,7 +59,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * App role assignment for another app or service, granted to this service principal. Supports $expand.
-     * @return a CompletableFuture of appRoleAssignment
+     * @return a CompletableFuture of AppRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignment> get() {
@@ -68,7 +68,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * App role assignment for another app or service, granted to this service principal. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appRoleAssignment
+     * @return a CompletableFuture of AppRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property appRoleAssignments in servicePrincipals
      * @param body The request body
-     * @return a CompletableFuture of appRoleAssignment
+     * @return a CompletableFuture of AppRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignment> patch(@jakarta.annotation.Nonnull final AppRoleAssignment body) {
@@ -91,7 +91,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property appRoleAssignments in servicePrincipals
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appRoleAssignment
+     * @return a CompletableFuture of AppRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignment> patch(@jakarta.annotation.Nonnull final AppRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

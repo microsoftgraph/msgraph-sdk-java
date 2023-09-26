@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdI
     }
     /**
      * User experience analytics appHealth Application Performance by App Version Device Id
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdI
     /**
      * User experience analytics appHealth Application Performance by App Version Device Id
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdI
     /**
      * Update the navigation property userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdI
      * Update the navigation property userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

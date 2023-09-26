@@ -83,7 +83,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
     }
     /**
      * Retrieve the app installed in the personal scope of the specified user.
-     * @return a CompletableFuture of userScopeTeamsAppInstallation
+     * @return a CompletableFuture of UserScopeTeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-get-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
     /**
      * Retrieve the app installed in the personal scope of the specified user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userScopeTeamsAppInstallation
+     * @return a CompletableFuture of UserScopeTeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-get-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property installedApps in users
      * @param body The request body
-     * @return a CompletableFuture of userScopeTeamsAppInstallation
+     * @return a CompletableFuture of UserScopeTeamsAppInstallation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> patch(@jakarta.annotation.Nonnull final UserScopeTeamsAppInstallation body) {
@@ -117,7 +117,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
      * Update the navigation property installedApps in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userScopeTeamsAppInstallation
+     * @return a CompletableFuture of UserScopeTeamsAppInstallation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> patch(@jakarta.annotation.Nonnull final UserScopeTeamsAppInstallation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -61,7 +61,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the run objects and their properties for a lifecycle workflow.
-     * @return a CompletableFuture of runCollectionResponse
+     * @return a CompletableFuture of RunCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-runs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the run objects and their properties for a lifecycle workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of runCollectionResponse
+     * @return a CompletableFuture of RunCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-runs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -86,7 +86,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the summary method.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a microsoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return a MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
@@ -126,7 +126,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a runsRequestBuilder
+     * @return a RunsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RunsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -26,7 +26,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      */
     private String objectType;
     /**
-     * Instantiates a new directoryObjectPartnerReference and sets the default values.
+     * Instantiates a new DirectoryObjectPartnerReference and sets the default values.
      */
     public DirectoryObjectPartnerReference() {
         super();
@@ -35,7 +35,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a directoryObjectPartnerReference
+     * @return a DirectoryObjectPartnerReference
      */
     @jakarta.annotation.Nonnull
     public static DirectoryObjectPartnerReference createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
     }
     /**
      * Gets the description property value. Description of the object returned. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -52,7 +52,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
     }
     /**
      * Gets the displayName property value. Name of directory object being returned, like group or application. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -81,7 +81,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
     }
     /**
      * Gets the objectType property value. The type of the referenced object in the partner tenant. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getObjectType() {

@@ -3,6 +3,7 @@ package com.microsoft.graph.security.subjectrightsrequests.item.collaborators.it
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.User;
 import com.microsoft.graph.security.subjectrightsrequests.item.collaborators.item.mailboxsettings.MailboxSettingsRequestBuilder;
+import com.microsoft.graph.security.subjectrightsrequests.item.collaborators.item.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -29,6 +30,13 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * The serviceProvisioningErrors property
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new UserItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -46,7 +54,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get collaborators from security
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> get() {
@@ -55,7 +63,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get collaborators from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

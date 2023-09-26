@@ -68,7 +68,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the list of channels in this team.
-     * @return a CompletableFuture of channelCollectionResponse
+     * @return a CompletableFuture of ChannelCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of channels in this team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of channelCollectionResponse
+     * @return a CompletableFuture of ChannelCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new channel in a team, as specified in the request body.  When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. If you're creating a private channel, you can add a maximum of 200 members.
      * @param body The request body
-     * @return a CompletableFuture of channel
+     * @return a CompletableFuture of Channel
      * @see <a href="https://learn.microsoft.com/graph/api/channel-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
      * Create a new channel in a team, as specified in the request body.  When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. If you're creating a private channel, you can add a maximum of 200 members.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of channel
+     * @return a CompletableFuture of Channel
      * @see <a href="https://learn.microsoft.com/graph/api/channel-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a channelsRequestBuilder
+     * @return a ChannelsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChannelsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

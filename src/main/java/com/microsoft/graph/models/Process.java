@@ -67,7 +67,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     private Integer processId;
     /**
-     * Instantiates a new process and sets the default values.
+     * Instantiates a new Process and sets the default values.
      */
     public Process() {
         this.setAdditionalData(new HashMap<>());
@@ -75,7 +75,7 @@ public class Process implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a process
+     * @return a Process
      */
     @jakarta.annotation.Nonnull
     public static Process createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -84,14 +84,14 @@ public class Process implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accountName property value. User account identifier (user account context the process ran under) for example, AccountName, SID, and so on.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
         return this.accountName;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class Process implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the commandLine property value. The full process invocation commandline including all parameters.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCommandLine() {
@@ -138,7 +138,7 @@ public class Process implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the fileHash property value. Complex type containing file hashes (cryptographic and location-sensitive).
-     * @return a fileHash
+     * @return a FileHash
      */
     @jakarta.annotation.Nullable
     public FileHash getFileHash() {
@@ -146,7 +146,7 @@ public class Process implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the integrityLevel property value. The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
-     * @return a processIntegrityLevel
+     * @return a ProcessIntegrityLevel
      */
     @jakarta.annotation.Nullable
     public ProcessIntegrityLevel getIntegrityLevel() {
@@ -154,7 +154,7 @@ public class Process implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isElevated property value. True if the process is elevated.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsElevated() {
@@ -162,7 +162,7 @@ public class Process implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. The name of the process' Image file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -170,7 +170,7 @@ public class Process implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -186,7 +186,7 @@ public class Process implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the parentProcessId property value. The Process ID (PID) of the parent process.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getParentProcessId() {
@@ -194,7 +194,7 @@ public class Process implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the parentProcessName property value. The name of the image file of the parent process.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getParentProcessName() {
@@ -202,7 +202,7 @@ public class Process implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the path property value. Full path, including filename.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPath() {
@@ -210,7 +210,7 @@ public class Process implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the processId property value. The Process ID (PID) of the process.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getProcessId() {
@@ -245,8 +245,8 @@ public class Process implements AdditionalDataHolder, Parsable {
         this.accountName = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

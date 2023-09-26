@@ -147,7 +147,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of the specified event object. Currently, this operation returns event bodies in only HTML format. There are two scenarios where an app can get an event in another user's calendar: Since the event resource supports extensions, you can also use the GET operation to get custom properties and extension data in an event instance.
-     * @return a CompletableFuture of event
+     * @return a CompletableFuture of Event
      * @see <a href="https://learn.microsoft.com/graph/api/event-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +157,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of the specified event object. Currently, this operation returns event bodies in only HTML format. There are two scenarios where an app can get an event in another user's calendar: Since the event resource supports extensions, you can also use the GET operation to get custom properties and extension data in an event instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of event
+     * @return a CompletableFuture of Event
      * @see <a href="https://learn.microsoft.com/graph/api/event-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of the event object.
      * @param body The request body
-     * @return a CompletableFuture of event
+     * @return a CompletableFuture of Event
      * @see <a href="https://learn.microsoft.com/graph/api/event-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -182,7 +182,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the event object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of event
+     * @return a CompletableFuture of Event
      * @see <a href="https://learn.microsoft.com/graph/api/event-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

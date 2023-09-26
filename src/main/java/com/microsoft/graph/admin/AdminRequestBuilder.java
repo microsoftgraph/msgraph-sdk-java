@@ -62,7 +62,7 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get admin
-     * @return a CompletableFuture of admin
+     * @return a CompletableFuture of Admin
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Admin> get() {
@@ -71,7 +71,7 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
     /**
      * Get admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of admin
+     * @return a CompletableFuture of Admin
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Admin> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,7 +84,7 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
     /**
      * Update admin
      * @param body The request body
-     * @return a CompletableFuture of admin
+     * @return a CompletableFuture of Admin
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Admin> patch(@jakarta.annotation.Nonnull final Admin body) {
@@ -94,7 +94,7 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
      * Update admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of admin
+     * @return a CompletableFuture of Admin
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Admin> patch(@jakarta.annotation.Nonnull final Admin body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a adminRequestBuilder
+     * @return a AdminRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AdminRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

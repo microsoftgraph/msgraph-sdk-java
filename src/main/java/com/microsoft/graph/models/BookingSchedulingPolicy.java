@@ -42,7 +42,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      */
     private PeriodAndDuration timeSlotInterval;
     /**
-     * Instantiates a new bookingSchedulingPolicy and sets the default values.
+     * Instantiates a new BookingSchedulingPolicy and sets the default values.
      */
     public BookingSchedulingPolicy() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingSchedulingPolicy
+     * @return a BookingSchedulingPolicy
      */
     @jakarta.annotation.Nonnull
     public static BookingSchedulingPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
         return new BookingSchedulingPolicy();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowStaffSelection property value. True if to allow customers to choose a specific person for the booking.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowStaffSelection() {
@@ -106,7 +106,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -114,7 +114,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sendConfirmationsToOwner property value. True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSendConfirmationsToOwner() {
@@ -143,8 +143,8 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

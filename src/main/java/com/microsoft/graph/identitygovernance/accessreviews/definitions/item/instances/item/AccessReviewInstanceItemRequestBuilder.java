@@ -129,7 +129,7 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of an accessReviewInstance object.
-     * @return a CompletableFuture of accessReviewInstance
+     * @return a CompletableFuture of AccessReviewInstance
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an accessReviewInstance object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewInstance
+     * @return a CompletableFuture of AccessReviewInstance
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -153,7 +153,7 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an accessReviewInstance object. Only the reviewers and fallbackReviewers properties can be updated but the scope property is also required in the request body. You can only add reviewers to the fallbackReviewers property but can't remove existing fallbackReviewers. To update an accessReviewInstance, it's status must be InProgress.
      * @param body The request body
-     * @return a CompletableFuture of accessReviewInstance
+     * @return a CompletableFuture of AccessReviewInstance
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -164,7 +164,7 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an accessReviewInstance object. Only the reviewers and fallbackReviewers properties can be updated but the scope property is also required in the request body. You can only add reviewers to the fallbackReviewers property but can't remove existing fallbackReviewers. To update an accessReviewInstance, it's status must be InProgress.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewInstance
+     * @return a CompletableFuture of AccessReviewInstance
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

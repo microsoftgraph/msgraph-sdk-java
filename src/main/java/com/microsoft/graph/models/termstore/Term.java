@@ -44,7 +44,7 @@ public class Term extends Entity implements Parsable {
      */
     private Set set;
     /**
-     * Instantiates a new term and sets the default values.
+     * Instantiates a new Term and sets the default values.
      */
     public Term() {
         super();
@@ -52,7 +52,7 @@ public class Term extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a term
+     * @return a Term
      */
     @jakarta.annotation.Nonnull
     public static Term createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,7 +61,7 @@ public class Term extends Entity implements Parsable {
     }
     /**
      * Gets the children property value. Children of current term.
-     * @return a term
+     * @return a java.util.List<Term>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Term> getChildren() {
@@ -77,7 +77,7 @@ public class Term extends Entity implements Parsable {
     }
     /**
      * Gets the descriptions property value. Description about term that is dependent on the languageTag.
-     * @return a localizedDescription
+     * @return a java.util.List<LocalizedDescription>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocalizedDescription> getDescriptions() {
@@ -102,7 +102,7 @@ public class Term extends Entity implements Parsable {
     }
     /**
      * Gets the labels property value. Label metadata for a term.
-     * @return a localizedLabel
+     * @return a java.util.List<LocalizedLabel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocalizedLabel> getLabels() {
@@ -118,7 +118,7 @@ public class Term extends Entity implements Parsable {
     }
     /**
      * Gets the properties property value. Collection of properties on the term.
-     * @return a keyValue
+     * @return a java.util.List<KeyValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getProperties() {
@@ -126,7 +126,7 @@ public class Term extends Entity implements Parsable {
     }
     /**
      * Gets the relations property value. To indicate which terms are related to the current term as either pinned or reused.
-     * @return a relation
+     * @return a java.util.List<Relation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Relation> getRelations() {
@@ -134,7 +134,7 @@ public class Term extends Entity implements Parsable {
     }
     /**
      * Gets the set property value. The [set] in which the term is created.
-     * @return a set
+     * @return a Set
      */
     @jakarta.annotation.Nullable
     public Set getSet() {

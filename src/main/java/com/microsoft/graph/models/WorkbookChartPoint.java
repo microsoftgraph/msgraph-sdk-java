@@ -17,7 +17,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
      */
     private Json value;
     /**
-     * Instantiates a new workbookChartPoint and sets the default values.
+     * Instantiates a new WorkbookChartPoint and sets the default values.
      */
     public WorkbookChartPoint() {
         super();
@@ -25,7 +25,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookChartPoint
+     * @return a WorkbookChartPoint
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartPoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
     }
     /**
      * Gets the format property value. Encapsulates the format properties chart point. Read-only.
-     * @return a workbookChartPointFormat
+     * @return a WorkbookChartPointFormat
      */
     @jakarta.annotation.Nullable
     public WorkbookChartPointFormat getFormat() {

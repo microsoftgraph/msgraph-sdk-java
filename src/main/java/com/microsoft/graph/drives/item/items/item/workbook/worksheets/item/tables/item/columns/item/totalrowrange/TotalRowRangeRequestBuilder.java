@@ -37,7 +37,7 @@ public class TotalRowRangeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Gets the range object associated with the totals row of the column.
-     * @return a CompletableFuture of workbookRange
+     * @return a CompletableFuture of WorkbookRange
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-totalrowrange?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class TotalRowRangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Gets the range object associated with the totals row of the column.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookRange
+     * @return a CompletableFuture of WorkbookRange
      * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-totalrowrange?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class TotalRowRangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a totalRowRangeRequestBuilder
+     * @return a TotalRowRangeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TotalRowRangeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -46,7 +46,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     private String userTimezone;
     /**
-     * Instantiates a new activityHistoryItem and sets the default values.
+     * Instantiates a new ActivityHistoryItem and sets the default values.
      */
     public ActivityHistoryItem() {
         super();
@@ -54,7 +54,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a activityHistoryItem
+     * @return a ActivityHistoryItem
      */
     @jakarta.annotation.Nonnull
     public static ActivityHistoryItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     }
     /**
      * Gets the activeDurationSeconds property value. Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDurationSeconds() {
@@ -71,7 +71,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. The activity property
-     * @return a userActivity
+     * @return a UserActivity
      */
     @jakarta.annotation.Nullable
     public UserActivity getActivity() {
@@ -137,7 +137,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
-     * @return a status
+     * @return a Status
      */
     @jakarta.annotation.Nullable
     public Status getStatus() {
@@ -145,7 +145,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     }
     /**
      * Gets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserTimezone() {

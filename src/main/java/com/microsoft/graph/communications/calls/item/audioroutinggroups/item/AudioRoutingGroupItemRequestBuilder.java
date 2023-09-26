@@ -59,7 +59,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of an audioRoutingGroup object.
-     * @return a CompletableFuture of audioRoutingGroup
+     * @return a CompletableFuture of AudioRoutingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an audioRoutingGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of audioRoutingGroup
+     * @return a CompletableFuture of AudioRoutingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Modify sources and receivers of an audioRoutingGroup.
      * @param body The request body
-     * @return a CompletableFuture of audioRoutingGroup
+     * @return a CompletableFuture of AudioRoutingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
      * Modify sources and receivers of an audioRoutingGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of audioRoutingGroup
+     * @return a CompletableFuture of AudioRoutingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

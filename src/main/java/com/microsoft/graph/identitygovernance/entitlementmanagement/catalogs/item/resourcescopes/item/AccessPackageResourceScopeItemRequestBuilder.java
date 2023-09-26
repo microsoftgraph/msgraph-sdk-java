@@ -65,7 +65,7 @@ public class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBui
     }
     /**
      * Get resourceScopes from identityGovernance
-     * @return a CompletableFuture of accessPackageResourceScope
+     * @return a CompletableFuture of AccessPackageResourceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceScope> get() {
@@ -74,7 +74,7 @@ public class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBui
     /**
      * Get resourceScopes from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceScope
+     * @return a CompletableFuture of AccessPackageResourceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceScope> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property resourceScopes in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageResourceScope
+     * @return a CompletableFuture of AccessPackageResourceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceScope> patch(@jakarta.annotation.Nonnull final AccessPackageResourceScope body) {
@@ -97,7 +97,7 @@ public class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBui
      * Update the navigation property resourceScopes in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceScope
+     * @return a CompletableFuture of AccessPackageResourceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceScope> patch(@jakarta.annotation.Nonnull final AccessPackageResourceScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

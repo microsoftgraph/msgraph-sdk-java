@@ -75,7 +75,7 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a specific thread that belongs to a group. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. 
-     * @return a CompletableFuture of conversationThread
+     * @return a CompletableFuture of ConversationThread
      * @see <a href="https://learn.microsoft.com/graph/api/conversationthread-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a specific thread that belongs to a group. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationThread
+     * @return a CompletableFuture of ConversationThread
      * @see <a href="https://learn.microsoft.com/graph/api/conversationthread-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update conversation thread
      * @param body The request body
-     * @return a CompletableFuture of conversationThread
+     * @return a CompletableFuture of ConversationThread
      * @see <a href="https://learn.microsoft.com/graph/api/group-update-thread?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +110,7 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
      * Update conversation thread
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationThread
+     * @return a CompletableFuture of ConversationThread
      * @see <a href="https://learn.microsoft.com/graph/api/group-update-thread?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

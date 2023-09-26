@@ -76,7 +76,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
-     * @return a CompletableFuture of ediscoveryNoncustodialDataSourceCollectionResponse
+     * @return a CompletableFuture of EdiscoveryNoncustodialDataSourceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSourceCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryNoncustodialDataSourceCollectionResponse
+     * @return a CompletableFuture of EdiscoveryNoncustodialDataSourceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSourceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,7 +98,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new ediscoveryNoncustodialDataSource object.
      * @param body The request body
-     * @return a CompletableFuture of ediscoveryNoncustodialDataSource
+     * @return a CompletableFuture of EdiscoveryNoncustodialDataSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-noncustodialdatasources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +109,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
      * Create a new ediscoveryNoncustodialDataSource object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryNoncustodialDataSource
+     * @return a CompletableFuture of EdiscoveryNoncustodialDataSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-noncustodialdatasources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -185,7 +185,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a noncustodialDataSourcesRequestBuilder
+     * @return a NoncustodialDataSourcesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public NoncustodialDataSourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -57,7 +57,7 @@ public class TeamsTemplateItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entity from teamsTemplates by key
-     * @return a CompletableFuture of teamsTemplate
+     * @return a CompletableFuture of TeamsTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTemplate> get() {
@@ -66,7 +66,7 @@ public class TeamsTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entity from teamsTemplates by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsTemplate
+     * @return a CompletableFuture of TeamsTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTemplate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class TeamsTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in teamsTemplates
      * @param body The request body
-     * @return a CompletableFuture of teamsTemplate
+     * @return a CompletableFuture of TeamsTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTemplate> patch(@jakarta.annotation.Nonnull final TeamsTemplate body) {
@@ -89,7 +89,7 @@ public class TeamsTemplateItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in teamsTemplates
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsTemplate
+     * @return a CompletableFuture of TeamsTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTemplate> patch(@jakarta.annotation.Nonnull final TeamsTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

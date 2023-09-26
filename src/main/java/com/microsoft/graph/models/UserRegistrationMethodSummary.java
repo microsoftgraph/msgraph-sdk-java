@@ -34,7 +34,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
      */
     private IncludedUserTypes userTypes;
     /**
-     * Instantiates a new userRegistrationMethodSummary and sets the default values.
+     * Instantiates a new UserRegistrationMethodSummary and sets the default values.
      */
     public UserRegistrationMethodSummary() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userRegistrationMethodSummary
+     * @return a UserRegistrationMethodSummary
      */
     @jakarta.annotation.Nonnull
     public static UserRegistrationMethodSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
         return new UserRegistrationMethodSummary();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -81,7 +81,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the totalUserCount property value. Total number of users in the tenant.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTotalUserCount() {
@@ -89,7 +89,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the userRegistrationMethodCounts property value. Number of users registered for each authentication method.
-     * @return a userRegistrationMethodCount
+     * @return a java.util.List<UserRegistrationMethodCount>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserRegistrationMethodCount> getUserRegistrationMethodCounts() {
@@ -97,7 +97,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the userRoles property value. The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
-     * @return a includedUserRoles
+     * @return a IncludedUserRoles
      */
     @jakarta.annotation.Nullable
     public IncludedUserRoles getUserRoles() {
@@ -105,7 +105,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the userTypes property value. User type. Possible values are: all, member, guest, unknownFutureValue.
-     * @return a includedUserTypes
+     * @return a IncludedUserTypes
      */
     @jakarta.annotation.Nullable
     public IncludedUserTypes getUserTypes() {
@@ -125,8 +125,8 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -89,7 +89,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
-     * @return a CompletableFuture of synchronization
+     * @return a CompletableFuture of Synchronization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Synchronization> get() {
@@ -98,7 +98,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of synchronization
+     * @return a CompletableFuture of Synchronization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Synchronization> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property synchronization in applications
      * @param body The request body
-     * @return a CompletableFuture of synchronization
+     * @return a CompletableFuture of Synchronization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Synchronization> put(@jakarta.annotation.Nonnull final Synchronization body) {
@@ -121,7 +121,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property synchronization in applications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of synchronization
+     * @return a CompletableFuture of Synchronization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Synchronization> put(@jakarta.annotation.Nonnull final Synchronization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
@@ -223,7 +223,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a synchronizationRequestBuilder
+     * @return a SynchronizationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SynchronizationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

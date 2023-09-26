@@ -33,7 +33,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     private String outputName;
     /**
-     * Instantiates a new exportPostRequestBody and sets the default values.
+     * Instantiates a new ExportPostRequestBody and sets the default values.
      */
     public ExportPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -41,7 +41,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a exportPostRequestBody
+     * @return a ExportPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static ExportPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
         return new ExportPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -66,7 +66,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the exportOptions property value. The exportOptions property
-     * @return a exportOptions
+     * @return a EnumSet<ExportOptions>
      */
     @jakarta.annotation.Nullable
     public EnumSet<ExportOptions> getExportOptions() {
@@ -74,7 +74,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the exportStructure property value. The exportStructure property
-     * @return a exportFileStructure
+     * @return a ExportFileStructure
      */
     @jakarta.annotation.Nullable
     public ExportFileStructure getExportStructure() {
@@ -95,7 +95,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the outputName property value. The outputName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOutputName() {
@@ -114,8 +114,8 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

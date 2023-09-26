@@ -65,7 +65,7 @@ public class UserExperienceAnalyticsCategoryItemRequestBuilder extends BaseReque
     }
     /**
      * User experience analytics categories
-     * @return a CompletableFuture of userExperienceAnalyticsCategory
+     * @return a CompletableFuture of UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsCategory> get() {
@@ -74,7 +74,7 @@ public class UserExperienceAnalyticsCategoryItemRequestBuilder extends BaseReque
     /**
      * User experience analytics categories
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsCategory
+     * @return a CompletableFuture of UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsCategory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class UserExperienceAnalyticsCategoryItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property userExperienceAnalyticsCategories in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsCategory
+     * @return a CompletableFuture of UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsCategory> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsCategory body) {
@@ -97,7 +97,7 @@ public class UserExperienceAnalyticsCategoryItemRequestBuilder extends BaseReque
      * Update the navigation property userExperienceAnalyticsCategories in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsCategory
+     * @return a CompletableFuture of UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsCategory> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

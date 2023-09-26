@@ -57,7 +57,7 @@ public class AssignmentDefaultsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of an educationAssignmentDefaults object.  These are the class-level assignment defaults respected by new assignments created in the class. Callers can continue to specify custom values on each assignment creation if they don't want the default behaviors. Only teachers can perform this operation.
-     * @return a CompletableFuture of educationAssignmentDefaults
+     * @return a CompletableFuture of EducationAssignmentDefaults
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentdefaults-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AssignmentDefaultsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an educationAssignmentDefaults object.  These are the class-level assignment defaults respected by new assignments created in the class. Callers can continue to specify custom values on each assignment creation if they don't want the default behaviors. Only teachers can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationAssignmentDefaults
+     * @return a CompletableFuture of EducationAssignmentDefaults
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentdefaults-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class AssignmentDefaultsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an educationAssignmentDefaults object. Only teachers can update these settings.
      * @param body The request body
-     * @return a CompletableFuture of educationAssignmentDefaults
+     * @return a CompletableFuture of EducationAssignmentDefaults
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentdefaults-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AssignmentDefaultsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an educationAssignmentDefaults object. Only teachers can update these settings.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationAssignmentDefaults
+     * @return a CompletableFuture of EducationAssignmentDefaults
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentdefaults-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class AssignmentDefaultsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignmentDefaultsRequestBuilder
+     * @return a AssignmentDefaultsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignmentDefaultsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

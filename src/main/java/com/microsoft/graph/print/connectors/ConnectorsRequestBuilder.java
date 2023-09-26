@@ -60,7 +60,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of print connectors.
-     * @return a CompletableFuture of printConnectorCollectionResponse
+     * @return a CompletableFuture of PrintConnectorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/print-list-connectors?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of print connectors.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printConnectorCollectionResponse
+     * @return a CompletableFuture of PrintConnectorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/print-list-connectors?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to connectors for print
      * @param body The request body
-     * @return a CompletableFuture of printConnector
+     * @return a CompletableFuture of PrintConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintConnector> post(@jakarta.annotation.Nonnull final PrintConnector body) {
@@ -94,7 +94,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to connectors for print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printConnector
+     * @return a CompletableFuture of PrintConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintConnector> post(@jakarta.annotation.Nonnull final PrintConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a connectorsRequestBuilder
+     * @return a ConnectorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConnectorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

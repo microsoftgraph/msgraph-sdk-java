@@ -60,7 +60,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of page objects from the specified section.
-     * @return a CompletableFuture of onenotePageCollectionResponse
+     * @return a CompletableFuture of OnenotePageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/section-list-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of page objects from the specified section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenotePageCollectionResponse
+     * @return a CompletableFuture of OnenotePageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/section-list-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new page in the specified section.
      * @param body The request body
-     * @return a CompletableFuture of onenotePage
+     * @return a CompletableFuture of OnenotePage
      * @see <a href="https://learn.microsoft.com/graph/api/section-post-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
      * Create a new page in the specified section.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenotePage
+     * @return a CompletableFuture of OnenotePage
      * @see <a href="https://learn.microsoft.com/graph/api/section-post-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a pagesRequestBuilder
+     * @return a PagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

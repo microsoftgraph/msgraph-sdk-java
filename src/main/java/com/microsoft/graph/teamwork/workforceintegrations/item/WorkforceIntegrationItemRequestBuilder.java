@@ -59,7 +59,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a workforceIntegration object.
-     * @return a CompletableFuture of workforceIntegration
+     * @return a CompletableFuture of WorkforceIntegration
      * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a workforceIntegration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workforceIntegration
+     * @return a CompletableFuture of WorkforceIntegration
      * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a workforceIntegration object.
      * @param body The request body
-     * @return a CompletableFuture of workforceIntegration
+     * @return a CompletableFuture of WorkforceIntegration
      * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a workforceIntegration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workforceIntegration
+     * @return a CompletableFuture of WorkforceIntegration
      * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

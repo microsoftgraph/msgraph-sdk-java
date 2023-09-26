@@ -68,7 +68,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a contact collection from the default contacts folder of the signed-in user. There are two scenarios where an app can get contacts in another user's contact folder:
-     * @return a CompletableFuture of contactCollectionResponse
+     * @return a CompletableFuture of ContactCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-contacts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a contact collection from the default contacts folder of the signed-in user. There are two scenarios where an app can get contacts in another user's contact folder:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contactCollectionResponse
+     * @return a CompletableFuture of ContactCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-contacts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
      * @param body The request body
-     * @return a CompletableFuture of contact
+     * @return a CompletableFuture of Contact
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-contacts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
      * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contact
+     * @return a CompletableFuture of Contact
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-contacts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a contactsRequestBuilder
+     * @return a ContactsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ContactsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

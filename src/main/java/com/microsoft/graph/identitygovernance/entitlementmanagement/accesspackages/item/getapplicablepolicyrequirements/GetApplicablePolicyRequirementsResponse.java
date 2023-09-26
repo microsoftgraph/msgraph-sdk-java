@@ -15,7 +15,7 @@ public class GetApplicablePolicyRequirementsResponse extends BaseCollectionPagin
      */
     private java.util.List<AccessPackageAssignmentRequestRequirements> value;
     /**
-     * Instantiates a new getApplicablePolicyRequirementsResponse and sets the default values.
+     * Instantiates a new GetApplicablePolicyRequirementsResponse and sets the default values.
      */
     public GetApplicablePolicyRequirementsResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetApplicablePolicyRequirementsResponse extends BaseCollectionPagin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getApplicablePolicyRequirementsResponse
+     * @return a GetApplicablePolicyRequirementsResponse
      */
     @jakarta.annotation.Nonnull
     public static GetApplicablePolicyRequirementsResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetApplicablePolicyRequirementsResponse extends BaseCollectionPagin
     }
     /**
      * Gets the value property value. The value property
-     * @return a accessPackageAssignmentRequestRequirements
+     * @return a java.util.List<AccessPackageAssignmentRequestRequirements>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentRequestRequirements> getValue() {

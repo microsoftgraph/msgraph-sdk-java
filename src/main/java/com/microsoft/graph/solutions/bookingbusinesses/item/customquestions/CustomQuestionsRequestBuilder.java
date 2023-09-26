@@ -60,7 +60,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the bookingCustomQuestion resources associated with a bookingBusiness.
-     * @return a CompletableFuture of bookingCustomQuestionCollectionResponse
+     * @return a CompletableFuture of BookingCustomQuestionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the bookingCustomQuestion resources associated with a bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingCustomQuestionCollectionResponse
+     * @return a CompletableFuture of BookingCustomQuestionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new bookingCustomQuestion object.
      * @param body The request body
-     * @return a CompletableFuture of bookingCustomQuestion
+     * @return a CompletableFuture of BookingCustomQuestion
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
      * Create a new bookingCustomQuestion object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingCustomQuestion
+     * @return a CompletableFuture of BookingCustomQuestion
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a customQuestionsRequestBuilder
+     * @return a CustomQuestionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CustomQuestionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

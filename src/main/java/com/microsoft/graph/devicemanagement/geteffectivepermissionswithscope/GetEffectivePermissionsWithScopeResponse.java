@@ -15,7 +15,7 @@ public class GetEffectivePermissionsWithScopeResponse extends BaseCollectionPagi
      */
     private java.util.List<RolePermission> value;
     /**
-     * Instantiates a new getEffectivePermissionsWithScopeResponse and sets the default values.
+     * Instantiates a new GetEffectivePermissionsWithScopeResponse and sets the default values.
      */
     public GetEffectivePermissionsWithScopeResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetEffectivePermissionsWithScopeResponse extends BaseCollectionPagi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getEffectivePermissionsWithScopeResponse
+     * @return a GetEffectivePermissionsWithScopeResponse
      */
     @jakarta.annotation.Nonnull
     public static GetEffectivePermissionsWithScopeResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetEffectivePermissionsWithScopeResponse extends BaseCollectionPagi
     }
     /**
      * Gets the value property value. The value property
-     * @return a rolePermission
+     * @return a java.util.List<RolePermission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RolePermission> getValue() {

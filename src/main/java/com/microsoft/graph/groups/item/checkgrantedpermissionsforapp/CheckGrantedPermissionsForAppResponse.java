@@ -15,7 +15,7 @@ public class CheckGrantedPermissionsForAppResponse extends BaseCollectionPaginat
      */
     private java.util.List<ResourceSpecificPermissionGrant> value;
     /**
-     * Instantiates a new checkGrantedPermissionsForAppResponse and sets the default values.
+     * Instantiates a new CheckGrantedPermissionsForAppResponse and sets the default values.
      */
     public CheckGrantedPermissionsForAppResponse() {
         super();
@@ -23,7 +23,7 @@ public class CheckGrantedPermissionsForAppResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a checkGrantedPermissionsForAppResponse
+     * @return a CheckGrantedPermissionsForAppResponse
      */
     @jakarta.annotation.Nonnull
     public static CheckGrantedPermissionsForAppResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class CheckGrantedPermissionsForAppResponse extends BaseCollectionPaginat
     }
     /**
      * Gets the value property value. The value property
-     * @return a resourceSpecificPermissionGrant
+     * @return a java.util.List<ResourceSpecificPermissionGrant>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ResourceSpecificPermissionGrant> getValue() {

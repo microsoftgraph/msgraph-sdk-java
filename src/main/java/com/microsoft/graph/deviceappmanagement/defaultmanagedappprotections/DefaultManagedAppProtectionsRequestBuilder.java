@@ -60,7 +60,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     }
     /**
      * List properties and relationships of the defaultManagedAppProtection objects.
-     * @return a CompletableFuture of defaultManagedAppProtectionCollectionResponse
+     * @return a CompletableFuture of DefaultManagedAppProtectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     /**
      * List properties and relationships of the defaultManagedAppProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of defaultManagedAppProtectionCollectionResponse
+     * @return a CompletableFuture of DefaultManagedAppProtectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     /**
      * Create a new defaultManagedAppProtection object.
      * @param body The request body
-     * @return a CompletableFuture of defaultManagedAppProtection
+     * @return a CompletableFuture of DefaultManagedAppProtection
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
      * Create a new defaultManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of defaultManagedAppProtection
+     * @return a CompletableFuture of DefaultManagedAppProtection
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a defaultManagedAppProtectionsRequestBuilder
+     * @return a DefaultManagedAppProtectionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DefaultManagedAppProtectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

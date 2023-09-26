@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoveAccessApplyAction extends AccessReviewApplyAction implements Parsable {
     /**
-     * Instantiates a new removeAccessApplyAction and sets the default values.
+     * Instantiates a new RemoveAccessApplyAction and sets the default values.
      */
     public RemoveAccessApplyAction() {
         super();
@@ -18,7 +18,7 @@ public class RemoveAccessApplyAction extends AccessReviewApplyAction implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a removeAccessApplyAction
+     * @return a RemoveAccessApplyAction
      */
     @jakarta.annotation.Nonnull
     public static RemoveAccessApplyAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

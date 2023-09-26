@@ -59,7 +59,7 @@ public class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Retrieve the properties of a specific resource associated with a submission. Only teachers, students, and applications with application permissions can perform this operation. This resource is in the 'working' resource list and should be considered work in process by a student. This resource is wrapped with a possible pointer back to the assignment resource if it was copied from the assignment.
-     * @return a CompletableFuture of educationSubmissionResource
+     * @return a CompletableFuture of EducationSubmissionResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationsubmissionresource-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBu
     /**
      * Retrieve the properties of a specific resource associated with a submission. Only teachers, students, and applications with application permissions can perform this operation. This resource is in the 'working' resource list and should be considered work in process by a student. This resource is wrapped with a possible pointer back to the assignment resource if it was copied from the assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSubmissionResource
+     * @return a CompletableFuture of EducationSubmissionResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationsubmissionresource-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property resources in education
      * @param body The request body
-     * @return a CompletableFuture of educationSubmissionResource
+     * @return a CompletableFuture of EducationSubmissionResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSubmissionResource> patch(@jakarta.annotation.Nonnull final EducationSubmissionResource body) {
@@ -93,7 +93,7 @@ public class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBu
      * Update the navigation property resources in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSubmissionResource
+     * @return a CompletableFuture of EducationSubmissionResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSubmissionResource> patch(@jakarta.annotation.Nonnull final EducationSubmissionResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

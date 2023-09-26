@@ -38,7 +38,7 @@ public class PrinterRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The printer that this printer share is related to.
-     * @return a CompletableFuture of printer
+     * @return a CompletableFuture of Printer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Printer> get() {
@@ -47,7 +47,7 @@ public class PrinterRequestBuilder extends BaseRequestBuilder {
     /**
      * The printer that this printer share is related to.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printer
+     * @return a CompletableFuture of Printer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Printer> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class PrinterRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a printerRequestBuilder
+     * @return a PrinterRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PrinterRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

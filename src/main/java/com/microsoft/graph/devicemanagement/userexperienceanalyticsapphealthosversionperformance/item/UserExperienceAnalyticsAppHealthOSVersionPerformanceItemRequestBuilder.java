@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceItemRequestBuil
     }
     /**
      * User experience analytics appHealth OS version Performance
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthOSVersionPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthOSVersionPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthOSVersionPerformance> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceItemRequestBuil
     /**
      * User experience analytics appHealth OS version Performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthOSVersionPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthOSVersionPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthOSVersionPerformance> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceItemRequestBuil
     /**
      * Update the navigation property userExperienceAnalyticsAppHealthOSVersionPerformance in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthOSVersionPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthOSVersionPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthOSVersionPerformance> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthOSVersionPerformance body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformanceItemRequestBuil
      * Update the navigation property userExperienceAnalyticsAppHealthOSVersionPerformance in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthOSVersionPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthOSVersionPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthOSVersionPerformance> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthOSVersionPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

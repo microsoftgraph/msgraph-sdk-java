@@ -9,15 +9,15 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Parsable {
     /**
-     * User source or SharePoint site data source as non-custodial data source.
+     * User source or SharePoint site data source as noncustodial data source.
      */
     private DataSource dataSource;
     /**
-     * Operation entity that represents the latest indexing for the non-custodial data source.
+     * Operation entity that represents the latest indexing for the noncustodial data source.
      */
     private EdiscoveryIndexOperation lastIndexOperation;
     /**
-     * Instantiates a new ediscoveryNoncustodialDataSource and sets the default values.
+     * Instantiates a new EdiscoveryNoncustodialDataSource and sets the default values.
      */
     public EdiscoveryNoncustodialDataSource() {
         super();
@@ -26,7 +26,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ediscoveryNoncustodialDataSource
+     * @return a EdiscoveryNoncustodialDataSource
      */
     @jakarta.annotation.Nonnull
     public static EdiscoveryNoncustodialDataSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,8 +34,8 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
         return new EdiscoveryNoncustodialDataSource();
     }
     /**
-     * Gets the dataSource property value. User source or SharePoint site data source as non-custodial data source.
-     * @return a dataSource
+     * Gets the dataSource property value. User source or SharePoint site data source as noncustodial data source.
+     * @return a DataSource
      */
     @jakarta.annotation.Nullable
     public DataSource getDataSource() {
@@ -53,8 +53,8 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
         return deserializerMap;
     }
     /**
-     * Gets the lastIndexOperation property value. Operation entity that represents the latest indexing for the non-custodial data source.
-     * @return a ediscoveryIndexOperation
+     * Gets the lastIndexOperation property value. Operation entity that represents the latest indexing for the noncustodial data source.
+     * @return a EdiscoveryIndexOperation
      */
     @jakarta.annotation.Nullable
     public EdiscoveryIndexOperation getLastIndexOperation() {
@@ -71,14 +71,14 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
         writer.writeObjectValue("lastIndexOperation", this.getLastIndexOperation());
     }
     /**
-     * Sets the dataSource property value. User source or SharePoint site data source as non-custodial data source.
+     * Sets the dataSource property value. User source or SharePoint site data source as noncustodial data source.
      * @param value Value to set for the dataSource property.
      */
     public void setDataSource(@jakarta.annotation.Nullable final DataSource value) {
         this.dataSource = value;
     }
     /**
-     * Sets the lastIndexOperation property value. Operation entity that represents the latest indexing for the non-custodial data source.
+     * Sets the lastIndexOperation property value. Operation entity that represents the latest indexing for the noncustodial data source.
      * @param value Value to set for the lastIndexOperation property.
      */
     public void setLastIndexOperation(@jakarta.annotation.Nullable final EdiscoveryIndexOperation value) {

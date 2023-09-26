@@ -59,7 +59,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read properties and relationships of the mobileAppCategory object.
-     * @return a CompletableFuture of mobileAppCategory
+     * @return a CompletableFuture of MobileAppCategory
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the mobileAppCategory object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppCategory
+     * @return a CompletableFuture of MobileAppCategory
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a mobileAppCategory object.
      * @param body The request body
-     * @return a CompletableFuture of mobileAppCategory
+     * @return a CompletableFuture of MobileAppCategory
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a mobileAppCategory object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppCategory
+     * @return a CompletableFuture of MobileAppCategory
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

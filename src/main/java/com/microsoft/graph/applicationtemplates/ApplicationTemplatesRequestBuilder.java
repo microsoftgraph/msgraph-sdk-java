@@ -59,7 +59,7 @@ public class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of applicationTemplate objects from the Azure AD application gallery.
-     * @return a CompletableFuture of applicationTemplateCollectionResponse
+     * @return a CompletableFuture of ApplicationTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/applicationtemplate-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of applicationTemplate objects from the Azure AD application gallery.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of applicationTemplateCollectionResponse
+     * @return a CompletableFuture of ApplicationTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/applicationtemplate-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a applicationTemplatesRequestBuilder
+     * @return a ApplicationTemplatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ApplicationTemplatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

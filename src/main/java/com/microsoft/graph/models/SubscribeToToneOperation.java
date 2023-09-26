@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SubscribeToToneOperation extends CommsOperation implements Parsable {
     /**
-     * Instantiates a new subscribeToToneOperation and sets the default values.
+     * Instantiates a new SubscribeToToneOperation and sets the default values.
      */
     public SubscribeToToneOperation() {
         super();
@@ -17,7 +17,7 @@ public class SubscribeToToneOperation extends CommsOperation implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a subscribeToToneOperation
+     * @return a SubscribeToToneOperation
      */
     @jakarta.annotation.Nonnull
     public static SubscribeToToneOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

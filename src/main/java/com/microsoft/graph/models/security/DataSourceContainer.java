@@ -35,7 +35,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      */
     private DataSourceContainerStatus status;
     /**
-     * Instantiates a new dataSourceContainer and sets the default values.
+     * Instantiates a new DataSourceContainer and sets the default values.
      */
     public DataSourceContainer() {
         super();
@@ -43,7 +43,7 @@ public class DataSourceContainer extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a dataSourceContainer
+     * @return a DataSourceContainer
      */
     @jakarta.annotation.Nonnull
     public static DataSourceContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -68,7 +68,7 @@ public class DataSourceContainer extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the dataSourceContainer entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -91,7 +91,7 @@ public class DataSourceContainer extends Entity implements Parsable {
     }
     /**
      * Gets the holdStatus property value. The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial
-     * @return a dataSourceHoldStatus
+     * @return a DataSourceHoldStatus
      */
     @jakarta.annotation.Nullable
     public DataSourceHoldStatus getHoldStatus() {
@@ -115,7 +115,7 @@ public class DataSourceContainer extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Latest status of the dataSourceContainer. Possible values are: Active, Released.
-     * @return a dataSourceContainerStatus
+     * @return a DataSourceContainerStatus
      */
     @jakarta.annotation.Nullable
     public DataSourceContainerStatus getStatus() {

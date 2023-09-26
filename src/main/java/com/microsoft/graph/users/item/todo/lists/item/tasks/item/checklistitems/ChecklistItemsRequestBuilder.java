@@ -60,7 +60,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
-     * @return a CompletableFuture of checklistItemCollectionResponse
+     * @return a CompletableFuture of ChecklistItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-list-checklistitems?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of checklistItemCollectionResponse
+     * @return a CompletableFuture of ChecklistItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-list-checklistitems?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new checklistItem object.
      * @param body The request body
-     * @return a CompletableFuture of checklistItem
+     * @return a CompletableFuture of ChecklistItem
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-post-checklistitems?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
      * Create a new checklistItem object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of checklistItem
+     * @return a CompletableFuture of ChecklistItem
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-post-checklistitems?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a checklistItemsRequestBuilder
+     * @return a ChecklistItemsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChecklistItemsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -30,7 +30,7 @@ public class FolderView implements AdditionalDataHolder, Parsable {
      */
     private String viewType;
     /**
-     * Instantiates a new folderView and sets the default values.
+     * Instantiates a new FolderView and sets the default values.
      */
     public FolderView() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class FolderView implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a folderView
+     * @return a FolderView
      */
     @jakarta.annotation.Nonnull
     public static FolderView createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class FolderView implements AdditionalDataHolder, Parsable {
         return new FolderView();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class FolderView implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -76,7 +76,7 @@ public class FolderView implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sortBy property value. The method by which the folder should be sorted.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSortBy() {
@@ -84,7 +84,7 @@ public class FolderView implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sortOrder property value. If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSortOrder() {
@@ -92,7 +92,7 @@ public class FolderView implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the viewType property value. The type of view that should be used to represent the folder.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getViewType() {
@@ -111,8 +111,8 @@ public class FolderView implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

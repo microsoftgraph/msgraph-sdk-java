@@ -13,7 +13,7 @@ public class OpenShiftCollectionResponse extends BaseCollectionPaginationCountRe
      */
     private java.util.List<OpenShift> value;
     /**
-     * Instantiates a new openShiftCollectionResponse and sets the default values.
+     * Instantiates a new OpenShiftCollectionResponse and sets the default values.
      */
     public OpenShiftCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class OpenShiftCollectionResponse extends BaseCollectionPaginationCountRe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a openShiftCollectionResponse
+     * @return a OpenShiftCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static OpenShiftCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class OpenShiftCollectionResponse extends BaseCollectionPaginationCountRe
     }
     /**
      * Gets the value property value. The value property
-     * @return a openShift
+     * @return a java.util.List<OpenShift>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OpenShift> getValue() {

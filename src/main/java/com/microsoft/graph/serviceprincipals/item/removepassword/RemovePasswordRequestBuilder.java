@@ -92,7 +92,7 @@ public class RemovePasswordRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a removePasswordRequestBuilder
+     * @return a RemovePasswordRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RemovePasswordRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

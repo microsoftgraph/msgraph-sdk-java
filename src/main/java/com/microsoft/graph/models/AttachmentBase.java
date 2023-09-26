@@ -18,7 +18,7 @@ public class AttachmentBase extends Entity implements Parsable {
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * The display name of the attachment. This does not need to be the actual file name.
+     * The display name of the attachment. This doesn't need to be the actual file name.
      */
     private String name;
     /**
@@ -26,7 +26,7 @@ public class AttachmentBase extends Entity implements Parsable {
      */
     private Integer size;
     /**
-     * Instantiates a new attachmentBase and sets the default values.
+     * Instantiates a new AttachmentBase and sets the default values.
      */
     public AttachmentBase() {
         super();
@@ -34,7 +34,7 @@ public class AttachmentBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attachmentBase
+     * @return a AttachmentBase
      */
     @jakarta.annotation.Nonnull
     public static AttachmentBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class AttachmentBase extends Entity implements Parsable {
     }
     /**
      * Gets the contentType property value. The MIME type.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
@@ -78,8 +78,8 @@ public class AttachmentBase extends Entity implements Parsable {
         return this.lastModifiedDateTime;
     }
     /**
-     * Gets the name property value. The display name of the attachment. This does not need to be the actual file name.
-     * @return a string
+     * Gets the name property value. The display name of the attachment. This doesn't need to be the actual file name.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -87,7 +87,7 @@ public class AttachmentBase extends Entity implements Parsable {
     }
     /**
      * Gets the size property value. The length of the attachment in bytes.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSize() {
@@ -120,7 +120,7 @@ public class AttachmentBase extends Entity implements Parsable {
         this.lastModifiedDateTime = value;
     }
     /**
-     * Sets the name property value. The display name of the attachment. This does not need to be the actual file name.
+     * Sets the name property value. The display name of the attachment. This doesn't need to be the actual file name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

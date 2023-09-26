@@ -67,7 +67,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
     }
     /**
      * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
-     * @return a CompletableFuture of identityUserFlowAttributeAssignment
+     * @return a CompletableFuture of IdentityUserFlowAttributeAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
     /**
      * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityUserFlowAttributeAssignment
+     * @return a CompletableFuture of IdentityUserFlowAttributeAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
     /**
      * Update the properties of a identityUserFlowAttributeAssignment object.
      * @param body The request body
-     * @return a CompletableFuture of identityUserFlowAttributeAssignment
+     * @return a CompletableFuture of IdentityUserFlowAttributeAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
      * Update the properties of a identityUserFlowAttributeAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityUserFlowAttributeAssignment
+     * @return a CompletableFuture of IdentityUserFlowAttributeAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

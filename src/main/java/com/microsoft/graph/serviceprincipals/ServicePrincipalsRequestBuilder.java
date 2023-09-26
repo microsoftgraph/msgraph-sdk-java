@@ -92,7 +92,7 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of servicePrincipal objects.
-     * @return a CompletableFuture of servicePrincipalCollectionResponse
+     * @return a CompletableFuture of ServicePrincipalCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of servicePrincipal objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipalCollectionResponse
+     * @return a CompletableFuture of ServicePrincipalCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new servicePrincipal object.
      * @param body The request body
-     * @return a CompletableFuture of servicePrincipal
+     * @return a CompletableFuture of ServicePrincipal
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-post-serviceprincipals?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
      * Create a new servicePrincipal object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipal
+     * @return a CompletableFuture of ServicePrincipal
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-post-serviceprincipals?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -203,7 +203,7 @@ public class ServicePrincipalsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a servicePrincipalsRequestBuilder
+     * @return a ServicePrincipalsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ServicePrincipalsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

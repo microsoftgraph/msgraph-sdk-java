@@ -59,7 +59,7 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
-     * @return a CompletableFuture of extension
+     * @return a CompletableFuture of Extension
      * @see <a href="https://learn.microsoft.com/graph/api/opentypeextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of extension
+     * @return a CompletableFuture of Extension
      * @see <a href="https://learn.microsoft.com/graph/api/opentypeextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property extensions in users
      * @param body The request body
-     * @return a CompletableFuture of extension
+     * @return a CompletableFuture of Extension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Extension> patch(@jakarta.annotation.Nonnull final Extension body) {
@@ -93,7 +93,7 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property extensions in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of extension
+     * @return a CompletableFuture of Extension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Extension> patch(@jakarta.annotation.Nonnull final Extension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

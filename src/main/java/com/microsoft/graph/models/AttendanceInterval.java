@@ -31,7 +31,7 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new attendanceInterval and sets the default values.
+     * Instantiates a new AttendanceInterval and sets the default values.
      */
     public AttendanceInterval() {
         this.setAdditionalData(new HashMap<>());
@@ -39,7 +39,7 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attendanceInterval
+     * @return a AttendanceInterval
      */
     @jakarta.annotation.Nonnull
     public static AttendanceInterval createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
         return new AttendanceInterval();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -56,7 +56,7 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the durationInSeconds property value. Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInSeconds() {
@@ -93,7 +93,7 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -112,8 +112,8 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

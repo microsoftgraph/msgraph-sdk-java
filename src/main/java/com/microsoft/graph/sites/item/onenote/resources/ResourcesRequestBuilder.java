@@ -60,7 +60,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
-     * @return a CompletableFuture of onenoteResourceCollectionResponse
+     * @return a CompletableFuture of OnenoteResourceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteResourceCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenoteResourceCollectionResponse
+     * @return a CompletableFuture of OnenoteResourceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteResourceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to resources for sites
      * @param body The request body
-     * @return a CompletableFuture of onenoteResource
+     * @return a CompletableFuture of OnenoteResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteResource> post(@jakarta.annotation.Nonnull final OnenoteResource body) {
@@ -92,7 +92,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to resources for sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenoteResource
+     * @return a CompletableFuture of OnenoteResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteResource> post(@jakarta.annotation.Nonnull final OnenoteResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resourcesRequestBuilder
+     * @return a ResourcesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ResourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

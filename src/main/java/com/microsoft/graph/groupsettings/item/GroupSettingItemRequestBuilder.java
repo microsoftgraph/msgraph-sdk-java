@@ -59,7 +59,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
-     * @return a CompletableFuture of groupSetting
+     * @return a CompletableFuture of GroupSetting
      * @see <a href="https://learn.microsoft.com/graph/api/groupsetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupSetting
+     * @return a CompletableFuture of GroupSetting
      * @see <a href="https://learn.microsoft.com/graph/api/groupsetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param body The request body
-     * @return a CompletableFuture of groupSetting
+     * @return a CompletableFuture of GroupSetting
      * @see <a href="https://learn.microsoft.com/graph/api/groupsetting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupSetting
+     * @return a CompletableFuture of GroupSetting
      * @see <a href="https://learn.microsoft.com/graph/api/groupsetting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

@@ -60,7 +60,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the attack simulation automation runs for a tenant.
-     * @return a CompletableFuture of simulationAutomationRunCollectionResponse
+     * @return a CompletableFuture of SimulationAutomationRunCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/simulationautomation-list-runs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the attack simulation automation runs for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of simulationAutomationRunCollectionResponse
+     * @return a CompletableFuture of SimulationAutomationRunCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/simulationautomation-list-runs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to runs for security
      * @param body The request body
-     * @return a CompletableFuture of simulationAutomationRun
+     * @return a CompletableFuture of SimulationAutomationRun
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SimulationAutomationRun> post(@jakarta.annotation.Nonnull final SimulationAutomationRun body) {
@@ -94,7 +94,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to runs for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of simulationAutomationRun
+     * @return a CompletableFuture of SimulationAutomationRun
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SimulationAutomationRun> post(@jakarta.annotation.Nonnull final SimulationAutomationRun body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a runsRequestBuilder
+     * @return a RunsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RunsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

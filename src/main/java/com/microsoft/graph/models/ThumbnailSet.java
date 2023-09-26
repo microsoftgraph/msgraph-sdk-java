@@ -25,7 +25,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      */
     private Thumbnail source;
     /**
-     * Instantiates a new thumbnailSet and sets the default values.
+     * Instantiates a new ThumbnailSet and sets the default values.
      */
     public ThumbnailSet() {
         super();
@@ -33,7 +33,7 @@ public class ThumbnailSet extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a thumbnailSet
+     * @return a ThumbnailSet
      */
     @jakarta.annotation.Nonnull
     public static ThumbnailSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class ThumbnailSet extends Entity implements Parsable {
     }
     /**
      * Gets the large property value. A 1920x1920 scaled thumbnail.
-     * @return a thumbnail
+     * @return a Thumbnail
      */
     @jakarta.annotation.Nullable
     public Thumbnail getLarge() {
@@ -63,7 +63,7 @@ public class ThumbnailSet extends Entity implements Parsable {
     }
     /**
      * Gets the medium property value. A 176x176 scaled thumbnail.
-     * @return a thumbnail
+     * @return a Thumbnail
      */
     @jakarta.annotation.Nullable
     public Thumbnail getMedium() {
@@ -71,7 +71,7 @@ public class ThumbnailSet extends Entity implements Parsable {
     }
     /**
      * Gets the small property value. A 48x48 cropped thumbnail.
-     * @return a thumbnail
+     * @return a Thumbnail
      */
     @jakarta.annotation.Nullable
     public Thumbnail getSmall() {
@@ -79,7 +79,7 @@ public class ThumbnailSet extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. A custom thumbnail image or the original image used to generate other thumbnails.
-     * @return a thumbnail
+     * @return a Thumbnail
      */
     @jakarta.annotation.Nullable
     public Thumbnail getSource() {

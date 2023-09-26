@@ -60,7 +60,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian.
-     * @return a CompletableFuture of unifiedGroupSourceCollectionResponse
+     * @return a CompletableFuture of UnifiedGroupSourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedGroupSourceCollectionResponse
+     * @return a CompletableFuture of UnifiedGroupSourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new unifiedGroupSource object associated with an eDiscovery custodian.
      * @param body The request body
-     * @return a CompletableFuture of unifiedGroupSource
+     * @return a CompletableFuture of UnifiedGroupSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
      * Create a new unifiedGroupSource object associated with an eDiscovery custodian.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedGroupSource
+     * @return a CompletableFuture of UnifiedGroupSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a unifiedGroupSourcesRequestBuilder
+     * @return a UnifiedGroupSourcesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UnifiedGroupSourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

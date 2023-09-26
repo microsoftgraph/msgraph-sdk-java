@@ -37,7 +37,7 @@ public class SetUpResourcesFolderRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Trigger the creation of the SharePoint resource folder where all file-based resources (Word, Excel, and so on) should be uploaded for a given submission. Only teachers and students can perform this operation. Note that files must be located in this folder in order to be added as resources. Only a student in the class can determine what files to upload in a given submission-level resource folder. 
-     * @return a CompletableFuture of educationSubmission
+     * @return a CompletableFuture of EducationSubmission
      * @see <a href="https://learn.microsoft.com/graph/api/educationsubmission-setupresourcesfolder?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class SetUpResourcesFolderRequestBuilder extends BaseRequestBuilder {
     /**
      * Trigger the creation of the SharePoint resource folder where all file-based resources (Word, Excel, and so on) should be uploaded for a given submission. Only teachers and students can perform this operation. Note that files must be located in this folder in order to be added as resources. Only a student in the class can determine what files to upload in a given submission-level resource folder. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSubmission
+     * @return a CompletableFuture of EducationSubmission
      * @see <a href="https://learn.microsoft.com/graph/api/educationsubmission-setupresourcesfolder?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class SetUpResourcesFolderRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a setUpResourcesFolderRequestBuilder
+     * @return a SetUpResourcesFolderRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SetUpResourcesFolderRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -14,7 +14,7 @@ public class CheckMemberGroupsResponse extends BaseCollectionPaginationCountResp
      */
     private java.util.List<String> value;
     /**
-     * Instantiates a new checkMemberGroupsResponse and sets the default values.
+     * Instantiates a new CheckMemberGroupsResponse and sets the default values.
      */
     public CheckMemberGroupsResponse() {
         super();
@@ -22,7 +22,7 @@ public class CheckMemberGroupsResponse extends BaseCollectionPaginationCountResp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a checkMemberGroupsResponse
+     * @return a CheckMemberGroupsResponse
      */
     @jakarta.annotation.Nonnull
     public static CheckMemberGroupsResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class CheckMemberGroupsResponse extends BaseCollectionPaginationCountResp
     }
     /**
      * Gets the value property value. The value property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getValue() {

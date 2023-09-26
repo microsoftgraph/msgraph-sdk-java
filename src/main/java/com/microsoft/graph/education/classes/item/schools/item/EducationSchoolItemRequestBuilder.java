@@ -38,7 +38,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * All schools that this class is associated with. Nullable.
-     * @return a CompletableFuture of educationSchool
+     * @return a CompletableFuture of EducationSchool
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSchool> get() {
@@ -47,7 +47,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
     /**
      * All schools that this class is associated with. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSchool
+     * @return a CompletableFuture of EducationSchool
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSchool> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

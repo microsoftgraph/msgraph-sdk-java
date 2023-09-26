@@ -15,7 +15,7 @@ public class SupportedLanguagesResponse extends BaseCollectionPaginationCountRes
      */
     private java.util.List<LocaleInfo> value;
     /**
-     * Instantiates a new supportedLanguagesResponse and sets the default values.
+     * Instantiates a new SupportedLanguagesResponse and sets the default values.
      */
     public SupportedLanguagesResponse() {
         super();
@@ -23,7 +23,7 @@ public class SupportedLanguagesResponse extends BaseCollectionPaginationCountRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a supportedLanguagesResponse
+     * @return a SupportedLanguagesResponse
      */
     @jakarta.annotation.Nonnull
     public static SupportedLanguagesResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class SupportedLanguagesResponse extends BaseCollectionPaginationCountRes
     }
     /**
      * Gets the value property value. The value property
-     * @return a localeInfo
+     * @return a java.util.List<LocaleInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocaleInfo> getValue() {

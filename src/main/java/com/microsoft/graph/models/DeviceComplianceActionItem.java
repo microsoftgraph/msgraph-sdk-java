@@ -28,7 +28,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
      */
     private String notificationTemplateId;
     /**
-     * Instantiates a new deviceComplianceActionItem and sets the default values.
+     * Instantiates a new DeviceComplianceActionItem and sets the default values.
      */
     public DeviceComplianceActionItem() {
         super();
@@ -36,7 +36,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceActionItem
+     * @return a DeviceComplianceActionItem
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceActionItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
     }
     /**
      * Gets the actionType property value. Scheduled Action Type Enum
-     * @return a deviceComplianceActionType
+     * @return a DeviceComplianceActionType
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceActionType getActionType() {
@@ -66,7 +66,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
     }
     /**
      * Gets the gracePeriodHours property value. Number of hours to wait till the action will be enforced. Valid values 0 to 8760
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getGracePeriodHours() {
@@ -74,7 +74,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
     }
     /**
      * Gets the notificationMessageCCList property value. A list of group IDs to speicify who to CC this notification message to.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNotificationMessageCCList() {
@@ -82,7 +82,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
     }
     /**
      * Gets the notificationTemplateId property value. What notification Message template to use
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNotificationTemplateId() {

@@ -57,7 +57,7 @@ public class PrintServiceEndpointItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a print service endpoint.
-     * @return a CompletableFuture of printServiceEndpoint
+     * @return a CompletableFuture of PrintServiceEndpoint
      * @see <a href="https://learn.microsoft.com/graph/api/printserviceendpoint-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class PrintServiceEndpointItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a print service endpoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printServiceEndpoint
+     * @return a CompletableFuture of PrintServiceEndpoint
      * @see <a href="https://learn.microsoft.com/graph/api/printserviceendpoint-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class PrintServiceEndpointItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property endpoints in print
      * @param body The request body
-     * @return a CompletableFuture of printServiceEndpoint
+     * @return a CompletableFuture of PrintServiceEndpoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintServiceEndpoint> patch(@jakarta.annotation.Nonnull final PrintServiceEndpoint body) {
@@ -91,7 +91,7 @@ public class PrintServiceEndpointItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property endpoints in print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printServiceEndpoint
+     * @return a CompletableFuture of PrintServiceEndpoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintServiceEndpoint> patch(@jakarta.annotation.Nonnull final PrintServiceEndpoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -37,7 +37,7 @@ public class GetByIdsRequestBuilder extends BaseRequestBuilder {
     /**
      * Return the directory objects specified in a list of IDs. Only a subset of user properties are returned by default in v1.0. Some common uses for this function are to:
      * @param body The request body
-     * @return a CompletableFuture of getByIdsResponse
+     * @return a CompletableFuture of GetByIdsResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-getbyids?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class GetByIdsRequestBuilder extends BaseRequestBuilder {
      * Return the directory objects specified in a list of IDs. Only a subset of user properties are returned by default in v1.0. Some common uses for this function are to:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getByIdsResponse
+     * @return a CompletableFuture of GetByIdsResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-getbyids?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class GetByIdsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getByIdsRequestBuilder
+     * @return a GetByIdsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetByIdsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

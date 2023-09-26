@@ -57,7 +57,7 @@ public class DelegatedAdminServiceManagementDetailItemRequestBuilder extends Bas
     }
     /**
      * Contains the management details of a service in the customer tenant that's managed by delegated administration.
-     * @return a CompletableFuture of delegatedAdminServiceManagementDetail
+     * @return a CompletableFuture of DelegatedAdminServiceManagementDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetail> get() {
@@ -66,7 +66,7 @@ public class DelegatedAdminServiceManagementDetailItemRequestBuilder extends Bas
     /**
      * Contains the management details of a service in the customer tenant that's managed by delegated administration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedAdminServiceManagementDetail
+     * @return a CompletableFuture of DelegatedAdminServiceManagementDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetail> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DelegatedAdminServiceManagementDetailItemRequestBuilder extends Bas
     /**
      * Update the navigation property serviceManagementDetails in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of delegatedAdminServiceManagementDetail
+     * @return a CompletableFuture of DelegatedAdminServiceManagementDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetail> patch(@jakarta.annotation.Nonnull final DelegatedAdminServiceManagementDetail body) {
@@ -89,7 +89,7 @@ public class DelegatedAdminServiceManagementDetailItemRequestBuilder extends Bas
      * Update the navigation property serviceManagementDetails in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedAdminServiceManagementDetail
+     * @return a CompletableFuture of DelegatedAdminServiceManagementDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetail> patch(@jakarta.annotation.Nonnull final DelegatedAdminServiceManagementDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

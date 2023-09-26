@@ -37,7 +37,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
     /**
      * Follow a user's site or multiple sites.
      * @param body The request body
-     * @return a CompletableFuture of addResponse
+     * @return a CompletableFuture of AddResponse
      * @see <a href="https://learn.microsoft.com/graph/api/site-follow?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
      * Follow a user's site or multiple sites.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of addResponse
+     * @return a CompletableFuture of AddResponse
      * @see <a href="https://learn.microsoft.com/graph/api/site-follow?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a addRequestBuilder
+     * @return a AddRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AddRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

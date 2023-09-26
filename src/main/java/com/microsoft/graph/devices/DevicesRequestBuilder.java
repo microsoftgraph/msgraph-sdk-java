@@ -92,7 +92,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of device objects registered in the organization.
-     * @return a CompletableFuture of deviceCollectionResponse
+     * @return a CompletableFuture of DeviceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/device-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of device objects registered in the organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCollectionResponse
+     * @return a CompletableFuture of DeviceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/device-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create and register a new device in the organization.
      * @param body The request body
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      * @see <a href="https://learn.microsoft.com/graph/api/device-post-devices?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
      * Create and register a new device in the organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      * @see <a href="https://learn.microsoft.com/graph/api/device-post-devices?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -203,7 +203,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a devicesRequestBuilder
+     * @return a DevicesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DevicesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

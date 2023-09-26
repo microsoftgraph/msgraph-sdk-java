@@ -60,7 +60,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List Azure Active Directory (Azure AD) role assignments with administrative unit scope.
-     * @return a CompletableFuture of scopedRoleMembershipCollectionResponse
+     * @return a CompletableFuture of ScopedRoleMembershipCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-list-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
     /**
      * List Azure Active Directory (Azure AD) role assignments with administrative unit scope.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of scopedRoleMembershipCollectionResponse
+     * @return a CompletableFuture of ScopedRoleMembershipCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-list-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Assign an Azure Active Directory (Azure AD) role with administrative unit scope. For a list of roles that can be assigned with administrative unit scope, see Assign Azure AD roles with administrative unit scope.
      * @param body The request body
-     * @return a CompletableFuture of scopedRoleMembership
+     * @return a CompletableFuture of ScopedRoleMembership
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-post-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
      * Assign an Azure Active Directory (Azure AD) role with administrative unit scope. For a list of roles that can be assigned with administrative unit scope, see Assign Azure AD roles with administrative unit scope.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of scopedRoleMembership
+     * @return a CompletableFuture of ScopedRoleMembership
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-post-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a scopedRoleMembersRequestBuilder
+     * @return a ScopedRoleMembersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ScopedRoleMembersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

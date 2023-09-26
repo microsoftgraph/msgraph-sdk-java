@@ -68,7 +68,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
-     * @return a CompletableFuture of messageCollectionResponse
+     * @return a CompletableFuture of MessageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of messageCollectionResponse
+     * @return a CompletableFuture of MessageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new Message in a mailfolder.
      * @param body The request body
-     * @return a CompletableFuture of message
+     * @return a CompletableFuture of Message
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-post-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new Message in a mailfolder.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of message
+     * @return a CompletableFuture of Message
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-post-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a messagesRequestBuilder
+     * @return a MessagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MessagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

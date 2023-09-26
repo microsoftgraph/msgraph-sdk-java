@@ -60,7 +60,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseR
     }
     /**
      * List properties and relationships of the mdmWindowsInformationProtectionPolicy objects.
-     * @return a CompletableFuture of mdmWindowsInformationProtectionPolicyCollectionResponse
+     * @return a CompletableFuture of MdmWindowsInformationProtectionPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseR
     /**
      * List properties and relationships of the mdmWindowsInformationProtectionPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mdmWindowsInformationProtectionPolicyCollectionResponse
+     * @return a CompletableFuture of MdmWindowsInformationProtectionPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseR
     /**
      * Create a new mdmWindowsInformationProtectionPolicy object.
      * @param body The request body
-     * @return a CompletableFuture of mdmWindowsInformationProtectionPolicy
+     * @return a CompletableFuture of MdmWindowsInformationProtectionPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseR
      * Create a new mdmWindowsInformationProtectionPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mdmWindowsInformationProtectionPolicy
+     * @return a CompletableFuture of MdmWindowsInformationProtectionPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseR
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a mdmWindowsInformationProtectionPoliciesRequestBuilder
+     * @return a MdmWindowsInformationProtectionPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MdmWindowsInformationProtectionPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

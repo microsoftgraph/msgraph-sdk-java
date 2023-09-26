@@ -60,7 +60,7 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Questions that are posed to the  requestor.
-     * @return a CompletableFuture of accessPackageQuestionCollectionResponse
+     * @return a CompletableFuture of AccessPackageQuestionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageQuestionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Questions that are posed to the  requestor.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageQuestionCollectionResponse
+     * @return a CompletableFuture of AccessPackageQuestionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageQuestionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to questions for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageQuestion
+     * @return a CompletableFuture of AccessPackageQuestion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageQuestion> post(@jakarta.annotation.Nonnull final AccessPackageQuestion body) {
@@ -92,7 +92,7 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to questions for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageQuestion
+     * @return a CompletableFuture of AccessPackageQuestion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageQuestion> post(@jakarta.annotation.Nonnull final AccessPackageQuestion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a questionsRequestBuilder
+     * @return a QuestionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public QuestionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

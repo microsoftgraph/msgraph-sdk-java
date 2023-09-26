@@ -60,7 +60,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of swapShiftsChangeRequest objects in the team.
-     * @return a CompletableFuture of swapShiftsChangeRequestCollectionResponse
+     * @return a CompletableFuture of SwapShiftsChangeRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of swapShiftsChangeRequest objects in the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of swapShiftsChangeRequestCollectionResponse
+     * @return a CompletableFuture of SwapShiftsChangeRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create an instance of a swapShiftsChangeRequest object.
      * @param body The request body
-     * @return a CompletableFuture of swapShiftsChangeRequest
+     * @return a CompletableFuture of SwapShiftsChangeRequest
      * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
      * Create an instance of a swapShiftsChangeRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of swapShiftsChangeRequest
+     * @return a CompletableFuture of SwapShiftsChangeRequest
      * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a swapShiftsChangeRequestsRequestBuilder
+     * @return a SwapShiftsChangeRequestsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SwapShiftsChangeRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

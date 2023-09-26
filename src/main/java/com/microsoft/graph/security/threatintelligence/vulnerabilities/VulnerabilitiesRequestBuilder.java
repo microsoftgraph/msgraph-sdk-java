@@ -60,7 +60,7 @@ public class VulnerabilitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a vulnerability object.
-     * @return a CompletableFuture of vulnerabilityCollectionResponse
+     * @return a CompletableFuture of VulnerabilityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VulnerabilityCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class VulnerabilitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a vulnerability object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of vulnerabilityCollectionResponse
+     * @return a CompletableFuture of VulnerabilityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VulnerabilityCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class VulnerabilitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to vulnerabilities for security
      * @param body The request body
-     * @return a CompletableFuture of vulnerability
+     * @return a CompletableFuture of Vulnerability
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Vulnerability> post(@jakarta.annotation.Nonnull final Vulnerability body) {
@@ -92,7 +92,7 @@ public class VulnerabilitiesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to vulnerabilities for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of vulnerability
+     * @return a CompletableFuture of Vulnerability
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Vulnerability> post(@jakarta.annotation.Nonnull final Vulnerability body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class VulnerabilitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a vulnerabilitiesRequestBuilder
+     * @return a VulnerabilitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public VulnerabilitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

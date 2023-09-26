@@ -12,7 +12,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     /**
      * The Windows Enterprise Code-Signing Certificate in the raw data format. Set to null once certificate has been uploaded and other properties have been populated.
      */
-    private byte[] content;
+    private Base64url content;
     /**
      * The cert expiration date and time (using ISO 8601 format, in UTC time). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
      */
@@ -42,7 +42,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
      */
     private OffsetDateTime uploadDateTime;
     /**
-     * Instantiates a new enterpriseCodeSigningCertificate and sets the default values.
+     * Instantiates a new EnterpriseCodeSigningCertificate and sets the default values.
      */
     public EnterpriseCodeSigningCertificate() {
         super();
@@ -50,7 +50,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a enterpriseCodeSigningCertificate
+     * @return a EnterpriseCodeSigningCertificate
      */
     @jakarta.annotation.Nonnull
     public static EnterpriseCodeSigningCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,10 +59,10 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the content property value. The Windows Enterprise Code-Signing Certificate in the raw data format. Set to null once certificate has been uploaded and other properties have been populated.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getContent() {
+    public Base64url getContent() {
         return this.content;
     }
     /**
@@ -80,7 +80,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("issuer", (n) -> { this.setIssuer(n.getStringValue()); });
         deserializerMap.put("issuerName", (n) -> { this.setIssuerName(n.getStringValue()); });
@@ -92,7 +92,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the issuer property value. The issuer value for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssuer() {
@@ -100,7 +100,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the issuerName property value. The issuer name for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssuerName() {
@@ -108,7 +108,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the status property value. The status property
-     * @return a certificateStatus
+     * @return a CertificateStatus
      */
     @jakarta.annotation.Nullable
     public CertificateStatus getStatus() {
@@ -116,7 +116,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the subject property value. The subject value for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
@@ -124,7 +124,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the subjectName property value. The subject name for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectName() {
@@ -145,7 +145,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeByteArrayValue("content", this.getContent());
+        writer.writeObjectValue("content", this.getContent());
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
         writer.writeStringValue("issuer", this.getIssuer());
         writer.writeStringValue("issuerName", this.getIssuerName());
@@ -158,7 +158,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
      * Sets the content property value. The Windows Enterprise Code-Signing Certificate in the raw data format. Set to null once certificate has been uploaded and other properties have been populated.
      * @param value Value to set for the content property.
      */
-    public void setContent(@jakarta.annotation.Nullable final byte[] value) {
+    public void setContent(@jakarta.annotation.Nullable final Base64url value) {
         this.content = value;
     }
     /**

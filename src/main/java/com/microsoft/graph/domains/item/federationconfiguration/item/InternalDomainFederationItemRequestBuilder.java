@@ -59,7 +59,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * Read the properties and relationships of an internalDomainFederation object.
-     * @return a CompletableFuture of internalDomainFederation
+     * @return a CompletableFuture of InternalDomainFederation
      * @see <a href="https://learn.microsoft.com/graph/api/internaldomainfederation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
     /**
      * Read the properties and relationships of an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of internalDomainFederation
+     * @return a CompletableFuture of InternalDomainFederation
      * @see <a href="https://learn.microsoft.com/graph/api/internaldomainfederation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the properties of an internalDomainFederation object.
      * @param body The request body
-     * @return a CompletableFuture of internalDomainFederation
+     * @return a CompletableFuture of InternalDomainFederation
      * @see <a href="https://learn.microsoft.com/graph/api/internaldomainfederation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
      * Update the properties of an internalDomainFederation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of internalDomainFederation
+     * @return a CompletableFuture of InternalDomainFederation
      * @see <a href="https://learn.microsoft.com/graph/api/internaldomainfederation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

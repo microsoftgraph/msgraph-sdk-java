@@ -59,7 +59,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a browserSite that resides on a browserSiteList.
-     * @return a CompletableFuture of browserSite
+     * @return a CompletableFuture of BrowserSite
      * @see <a href="https://learn.microsoft.com/graph/api/browsersite-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a browserSite that resides on a browserSiteList.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of browserSite
+     * @return a CompletableFuture of BrowserSite
      * @see <a href="https://learn.microsoft.com/graph/api/browsersite-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a browserSite object.
      * @param body The request body
-     * @return a CompletableFuture of browserSite
+     * @return a CompletableFuture of BrowserSite
      * @see <a href="https://learn.microsoft.com/graph/api/browsersite-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a browserSite object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of browserSite
+     * @return a CompletableFuture of BrowserSite
      * @see <a href="https://learn.microsoft.com/graph/api/browsersite-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

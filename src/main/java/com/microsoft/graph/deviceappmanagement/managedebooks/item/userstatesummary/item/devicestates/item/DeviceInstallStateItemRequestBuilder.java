@@ -57,7 +57,7 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The install state of the eBook.
-     * @return a CompletableFuture of deviceInstallState
+     * @return a CompletableFuture of DeviceInstallState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceInstallState> get() {
@@ -66,7 +66,7 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The install state of the eBook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceInstallState
+     * @return a CompletableFuture of DeviceInstallState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceInstallState> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property deviceStates in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceInstallState
+     * @return a CompletableFuture of DeviceInstallState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceInstallState> patch(@jakarta.annotation.Nonnull final DeviceInstallState body) {
@@ -89,7 +89,7 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property deviceStates in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceInstallState
+     * @return a CompletableFuture of DeviceInstallState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceInstallState> patch(@jakarta.annotation.Nonnull final DeviceInstallState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

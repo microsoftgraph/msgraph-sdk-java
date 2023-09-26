@@ -57,7 +57,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
     }
     /**
      * Navigation property to list of security groups targeted for policy.
-     * @return a CompletableFuture of targetedManagedAppPolicyAssignment
+     * @return a CompletableFuture of TargetedManagedAppPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> get() {
@@ -66,7 +66,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
     /**
      * Navigation property to list of security groups targeted for policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of targetedManagedAppPolicyAssignment
+     * @return a CompletableFuture of TargetedManagedAppPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
     /**
      * Update the navigation property assignments in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of targetedManagedAppPolicyAssignment
+     * @return a CompletableFuture of TargetedManagedAppPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> patch(@jakarta.annotation.Nonnull final TargetedManagedAppPolicyAssignment body) {
@@ -89,7 +89,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
      * Update the navigation property assignments in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of targetedManagedAppPolicyAssignment
+     * @return a CompletableFuture of TargetedManagedAppPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> patch(@jakarta.annotation.Nonnull final TargetedManagedAppPolicyAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

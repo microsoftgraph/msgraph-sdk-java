@@ -17,7 +17,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
      */
     private AuthenticationMethodState state;
     /**
-     * Instantiates a new authenticationMethodConfiguration and sets the default values.
+     * Instantiates a new AuthenticationMethodConfiguration and sets the default values.
      */
     public AuthenticationMethodConfiguration() {
         super();
@@ -25,7 +25,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationMethodConfiguration
+     * @return a AuthenticationMethodConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationMethodConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,7 +48,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     }
     /**
      * Gets the excludeTargets property value. Groups of users that are excluded from a policy.
-     * @return a excludeTarget
+     * @return a java.util.List<ExcludeTarget>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExcludeTarget> getExcludeTargets() {
@@ -67,7 +67,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     }
     /**
      * Gets the state property value. The state of the policy. Possible values are: enabled, disabled.
-     * @return a authenticationMethodState
+     * @return a AuthenticationMethodState
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodState getState() {

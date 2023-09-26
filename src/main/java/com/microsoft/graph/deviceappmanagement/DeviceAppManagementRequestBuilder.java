@@ -158,7 +158,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read properties and relationships of the deviceAppManagement object.
-     * @return a CompletableFuture of deviceAppManagement
+     * @return a CompletableFuture of DeviceAppManagement
      * @see <a href="https://learn.microsoft.com/graph/api/intune-unlock-deviceappmanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -168,7 +168,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the deviceAppManagement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceAppManagement
+     * @return a CompletableFuture of DeviceAppManagement
      * @see <a href="https://learn.microsoft.com/graph/api/intune-unlock-deviceappmanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -182,8 +182,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a deviceAppManagement object.
      * @param body The request body
-     * @return a CompletableFuture of deviceAppManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceappmanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of DeviceAppManagement
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-partnerintegration-deviceappmanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAppManagement> patch(@jakarta.annotation.Nonnull final DeviceAppManagement body) {
@@ -193,8 +193,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a deviceAppManagement object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceAppManagement
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceappmanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of DeviceAppManagement
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-partnerintegration-deviceappmanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAppManagement> patch(@jakarta.annotation.Nonnull final DeviceAppManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -269,7 +269,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceAppManagementRequestBuilder
+     * @return a DeviceAppManagementRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceAppManagementRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

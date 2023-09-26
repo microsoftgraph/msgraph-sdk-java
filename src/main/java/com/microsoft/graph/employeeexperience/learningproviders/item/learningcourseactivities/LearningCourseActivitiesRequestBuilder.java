@@ -60,7 +60,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get learningCourseActivities from employeeExperience
-     * @return a CompletableFuture of learningCourseActivityCollectionResponse
+     * @return a CompletableFuture of LearningCourseActivityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningCourseActivityCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get learningCourseActivities from employeeExperience
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of learningCourseActivityCollectionResponse
+     * @return a CompletableFuture of LearningCourseActivityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningCourseActivityCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new learningCourseActivity object. A learning course activity can be one of two types: - Assignment- Self-initiated Use this method to create either type of activity.
      * @param body The request body
-     * @return a CompletableFuture of learningCourseActivity
+     * @return a CompletableFuture of LearningCourseActivity
      * @see <a href="https://learn.microsoft.com/graph/api/employeeexperienceuser-post-learningcourseactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
      * Create a new learningCourseActivity object. A learning course activity can be one of two types: - Assignment- Self-initiated Use this method to create either type of activity.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of learningCourseActivity
+     * @return a CompletableFuture of LearningCourseActivity
      * @see <a href="https://learn.microsoft.com/graph/api/employeeexperienceuser-post-learningcourseactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a learningCourseActivitiesRequestBuilder
+     * @return a LearningCourseActivitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LearningCourseActivitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

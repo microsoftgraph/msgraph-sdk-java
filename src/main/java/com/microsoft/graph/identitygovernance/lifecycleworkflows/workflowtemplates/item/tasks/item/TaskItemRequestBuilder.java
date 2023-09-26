@@ -46,7 +46,7 @@ public class TaskItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents the configured tasks to execute and their execution sequence within a workflow. This relationship is expanded by default.
-     * @return a CompletableFuture of task
+     * @return a CompletableFuture of Task
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Task> get() {
@@ -55,7 +55,7 @@ public class TaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the configured tasks to execute and their execution sequence within a workflow. This relationship is expanded by default.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of task
+     * @return a CompletableFuture of Task
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Task> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

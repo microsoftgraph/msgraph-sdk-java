@@ -38,7 +38,7 @@ public class AllTimeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get [itemAnalytics][] about the views that took place under this resource.The itemAnalytics resource is a convenient way to get activity stats for allTime and the lastSevenDays.For a custom time range or interval, use the [getActivitiesByInterval][] API.
-     * @return a CompletableFuture of itemActivityStat
+     * @return a CompletableFuture of ItemActivityStat
      * @see <a href="https://learn.microsoft.com/graph/api/itemanalytics-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class AllTimeRequestBuilder extends BaseRequestBuilder {
     /**
      * Get [itemAnalytics][] about the views that took place under this resource.The itemAnalytics resource is a convenient way to get activity stats for allTime and the lastSevenDays.For a custom time range or interval, use the [getActivitiesByInterval][] API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemActivityStat
+     * @return a CompletableFuture of ItemActivityStat
      * @see <a href="https://learn.microsoft.com/graph/api/itemanalytics-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class AllTimeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a allTimeRequestBuilder
+     * @return a AllTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AllTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

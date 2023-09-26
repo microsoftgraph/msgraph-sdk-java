@@ -68,7 +68,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of attachment objects attached to an event.
-     * @return a CompletableFuture of attachmentCollectionResponse
+     * @return a CompletableFuture of AttachmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/event-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of attachment objects attached to an event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attachmentCollectionResponse
+     * @return a CompletableFuture of AttachmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/event-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to add an attachment to an existing event. This operation limits the size of the attachment you can add to under 3 MB. If an organizer adds an attachment to a meeting event, the organizer can subsequently update the event to send the attachment and update the event for each attendee as well.
      * @param body The request body
-     * @return a CompletableFuture of attachment
+     * @return a CompletableFuture of Attachment
      * @see <a href="https://learn.microsoft.com/graph/api/event-post-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
      * Use this API to add an attachment to an existing event. This operation limits the size of the attachment you can add to under 3 MB. If an organizer adds an attachment to a meeting event, the organizer can subsequently update the event to send the attachment and update the event for each attendee as well.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attachment
+     * @return a CompletableFuture of Attachment
      * @see <a href="https://learn.microsoft.com/graph/api/event-post-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a attachmentsRequestBuilder
+     * @return a AttachmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AttachmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -67,7 +67,7 @@ public class AllowedGroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
-     * @return a CompletableFuture of groupCollectionResponse
+     * @return a CompletableFuture of GroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-list-allowedgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class AllowedGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupCollectionResponse
+     * @return a CompletableFuture of GroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-list-allowedgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -120,7 +120,7 @@ public class AllowedGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a allowedGroupsRequestBuilder
+     * @return a AllowedGroupsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AllowedGroupsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

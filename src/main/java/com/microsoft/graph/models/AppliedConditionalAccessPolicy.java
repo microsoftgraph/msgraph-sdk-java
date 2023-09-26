@@ -34,11 +34,11 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      */
     private String odataType;
     /**
-     * Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
+     * Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions weren't met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
      */
     private AppliedConditionalAccessPolicyResult result;
     /**
-     * Instantiates a new appliedConditionalAccessPolicy and sets the default values.
+     * Instantiates a new AppliedConditionalAccessPolicy and sets the default values.
      */
     public AppliedConditionalAccessPolicy() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appliedConditionalAccessPolicy
+     * @return a AppliedConditionalAccessPolicy
      */
     @jakarta.annotation.Nonnull
     public static AppliedConditionalAccessPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
         return new AppliedConditionalAccessPolicy();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
     }
     /**
      * Gets the displayName property value. Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -71,7 +71,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
     }
     /**
      * Gets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication').
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnforcedGrantControls() {
@@ -79,7 +79,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
     }
     /**
      * Gets the enforcedSessionControls property value. Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnforcedSessionControls() {
@@ -102,7 +102,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
     }
     /**
      * Gets the id property value. An identifier of the conditional access policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -110,15 +110,15 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
-     * @return a appliedConditionalAccessPolicyResult
+     * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions weren't met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
+     * @return a AppliedConditionalAccessPolicyResult
      */
     @jakarta.annotation.Nullable
     public AppliedConditionalAccessPolicyResult getResult() {
@@ -139,8 +139,8 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -181,7 +181,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
         this.odataType = value;
     }
     /**
-     * Sets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
+     * Sets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions weren't met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
      * @param value Value to set for the result property.
      */
     public void setResult(@jakarta.annotation.Nullable final AppliedConditionalAccessPolicyResult value) {

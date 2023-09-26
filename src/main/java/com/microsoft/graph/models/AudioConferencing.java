@@ -42,7 +42,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<String> tollNumbers;
     /**
-     * Instantiates a new audioConferencing and sets the default values.
+     * Instantiates a new AudioConferencing and sets the default values.
      */
     public AudioConferencing() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a audioConferencing
+     * @return a AudioConferencing
      */
     @jakarta.annotation.Nonnull
     public static AudioConferencing createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
         return new AudioConferencing();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the conferenceId property value. The conference id of the online meeting.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConferenceId() {
@@ -75,7 +75,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the dialinUrl property value. A URL to the externally-accessible web page that contains dial-in information.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDialinUrl() {
@@ -99,7 +99,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -107,7 +107,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tollFreeNumber property value. The tollFreeNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTollFreeNumber() {
@@ -115,7 +115,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tollFreeNumbers property value. List of toll-free numbers that are displayed in the meeting invite.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTollFreeNumbers() {
@@ -123,7 +123,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tollNumber property value. The tollNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTollNumber() {
@@ -131,7 +131,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tollNumbers property value. List of toll numbers that are displayed in the meeting invite.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTollNumbers() {
@@ -153,8 +153,8 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

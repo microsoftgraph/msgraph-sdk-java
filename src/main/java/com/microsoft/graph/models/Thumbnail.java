@@ -16,7 +16,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     /**
      * The content stream for the thumbnail.
      */
-    private byte[] content;
+    private Base64url content;
     /**
      * The height of the thumbnail, in pixels.
      */
@@ -38,7 +38,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      */
     private Integer width;
     /**
-     * Instantiates a new thumbnail and sets the default values.
+     * Instantiates a new Thumbnail and sets the default values.
      */
     public Thumbnail() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a thumbnail
+     * @return a Thumbnail
      */
     @jakarta.annotation.Nonnull
     public static Thumbnail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
         return new Thumbnail();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,10 +63,10 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the content property value. The content stream for the thumbnail.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getContent() {
+    public Base64url getContent() {
         return this.content;
     }
     /**
@@ -76,7 +76,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
-        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("height", (n) -> { this.setHeight(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("sourceItemId", (n) -> { this.setSourceItemId(n.getStringValue()); });
@@ -86,7 +86,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the height property value. The height of the thumbnail, in pixels.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getHeight() {
@@ -94,7 +94,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -102,7 +102,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sourceItemId property value. The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceItemId() {
@@ -110,7 +110,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the url property value. The URL used to fetch the thumbnail content.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
@@ -118,7 +118,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the width property value. The width of the thumbnail, in pixels.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWidth() {
@@ -130,7 +130,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeByteArrayValue("content", this.getContent());
+        writer.writeObjectValue("content", this.getContent());
         writer.writeIntegerValue("height", this.getHeight());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("sourceItemId", this.getSourceItemId());
@@ -139,8 +139,8 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -149,7 +149,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      * Sets the content property value. The content stream for the thumbnail.
      * @param value Value to set for the content property.
      */
-    public void setContent(@jakarta.annotation.Nullable final byte[] value) {
+    public void setContent(@jakarta.annotation.Nullable final Base64url value) {
         this.content = value;
     }
     /**

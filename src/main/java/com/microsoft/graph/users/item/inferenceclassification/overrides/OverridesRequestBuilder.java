@@ -60,7 +60,7 @@ public class OverridesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the overrides that a user has set up to always classify messages from certain senders in specific ways. Each override corresponds to an SMTP address of a sender. Initially, a user does not have any overrides.
-     * @return a CompletableFuture of inferenceClassificationOverrideCollectionResponse
+     * @return a CompletableFuture of InferenceClassificationOverrideCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/inferenceclassification-list-overrides?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class OverridesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the overrides that a user has set up to always classify messages from certain senders in specific ways. Each override corresponds to an SMTP address of a sender. Initially, a user does not have any overrides.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of inferenceClassificationOverrideCollectionResponse
+     * @return a CompletableFuture of InferenceClassificationOverrideCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/inferenceclassification-list-overrides?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class OverridesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create an override for a sender identified by an SMTP address. Future messages from that SMTP address will be consistently classifiedas specified in the override. Note
      * @param body The request body
-     * @return a CompletableFuture of inferenceClassificationOverride
+     * @return a CompletableFuture of InferenceClassificationOverride
      * @see <a href="https://learn.microsoft.com/graph/api/inferenceclassification-post-overrides?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class OverridesRequestBuilder extends BaseRequestBuilder {
      * Create an override for a sender identified by an SMTP address. Future messages from that SMTP address will be consistently classifiedas specified in the override. Note
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of inferenceClassificationOverride
+     * @return a CompletableFuture of InferenceClassificationOverride
      * @see <a href="https://learn.microsoft.com/graph/api/inferenceclassification-post-overrides?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class OverridesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a overridesRequestBuilder
+     * @return a OverridesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OverridesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

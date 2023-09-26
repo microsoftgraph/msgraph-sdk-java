@@ -68,8 +68,8 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of worksheet objects.
-     * @return a CompletableFuture of workbookWorksheetCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/workbook-list-worksheets?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of WorkbookWorksheetCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookWorksheetCollectionResponse> get() {
@@ -78,8 +78,8 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of worksheet objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookWorksheetCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/workbook-list-worksheets?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of WorkbookWorksheetCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookWorksheetCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -92,7 +92,7 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to worksheets for drives
      * @param body The request body
-     * @return a CompletableFuture of workbookWorksheet
+     * @return a CompletableFuture of WorkbookWorksheet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookWorksheet> post(@jakarta.annotation.Nonnull final WorkbookWorksheet body) {
@@ -102,7 +102,7 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to worksheets for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookWorksheet
+     * @return a CompletableFuture of WorkbookWorksheet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookWorksheet> post(@jakarta.annotation.Nonnull final WorkbookWorksheet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -177,7 +177,7 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a worksheetsRequestBuilder
+     * @return a WorksheetsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WorksheetsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

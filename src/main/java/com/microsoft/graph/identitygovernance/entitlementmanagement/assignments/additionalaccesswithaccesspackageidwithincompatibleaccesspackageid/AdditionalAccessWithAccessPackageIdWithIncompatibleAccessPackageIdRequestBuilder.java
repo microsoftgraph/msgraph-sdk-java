@@ -41,7 +41,7 @@ public class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdR
     }
     /**
      * Invoke function additionalAccess
-     * @return a CompletableFuture of additionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdResponse
+     * @return a CompletableFuture of AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdResponse> get() {
@@ -50,7 +50,7 @@ public class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdR
     /**
      * Invoke function additionalAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of additionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdResponse
+     * @return a CompletableFuture of AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -92,7 +92,7 @@ public class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdR
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a additionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder
+     * @return a AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

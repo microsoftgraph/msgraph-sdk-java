@@ -59,7 +59,7 @@ public class SchemaExtensionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get schemaExtension
-     * @return a CompletableFuture of schemaExtension
+     * @return a CompletableFuture of SchemaExtension
      * @see <a href="https://learn.microsoft.com/graph/api/schemaextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class SchemaExtensionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get schemaExtension
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of schemaExtension
+     * @return a CompletableFuture of SchemaExtension
      * @see <a href="https://learn.microsoft.com/graph/api/schemaextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class SchemaExtensionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update properties in the definition of the specified schemaExtension. Additive updates to the extension can only be made when the extension is in the InDevelopment or Available status. This means custom properties or target resource types cannot be removed from the definition, but new custom properties can be added and the description of the extension changed. The update applies to all the resources that are included in the targetTypes property of the extension. These resources are among the supporting resource types. For delegated flows, the signed-in user can update a schema extension as long as the owner property of the extension is set to the appId of an application the signed-in user owns. That application can be the one that initially created the extension, or some other application owned by the signed-in user.  This criteria for the owner property allows a signed-in user to make updates through other applications they don't own, such as Microsoft Graph Explorer. When using Graph Explorer to update a schemaExtension resource, include the owner property in the PATCH request body.
      * @param body The request body
-     * @return a CompletableFuture of schemaExtension
+     * @return a CompletableFuture of SchemaExtension
      * @see <a href="https://learn.microsoft.com/graph/api/schemaextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class SchemaExtensionItemRequestBuilder extends BaseRequestBuilder {
      * Update properties in the definition of the specified schemaExtension. Additive updates to the extension can only be made when the extension is in the InDevelopment or Available status. This means custom properties or target resource types cannot be removed from the definition, but new custom properties can be added and the description of the extension changed. The update applies to all the resources that are included in the targetTypes property of the extension. These resources are among the supporting resource types. For delegated flows, the signed-in user can update a schema extension as long as the owner property of the extension is set to the appId of an application the signed-in user owns. That application can be the one that initially created the extension, or some other application owned by the signed-in user.  This criteria for the owner property allows a signed-in user to make updates through other applications they don't own, such as Microsoft Graph Explorer. When using Graph Explorer to update a schemaExtension resource, include the owner property in the PATCH request body.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of schemaExtension
+     * @return a CompletableFuture of SchemaExtension
      * @see <a href="https://learn.microsoft.com/graph/api/schemaextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

@@ -15,7 +15,7 @@ public class TranslateExchangeIdsResponse extends BaseCollectionPaginationCountR
      */
     private java.util.List<ConvertIdResult> value;
     /**
-     * Instantiates a new translateExchangeIdsResponse and sets the default values.
+     * Instantiates a new TranslateExchangeIdsResponse and sets the default values.
      */
     public TranslateExchangeIdsResponse() {
         super();
@@ -23,7 +23,7 @@ public class TranslateExchangeIdsResponse extends BaseCollectionPaginationCountR
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a translateExchangeIdsResponse
+     * @return a TranslateExchangeIdsResponse
      */
     @jakarta.annotation.Nonnull
     public static TranslateExchangeIdsResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class TranslateExchangeIdsResponse extends BaseCollectionPaginationCountR
     }
     /**
      * Gets the value property value. The value property
-     * @return a convertIdResult
+     * @return a java.util.List<ConvertIdResult>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConvertIdResult> getValue() {

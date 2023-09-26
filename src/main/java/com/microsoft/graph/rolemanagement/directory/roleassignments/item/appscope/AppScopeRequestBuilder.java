@@ -57,7 +57,7 @@ public class AppScopeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
-     * @return a CompletableFuture of appScope
+     * @return a CompletableFuture of AppScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppScope> get() {
@@ -66,7 +66,7 @@ public class AppScopeRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appScope
+     * @return a CompletableFuture of AppScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppScope> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AppScopeRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property appScope in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of appScope
+     * @return a CompletableFuture of AppScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppScope> patch(@jakarta.annotation.Nonnull final AppScope body) {
@@ -89,7 +89,7 @@ public class AppScopeRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property appScope in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appScope
+     * @return a CompletableFuture of AppScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppScope> patch(@jakarta.annotation.Nonnull final AppScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class AppScopeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appScopeRequestBuilder
+     * @return a AppScopeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppScopeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

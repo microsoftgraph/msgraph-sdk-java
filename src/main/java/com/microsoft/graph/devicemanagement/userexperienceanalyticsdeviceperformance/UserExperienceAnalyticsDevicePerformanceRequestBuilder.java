@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
     }
     /**
      * User experience analytics device performance
-     * @return a CompletableFuture of userExperienceAnalyticsDevicePerformanceCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsDevicePerformanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDevicePerformanceCollectionResponse> get() {
@@ -70,7 +70,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
     /**
      * User experience analytics device performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDevicePerformanceCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsDevicePerformanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDevicePerformanceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
     /**
      * Create new navigation property to userExperienceAnalyticsDevicePerformance for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsDevicePerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsDevicePerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDevicePerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDevicePerformance body) {
@@ -93,7 +93,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
      * Create new navigation property to userExperienceAnalyticsDevicePerformance for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDevicePerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsDevicePerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDevicePerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDevicePerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +107,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
     /**
      * Provides operations to call the summarizeDevicePerformanceDevices method.
      * @param summarizeBy Usage: summarizeBy='{summarizeBy}'
-     * @return a summarizeDevicePerformanceDevicesWithSummarizeByRequestBuilder
+     * @return a SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilder summarizeDevicePerformanceDevicesWithSummarizeBy(@jakarta.annotation.Nonnull final String summarizeBy) {
@@ -178,7 +178,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsDevicePerformanceRequestBuilder
+     * @return a UserExperienceAnalyticsDevicePerformanceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsDevicePerformanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

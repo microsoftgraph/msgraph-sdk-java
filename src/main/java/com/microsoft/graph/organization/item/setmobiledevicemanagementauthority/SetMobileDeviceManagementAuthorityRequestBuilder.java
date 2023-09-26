@@ -36,7 +36,7 @@ public class SetMobileDeviceManagementAuthorityRequestBuilder extends BaseReques
     }
     /**
      * Set mobile device management authority
-     * @return a CompletableFuture of setMobileDeviceManagementAuthorityResponse
+     * @return a CompletableFuture of SetMobileDeviceManagementAuthorityResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-organization-setmobiledevicemanagementauthority?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,7 +46,7 @@ public class SetMobileDeviceManagementAuthorityRequestBuilder extends BaseReques
     /**
      * Set mobile device management authority
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of setMobileDeviceManagementAuthorityResponse
+     * @return a CompletableFuture of SetMobileDeviceManagementAuthorityResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-organization-setmobiledevicemanagementauthority?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -88,7 +88,7 @@ public class SetMobileDeviceManagementAuthorityRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a setMobileDeviceManagementAuthorityRequestBuilder
+     * @return a SetMobileDeviceManagementAuthorityRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SetMobileDeviceManagementAuthorityRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

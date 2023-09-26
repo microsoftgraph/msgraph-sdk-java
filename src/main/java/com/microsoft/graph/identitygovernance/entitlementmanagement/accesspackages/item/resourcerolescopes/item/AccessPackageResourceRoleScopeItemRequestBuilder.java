@@ -75,7 +75,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
     }
     /**
      * The resource roles and scopes in this access package.
-     * @return a CompletableFuture of accessPackageResourceRoleScope
+     * @return a CompletableFuture of AccessPackageResourceRoleScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> get() {
@@ -84,7 +84,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
     /**
      * The resource roles and scopes in this access package.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceRoleScope
+     * @return a CompletableFuture of AccessPackageResourceRoleScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +97,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property resourceRoleScopes in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageResourceRoleScope
+     * @return a CompletableFuture of AccessPackageResourceRoleScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> patch(@jakarta.annotation.Nonnull final AccessPackageResourceRoleScope body) {
@@ -107,7 +107,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
      * Update the navigation property resourceRoleScopes in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceRoleScope
+     * @return a CompletableFuture of AccessPackageResourceRoleScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> patch(@jakarta.annotation.Nonnull final AccessPackageResourceRoleScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

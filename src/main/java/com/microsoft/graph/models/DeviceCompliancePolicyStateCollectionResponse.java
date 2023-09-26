@@ -13,7 +13,7 @@ public class DeviceCompliancePolicyStateCollectionResponse extends BaseCollectio
      */
     private java.util.List<DeviceCompliancePolicyState> value;
     /**
-     * Instantiates a new deviceCompliancePolicyStateCollectionResponse and sets the default values.
+     * Instantiates a new DeviceCompliancePolicyStateCollectionResponse and sets the default values.
      */
     public DeviceCompliancePolicyStateCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DeviceCompliancePolicyStateCollectionResponse extends BaseCollectio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceCompliancePolicyStateCollectionResponse
+     * @return a DeviceCompliancePolicyStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceCompliancePolicyStateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DeviceCompliancePolicyStateCollectionResponse extends BaseCollectio
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceCompliancePolicyState
+     * @return a java.util.List<DeviceCompliancePolicyState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceCompliancePolicyState> getValue() {

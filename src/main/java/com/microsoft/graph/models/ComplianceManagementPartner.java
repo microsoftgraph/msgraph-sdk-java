@@ -49,7 +49,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     private DeviceManagementPartnerTenantState partnerState;
     /**
-     * Instantiates a new complianceManagementPartner and sets the default values.
+     * Instantiates a new ComplianceManagementPartner and sets the default values.
      */
     public ComplianceManagementPartner() {
         super();
@@ -57,7 +57,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a complianceManagementPartner
+     * @return a ComplianceManagementPartner
      */
     @jakarta.annotation.Nonnull
     public static ComplianceManagementPartner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     }
     /**
      * Gets the androidEnrollmentAssignments property value. User groups which enroll Android devices through partner.
-     * @return a complianceManagementPartnerAssignment
+     * @return a java.util.List<ComplianceManagementPartnerAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ComplianceManagementPartnerAssignment> getAndroidEnrollmentAssignments() {
@@ -74,7 +74,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     }
     /**
      * Gets the androidOnboarded property value. Partner onboarded for Android devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAndroidOnboarded() {
@@ -82,7 +82,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Partner display name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -108,7 +108,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     }
     /**
      * Gets the iosEnrollmentAssignments property value. User groups which enroll ios devices through partner.
-     * @return a complianceManagementPartnerAssignment
+     * @return a java.util.List<ComplianceManagementPartnerAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ComplianceManagementPartnerAssignment> getIosEnrollmentAssignments() {
@@ -116,7 +116,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     }
     /**
      * Gets the iosOnboarded property value. Partner onboarded for ios devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIosOnboarded() {
@@ -132,7 +132,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     }
     /**
      * Gets the macOsEnrollmentAssignments property value. User groups which enroll Mac devices through partner.
-     * @return a complianceManagementPartnerAssignment
+     * @return a java.util.List<ComplianceManagementPartnerAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ComplianceManagementPartnerAssignment> getMacOsEnrollmentAssignments() {
@@ -140,7 +140,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     }
     /**
      * Gets the macOsOnboarded property value. Partner onboarded for Mac devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMacOsOnboarded() {
@@ -148,7 +148,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     }
     /**
      * Gets the partnerState property value. Partner state of this tenant.
-     * @return a deviceManagementPartnerTenantState
+     * @return a DeviceManagementPartnerTenantState
      */
     @jakarta.annotation.Nullable
     public DeviceManagementPartnerTenantState getPartnerState() {

@@ -65,7 +65,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read properties and relationships of the windowsProtectionState object.
-     * @return a CompletableFuture of windowsProtectionState
+     * @return a CompletableFuture of WindowsProtectionState
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-windowsprotectionstate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the windowsProtectionState object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsProtectionState
+     * @return a CompletableFuture of WindowsProtectionState
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-windowsprotectionstate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a windowsProtectionState object.
      * @param body The request body
-     * @return a CompletableFuture of windowsProtectionState
+     * @return a CompletableFuture of WindowsProtectionState
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-windowsprotectionstate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a windowsProtectionState object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsProtectionState
+     * @return a CompletableFuture of WindowsProtectionState
      * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-windowsprotectionstate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -203,7 +203,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a windowsProtectionStateRequestBuilder
+     * @return a WindowsProtectionStateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WindowsProtectionStateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -59,7 +59,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of oAuth2PermissionGrant entities, representing delegated permissions granted to the service principal (representing the client application) to access an API on behalf of a user.
-     * @return a CompletableFuture of oAuth2PermissionGrantCollectionResponse
+     * @return a CompletableFuture of OAuth2PermissionGrantCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-oauth2permissiongrants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of oAuth2PermissionGrant entities, representing delegated permissions granted to the service principal (representing the client application) to access an API on behalf of a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of oAuth2PermissionGrantCollectionResponse
+     * @return a CompletableFuture of OAuth2PermissionGrantCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-oauth2permissiongrants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a oauth2PermissionGrantsRequestBuilder
+     * @return a Oauth2PermissionGrantsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public Oauth2PermissionGrantsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

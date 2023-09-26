@@ -17,7 +17,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
      */
     private EducationResource resource;
     /**
-     * Instantiates a new educationAssignmentResource and sets the default values.
+     * Instantiates a new EducationAssignmentResource and sets the default values.
      */
     public EducationAssignmentResource() {
         super();
@@ -25,7 +25,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationAssignmentResource
+     * @return a EducationAssignmentResource
      */
     @jakarta.annotation.Nonnull
     public static EducationAssignmentResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     }
     /**
      * Gets the distributeForStudentWork property value. Indicates whether this resource should be copied to each student submission for modification and submission. Required
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDistributeForStudentWork() {
@@ -53,7 +53,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. Resource object that has been associated with this assignment.
-     * @return a educationResource
+     * @return a EducationResource
      */
     @jakarta.annotation.Nullable
     public EducationResource getResource() {

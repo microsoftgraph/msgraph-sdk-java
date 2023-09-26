@@ -38,7 +38,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action add
      * @param body The request body
-     * @return a CompletableFuture of workbookTable
+     * @return a CompletableFuture of WorkbookTable
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTable> post(@jakarta.annotation.Nonnull final AddPostRequestBody body) {
@@ -48,7 +48,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
      * Invoke action add
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookTable
+     * @return a CompletableFuture of WorkbookTable
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTable> post(@jakarta.annotation.Nonnull final AddPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -94,7 +94,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a addRequestBuilder
+     * @return a AddRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AddRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

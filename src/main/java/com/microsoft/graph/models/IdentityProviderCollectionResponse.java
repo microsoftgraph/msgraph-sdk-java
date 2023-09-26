@@ -13,7 +13,7 @@ public class IdentityProviderCollectionResponse extends BaseCollectionPagination
      */
     private java.util.List<IdentityProvider> value;
     /**
-     * Instantiates a new identityProviderCollectionResponse and sets the default values.
+     * Instantiates a new IdentityProviderCollectionResponse and sets the default values.
      */
     public IdentityProviderCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class IdentityProviderCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identityProviderCollectionResponse
+     * @return a IdentityProviderCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static IdentityProviderCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class IdentityProviderCollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a identityProvider
+     * @return a java.util.List<IdentityProvider>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProvider> getValue() {

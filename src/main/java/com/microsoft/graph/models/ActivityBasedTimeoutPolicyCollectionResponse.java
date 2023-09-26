@@ -13,7 +13,7 @@ public class ActivityBasedTimeoutPolicyCollectionResponse extends BaseCollection
      */
     private java.util.List<ActivityBasedTimeoutPolicy> value;
     /**
-     * Instantiates a new activityBasedTimeoutPolicyCollectionResponse and sets the default values.
+     * Instantiates a new ActivityBasedTimeoutPolicyCollectionResponse and sets the default values.
      */
     public ActivityBasedTimeoutPolicyCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ActivityBasedTimeoutPolicyCollectionResponse extends BaseCollection
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a activityBasedTimeoutPolicyCollectionResponse
+     * @return a ActivityBasedTimeoutPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ActivityBasedTimeoutPolicyCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ActivityBasedTimeoutPolicyCollectionResponse extends BaseCollection
     }
     /**
      * Gets the value property value. The value property
-     * @return a activityBasedTimeoutPolicy
+     * @return a java.util.List<ActivityBasedTimeoutPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActivityBasedTimeoutPolicy> getValue() {

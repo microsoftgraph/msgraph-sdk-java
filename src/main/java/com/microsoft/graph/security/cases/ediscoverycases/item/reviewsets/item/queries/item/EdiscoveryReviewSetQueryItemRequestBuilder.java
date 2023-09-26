@@ -75,7 +75,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * Read the properties and relationships of an ediscoveryReviewSetQuery object.
-     * @return a CompletableFuture of ediscoveryReviewSetQuery
+     * @return a CompletableFuture of EdiscoveryReviewSetQuery
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
     /**
      * Read the properties and relationships of an ediscoveryReviewSetQuery object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryReviewSetQuery
+     * @return a CompletableFuture of EdiscoveryReviewSetQuery
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the properties of an ediscoveryReviewSetQuery object.
      * @param body The request body
-     * @return a CompletableFuture of ediscoveryReviewSetQuery
+     * @return a CompletableFuture of EdiscoveryReviewSetQuery
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +110,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
      * Update the properties of an ediscoveryReviewSetQuery object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryReviewSetQuery
+     * @return a CompletableFuture of EdiscoveryReviewSetQuery
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

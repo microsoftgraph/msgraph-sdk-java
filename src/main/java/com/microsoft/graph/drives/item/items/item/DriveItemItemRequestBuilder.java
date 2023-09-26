@@ -279,7 +279,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the delta method.
      * @param token Usage: token='{token}'
-     * @return a deltaWithTokenRequestBuilder
+     * @return a DeltaWithTokenRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeltaWithTokenRequestBuilder deltaWithToken(@jakarta.annotation.Nonnull final String token) {
@@ -288,7 +288,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * All items contained in the drive. Read-only. Nullable.
-     * @return a CompletableFuture of driveItem
+     * @return a CompletableFuture of DriveItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> get() {
@@ -297,7 +297,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * All items contained in the drive. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of driveItem
+     * @return a CompletableFuture of DriveItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -312,7 +312,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime='{endDateTime}'
      * @param interval Usage: interval='{interval}'
      * @param startDateTime Usage: startDateTime='{startDateTime}'
-     * @return a getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+     * @return a GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String interval, @jakarta.annotation.Nonnull final String startDateTime) {
@@ -324,7 +324,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the metadata for a driveItem by ID or path. You can also use update to move an item to another parent by updating the item's parentReference property.
      * @param body The request body
-     * @return a CompletableFuture of driveItem
+     * @return a CompletableFuture of DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -335,7 +335,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
      * Update the metadata for a driveItem by ID or path. You can also use update to move an item to another parent by updating the item's parentReference property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of driveItem
+     * @return a CompletableFuture of DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -350,7 +350,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the search method.
      * @param q Usage: q='{q}'
-     * @return a searchWithQRequestBuilder
+     * @return a SearchWithQRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SearchWithQRequestBuilder searchWithQ(@jakarta.annotation.Nonnull final String q) {

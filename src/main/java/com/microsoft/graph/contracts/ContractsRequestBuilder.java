@@ -92,7 +92,7 @@ public class ContractsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of contract objects associated to a partner tenant.
-     * @return a CompletableFuture of contractCollectionResponse
+     * @return a CompletableFuture of ContractCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/contract-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class ContractsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of contract objects associated to a partner tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contractCollectionResponse
+     * @return a CompletableFuture of ContractCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/contract-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ContractsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to contracts
      * @param body The request body
-     * @return a CompletableFuture of contract
+     * @return a CompletableFuture of Contract
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Contract> post(@jakarta.annotation.Nonnull final Contract body) {
@@ -126,7 +126,7 @@ public class ContractsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to contracts
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contract
+     * @return a CompletableFuture of Contract
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Contract> post(@jakarta.annotation.Nonnull final Contract body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -201,7 +201,7 @@ public class ContractsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a contractsRequestBuilder
+     * @return a ContractsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ContractsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

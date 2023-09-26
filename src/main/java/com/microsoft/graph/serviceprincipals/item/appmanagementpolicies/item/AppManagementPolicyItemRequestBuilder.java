@@ -59,7 +59,7 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The appManagementPolicy applied to this application.
-     * @return a CompletableFuture of appManagementPolicy
+     * @return a CompletableFuture of AppManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppManagementPolicy> get() {
@@ -68,7 +68,7 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The appManagementPolicy applied to this application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appManagementPolicy
+     * @return a CompletableFuture of AppManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppManagementPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

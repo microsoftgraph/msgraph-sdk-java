@@ -62,7 +62,7 @@ public class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -71,7 +71,7 @@ public class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the unifiedRoleEligibilitySchedule resources from the roleEligibilitySchedules navigation property.
-     * @return a CompletableFuture of unifiedRoleEligibilityScheduleCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the unifiedRoleEligibilitySchedule resources from the roleEligibilitySchedules navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleEligibilityScheduleCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to roleEligibilitySchedules for roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleEligibilitySchedule
+     * @return a CompletableFuture of UnifiedRoleEligibilitySchedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilitySchedule> post(@jakarta.annotation.Nonnull final UnifiedRoleEligibilitySchedule body) {
@@ -105,7 +105,7 @@ public class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to roleEligibilitySchedules for roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleEligibilitySchedule
+     * @return a CompletableFuture of UnifiedRoleEligibilitySchedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilitySchedule> post(@jakarta.annotation.Nonnull final UnifiedRoleEligibilitySchedule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -180,7 +180,7 @@ public class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleEligibilitySchedulesRequestBuilder
+     * @return a RoleEligibilitySchedulesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleEligibilitySchedulesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

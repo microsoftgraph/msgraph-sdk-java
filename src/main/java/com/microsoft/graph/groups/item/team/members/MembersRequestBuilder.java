@@ -68,7 +68,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the conversationMember collection of a team.
-     * @return a CompletableFuture of conversationMemberCollectionResponse
+     * @return a CompletableFuture of ConversationMemberCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/team-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the conversationMember collection of a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationMemberCollectionResponse
+     * @return a CompletableFuture of ConversationMemberCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/team-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Add a new conversationMember to a team.
      * @param body The request body
-     * @return a CompletableFuture of conversationMember
+     * @return a CompletableFuture of ConversationMember
      * @see <a href="https://learn.microsoft.com/graph/api/team-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
      * Add a new conversationMember to a team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationMember
+     * @return a CompletableFuture of ConversationMember
      * @see <a href="https://learn.microsoft.com/graph/api/team-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a membersRequestBuilder
+     * @return a MembersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MembersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

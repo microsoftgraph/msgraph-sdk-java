@@ -16,7 +16,7 @@ public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Pars
      */
     private String edgeSearchEngineOpenSearchXmlUrl;
     /**
-     * Instantiates a new edgeSearchEngineCustom and sets the default values.
+     * Instantiates a new EdgeSearchEngineCustom and sets the default values.
      */
     public EdgeSearchEngineCustom() {
         super();
@@ -25,7 +25,7 @@ public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a edgeSearchEngineCustom
+     * @return a EdgeSearchEngineCustom
      */
     @jakarta.annotation.Nonnull
     public static EdgeSearchEngineCustom createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Pars
     }
     /**
      * Gets the edgeSearchEngineOpenSearchXmlUrl property value. Points to a https link containing the OpenSearch xml file that contains, at minimum, the short name and the URL to the search Engine.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEdgeSearchEngineOpenSearchXmlUrl() {

@@ -67,7 +67,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Read the properties and relationships of a unifiedRoleDefinition object. The following role-based access control (RBAC) providers are currently supported:
-     * @return a CompletableFuture of unifiedRoleDefinition
+     * @return a CompletableFuture of UnifiedRoleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroledefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Read the properties and relationships of a unifiedRoleDefinition object. The following role-based access control (RBAC) providers are currently supported:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleDefinition
+     * @return a CompletableFuture of UnifiedRoleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroledefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the properties of a unifiedRoleDefinition object. You cannot update built-in roles. This feature requires an Azure AD Premium P1 or P2 license.
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleDefinition
+     * @return a CompletableFuture of UnifiedRoleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroledefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
      * Update the properties of a unifiedRoleDefinition object. You cannot update built-in roles. This feature requires an Azure AD Premium P1 or P2 license.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleDefinition
+     * @return a CompletableFuture of UnifiedRoleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroledefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

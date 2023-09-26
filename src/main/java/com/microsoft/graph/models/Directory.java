@@ -33,7 +33,7 @@ public class Directory extends Entity implements Parsable {
      */
     private java.util.List<OnPremisesDirectorySynchronization> onPremisesSynchronization;
     /**
-     * Instantiates a new directory and sets the default values.
+     * Instantiates a new Directory and sets the default values.
      */
     public Directory() {
         super();
@@ -41,7 +41,7 @@ public class Directory extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a directory
+     * @return a Directory
      */
     @jakarta.annotation.Nonnull
     public static Directory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the administrativeUnits property value. Conceptual container for user and group directory objects.
-     * @return a administrativeUnit
+     * @return a java.util.List<AdministrativeUnit>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AdministrativeUnit> getAdministrativeUnits() {
@@ -58,7 +58,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the attributeSets property value. Group of related custom security attribute definitions.
-     * @return a attributeSet
+     * @return a java.util.List<AttributeSet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttributeSet> getAttributeSets() {
@@ -66,7 +66,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the customSecurityAttributeDefinitions property value. Schema of a custom security attributes (key-value pairs).
-     * @return a customSecurityAttributeDefinition
+     * @return a java.util.List<CustomSecurityAttributeDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomSecurityAttributeDefinition> getCustomSecurityAttributeDefinitions() {
@@ -74,7 +74,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the deletedItems property value. Recently deleted items. Read-only. Nullable.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getDeletedItems() {
@@ -82,7 +82,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the federationConfigurations property value. Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
-     * @return a identityProviderBase
+     * @return a java.util.List<IdentityProviderBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProviderBase> getFederationConfigurations() {
@@ -105,7 +105,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the onPremisesSynchronization property value. A container for on-premises directory synchronization functionalities that are available for the organization.
-     * @return a onPremisesDirectorySynchronization
+     * @return a java.util.List<OnPremisesDirectorySynchronization>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesDirectorySynchronization> getOnPremisesSynchronization() {

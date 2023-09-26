@@ -39,7 +39,7 @@ public class GetApplicableContentTypesForListWithListIdRequestBuilder extends Ba
     }
     /**
      * Invoke function getApplicableContentTypesForList
-     * @return a CompletableFuture of getApplicableContentTypesForListWithListIdResponse
+     * @return a CompletableFuture of GetApplicableContentTypesForListWithListIdResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetApplicableContentTypesForListWithListIdResponse> get() {
@@ -48,7 +48,7 @@ public class GetApplicableContentTypesForListWithListIdRequestBuilder extends Ba
     /**
      * Invoke function getApplicableContentTypesForList
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getApplicableContentTypesForListWithListIdResponse
+     * @return a CompletableFuture of GetApplicableContentTypesForListWithListIdResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetApplicableContentTypesForListWithListIdResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class GetApplicableContentTypesForListWithListIdRequestBuilder extends Ba
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getApplicableContentTypesForListWithListIdRequestBuilder
+     * @return a GetApplicableContentTypesForListWithListIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetApplicableContentTypesForListWithListIdRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

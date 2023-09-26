@@ -65,7 +65,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Pre-configured synchronization settings for a particular application.
-     * @return a CompletableFuture of synchronizationTemplate
+     * @return a CompletableFuture of SynchronizationTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationTemplate> get() {
@@ -74,7 +74,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
     /**
      * Pre-configured synchronization settings for a particular application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of synchronizationTemplate
+     * @return a CompletableFuture of SynchronizationTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationTemplate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update (override) the synchronization template associated with a given application.
      * @param body The request body
-     * @return a CompletableFuture of synchronizationTemplate
+     * @return a CompletableFuture of SynchronizationTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationtemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -98,7 +98,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
      * Update (override) the synchronization template associated with a given application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of synchronizationTemplate
+     * @return a CompletableFuture of SynchronizationTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationtemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

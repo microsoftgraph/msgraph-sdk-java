@@ -57,7 +57,7 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
-     * @return a CompletableFuture of extension
+     * @return a CompletableFuture of Extension
      * @see <a href="https://learn.microsoft.com/graph/api/opentypeextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of extension
+     * @return a CompletableFuture of Extension
      * @see <a href="https://learn.microsoft.com/graph/api/opentypeextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update an open extension (openTypeExtension object) with the properties in the request body: The data in an extension can be primitive types, or arrays of primitive types. See the table in the Permissions section for the list of resources that support open extensions.
      * @param body The request body
-     * @return a CompletableFuture of extension
+     * @return a CompletableFuture of Extension
      * @see <a href="https://learn.microsoft.com/graph/api/opentypeextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
      * Update an open extension (openTypeExtension object) with the properties in the request body: The data in an extension can be primitive types, or arrays of primitive types. See the table in the Permissions section for the list of resources that support open extensions.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of extension
+     * @return a CompletableFuture of Extension
      * @see <a href="https://learn.microsoft.com/graph/api/opentypeextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

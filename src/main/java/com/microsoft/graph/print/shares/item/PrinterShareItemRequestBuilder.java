@@ -69,7 +69,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/shares/{printerShare%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a printer share (unshare the associated printer). This action cannot be undone. If the printer is shared again in the future, any Windows users who had previously installed the printer will need to discover and reinstall it.
+     * Delete a printer share (unshare the associated printer). This action can't be undone. If the printer is shared again in the future, any Windows users who had previously installed the printer needs to discover and reinstall it.
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a printer share (unshare the associated printer). This action cannot be undone. If the printer is shared again in the future, any Windows users who had previously installed the printer will need to discover and reinstall it.
+     * Delete a printer share (unshare the associated printer). This action can't be undone. If the printer is shared again in the future, any Windows users who had previously installed the printer needs to discover and reinstall it.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -91,7 +91,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a printer share.
-     * @return a CompletableFuture of printerShare
+     * @return a CompletableFuture of PrinterShare
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -101,7 +101,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a printer share.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printerShare
+     * @return a CompletableFuture of PrinterShare
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a printer share. This method can be used to swap printers. For example, if a physical printer device breaks, an administrator can register a new printer device and update this printerShare to point to the new printer without requiring users to take any action.
      * @param body The request body
-     * @return a CompletableFuture of printerShare
+     * @return a CompletableFuture of PrinterShare
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +126,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a printer share. This method can be used to swap printers. For example, if a physical printer device breaks, an administrator can register a new printer device and update this printerShare to point to the new printer without requiring users to take any action.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printerShare
+     * @return a CompletableFuture of PrinterShare
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PrinterShare::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a printer share (unshare the associated printer). This action cannot be undone. If the printer is shared again in the future, any Windows users who had previously installed the printer will need to discover and reinstall it.
+     * Delete a printer share (unshare the associated printer). This action can't be undone. If the printer is shared again in the future, any Windows users who had previously installed the printer needs to discover and reinstall it.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -147,7 +147,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a printer share (unshare the associated printer). This action cannot be undone. If the printer is shared again in the future, any Windows users who had previously installed the printer will need to discover and reinstall it.
+     * Delete a printer share (unshare the associated printer). This action can't be undone. If the printer is shared again in the future, any Windows users who had previously installed the printer needs to discover and reinstall it.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

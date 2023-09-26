@@ -30,7 +30,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
      */
     private String template;
     /**
-     * Instantiates a new listInfo and sets the default values.
+     * Instantiates a new ListInfo and sets the default values.
      */
     public ListInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a listInfo
+     * @return a ListInfo
      */
     @jakarta.annotation.Nonnull
     public static ListInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
         return new ListInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the contentTypesEnabled property value. If true, indicates that content types are enabled for this list.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getContentTypesEnabled() {
@@ -76,7 +76,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the hidden property value. If true, indicates that the list is not normally visible in the SharePoint user experience.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
@@ -84,7 +84,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -92,7 +92,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the template property value. An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemplate() {
@@ -111,8 +111,8 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

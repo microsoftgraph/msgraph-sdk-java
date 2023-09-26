@@ -38,7 +38,7 @@ public class RedirectRequestBuilder extends BaseRequestBuilder {
     /**
      * Redirect a print job to a different printer. Redirecting a print job will only succeed if there is a printTask in a processing state on the associated print job, started by a trigger that the requesting app created.  For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param body The request body
-     * @return a CompletableFuture of printJob
+     * @return a CompletableFuture of PrintJob
      * @see <a href="https://learn.microsoft.com/graph/api/printjob-redirect?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class RedirectRequestBuilder extends BaseRequestBuilder {
      * Redirect a print job to a different printer. Redirecting a print job will only succeed if there is a printTask in a processing state on the associated print job, started by a trigger that the requesting app created.  For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printJob
+     * @return a CompletableFuture of PrintJob
      * @see <a href="https://learn.microsoft.com/graph/api/printjob-redirect?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class RedirectRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a redirectRequestBuilder
+     * @return a RedirectRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RedirectRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

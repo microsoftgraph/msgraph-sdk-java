@@ -57,7 +57,7 @@ public class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a specific commercial subscription that an organization has acquired.
-     * @return a CompletableFuture of subscribedSku
+     * @return a CompletableFuture of SubscribedSku
      * @see <a href="https://learn.microsoft.com/graph/api/subscribedsku-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a specific commercial subscription that an organization has acquired.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subscribedSku
+     * @return a CompletableFuture of SubscribedSku
      * @see <a href="https://learn.microsoft.com/graph/api/subscribedsku-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in subscribedSkus
      * @param body The request body
-     * @return a CompletableFuture of subscribedSku
+     * @return a CompletableFuture of SubscribedSku
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubscribedSku> patch(@jakarta.annotation.Nonnull final SubscribedSku body) {
@@ -91,7 +91,7 @@ public class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in subscribedSkus
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subscribedSku
+     * @return a CompletableFuture of SubscribedSku
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubscribedSku> patch(@jakarta.annotation.Nonnull final SubscribedSku body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

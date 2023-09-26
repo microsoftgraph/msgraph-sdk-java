@@ -19,7 +19,7 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
      */
     private UUID keyId;
     /**
-     * Instantiates a new removePasswordPostRequestBody and sets the default values.
+     * Instantiates a new RemovePasswordPostRequestBody and sets the default values.
      */
     public RemovePasswordPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -27,7 +27,7 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a removePasswordPostRequestBody
+     * @return a RemovePasswordPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static RemovePasswordPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
         return new RemovePasswordPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -70,8 +70,8 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

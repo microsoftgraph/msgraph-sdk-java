@@ -26,7 +26,7 @@ public class RedirectUriSettings implements AdditionalDataHolder, Parsable {
      */
     private String uri;
     /**
-     * Instantiates a new redirectUriSettings and sets the default values.
+     * Instantiates a new RedirectUriSettings and sets the default values.
      */
     public RedirectUriSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class RedirectUriSettings implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a redirectUriSettings
+     * @return a RedirectUriSettings
      */
     @jakarta.annotation.Nonnull
     public static RedirectUriSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class RedirectUriSettings implements AdditionalDataHolder, Parsable {
         return new RedirectUriSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class RedirectUriSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the index property value. The index property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIndex() {
@@ -71,7 +71,7 @@ public class RedirectUriSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class RedirectUriSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the uri property value. The uri property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUri() {
@@ -97,8 +97,8 @@ public class RedirectUriSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

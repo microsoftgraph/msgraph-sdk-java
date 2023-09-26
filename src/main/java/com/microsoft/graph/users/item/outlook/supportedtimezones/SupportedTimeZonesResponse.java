@@ -15,7 +15,7 @@ public class SupportedTimeZonesResponse extends BaseCollectionPaginationCountRes
      */
     private java.util.List<TimeZoneInformation> value;
     /**
-     * Instantiates a new supportedTimeZonesResponse and sets the default values.
+     * Instantiates a new SupportedTimeZonesResponse and sets the default values.
      */
     public SupportedTimeZonesResponse() {
         super();
@@ -23,7 +23,7 @@ public class SupportedTimeZonesResponse extends BaseCollectionPaginationCountRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a supportedTimeZonesResponse
+     * @return a SupportedTimeZonesResponse
      */
     @jakarta.annotation.Nonnull
     public static SupportedTimeZonesResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class SupportedTimeZonesResponse extends BaseCollectionPaginationCountRes
     }
     /**
      * Gets the value property value. The value property
-     * @return a timeZoneInformation
+     * @return a java.util.List<TimeZoneInformation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TimeZoneInformation> getValue() {

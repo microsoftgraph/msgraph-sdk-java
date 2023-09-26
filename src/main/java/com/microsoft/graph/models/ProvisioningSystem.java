@@ -13,7 +13,7 @@ public class ProvisioningSystem extends Identity implements Parsable {
      */
     private DetailsInfo details;
     /**
-     * Instantiates a new provisioningSystem and sets the default values.
+     * Instantiates a new ProvisioningSystem and sets the default values.
      */
     public ProvisioningSystem() {
         super();
@@ -22,7 +22,7 @@ public class ProvisioningSystem extends Identity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a provisioningSystem
+     * @return a ProvisioningSystem
      */
     @jakarta.annotation.Nonnull
     public static ProvisioningSystem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class ProvisioningSystem extends Identity implements Parsable {
     }
     /**
      * Gets the details property value. Details of the system.
-     * @return a detailsInfo
+     * @return a DetailsInfo
      */
     @jakarta.annotation.Nullable
     public DetailsInfo getDetails() {

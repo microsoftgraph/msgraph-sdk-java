@@ -30,7 +30,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      */
     private java.util.List<AccessPackageApprovalStage> stages;
     /**
-     * Instantiates a new accessPackageAssignmentApprovalSettings and sets the default values.
+     * Instantiates a new AccessPackageAssignmentApprovalSettings and sets the default values.
      */
     public AccessPackageAssignmentApprovalSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAssignmentApprovalSettings
+     * @return a AccessPackageAssignmentApprovalSettings
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentApprovalSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
         return new AccessPackageAssignmentApprovalSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     }
     /**
      * Gets the isApprovalRequiredForAdd property value. If false, then approval is not required for new requests in this policy.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequiredForAdd() {
@@ -76,7 +76,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     }
     /**
      * Gets the isApprovalRequiredForUpdate property value. If false, then approval is not required for updates to requests in this policy.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequiredForUpdate() {
@@ -84,7 +84,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -92,7 +92,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     }
     /**
      * Gets the stages property value. If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.
-     * @return a accessPackageApprovalStage
+     * @return a java.util.List<AccessPackageApprovalStage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageApprovalStage> getStages() {
@@ -111,8 +111,8 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

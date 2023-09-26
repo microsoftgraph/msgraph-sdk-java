@@ -58,7 +58,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      */
     private Integer width;
     /**
-     * Instantiates a new video and sets the default values.
+     * Instantiates a new Video and sets the default values.
      */
     public Video() {
         this.setAdditionalData(new HashMap<>());
@@ -66,7 +66,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a video
+     * @return a Video
      */
     @jakarta.annotation.Nonnull
     public static Video createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class Video implements AdditionalDataHolder, Parsable {
         return new Video();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the audioBitsPerSample property value. Number of audio bits per sample.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAudioBitsPerSample() {
@@ -91,7 +91,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the audioChannels property value. Number of audio channels.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAudioChannels() {
@@ -99,7 +99,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the audioFormat property value. Name of the audio format (AAC, MP3, etc.).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAudioFormat() {
@@ -107,7 +107,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the audioSamplesPerSecond property value. Number of audio samples per second.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAudioSamplesPerSecond() {
@@ -115,7 +115,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the bitrate property value. Bit rate of the video in bits per second.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBitrate() {
@@ -123,7 +123,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the duration property value. Duration of the file in milliseconds.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getDuration() {
@@ -151,7 +151,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the fourCC property value. 'Four character code' name of the video format.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFourCC() {
@@ -159,7 +159,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the frameRate property value. Frame rate of the video.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getFrameRate() {
@@ -167,7 +167,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the height property value. Height of the video, in pixels.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getHeight() {
@@ -175,7 +175,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -183,7 +183,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the width property value. Width of the video, in pixels.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWidth() {
@@ -209,8 +209,8 @@ public class Video implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

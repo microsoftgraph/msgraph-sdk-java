@@ -17,7 +17,7 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
      */
     private String securityGroupId;
     /**
-     * Instantiates a new securityGroupEvidence and sets the default values.
+     * Instantiates a new SecurityGroupEvidence and sets the default values.
      */
     public SecurityGroupEvidence() {
         super();
@@ -26,7 +26,7 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityGroupEvidence
+     * @return a SecurityGroupEvidence
      */
     @jakarta.annotation.Nonnull
     public static SecurityGroupEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the security group.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -54,7 +54,7 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the securityGroupId property value. Unique identifier of the security group.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecurityGroupId() {

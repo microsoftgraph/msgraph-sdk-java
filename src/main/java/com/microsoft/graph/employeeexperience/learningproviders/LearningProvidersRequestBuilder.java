@@ -60,7 +60,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the learningProvider resources registered in Viva Learning for a tenant.
-     * @return a CompletableFuture of learningProviderCollectionResponse
+     * @return a CompletableFuture of LearningProviderCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-list-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the learningProvider resources registered in Viva Learning for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of learningProviderCollectionResponse
+     * @return a CompletableFuture of LearningProviderCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-list-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes.
      * @param body The request body
-     * @return a CompletableFuture of learningProvider
+     * @return a CompletableFuture of LearningProvider
      * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-post-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
      * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of learningProvider
+     * @return a CompletableFuture of LearningProvider
      * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-post-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class LearningProvidersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a learningProvidersRequestBuilder
+     * @return a LearningProvidersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LearningProvidersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

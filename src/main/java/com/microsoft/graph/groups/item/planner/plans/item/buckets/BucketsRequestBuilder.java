@@ -60,7 +60,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of plannerBucket objects contained by a plannerPlan object.
-     * @return a CompletableFuture of plannerBucketCollectionResponse
+     * @return a CompletableFuture of PlannerBucketCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-list-buckets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of plannerBucket objects contained by a plannerPlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerBucketCollectionResponse
+     * @return a CompletableFuture of PlannerBucketCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-list-buckets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to buckets for groups
      * @param body The request body
-     * @return a CompletableFuture of plannerBucket
+     * @return a CompletableFuture of PlannerBucket
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucket> post(@jakarta.annotation.Nonnull final PlannerBucket body) {
@@ -94,7 +94,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to buckets for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerBucket
+     * @return a CompletableFuture of PlannerBucket
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucket> post(@jakarta.annotation.Nonnull final PlannerBucket body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a bucketsRequestBuilder
+     * @return a BucketsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public BucketsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

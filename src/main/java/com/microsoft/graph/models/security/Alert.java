@@ -127,7 +127,7 @@ public class Alert extends Entity implements Parsable {
      */
     private String title;
     /**
-     * Instantiates a new alert and sets the default values.
+     * Instantiates a new Alert and sets the default values.
      */
     public Alert() {
         super();
@@ -135,7 +135,7 @@ public class Alert extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a alert
+     * @return a Alert
      */
     @jakarta.annotation.Nonnull
     public static Alert createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -144,7 +144,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the actorDisplayName property value. The adversary or activity group that is associated with this alert.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActorDisplayName() {
@@ -152,7 +152,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the alertPolicyId property value. The alertPolicyId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlertPolicyId() {
@@ -160,7 +160,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the alertWebUrl property value. URL for the alert page in the Microsoft 365 Defender portal.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlertWebUrl() {
@@ -168,7 +168,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the assignedTo property value. Owner of the alert, or null if no owner is assigned.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignedTo() {
@@ -176,7 +176,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&CK framework.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
@@ -184,7 +184,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the classification property value. Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
-     * @return a alertClassification
+     * @return a AlertClassification
      */
     @jakarta.annotation.Nullable
     public AlertClassification getClassification() {
@@ -192,7 +192,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the comments property value. Array of comments created by the Security Operations (SecOps) team during the alert management process.
-     * @return a alertComment
+     * @return a java.util.List<AlertComment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlertComment> getComments() {
@@ -208,7 +208,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. String value describing each alert.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -216,7 +216,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the detectionSource property value. Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud.
-     * @return a detectionSource
+     * @return a DetectionSource
      */
     @jakarta.annotation.Nullable
     public DetectionSource getDetectionSource() {
@@ -224,7 +224,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the detectorId property value. The ID of the detector that triggered the alert.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDetectorId() {
@@ -232,7 +232,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the determination property value. Specifies the result of the investigation, whether the alert represents a true attack and if so, the nature of the attack. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
-     * @return a alertDetermination
+     * @return a AlertDetermination
      */
     @jakarta.annotation.Nullable
     public AlertDetermination getDetermination() {
@@ -240,7 +240,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the evidence property value. Collection of evidence related to the alert.
-     * @return a alertEvidence
+     * @return a java.util.List<AlertEvidence>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlertEvidence> getEvidence() {
@@ -294,7 +294,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the incidentId property value. Unique identifier to represent the incident this alert resource is associated with.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIncidentId() {
@@ -302,7 +302,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the incidentWebUrl property value. URL for the incident page in the Microsoft 365 Defender portal.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIncidentWebUrl() {
@@ -326,7 +326,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the mitreTechniques property value. The attack techniques, as aligned with the MITRE ATT&CK framework.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMitreTechniques() {
@@ -334,7 +334,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the providerAlertId property value. The ID of the alert as it appears in the security provider product that generated the alert.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProviderAlertId() {
@@ -342,7 +342,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the recommendedActions property value. Recommended response and remediation actions to take in the event this alert was generated.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecommendedActions() {
@@ -358,7 +358,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the serviceSource property value. The serviceSource property
-     * @return a serviceSource
+     * @return a ServiceSource
      */
     @jakarta.annotation.Nullable
     public ServiceSource getServiceSource() {
@@ -366,7 +366,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a alertSeverity
+     * @return a AlertSeverity
      */
     @jakarta.annotation.Nullable
     public AlertSeverity getSeverity() {
@@ -374,7 +374,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a alertStatus
+     * @return a AlertStatus
      */
     @jakarta.annotation.Nullable
     public AlertStatus getStatus() {
@@ -382,7 +382,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The Azure Active Directory tenant the alert was created in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -390,7 +390,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the threatDisplayName property value. The threat associated with this alert.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThreatDisplayName() {
@@ -398,7 +398,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the threatFamilyName property value. Threat family associated with this alert.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThreatFamilyName() {
@@ -406,7 +406,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. Brief identifying string value describing the alert.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

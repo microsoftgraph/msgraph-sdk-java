@@ -59,7 +59,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
     }
     /**
      * Read properties and relationships of the managedDeviceMobileAppConfigurationAssignment object.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationAssignment
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
     /**
      * Read properties and relationships of the managedDeviceMobileAppConfigurationAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationAssignment
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
     /**
      * Update the properties of a managedDeviceMobileAppConfigurationAssignment object.
      * @param body The request body
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationAssignment
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
      * Update the properties of a managedDeviceMobileAppConfigurationAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationAssignment
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

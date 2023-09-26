@@ -89,7 +89,7 @@ public class GetM365AppUserDetailWithDateRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getM365AppUserDetailWithDateRequestBuilder
+     * @return a GetM365AppUserDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetM365AppUserDetailWithDateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

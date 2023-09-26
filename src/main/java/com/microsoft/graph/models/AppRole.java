@@ -47,7 +47,7 @@ public class AppRole implements AdditionalDataHolder, Parsable {
      */
     private String value;
     /**
-     * Instantiates a new appRole and sets the default values.
+     * Instantiates a new AppRole and sets the default values.
      */
     public AppRole() {
         this.setAdditionalData(new HashMap<>());
@@ -55,7 +55,7 @@ public class AppRole implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appRole
+     * @return a AppRole
      */
     @jakarta.annotation.Nonnull
     public static AppRole createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class AppRole implements AdditionalDataHolder, Parsable {
         return new AppRole();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -72,7 +72,7 @@ public class AppRole implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowedMemberTypes property value. Specifies whether this app role can be assigned to users and groups (by setting to ['User']), to other application's (by setting to ['Application'], or both (by setting to ['User', 'Application']). App roles supporting assignment to other applications' service principals are also known as application permissions. The 'Application' value is only supported for app roles defined on application entities.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedMemberTypes() {
@@ -80,7 +80,7 @@ public class AppRole implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the description property value. The description for the app role. This is displayed when the app role is being assigned and, if the app role functions as an application permission, during  consent experiences.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -88,7 +88,7 @@ public class AppRole implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. Display name for the permission that appears in the app role assignment and consent experiences.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -121,7 +121,7 @@ public class AppRole implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isEnabled property value. When creating or updating an app role, this must be set to true (which is the default). To delete a role, this must first be set to false.  At that point, in a subsequent call, this role may be removed.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -129,7 +129,7 @@ public class AppRole implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -137,7 +137,7 @@ public class AppRole implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the origin property value. Specifies if the app role is defined on the application object or on the servicePrincipal entity. Must not be included in any POST or PATCH requests. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrigin() {
@@ -145,7 +145,7 @@ public class AppRole implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the value property value. Specifies the value to include in the roles claim in ID tokens and access tokens authenticating an assigned user or service principal. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
@@ -168,8 +168,8 @@ public class AppRole implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -34,7 +34,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      */
     private Boolean signInRequired;
     /**
-     * Instantiates a new sharingInvitation and sets the default values.
+     * Instantiates a new SharingInvitation and sets the default values.
      */
     public SharingInvitation() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sharingInvitation
+     * @return a SharingInvitation
      */
     @jakarta.annotation.Nonnull
     public static SharingInvitation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
         return new SharingInvitation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the email property value. The email address provided for the recipient of the sharing invitation. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -81,7 +81,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the invitedBy property value. Provides information about who sent the invitation that created this permission, if that information is available. Read-only.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInvitedBy() {
@@ -89,7 +89,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the redeemedBy property value. The redeemedBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRedeemedBy() {
@@ -105,7 +105,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the signInRequired property value. If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSignInRequired() {
@@ -125,8 +125,8 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

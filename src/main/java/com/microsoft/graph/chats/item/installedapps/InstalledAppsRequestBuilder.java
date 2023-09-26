@@ -60,7 +60,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List all app installations within a chat.
-     * @return a CompletableFuture of teamsAppInstallationCollectionResponse
+     * @return a CompletableFuture of TeamsAppInstallationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * List all app installations within a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAppInstallationCollectionResponse
+     * @return a CompletableFuture of TeamsAppInstallationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Install a teamsApp to the specified chat.
      * @param body The request body
-     * @return a CompletableFuture of teamsAppInstallation
+     * @return a CompletableFuture of TeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/chat-post-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
      * Install a teamsApp to the specified chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAppInstallation
+     * @return a CompletableFuture of TeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/chat-post-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a installedAppsRequestBuilder
+     * @return a InstalledAppsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InstalledAppsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

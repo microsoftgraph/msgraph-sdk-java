@@ -85,7 +85,7 @@ public class SendReminderRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sendReminderRequestBuilder
+     * @return a SendReminderRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SendReminderRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

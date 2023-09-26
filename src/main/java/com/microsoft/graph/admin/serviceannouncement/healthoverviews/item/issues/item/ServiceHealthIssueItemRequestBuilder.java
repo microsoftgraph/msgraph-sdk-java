@@ -65,7 +65,7 @@ public class ServiceHealthIssueItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A collection of issues that happened on the service, with detailed information for each issue.
-     * @return a CompletableFuture of serviceHealthIssue
+     * @return a CompletableFuture of ServiceHealthIssue
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceHealthIssue> get() {
@@ -74,7 +74,7 @@ public class ServiceHealthIssueItemRequestBuilder extends BaseRequestBuilder {
     /**
      * A collection of issues that happened on the service, with detailed information for each issue.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of serviceHealthIssue
+     * @return a CompletableFuture of ServiceHealthIssue
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceHealthIssue> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ServiceHealthIssueItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property issues in admin
      * @param body The request body
-     * @return a CompletableFuture of serviceHealthIssue
+     * @return a CompletableFuture of ServiceHealthIssue
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceHealthIssue> patch(@jakarta.annotation.Nonnull final ServiceHealthIssue body) {
@@ -97,7 +97,7 @@ public class ServiceHealthIssueItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property issues in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of serviceHealthIssue
+     * @return a CompletableFuture of ServiceHealthIssue
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceHealthIssue> patch(@jakarta.annotation.Nonnull final ServiceHealthIssue body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

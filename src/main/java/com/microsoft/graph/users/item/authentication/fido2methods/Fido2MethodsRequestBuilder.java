@@ -59,7 +59,7 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of a user's FIDO2 Security Key Authentication Method objects and their properties.
-     * @return a CompletableFuture of fido2AuthenticationMethodCollectionResponse
+     * @return a CompletableFuture of Fido2AuthenticationMethodCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of a user's FIDO2 Security Key Authentication Method objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of fido2AuthenticationMethodCollectionResponse
+     * @return a CompletableFuture of Fido2AuthenticationMethodCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a fido2MethodsRequestBuilder
+     * @return a Fido2MethodsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public Fido2MethodsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

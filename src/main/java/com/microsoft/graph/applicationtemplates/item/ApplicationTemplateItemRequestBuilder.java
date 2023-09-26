@@ -46,7 +46,7 @@ public class ApplicationTemplateItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties of an applicationTemplate object.
-     * @return a CompletableFuture of applicationTemplate
+     * @return a CompletableFuture of ApplicationTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/applicationtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -56,7 +56,7 @@ public class ApplicationTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties of an applicationTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of applicationTemplate
+     * @return a CompletableFuture of ApplicationTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/applicationtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

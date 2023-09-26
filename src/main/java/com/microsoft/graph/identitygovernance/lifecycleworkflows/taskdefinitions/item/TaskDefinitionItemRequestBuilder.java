@@ -38,7 +38,7 @@ public class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the details of a built-in workflow task.
-     * @return a CompletableFuture of taskDefinition
+     * @return a CompletableFuture of TaskDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-taskdefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the details of a built-in workflow task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of taskDefinition
+     * @return a CompletableFuture of TaskDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-taskdefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

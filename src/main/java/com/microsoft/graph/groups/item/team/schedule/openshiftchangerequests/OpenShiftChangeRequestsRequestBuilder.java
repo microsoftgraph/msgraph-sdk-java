@@ -60,7 +60,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of openShiftChangeRequest objects in a team.
-     * @return a CompletableFuture of openShiftChangeRequestCollectionResponse
+     * @return a CompletableFuture of OpenShiftChangeRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/openshiftchangerequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of openShiftChangeRequest objects in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of openShiftChangeRequestCollectionResponse
+     * @return a CompletableFuture of OpenShiftChangeRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/openshiftchangerequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create instance of an openShiftChangeRequest object.
      * @param body The request body
-     * @return a CompletableFuture of openShiftChangeRequest
+     * @return a CompletableFuture of OpenShiftChangeRequest
      * @see <a href="https://learn.microsoft.com/graph/api/openshiftchangerequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
      * Create instance of an openShiftChangeRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of openShiftChangeRequest
+     * @return a CompletableFuture of OpenShiftChangeRequest
      * @see <a href="https://learn.microsoft.com/graph/api/openshiftchangerequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a openShiftChangeRequestsRequestBuilder
+     * @return a OpenShiftChangeRequestsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OpenShiftChangeRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

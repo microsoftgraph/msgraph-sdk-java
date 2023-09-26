@@ -21,7 +21,7 @@ public class Synchronization extends Entity implements Parsable {
      */
     private java.util.List<SynchronizationTemplate> templates;
     /**
-     * Instantiates a new synchronization and sets the default values.
+     * Instantiates a new Synchronization and sets the default values.
      */
     public Synchronization() {
         super();
@@ -29,7 +29,7 @@ public class Synchronization extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a synchronization
+     * @return a Synchronization
      */
     @jakarta.annotation.Nonnull
     public static Synchronization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class Synchronization extends Entity implements Parsable {
     }
     /**
      * Gets the jobs property value. Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
-     * @return a synchronizationJob
+     * @return a java.util.List<SynchronizationJob>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationJob> getJobs() {
@@ -58,7 +58,7 @@ public class Synchronization extends Entity implements Parsable {
     }
     /**
      * Gets the secrets property value. Represents a collection of credentials to access provisioned cloud applications.
-     * @return a synchronizationSecretKeyStringValuePair
+     * @return a java.util.List<SynchronizationSecretKeyStringValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationSecretKeyStringValuePair> getSecrets() {
@@ -66,7 +66,7 @@ public class Synchronization extends Entity implements Parsable {
     }
     /**
      * Gets the templates property value. Pre-configured synchronization settings for a particular application.
-     * @return a synchronizationTemplate
+     * @return a java.util.List<SynchronizationTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SynchronizationTemplate> getTemplates() {

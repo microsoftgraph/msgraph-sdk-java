@@ -60,7 +60,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [site][site].
-     * @return a CompletableFuture of columnDefinitionCollectionResponse
+     * @return a CompletableFuture of ColumnDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/site-list-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [site][site].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of columnDefinitionCollectionResponse
+     * @return a CompletableFuture of ColumnDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/site-list-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a column for a [site][site] with a request that specifies a [columnDefinition][columnDefinition].
      * @param body The request body
-     * @return a CompletableFuture of columnDefinition
+     * @return a CompletableFuture of ColumnDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/site-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
      * Create a column for a [site][site] with a request that specifies a [columnDefinition][columnDefinition].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of columnDefinition
+     * @return a CompletableFuture of ColumnDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/site-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a columnsRequestBuilder
+     * @return a ColumnsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ColumnsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

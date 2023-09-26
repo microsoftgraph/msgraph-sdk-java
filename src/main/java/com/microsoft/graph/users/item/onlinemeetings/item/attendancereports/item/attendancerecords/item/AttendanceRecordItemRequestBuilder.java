@@ -57,7 +57,7 @@ public class AttendanceRecordItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of attendance records of an attendance report. Read-only.
-     * @return a CompletableFuture of attendanceRecord
+     * @return a CompletableFuture of AttendanceRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttendanceRecord> get() {
@@ -66,7 +66,7 @@ public class AttendanceRecordItemRequestBuilder extends BaseRequestBuilder {
     /**
      * List of attendance records of an attendance report. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attendanceRecord
+     * @return a CompletableFuture of AttendanceRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttendanceRecord> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AttendanceRecordItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property attendanceRecords in users
      * @param body The request body
-     * @return a CompletableFuture of attendanceRecord
+     * @return a CompletableFuture of AttendanceRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttendanceRecord> patch(@jakarta.annotation.Nonnull final AttendanceRecord body) {
@@ -89,7 +89,7 @@ public class AttendanceRecordItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property attendanceRecords in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attendanceRecord
+     * @return a CompletableFuture of AttendanceRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttendanceRecord> patch(@jakarta.annotation.Nonnull final AttendanceRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

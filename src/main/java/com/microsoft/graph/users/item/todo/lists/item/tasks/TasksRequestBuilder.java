@@ -68,7 +68,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the todoTask resources from the tasks navigation property of a specified todoTaskList.
-     * @return a CompletableFuture of todoTaskCollectionResponse
+     * @return a CompletableFuture of TodoTaskCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/todotasklist-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the todoTask resources from the tasks navigation property of a specified todoTaskList.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of todoTaskCollectionResponse
+     * @return a CompletableFuture of TodoTaskCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/todotasklist-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new task object in a specified todoTaskList.
      * @param body The request body
-     * @return a CompletableFuture of todoTask
+     * @return a CompletableFuture of TodoTask
      * @see <a href="https://learn.microsoft.com/graph/api/todotasklist-post-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
      * Create a new task object in a specified todoTaskList.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of todoTask
+     * @return a CompletableFuture of TodoTask
      * @see <a href="https://learn.microsoft.com/graph/api/todotasklist-post-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a tasksRequestBuilder
+     * @return a TasksRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TasksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

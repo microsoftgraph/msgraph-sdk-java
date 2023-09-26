@@ -60,7 +60,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the members of a standard tag in a team and their properties.
-     * @return a CompletableFuture of teamworkTagMemberCollectionResponse
+     * @return a CompletableFuture of TeamworkTagMemberCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktagmember-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the members of a standard tag in a team and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamworkTagMemberCollectionResponse
+     * @return a CompletableFuture of TeamworkTagMemberCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktagmember-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new teamworkTagMember object in a team.
      * @param body The request body
-     * @return a CompletableFuture of teamworkTagMember
+     * @return a CompletableFuture of TeamworkTagMember
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktagmember-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
      * Create a new teamworkTagMember object in a team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamworkTagMember
+     * @return a CompletableFuture of TeamworkTagMember
      * @see <a href="https://learn.microsoft.com/graph/api/teamworktagmember-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a membersRequestBuilder
+     * @return a MembersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MembersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

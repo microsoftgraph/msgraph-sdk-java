@@ -65,7 +65,7 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get an attack simulation automation for a tenant.
-     * @return a CompletableFuture of simulationAutomation
+     * @return a CompletableFuture of SimulationAutomation
      * @see <a href="https://learn.microsoft.com/graph/api/simulationautomation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get an attack simulation automation for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of simulationAutomation
+     * @return a CompletableFuture of SimulationAutomation
      * @see <a href="https://learn.microsoft.com/graph/api/simulationautomation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property simulationAutomations in security
      * @param body The request body
-     * @return a CompletableFuture of simulationAutomation
+     * @return a CompletableFuture of SimulationAutomation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SimulationAutomation> patch(@jakarta.annotation.Nonnull final SimulationAutomation body) {
@@ -99,7 +99,7 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property simulationAutomations in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of simulationAutomation
+     * @return a CompletableFuture of SimulationAutomation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SimulationAutomation> patch(@jakarta.annotation.Nonnull final SimulationAutomation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

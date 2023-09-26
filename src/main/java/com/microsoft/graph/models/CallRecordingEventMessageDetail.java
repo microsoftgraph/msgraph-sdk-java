@@ -38,7 +38,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      */
     private IdentitySet meetingOrganizer;
     /**
-     * Instantiates a new callRecordingEventMessageDetail and sets the default values.
+     * Instantiates a new CallRecordingEventMessageDetail and sets the default values.
      */
     public CallRecordingEventMessageDetail() {
         super();
@@ -47,7 +47,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a callRecordingEventMessageDetail
+     * @return a CallRecordingEventMessageDetail
      */
     @jakarta.annotation.Nonnull
     public static CallRecordingEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +56,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
     }
     /**
      * Gets the callId property value. Unique identifier of the call.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallId() {
@@ -64,7 +64,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
     }
     /**
      * Gets the callRecordingDisplayName property value. Display name for the call recording.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallRecordingDisplayName() {
@@ -80,7 +80,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
     }
     /**
      * Gets the callRecordingStatus property value. Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
-     * @return a callRecordingStatus
+     * @return a CallRecordingStatus
      */
     @jakarta.annotation.Nullable
     public CallRecordingStatus getCallRecordingStatus() {
@@ -88,7 +88,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
     }
     /**
      * Gets the callRecordingUrl property value. Call recording URL.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallRecordingUrl() {
@@ -112,7 +112,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
@@ -120,7 +120,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
     }
     /**
      * Gets the meetingOrganizer property value. Organizer of the meeting.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getMeetingOrganizer() {

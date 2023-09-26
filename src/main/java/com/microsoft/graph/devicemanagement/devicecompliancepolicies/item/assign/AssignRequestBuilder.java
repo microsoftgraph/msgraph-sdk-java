@@ -37,7 +37,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
     /**
      * Not yet documented
      * @param body The request body
-     * @return a CompletableFuture of assignResponse
+     * @return a CompletableFuture of AssignResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicy-assign?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
      * Not yet documented
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of assignResponse
+     * @return a CompletableFuture of AssignResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicy-assign?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignRequestBuilder
+     * @return a AssignRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

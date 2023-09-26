@@ -57,7 +57,7 @@ public class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a usage summary for a printer for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
-     * @return a CompletableFuture of printUsageByPrinter
+     * @return a CompletableFuture of PrintUsageByPrinter
      * @see <a href="https://learn.microsoft.com/graph/api/printusagebyprinter-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a usage summary for a printer for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printUsageByPrinter
+     * @return a CompletableFuture of PrintUsageByPrinter
      * @see <a href="https://learn.microsoft.com/graph/api/printusagebyprinter-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property dailyPrintUsageByPrinter in reports
      * @param body The request body
-     * @return a CompletableFuture of printUsageByPrinter
+     * @return a CompletableFuture of PrintUsageByPrinter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintUsageByPrinter> patch(@jakarta.annotation.Nonnull final PrintUsageByPrinter body) {
@@ -91,7 +91,7 @@ public class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property dailyPrintUsageByPrinter in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printUsageByPrinter
+     * @return a CompletableFuture of PrintUsageByPrinter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintUsageByPrinter> patch(@jakarta.annotation.Nonnull final PrintUsageByPrinter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

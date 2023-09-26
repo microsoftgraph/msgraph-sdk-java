@@ -142,7 +142,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of chart object.
-     * @return a CompletableFuture of workbookChart
+     * @return a CompletableFuture of WorkbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/chart-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -152,7 +152,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of chart object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChart
+     * @return a CompletableFuture of WorkbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/chart-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -166,7 +166,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the image method.
      * @param width Usage: width={width}
-     * @return a imageWithWidthRequestBuilder
+     * @return a ImageWithWidthRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ImageWithWidthRequestBuilder imageWithWidth(@jakarta.annotation.Nonnull final Integer width) {
@@ -177,7 +177,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the image method.
      * @param height Usage: height={height}
      * @param width Usage: width={width}
-     * @return a imageWithWidthWithHeightRequestBuilder
+     * @return a ImageWithWidthWithHeightRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ImageWithWidthWithHeightRequestBuilder imageWithWidthWithHeight(@jakarta.annotation.Nonnull final Integer height, @jakarta.annotation.Nonnull final Integer width) {
@@ -190,7 +190,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * @param fittingMode Usage: fittingMode='{fittingMode}'
      * @param height Usage: height={height}
      * @param width Usage: width={width}
-     * @return a imageWithWidthWithHeightWithFittingModeRequestBuilder
+     * @return a ImageWithWidthWithHeightWithFittingModeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ImageWithWidthWithHeightWithFittingModeRequestBuilder imageWithWidthWithHeightWithFittingMode(@jakarta.annotation.Nonnull final String fittingMode, @jakarta.annotation.Nonnull final Integer height, @jakarta.annotation.Nonnull final Integer width) {
@@ -202,7 +202,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of chart object.
      * @param body The request body
-     * @return a CompletableFuture of workbookChart
+     * @return a CompletableFuture of WorkbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/chart-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -213,7 +213,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of chart object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChart
+     * @return a CompletableFuture of WorkbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/chart-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

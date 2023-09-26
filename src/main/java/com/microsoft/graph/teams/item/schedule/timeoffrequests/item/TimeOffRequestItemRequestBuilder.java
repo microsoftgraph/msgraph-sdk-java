@@ -59,7 +59,7 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a timeoffrequest object.
-     * @return a CompletableFuture of timeOffRequest
+     * @return a CompletableFuture of TimeOffRequest
      * @see <a href="https://learn.microsoft.com/graph/api/timeoffrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a timeoffrequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeOffRequest
+     * @return a CompletableFuture of TimeOffRequest
      * @see <a href="https://learn.microsoft.com/graph/api/timeoffrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property timeOffRequests in teams
      * @param body The request body
-     * @return a CompletableFuture of timeOffRequest
+     * @return a CompletableFuture of TimeOffRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffRequest> patch(@jakarta.annotation.Nonnull final TimeOffRequest body) {
@@ -93,7 +93,7 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property timeOffRequests in teams
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeOffRequest
+     * @return a CompletableFuture of TimeOffRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffRequest> patch(@jakarta.annotation.Nonnull final TimeOffRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

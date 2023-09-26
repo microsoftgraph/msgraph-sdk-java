@@ -51,8 +51,8 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/subscribedSkus{?%24search,%24orderby,%24select}", rawUrl);
     }
     /**
-     * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Azure portal or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing.
-     * @return a CompletableFuture of subscribedSkuCollectionResponse
+     * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Microsoft Entra admin center or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing.
+     * @return a CompletableFuture of SubscribedSkuCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/subscribedsku-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -60,9 +60,9 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Azure portal or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing.
+     * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Microsoft Entra admin center or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subscribedSkuCollectionResponse
+     * @return a CompletableFuture of SubscribedSkuCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/subscribedsku-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to subscribedSkus
      * @param body The request body
-     * @return a CompletableFuture of subscribedSku
+     * @return a CompletableFuture of SubscribedSku
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubscribedSku> post(@jakarta.annotation.Nonnull final SubscribedSku body) {
@@ -86,7 +86,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
      * Add new entity to subscribedSkus
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subscribedSku
+     * @return a CompletableFuture of SubscribedSku
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubscribedSku> post(@jakarta.annotation.Nonnull final SubscribedSku body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -98,7 +98,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, SubscribedSku::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Azure portal or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing.
+     * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Microsoft Entra admin center or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -106,7 +106,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Azure portal or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing.
+     * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Microsoft Entra admin center or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a subscribedSkusRequestBuilder
+     * @return a SubscribedSkusRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SubscribedSkusRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -169,7 +169,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
         return new SubscribedSkusRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Azure portal or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing.
+     * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Microsoft Entra admin center or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -60,7 +60,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The set of subscriptions on the list.
-     * @return a CompletableFuture of subscriptionCollectionResponse
+     * @return a CompletableFuture of SubscriptionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubscriptionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     /**
      * The set of subscriptions on the list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subscriptionCollectionResponse
+     * @return a CompletableFuture of SubscriptionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubscriptionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to subscriptions for drives
      * @param body The request body
-     * @return a CompletableFuture of subscription
+     * @return a CompletableFuture of Subscription
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Subscription> post(@jakarta.annotation.Nonnull final Subscription body) {
@@ -92,7 +92,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to subscriptions for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subscription
+     * @return a CompletableFuture of Subscription
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Subscription> post(@jakarta.annotation.Nonnull final Subscription body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a subscriptionsRequestBuilder
+     * @return a SubscriptionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SubscriptionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

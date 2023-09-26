@@ -18,7 +18,7 @@ public class ImageWithWidthWithHeightWithFittingModeResponse implements Addition
      */
     private String value;
     /**
-     * Instantiates a new imageWithWidthWithHeightWithFittingModeResponse and sets the default values.
+     * Instantiates a new ImageWithWidthWithHeightWithFittingModeResponse and sets the default values.
      */
     public ImageWithWidthWithHeightWithFittingModeResponse() {
         this.setAdditionalData(new HashMap<>());
@@ -26,7 +26,7 @@ public class ImageWithWidthWithHeightWithFittingModeResponse implements Addition
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a imageWithWidthWithHeightWithFittingModeResponse
+     * @return a ImageWithWidthWithHeightWithFittingModeResponse
      */
     @jakarta.annotation.Nonnull
     public static ImageWithWidthWithHeightWithFittingModeResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class ImageWithWidthWithHeightWithFittingModeResponse implements Addition
         return new ImageWithWidthWithHeightWithFittingModeResponse();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class ImageWithWidthWithHeightWithFittingModeResponse implements Addition
     }
     /**
      * Gets the value property value. The value property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
@@ -69,8 +69,8 @@ public class ImageWithWidthWithHeightWithFittingModeResponse implements Addition
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

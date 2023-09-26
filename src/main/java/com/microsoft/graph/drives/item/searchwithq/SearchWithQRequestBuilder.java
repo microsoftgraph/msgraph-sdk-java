@@ -39,7 +39,7 @@ public class SearchWithQRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function search
-     * @return a CompletableFuture of searchWithQResponse
+     * @return a CompletableFuture of SearchWithQResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SearchWithQResponse> get() {
@@ -48,7 +48,7 @@ public class SearchWithQRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function search
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of searchWithQResponse
+     * @return a CompletableFuture of SearchWithQResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SearchWithQResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class SearchWithQRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a searchWithQRequestBuilder
+     * @return a SearchWithQRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SearchWithQRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

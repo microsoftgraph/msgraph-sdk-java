@@ -47,7 +47,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      */
     private EvidenceVerdict verdict;
     /**
-     * Instantiates a new alertEvidence and sets the default values.
+     * Instantiates a new AlertEvidence and sets the default values.
      */
     public AlertEvidence() {
         this.setAdditionalData(new HashMap<>());
@@ -55,7 +55,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a alertEvidence
+     * @return a AlertEvidence
      */
     @jakarta.annotation.Nonnull
     public static AlertEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -98,7 +98,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         return new AlertEvidence();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the detailedRoles property value. Detailed description of the entity role/s in an alert. Values are free-form.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDetailedRoles() {
@@ -140,7 +140,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -148,7 +148,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the remediationStatus property value. The remediationStatus property
-     * @return a evidenceRemediationStatus
+     * @return a EvidenceRemediationStatus
      */
     @jakarta.annotation.Nullable
     public EvidenceRemediationStatus getRemediationStatus() {
@@ -156,7 +156,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the remediationStatusDetails property value. Details about the remediation status.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemediationStatusDetails() {
@@ -164,7 +164,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
-     * @return a evidenceRole
+     * @return a java.util.List<EvidenceRole>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EvidenceRole> getRoles() {
@@ -172,7 +172,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tags property value. Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
@@ -180,7 +180,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the verdict property value. The verdict property
-     * @return a evidenceVerdict
+     * @return a EvidenceVerdict
      */
     @jakarta.annotation.Nullable
     public EvidenceVerdict getVerdict() {
@@ -203,8 +203,8 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

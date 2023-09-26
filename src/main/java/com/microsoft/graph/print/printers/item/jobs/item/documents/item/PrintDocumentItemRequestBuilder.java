@@ -73,7 +73,7 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get documents from print
-     * @return a CompletableFuture of printDocument
+     * @return a CompletableFuture of PrintDocument
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintDocument> get() {
@@ -82,7 +82,7 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get documents from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printDocument
+     * @return a CompletableFuture of PrintDocument
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintDocument> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property documents in print
      * @param body The request body
-     * @return a CompletableFuture of printDocument
+     * @return a CompletableFuture of PrintDocument
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintDocument> patch(@jakarta.annotation.Nonnull final PrintDocument body) {
@@ -105,7 +105,7 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property documents in print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printDocument
+     * @return a CompletableFuture of PrintDocument
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintDocument> patch(@jakarta.annotation.Nonnull final PrintDocument body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

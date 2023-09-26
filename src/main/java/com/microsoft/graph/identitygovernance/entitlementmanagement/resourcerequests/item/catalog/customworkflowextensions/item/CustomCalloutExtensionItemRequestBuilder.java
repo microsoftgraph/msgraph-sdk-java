@@ -57,7 +57,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Get customWorkflowExtensions from identityGovernance
-     * @return a CompletableFuture of customCalloutExtension
+     * @return a CompletableFuture of CustomCalloutExtension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomCalloutExtension> get() {
@@ -66,7 +66,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Get customWorkflowExtensions from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customCalloutExtension
+     * @return a CompletableFuture of CustomCalloutExtension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomCalloutExtension> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property customWorkflowExtensions in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of customCalloutExtension
+     * @return a CompletableFuture of CustomCalloutExtension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomCalloutExtension> patch(@jakarta.annotation.Nonnull final CustomCalloutExtension body) {
@@ -89,7 +89,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
      * Update the navigation property customWorkflowExtensions in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customCalloutExtension
+     * @return a CompletableFuture of CustomCalloutExtension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomCalloutExtension> patch(@jakarta.annotation.Nonnull final CustomCalloutExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

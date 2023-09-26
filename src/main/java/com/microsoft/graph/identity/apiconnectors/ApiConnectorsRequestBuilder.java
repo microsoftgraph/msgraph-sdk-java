@@ -60,7 +60,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties of an identityApiConnector object.
-     * @return a CompletableFuture of identityApiConnectorCollectionResponse
+     * @return a CompletableFuture of IdentityApiConnectorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties of an identityApiConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityApiConnectorCollectionResponse
+     * @return a CompletableFuture of IdentityApiConnectorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new identityApiConnector object.
      * @param body The request body
-     * @return a CompletableFuture of identityApiConnector
+     * @return a CompletableFuture of IdentityApiConnector
      * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
      * Create a new identityApiConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityApiConnector
+     * @return a CompletableFuture of IdentityApiConnector
      * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a apiConnectorsRequestBuilder
+     * @return a ApiConnectorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ApiConnectorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

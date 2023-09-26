@@ -18,7 +18,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
     /**
      * File as a byte array
      */
-    private byte[] file;
+    private Base64url file;
     /**
      * SHA256 hash of the file
      */
@@ -28,7 +28,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      */
     private String version;
     /**
-     * Instantiates a new windowsInformationProtectionAppLockerFile and sets the default values.
+     * Instantiates a new WindowsInformationProtectionAppLockerFile and sets the default values.
      */
     public WindowsInformationProtectionAppLockerFile() {
         super();
@@ -36,7 +36,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsInformationProtectionAppLockerFile
+     * @return a WindowsInformationProtectionAppLockerFile
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionAppLockerFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
     }
     /**
      * Gets the displayName property value. The friendly name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -59,22 +59,22 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("file", (n) -> { this.setFile(n.getByteArrayValue()); });
+        deserializerMap.put("file", (n) -> { this.setFile(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("fileHash", (n) -> { this.setFileHash(n.getStringValue()); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the file property value. File as a byte array
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getFile() {
+    public Base64url getFile() {
         return this.file;
     }
     /**
      * Gets the fileHash property value. SHA256 hash of the file
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileHash() {
@@ -82,7 +82,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
     }
     /**
      * Gets the version property value. Version of the entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
@@ -96,7 +96,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeByteArrayValue("file", this.getFile());
+        writer.writeObjectValue("file", this.getFile());
         writer.writeStringValue("fileHash", this.getFileHash());
         writer.writeStringValue("version", this.getVersion());
     }
@@ -111,7 +111,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * Sets the file property value. File as a byte array
      * @param value Value to set for the file property.
      */
-    public void setFile(@jakarta.annotation.Nullable final byte[] value) {
+    public void setFile(@jakarta.annotation.Nullable final Base64url value) {
         this.file = value;
     }
     /**

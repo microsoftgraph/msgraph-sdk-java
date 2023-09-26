@@ -70,7 +70,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of chart objects.
-     * @return a CompletableFuture of workbookChartCollectionResponse
+     * @return a CompletableFuture of WorkbookChartCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list-charts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -80,7 +80,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of chart objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartCollectionResponse
+     * @return a CompletableFuture of WorkbookChartCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-list-charts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the itemAt method.
      * @param index Usage: index={index}
-     * @return a itemAtWithIndexRequestBuilder
+     * @return a ItemAtWithIndexRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemAtWithIndexRequestBuilder itemAtWithIndex(@jakarta.annotation.Nonnull final Integer index) {
@@ -104,7 +104,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the item method.
      * @param name Usage: name='{name}'
-     * @return a itemWithNameRequestBuilder
+     * @return a ItemWithNameRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemWithNameRequestBuilder itemWithName(@jakarta.annotation.Nonnull final String name) {
@@ -114,7 +114,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new Chart.
      * @param body The request body
-     * @return a CompletableFuture of workbookChart
+     * @return a CompletableFuture of WorkbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-post-charts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new Chart.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChart
+     * @return a CompletableFuture of WorkbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-post-charts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -201,7 +201,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a chartsRequestBuilder
+     * @return a ChartsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChartsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

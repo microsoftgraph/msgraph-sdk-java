@@ -38,7 +38,7 @@ public class SectionGroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The section groups in the section. Read-only. Nullable.
-     * @return a CompletableFuture of sectionGroup
+     * @return a CompletableFuture of SectionGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SectionGroup> get() {
@@ -47,7 +47,7 @@ public class SectionGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The section groups in the section. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sectionGroup
+     * @return a CompletableFuture of SectionGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SectionGroup> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

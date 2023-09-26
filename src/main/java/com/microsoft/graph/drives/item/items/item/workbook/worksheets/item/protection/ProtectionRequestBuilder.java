@@ -73,7 +73,7 @@ public class ProtectionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of worksheetprotection object.
-     * @return a CompletableFuture of workbookWorksheetProtection
+     * @return a CompletableFuture of WorkbookWorksheetProtection
      * @see <a href="https://learn.microsoft.com/graph/api/worksheetprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of worksheetprotection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookWorksheetProtection
+     * @return a CompletableFuture of WorkbookWorksheetProtection
      * @see <a href="https://learn.microsoft.com/graph/api/worksheetprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class ProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property protection in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookWorksheetProtection
+     * @return a CompletableFuture of WorkbookWorksheetProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> patch(@jakarta.annotation.Nonnull final WorkbookWorksheetProtection body) {
@@ -107,7 +107,7 @@ public class ProtectionRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property protection in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookWorksheetProtection
+     * @return a CompletableFuture of WorkbookWorksheetProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> patch(@jakarta.annotation.Nonnull final WorkbookWorksheetProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -209,7 +209,7 @@ public class ProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a protectionRequestBuilder
+     * @return a ProtectionRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ProtectionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

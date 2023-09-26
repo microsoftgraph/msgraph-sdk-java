@@ -69,8 +69,8 @@ public class RowsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of tablerow objects.
-     * @return a CompletableFuture of workbookTableRowCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/tablerow-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of WorkbookTableRowCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/table-list-rows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableRowCollectionResponse> get() {
@@ -79,8 +79,8 @@ public class RowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of tablerow objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookTableRowCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/tablerow-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of WorkbookTableRowCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/table-list-rows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableRowCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class RowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the itemAt method.
      * @param index Usage: index={index}
-     * @return a itemAtWithIndexRequestBuilder
+     * @return a ItemAtWithIndexRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemAtWithIndexRequestBuilder itemAtWithIndex(@jakarta.annotation.Nonnull final Integer index) {
@@ -103,7 +103,7 @@ public class RowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Adds rows to the end of a table.  Note that this API can accept multiple rows of data. Adding one row at a time can affect performance. The recommended approach is to batch the rows together in a single call rather than inserting single rows. For best results, collect the rows to be inserted on the application side and perform a single row add operation. Experiment with the number of rows to determine the ideal number of rows to use in a single API call.  This request might occasionally result in a 504 HTTP error. The appropriate response to this error is to repeat the request.
      * @param body The request body
-     * @return a CompletableFuture of workbookTableRow
+     * @return a CompletableFuture of WorkbookTableRow
      * @see <a href="https://learn.microsoft.com/graph/api/table-post-rows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class RowsRequestBuilder extends BaseRequestBuilder {
      * Adds rows to the end of a table.  Note that this API can accept multiple rows of data. Adding one row at a time can affect performance. The recommended approach is to batch the rows together in a single call rather than inserting single rows. For best results, collect the rows to be inserted on the application side and perform a single row add operation. Experiment with the number of rows to determine the ideal number of rows to use in a single API call.  This request might occasionally result in a 504 HTTP error. The appropriate response to this error is to repeat the request.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookTableRow
+     * @return a CompletableFuture of WorkbookTableRow
      * @see <a href="https://learn.microsoft.com/graph/api/table-post-rows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -190,7 +190,7 @@ public class RowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a rowsRequestBuilder
+     * @return a RowsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RowsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

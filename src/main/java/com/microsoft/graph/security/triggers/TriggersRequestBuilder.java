@@ -65,7 +65,7 @@ public class TriggersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get triggers from security
-     * @return a CompletableFuture of triggersRoot
+     * @return a CompletableFuture of TriggersRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TriggersRoot> get() {
@@ -74,7 +74,7 @@ public class TriggersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get triggers from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of triggersRoot
+     * @return a CompletableFuture of TriggersRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TriggersRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class TriggersRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property triggers in security
      * @param body The request body
-     * @return a CompletableFuture of triggersRoot
+     * @return a CompletableFuture of TriggersRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TriggersRoot> patch(@jakarta.annotation.Nonnull final TriggersRoot body) {
@@ -97,7 +97,7 @@ public class TriggersRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property triggers in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of triggersRoot
+     * @return a CompletableFuture of TriggersRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TriggersRoot> patch(@jakarta.annotation.Nonnull final TriggersRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class TriggersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a triggersRequestBuilder
+     * @return a TriggersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TriggersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -57,7 +57,7 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read properties and relationships of the deviceComplianceDeviceOverview object.
-     * @return a CompletableFuture of deviceComplianceDeviceOverview
+     * @return a CompletableFuture of DeviceComplianceDeviceOverview
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancedeviceoverview-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the deviceComplianceDeviceOverview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceDeviceOverview
+     * @return a CompletableFuture of DeviceComplianceDeviceOverview
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancedeviceoverview-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a deviceComplianceDeviceOverview object.
      * @param body The request body
-     * @return a CompletableFuture of deviceComplianceDeviceOverview
+     * @return a CompletableFuture of DeviceComplianceDeviceOverview
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancedeviceoverview-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a deviceComplianceDeviceOverview object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceDeviceOverview
+     * @return a CompletableFuture of DeviceComplianceDeviceOverview
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancedeviceoverview-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceStatusOverviewRequestBuilder
+     * @return a DeviceStatusOverviewRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceStatusOverviewRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of an externalItem object.
-     * @return a CompletableFuture of externalItemCollectionResponse
+     * @return a CompletableFuture of ExternalItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalItemCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an externalItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of externalItemCollectionResponse
+     * @return a CompletableFuture of ExternalItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalItemCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to items for connections
      * @param body The request body
-     * @return a CompletableFuture of externalItem
+     * @return a CompletableFuture of ExternalItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalItem> post(@jakarta.annotation.Nonnull final ExternalItem body) {
@@ -92,7 +92,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to items for connections
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of externalItem
+     * @return a CompletableFuture of ExternalItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalItem> post(@jakarta.annotation.Nonnull final ExternalItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a itemsRequestBuilder
+     * @return a ItemsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

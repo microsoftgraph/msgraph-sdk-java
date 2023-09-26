@@ -37,7 +37,7 @@ public class RecentRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function recent
-     * @return a CompletableFuture of recentResponse
+     * @return a CompletableFuture of RecentResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RecentResponse> get() {
@@ -46,7 +46,7 @@ public class RecentRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function recent
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of recentResponse
+     * @return a CompletableFuture of RecentResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RecentResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class RecentRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a recentRequestBuilder
+     * @return a RecentRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RecentRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

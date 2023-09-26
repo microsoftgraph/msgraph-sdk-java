@@ -54,7 +54,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get employeeExperience
-     * @return a CompletableFuture of employeeExperience
+     * @return a CompletableFuture of EmployeeExperience
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmployeeExperience> get() {
@@ -63,7 +63,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     /**
      * Get employeeExperience
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of employeeExperience
+     * @return a CompletableFuture of EmployeeExperience
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmployeeExperience> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -76,7 +76,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update employeeExperience
      * @param body The request body
-     * @return a CompletableFuture of employeeExperience
+     * @return a CompletableFuture of EmployeeExperience
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmployeeExperience> patch(@jakarta.annotation.Nonnull final EmployeeExperience body) {
@@ -86,7 +86,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * Update employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of employeeExperience
+     * @return a CompletableFuture of EmployeeExperience
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmployeeExperience> patch(@jakarta.annotation.Nonnull final EmployeeExperience body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +161,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a employeeExperienceRequestBuilder
+     * @return a EmployeeExperienceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EmployeeExperienceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

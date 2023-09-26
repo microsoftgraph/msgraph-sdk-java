@@ -30,7 +30,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      */
     private String password;
     /**
-     * Instantiates a new passwordProfile and sets the default values.
+     * Instantiates a new PasswordProfile and sets the default values.
      */
     public PasswordProfile() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a passwordProfile
+     * @return a PasswordProfile
      */
     @jakarta.annotation.Nonnull
     public static PasswordProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
         return new PasswordProfile();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the forceChangePasswordNextSignIn property value. true if the user must change her password on the next login; otherwise false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getForceChangePasswordNextSignIn() {
@@ -76,7 +76,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the forceChangePasswordNextSignInWithMfa property value. If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getForceChangePasswordNextSignInWithMfa() {
@@ -84,7 +84,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -92,7 +92,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user's passwordPolicies property. By default, a strong password is required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPassword() {
@@ -111,8 +111,8 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

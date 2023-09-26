@@ -14,7 +14,7 @@ public class PlannerPlan extends Entity implements Parsable {
      */
     private java.util.List<PlannerBucket> buckets;
     /**
-     * Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property cant be updated. Required.
+     * Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it's set, this property cant be updated. Required.
      */
     private PlannerPlanContainer container;
     /**
@@ -26,7 +26,7 @@ public class PlannerPlan extends Entity implements Parsable {
      */
     private OffsetDateTime createdDateTime;
     /**
-     * Read-only. Nullable. Additional details about the plan.
+     * Read-only. Nullable. Extra details about the plan.
      */
     private PlannerPlanDetails details;
     /**
@@ -42,7 +42,7 @@ public class PlannerPlan extends Entity implements Parsable {
      */
     private String title;
     /**
-     * Instantiates a new plannerPlan and sets the default values.
+     * Instantiates a new PlannerPlan and sets the default values.
      */
     public PlannerPlan() {
         super();
@@ -50,7 +50,7 @@ public class PlannerPlan extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerPlan
+     * @return a PlannerPlan
      */
     @jakarta.annotation.Nonnull
     public static PlannerPlan createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,15 +59,15 @@ public class PlannerPlan extends Entity implements Parsable {
     }
     /**
      * Gets the buckets property value. Read-only. Nullable. Collection of buckets in the plan.
-     * @return a plannerBucket
+     * @return a java.util.List<PlannerBucket>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerBucket> getBuckets() {
         return this.buckets;
     }
     /**
-     * Gets the container property value. Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property cant be updated. Required.
-     * @return a plannerPlanContainer
+     * Gets the container property value. Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it's set, this property cant be updated. Required.
+     * @return a PlannerPlanContainer
      */
     @jakarta.annotation.Nullable
     public PlannerPlanContainer getContainer() {
@@ -75,7 +75,7 @@ public class PlannerPlan extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Read-only. The user who created the plan.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -90,8 +90,8 @@ public class PlannerPlan extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
-     * Gets the details property value. Read-only. Nullable. Additional details about the plan.
-     * @return a plannerPlanDetails
+     * Gets the details property value. Read-only. Nullable. Extra details about the plan.
+     * @return a PlannerPlanDetails
      */
     @jakarta.annotation.Nullable
     public PlannerPlanDetails getDetails() {
@@ -116,7 +116,7 @@ public class PlannerPlan extends Entity implements Parsable {
     }
     /**
      * Gets the owner property value. The owner property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOwner() {
@@ -124,7 +124,7 @@ public class PlannerPlan extends Entity implements Parsable {
     }
     /**
      * Gets the tasks property value. Read-only. Nullable. Collection of tasks in the plan.
-     * @return a plannerTask
+     * @return a java.util.List<PlannerTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerTask> getTasks() {
@@ -132,7 +132,7 @@ public class PlannerPlan extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. Required. Title of the plan.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
@@ -162,7 +162,7 @@ public class PlannerPlan extends Entity implements Parsable {
         this.buckets = value;
     }
     /**
-     * Sets the container property value. Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property cant be updated. Required.
+     * Sets the container property value. Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it's set, this property cant be updated. Required.
      * @param value Value to set for the container property.
      */
     public void setContainer(@jakarta.annotation.Nullable final PlannerPlanContainer value) {
@@ -183,7 +183,7 @@ public class PlannerPlan extends Entity implements Parsable {
         this.createdDateTime = value;
     }
     /**
-     * Sets the details property value. Read-only. Nullable. Additional details about the plan.
+     * Sets the details property value. Read-only. Nullable. Extra details about the plan.
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final PlannerPlanDetails value) {

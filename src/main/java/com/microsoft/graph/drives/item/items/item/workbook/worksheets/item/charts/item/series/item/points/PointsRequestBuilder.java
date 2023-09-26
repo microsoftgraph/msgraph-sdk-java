@@ -60,19 +60,19 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/series/{workbookChartSeries%2Did}/points{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of chartpoints objects.
-     * @return a CompletableFuture of workbookChartPointCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/chartseries-list-points?view=graph-rest-1.0">Find more info here</a>
+     * Retrieve a list of chartpoint objects.
+     * @return a CompletableFuture of WorkbookChartPointCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/chartpoint-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartPointCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Retrieve a list of chartpoints objects.
+     * Retrieve a list of chartpoint objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartPointCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/chartseries-list-points?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of WorkbookChartPointCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/chartpoint-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartPointCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -85,7 +85,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the itemAt method.
      * @param index Usage: index={index}
-     * @return a itemAtWithIndexRequestBuilder
+     * @return a ItemAtWithIndexRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemAtWithIndexRequestBuilder itemAtWithIndex(@jakarta.annotation.Nonnull final Integer index) {
@@ -95,7 +95,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new ChartPoints.
      * @param body The request body
-     * @return a CompletableFuture of workbookChartPoint
+     * @return a CompletableFuture of WorkbookChartPoint
      * @see <a href="https://learn.microsoft.com/graph/api/chartseries-post-points?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -106,7 +106,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new ChartPoints.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartPoint
+     * @return a CompletableFuture of WorkbookChartPoint
      * @see <a href="https://learn.microsoft.com/graph/api/chartseries-post-points?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WorkbookChartPoint::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of chartpoints objects.
+     * Retrieve a list of chartpoint objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of chartpoints objects.
+     * Retrieve a list of chartpoint objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +182,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a pointsRequestBuilder
+     * @return a PointsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PointsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -190,7 +190,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return new PointsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of chartpoints objects.
+     * Retrieve a list of chartpoint objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

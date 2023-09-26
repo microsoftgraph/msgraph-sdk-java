@@ -37,7 +37,7 @@ public class UnsubmitRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Indicate that a student wants to work on the submission of the assignment after it was turned in. Only teachers, students, and applications with application permissions can perform this operation. This method changes the status of the submission from submitted to working. During the submit process, all the resources are copied from submittedResources to  workingResources. The teacher will be looking at the working resources list for grading. A teacher can also unsubmit a student's assignment on their behalf.
-     * @return a CompletableFuture of educationSubmission
+     * @return a CompletableFuture of EducationSubmission
      * @see <a href="https://learn.microsoft.com/graph/api/educationsubmission-unsubmit?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class UnsubmitRequestBuilder extends BaseRequestBuilder {
     /**
      * Indicate that a student wants to work on the submission of the assignment after it was turned in. Only teachers, students, and applications with application permissions can perform this operation. This method changes the status of the submission from submitted to working. During the submit process, all the resources are copied from submittedResources to  workingResources. The teacher will be looking at the working resources list for grading. A teacher can also unsubmit a student's assignment on their behalf.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSubmission
+     * @return a CompletableFuture of EducationSubmission
      * @see <a href="https://learn.microsoft.com/graph/api/educationsubmission-unsubmit?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class UnsubmitRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a unsubmitRequestBuilder
+     * @return a UnsubmitRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UnsubmitRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class HostsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types:
-     * @return a CompletableFuture of hostCollectionResponse
+     * @return a CompletableFuture of HostCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class HostsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostCollectionResponse
+     * @return a CompletableFuture of HostCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class HostsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to hosts for security
      * @param body The request body
-     * @return a CompletableFuture of host
+     * @return a CompletableFuture of Host
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Host> post(@jakarta.annotation.Nonnull final Host body) {
@@ -92,7 +92,7 @@ public class HostsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to hosts for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of host
+     * @return a CompletableFuture of Host
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Host> post(@jakarta.annotation.Nonnull final Host body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class HostsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a hostsRequestBuilder
+     * @return a HostsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HostsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -15,7 +15,7 @@ public class GetRecentNotebooksWithIncludePersonalNotebooksResponse extends Base
      */
     private java.util.List<RecentNotebook> value;
     /**
-     * Instantiates a new getRecentNotebooksWithIncludePersonalNotebooksResponse and sets the default values.
+     * Instantiates a new GetRecentNotebooksWithIncludePersonalNotebooksResponse and sets the default values.
      */
     public GetRecentNotebooksWithIncludePersonalNotebooksResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetRecentNotebooksWithIncludePersonalNotebooksResponse extends Base
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getRecentNotebooksWithIncludePersonalNotebooksResponse
+     * @return a GetRecentNotebooksWithIncludePersonalNotebooksResponse
      */
     @jakarta.annotation.Nonnull
     public static GetRecentNotebooksWithIncludePersonalNotebooksResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetRecentNotebooksWithIncludePersonalNotebooksResponse extends Base
     }
     /**
      * Gets the value property value. The value property
-     * @return a recentNotebook
+     * @return a java.util.List<RecentNotebook>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RecentNotebook> getValue() {

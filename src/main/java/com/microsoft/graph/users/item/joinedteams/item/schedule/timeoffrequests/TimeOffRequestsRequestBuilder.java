@@ -60,7 +60,7 @@ public class TimeOffRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of timeOffRequest objects in the team.
-     * @return a CompletableFuture of timeOffRequestCollectionResponse
+     * @return a CompletableFuture of TimeOffRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/timeoffrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class TimeOffRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of timeOffRequest objects in the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeOffRequestCollectionResponse
+     * @return a CompletableFuture of TimeOffRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/timeoffrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class TimeOffRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to timeOffRequests for users
      * @param body The request body
-     * @return a CompletableFuture of timeOffRequest
+     * @return a CompletableFuture of TimeOffRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffRequest> post(@jakarta.annotation.Nonnull final TimeOffRequest body) {
@@ -94,7 +94,7 @@ public class TimeOffRequestsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to timeOffRequests for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeOffRequest
+     * @return a CompletableFuture of TimeOffRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffRequest> post(@jakarta.annotation.Nonnull final TimeOffRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class TimeOffRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a timeOffRequestsRequestBuilder
+     * @return a TimeOffRequestsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TimeOffRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

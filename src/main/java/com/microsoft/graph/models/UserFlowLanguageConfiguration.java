@@ -25,7 +25,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      */
     private java.util.List<UserFlowLanguagePage> overridesPages;
     /**
-     * Instantiates a new userFlowLanguageConfiguration and sets the default values.
+     * Instantiates a new UserFlowLanguageConfiguration and sets the default values.
      */
     public UserFlowLanguageConfiguration() {
         super();
@@ -33,7 +33,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userFlowLanguageConfiguration
+     * @return a UserFlowLanguageConfiguration
      */
     @jakarta.annotation.Nonnull
     public static UserFlowLanguageConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the defaultPages property value. Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
-     * @return a userFlowLanguagePage
+     * @return a java.util.List<UserFlowLanguagePage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserFlowLanguagePage> getDefaultPages() {
@@ -50,7 +50,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The language name to display. This property is read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -71,7 +71,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabled property value. Indicates whether the language is enabled within the user flow.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -79,7 +79,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the overridesPages property value. Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
-     * @return a userFlowLanguagePage
+     * @return a java.util.List<UserFlowLanguagePage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserFlowLanguagePage> getOverridesPages() {

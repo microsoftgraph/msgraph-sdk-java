@@ -37,7 +37,7 @@ public class MicrosoftGraphIdentityGovernanceRestoreRequestBuilder extends BaseR
     }
     /**
      * Restore a workflow that has been deleted. You can only restore a workflow that was deleted within the last 30 days before Azure AD automatically permanently deletes it.
-     * @return a CompletableFuture of workflow
+     * @return a CompletableFuture of Workflow
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-restore?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class MicrosoftGraphIdentityGovernanceRestoreRequestBuilder extends BaseR
     /**
      * Restore a workflow that has been deleted. You can only restore a workflow that was deleted within the last 30 days before Azure AD automatically permanently deletes it.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workflow
+     * @return a CompletableFuture of Workflow
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-restore?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class MicrosoftGraphIdentityGovernanceRestoreRequestBuilder extends BaseR
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphIdentityGovernanceRestoreRequestBuilder
+     * @return a MicrosoftGraphIdentityGovernanceRestoreRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceRestoreRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

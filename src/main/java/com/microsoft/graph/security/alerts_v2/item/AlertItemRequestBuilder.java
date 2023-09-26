@@ -65,7 +65,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of an alert in an organization based on the specified alert id property.
-     * @return a CompletableFuture of alert
+     * @return a CompletableFuture of Alert
      * @see <a href="https://learn.microsoft.com/graph/api/security-alert-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of an alert in an organization based on the specified alert id property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alert
+     * @return a CompletableFuture of Alert
      * @see <a href="https://learn.microsoft.com/graph/api/security-alert-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an alert object in an organization based on the specified alert id property.
      * @param body The request body
-     * @return a CompletableFuture of alert
+     * @return a CompletableFuture of Alert
      * @see <a href="https://learn.microsoft.com/graph/api/security-alert-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an alert object in an organization based on the specified alert id property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alert
+     * @return a CompletableFuture of Alert
      * @see <a href="https://learn.microsoft.com/graph/api/security-alert-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

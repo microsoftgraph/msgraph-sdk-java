@@ -76,7 +76,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the custodian objects and their properties.
-     * @return a CompletableFuture of ediscoveryCustodianCollectionResponse
+     * @return a CompletableFuture of EdiscoveryCustodianCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-custodians?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -86,7 +86,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the custodian objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryCustodianCollectionResponse
+     * @return a CompletableFuture of EdiscoveryCustodianCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-custodians?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new ediscoveryCustodian object.After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
      * @param body The request body
-     * @return a CompletableFuture of ediscoveryCustodian
+     * @return a CompletableFuture of EdiscoveryCustodian
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-custodians?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -111,7 +111,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
      * Create a new ediscoveryCustodian object.After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryCustodian
+     * @return a CompletableFuture of EdiscoveryCustodian
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-custodians?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -187,7 +187,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a custodiansRequestBuilder
+     * @return a CustodiansRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CustodiansRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

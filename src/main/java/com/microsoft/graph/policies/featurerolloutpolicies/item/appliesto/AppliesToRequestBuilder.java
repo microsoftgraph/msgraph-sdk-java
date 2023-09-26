@@ -100,7 +100,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Nullable. Specifies a list of directoryObjects that feature is enabled for.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -109,7 +109,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
     /**
      * Nullable. Specifies a list of directoryObjects that feature is enabled for.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
     /**
      * Add an appliesTo on a featureRolloutPolicy object to specify the directoryObject to which the featureRolloutPolicy should be applied.
      * @param body The request body
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicy-post-appliesto?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
      * Add an appliesTo on a featureRolloutPolicy object to specify the directoryObject to which the featureRolloutPolicy should be applied.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicy-post-appliesto?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -209,7 +209,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appliesToRequestBuilder
+     * @return a AppliesToRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppliesToRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

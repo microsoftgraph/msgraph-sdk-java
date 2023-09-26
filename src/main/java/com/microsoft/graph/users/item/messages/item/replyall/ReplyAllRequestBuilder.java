@@ -92,7 +92,7 @@ public class ReplyAllRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a replyAllRequestBuilder
+     * @return a ReplyAllRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReplyAllRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

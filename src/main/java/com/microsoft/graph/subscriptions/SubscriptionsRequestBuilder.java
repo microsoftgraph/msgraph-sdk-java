@@ -52,7 +52,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of webhook subscriptions, based on the app ID, the user, and the user's role with a tenant. The content of the response depends on the context in which the app is calling; for details, see the scenarios in the Permissions section.
-     * @return a CompletableFuture of subscriptionCollectionResponse
+     * @return a CompletableFuture of SubscriptionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/subscription-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of webhook subscriptions, based on the app ID, the user, and the user's role with a tenant. The content of the response depends on the context in which the app is calling; for details, see the scenarios in the Permissions section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subscriptionCollectionResponse
+     * @return a CompletableFuture of SubscriptionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/subscription-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Subscribes a listener application to receive change notifications when the requested type of changes occur to the specified resource in Microsoft Graph. To identify the resources for which you can create subscriptions and the limitations on subscriptions, see Set up notifications for changes in resource data: Supported resources. Some resources support rich notifications, that is, notifications that include resource data. For more information about these resources, see Set up change notifications that include resource data: Supported resources.
      * @param body The request body
-     * @return a CompletableFuture of subscription
+     * @return a CompletableFuture of Subscription
      * @see <a href="https://learn.microsoft.com/graph/api/subscription-post-subscriptions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
      * Subscribes a listener application to receive change notifications when the requested type of changes occur to the specified resource in Microsoft Graph. To identify the resources for which you can create subscriptions and the limitations on subscriptions, see Set up notifications for changes in resource data: Supported resources. Some resources support rich notifications, that is, notifications that include resource data. For more information about these resources, see Set up change notifications that include resource data: Supported resources.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subscription
+     * @return a CompletableFuture of Subscription
      * @see <a href="https://learn.microsoft.com/graph/api/subscription-post-subscriptions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -163,7 +163,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a subscriptionsRequestBuilder
+     * @return a SubscriptionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SubscriptionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

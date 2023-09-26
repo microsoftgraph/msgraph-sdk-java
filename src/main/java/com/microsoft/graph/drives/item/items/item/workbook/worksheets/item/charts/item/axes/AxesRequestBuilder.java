@@ -81,7 +81,7 @@ public class AxesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents chart axes. Read-only.
-     * @return a CompletableFuture of workbookChartAxes
+     * @return a CompletableFuture of WorkbookChartAxes
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartAxes> get() {
@@ -90,7 +90,7 @@ public class AxesRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents chart axes. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartAxes
+     * @return a CompletableFuture of WorkbookChartAxes
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartAxes> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class AxesRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property axes in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookChartAxes
+     * @return a CompletableFuture of WorkbookChartAxes
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartAxes> patch(@jakarta.annotation.Nonnull final WorkbookChartAxes body) {
@@ -113,7 +113,7 @@ public class AxesRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property axes in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartAxes
+     * @return a CompletableFuture of WorkbookChartAxes
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartAxes> patch(@jakarta.annotation.Nonnull final WorkbookChartAxes body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -215,7 +215,7 @@ public class AxesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a axesRequestBuilder
+     * @return a AxesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AxesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

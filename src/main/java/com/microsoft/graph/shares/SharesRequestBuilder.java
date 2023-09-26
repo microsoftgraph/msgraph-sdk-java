@@ -60,7 +60,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Access a shared DriveItem or a collection of shared items by using a shareId or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
-     * @return a CompletableFuture of sharedDriveItemCollectionResponse
+     * @return a CompletableFuture of SharedDriveItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedDriveItemCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
     /**
      * Access a shared DriveItem or a collection of shared items by using a shareId or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharedDriveItemCollectionResponse
+     * @return a CompletableFuture of SharedDriveItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedDriveItemCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to shares
      * @param body The request body
-     * @return a CompletableFuture of sharedDriveItem
+     * @return a CompletableFuture of SharedDriveItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedDriveItem> post(@jakarta.annotation.Nonnull final SharedDriveItem body) {
@@ -92,7 +92,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
      * Add new entity to shares
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharedDriveItem
+     * @return a CompletableFuture of SharedDriveItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedDriveItem> post(@jakarta.annotation.Nonnull final SharedDriveItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sharesRequestBuilder
+     * @return a SharesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SharesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

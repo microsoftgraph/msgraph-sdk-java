@@ -60,7 +60,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of plannerTask objects associated with a plannerPlan object.
-     * @return a CompletableFuture of plannerTaskCollectionResponse
+     * @return a CompletableFuture of PlannerTaskCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of plannerTask objects associated with a plannerPlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerTaskCollectionResponse
+     * @return a CompletableFuture of PlannerTaskCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to tasks for users
      * @param body The request body
-     * @return a CompletableFuture of plannerTask
+     * @return a CompletableFuture of PlannerTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTask> post(@jakarta.annotation.Nonnull final PlannerTask body) {
@@ -94,7 +94,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to tasks for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerTask
+     * @return a CompletableFuture of PlannerTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTask> post(@jakarta.annotation.Nonnull final PlannerTask body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a tasksRequestBuilder
+     * @return a TasksRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TasksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

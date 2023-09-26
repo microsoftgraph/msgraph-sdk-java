@@ -59,7 +59,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List application and service principal objects that are assigned an appManagementPolicy policy object.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-list-appliesto?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
     /**
      * List application and service principal objects that are assigned an appManagementPolicy policy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-list-appliesto?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appliesToRequestBuilder
+     * @return a AppliesToRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppliesToRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

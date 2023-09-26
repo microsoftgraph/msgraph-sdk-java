@@ -58,7 +58,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
-     * @return a CompletableFuture of string
+     * @return a CompletableFuture of String
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of string
+     * @return a CompletableFuture of String
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

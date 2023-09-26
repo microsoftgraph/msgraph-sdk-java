@@ -73,7 +73,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of lifecycle policies for this group. Read-only. Nullable.
-     * @return a CompletableFuture of groupLifecyclePolicy
+     * @return a CompletableFuture of GroupLifecyclePolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> get() {
@@ -82,7 +82,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of lifecycle policies for this group. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupLifecyclePolicy
+     * @return a CompletableFuture of GroupLifecyclePolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property groupLifecyclePolicies in groups
      * @param body The request body
-     * @return a CompletableFuture of groupLifecyclePolicy
+     * @return a CompletableFuture of GroupLifecyclePolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> patch(@jakarta.annotation.Nonnull final GroupLifecyclePolicy body) {
@@ -105,7 +105,7 @@ public class GroupLifecyclePolicyItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property groupLifecyclePolicies in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupLifecyclePolicy
+     * @return a CompletableFuture of GroupLifecyclePolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> patch(@jakarta.annotation.Nonnull final GroupLifecyclePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

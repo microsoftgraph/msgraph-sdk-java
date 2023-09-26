@@ -15,7 +15,7 @@ public class ImportResponse extends BaseCollectionPaginationCountResponse implem
      */
     private java.util.List<ImportedWindowsAutopilotDeviceIdentity> value;
     /**
-     * Instantiates a new importResponse and sets the default values.
+     * Instantiates a new ImportResponse and sets the default values.
      */
     public ImportResponse() {
         super();
@@ -23,7 +23,7 @@ public class ImportResponse extends BaseCollectionPaginationCountResponse implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a importResponse
+     * @return a ImportResponse
      */
     @jakarta.annotation.Nonnull
     public static ImportResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class ImportResponse extends BaseCollectionPaginationCountResponse implem
     }
     /**
      * Gets the value property value. The value property
-     * @return a importedWindowsAutopilotDeviceIdentity
+     * @return a java.util.List<ImportedWindowsAutopilotDeviceIdentity>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ImportedWindowsAutopilotDeviceIdentity> getValue() {

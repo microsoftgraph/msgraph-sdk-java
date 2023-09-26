@@ -26,7 +26,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new simulationEvent and sets the default values.
+     * Instantiates a new SimulationEvent and sets the default values.
      */
     public SimulationEvent() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a simulationEvent
+     * @return a SimulationEvent
      */
     @jakarta.annotation.Nonnull
     public static SimulationEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
         return new SimulationEvent();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the count property value. Count of the simulation event occurrence in an attack simulation and training campaign.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCount() {
@@ -59,7 +59,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the eventName property value. Name of the simulation event in an attack simulation and training campaign.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEventName() {
@@ -79,7 +79,7 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,8 +97,8 @@ public class SimulationEvent implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

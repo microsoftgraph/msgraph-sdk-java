@@ -92,7 +92,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of organization objects.
-     * @return a CompletableFuture of organizationCollectionResponse
+     * @return a CompletableFuture of OrganizationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/organization-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of organization objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of organizationCollectionResponse
+     * @return a CompletableFuture of OrganizationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/organization-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to organization
      * @param body The request body
-     * @return a CompletableFuture of organization
+     * @return a CompletableFuture of Organization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Organization> post(@jakarta.annotation.Nonnull final Organization body) {
@@ -126,7 +126,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
      * Add new entity to organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of organization
+     * @return a CompletableFuture of Organization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Organization> post(@jakarta.annotation.Nonnull final Organization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -201,7 +201,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a organizationRequestBuilder
+     * @return a OrganizationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OrganizationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

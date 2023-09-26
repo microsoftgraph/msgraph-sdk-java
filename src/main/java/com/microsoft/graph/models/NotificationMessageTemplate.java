@@ -38,7 +38,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      */
     private java.util.List<String> roleScopeTagIds;
     /**
-     * Instantiates a new notificationMessageTemplate and sets the default values.
+     * Instantiates a new NotificationMessageTemplate and sets the default values.
      */
     public NotificationMessageTemplate() {
         super();
@@ -46,7 +46,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a notificationMessageTemplate
+     * @return a NotificationMessageTemplate
      */
     @jakarta.annotation.Nonnull
     public static NotificationMessageTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the brandingOptions property value. Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
-     * @return a notificationTemplateBrandingOptions
+     * @return a EnumSet<NotificationTemplateBrandingOptions>
      */
     @jakarta.annotation.Nullable
     public EnumSet<NotificationTemplateBrandingOptions> getBrandingOptions() {
@@ -63,7 +63,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the defaultLocale property value. The default locale to fallback onto when the requested locale is not available.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultLocale() {
@@ -71,7 +71,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name for the Notification Message Template.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -102,7 +102,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the localizedNotificationMessages property value. The list of localized messages for this Notification Message Template.
-     * @return a localizedNotificationMessage
+     * @return a java.util.List<LocalizedNotificationMessage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocalizedNotificationMessage> getLocalizedNotificationMessages() {
@@ -110,7 +110,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {

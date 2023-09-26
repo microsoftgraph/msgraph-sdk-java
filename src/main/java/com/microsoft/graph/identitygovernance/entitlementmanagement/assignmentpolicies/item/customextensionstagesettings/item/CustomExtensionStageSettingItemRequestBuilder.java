@@ -65,7 +65,7 @@ public class CustomExtensionStageSettingItemRequestBuilder extends BaseRequestBu
     }
     /**
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     * @return a CompletableFuture of customExtensionStageSetting
+     * @return a CompletableFuture of CustomExtensionStageSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomExtensionStageSetting> get() {
@@ -74,7 +74,7 @@ public class CustomExtensionStageSettingItemRequestBuilder extends BaseRequestBu
     /**
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customExtensionStageSetting
+     * @return a CompletableFuture of CustomExtensionStageSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomExtensionStageSetting> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class CustomExtensionStageSettingItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property customExtensionStageSettings in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of customExtensionStageSetting
+     * @return a CompletableFuture of CustomExtensionStageSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomExtensionStageSetting> patch(@jakarta.annotation.Nonnull final CustomExtensionStageSetting body) {
@@ -97,7 +97,7 @@ public class CustomExtensionStageSettingItemRequestBuilder extends BaseRequestBu
      * Update the navigation property customExtensionStageSettings in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customExtensionStageSetting
+     * @return a CompletableFuture of CustomExtensionStageSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomExtensionStageSetting> patch(@jakarta.annotation.Nonnull final CustomExtensionStageSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

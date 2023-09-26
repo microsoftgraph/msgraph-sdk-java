@@ -227,7 +227,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of an application object.
-     * @return a CompletableFuture of application
+     * @return a CompletableFuture of Application
      * @see <a href="https://learn.microsoft.com/graph/api/application-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -237,7 +237,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of an application object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of application
+     * @return a CompletableFuture of Application
      * @see <a href="https://learn.microsoft.com/graph/api/application-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -251,7 +251,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an application object.
      * @param body The request body
-     * @return a CompletableFuture of application
+     * @return a CompletableFuture of Application
      * @see <a href="https://learn.microsoft.com/graph/api/application-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -262,7 +262,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an application object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of application
+     * @return a CompletableFuture of Application
      * @see <a href="https://learn.microsoft.com/graph/api/application-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

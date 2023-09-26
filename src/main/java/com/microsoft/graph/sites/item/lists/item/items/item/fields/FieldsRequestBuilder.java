@@ -57,7 +57,7 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The values of the columns set on this list item.
-     * @return a CompletableFuture of fieldValueSet
+     * @return a CompletableFuture of FieldValueSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FieldValueSet> get() {
@@ -66,7 +66,7 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
     /**
      * The values of the columns set on this list item.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of fieldValueSet
+     * @return a CompletableFuture of FieldValueSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FieldValueSet> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties on a [listItem][].
      * @param body The request body
-     * @return a CompletableFuture of fieldValueSet
+     * @return a CompletableFuture of FieldValueSet
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -90,7 +90,7 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
      * Update the properties on a [listItem][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of fieldValueSet
+     * @return a CompletableFuture of FieldValueSet
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -193,7 +193,7 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a fieldsRequestBuilder
+     * @return a FieldsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FieldsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

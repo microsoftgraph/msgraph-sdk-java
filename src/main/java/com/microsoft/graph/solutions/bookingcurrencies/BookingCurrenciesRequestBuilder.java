@@ -60,7 +60,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
-     * @return a CompletableFuture of bookingCurrencyCollectionResponse
+     * @return a CompletableFuture of BookingCurrencyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingcurrency-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingCurrencyCollectionResponse
+     * @return a CompletableFuture of BookingCurrencyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingcurrency-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to bookingCurrencies for solutions
      * @param body The request body
-     * @return a CompletableFuture of bookingCurrency
+     * @return a CompletableFuture of BookingCurrency
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCurrency> post(@jakarta.annotation.Nonnull final BookingCurrency body) {
@@ -94,7 +94,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to bookingCurrencies for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingCurrency
+     * @return a CompletableFuture of BookingCurrency
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCurrency> post(@jakarta.annotation.Nonnull final BookingCurrency body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a bookingCurrenciesRequestBuilder
+     * @return a BookingCurrenciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public BookingCurrenciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

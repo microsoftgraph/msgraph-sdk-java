@@ -92,7 +92,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the group, along with the corresponding kind of resource-specific access that each app has.
-     * @return a CompletableFuture of resourceSpecificPermissionGrantCollectionResponse
+     * @return a CompletableFuture of ResourceSpecificPermissionGrantCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-permissiongrants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the group, along with the corresponding kind of resource-specific access that each app has.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceSpecificPermissionGrantCollectionResponse
+     * @return a CompletableFuture of ResourceSpecificPermissionGrantCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-permissiongrants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to permissionGrants for groups
      * @param body The request body
-     * @return a CompletableFuture of resourceSpecificPermissionGrant
+     * @return a CompletableFuture of ResourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> post(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body) {
@@ -126,7 +126,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to permissionGrants for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceSpecificPermissionGrant
+     * @return a CompletableFuture of ResourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> post(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -201,7 +201,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a permissionGrantsRequestBuilder
+     * @return a PermissionGrantsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PermissionGrantsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

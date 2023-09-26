@@ -25,7 +25,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      */
     private String userId;
     /**
-     * Instantiates a new shift and sets the default values.
+     * Instantiates a new Shift and sets the default values.
      */
     public Shift() {
         super();
@@ -34,7 +34,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a shift
+     * @return a Shift
      */
     @jakarta.annotation.Nonnull
     public static Shift createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the draftShift property value. The draft version of this shift that is viewable by managers. Required.
-     * @return a shiftItem
+     * @return a ShiftItem
      */
     @jakarta.annotation.Nullable
     public ShiftItem getDraftShift() {
@@ -64,7 +64,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the schedulingGroupId property value. ID of the scheduling group the shift is part of. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSchedulingGroupId() {
@@ -72,7 +72,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Required.
-     * @return a shiftItem
+     * @return a ShiftItem
      */
     @jakarta.annotation.Nullable
     public ShiftItem getSharedShift() {
@@ -80,7 +80,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the userId property value. ID of the user assigned to the shift. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

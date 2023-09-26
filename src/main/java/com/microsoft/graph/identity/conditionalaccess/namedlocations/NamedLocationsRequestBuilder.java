@@ -60,7 +60,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of namedLocation objects.
-     * @return a CompletableFuture of namedLocationCollectionResponse
+     * @return a CompletableFuture of NamedLocationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-list-namedlocations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of namedLocation objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of namedLocationCollectionResponse
+     * @return a CompletableFuture of NamedLocationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-list-namedlocations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
      * @param body The request body
-     * @return a CompletableFuture of namedLocation
+     * @return a CompletableFuture of NamedLocation
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-post-namedlocations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
      * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of namedLocation
+     * @return a CompletableFuture of NamedLocation
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-post-namedlocations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a namedLocationsRequestBuilder
+     * @return a NamedLocationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public NamedLocationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

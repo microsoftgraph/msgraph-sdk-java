@@ -15,7 +15,7 @@ public class AllowedCalendarSharingRolesWithUserResponse extends BaseCollectionP
      */
     private java.util.List<CalendarRoleType> value;
     /**
-     * Instantiates a new allowedCalendarSharingRolesWithUserResponse and sets the default values.
+     * Instantiates a new AllowedCalendarSharingRolesWithUserResponse and sets the default values.
      */
     public AllowedCalendarSharingRolesWithUserResponse() {
         super();
@@ -23,7 +23,7 @@ public class AllowedCalendarSharingRolesWithUserResponse extends BaseCollectionP
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a allowedCalendarSharingRolesWithUserResponse
+     * @return a AllowedCalendarSharingRolesWithUserResponse
      */
     @jakarta.annotation.Nonnull
     public static AllowedCalendarSharingRolesWithUserResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class AllowedCalendarSharingRolesWithUserResponse extends BaseCollectionP
     }
     /**
      * Gets the value property value. The value property
-     * @return a calendarRoleType
+     * @return a java.util.List<CalendarRoleType>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CalendarRoleType> getValue() {

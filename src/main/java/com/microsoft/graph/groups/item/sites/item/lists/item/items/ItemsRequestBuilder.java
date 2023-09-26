@@ -52,7 +52,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the collection of [items][item] in a [list][].
-     * @return a CompletableFuture of listItemCollectionResponse
+     * @return a CompletableFuture of ListItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the collection of [items][item] in a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of listItemCollectionResponse
+     * @return a CompletableFuture of ListItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new [listItem][] in a [list][].
      * @param body The request body
-     * @return a CompletableFuture of listItem
+     * @return a CompletableFuture of ListItem
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
      * Create a new [listItem][] in a [list][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of listItem
+     * @return a CompletableFuture of ListItem
      * @see <a href="https://learn.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -163,7 +163,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a itemsRequestBuilder
+     * @return a ItemsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

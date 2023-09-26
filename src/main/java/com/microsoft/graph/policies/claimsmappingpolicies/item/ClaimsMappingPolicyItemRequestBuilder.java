@@ -67,7 +67,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a claimsMappingPolicy object.
-     * @return a CompletableFuture of claimsMappingPolicy
+     * @return a CompletableFuture of ClaimsMappingPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/claimsmappingpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a claimsMappingPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of claimsMappingPolicy
+     * @return a CompletableFuture of ClaimsMappingPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/claimsmappingpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a claimsMappingPolicy object.
      * @param body The request body
-     * @return a CompletableFuture of claimsMappingPolicy
+     * @return a CompletableFuture of ClaimsMappingPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/claimsmappingpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a claimsMappingPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of claimsMappingPolicy
+     * @return a CompletableFuture of ClaimsMappingPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/claimsmappingpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

@@ -17,7 +17,7 @@ public class UnclassifiedArtifact extends Artifact implements Parsable {
      */
     private String value;
     /**
-     * Instantiates a new unclassifiedArtifact and sets the default values.
+     * Instantiates a new UnclassifiedArtifact and sets the default values.
      */
     public UnclassifiedArtifact() {
         super();
@@ -26,7 +26,7 @@ public class UnclassifiedArtifact extends Artifact implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unclassifiedArtifact
+     * @return a UnclassifiedArtifact
      */
     @jakarta.annotation.Nonnull
     public static UnclassifiedArtifact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class UnclassifiedArtifact extends Artifact implements Parsable {
     }
     /**
      * Gets the kind property value. The kind for this unclassifiedArtifact resource, describing what this value means.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKind() {
@@ -54,7 +54,7 @@ public class UnclassifiedArtifact extends Artifact implements Parsable {
     }
     /**
      * Gets the value property value. The value for this unclassifiedArtifact.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {

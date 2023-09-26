@@ -37,7 +37,7 @@ public class ProvisionEmailRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provision an email address for a channel. Microsoft Teams doesn't automatically provision an email address for a channel by default. To have Teams provision an email address, you can call provisionEmail, or through the Teams user interface, select Get email address, which triggers Teams to generate an email address if it has not already provisioned one. To remove the email address of a channel, use the removeEmail method.
-     * @return a CompletableFuture of provisionChannelEmailResult
+     * @return a CompletableFuture of ProvisionChannelEmailResult
      * @see <a href="https://learn.microsoft.com/graph/api/channel-provisionemail?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class ProvisionEmailRequestBuilder extends BaseRequestBuilder {
     /**
      * Provision an email address for a channel. Microsoft Teams doesn't automatically provision an email address for a channel by default. To have Teams provision an email address, you can call provisionEmail, or through the Teams user interface, select Get email address, which triggers Teams to generate an email address if it has not already provisioned one. To remove the email address of a channel, use the removeEmail method.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of provisionChannelEmailResult
+     * @return a CompletableFuture of ProvisionChannelEmailResult
      * @see <a href="https://learn.microsoft.com/graph/api/channel-provisionemail?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ProvisionEmailRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a provisionEmailRequestBuilder
+     * @return a ProvisionEmailRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ProvisionEmailRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -75,7 +75,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * Retrieve a single phoneAuthenticationMethod object for a user. This method is available only for standard Azure AD and B2B users, but not B2C users.
-     * @return a CompletableFuture of phoneAuthenticationMethod
+     * @return a CompletableFuture of PhoneAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/phoneauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     /**
      * Retrieve a single phoneAuthenticationMethod object for a user. This method is available only for standard Azure AD and B2B users, but not B2C users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of phoneAuthenticationMethod
+     * @return a CompletableFuture of PhoneAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/phoneauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     /**
      * Update a user's phone number associated with a phone authentication method object. You can't change a phone's type. To change a phone's type, add a new number of the desired type and then delete the object with the original type. If a user is enabled by policy to use SMS to sign in and the mobile number is changed, the system will attempt to register the number for use in that system.
      * @param body The request body
-     * @return a CompletableFuture of phoneAuthenticationMethod
+     * @return a CompletableFuture of PhoneAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/phoneauthenticationmethod-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +110,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
      * Update a user's phone number associated with a phone authentication method object. You can't change a phone's type. To change a phone's type, add a new number of the desired type and then delete the object with the original type. If a user is enabled by policy to use SMS to sign in and the mobile number is changed, the system will attempt to register the number for use in that system.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of phoneAuthenticationMethod
+     * @return a CompletableFuture of PhoneAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/phoneauthenticationmethod-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

@@ -38,7 +38,7 @@ public class ParseExpressionRequestBuilder extends BaseRequestBuilder {
     /**
      * Parse a given string expression into an attributeMappingSource object. For more information about expressions, see Writing Expressions for Attribute Mappings in Azure Active Directory.
      * @param body The request body
-     * @return a CompletableFuture of parseExpressionResponse
+     * @return a CompletableFuture of ParseExpressionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-parseexpression?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class ParseExpressionRequestBuilder extends BaseRequestBuilder {
      * Parse a given string expression into an attributeMappingSource object. For more information about expressions, see Writing Expressions for Attribute Mappings in Azure Active Directory.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of parseExpressionResponse
+     * @return a CompletableFuture of ParseExpressionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-parseexpression?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class ParseExpressionRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a parseExpressionRequestBuilder
+     * @return a ParseExpressionRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ParseExpressionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

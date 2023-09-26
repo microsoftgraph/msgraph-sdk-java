@@ -84,7 +84,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the collection of [contentType][contentType] resources in a [site][].
-     * @return a CompletableFuture of contentTypeCollectionResponse
+     * @return a CompletableFuture of ContentTypeCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/site-list-contenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the collection of [contentType][contentType] resources in a [site][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contentTypeCollectionResponse
+     * @return a CompletableFuture of ContentTypeCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/site-list-contenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new [contentType][] in a [site][].
      * @param body The request body
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      * @see <a href="https://learn.microsoft.com/graph/api/site-post-contenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
      * Create a new [contentType][] in a [site][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      * @see <a href="https://learn.microsoft.com/graph/api/site-post-contenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a contentTypesRequestBuilder
+     * @return a ContentTypesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ContentTypesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

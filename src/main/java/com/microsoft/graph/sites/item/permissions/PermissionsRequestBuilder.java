@@ -60,7 +60,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the permission resources from the permissions navigation property on a site.
-     * @return a CompletableFuture of permissionCollectionResponse
+     * @return a CompletableFuture of PermissionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the permission resources from the permissions navigation property on a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of permissionCollectionResponse
+     * @return a CompletableFuture of PermissionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new permission object on a site. 
      * @param body The request body
-     * @return a CompletableFuture of permission
+     * @return a CompletableFuture of Permission
      * @see <a href="https://learn.microsoft.com/graph/api/site-post-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
      * Create a new permission object on a site. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of permission
+     * @return a CompletableFuture of Permission
      * @see <a href="https://learn.microsoft.com/graph/api/site-post-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a permissionsRequestBuilder
+     * @return a PermissionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PermissionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

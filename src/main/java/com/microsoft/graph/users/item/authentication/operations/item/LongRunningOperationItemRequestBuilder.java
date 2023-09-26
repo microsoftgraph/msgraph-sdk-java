@@ -57,7 +57,7 @@ public class LongRunningOperationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the status of a long-running operation, represented by a longRunningOperation object. A long-running operation is initiated when you reset a user's password. This resource type is also the base type for the richLongRunningOperation object that represents the status of a long-running operation on a site or a list. The possible states of the long-running operation are notStarted, running, succeeded, failed, unknownFutureValue where succeeded and failed are terminal states.
-     * @return a CompletableFuture of longRunningOperation
+     * @return a CompletableFuture of LongRunningOperation
      * @see <a href="https://learn.microsoft.com/graph/api/longrunningoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class LongRunningOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the status of a long-running operation, represented by a longRunningOperation object. A long-running operation is initiated when you reset a user's password. This resource type is also the base type for the richLongRunningOperation object that represents the status of a long-running operation on a site or a list. The possible states of the long-running operation are notStarted, running, succeeded, failed, unknownFutureValue where succeeded and failed are terminal states.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of longRunningOperation
+     * @return a CompletableFuture of LongRunningOperation
      * @see <a href="https://learn.microsoft.com/graph/api/longrunningoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class LongRunningOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property operations in users
      * @param body The request body
-     * @return a CompletableFuture of longRunningOperation
+     * @return a CompletableFuture of LongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LongRunningOperation> patch(@jakarta.annotation.Nonnull final LongRunningOperation body) {
@@ -91,7 +91,7 @@ public class LongRunningOperationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property operations in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of longRunningOperation
+     * @return a CompletableFuture of LongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LongRunningOperation> patch(@jakarta.annotation.Nonnull final LongRunningOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

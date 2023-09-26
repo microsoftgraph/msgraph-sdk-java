@@ -44,7 +44,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the additionalAccess method.
      * @param accessPackageId Usage: accessPackageId='{accessPackageId}'
      * @param incompatibleAccessPackageId Usage: incompatibleAccessPackageId='{incompatibleAccessPackageId}'
-     * @return a additionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder
+     * @return a AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder additionalAccessWithAccessPackageIdWithIncompatibleAccessPackageId(@jakarta.annotation.Nonnull final String accessPackageId, @jakarta.annotation.Nonnull final String incompatibleAccessPackageId) {
@@ -83,7 +83,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -92,7 +92,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * In Azure AD entitlement management, retrieve a list of accessPackageAssignment objects. For directory-wide administrators, the resulting list includes all the assignments, current and well as expired, that the caller has access to read, across all catalogs and access packages.  If the caller is on behalf of a delegated user who is assigned only to catalog-specific delegated administrative roles, the request must supply a filter to indicate a specific access package, such as: $filter=accessPackage/id eq 'a914b616-e04e-476b-aa37-91038f0b165b'.
-     * @return a CompletableFuture of accessPackageAssignmentCollectionResponse
+     * @return a CompletableFuture of AccessPackageAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-assignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * In Azure AD entitlement management, retrieve a list of accessPackageAssignment objects. For directory-wide administrators, the resulting list includes all the assignments, current and well as expired, that the caller has access to read, across all catalogs and access packages.  If the caller is on behalf of a delegated user who is assigned only to catalog-specific delegated administrative roles, the request must supply a filter to indicate a specific access package, such as: $filter=accessPackage/id eq 'a914b616-e04e-476b-aa37-91038f0b165b'.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentCollectionResponse
+     * @return a CompletableFuture of AccessPackageAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-assignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to assignments for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageAssignment
+     * @return a CompletableFuture of AccessPackageAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignment> post(@jakarta.annotation.Nonnull final AccessPackageAssignment body) {
@@ -126,7 +126,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to assignments for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignment
+     * @return a CompletableFuture of AccessPackageAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignment> post(@jakarta.annotation.Nonnull final AccessPackageAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -201,7 +201,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignmentsRequestBuilder
+     * @return a AssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

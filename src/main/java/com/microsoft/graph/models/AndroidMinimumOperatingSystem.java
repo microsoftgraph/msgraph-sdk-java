@@ -85,7 +85,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      */
     private Boolean v90;
     /**
-     * Instantiates a new androidMinimumOperatingSystem and sets the default values.
+     * Instantiates a new AndroidMinimumOperatingSystem and sets the default values.
      */
     public AndroidMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
@@ -93,7 +93,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidMinimumOperatingSystem
+     * @return a AndroidMinimumOperatingSystem
      */
     @jakarta.annotation.Nonnull
     public static AndroidMinimumOperatingSystem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -101,7 +101,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
         return new AndroidMinimumOperatingSystem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -144,7 +144,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v10_0 property value. When TRUE, only Version 10.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV100() {
@@ -152,7 +152,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v11_0 property value. When TRUE, only Version 11.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV110() {
@@ -160,7 +160,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v4_0 property value. When TRUE, only Version 4.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV40() {
@@ -168,7 +168,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v4_0_3 property value. When TRUE, only Version 4.0.3 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV403() {
@@ -176,7 +176,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v4_1 property value. When TRUE, only Version 4.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV41() {
@@ -184,7 +184,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v4_2 property value. When TRUE, only Version 4.2 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV42() {
@@ -192,7 +192,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v4_3 property value. When TRUE, only Version 4.3 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV43() {
@@ -200,7 +200,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v4_4 property value. When TRUE, only Version 4.4 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV44() {
@@ -208,7 +208,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v5_0 property value. When TRUE, only Version 5.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV50() {
@@ -216,7 +216,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v5_1 property value. When TRUE, only Version 5.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV51() {
@@ -224,7 +224,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v6_0 property value. When TRUE, only Version 6.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV60() {
@@ -232,7 +232,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v7_0 property value. When TRUE, only Version 7.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV70() {
@@ -240,7 +240,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v7_1 property value. When TRUE, only Version 7.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV71() {
@@ -248,7 +248,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v8_0 property value. When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV80() {
@@ -256,7 +256,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v8_1 property value. When TRUE, only Version 8.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV81() {
@@ -264,7 +264,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v9_0 property value. When TRUE, only Version 9.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV90() {
@@ -296,8 +296,8 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

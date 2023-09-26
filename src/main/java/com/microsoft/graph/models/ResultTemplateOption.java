@@ -22,7 +22,7 @@ public class ResultTemplateOption implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new resultTemplateOption and sets the default values.
+     * Instantiates a new ResultTemplateOption and sets the default values.
      */
     public ResultTemplateOption() {
         this.setAdditionalData(new HashMap<>());
@@ -30,7 +30,7 @@ public class ResultTemplateOption implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a resultTemplateOption
+     * @return a ResultTemplateOption
      */
     @jakarta.annotation.Nonnull
     public static ResultTemplateOption createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class ResultTemplateOption implements AdditionalDataHolder, Parsable {
         return new ResultTemplateOption();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class ResultTemplateOption implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the enableResultTemplate property value. Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. Optional.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableResultTemplate() {
@@ -66,7 +66,7 @@ public class ResultTemplateOption implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -83,8 +83,8 @@ public class ResultTemplateOption implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

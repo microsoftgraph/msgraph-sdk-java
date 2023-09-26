@@ -57,7 +57,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a riskDetection object.
-     * @return a CompletableFuture of riskDetection
+     * @return a CompletableFuture of RiskDetection
      * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a riskDetection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskDetection
+     * @return a CompletableFuture of RiskDetection
      * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property riskDetections in identityProtection
      * @param body The request body
-     * @return a CompletableFuture of riskDetection
+     * @return a CompletableFuture of RiskDetection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetection> patch(@jakarta.annotation.Nonnull final RiskDetection body) {
@@ -91,7 +91,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property riskDetections in identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskDetection
+     * @return a CompletableFuture of RiskDetection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetection> patch(@jakarta.annotation.Nonnull final RiskDetection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

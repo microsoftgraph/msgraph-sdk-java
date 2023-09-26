@@ -62,7 +62,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -71,7 +71,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
     }
     /**
      * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
-     * @return a CompletableFuture of approvalCollectionResponse
+     * @return a CompletableFuture of ApprovalCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalCollectionResponse> get() {
@@ -80,7 +80,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
     /**
      * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of approvalCollectionResponse
+     * @return a CompletableFuture of ApprovalCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
     /**
      * Create new navigation property to accessPackageAssignmentApprovals for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of approval
+     * @return a CompletableFuture of Approval
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Approval> post(@jakarta.annotation.Nonnull final Approval body) {
@@ -103,7 +103,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
      * Create new navigation property to accessPackageAssignmentApprovals for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of approval
+     * @return a CompletableFuture of Approval
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Approval> post(@jakarta.annotation.Nonnull final Approval body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -178,7 +178,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessPackageAssignmentApprovalsRequestBuilder
+     * @return a AccessPackageAssignmentApprovalsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AccessPackageAssignmentApprovalsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

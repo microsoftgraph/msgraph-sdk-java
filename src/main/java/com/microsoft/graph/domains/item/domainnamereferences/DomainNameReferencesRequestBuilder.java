@@ -59,7 +59,7 @@ public class DomainNameReferencesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-list-domainnamereferences?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class DomainNameReferencesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-list-domainnamereferences?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class DomainNameReferencesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a domainNameReferencesRequestBuilder
+     * @return a DomainNameReferencesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DomainNameReferencesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

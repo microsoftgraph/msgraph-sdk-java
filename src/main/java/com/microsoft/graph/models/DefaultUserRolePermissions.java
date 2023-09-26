@@ -14,15 +14,15 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     private Map<String, Object> additionalData;
     /**
-     * Indicates whether the default user role can create applications. This setting corresponds to the Users can register applications setting in the User settings menu in the Azure portal.
+     * Indicates whether the default user role can create applications. This setting corresponds to the Users can register applications setting in the User settings menu in the Microsoft Entra admin center.
      */
     private Boolean allowedToCreateApps;
     /**
-     * Indicates whether the default user role can create security groups. This setting corresponds to the following menus in the Azure portal:  The Users can create security groups in Azure portals, API or PowerShell setting in the Group settings menu.  Users can create security groups setting in the User settings menu.
+     * Indicates whether the default user role can create security groups. This setting corresponds to the following menus in the Microsoft Entra admin center:  The Users can create security groups in Microsoft Entra admin centers, API or PowerShell setting in the Group settings menu.  Users can create security groups setting in the User settings menu.
      */
     private Boolean allowedToCreateSecurityGroups;
     /**
-     * Indicates whether the default user role can create tenants. This setting corresponds to the Restrict non-admin users from creating tenants setting in the User settings menu in the Azure portal.  When this setting is false, users assigned the Tenant Creator role can still create tenants.
+     * Indicates whether the default user role can create tenants. This setting corresponds to the Restrict non-admin users from creating tenants setting in the User settings menu in the Microsoft Entra admin center.  When this setting is false, users assigned the Tenant Creator role can still create tenants.
      */
     private Boolean allowedToCreateTenants;
     /**
@@ -42,7 +42,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     private java.util.List<String> permissionGrantPoliciesAssigned;
     /**
-     * Instantiates a new defaultUserRolePermissions and sets the default values.
+     * Instantiates a new DefaultUserRolePermissions and sets the default values.
      */
     public DefaultUserRolePermissions() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a defaultUserRolePermissions
+     * @return a DefaultUserRolePermissions
      */
     @jakarta.annotation.Nonnull
     public static DefaultUserRolePermissions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         return new DefaultUserRolePermissions();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -66,24 +66,24 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         return this.additionalData;
     }
     /**
-     * Gets the allowedToCreateApps property value. Indicates whether the default user role can create applications. This setting corresponds to the Users can register applications setting in the User settings menu in the Azure portal.
-     * @return a boolean
+     * Gets the allowedToCreateApps property value. Indicates whether the default user role can create applications. This setting corresponds to the Users can register applications setting in the User settings menu in the Microsoft Entra admin center.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToCreateApps() {
         return this.allowedToCreateApps;
     }
     /**
-     * Gets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups. This setting corresponds to the following menus in the Azure portal:  The Users can create security groups in Azure portals, API or PowerShell setting in the Group settings menu.  Users can create security groups setting in the User settings menu.
-     * @return a boolean
+     * Gets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups. This setting corresponds to the following menus in the Microsoft Entra admin center:  The Users can create security groups in Microsoft Entra admin centers, API or PowerShell setting in the Group settings menu.  Users can create security groups setting in the User settings menu.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToCreateSecurityGroups() {
         return this.allowedToCreateSecurityGroups;
     }
     /**
-     * Gets the allowedToCreateTenants property value. Indicates whether the default user role can create tenants. This setting corresponds to the Restrict non-admin users from creating tenants setting in the User settings menu in the Azure portal.  When this setting is false, users assigned the Tenant Creator role can still create tenants.
-     * @return a boolean
+     * Gets the allowedToCreateTenants property value. Indicates whether the default user role can create tenants. This setting corresponds to the Restrict non-admin users from creating tenants setting in the User settings menu in the Microsoft Entra admin center.  When this setting is false, users assigned the Tenant Creator role can still create tenants.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToCreateTenants() {
@@ -91,7 +91,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the allowedToReadBitlockerKeysForOwnedDevice property value. Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToReadBitlockerKeysForOwnedDevice() {
@@ -99,7 +99,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users. DO NOT SET THIS VALUE TO false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToReadOtherUsers() {
@@ -123,7 +123,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -131,7 +131,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the permissionGrantPoliciesAssigned property value. Indicates if user consent to apps is allowed, and if it is, which permission to grant consent and which app consent policy (permissionGrantPolicy) govern the permission for users to grant consent. Value should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPermissionGrantPoliciesAssigned() {
@@ -153,28 +153,28 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the allowedToCreateApps property value. Indicates whether the default user role can create applications. This setting corresponds to the Users can register applications setting in the User settings menu in the Azure portal.
+     * Sets the allowedToCreateApps property value. Indicates whether the default user role can create applications. This setting corresponds to the Users can register applications setting in the User settings menu in the Microsoft Entra admin center.
      * @param value Value to set for the allowedToCreateApps property.
      */
     public void setAllowedToCreateApps(@jakarta.annotation.Nullable final Boolean value) {
         this.allowedToCreateApps = value;
     }
     /**
-     * Sets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups. This setting corresponds to the following menus in the Azure portal:  The Users can create security groups in Azure portals, API or PowerShell setting in the Group settings menu.  Users can create security groups setting in the User settings menu.
+     * Sets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups. This setting corresponds to the following menus in the Microsoft Entra admin center:  The Users can create security groups in Microsoft Entra admin centers, API or PowerShell setting in the Group settings menu.  Users can create security groups setting in the User settings menu.
      * @param value Value to set for the allowedToCreateSecurityGroups property.
      */
     public void setAllowedToCreateSecurityGroups(@jakarta.annotation.Nullable final Boolean value) {
         this.allowedToCreateSecurityGroups = value;
     }
     /**
-     * Sets the allowedToCreateTenants property value. Indicates whether the default user role can create tenants. This setting corresponds to the Restrict non-admin users from creating tenants setting in the User settings menu in the Azure portal.  When this setting is false, users assigned the Tenant Creator role can still create tenants.
+     * Sets the allowedToCreateTenants property value. Indicates whether the default user role can create tenants. This setting corresponds to the Restrict non-admin users from creating tenants setting in the User settings menu in the Microsoft Entra admin center.  When this setting is false, users assigned the Tenant Creator role can still create tenants.
      * @param value Value to set for the allowedToCreateTenants property.
      */
     public void setAllowedToCreateTenants(@jakarta.annotation.Nullable final Boolean value) {

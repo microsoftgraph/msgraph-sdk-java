@@ -59,7 +59,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the learningCourseActivity objects (assigned or self-initiated) for a user.
-     * @return a CompletableFuture of learningCourseActivityCollectionResponse
+     * @return a CompletableFuture of LearningCourseActivityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the learningCourseActivity objects (assigned or self-initiated) for a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of learningCourseActivityCollectionResponse
+     * @return a CompletableFuture of LearningCourseActivityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a learningCourseActivitiesRequestBuilder
+     * @return a LearningCourseActivitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LearningCourseActivitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

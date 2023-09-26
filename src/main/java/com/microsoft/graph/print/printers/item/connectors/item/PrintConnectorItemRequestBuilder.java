@@ -38,7 +38,7 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The connectors that are associated with the printer.
-     * @return a CompletableFuture of printConnector
+     * @return a CompletableFuture of PrintConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintConnector> get() {
@@ -47,7 +47,7 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The connectors that are associated with the printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printConnector
+     * @return a CompletableFuture of PrintConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintConnector> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

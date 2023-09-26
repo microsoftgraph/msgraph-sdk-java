@@ -40,7 +40,7 @@ public class StringCollectionResponse extends BaseCollectionPaginationCountRespo
     }
     /**
      * Gets the value property value. The value property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getValue() {

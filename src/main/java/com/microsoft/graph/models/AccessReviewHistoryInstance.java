@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewHistoryInstance extends Entity implements Parsable {
     /**
-     * Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
+     * Uri that can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
      */
     private String downloadUri;
     /**
@@ -18,15 +18,15 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      */
     private OffsetDateTime expirationDateTime;
     /**
-     * Timestamp when all of the available data for this instance was collected. This will be set after this instance's status is set to done. Required.
+     * Timestamp when all of the available data for this instance was collected and is set after this instance's status is set to done. Required.
      */
     private OffsetDateTime fulfilledDateTime;
     /**
-     * Timestamp, reviews ending on or before this date will be included in the fetched history data.
+     * Timestamp reviews ending on or before this date will be included in the fetched history data.
      */
     private OffsetDateTime reviewHistoryPeriodEndDateTime;
     /**
-     * Timestamp, reviews starting on or after this date will be included in the fetched history data.
+     * Timestamp reviews starting on or after this date will be included in the fetched history data.
      */
     private OffsetDateTime reviewHistoryPeriodStartDateTime;
     /**
@@ -38,7 +38,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      */
     private AccessReviewHistoryStatus status;
     /**
-     * Instantiates a new accessReviewHistoryInstance and sets the default values.
+     * Instantiates a new AccessReviewHistoryInstance and sets the default values.
      */
     public AccessReviewHistoryInstance() {
         super();
@@ -46,7 +46,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewHistoryInstance
+     * @return a AccessReviewHistoryInstance
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewHistoryInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,8 +54,8 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         return new AccessReviewHistoryInstance();
     }
     /**
-     * Gets the downloadUri property value. Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
-     * @return a string
+     * Gets the downloadUri property value. Uri that can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDownloadUri() {
@@ -86,7 +86,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the fulfilledDateTime property value. Timestamp when all of the available data for this instance was collected. This will be set after this instance's status is set to done. Required.
+     * Gets the fulfilledDateTime property value. Timestamp when all of the available data for this instance was collected and is set after this instance's status is set to done. Required.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         return this.fulfilledDateTime;
     }
     /**
-     * Gets the reviewHistoryPeriodEndDateTime property value. Timestamp, reviews ending on or before this date will be included in the fetched history data.
+     * Gets the reviewHistoryPeriodEndDateTime property value. Timestamp reviews ending on or before this date will be included in the fetched history data.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         return this.reviewHistoryPeriodEndDateTime;
     }
     /**
-     * Gets the reviewHistoryPeriodStartDateTime property value. Timestamp, reviews starting on or after this date will be included in the fetched history data.
+     * Gets the reviewHistoryPeriodStartDateTime property value. Timestamp reviews starting on or after this date will be included in the fetched history data.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status has been marked as done, a link can be generated to retrieve the instance's data by calling generateDownloadUri method.
-     * @return a accessReviewHistoryStatus
+     * @return a AccessReviewHistoryStatus
      */
     @jakarta.annotation.Nullable
     public AccessReviewHistoryStatus getStatus() {
@@ -141,7 +141,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the downloadUri property value. Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
+     * Sets the downloadUri property value. Uri that can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
      * @param value Value to set for the downloadUri property.
      */
     public void setDownloadUri(@jakarta.annotation.Nullable final String value) {
@@ -155,21 +155,21 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         this.expirationDateTime = value;
     }
     /**
-     * Sets the fulfilledDateTime property value. Timestamp when all of the available data for this instance was collected. This will be set after this instance's status is set to done. Required.
+     * Sets the fulfilledDateTime property value. Timestamp when all of the available data for this instance was collected and is set after this instance's status is set to done. Required.
      * @param value Value to set for the fulfilledDateTime property.
      */
     public void setFulfilledDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.fulfilledDateTime = value;
     }
     /**
-     * Sets the reviewHistoryPeriodEndDateTime property value. Timestamp, reviews ending on or before this date will be included in the fetched history data.
+     * Sets the reviewHistoryPeriodEndDateTime property value. Timestamp reviews ending on or before this date will be included in the fetched history data.
      * @param value Value to set for the reviewHistoryPeriodEndDateTime property.
      */
     public void setReviewHistoryPeriodEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.reviewHistoryPeriodEndDateTime = value;
     }
     /**
-     * Sets the reviewHistoryPeriodStartDateTime property value. Timestamp, reviews starting on or after this date will be included in the fetched history data.
+     * Sets the reviewHistoryPeriodStartDateTime property value. Timestamp reviews starting on or after this date will be included in the fetched history data.
      * @param value Value to set for the reviewHistoryPeriodStartDateTime property.
      */
     public void setReviewHistoryPeriodStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

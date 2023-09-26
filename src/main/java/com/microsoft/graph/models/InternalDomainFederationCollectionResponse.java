@@ -13,7 +13,7 @@ public class InternalDomainFederationCollectionResponse extends BaseCollectionPa
      */
     private java.util.List<InternalDomainFederation> value;
     /**
-     * Instantiates a new internalDomainFederationCollectionResponse and sets the default values.
+     * Instantiates a new InternalDomainFederationCollectionResponse and sets the default values.
      */
     public InternalDomainFederationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class InternalDomainFederationCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a internalDomainFederationCollectionResponse
+     * @return a InternalDomainFederationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static InternalDomainFederationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class InternalDomainFederationCollectionResponse extends BaseCollectionPa
     }
     /**
      * Gets the value property value. The value property
-     * @return a internalDomainFederation
+     * @return a java.util.List<InternalDomainFederation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<InternalDomainFederation> getValue() {

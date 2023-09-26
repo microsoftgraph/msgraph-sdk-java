@@ -88,7 +88,7 @@ public class GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder ex
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder
+     * @return a GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

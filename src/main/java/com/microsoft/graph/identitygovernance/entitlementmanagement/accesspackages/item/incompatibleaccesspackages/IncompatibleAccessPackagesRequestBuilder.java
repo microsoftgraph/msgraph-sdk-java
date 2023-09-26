@@ -67,7 +67,7 @@ public class IncompatibleAccessPackagesRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
-     * @return a CompletableFuture of accessPackageCollectionResponse
+     * @return a CompletableFuture of AccessPackageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-list-incompatibleaccesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class IncompatibleAccessPackagesRequestBuilder extends BaseRequestBuilder
     /**
      * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageCollectionResponse
+     * @return a CompletableFuture of AccessPackageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-list-incompatibleaccesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -120,7 +120,7 @@ public class IncompatibleAccessPackagesRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a incompatibleAccessPackagesRequestBuilder
+     * @return a IncompatibleAccessPackagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IncompatibleAccessPackagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

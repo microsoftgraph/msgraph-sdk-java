@@ -85,7 +85,7 @@ public class RestoreFactoryDefaultsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a restoreFactoryDefaultsRequestBuilder
+     * @return a RestoreFactoryDefaultsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RestoreFactoryDefaultsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

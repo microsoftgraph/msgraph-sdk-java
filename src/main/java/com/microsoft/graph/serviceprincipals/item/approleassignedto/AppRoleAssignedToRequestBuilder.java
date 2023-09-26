@@ -60,7 +60,7 @@ public class AppRoleAssignedToRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of appRoleAssignment that users, groups, or client service principals have been granted for the given resource service principal. For example, if the resource service principal is the service principal for the Microsoft Graph API, this will return all service principals that have been granted any app-only permissions to Microsoft Graph. If the resource service principal is an application that has app roles granted to users and groups, this will return all the users and groups assigned app roles for this application.
-     * @return a CompletableFuture of appRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of AppRoleAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-approleassignedto?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AppRoleAssignedToRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of appRoleAssignment that users, groups, or client service principals have been granted for the given resource service principal. For example, if the resource service principal is the service principal for the Microsoft Graph API, this will return all service principals that have been granted any app-only permissions to Microsoft Graph. If the resource service principal is an application that has app roles granted to users and groups, this will return all the users and groups assigned app roles for this application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of AppRoleAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-approleassignedto?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AppRoleAssignedToRequestBuilder extends BaseRequestBuilder {
     /**
      * Assign an app role for a resource service principal, to a user, group, or client service principal. App roles that are assigned to service principals are also known as application permissions. Application permissions can be granted directly with app role assignments, or through a consent experience. To grant an app role assignment, you need three identifiers:
      * @param body The request body
-     * @return a CompletableFuture of appRoleAssignment
+     * @return a CompletableFuture of AppRoleAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-post-approleassignedto?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AppRoleAssignedToRequestBuilder extends BaseRequestBuilder {
      * Assign an app role for a resource service principal, to a user, group, or client service principal. App roles that are assigned to service principals are also known as application permissions. Application permissions can be granted directly with app role assignments, or through a consent experience. To grant an app role assignment, you need three identifiers:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appRoleAssignment
+     * @return a CompletableFuture of AppRoleAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-post-approleassignedto?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class AppRoleAssignedToRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appRoleAssignedToRequestBuilder
+     * @return a AppRoleAssignedToRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppRoleAssignedToRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

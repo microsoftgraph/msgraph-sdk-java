@@ -90,7 +90,7 @@ public class ResumeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resumeRequestBuilder
+     * @return a ResumeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ResumeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

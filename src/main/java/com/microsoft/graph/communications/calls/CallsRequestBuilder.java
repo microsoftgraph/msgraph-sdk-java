@@ -68,7 +68,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a call object.
-     * @return a CompletableFuture of callCollectionResponse
+     * @return a CompletableFuture of CallCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a call object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of callCollectionResponse
+     * @return a CompletableFuture of CallCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create call enables your bot to create a new outgoing peer-to-peer or group call, or join an existing meeting. You will need to register the calling bot and go through the list of permissions needed as mentioned below.
      * @param body The request body
-     * @return a CompletableFuture of call
+     * @return a CompletableFuture of Call
      * @see <a href="https://learn.microsoft.com/graph/api/application-post-calls?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -101,7 +101,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
      * Create call enables your bot to create a new outgoing peer-to-peer or group call, or join an existing meeting. You will need to register the calling bot and go through the list of permissions needed as mentioned below.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of call
+     * @return a CompletableFuture of Call
      * @see <a href="https://learn.microsoft.com/graph/api/application-post-calls?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -177,7 +177,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a callsRequestBuilder
+     * @return a CallsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CallsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

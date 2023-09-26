@@ -24,7 +24,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     private EnumSet<MailTipsType> mailTipsOptions;
     /**
-     * Instantiates a new getMailTipsPostRequestBody and sets the default values.
+     * Instantiates a new GetMailTipsPostRequestBody and sets the default values.
      */
     public GetMailTipsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -32,7 +32,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getMailTipsPostRequestBody
+     * @return a GetMailTipsPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static GetMailTipsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
         return new GetMailTipsPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the EmailAddresses property value. The EmailAddresses property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEmailAddresses() {
@@ -68,7 +68,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the MailTipsOptions property value. The MailTipsOptions property
-     * @return a mailTipsType
+     * @return a EnumSet<MailTipsType>
      */
     @jakarta.annotation.Nullable
     public EnumSet<MailTipsType> getMailTipsOptions() {
@@ -85,8 +85,8 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

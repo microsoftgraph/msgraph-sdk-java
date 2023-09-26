@@ -60,7 +60,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the userInstallStateSummary objects.
-     * @return a CompletableFuture of userInstallStateSummaryCollectionResponse
+     * @return a CompletableFuture of UserInstallStateSummaryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-userinstallstatesummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the userInstallStateSummary objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userInstallStateSummaryCollectionResponse
+     * @return a CompletableFuture of UserInstallStateSummaryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-userinstallstatesummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new userInstallStateSummary object.
      * @param body The request body
-     * @return a CompletableFuture of userInstallStateSummary
+     * @return a CompletableFuture of UserInstallStateSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-userinstallstatesummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
      * Create a new userInstallStateSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userInstallStateSummary
+     * @return a CompletableFuture of UserInstallStateSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-books-userinstallstatesummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userStateSummaryRequestBuilder
+     * @return a UserStateSummaryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserStateSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

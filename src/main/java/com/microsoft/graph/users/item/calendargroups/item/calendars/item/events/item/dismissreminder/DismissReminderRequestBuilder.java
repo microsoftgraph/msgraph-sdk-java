@@ -85,7 +85,7 @@ public class DismissReminderRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a dismissReminderRequestBuilder
+     * @return a DismissReminderRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DismissReminderRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

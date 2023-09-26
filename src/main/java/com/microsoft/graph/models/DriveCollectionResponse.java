@@ -13,7 +13,7 @@ public class DriveCollectionResponse extends BaseCollectionPaginationCountRespon
      */
     private java.util.List<Drive> value;
     /**
-     * Instantiates a new driveCollectionResponse and sets the default values.
+     * Instantiates a new DriveCollectionResponse and sets the default values.
      */
     public DriveCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DriveCollectionResponse extends BaseCollectionPaginationCountRespon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a driveCollectionResponse
+     * @return a DriveCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DriveCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DriveCollectionResponse extends BaseCollectionPaginationCountRespon
     }
     /**
      * Gets the value property value. The value property
-     * @return a drive
+     * @return a java.util.List<Drive>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Drive> getValue() {

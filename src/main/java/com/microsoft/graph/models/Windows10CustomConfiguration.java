@@ -16,7 +16,7 @@ public class Windows10CustomConfiguration extends DeviceConfiguration implements
      */
     private java.util.List<OmaSetting> omaSettings;
     /**
-     * Instantiates a new windows10CustomConfiguration and sets the default values.
+     * Instantiates a new Windows10CustomConfiguration and sets the default values.
      */
     public Windows10CustomConfiguration() {
         super();
@@ -25,7 +25,7 @@ public class Windows10CustomConfiguration extends DeviceConfiguration implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10CustomConfiguration
+     * @return a Windows10CustomConfiguration
      */
     @jakarta.annotation.Nonnull
     public static Windows10CustomConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class Windows10CustomConfiguration extends DeviceConfiguration implements
     }
     /**
      * Gets the omaSettings property value. OMA settings. This collection can contain a maximum of 1000 elements.
-     * @return a omaSetting
+     * @return a java.util.List<OmaSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OmaSetting> getOmaSettings() {

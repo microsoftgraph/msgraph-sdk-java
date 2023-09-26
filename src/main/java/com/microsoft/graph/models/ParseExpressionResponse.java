@@ -38,7 +38,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      */
     private Boolean parsingSucceeded;
     /**
-     * Instantiates a new parseExpressionResponse and sets the default values.
+     * Instantiates a new ParseExpressionResponse and sets the default values.
      */
     public ParseExpressionResponse() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a parseExpressionResponse
+     * @return a ParseExpressionResponse
      */
     @jakarta.annotation.Nonnull
     public static ParseExpressionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
         return new ParseExpressionResponse();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the error property value. Error details, if expression evaluation resulted in an error.
-     * @return a publicError
+     * @return a PublicError
      */
     @jakarta.annotation.Nullable
     public PublicError getError() {
@@ -71,7 +71,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the evaluationResult property value. A collection of values produced by the evaluation of the expression.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEvaluationResult() {
@@ -79,7 +79,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the evaluationSucceeded property value. true if the evaluation was successful.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEvaluationSucceeded() {
@@ -102,7 +102,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -110,7 +110,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the parsedExpression property value. An attributeMappingSource object representing the parsed expression.
-     * @return a attributeMappingSource
+     * @return a AttributeMappingSource
      */
     @jakarta.annotation.Nullable
     public AttributeMappingSource getParsedExpression() {
@@ -118,7 +118,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the parsingSucceeded property value. true if the expression was parsed successfully.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getParsingSucceeded() {
@@ -139,8 +139,8 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

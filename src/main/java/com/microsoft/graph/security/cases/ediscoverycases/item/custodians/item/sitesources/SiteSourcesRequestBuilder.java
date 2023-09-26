@@ -60,7 +60,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the siteSource objects associated with an ediscoveryCustodian.
-     * @return a CompletableFuture of siteSourceCollectionResponse
+     * @return a CompletableFuture of SiteSourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the siteSource objects associated with an ediscoveryCustodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of siteSourceCollectionResponse
+     * @return a CompletableFuture of SiteSourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new siteSource object associated with an eDiscovery custodian.
      * @param body The request body
-     * @return a CompletableFuture of siteSource
+     * @return a CompletableFuture of SiteSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
      * Create a new siteSource object associated with an eDiscovery custodian.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of siteSource
+     * @return a CompletableFuture of SiteSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a siteSourcesRequestBuilder
+     * @return a SiteSourcesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SiteSourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

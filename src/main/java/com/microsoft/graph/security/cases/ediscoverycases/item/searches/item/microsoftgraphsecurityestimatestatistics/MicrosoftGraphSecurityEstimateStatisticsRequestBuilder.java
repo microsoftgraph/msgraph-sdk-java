@@ -85,7 +85,7 @@ public class MicrosoftGraphSecurityEstimateStatisticsRequestBuilder extends Base
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphSecurityEstimateStatisticsRequestBuilder
+     * @return a MicrosoftGraphSecurityEstimateStatisticsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityEstimateStatisticsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

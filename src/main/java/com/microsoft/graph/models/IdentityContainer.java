@@ -29,7 +29,7 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     private java.util.List<IdentityUserFlowAttribute> userFlowAttributes;
     /**
-     * Instantiates a new identityContainer and sets the default values.
+     * Instantiates a new IdentityContainer and sets the default values.
      */
     public IdentityContainer() {
         super();
@@ -37,7 +37,7 @@ public class IdentityContainer extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identityContainer
+     * @return a IdentityContainer
      */
     @jakarta.annotation.Nonnull
     public static IdentityContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class IdentityContainer extends Entity implements Parsable {
     }
     /**
      * Gets the apiConnectors property value. Represents entry point for API connectors.
-     * @return a identityApiConnector
+     * @return a java.util.List<IdentityApiConnector>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityApiConnector> getApiConnectors() {
@@ -54,7 +54,7 @@ public class IdentityContainer extends Entity implements Parsable {
     }
     /**
      * Gets the b2xUserFlows property value. Represents entry point for B2X/self-service sign-up identity userflows.
-     * @return a b2xIdentityUserFlow
+     * @return a java.util.List<B2xIdentityUserFlow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<B2xIdentityUserFlow> getB2xUserFlows() {
@@ -62,7 +62,7 @@ public class IdentityContainer extends Entity implements Parsable {
     }
     /**
      * Gets the conditionalAccess property value. the entry point for the Conditional Access (CA) object model.
-     * @return a conditionalAccessRoot
+     * @return a ConditionalAccessRoot
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessRoot getConditionalAccess() {
@@ -84,7 +84,7 @@ public class IdentityContainer extends Entity implements Parsable {
     }
     /**
      * Gets the identityProviders property value. The identityProviders property
-     * @return a identityProviderBase
+     * @return a java.util.List<IdentityProviderBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProviderBase> getIdentityProviders() {
@@ -92,7 +92,7 @@ public class IdentityContainer extends Entity implements Parsable {
     }
     /**
      * Gets the userFlowAttributes property value. Represents entry point for identity userflow attributes.
-     * @return a identityUserFlowAttribute
+     * @return a java.util.List<IdentityUserFlowAttribute>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityUserFlowAttribute> getUserFlowAttributes() {

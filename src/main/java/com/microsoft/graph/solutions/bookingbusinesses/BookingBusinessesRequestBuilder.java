@@ -60,7 +60,7 @@ public class BookingBusinessesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a collection of bookingBusiness objects that has been created for the tenant. This operation returns only the id and displayName of each Microsoft Bookings business in the collection. For performance considerations, it does not return other properties. You can get the other properties of a Bookings business by specifying its id in a GET operation.
-     * @return a CompletableFuture of bookingBusinessCollectionResponse
+     * @return a CompletableFuture of BookingBusinessCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class BookingBusinessesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a collection of bookingBusiness objects that has been created for the tenant. This operation returns only the id and displayName of each Microsoft Bookings business in the collection. For performance considerations, it does not return other properties. You can get the other properties of a Bookings business by specifying its id in a GET operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingBusinessCollectionResponse
+     * @return a CompletableFuture of BookingBusinessCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class BookingBusinessesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new Microsoft Bookings business in a tenant. This is the first step in setting up a Bookings business where you must specify the business display name. You can include other information such as business address, web site address, and scheduling policy, or set that information later by updating the bookingBusiness.
      * @param body The request body
-     * @return a CompletableFuture of bookingBusiness
+     * @return a CompletableFuture of BookingBusiness
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-bookingbusinesses?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class BookingBusinessesRequestBuilder extends BaseRequestBuilder {
      * Create a new Microsoft Bookings business in a tenant. This is the first step in setting up a Bookings business where you must specify the business display name. You can include other information such as business address, web site address, and scheduling policy, or set that information later by updating the bookingBusiness.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingBusiness
+     * @return a CompletableFuture of BookingBusiness
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-bookingbusinesses?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class BookingBusinessesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a bookingBusinessesRequestBuilder
+     * @return a BookingBusinessesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public BookingBusinessesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

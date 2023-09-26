@@ -38,7 +38,7 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
     /**
      * Adds a key credential to a servicePrincipal. This method along with removeKey can be used by a servicePrincipal to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  ServicePrincipals that dont have any existing valid certificates (i.e.: no certificates have been added yet, or all certificates have expired), wont be able to use this service action. Update servicePrincipal can be used to perform an update instead.
      * @param body The request body
-     * @return a CompletableFuture of keyCredential
+     * @return a CompletableFuture of KeyCredential
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-addkey?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
      * Adds a key credential to a servicePrincipal. This method along with removeKey can be used by a servicePrincipal to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  ServicePrincipals that dont have any existing valid certificates (i.e.: no certificates have been added yet, or all certificates have expired), wont be able to use this service action. Update servicePrincipal can be used to perform an update instead.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of keyCredential
+     * @return a CompletableFuture of KeyCredential
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-addkey?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class AddKeyRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a addKeyRequestBuilder
+     * @return a AddKeyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AddKeyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

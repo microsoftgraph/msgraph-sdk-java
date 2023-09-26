@@ -105,7 +105,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types:
-     * @return a CompletableFuture of host
+     * @return a CompletableFuture of Host
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a host object. The host resource is the abstract base type that returns an implementation. A host can be of one of the following types:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of host
+     * @return a CompletableFuture of Host
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property hosts in security
      * @param body The request body
-     * @return a CompletableFuture of host
+     * @return a CompletableFuture of Host
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Host> patch(@jakarta.annotation.Nonnull final Host body) {
@@ -139,7 +139,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property hosts in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of host
+     * @return a CompletableFuture of Host
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Host> patch(@jakarta.annotation.Nonnull final Host body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

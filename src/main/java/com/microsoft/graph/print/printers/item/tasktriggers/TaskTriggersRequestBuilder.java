@@ -60,7 +60,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of task triggers associated with the printer. The list of task triggers defines which tasks will be triggered as a result of events that occur during printing. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
-     * @return a CompletableFuture of printTaskTriggerCollectionResponse
+     * @return a CompletableFuture of PrintTaskTriggerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/printer-list-tasktriggers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of task triggers associated with the printer. The list of task triggers defines which tasks will be triggered as a result of events that occur during printing. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printTaskTriggerCollectionResponse
+     * @return a CompletableFuture of PrintTaskTriggerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/printer-list-tasktriggers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new task trigger on the specified printer. Currently, only one task trigger can be specified per printer, but this limit might be removed in the future. 
      * @param body The request body
-     * @return a CompletableFuture of printTaskTrigger
+     * @return a CompletableFuture of PrintTaskTrigger
      * @see <a href="https://learn.microsoft.com/graph/api/printer-post-tasktriggers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
      * Create a new task trigger on the specified printer. Currently, only one task trigger can be specified per printer, but this limit might be removed in the future. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printTaskTrigger
+     * @return a CompletableFuture of PrintTaskTrigger
      * @see <a href="https://learn.microsoft.com/graph/api/printer-post-tasktriggers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a taskTriggersRequestBuilder
+     * @return a TaskTriggersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TaskTriggersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

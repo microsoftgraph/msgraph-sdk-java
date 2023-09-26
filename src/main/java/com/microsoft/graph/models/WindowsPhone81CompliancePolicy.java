@@ -56,7 +56,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      */
     private Boolean storageRequireEncryption;
     /**
-     * Instantiates a new windowsPhone81CompliancePolicy and sets the default values.
+     * Instantiates a new WindowsPhone81CompliancePolicy and sets the default values.
      */
     public WindowsPhone81CompliancePolicy() {
         super();
@@ -65,7 +65,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsPhone81CompliancePolicy
+     * @return a WindowsPhone81CompliancePolicy
      */
     @jakarta.annotation.Nonnull
     public static WindowsPhone81CompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -94,7 +94,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the osMaximumVersion property value. Maximum Windows Phone version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
@@ -102,7 +102,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the osMinimumVersion property value. Minimum Windows Phone version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
@@ -110,7 +110,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the passwordBlockSimple property value. Whether or not to block syncing the calendar.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
@@ -118,7 +118,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
@@ -126,7 +126,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
@@ -134,7 +134,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum length of passwords.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -142,7 +142,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
@@ -150,7 +150,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
@@ -158,7 +158,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the passwordRequired property value. Whether or not to require a password.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
@@ -166,7 +166,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a requiredPasswordType
+     * @return a RequiredPasswordType
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
@@ -174,7 +174,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the storageRequireEncryption property value. Require encryption on windows phone devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {

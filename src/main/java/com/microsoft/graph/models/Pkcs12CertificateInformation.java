@@ -14,7 +14,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     private Map<String, Object> additionalData;
     /**
-     * Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past.
+     * Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate that isn't yet expired but whose notBefore time is in the past.
      */
     private Boolean isActive;
     /**
@@ -34,7 +34,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     private String thumbprint;
     /**
-     * Instantiates a new pkcs12CertificateInformation and sets the default values.
+     * Instantiates a new Pkcs12CertificateInformation and sets the default values.
      */
     public Pkcs12CertificateInformation() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a pkcs12CertificateInformation
+     * @return a Pkcs12CertificateInformation
      */
     @jakarta.annotation.Nonnull
     public static Pkcs12CertificateInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
         return new Pkcs12CertificateInformation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -72,8 +72,8 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
         return deserializerMap;
     }
     /**
-     * Gets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past.
-     * @return a boolean
+     * Gets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate that isn't yet expired but whose notBefore time is in the past.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
@@ -81,7 +81,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the notAfter property value. The certificate's expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getNotAfter() {
@@ -89,7 +89,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the notBefore property value. The certificate's issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getNotBefore() {
@@ -97,7 +97,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the thumbprint property value. The certificate thumbprint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThumbprint() {
@@ -125,14 +125,14 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past.
+     * Sets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate that isn't yet expired but whose notBefore time is in the past.
      * @param value Value to set for the isActive property.
      */
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {

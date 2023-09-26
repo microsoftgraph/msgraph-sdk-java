@@ -402,7 +402,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     private String preferredDataLocation;
     /**
-     * The preferred language for the user. Should follow ISO 639-1 Code; for example, en-US. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values)
+     * The preferred language for the user. The preferred language format is based on RFC 4646. The name is a combination of an ISO 639 two-letter lowercase culture code associated with the language, and an ISO 3166 two-letter uppercase subculture code associated with the country or region. Example: 'en-US', or 'es-ES'. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values)
      */
     private String preferredLanguage;
     /**
@@ -426,7 +426,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     private java.util.List<String> proxyAddresses;
     /**
-     * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
+     * Devices that are registered for the user. Read-only. Nullable. Supports $expand and returns up to 100 objects.
      */
     private java.util.List<DirectoryObject> registeredDevices;
     /**
@@ -506,7 +506,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     private String userType;
     /**
-     * Instantiates a new user and sets the default values.
+     * Instantiates a new User and sets the default values.
      */
     public User() {
         super();
@@ -515,7 +515,7 @@ public class User extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a user
+     * @return a User
      */
     @jakarta.annotation.Nonnull
     public static User createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -524,7 +524,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the aboutMe property value. A freeform text entry field for the user to describe themselves. Returned only on $select.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAboutMe() {
@@ -532,7 +532,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the accountEnabled property value. true if the account is enabled; otherwise, false. This property is required when a user is created. Returned only on $select. Supports $filter (eq, ne, not, and in).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAccountEnabled() {
@@ -540,7 +540,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the activities property value. The user's activities across devices. Read-only. Nullable.
-     * @return a userActivity
+     * @return a java.util.List<UserActivity>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserActivity> getActivities() {
@@ -548,7 +548,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the ageGroup property value. Sets the age group of the user. Allowed values: null, Minor, NotAdult and Adult. For more information, see legal age group property definitions. Returned only on $select. Supports $filter (eq, ne, not, and in).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAgeGroup() {
@@ -556,7 +556,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the agreementAcceptances property value. The user's terms of use acceptance statuses. Read-only. Nullable.
-     * @return a agreementAcceptance
+     * @return a java.util.List<AgreementAcceptance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgreementAcceptance> getAgreementAcceptances() {
@@ -564,7 +564,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appRoleAssignments property value. Represents the app roles a user has been granted for an application. Supports $expand.
-     * @return a appRoleAssignment
+     * @return a java.util.List<AppRoleAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppRoleAssignment> getAppRoleAssignments() {
@@ -572,7 +572,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly assigned and inherited licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
-     * @return a assignedLicense
+     * @return a java.util.List<AssignedLicense>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AssignedLicense> getAssignedLicenses() {
@@ -580,7 +580,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the assignedPlans property value. The plans that are assigned to the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq and not).
-     * @return a assignedPlan
+     * @return a java.util.List<AssignedPlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AssignedPlan> getAssignedPlans() {
@@ -588,7 +588,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the authentication property value. The authentication methods that are supported for the user.
-     * @return a authentication
+     * @return a Authentication
      */
     @jakarta.annotation.Nullable
     public Authentication getAuthentication() {
@@ -596,7 +596,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the authorizationInfo property value. The authorizationInfo property
-     * @return a authorizationInfo
+     * @return a AuthorizationInfo
      */
     @jakarta.annotation.Nullable
     public AuthorizationInfo getAuthorizationInfo() {
@@ -612,7 +612,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the businessPhones property value. The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property. Read-only for users synced from on-premises directory. Returned by default. Supports $filter (eq, not, ge, le, startsWith).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getBusinessPhones() {
@@ -620,7 +620,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the calendar property value. The user's primary calendar. Read-only.
-     * @return a calendar
+     * @return a Calendar
      */
     @jakarta.annotation.Nullable
     public Calendar getCalendar() {
@@ -628,7 +628,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the calendarGroups property value. The user's calendar groups. Read-only. Nullable.
-     * @return a calendarGroup
+     * @return a java.util.List<CalendarGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CalendarGroup> getCalendarGroups() {
@@ -636,7 +636,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the calendars property value. The user's calendars. Read-only. Nullable.
-     * @return a calendar
+     * @return a java.util.List<Calendar>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Calendar> getCalendars() {
@@ -644,7 +644,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the calendarView property value. The calendar view for the calendar. Read-only. Nullable.
-     * @return a event
+     * @return a java.util.List<Event>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Event> getCalendarView() {
@@ -652,7 +652,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the chats property value. The chats property
-     * @return a chat
+     * @return a java.util.List<Chat>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Chat> getChats() {
@@ -660,7 +660,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the city property value. The city where the user is located. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCity() {
@@ -668,7 +668,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the companyName property value. The name of the company that the user is associated with. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCompanyName() {
@@ -676,7 +676,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the consentProvidedForMinor property value. Sets whether consent has been obtained for minors. Allowed values: null, Granted, Denied and NotRequired. Refer to the legal age group property definitions for further information. Returned only on $select. Supports $filter (eq, ne, not, and in).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConsentProvidedForMinor() {
@@ -684,7 +684,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the contactFolders property value. The user's contacts folders. Read-only. Nullable.
-     * @return a contactFolder
+     * @return a java.util.List<ContactFolder>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContactFolder> getContactFolders() {
@@ -692,7 +692,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the contacts property value. The user's contacts. Read-only. Nullable.
-     * @return a contact
+     * @return a java.util.List<Contact>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Contact> getContacts() {
@@ -700,7 +700,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the country property value. The country or region where the user is located; for example, US or UK. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountry() {
@@ -716,7 +716,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the createdObjects property value. Directory objects that the user created. Read-only. Nullable.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getCreatedObjects() {
@@ -724,7 +724,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the creationType property value. Indicates whether the user account was created through one of the following methods:  As a regular school or work account (null). As an external account (Invitation). As a local account for an Azure Active Directory B2C tenant (LocalAccount). Through self-service sign-up by an internal user using email verification (EmailVerified). Through self-service sign-up by an external user signing up through a link that is part of a user flow (SelfServiceSignUp). Read-only.Returned only on $select. Supports $filter (eq, ne, not, in).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreationType() {
@@ -732,7 +732,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the customSecurityAttributes property value. An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). Filter value is case sensitive.
-     * @return a customSecurityAttributeValue
+     * @return a CustomSecurityAttributeValue
      */
     @jakarta.annotation.Nullable
     public CustomSecurityAttributeValue getCustomSecurityAttributes() {
@@ -740,7 +740,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the department property value. The name for the department in which the user works. Maximum length is 64 characters. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDepartment() {
@@ -748,7 +748,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the deviceEnrollmentLimit property value. The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceEnrollmentLimit() {
@@ -756,7 +756,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the deviceManagementTroubleshootingEvents property value. The list of troubleshooting events for this user.
-     * @return a deviceManagementTroubleshootingEvent
+     * @return a java.util.List<DeviceManagementTroubleshootingEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementTroubleshootingEvent> getDeviceManagementTroubleshootingEvents() {
@@ -764,7 +764,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the directReports property value. The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getDirectReports() {
@@ -772,7 +772,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial and last name. This property is required when a user is created and it cannot be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values), $orderby, and $search.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -780,7 +780,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the drive property value. The user's OneDrive. Read-only.
-     * @return a drive
+     * @return a Drive
      */
     @jakarta.annotation.Nullable
     public Drive getDrive() {
@@ -788,7 +788,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the drives property value. A collection of drives available for this user. Read-only.
-     * @return a drive
+     * @return a java.util.List<Drive>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Drive> getDrives() {
@@ -796,7 +796,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the employeeExperience property value. The employeeExperience property
-     * @return a employeeExperienceUser
+     * @return a EmployeeExperienceUser
      */
     @jakarta.annotation.Nullable
     public EmployeeExperienceUser getEmployeeExperience() {
@@ -812,7 +812,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the employeeId property value. The employee identifier assigned to the user by the organization. The maximum length is 16 characters. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmployeeId() {
@@ -828,7 +828,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the employeeOrgData property value. Represents organization data (for example, division and costCenter) associated with a user. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
-     * @return a employeeOrgData
+     * @return a EmployeeOrgData
      */
     @jakarta.annotation.Nullable
     public EmployeeOrgData getEmployeeOrgData() {
@@ -836,7 +836,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the employeeType property value. Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmployeeType() {
@@ -844,7 +844,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the events property value. The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
-     * @return a event
+     * @return a java.util.List<Event>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Event> getEvents() {
@@ -852,7 +852,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the user. Read-only. Supports $expand. Nullable.
-     * @return a extension
+     * @return a java.util.List<Extension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
@@ -860,7 +860,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the externalUserState property value. For an external user invited to the tenant using the invitation API, this property represents the invited user's invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Returned only on $select. Supports $filter (eq, ne, not , in).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalUserState() {
@@ -876,7 +876,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the faxNumber property value. The fax number of the user. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFaxNumber() {
@@ -1017,7 +1017,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the followedSites property value. The followedSites property
-     * @return a site
+     * @return a java.util.List<Site>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Site> getFollowedSites() {
@@ -1025,7 +1025,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the givenName property value. The given name (first name) of the user. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGivenName() {
@@ -1041,7 +1041,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the identities property value. Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Returned only on $select. Supports $filter (eq) including on null values, only where the signInType is not userPrincipalName.
-     * @return a objectIdentity
+     * @return a java.util.List<ObjectIdentity>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ObjectIdentity> getIdentities() {
@@ -1049,7 +1049,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the imAddresses property value. The instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getImAddresses() {
@@ -1057,7 +1057,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the inferenceClassification property value. Relevance classification of the user's messages based on explicit designations that override inferred relevance or importance.
-     * @return a inferenceClassification
+     * @return a InferenceClassification
      */
     @jakarta.annotation.Nullable
     public InferenceClassification getInferenceClassification() {
@@ -1065,7 +1065,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the insights property value. The insights property
-     * @return a officeGraphInsights
+     * @return a OfficeGraphInsights
      */
     @jakarta.annotation.Nullable
     public OfficeGraphInsights getInsights() {
@@ -1073,7 +1073,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the interests property value. A list for the user to describe their interests. Returned only on $select.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getInterests() {
@@ -1081,7 +1081,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the isResourceAccount property value. Do not use  reserved for future use.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsResourceAccount() {
@@ -1089,7 +1089,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the jobTitle property value. The user's job title. Maximum length is 128 characters. Returned by default. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJobTitle() {
@@ -1097,7 +1097,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the joinedTeams property value. The joinedTeams property
-     * @return a team
+     * @return a java.util.List<Team>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Team> getJoinedTeams() {
@@ -1113,7 +1113,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the legalAgeGroupClassification property value. Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, MinorWithOutParentalConsent, MinorWithParentalConsent, MinorNoParentalConsentRequired, NotAdult and Adult. Refer to the legal age group property definitions for further information. Returned only on $select.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLegalAgeGroupClassification() {
@@ -1121,7 +1121,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the licenseAssignmentStates property value. State of license assignments for this user. Also indicates licenses that are directly assigned or the user has inherited through group memberships. Read-only. Returned only on $select.
-     * @return a licenseAssignmentState
+     * @return a java.util.List<LicenseAssignmentState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LicenseAssignmentState> getLicenseAssignmentStates() {
@@ -1129,7 +1129,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the licenseDetails property value. A collection of this user's license details. Read-only.
-     * @return a licenseDetails
+     * @return a java.util.List<LicenseDetails>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LicenseDetails> getLicenseDetails() {
@@ -1137,7 +1137,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the mail property value. The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. This property can't contain accent characters.  NOTE: We don't recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMail() {
@@ -1145,7 +1145,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the mailboxSettings property value. Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale and time zone. Returned only on $select.
-     * @return a mailboxSettings
+     * @return a MailboxSettings
      */
     @jakarta.annotation.Nullable
     public MailboxSettings getMailboxSettings() {
@@ -1153,7 +1153,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the mailFolders property value. The user's mail folders. Read-only. Nullable.
-     * @return a mailFolder
+     * @return a java.util.List<MailFolder>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MailFolder> getMailFolders() {
@@ -1161,7 +1161,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the mailNickname property value. The mail alias for the user. This property must be specified when a user is created. Maximum length is 64 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMailNickname() {
@@ -1169,7 +1169,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the managedAppRegistrations property value. Zero or more managed app registrations that belong to the user.
-     * @return a managedAppRegistration
+     * @return a java.util.List<ManagedAppRegistration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppRegistration> getManagedAppRegistrations() {
@@ -1177,7 +1177,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the managedDevices property value. The managed devices associated with the user.
-     * @return a managedDevice
+     * @return a java.util.List<ManagedDevice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDevice> getManagedDevices() {
@@ -1185,7 +1185,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the manager property value. The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.
-     * @return a directoryObject
+     * @return a DirectoryObject
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getManager() {
@@ -1193,7 +1193,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the memberOf property value. The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getMemberOf() {
@@ -1201,7 +1201,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the messages property value. The messages in a mailbox or folder. Read-only. Nullable.
-     * @return a message
+     * @return a java.util.List<Message>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Message> getMessages() {
@@ -1209,7 +1209,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the mobilePhone property value. The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMobilePhone() {
@@ -1217,7 +1217,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the mySite property value. The URL for the user's personal site. Returned only on $select.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMySite() {
@@ -1225,7 +1225,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the oauth2PermissionGrants property value. The oauth2PermissionGrants property
-     * @return a oAuth2PermissionGrant
+     * @return a java.util.List<OAuth2PermissionGrant>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OAuth2PermissionGrant> getOauth2PermissionGrants() {
@@ -1233,7 +1233,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the officeLocation property value. The office location in the user's place of business. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOfficeLocation() {
@@ -1241,7 +1241,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onenote property value. The onenote property
-     * @return a onenote
+     * @return a Onenote
      */
     @jakarta.annotation.Nullable
     public Onenote getOnenote() {
@@ -1249,7 +1249,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onlineMeetings property value. Information about a meeting, including the URL used to join a meeting, the attendees' list, and the description.
-     * @return a onlineMeeting
+     * @return a java.util.List<OnlineMeeting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnlineMeeting> getOnlineMeetings() {
@@ -1257,7 +1257,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesDistinguishedName property value. Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. Returned only on $select.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesDistinguishedName() {
@@ -1265,7 +1265,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesDomainName property value. Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. Returned only on $select.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesDomainName() {
@@ -1273,7 +1273,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesExtensionAttributes property value. Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Returned only on $select. Supports $filter (eq, ne, not, in).
-     * @return a onPremisesExtensionAttributes
+     * @return a OnPremisesExtensionAttributes
      */
     @jakarta.annotation.Nullable
     public OnPremisesExtensionAttributes getOnPremisesExtensionAttributes() {
@@ -1281,7 +1281,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesImmutableId property value. This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you're using a federated domain for the user's userPrincipalName (UPN) property. NOTE: The $ and _ characters can't be used when specifying this property. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in)..
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesImmutableId() {
@@ -1297,7 +1297,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesProvisioningErrors property value. Errors when using Microsoft synchronization product during provisioning. Returned only on $select. Supports $filter (eq, not, ge, le).
-     * @return a onPremisesProvisioningError
+     * @return a java.util.List<OnPremisesProvisioningError>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesProvisioningError> getOnPremisesProvisioningErrors() {
@@ -1305,7 +1305,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesSamAccountName property value. Contains the on-premises samAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesSamAccountName() {
@@ -1313,7 +1313,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Returned only on $select.  Supports $filter (eq including on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesSecurityIdentifier() {
@@ -1321,7 +1321,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesSyncEnabled property value. true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Azure Active Directory (Azure AD). Read-only. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOnPremisesSyncEnabled() {
@@ -1329,7 +1329,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesUserPrincipalName property value. Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesUserPrincipalName() {
@@ -1337,7 +1337,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the otherMails property value. A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. NOTE: This property can't contain accent characters. Returned only on $select. Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOtherMails() {
@@ -1345,7 +1345,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the outlook property value. The outlook property
-     * @return a outlookUser
+     * @return a OutlookUser
      */
     @jakarta.annotation.Nullable
     public OutlookUser getOutlook() {
@@ -1353,7 +1353,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the ownedDevices property value. Devices that are owned by the user. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getOwnedDevices() {
@@ -1361,7 +1361,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the ownedObjects property value. Directory objects that are owned by the user. Read-only. Nullable. Supports $expand, $select nested in $expand, and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getOwnedObjects() {
@@ -1369,7 +1369,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the passwordPolicies property value. Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword. Returned only on $select. For more information on the default password policies, see Azure AD password policies. Supports $filter (ne, not, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPasswordPolicies() {
@@ -1377,7 +1377,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values).
-     * @return a passwordProfile
+     * @return a PasswordProfile
      */
     @jakarta.annotation.Nullable
     public PasswordProfile getPasswordProfile() {
@@ -1385,7 +1385,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the pastProjects property value. A list for the user to enumerate their past projects. Returned only on $select.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPastProjects() {
@@ -1393,7 +1393,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the people property value. People that are relevant to the user. Read-only. Nullable.
-     * @return a person
+     * @return a java.util.List<Person>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Person> getPeople() {
@@ -1401,7 +1401,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the photo property value. The user's profile photo. Read-only.
-     * @return a profilePhoto
+     * @return a ProfilePhoto
      */
     @jakarta.annotation.Nullable
     public ProfilePhoto getPhoto() {
@@ -1409,7 +1409,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the photos property value. The photos property
-     * @return a profilePhoto
+     * @return a java.util.List<ProfilePhoto>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProfilePhoto> getPhotos() {
@@ -1417,7 +1417,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the planner property value. Entry-point to the Planner resource that might exist for a user. Read-only.
-     * @return a plannerUser
+     * @return a PlannerUser
      */
     @jakarta.annotation.Nullable
     public PlannerUser getPlanner() {
@@ -1425,7 +1425,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the postalCode property value. The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code. Maximum length is 40 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPostalCode() {
@@ -1433,15 +1433,15 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the preferredDataLocation property value. The preferred data location for the user. For more information, see OneDrive Online Multi-Geo.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreferredDataLocation() {
         return this.preferredDataLocation;
     }
     /**
-     * Gets the preferredLanguage property value. The preferred language for the user. Should follow ISO 639-1 Code; for example, en-US. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values)
-     * @return a string
+     * Gets the preferredLanguage property value. The preferred language for the user. The preferred language format is based on RFC 4646. The name is a combination of an ISO 639 two-letter lowercase culture code associated with the language, and an ISO 3166 two-letter uppercase subculture code associated with the country or region. Example: 'en-US', or 'es-ES'. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values)
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreferredLanguage() {
@@ -1449,7 +1449,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the preferredName property value. The preferred name for the user. Not Supported. This attribute returns an empty string.Returned only on $select.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreferredName() {
@@ -1457,7 +1457,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the presence property value. The presence property
-     * @return a presence
+     * @return a Presence
      */
     @jakarta.annotation.Nullable
     public Presence getPresence() {
@@ -1465,7 +1465,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the print property value. The print property
-     * @return a userPrint
+     * @return a UserPrint
      */
     @jakarta.annotation.Nullable
     public UserPrint getPrint() {
@@ -1473,7 +1473,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the provisionedPlans property value. The plans that are provisioned for the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le).
-     * @return a provisionedPlan
+     * @return a java.util.List<ProvisionedPlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProvisionedPlan> getProvisionedPlans() {
@@ -1481,15 +1481,15 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the proxyAddresses property value. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of 10 unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getProxyAddresses() {
         return this.proxyAddresses;
     }
     /**
-     * Gets the registeredDevices property value. Devices that are registered for the user. Read-only. Nullable. Supports $expand.
-     * @return a directoryObject
+     * Gets the registeredDevices property value. Devices that are registered for the user. Read-only. Nullable. Supports $expand and returns up to 100 objects.
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getRegisteredDevices() {
@@ -1497,7 +1497,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the responsibilities property value. A list for the user to enumerate their responsibilities. Returned only on $select.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getResponsibilities() {
@@ -1505,7 +1505,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the schools property value. A list for the user to enumerate the schools they have attended. Returned only on $select.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSchools() {
@@ -1513,7 +1513,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the scopedRoleMemberOf property value. The scopedRoleMemberOf property
-     * @return a scopedRoleMembership
+     * @return a java.util.List<ScopedRoleMembership>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ScopedRoleMembership> getScopedRoleMemberOf() {
@@ -1521,7 +1521,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the securityIdentifier property value. Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecurityIdentifier() {
@@ -1529,7 +1529,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the serviceProvisioningErrors property value. The serviceProvisioningErrors property
-     * @return a serviceProvisioningError
+     * @return a java.util.List<ServiceProvisioningError>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceProvisioningError> getServiceProvisioningErrors() {
@@ -1537,7 +1537,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the settings property value. The settings property
-     * @return a userSettings
+     * @return a UserSettings
      */
     @jakarta.annotation.Nullable
     public UserSettings getSettings() {
@@ -1545,7 +1545,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the showInAddressList property value. Do not use in Microsoft Graph. Manage this property through the Microsoft 365 admin center instead. Represents whether the user should be included in the Outlook global address list. See Known issue.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowInAddressList() {
@@ -1553,7 +1553,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the signInActivity property value. Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note: Details for this property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission.This property is not returned for a user who has never signed in or last signed in before April 2020.
-     * @return a signInActivity
+     * @return a SignInActivity
      */
     @jakarta.annotation.Nullable
     public SignInActivity getSignInActivity() {
@@ -1569,7 +1569,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the skills property value. A list for the user to enumerate their skills. Returned only on $select.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSkills() {
@@ -1577,7 +1577,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the state property value. The state or province in the user's address. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getState() {
@@ -1585,7 +1585,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the streetAddress property value. The street address of the user's place of business. Maximum length is 1024 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStreetAddress() {
@@ -1593,7 +1593,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the surname property value. The user's surname (family name or last name). Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSurname() {
@@ -1601,7 +1601,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the teamwork property value. A container for Microsoft Teams features available for the user. Read-only. Nullable.
-     * @return a userTeamwork
+     * @return a UserTeamwork
      */
     @jakarta.annotation.Nullable
     public UserTeamwork getTeamwork() {
@@ -1609,7 +1609,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the todo property value. Represents the To Do services available to a user.
-     * @return a todo
+     * @return a Todo
      */
     @jakarta.annotation.Nullable
     public Todo getTodo() {
@@ -1617,7 +1617,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the transitiveMemberOf property value. The groups, including nested groups, and directory roles that a user is a member of. Nullable.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveMemberOf() {
@@ -1625,7 +1625,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the usageLocation property value. A two letter country code (ISO standard 3166). Required for users that are assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: US, JP, and GB. Not nullable. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUsageLocation() {
@@ -1633,7 +1633,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style sign-in name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property can't contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, ' . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -1641,7 +1641,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the userType property value. A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserType() {
@@ -2466,7 +2466,7 @@ public class User extends DirectoryObject implements Parsable {
         this.preferredDataLocation = value;
     }
     /**
-     * Sets the preferredLanguage property value. The preferred language for the user. Should follow ISO 639-1 Code; for example, en-US. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values)
+     * Sets the preferredLanguage property value. The preferred language for the user. The preferred language format is based on RFC 4646. The name is a combination of an ISO 639 two-letter lowercase culture code associated with the language, and an ISO 3166 two-letter uppercase subculture code associated with the country or region. Example: 'en-US', or 'es-ES'. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values)
      * @param value Value to set for the preferredLanguage property.
      */
     public void setPreferredLanguage(@jakarta.annotation.Nullable final String value) {
@@ -2508,7 +2508,7 @@ public class User extends DirectoryObject implements Parsable {
         this.proxyAddresses = value;
     }
     /**
-     * Sets the registeredDevices property value. Devices that are registered for the user. Read-only. Nullable. Supports $expand.
+     * Sets the registeredDevices property value. Devices that are registered for the user. Read-only. Nullable. Supports $expand and returns up to 100 objects.
      * @param value Value to set for the registeredDevices property.
      */
     public void setRegisteredDevices(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {

@@ -57,7 +57,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
     }
     /**
      * Retrieve a rule or settings defined for a role management policy. The rule can be one of the following types that are derived from the unifiedRoleManagementPolicyRule object:+ unifiedRoleManagementPolicyApprovalRule+ unifiedRoleManagementPolicyAuthenticationContextRule+ unifiedRoleManagementPolicyEnablementRule+ unifiedRoleManagementPolicyExpirationRule+ unifiedRoleManagementPolicyNotificationRule
-     * @return a CompletableFuture of unifiedRoleManagementPolicyRule
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyRule
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicyrule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
     /**
      * Retrieve a rule or settings defined for a role management policy. The rule can be one of the following types that are derived from the unifiedRoleManagementPolicyRule object:+ unifiedRoleManagementPolicyApprovalRule+ unifiedRoleManagementPolicyAuthenticationContextRule+ unifiedRoleManagementPolicyEnablementRule+ unifiedRoleManagementPolicyExpirationRule+ unifiedRoleManagementPolicyNotificationRule
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementPolicyRule
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyRule
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicyrule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
     /**
      * Update a rule defined for a role management policy. The rule can be one of the following types that are derived from the unifiedRoleManagementPolicyRule object: For more information about rules for Azure AD roles and examples of updating rules, see the following articles:
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleManagementPolicyRule
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyRule
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicyrule-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseReque
      * Update a rule defined for a role management policy. The rule can be one of the following types that are derived from the unifiedRoleManagementPolicyRule object: For more information about rules for Azure AD roles and examples of updating rules, see the following articles:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementPolicyRule
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyRule
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicyrule-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

@@ -15,7 +15,7 @@ public class GetAttackSimulationSimulationUserCoverageResponse extends BaseColle
      */
     private java.util.List<AttackSimulationSimulationUserCoverage> value;
     /**
-     * Instantiates a new getAttackSimulationSimulationUserCoverageResponse and sets the default values.
+     * Instantiates a new GetAttackSimulationSimulationUserCoverageResponse and sets the default values.
      */
     public GetAttackSimulationSimulationUserCoverageResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetAttackSimulationSimulationUserCoverageResponse extends BaseColle
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getAttackSimulationSimulationUserCoverageResponse
+     * @return a GetAttackSimulationSimulationUserCoverageResponse
      */
     @jakarta.annotation.Nonnull
     public static GetAttackSimulationSimulationUserCoverageResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetAttackSimulationSimulationUserCoverageResponse extends BaseColle
     }
     /**
      * Gets the value property value. The value property
-     * @return a attackSimulationSimulationUserCoverage
+     * @return a java.util.List<AttackSimulationSimulationUserCoverage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttackSimulationSimulationUserCoverage> getValue() {

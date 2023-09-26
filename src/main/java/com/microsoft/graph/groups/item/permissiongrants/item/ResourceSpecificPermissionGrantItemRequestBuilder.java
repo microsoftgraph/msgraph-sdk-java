@@ -97,7 +97,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
     }
     /**
      * Get permissionGrants from groups
-     * @return a CompletableFuture of resourceSpecificPermissionGrant
+     * @return a CompletableFuture of ResourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> get() {
@@ -106,7 +106,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
     /**
      * Get permissionGrants from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceSpecificPermissionGrant
+     * @return a CompletableFuture of ResourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,7 +119,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property permissionGrants in groups
      * @param body The request body
-     * @return a CompletableFuture of resourceSpecificPermissionGrant
+     * @return a CompletableFuture of ResourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> patch(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body) {
@@ -129,7 +129,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseReque
      * Update the navigation property permissionGrants in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceSpecificPermissionGrant
+     * @return a CompletableFuture of ResourceSpecificPermissionGrant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> patch(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

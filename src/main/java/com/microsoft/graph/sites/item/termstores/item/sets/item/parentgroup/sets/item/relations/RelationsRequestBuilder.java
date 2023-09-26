@@ -60,7 +60,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the different relation of a [term] or [set] from the relations navigation property.
-     * @return a CompletableFuture of relationCollectionResponse
+     * @return a CompletableFuture of RelationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-list-relations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the different relation of a [term] or [set] from the relations navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of relationCollectionResponse
+     * @return a CompletableFuture of RelationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-list-relations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to relations for sites
      * @param body The request body
-     * @return a CompletableFuture of relation
+     * @return a CompletableFuture of Relation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Relation> post(@jakarta.annotation.Nonnull final Relation body) {
@@ -94,7 +94,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to relations for sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of relation
+     * @return a CompletableFuture of Relation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Relation> post(@jakarta.annotation.Nonnull final Relation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a relationsRequestBuilder
+     * @return a RelationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RelationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

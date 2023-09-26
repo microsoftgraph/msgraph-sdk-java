@@ -65,7 +65,7 @@ public class ParentGroupRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The parent [group] that contains the set.
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> get() {
@@ -74,7 +74,7 @@ public class ParentGroupRequestBuilder extends BaseRequestBuilder {
     /**
      * The parent [group] that contains the set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ParentGroupRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property parentGroup in sites
      * @param body The request body
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> patch(@jakarta.annotation.Nonnull final Group body) {
@@ -97,7 +97,7 @@ public class ParentGroupRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property parentGroup in sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> patch(@jakarta.annotation.Nonnull final Group body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class ParentGroupRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a parentGroupRequestBuilder
+     * @return a ParentGroupRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ParentGroupRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -89,7 +89,7 @@ public class SeriesAxisRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents the series axis of a 3-dimensional chart. Read-only.
-     * @return a CompletableFuture of workbookChartAxis
+     * @return a CompletableFuture of WorkbookChartAxis
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartAxis> get() {
@@ -98,7 +98,7 @@ public class SeriesAxisRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the series axis of a 3-dimensional chart. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartAxis
+     * @return a CompletableFuture of WorkbookChartAxis
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartAxis> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class SeriesAxisRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property seriesAxis in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookChartAxis
+     * @return a CompletableFuture of WorkbookChartAxis
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartAxis> patch(@jakarta.annotation.Nonnull final WorkbookChartAxis body) {
@@ -121,7 +121,7 @@ public class SeriesAxisRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property seriesAxis in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartAxis
+     * @return a CompletableFuture of WorkbookChartAxis
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartAxis> patch(@jakarta.annotation.Nonnull final WorkbookChartAxis body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -223,7 +223,7 @@ public class SeriesAxisRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a seriesAxisRequestBuilder
+     * @return a SeriesAxisRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SeriesAxisRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

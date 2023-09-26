@@ -30,7 +30,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new filter and sets the default values.
+     * Instantiates a new Filter and sets the default values.
      */
     public Filter() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a filter
+     * @return a Filter
      */
     @jakarta.annotation.Nonnull
     public static Filter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
         return new Filter();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the categoryFilterGroups property value. *Experimental* Filter group set used to decide whether given object belongs and should be processed as part of this object mapping. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
-     * @return a filterGroup
+     * @return a java.util.List<FilterGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<FilterGroup> getCategoryFilterGroups() {
@@ -76,7 +76,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the groups property value. Filter group set used to decide whether given object is in scope for provisioning. This is the filter which should be used in most cases. If an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is not satisfied any longer, such object will get de-provisioned'. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
-     * @return a filterGroup
+     * @return a java.util.List<FilterGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<FilterGroup> getGroups() {
@@ -84,7 +84,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the inputFilterGroups property value. *Experimental* Filter group set used to filter out objects at the early stage of reading them from the directory. If an object doesn't satisfy this filter it will not be processed further. Important to understand is that if an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is no longer satisfied, such object will NOT get de-provisioned. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
-     * @return a filterGroup
+     * @return a java.util.List<FilterGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<FilterGroup> getInputFilterGroups() {
@@ -92,7 +92,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,8 +111,8 @@ public class Filter implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

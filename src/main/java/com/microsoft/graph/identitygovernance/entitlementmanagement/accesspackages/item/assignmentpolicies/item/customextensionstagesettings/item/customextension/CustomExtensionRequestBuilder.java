@@ -38,7 +38,7 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
-     * @return a CompletableFuture of customCalloutExtension
+     * @return a CompletableFuture of CustomCalloutExtension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomCalloutExtension> get() {
@@ -47,7 +47,7 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
     /**
      * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customCalloutExtension
+     * @return a CompletableFuture of CustomCalloutExtension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomCalloutExtension> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a customExtensionRequestBuilder
+     * @return a CustomExtensionRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CustomExtensionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

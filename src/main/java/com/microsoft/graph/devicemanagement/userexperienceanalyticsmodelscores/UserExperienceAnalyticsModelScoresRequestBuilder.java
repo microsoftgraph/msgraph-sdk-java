@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsModelScoresRequestBuilder extends BaseReques
     }
     /**
      * User experience analytics model scores
-     * @return a CompletableFuture of userExperienceAnalyticsModelScoresCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsModelScoresCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsModelScoresCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsModelScoresRequestBuilder extends BaseReques
     /**
      * User experience analytics model scores
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsModelScoresCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsModelScoresCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsModelScoresCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsModelScoresRequestBuilder extends BaseReques
     /**
      * Create new navigation property to userExperienceAnalyticsModelScores for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsModelScores
+     * @return a CompletableFuture of UserExperienceAnalyticsModelScores
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsModelScores> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsModelScores body) {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsModelScoresRequestBuilder extends BaseReques
      * Create new navigation property to userExperienceAnalyticsModelScores for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsModelScores
+     * @return a CompletableFuture of UserExperienceAnalyticsModelScores
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsModelScores> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsModelScores body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsModelScoresRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsModelScoresRequestBuilder
+     * @return a UserExperienceAnalyticsModelScoresRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsModelScoresRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

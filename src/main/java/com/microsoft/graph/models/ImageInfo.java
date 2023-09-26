@@ -34,7 +34,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new imageInfo and sets the default values.
+     * Instantiates a new ImageInfo and sets the default values.
      */
     public ImageInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a imageInfo
+     * @return a ImageInfo
      */
     @jakarta.annotation.Nonnull
     public static ImageInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,14 +51,14 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the addImageQuery property value. Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example  a high contrast image
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAddImageQuery() {
         return this.addImageQuery;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the alternateText property value. Optional; alt-text accessible content for the image
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlternateText() {
@@ -75,7 +75,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the alternativeText property value. The alternativeText property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlternativeText() {
@@ -97,7 +97,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the iconUrl property value. Optional; URI that points to an icon which represents the application used to generate the activity
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIconUrl() {
@@ -105,7 +105,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -132,8 +132,8 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
         this.addImageQuery = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

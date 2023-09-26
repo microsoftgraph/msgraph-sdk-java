@@ -41,7 +41,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummary extends Entity imple
      */
     private Integer successCount;
     /**
-     * Instantiates a new managedDeviceMobileAppConfigurationUserSummary and sets the default values.
+     * Instantiates a new ManagedDeviceMobileAppConfigurationUserSummary and sets the default values.
      */
     public ManagedDeviceMobileAppConfigurationUserSummary() {
         super();
@@ -49,7 +49,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummary extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceMobileAppConfigurationUserSummary
+     * @return a ManagedDeviceMobileAppConfigurationUserSummary
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceMobileAppConfigurationUserSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummary extends Entity imple
     }
     /**
      * Gets the configurationVersion property value. Version of the policy for that overview
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfigurationVersion() {
@@ -66,7 +66,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummary extends Entity imple
     }
     /**
      * Gets the errorCount property value. Number of error Users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCount() {
@@ -74,7 +74,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummary extends Entity imple
     }
     /**
      * Gets the failedCount property value. Number of failed Users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedCount() {
@@ -106,7 +106,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummary extends Entity imple
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
@@ -114,7 +114,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummary extends Entity imple
     }
     /**
      * Gets the pendingCount property value. Number of pending Users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingCount() {
@@ -122,7 +122,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummary extends Entity imple
     }
     /**
      * Gets the successCount property value. Number of succeeded Users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessCount() {

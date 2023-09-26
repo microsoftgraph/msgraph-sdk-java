@@ -12,7 +12,7 @@ public class AttachmentSession extends Entity implements Parsable {
     /**
      * The content streams that are uploaded.
      */
-    private byte[] content;
+    private Base64url content;
     /**
      * The date and time in UTC when the upload session will expire. The complete file must be uploaded before this expiration time is reached.
      */
@@ -22,7 +22,7 @@ public class AttachmentSession extends Entity implements Parsable {
      */
     private java.util.List<String> nextExpectedRanges;
     /**
-     * Instantiates a new attachmentSession and sets the default values.
+     * Instantiates a new AttachmentSession and sets the default values.
      */
     public AttachmentSession() {
         super();
@@ -30,7 +30,7 @@ public class AttachmentSession extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attachmentSession
+     * @return a AttachmentSession
      */
     @jakarta.annotation.Nonnull
     public static AttachmentSession createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,10 +39,10 @@ public class AttachmentSession extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content streams that are uploaded.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getContent() {
+    public Base64url getContent() {
         return this.content;
     }
     /**
@@ -60,14 +60,14 @@ public class AttachmentSession extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("nextExpectedRanges", (n) -> { this.setNextExpectedRanges(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
     /**
      * Gets the nextExpectedRanges property value. Indicates a single value {start} that represents the location in the file where the next upload should begin.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNextExpectedRanges() {
@@ -80,7 +80,7 @@ public class AttachmentSession extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeByteArrayValue("content", this.getContent());
+        writer.writeObjectValue("content", this.getContent());
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
         writer.writeCollectionOfPrimitiveValues("nextExpectedRanges", this.getNextExpectedRanges());
     }
@@ -88,7 +88,7 @@ public class AttachmentSession extends Entity implements Parsable {
      * Sets the content property value. The content streams that are uploaded.
      * @param value Value to set for the content property.
      */
-    public void setContent(@jakarta.annotation.Nullable final byte[] value) {
+    public void setContent(@jakarta.annotation.Nullable final Base64url value) {
         this.content = value;
     }
     /**

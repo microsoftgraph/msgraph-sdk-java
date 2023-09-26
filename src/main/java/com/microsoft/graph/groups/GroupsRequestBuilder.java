@@ -92,7 +92,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List all the groups available in an organization, excluding dynamic distribution groups. To retrieve dynamic distribution groups, use the Exchange admin center. This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the group and specify the properties in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and are not returned in the $select query.
-     * @return a CompletableFuture of groupCollectionResponse
+     * @return a CompletableFuture of GroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * List all the groups available in an organization, excluding dynamic distribution groups. To retrieve dynamic distribution groups, use the Exchange admin center. This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the group and specify the properties in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and are not returned in the $select query.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupCollectionResponse
+     * @return a CompletableFuture of GroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new group as specified in the request body. You can create the following types of groups: This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param body The request body
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      * @see <a href="https://learn.microsoft.com/graph/api/group-post-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
      * Create a new group as specified in the request body. You can create the following types of groups: This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      * @see <a href="https://learn.microsoft.com/graph/api/group-post-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -203,7 +203,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a groupsRequestBuilder
+     * @return a GroupsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GroupsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

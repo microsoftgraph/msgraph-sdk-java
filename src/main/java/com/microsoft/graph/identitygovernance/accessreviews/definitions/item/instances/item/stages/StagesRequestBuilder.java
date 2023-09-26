@@ -62,7 +62,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -71,7 +71,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the stages in a multi-stage access review instance.
-     * @return a CompletableFuture of accessReviewStageCollectionResponse
+     * @return a CompletableFuture of AccessReviewStageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-list-stages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the stages in a multi-stage access review instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewStageCollectionResponse
+     * @return a CompletableFuture of AccessReviewStageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-list-stages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to stages for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessReviewStage
+     * @return a CompletableFuture of AccessReviewStage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewStage> post(@jakarta.annotation.Nonnull final AccessReviewStage body) {
@@ -105,7 +105,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to stages for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewStage
+     * @return a CompletableFuture of AccessReviewStage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewStage> post(@jakarta.annotation.Nonnull final AccessReviewStage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -180,7 +180,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a stagesRequestBuilder
+     * @return a StagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public StagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

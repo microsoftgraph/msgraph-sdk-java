@@ -60,7 +60,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Get a list of homeRealmDiscoveryPolicy objects.
-     * @return a CompletableFuture of homeRealmDiscoveryPolicyCollectionResponse
+     * @return a CompletableFuture of HomeRealmDiscoveryPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Get a list of homeRealmDiscoveryPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of homeRealmDiscoveryPolicyCollectionResponse
+     * @return a CompletableFuture of HomeRealmDiscoveryPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new homeRealmDiscoveryPolicy object.
      * @param body The request body
-     * @return a CompletableFuture of homeRealmDiscoveryPolicy
+     * @return a CompletableFuture of HomeRealmDiscoveryPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-post-homerealmdiscoverypolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
      * Create a new homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of homeRealmDiscoveryPolicy
+     * @return a CompletableFuture of HomeRealmDiscoveryPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-post-homerealmdiscoverypolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a homeRealmDiscoveryPoliciesRequestBuilder
+     * @return a HomeRealmDiscoveryPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HomeRealmDiscoveryPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

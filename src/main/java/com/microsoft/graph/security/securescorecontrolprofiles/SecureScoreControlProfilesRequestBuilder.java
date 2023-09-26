@@ -60,7 +60,7 @@ public class SecureScoreControlProfilesRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Retrieve the properties and relationships of a secureScoreControlProfiles object.
-     * @return a CompletableFuture of secureScoreControlProfileCollectionResponse
+     * @return a CompletableFuture of SecureScoreControlProfileCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-list-securescorecontrolprofiles?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class SecureScoreControlProfilesRequestBuilder extends BaseRequestBuilder
     /**
      * Retrieve the properties and relationships of a secureScoreControlProfiles object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of secureScoreControlProfileCollectionResponse
+     * @return a CompletableFuture of SecureScoreControlProfileCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-list-securescorecontrolprofiles?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SecureScoreControlProfilesRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to secureScoreControlProfiles for security
      * @param body The request body
-     * @return a CompletableFuture of secureScoreControlProfile
+     * @return a CompletableFuture of SecureScoreControlProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> post(@jakarta.annotation.Nonnull final SecureScoreControlProfile body) {
@@ -94,7 +94,7 @@ public class SecureScoreControlProfilesRequestBuilder extends BaseRequestBuilder
      * Create new navigation property to secureScoreControlProfiles for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of secureScoreControlProfile
+     * @return a CompletableFuture of SecureScoreControlProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> post(@jakarta.annotation.Nonnull final SecureScoreControlProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class SecureScoreControlProfilesRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a secureScoreControlProfilesRequestBuilder
+     * @return a SecureScoreControlProfilesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SecureScoreControlProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

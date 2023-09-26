@@ -22,7 +22,7 @@ public class CrossTenantUserSyncInbound implements AdditionalDataHolder, Parsabl
      */
     private String odataType;
     /**
-     * Instantiates a new crossTenantUserSyncInbound and sets the default values.
+     * Instantiates a new CrossTenantUserSyncInbound and sets the default values.
      */
     public CrossTenantUserSyncInbound() {
         this.setAdditionalData(new HashMap<>());
@@ -30,7 +30,7 @@ public class CrossTenantUserSyncInbound implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a crossTenantUserSyncInbound
+     * @return a CrossTenantUserSyncInbound
      */
     @jakarta.annotation.Nonnull
     public static CrossTenantUserSyncInbound createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class CrossTenantUserSyncInbound implements AdditionalDataHolder, Parsabl
         return new CrossTenantUserSyncInbound();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class CrossTenantUserSyncInbound implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the isSyncAllowed property value. Defines whether user objects should be synchronized from the partner tenant. false causes any current user synchronization from the source tenant to the target tenant to stop. This property has no impact on existing users who have already been synchronized.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSyncAllowed() {
@@ -66,7 +66,7 @@ public class CrossTenantUserSyncInbound implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -83,8 +83,8 @@ public class CrossTenantUserSyncInbound implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

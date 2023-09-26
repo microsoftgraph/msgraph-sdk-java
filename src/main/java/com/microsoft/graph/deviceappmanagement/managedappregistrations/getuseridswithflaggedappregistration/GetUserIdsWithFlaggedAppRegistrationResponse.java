@@ -14,7 +14,7 @@ public class GetUserIdsWithFlaggedAppRegistrationResponse extends BaseCollection
      */
     private java.util.List<String> value;
     /**
-     * Instantiates a new getUserIdsWithFlaggedAppRegistrationResponse and sets the default values.
+     * Instantiates a new GetUserIdsWithFlaggedAppRegistrationResponse and sets the default values.
      */
     public GetUserIdsWithFlaggedAppRegistrationResponse() {
         super();
@@ -22,7 +22,7 @@ public class GetUserIdsWithFlaggedAppRegistrationResponse extends BaseCollection
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getUserIdsWithFlaggedAppRegistrationResponse
+     * @return a GetUserIdsWithFlaggedAppRegistrationResponse
      */
     @jakarta.annotation.Nonnull
     public static GetUserIdsWithFlaggedAppRegistrationResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class GetUserIdsWithFlaggedAppRegistrationResponse extends BaseCollection
     }
     /**
      * Gets the value property value. The value property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getValue() {

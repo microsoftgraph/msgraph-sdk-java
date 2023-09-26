@@ -73,7 +73,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a crossTenantAccessPolicy object.
-     * @return a CompletableFuture of crossTenantAccessPolicy
+     * @return a CompletableFuture of CrossTenantAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a crossTenantAccessPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of crossTenantAccessPolicy
+     * @return a CompletableFuture of CrossTenantAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a cross-tenant access policy.
      * @param body The request body
-     * @return a CompletableFuture of crossTenantAccessPolicy
+     * @return a CompletableFuture of CrossTenantAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a cross-tenant access policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of crossTenantAccessPolicy
+     * @return a CompletableFuture of CrossTenantAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -211,7 +211,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a crossTenantAccessPolicyRequestBuilder
+     * @return a CrossTenantAccessPolicyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CrossTenantAccessPolicyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -95,7 +95,7 @@ public class GetSettingNonComplianceReportRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getSettingNonComplianceReportRequestBuilder
+     * @return a GetSettingNonComplianceReportRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSettingNonComplianceReportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

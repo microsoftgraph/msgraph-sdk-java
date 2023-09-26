@@ -13,7 +13,7 @@ public class AppLogCollectionRequestCollectionResponse extends BaseCollectionPag
      */
     private java.util.List<AppLogCollectionRequest> value;
     /**
-     * Instantiates a new appLogCollectionRequestCollectionResponse and sets the default values.
+     * Instantiates a new AppLogCollectionRequestCollectionResponse and sets the default values.
      */
     public AppLogCollectionRequestCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AppLogCollectionRequestCollectionResponse extends BaseCollectionPag
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appLogCollectionRequestCollectionResponse
+     * @return a AppLogCollectionRequestCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AppLogCollectionRequestCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AppLogCollectionRequestCollectionResponse extends BaseCollectionPag
     }
     /**
      * Gets the value property value. The value property
-     * @return a appLogCollectionRequest
+     * @return a java.util.List<AppLogCollectionRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppLogCollectionRequest> getValue() {

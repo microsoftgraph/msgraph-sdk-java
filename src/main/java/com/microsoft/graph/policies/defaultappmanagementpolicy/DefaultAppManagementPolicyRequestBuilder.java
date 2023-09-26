@@ -57,7 +57,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Read the properties of a tenantAppManagementPolicy object.
-     * @return a CompletableFuture of tenantAppManagementPolicy
+     * @return a CompletableFuture of TenantAppManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
     /**
      * Read the properties of a tenantAppManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantAppManagementPolicy
+     * @return a CompletableFuture of TenantAppManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a tenantAppManagementPolicy object.
      * @param body The request body
-     * @return a CompletableFuture of tenantAppManagementPolicy
+     * @return a CompletableFuture of TenantAppManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
      * Update the properties of a tenantAppManagementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantAppManagementPolicy
+     * @return a CompletableFuture of TenantAppManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a defaultAppManagementPolicyRequestBuilder
+     * @return a DefaultAppManagementPolicyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DefaultAppManagementPolicyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

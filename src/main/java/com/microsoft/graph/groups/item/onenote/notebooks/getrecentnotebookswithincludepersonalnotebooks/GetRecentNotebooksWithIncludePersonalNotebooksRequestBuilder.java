@@ -39,7 +39,7 @@ public class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder extend
     }
     /**
      * Invoke function getRecentNotebooks
-     * @return a CompletableFuture of getRecentNotebooksWithIncludePersonalNotebooksResponse
+     * @return a CompletableFuture of GetRecentNotebooksWithIncludePersonalNotebooksResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetRecentNotebooksWithIncludePersonalNotebooksResponse> get() {
@@ -48,7 +48,7 @@ public class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder extend
     /**
      * Invoke function getRecentNotebooks
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getRecentNotebooksWithIncludePersonalNotebooksResponse
+     * @return a CompletableFuture of GetRecentNotebooksWithIncludePersonalNotebooksResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetRecentNotebooksWithIncludePersonalNotebooksResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder extend
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getRecentNotebooksWithIncludePersonalNotebooksRequestBuilder
+     * @return a GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

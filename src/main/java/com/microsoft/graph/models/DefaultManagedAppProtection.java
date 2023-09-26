@@ -60,7 +60,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     private Boolean screenCaptureBlocked;
     /**
-     * Instantiates a new defaultManagedAppProtection and sets the default values.
+     * Instantiates a new DefaultManagedAppProtection and sets the default values.
      */
     public DefaultManagedAppProtection() {
         super();
@@ -69,7 +69,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a defaultManagedAppProtection
+     * @return a DefaultManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public static DefaultManagedAppProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,7 +78,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     }
     /**
      * Gets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
-     * @return a managedAppDataEncryptionType
+     * @return a ManagedAppDataEncryptionType
      */
     @jakarta.annotation.Nullable
     public ManagedAppDataEncryptionType getAppDataEncryptionType() {
@@ -86,7 +86,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     }
     /**
      * Gets the apps property value. List of apps to which the policy is deployed.
-     * @return a managedMobileApp
+     * @return a java.util.List<ManagedMobileApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
@@ -94,7 +94,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     }
     /**
      * Gets the customSettings property value. A set of string key and string value pairs to be sent to the affected users, unalterned by this service
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomSettings() {
@@ -102,7 +102,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     }
     /**
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeployedAppCount() {
@@ -110,7 +110,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     }
     /**
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
-     * @return a managedAppPolicyDeploymentSummary
+     * @return a ManagedAppPolicyDeploymentSummary
      */
     @jakarta.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
@@ -118,7 +118,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     }
     /**
      * Gets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableAppEncryptionIfDeviceEncryptionIsEnabled() {
@@ -126,7 +126,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     }
     /**
      * Gets the encryptAppData property value. Indicates whether managed-app data should be encrypted. (Android only)
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEncryptAppData() {
@@ -134,7 +134,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     }
     /**
      * Gets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFaceIdBlocked() {
@@ -163,7 +163,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     }
     /**
      * Gets the minimumRequiredPatchVersion property value. Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredPatchVersion() {
@@ -171,7 +171,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     }
     /**
      * Gets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredSdkVersion() {
@@ -179,7 +179,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     }
     /**
      * Gets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumWarningPatchVersion() {
@@ -187,7 +187,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether screen capture is blocked. (Android only)
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {

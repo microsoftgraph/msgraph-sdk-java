@@ -19,7 +19,7 @@ public class CreateNewVersionPostRequestBody implements AdditionalDataHolder, Pa
      */
     private Workflow workflow;
     /**
-     * Instantiates a new createNewVersionPostRequestBody and sets the default values.
+     * Instantiates a new CreateNewVersionPostRequestBody and sets the default values.
      */
     public CreateNewVersionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -27,7 +27,7 @@ public class CreateNewVersionPostRequestBody implements AdditionalDataHolder, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a createNewVersionPostRequestBody
+     * @return a CreateNewVersionPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static CreateNewVersionPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class CreateNewVersionPostRequestBody implements AdditionalDataHolder, Pa
         return new CreateNewVersionPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -54,7 +54,7 @@ public class CreateNewVersionPostRequestBody implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the workflow property value. The workflow property
-     * @return a workflow
+     * @return a Workflow
      */
     @jakarta.annotation.Nullable
     public Workflow getWorkflow() {
@@ -70,8 +70,8 @@ public class CreateNewVersionPostRequestBody implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

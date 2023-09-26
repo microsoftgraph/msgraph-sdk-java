@@ -38,7 +38,7 @@ public class PassiveDnsRecordItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Passive DNS retrieval about this host.
-     * @return a CompletableFuture of passiveDnsRecord
+     * @return a CompletableFuture of PassiveDnsRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PassiveDnsRecord> get() {
@@ -47,7 +47,7 @@ public class PassiveDnsRecordItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Passive DNS retrieval about this host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of passiveDnsRecord
+     * @return a CompletableFuture of PassiveDnsRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PassiveDnsRecord> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

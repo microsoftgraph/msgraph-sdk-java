@@ -38,7 +38,7 @@ public class InstantiateRequestBuilder extends BaseRequestBuilder {
     /**
      * Add an instance of an application from the Azure AD application gallery into your directory. You can also use this API to instantiate non-gallery apps. Use the following ID for the applicationTemplate object: 8adf8e6e-67b2-4cf2-a259-e3dc5476c621.
      * @param body The request body
-     * @return a CompletableFuture of applicationServicePrincipal
+     * @return a CompletableFuture of ApplicationServicePrincipal
      * @see <a href="https://learn.microsoft.com/graph/api/applicationtemplate-instantiate?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class InstantiateRequestBuilder extends BaseRequestBuilder {
      * Add an instance of an application from the Azure AD application gallery into your directory. You can also use this API to instantiate non-gallery apps. Use the following ID for the applicationTemplate object: 8adf8e6e-67b2-4cf2-a259-e3dc5476c621.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of applicationServicePrincipal
+     * @return a CompletableFuture of ApplicationServicePrincipal
      * @see <a href="https://learn.microsoft.com/graph/api/applicationtemplate-instantiate?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class InstantiateRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a instantiateRequestBuilder
+     * @return a InstantiateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InstantiateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

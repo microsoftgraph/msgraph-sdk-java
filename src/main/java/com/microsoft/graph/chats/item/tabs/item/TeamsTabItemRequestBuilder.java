@@ -67,7 +67,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of the specified tab in a chat. 
-     * @return a CompletableFuture of teamsTab
+     * @return a CompletableFuture of TeamsTab
      * @see <a href="https://learn.microsoft.com/graph/api/chat-get-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of the specified tab in a chat. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsTab
+     * @return a CompletableFuture of TeamsTab
      * @see <a href="https://learn.microsoft.com/graph/api/chat-get-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of the specified tab in a chat. This can be used to configure the content of the tab.
      * @param body The request body
-     * @return a CompletableFuture of teamsTab
+     * @return a CompletableFuture of TeamsTab
      * @see <a href="https://learn.microsoft.com/graph/api/chat-patch-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the specified tab in a chat. This can be used to configure the content of the tab.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsTab
+     * @return a CompletableFuture of TeamsTab
      * @see <a href="https://learn.microsoft.com/graph/api/chat-patch-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

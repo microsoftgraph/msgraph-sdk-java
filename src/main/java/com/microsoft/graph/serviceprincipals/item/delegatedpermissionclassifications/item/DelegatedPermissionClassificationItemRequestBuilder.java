@@ -59,7 +59,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
     }
     /**
      * Get delegatedPermissionClassifications from servicePrincipals
-     * @return a CompletableFuture of delegatedPermissionClassification
+     * @return a CompletableFuture of DelegatedPermissionClassification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> get() {
@@ -68,7 +68,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
     /**
      * Get delegatedPermissionClassifications from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedPermissionClassification
+     * @return a CompletableFuture of DelegatedPermissionClassification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property delegatedPermissionClassifications in servicePrincipals
      * @param body The request body
-     * @return a CompletableFuture of delegatedPermissionClassification
+     * @return a CompletableFuture of DelegatedPermissionClassification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> patch(@jakarta.annotation.Nonnull final DelegatedPermissionClassification body) {
@@ -91,7 +91,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
      * Update the navigation property delegatedPermissionClassifications in servicePrincipals
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedPermissionClassification
+     * @return a CompletableFuture of DelegatedPermissionClassification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> patch(@jakarta.annotation.Nonnull final DelegatedPermissionClassification body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -92,7 +92,7 @@ public class TentativelyAcceptRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a tentativelyAcceptRequestBuilder
+     * @return a TentativelyAcceptRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TentativelyAcceptRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -59,7 +59,7 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
-     * @return a CompletableFuture of attachment
+     * @return a CompletableFuture of Attachment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Attachment> get() {
@@ -68,7 +68,7 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attachment
+     * @return a CompletableFuture of Attachment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Attachment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

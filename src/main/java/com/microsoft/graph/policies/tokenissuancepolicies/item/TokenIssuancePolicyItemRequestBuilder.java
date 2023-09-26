@@ -67,7 +67,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
-     * @return a CompletableFuture of tokenIssuancePolicy
+     * @return a CompletableFuture of TokenIssuancePolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> get() {
@@ -76,7 +76,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tokenIssuancePolicy
+     * @return a CompletableFuture of TokenIssuancePolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a tokenIssuancePolicy object.
      * @param body The request body
-     * @return a CompletableFuture of tokenIssuancePolicy
+     * @return a CompletableFuture of TokenIssuancePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a tokenIssuancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tokenIssuancePolicy
+     * @return a CompletableFuture of TokenIssuancePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

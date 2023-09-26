@@ -60,7 +60,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
-     * @return a CompletableFuture of ediscoverySearchCollectionResponse
+     * @return a CompletableFuture of EdiscoverySearchCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoverySearchCollectionResponse
+     * @return a CompletableFuture of EdiscoverySearchCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new ediscoverySearch object.
      * @param body The request body
-     * @return a CompletableFuture of ediscoverySearch
+     * @return a CompletableFuture of EdiscoverySearch
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
      * Create a new ediscoverySearch object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoverySearch
+     * @return a CompletableFuture of EdiscoverySearch
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a searchesRequestBuilder
+     * @return a SearchesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SearchesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

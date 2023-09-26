@@ -139,7 +139,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -149,7 +149,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -163,7 +163,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update a [content type][contentType].
      * @param body The request body
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -174,7 +174,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * Update a [content type][contentType].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

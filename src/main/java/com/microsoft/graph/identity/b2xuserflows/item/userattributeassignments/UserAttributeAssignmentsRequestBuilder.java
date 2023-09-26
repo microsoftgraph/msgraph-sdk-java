@@ -76,7 +76,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
-     * @return a CompletableFuture of identityUserFlowAttributeAssignmentCollectionResponse
+     * @return a CompletableFuture of IdentityUserFlowAttributeAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -86,7 +86,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityUserFlowAttributeAssignmentCollectionResponse
+     * @return a CompletableFuture of IdentityUserFlowAttributeAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
      * @param body The request body
-     * @return a CompletableFuture of identityUserFlowAttributeAssignment
+     * @return a CompletableFuture of IdentityUserFlowAttributeAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-post-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -111,7 +111,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityUserFlowAttributeAssignment
+     * @return a CompletableFuture of IdentityUserFlowAttributeAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-post-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -187,7 +187,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userAttributeAssignmentsRequestBuilder
+     * @return a UserAttributeAssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserAttributeAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

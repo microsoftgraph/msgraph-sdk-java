@@ -21,7 +21,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      */
     private String queryType;
     /**
-     * Instantiates a new accessReviewQueryScope and sets the default values.
+     * Instantiates a new AccessReviewQueryScope and sets the default values.
      */
     public AccessReviewQueryScope() {
         super();
@@ -30,7 +30,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewQueryScope
+     * @return a AccessReviewQueryScope
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewQueryScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
     }
     /**
      * Gets the query property value. The query representing what will be reviewed in an access review.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQuery() {
@@ -66,7 +66,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
     }
     /**
      * Gets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query is specified. For example, ./manager.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQueryRoot() {
@@ -74,7 +74,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
     }
     /**
      * Gets the queryType property value. Indicates the type of query. Types include MicrosoftGraph and ARM.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQueryType() {

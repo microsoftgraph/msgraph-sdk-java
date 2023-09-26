@@ -15,7 +15,7 @@ public class GetDirectRoutingCallsWithFromDateTimeWithToDateTimeResponse extends
      */
     private java.util.List<DirectRoutingLogRow> value;
     /**
-     * Instantiates a new getDirectRoutingCallsWithFromDateTimeWithToDateTimeResponse and sets the default values.
+     * Instantiates a new GetDirectRoutingCallsWithFromDateTimeWithToDateTimeResponse and sets the default values.
      */
     public GetDirectRoutingCallsWithFromDateTimeWithToDateTimeResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetDirectRoutingCallsWithFromDateTimeWithToDateTimeResponse extends
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getDirectRoutingCallsWithFromDateTimeWithToDateTimeResponse
+     * @return a GetDirectRoutingCallsWithFromDateTimeWithToDateTimeResponse
      */
     @jakarta.annotation.Nonnull
     public static GetDirectRoutingCallsWithFromDateTimeWithToDateTimeResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetDirectRoutingCallsWithFromDateTimeWithToDateTimeResponse extends
     }
     /**
      * Gets the value property value. The value property
-     * @return a directRoutingLogRow
+     * @return a java.util.List<DirectRoutingLogRow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectRoutingLogRow> getValue() {

@@ -57,7 +57,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * Retrieve the properties and relationships of an securescorecontrolprofile object.
-     * @return a CompletableFuture of secureScoreControlProfile
+     * @return a CompletableFuture of SecureScoreControlProfile
      * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
     /**
      * Retrieve the properties and relationships of an securescorecontrolprofile object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of secureScoreControlProfile
+     * @return a CompletableFuture of SecureScoreControlProfile
      * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
     /**
      * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
      * @param body The request body
-     * @return a CompletableFuture of secureScoreControlProfile
+     * @return a CompletableFuture of SecureScoreControlProfile
      * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofile-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
      * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of secureScoreControlProfile
+     * @return a CompletableFuture of SecureScoreControlProfile
      * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofile-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

@@ -60,7 +60,7 @@ public class PassiveDnsRecordsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a passiveDnsRecord object.
-     * @return a CompletableFuture of passiveDnsRecordCollectionResponse
+     * @return a CompletableFuture of PassiveDnsRecordCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PassiveDnsRecordCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class PassiveDnsRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a passiveDnsRecord object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of passiveDnsRecordCollectionResponse
+     * @return a CompletableFuture of PassiveDnsRecordCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PassiveDnsRecordCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class PassiveDnsRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to passiveDnsRecords for security
      * @param body The request body
-     * @return a CompletableFuture of passiveDnsRecord
+     * @return a CompletableFuture of PassiveDnsRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PassiveDnsRecord> post(@jakarta.annotation.Nonnull final PassiveDnsRecord body) {
@@ -92,7 +92,7 @@ public class PassiveDnsRecordsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to passiveDnsRecords for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of passiveDnsRecord
+     * @return a CompletableFuture of PassiveDnsRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PassiveDnsRecord> post(@jakarta.annotation.Nonnull final PassiveDnsRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class PassiveDnsRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a passiveDnsRecordsRequestBuilder
+     * @return a PassiveDnsRecordsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PassiveDnsRecordsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
     }
     /**
      * List properties and relationships of the settingStateDeviceSummary objects.
-     * @return a CompletableFuture of settingStateDeviceSummaryCollectionResponse
+     * @return a CompletableFuture of SettingStateDeviceSummaryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
     /**
      * List properties and relationships of the settingStateDeviceSummary objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of settingStateDeviceSummaryCollectionResponse
+     * @return a CompletableFuture of SettingStateDeviceSummaryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
     /**
      * Create a new settingStateDeviceSummary object.
      * @param body The request body
-     * @return a CompletableFuture of settingStateDeviceSummary
+     * @return a CompletableFuture of SettingStateDeviceSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
      * Create a new settingStateDeviceSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of settingStateDeviceSummary
+     * @return a CompletableFuture of SettingStateDeviceSummary
      * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceSettingStateSummariesRequestBuilder
+     * @return a DeviceSettingStateSummariesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceSettingStateSummariesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

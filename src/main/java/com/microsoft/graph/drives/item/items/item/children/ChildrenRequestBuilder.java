@@ -60,7 +60,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Return a collection of DriveItems in the children relationship of a DriveItem. DriveItems with a non-null folder or package facet can have one or more child DriveItems.
-     * @return a CompletableFuture of driveItemCollectionResponse
+     * @return a CompletableFuture of DriveItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-list-children?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
     /**
      * Return a collection of DriveItems in the children relationship of a DriveItem. DriveItems with a non-null folder or package facet can have one or more child DriveItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of driveItemCollectionResponse
+     * @return a CompletableFuture of DriveItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-list-children?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to children for drives
      * @param body The request body
-     * @return a CompletableFuture of driveItem
+     * @return a CompletableFuture of DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-post-children?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to children for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of driveItem
+     * @return a CompletableFuture of DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-post-children?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a childrenRequestBuilder
+     * @return a ChildrenRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChildrenRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

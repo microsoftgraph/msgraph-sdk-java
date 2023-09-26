@@ -85,7 +85,7 @@ public class SubscribeByMailRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a subscribeByMailRequestBuilder
+     * @return a SubscribeByMailRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SubscribeByMailRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

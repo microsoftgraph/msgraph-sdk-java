@@ -65,7 +65,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
     }
     /**
      * A reference to the geolocation environments in which a resource is located.
-     * @return a CompletableFuture of accessPackageResourceEnvironment
+     * @return a CompletableFuture of AccessPackageResourceEnvironment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceEnvironment> get() {
@@ -74,7 +74,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
     /**
      * A reference to the geolocation environments in which a resource is located.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceEnvironment
+     * @return a CompletableFuture of AccessPackageResourceEnvironment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceEnvironment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property resourceEnvironments in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageResourceEnvironment
+     * @return a CompletableFuture of AccessPackageResourceEnvironment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceEnvironment> patch(@jakarta.annotation.Nonnull final AccessPackageResourceEnvironment body) {
@@ -97,7 +97,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
      * Update the navigation property resourceEnvironments in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceEnvironment
+     * @return a CompletableFuture of AccessPackageResourceEnvironment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceEnvironment> patch(@jakarta.annotation.Nonnull final AccessPackageResourceEnvironment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

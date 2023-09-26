@@ -31,7 +31,7 @@ public class PresenceStatusMessage implements AdditionalDataHolder, Parsable {
      */
     private OffsetDateTime publishedDateTime;
     /**
-     * Instantiates a new presenceStatusMessage and sets the default values.
+     * Instantiates a new PresenceStatusMessage and sets the default values.
      */
     public PresenceStatusMessage() {
         this.setAdditionalData(new HashMap<>());
@@ -39,7 +39,7 @@ public class PresenceStatusMessage implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a presenceStatusMessage
+     * @return a PresenceStatusMessage
      */
     @jakarta.annotation.Nonnull
     public static PresenceStatusMessage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class PresenceStatusMessage implements AdditionalDataHolder, Parsable {
         return new PresenceStatusMessage();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -56,7 +56,7 @@ public class PresenceStatusMessage implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the expiryDateTime property value. The expiryDateTime property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getExpiryDateTime() {
@@ -77,7 +77,7 @@ public class PresenceStatusMessage implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the message property value. The message property
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getMessage() {
@@ -85,7 +85,7 @@ public class PresenceStatusMessage implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -112,8 +112,8 @@ public class PresenceStatusMessage implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

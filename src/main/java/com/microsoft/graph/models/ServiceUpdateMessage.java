@@ -20,7 +20,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     /**
      * The zip file that contains all attachments for a message.
      */
-    private byte[] attachmentsArchive;
+    private Base64url attachmentsArchive;
     /**
      * The body property
      */
@@ -54,7 +54,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      */
     private ServiceUpdateMessageViewpoint viewPoint;
     /**
-     * Instantiates a new serviceUpdateMessage and sets the default values.
+     * Instantiates a new ServiceUpdateMessage and sets the default values.
      */
     public ServiceUpdateMessage() {
         super();
@@ -63,7 +63,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceUpdateMessage
+     * @return a ServiceUpdateMessage
      */
     @jakarta.annotation.Nonnull
     public static ServiceUpdateMessage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -80,7 +80,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     }
     /**
      * Gets the attachments property value. A collection of serviceAnnouncementAttachments.
-     * @return a serviceAnnouncementAttachment
+     * @return a java.util.List<ServiceAnnouncementAttachment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceAnnouncementAttachment> getAttachments() {
@@ -88,15 +88,15 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     }
     /**
      * Gets the attachmentsArchive property value. The zip file that contains all attachments for a message.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getAttachmentsArchive() {
+    public Base64url getAttachmentsArchive() {
         return this.attachmentsArchive;
     }
     /**
      * Gets the body property value. The body property
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getBody() {
@@ -104,7 +104,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     }
     /**
      * Gets the category property value. The category property
-     * @return a serviceUpdateCategory
+     * @return a ServiceUpdateCategory
      */
     @jakarta.annotation.Nullable
     public ServiceUpdateCategory getCategory() {
@@ -119,7 +119,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("actionRequiredByDateTime", (n) -> { this.setActionRequiredByDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("attachments", (n) -> { this.setAttachments(n.getCollectionOfObjectValues(ServiceAnnouncementAttachment::createFromDiscriminatorValue)); });
-        deserializerMap.put("attachmentsArchive", (n) -> { this.setAttachmentsArchive(n.getByteArrayValue()); });
+        deserializerMap.put("attachmentsArchive", (n) -> { this.setAttachmentsArchive(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ServiceUpdateCategory.class)); });
         deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
@@ -132,7 +132,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     }
     /**
      * Gets the hasAttachments property value. Indicates whether the message has any attachment.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
@@ -140,7 +140,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     }
     /**
      * Gets the isMajorChange property value. Indicates whether the message describes a major update for the service.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMajorChange() {
@@ -148,7 +148,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     }
     /**
      * Gets the services property value. The affected services by the service message.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getServices() {
@@ -156,7 +156,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a serviceUpdateSeverity
+     * @return a ServiceUpdateSeverity
      */
     @jakarta.annotation.Nullable
     public ServiceUpdateSeverity getSeverity() {
@@ -164,7 +164,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     }
     /**
      * Gets the tags property value. A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
@@ -172,7 +172,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     }
     /**
      * Gets the viewPoint property value. Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
-     * @return a serviceUpdateMessageViewpoint
+     * @return a ServiceUpdateMessageViewpoint
      */
     @jakarta.annotation.Nullable
     public ServiceUpdateMessageViewpoint getViewPoint() {
@@ -187,7 +187,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("actionRequiredByDateTime", this.getActionRequiredByDateTime());
         writer.writeCollectionOfObjectValues("attachments", this.getAttachments());
-        writer.writeByteArrayValue("attachmentsArchive", this.getAttachmentsArchive());
+        writer.writeObjectValue("attachmentsArchive", this.getAttachmentsArchive());
         writer.writeObjectValue("body", this.getBody());
         writer.writeEnumValue("category", this.getCategory());
         writer.writeBooleanValue("hasAttachments", this.getHasAttachments());
@@ -215,7 +215,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * Sets the attachmentsArchive property value. The zip file that contains all attachments for a message.
      * @param value Value to set for the attachmentsArchive property.
      */
-    public void setAttachmentsArchive(@jakarta.annotation.Nullable final byte[] value) {
+    public void setAttachmentsArchive(@jakarta.annotation.Nullable final Base64url value) {
         this.attachmentsArchive = value;
     }
     /**

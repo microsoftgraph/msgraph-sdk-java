@@ -65,7 +65,7 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of chartdatalabels object.
-     * @return a CompletableFuture of workbookChartDataLabels
+     * @return a CompletableFuture of WorkbookChartDataLabels
      * @see <a href="https://learn.microsoft.com/graph/api/chartdatalabels-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of chartdatalabels object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartDataLabels
+     * @return a CompletableFuture of WorkbookChartDataLabels
      * @see <a href="https://learn.microsoft.com/graph/api/chartdatalabels-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of chartdatalabels object.
      * @param body The request body
-     * @return a CompletableFuture of workbookChartDataLabels
+     * @return a CompletableFuture of WorkbookChartDataLabels
      * @see <a href="https://learn.microsoft.com/graph/api/chartdatalabels-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of chartdatalabels object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartDataLabels
+     * @return a CompletableFuture of WorkbookChartDataLabels
      * @see <a href="https://learn.microsoft.com/graph/api/chartdatalabels-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -203,7 +203,7 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a dataLabelsRequestBuilder
+     * @return a DataLabelsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DataLabelsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

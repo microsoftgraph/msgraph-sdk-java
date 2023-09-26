@@ -37,7 +37,7 @@ public class CheckMemberObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action checkMemberObjects
      * @param body The request body
-     * @return a CompletableFuture of checkMemberObjectsResponse
+     * @return a CompletableFuture of CheckMemberObjectsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CheckMemberObjectsResponse> post(@jakarta.annotation.Nonnull final CheckMemberObjectsPostRequestBody body) {
@@ -47,7 +47,7 @@ public class CheckMemberObjectsRequestBuilder extends BaseRequestBuilder {
      * Invoke action checkMemberObjects
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of checkMemberObjectsResponse
+     * @return a CompletableFuture of CheckMemberObjectsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CheckMemberObjectsResponse> post(@jakarta.annotation.Nonnull final CheckMemberObjectsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class CheckMemberObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a checkMemberObjectsRequestBuilder
+     * @return a CheckMemberObjectsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

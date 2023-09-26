@@ -30,7 +30,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
      */
     private FilterOperand targetOperand;
     /**
-     * Instantiates a new filterClause and sets the default values.
+     * Instantiates a new FilterClause and sets the default values.
      */
     public FilterClause() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a filterClause
+     * @return a FilterClause
      */
     @jakarta.annotation.Nonnull
     public static FilterClause createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
         return new FilterClause();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -76,7 +76,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the operatorName property value. Name of the operator to be applied to the source and target operands. Must be one of the supported operators. Supported operators can be discovered.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatorName() {
@@ -84,7 +84,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sourceOperandName property value. Name of source operand (the operand being tested). The source operand name must match one of the attribute names on the source object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceOperandName() {
@@ -92,7 +92,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the targetOperand property value. Values that the source operand will be tested against.
-     * @return a filterOperand
+     * @return a FilterOperand
      */
     @jakarta.annotation.Nullable
     public FilterOperand getTargetOperand() {
@@ -111,8 +111,8 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

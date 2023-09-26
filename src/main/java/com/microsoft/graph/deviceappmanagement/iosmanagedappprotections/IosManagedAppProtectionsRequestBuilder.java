@@ -60,7 +60,7 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the iosManagedAppProtection objects.
-     * @return a CompletableFuture of iosManagedAppProtectionCollectionResponse
+     * @return a CompletableFuture of IosManagedAppProtectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the iosManagedAppProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of iosManagedAppProtectionCollectionResponse
+     * @return a CompletableFuture of IosManagedAppProtectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new iosManagedAppProtection object.
      * @param body The request body
-     * @return a CompletableFuture of iosManagedAppProtection
+     * @return a CompletableFuture of IosManagedAppProtection
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
      * Create a new iosManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of iosManagedAppProtection
+     * @return a CompletableFuture of IosManagedAppProtection
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a iosManagedAppProtectionsRequestBuilder
+     * @return a IosManagedAppProtectionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IosManagedAppProtectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

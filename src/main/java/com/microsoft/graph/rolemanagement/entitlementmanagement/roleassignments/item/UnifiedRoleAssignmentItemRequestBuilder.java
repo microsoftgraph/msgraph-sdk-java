@@ -91,7 +91,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Retrieve the properties and relationships of a unifiedRoleAssignment object.
-     * @return a CompletableFuture of unifiedRoleAssignment
+     * @return a CompletableFuture of UnifiedRoleAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -101,7 +101,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Retrieve the properties and relationships of a unifiedRoleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleAssignment
+     * @return a CompletableFuture of UnifiedRoleAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property roleAssignments in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleAssignment
+     * @return a CompletableFuture of UnifiedRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignment> patch(@jakarta.annotation.Nonnull final UnifiedRoleAssignment body) {
@@ -125,7 +125,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property roleAssignments in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleAssignment
+     * @return a CompletableFuture of UnifiedRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignment> patch(@jakarta.annotation.Nonnull final UnifiedRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -13,7 +13,7 @@ public class ApplicationTemplateCollectionResponse extends BaseCollectionPaginat
      */
     private java.util.List<ApplicationTemplate> value;
     /**
-     * Instantiates a new applicationTemplateCollectionResponse and sets the default values.
+     * Instantiates a new ApplicationTemplateCollectionResponse and sets the default values.
      */
     public ApplicationTemplateCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ApplicationTemplateCollectionResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a applicationTemplateCollectionResponse
+     * @return a ApplicationTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ApplicationTemplateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ApplicationTemplateCollectionResponse extends BaseCollectionPaginat
     }
     /**
      * Gets the value property value. The value property
-     * @return a applicationTemplate
+     * @return a java.util.List<ApplicationTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ApplicationTemplate> getValue() {

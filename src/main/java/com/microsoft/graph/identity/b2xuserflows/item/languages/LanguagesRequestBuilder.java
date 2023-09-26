@@ -60,7 +60,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of languages supported for customization in a B2X user flow.
-     * @return a CompletableFuture of userFlowLanguageConfigurationCollectionResponse
+     * @return a CompletableFuture of UserFlowLanguageConfigurationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-languages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of languages supported for customization in a B2X user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userFlowLanguageConfigurationCollectionResponse
+     * @return a CompletableFuture of UserFlowLanguageConfigurationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-languages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to languages for identity
      * @param body The request body
-     * @return a CompletableFuture of userFlowLanguageConfiguration
+     * @return a CompletableFuture of UserFlowLanguageConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguageConfiguration> post(@jakarta.annotation.Nonnull final UserFlowLanguageConfiguration body) {
@@ -94,7 +94,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to languages for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userFlowLanguageConfiguration
+     * @return a CompletableFuture of UserFlowLanguageConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguageConfiguration> post(@jakarta.annotation.Nonnull final UserFlowLanguageConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a languagesRequestBuilder
+     * @return a LanguagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LanguagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

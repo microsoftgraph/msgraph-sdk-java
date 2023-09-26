@@ -30,7 +30,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      */
     private String service;
     /**
-     * Instantiates a new provisionedPlan and sets the default values.
+     * Instantiates a new ProvisionedPlan and sets the default values.
      */
     public ProvisionedPlan() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a provisionedPlan
+     * @return a ProvisionedPlan
      */
     @jakarta.annotation.Nonnull
     public static ProvisionedPlan createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
         return new ProvisionedPlan();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the capabilityStatus property value. For example, 'Enabled'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCapabilityStatus() {
@@ -76,7 +76,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -84,7 +84,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the provisioningStatus property value. For example, 'Success'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProvisioningStatus() {
@@ -92,7 +92,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the service property value. The name of the service; for example, 'AccessControlS2S'
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getService() {
@@ -111,8 +111,8 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

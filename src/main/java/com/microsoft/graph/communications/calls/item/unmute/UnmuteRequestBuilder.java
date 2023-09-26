@@ -38,7 +38,7 @@ public class UnmuteRequestBuilder extends BaseRequestBuilder {
     /**
      * Allow the application to unmute itself. This is a server unmute, meaning that the server will start sending audio packets for this participant to other participants again. For more information about how to handle unmute operations, see unmuteParticipantOperation.
      * @param body The request body
-     * @return a CompletableFuture of unmuteParticipantOperation
+     * @return a CompletableFuture of UnmuteParticipantOperation
      * @see <a href="https://learn.microsoft.com/graph/api/call-unmute?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class UnmuteRequestBuilder extends BaseRequestBuilder {
      * Allow the application to unmute itself. This is a server unmute, meaning that the server will start sending audio packets for this participant to other participants again. For more information about how to handle unmute operations, see unmuteParticipantOperation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unmuteParticipantOperation
+     * @return a CompletableFuture of UnmuteParticipantOperation
      * @see <a href="https://learn.microsoft.com/graph/api/call-unmute?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class UnmuteRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a unmuteRequestBuilder
+     * @return a UnmuteRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UnmuteRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -70,7 +70,7 @@ public class Simulation extends Entity implements Parsable {
      */
     private SimulationStatus status;
     /**
-     * Instantiates a new simulation and sets the default values.
+     * Instantiates a new Simulation and sets the default values.
      */
     public Simulation() {
         super();
@@ -78,7 +78,7 @@ public class Simulation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a simulation
+     * @return a Simulation
      */
     @jakarta.annotation.Nonnull
     public static Simulation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -87,7 +87,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
-     * @return a simulationAttackTechnique
+     * @return a SimulationAttackTechnique
      */
     @jakarta.annotation.Nullable
     public SimulationAttackTechnique getAttackTechnique() {
@@ -95,7 +95,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the attackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
-     * @return a simulationAttackType
+     * @return a SimulationAttackType
      */
     @jakarta.annotation.Nullable
     public SimulationAttackType getAttackType() {
@@ -103,7 +103,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the automationId property value. Unique identifier for the attack simulation automation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAutomationId() {
@@ -119,7 +119,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Identity of the user who created the attack simulation and training campaign.
-     * @return a emailIdentity
+     * @return a EmailIdentity
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
@@ -135,7 +135,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the attack simulation and training campaign.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -143,7 +143,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the attack simulation and training campaign. Supports $filter and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -175,7 +175,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the isAutomated property value. Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAutomated() {
@@ -183,7 +183,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation and training campaign.
-     * @return a emailIdentity
+     * @return a EmailIdentity
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
@@ -207,7 +207,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
-     * @return a payloadDeliveryPlatform
+     * @return a PayloadDeliveryPlatform
      */
     @jakarta.annotation.Nullable
     public PayloadDeliveryPlatform getPayloadDeliveryPlatform() {
@@ -215,7 +215,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the report property value. Report of the attack simulation and training campaign.
-     * @return a simulationReport
+     * @return a SimulationReport
      */
     @jakarta.annotation.Nullable
     public SimulationReport getReport() {
@@ -223,7 +223,7 @@ public class Simulation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
-     * @return a simulationStatus
+     * @return a SimulationStatus
      */
     @jakarta.annotation.Nullable
     public SimulationStatus getStatus() {

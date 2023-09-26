@@ -37,7 +37,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     private Integer participantCapacity;
     /**
-     * Instantiates a new answerPostRequestBody and sets the default values.
+     * Instantiates a new AnswerPostRequestBody and sets the default values.
      */
     public AnswerPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -45,7 +45,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a answerPostRequestBody
+     * @return a AnswerPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static AnswerPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,14 +54,14 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the acceptedModalities property value. The acceptedModalities property
-     * @return a modality
+     * @return a java.util.List<Modality>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Modality> getAcceptedModalities() {
         return this.acceptedModalities;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callbackUri property value. The callbackUri property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallbackUri() {
@@ -78,7 +78,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callOptions property value. The callOptions property
-     * @return a incomingCallOptions
+     * @return a IncomingCallOptions
      */
     @jakarta.annotation.Nullable
     public IncomingCallOptions getCallOptions() {
@@ -100,7 +100,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mediaConfig property value. The mediaConfig property
-     * @return a mediaConfig
+     * @return a MediaConfig
      */
     @jakarta.annotation.Nullable
     public MediaConfig getMediaConfig() {
@@ -108,7 +108,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the participantCapacity property value. The participantCapacity property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getParticipantCapacity() {
@@ -135,8 +135,8 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
         this.acceptedModalities = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

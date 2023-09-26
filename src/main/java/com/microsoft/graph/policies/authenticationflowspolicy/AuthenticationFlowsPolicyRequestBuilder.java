@@ -57,7 +57,7 @@ public class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Read the properties and relationships of an authenticationFlowsPolicy object.
-     * @return a CompletableFuture of authenticationFlowsPolicy
+     * @return a CompletableFuture of AuthenticationFlowsPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationflowspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder 
     /**
      * Read the properties and relationships of an authenticationFlowsPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationFlowsPolicy
+     * @return a CompletableFuture of AuthenticationFlowsPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationflowspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the selfServiceSignUp property of an authenticationFlowsPolicy object. The properties id, type, and description cannot be modified.
      * @param body The request body
-     * @return a CompletableFuture of authenticationFlowsPolicy
+     * @return a CompletableFuture of AuthenticationFlowsPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationflowspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder 
      * Update the selfServiceSignUp property of an authenticationFlowsPolicy object. The properties id, type, and description cannot be modified.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationFlowsPolicy
+     * @return a CompletableFuture of AuthenticationFlowsPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationflowspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a authenticationFlowsPolicyRequestBuilder
+     * @return a AuthenticationFlowsPolicyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AuthenticationFlowsPolicyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

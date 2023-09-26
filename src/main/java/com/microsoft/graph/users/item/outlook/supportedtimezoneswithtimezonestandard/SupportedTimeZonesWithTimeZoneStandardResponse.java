@@ -15,7 +15,7 @@ public class SupportedTimeZonesWithTimeZoneStandardResponse extends BaseCollecti
      */
     private java.util.List<TimeZoneInformation> value;
     /**
-     * Instantiates a new supportedTimeZonesWithTimeZoneStandardResponse and sets the default values.
+     * Instantiates a new SupportedTimeZonesWithTimeZoneStandardResponse and sets the default values.
      */
     public SupportedTimeZonesWithTimeZoneStandardResponse() {
         super();
@@ -23,7 +23,7 @@ public class SupportedTimeZonesWithTimeZoneStandardResponse extends BaseCollecti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a supportedTimeZonesWithTimeZoneStandardResponse
+     * @return a SupportedTimeZonesWithTimeZoneStandardResponse
      */
     @jakarta.annotation.Nonnull
     public static SupportedTimeZonesWithTimeZoneStandardResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class SupportedTimeZonesWithTimeZoneStandardResponse extends BaseCollecti
     }
     /**
      * Gets the value property value. The value property
-     * @return a timeZoneInformation
+     * @return a java.util.List<TimeZoneInformation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TimeZoneInformation> getValue() {

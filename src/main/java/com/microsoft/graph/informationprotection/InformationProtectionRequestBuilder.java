@@ -54,7 +54,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get informationProtection
-     * @return a CompletableFuture of informationProtection
+     * @return a CompletableFuture of InformationProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InformationProtection> get() {
@@ -63,7 +63,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Get informationProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of informationProtection
+     * @return a CompletableFuture of InformationProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InformationProtection> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -76,7 +76,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Update informationProtection
      * @param body The request body
-     * @return a CompletableFuture of informationProtection
+     * @return a CompletableFuture of InformationProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InformationProtection> patch(@jakarta.annotation.Nonnull final InformationProtection body) {
@@ -86,7 +86,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
      * Update informationProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of informationProtection
+     * @return a CompletableFuture of InformationProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InformationProtection> patch(@jakarta.annotation.Nonnull final InformationProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +161,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a informationProtectionRequestBuilder
+     * @return a InformationProtectionRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InformationProtectionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

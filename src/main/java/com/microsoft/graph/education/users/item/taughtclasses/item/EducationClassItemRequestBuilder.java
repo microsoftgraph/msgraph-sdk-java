@@ -38,7 +38,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Classes for which the user is a teacher.
-     * @return a CompletableFuture of educationClass
+     * @return a CompletableFuture of EducationClass
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClass> get() {
@@ -47,7 +47,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Classes for which the user is a teacher.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationClass
+     * @return a CompletableFuture of EducationClass
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClass> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

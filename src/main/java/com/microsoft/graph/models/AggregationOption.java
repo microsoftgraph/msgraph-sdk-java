@@ -30,7 +30,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      */
     private Integer size;
     /**
-     * Instantiates a new aggregationOption and sets the default values.
+     * Instantiates a new AggregationOption and sets the default values.
      */
     public AggregationOption() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a aggregationOption
+     * @return a AggregationOption
      */
     @jakarta.annotation.Nonnull
     public static AggregationOption createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
         return new AggregationOption();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the bucketDefinition property value. The bucketDefinition property
-     * @return a bucketAggregationDefinition
+     * @return a BucketAggregationDefinition
      */
     @jakarta.annotation.Nullable
     public BucketAggregationDefinition getBucketDefinition() {
@@ -63,7 +63,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the field property value. Computes aggregation on the field while the field exists in current entity type. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getField() {
@@ -84,7 +84,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -92,7 +92,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the size property value. The number of searchBucket resources to be returned. This is not required when the range is provided manually in the search request. Optional.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSize() {
@@ -111,8 +111,8 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

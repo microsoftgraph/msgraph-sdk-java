@@ -60,7 +60,7 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the ediscoveryCase objects and their properties.
-     * @return a CompletableFuture of ediscoveryCaseCollectionResponse
+     * @return a CompletableFuture of EdiscoveryCaseCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-casesroot-list-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the ediscoveryCase objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryCaseCollectionResponse
+     * @return a CompletableFuture of EdiscoveryCaseCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-casesroot-list-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new ediscoveryCase object.
      * @param body The request body
-     * @return a CompletableFuture of ediscoveryCase
+     * @return a CompletableFuture of EdiscoveryCase
      * @see <a href="https://learn.microsoft.com/graph/api/security-casesroot-post-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
      * Create a new ediscoveryCase object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryCase
+     * @return a CompletableFuture of EdiscoveryCase
      * @see <a href="https://learn.microsoft.com/graph/api/security-casesroot-post-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ediscoveryCasesRequestBuilder
+     * @return a EdiscoveryCasesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EdiscoveryCasesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

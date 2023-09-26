@@ -100,7 +100,7 @@ public class InternalSponsorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of a connectedOrganization's internal sponsors.  The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/connectedorganization-list-internalsponsors?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +110,7 @@ public class InternalSponsorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of a connectedOrganization's internal sponsors.  The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/connectedorganization-list-internalsponsors?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class InternalSponsorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add a user or a group to the connected organization's internal sponsors. The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
      * @param body The request body
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      * @see <a href="https://learn.microsoft.com/graph/api/connectedorganization-post-internalsponsors?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +135,7 @@ public class InternalSponsorsRequestBuilder extends BaseRequestBuilder {
      * Add a user or a group to the connected organization's internal sponsors. The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      * @see <a href="https://learn.microsoft.com/graph/api/connectedorganization-post-internalsponsors?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -211,7 +211,7 @@ public class InternalSponsorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a internalSponsorsRequestBuilder
+     * @return a InternalSponsorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InternalSponsorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

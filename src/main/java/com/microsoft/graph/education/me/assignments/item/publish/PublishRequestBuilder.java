@@ -37,7 +37,7 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Publish an education assignment. Change the state of an educationAssignment from its original draft status to the published status.  You can change the state from draft to scheduled if the assignment is scheduled for a future date.  Only a teacher in the class can make this call. When an assignment is in draft status, students will not see the assignment, nor will there be any submission objects. Calling this API creates educationSubmission objects and displays the assignment in each student's list. The state of the assignment goes back to draft if there is any backend failure during publish process. To update the properties of a published assignment, see update an assignment.
-     * @return a CompletableFuture of educationAssignment
+     * @return a CompletableFuture of EducationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-publish?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
     /**
      * Publish an education assignment. Change the state of an educationAssignment from its original draft status to the published status.  You can change the state from draft to scheduled if the assignment is scheduled for a future date.  Only a teacher in the class can make this call. When an assignment is in draft status, students will not see the assignment, nor will there be any submission objects. Calling this API creates educationSubmission objects and displays the assignment in each student's list. The state of the assignment goes back to draft if there is any backend failure during publish process. To update the properties of a published assignment, see update an assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationAssignment
+     * @return a CompletableFuture of EducationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-publish?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a publishRequestBuilder
+     * @return a PublishRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PublishRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

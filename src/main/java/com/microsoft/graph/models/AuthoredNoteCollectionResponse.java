@@ -13,7 +13,7 @@ public class AuthoredNoteCollectionResponse extends BaseCollectionPaginationCoun
      */
     private java.util.List<AuthoredNote> value;
     /**
-     * Instantiates a new authoredNoteCollectionResponse and sets the default values.
+     * Instantiates a new AuthoredNoteCollectionResponse and sets the default values.
      */
     public AuthoredNoteCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AuthoredNoteCollectionResponse extends BaseCollectionPaginationCoun
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authoredNoteCollectionResponse
+     * @return a AuthoredNoteCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AuthoredNoteCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AuthoredNoteCollectionResponse extends BaseCollectionPaginationCoun
     }
     /**
      * Gets the value property value. The value property
-     * @return a authoredNote
+     * @return a java.util.List<AuthoredNote>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthoredNote> getValue() {

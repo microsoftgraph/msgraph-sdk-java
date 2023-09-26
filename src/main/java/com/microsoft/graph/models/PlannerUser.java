@@ -17,7 +17,7 @@ public class PlannerUser extends Entity implements Parsable {
      */
     private java.util.List<PlannerTask> tasks;
     /**
-     * Instantiates a new plannerUser and sets the default values.
+     * Instantiates a new PlannerUser and sets the default values.
      */
     public PlannerUser() {
         super();
@@ -25,7 +25,7 @@ public class PlannerUser extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerUser
+     * @return a PlannerUser
      */
     @jakarta.annotation.Nonnull
     public static PlannerUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class PlannerUser extends Entity implements Parsable {
     }
     /**
      * Gets the plans property value. Read-only. Nullable. Returns the plannerTasks assigned to the user.
-     * @return a plannerPlan
+     * @return a java.util.List<PlannerPlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerPlan> getPlans() {
@@ -53,7 +53,7 @@ public class PlannerUser extends Entity implements Parsable {
     }
     /**
      * Gets the tasks property value. Read-only. Nullable. Returns the plannerPlans shared with the user.
-     * @return a plannerTask
+     * @return a java.util.List<PlannerTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerTask> getTasks() {

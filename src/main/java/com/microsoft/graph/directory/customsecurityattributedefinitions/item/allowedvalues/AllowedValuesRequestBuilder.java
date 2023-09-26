@@ -60,7 +60,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the allowedValue objects and their properties.
-     * @return a CompletableFuture of allowedValueCollectionResponse
+     * @return a CompletableFuture of AllowedValueCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-list-allowedvalues?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the allowedValue objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of allowedValueCollectionResponse
+     * @return a CompletableFuture of AllowedValueCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-list-allowedvalues?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new allowedValue object.
      * @param body The request body
-     * @return a CompletableFuture of allowedValue
+     * @return a CompletableFuture of AllowedValue
      * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-post-allowedvalues?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
      * Create a new allowedValue object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of allowedValue
+     * @return a CompletableFuture of AllowedValue
      * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-post-allowedvalues?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a allowedValuesRequestBuilder
+     * @return a AllowedValuesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AllowedValuesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -61,7 +61,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of chartseries objects.
-     * @return a CompletableFuture of workbookChartSeriesCollectionResponse
+     * @return a CompletableFuture of WorkbookChartSeriesCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chart-list-series?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of chartseries objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartSeriesCollectionResponse
+     * @return a CompletableFuture of WorkbookChartSeriesCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chart-list-series?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the itemAt method.
      * @param index Usage: index={index}
-     * @return a itemAtWithIndexRequestBuilder
+     * @return a ItemAtWithIndexRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemAtWithIndexRequestBuilder itemAtWithIndex(@jakarta.annotation.Nonnull final Integer index) {
@@ -95,7 +95,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new ChartSeries.
      * @param body The request body
-     * @return a CompletableFuture of workbookChartSeries
+     * @return a CompletableFuture of WorkbookChartSeries
      * @see <a href="https://learn.microsoft.com/graph/api/chart-post-series?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -106,7 +106,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new ChartSeries.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookChartSeries
+     * @return a CompletableFuture of WorkbookChartSeries
      * @see <a href="https://learn.microsoft.com/graph/api/chart-post-series?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -182,7 +182,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a seriesRequestBuilder
+     * @return a SeriesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SeriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

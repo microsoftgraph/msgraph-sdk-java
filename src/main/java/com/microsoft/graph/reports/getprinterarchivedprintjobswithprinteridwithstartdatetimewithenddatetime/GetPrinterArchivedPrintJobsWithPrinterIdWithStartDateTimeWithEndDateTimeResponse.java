@@ -15,7 +15,7 @@ public class GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDat
      */
     private java.util.List<ArchivedPrintJob> value;
     /**
-     * Instantiates a new getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeResponse and sets the default values.
+     * Instantiates a new GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeResponse and sets the default values.
      */
     public GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeResponse
+     * @return a GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeResponse
      */
     @jakarta.annotation.Nonnull
     public static GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDat
     }
     /**
      * Gets the value property value. The value property
-     * @return a archivedPrintJob
+     * @return a java.util.List<ArchivedPrintJob>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ArchivedPrintJob> getValue() {

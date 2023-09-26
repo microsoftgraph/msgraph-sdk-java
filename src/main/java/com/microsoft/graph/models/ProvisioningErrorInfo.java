@@ -38,7 +38,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     private String recommendedAction;
     /**
-     * Instantiates a new provisioningErrorInfo and sets the default values.
+     * Instantiates a new ProvisioningErrorInfo and sets the default values.
      */
     public ProvisioningErrorInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a provisioningErrorInfo
+     * @return a ProvisioningErrorInfo
      */
     @jakarta.annotation.Nonnull
     public static ProvisioningErrorInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
         return new ProvisioningErrorInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the additionalDetails property value. Additional details in case of error.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdditionalDetails() {
@@ -71,7 +71,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the errorCategory property value. Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
-     * @return a provisioningStatusErrorCategory
+     * @return a ProvisioningStatusErrorCategory
      */
     @jakarta.annotation.Nullable
     public ProvisioningStatusErrorCategory getErrorCategory() {
@@ -79,7 +79,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the errorCode property value. Unique error code if any occurred. Learn more
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
@@ -102,7 +102,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -110,7 +110,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the reason property value. Summarizes the status and describes why the status happened.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReason() {
@@ -118,7 +118,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the recommendedAction property value. Provides the resolution for the corresponding error.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecommendedAction() {
@@ -139,8 +139,8 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

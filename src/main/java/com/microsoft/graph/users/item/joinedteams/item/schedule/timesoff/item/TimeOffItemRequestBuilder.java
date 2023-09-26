@@ -59,7 +59,7 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a timeOff object by ID.
-     * @return a CompletableFuture of timeOff
+     * @return a CompletableFuture of TimeOff
      * @see <a href="https://learn.microsoft.com/graph/api/timeoff-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a timeOff object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeOff
+     * @return a CompletableFuture of TimeOff
      * @see <a href="https://learn.microsoft.com/graph/api/timeoff-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Replace an existing timeOff object. If the specified timeOff object doesn't exist, this method returns 404 Not found.
      * @param body The request body
-     * @return a CompletableFuture of timeOff
+     * @return a CompletableFuture of TimeOff
      * @see <a href="https://learn.microsoft.com/graph/api/timeoff-put?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
      * Replace an existing timeOff object. If the specified timeOff object doesn't exist, this method returns 404 Not found.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeOff
+     * @return a CompletableFuture of TimeOff
      * @see <a href="https://learn.microsoft.com/graph/api/timeoff-put?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

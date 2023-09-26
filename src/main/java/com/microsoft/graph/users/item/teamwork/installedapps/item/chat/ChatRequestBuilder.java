@@ -38,7 +38,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the chat of the specified user and Teams app.
-     * @return a CompletableFuture of chat
+     * @return a CompletableFuture of Chat
      * @see <a href="https://learn.microsoft.com/graph/api/userscopeteamsappinstallation-get-chat?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the chat of the specified user and Teams app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of chat
+     * @return a CompletableFuture of Chat
      * @see <a href="https://learn.microsoft.com/graph/api/userscopeteamsappinstallation-get-chat?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a chatRequestBuilder
+     * @return a ChatRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChatRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -54,7 +54,7 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get roleManagement
-     * @return a CompletableFuture of roleManagement
+     * @return a CompletableFuture of RoleManagement
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleManagement> get() {
@@ -63,7 +63,7 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Get roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleManagement
+     * @return a CompletableFuture of RoleManagement
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleManagement> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -76,7 +76,7 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Update roleManagement
      * @param body The request body
-     * @return a CompletableFuture of roleManagement
+     * @return a CompletableFuture of RoleManagement
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleManagement> patch(@jakarta.annotation.Nonnull final RoleManagement body) {
@@ -86,7 +86,7 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
      * Update roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleManagement
+     * @return a CompletableFuture of RoleManagement
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleManagement> patch(@jakarta.annotation.Nonnull final RoleManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +161,7 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleManagementRequestBuilder
+     * @return a RoleManagementRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleManagementRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class CustomWorkflowExtensionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get customWorkflowExtensions from identityGovernance
-     * @return a CompletableFuture of customCalloutExtensionCollectionResponse
+     * @return a CompletableFuture of CustomCalloutExtensionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomCalloutExtensionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class CustomWorkflowExtensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get customWorkflowExtensions from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customCalloutExtensionCollectionResponse
+     * @return a CompletableFuture of CustomCalloutExtensionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomCalloutExtensionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class CustomWorkflowExtensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to customWorkflowExtensions for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of customCalloutExtension
+     * @return a CompletableFuture of CustomCalloutExtension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomCalloutExtension> post(@jakarta.annotation.Nonnull final CustomCalloutExtension body) {
@@ -92,7 +92,7 @@ public class CustomWorkflowExtensionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to customWorkflowExtensions for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customCalloutExtension
+     * @return a CompletableFuture of CustomCalloutExtension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomCalloutExtension> post(@jakarta.annotation.Nonnull final CustomCalloutExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class CustomWorkflowExtensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a customWorkflowExtensionsRequestBuilder
+     * @return a CustomWorkflowExtensionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CustomWorkflowExtensionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

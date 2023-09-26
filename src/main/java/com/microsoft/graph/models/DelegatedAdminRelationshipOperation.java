@@ -30,7 +30,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      */
     private LongRunningOperationStatus status;
     /**
-     * Instantiates a new delegatedAdminRelationshipOperation and sets the default values.
+     * Instantiates a new DelegatedAdminRelationshipOperation and sets the default values.
      */
     public DelegatedAdminRelationshipOperation() {
         super();
@@ -38,7 +38,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a delegatedAdminRelationshipOperation
+     * @return a DelegatedAdminRelationshipOperation
      */
     @jakarta.annotation.Nonnull
     public static DelegatedAdminRelationshipOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
     }
     /**
      * Gets the data property value. The data (payload) for the operation. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getData() {
@@ -85,7 +85,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
     }
     /**
      * Gets the operationType property value. The operationType property
-     * @return a delegatedAdminRelationshipOperationType
+     * @return a DelegatedAdminRelationshipOperationType
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipOperationType getOperationType() {
@@ -93,7 +93,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
     }
     /**
      * Gets the status property value. The status property
-     * @return a longRunningOperationStatus
+     * @return a LongRunningOperationStatus
      */
     @jakarta.annotation.Nullable
     public LongRunningOperationStatus getStatus() {

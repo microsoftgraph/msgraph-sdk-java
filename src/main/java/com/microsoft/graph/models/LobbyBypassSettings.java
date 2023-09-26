@@ -26,7 +26,7 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
      */
     private LobbyBypassScope scope;
     /**
-     * Instantiates a new lobbyBypassSettings and sets the default values.
+     * Instantiates a new LobbyBypassSettings and sets the default values.
      */
     public LobbyBypassSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a lobbyBypassSettings
+     * @return a LobbyBypassSettings
      */
     @jakarta.annotation.Nonnull
     public static LobbyBypassSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
         return new LobbyBypassSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isDialInBypassEnabled property value. Specifies whether or not to always let dial-in callers bypass the lobby. Optional.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDialInBypassEnabled() {
@@ -71,7 +71,7 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the scope property value. Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
-     * @return a lobbyBypassScope
+     * @return a LobbyBypassScope
      */
     @jakarta.annotation.Nullable
     public LobbyBypassScope getScope() {
@@ -97,8 +97,8 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

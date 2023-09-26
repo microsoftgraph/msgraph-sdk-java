@@ -57,7 +57,7 @@ public class ReputationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of a hostReputation object.
-     * @return a CompletableFuture of hostReputation
+     * @return a CompletableFuture of HostReputation
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-get-reputation?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ReputationRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a hostReputation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostReputation
+     * @return a CompletableFuture of HostReputation
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-get-reputation?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ReputationRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property reputation in security
      * @param body The request body
-     * @return a CompletableFuture of hostReputation
+     * @return a CompletableFuture of HostReputation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostReputation> patch(@jakarta.annotation.Nonnull final HostReputation body) {
@@ -91,7 +91,7 @@ public class ReputationRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property reputation in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostReputation
+     * @return a CompletableFuture of HostReputation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostReputation> patch(@jakarta.annotation.Nonnull final HostReputation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -193,7 +193,7 @@ public class ReputationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reputationRequestBuilder
+     * @return a ReputationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReputationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

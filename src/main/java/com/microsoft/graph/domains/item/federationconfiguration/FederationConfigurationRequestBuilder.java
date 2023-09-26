@@ -60,7 +60,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of an internalDomainFederation object.
-     * @return a CompletableFuture of internalDomainFederationCollectionResponse
+     * @return a CompletableFuture of InternalDomainFederationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternalDomainFederationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of internalDomainFederationCollectionResponse
+     * @return a CompletableFuture of InternalDomainFederationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternalDomainFederationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new internalDomainFederation object.
      * @param body The request body
-     * @return a CompletableFuture of internalDomainFederation
+     * @return a CompletableFuture of InternalDomainFederation
      * @see <a href="https://learn.microsoft.com/graph/api/domain-post-federationconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
      * Create a new internalDomainFederation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of internalDomainFederation
+     * @return a CompletableFuture of InternalDomainFederation
      * @see <a href="https://learn.microsoft.com/graph/api/domain-post-federationconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a federationConfigurationRequestBuilder
+     * @return a FederationConfigurationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FederationConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

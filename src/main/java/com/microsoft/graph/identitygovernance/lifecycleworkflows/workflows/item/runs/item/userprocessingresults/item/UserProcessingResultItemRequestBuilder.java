@@ -54,7 +54,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the user processing result of a user processing result of a run.
-     * @return a CompletableFuture of userProcessingResult
+     * @return a CompletableFuture of UserProcessingResult
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-userprocessingresult-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the user processing result of a user processing result of a run.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userProcessingResult
+     * @return a CompletableFuture of UserProcessingResult
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-userprocessingresult-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

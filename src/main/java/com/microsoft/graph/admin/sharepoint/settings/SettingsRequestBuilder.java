@@ -57,7 +57,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the tenant-level settings for SharePoint and OneDrive.
-     * @return a CompletableFuture of sharepointSettings
+     * @return a CompletableFuture of SharepointSettings
      * @see <a href="https://learn.microsoft.com/graph/api/sharepointsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the tenant-level settings for SharePoint and OneDrive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharepointSettings
+     * @return a CompletableFuture of SharepointSettings
      * @see <a href="https://learn.microsoft.com/graph/api/sharepointsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update one or more tenant-level settings for SharePoint and OneDrive.
      * @param body The request body
-     * @return a CompletableFuture of sharepointSettings
+     * @return a CompletableFuture of SharepointSettings
      * @see <a href="https://learn.microsoft.com/graph/api/sharepointsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * Update one or more tenant-level settings for SharePoint and OneDrive.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharepointSettings
+     * @return a CompletableFuture of SharepointSettings
      * @see <a href="https://learn.microsoft.com/graph/api/sharepointsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a settingsRequestBuilder
+     * @return a SettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

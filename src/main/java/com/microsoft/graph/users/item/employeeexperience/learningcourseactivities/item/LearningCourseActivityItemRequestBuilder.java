@@ -38,7 +38,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
-     * @return a CompletableFuture of learningCourseActivity
+     * @return a CompletableFuture of LearningCourseActivity
      * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
     /**
      * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of learningCourseActivity
+     * @return a CompletableFuture of LearningCourseActivity
      * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

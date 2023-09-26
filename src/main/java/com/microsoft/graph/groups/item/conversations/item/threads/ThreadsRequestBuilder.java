@@ -60,7 +60,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get all the threads in a group conversation. Note: You can also get all the threads of a group.
-     * @return a CompletableFuture of conversationThreadCollectionResponse
+     * @return a CompletableFuture of ConversationThreadCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conversation-list-threads?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all the threads in a group conversation. Note: You can also get all the threads of a group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationThreadCollectionResponse
+     * @return a CompletableFuture of ConversationThreadCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/conversation-list-threads?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new thread in the specified conversation.  A thread and post are created as specified. Use reply thread to further post to that thread. Or, if you get the post ID, you can also reply to that post in that thread. Note: You can also start a new conversation by first creating a thread.
      * @param body The request body
-     * @return a CompletableFuture of conversationThread
+     * @return a CompletableFuture of ConversationThread
      * @see <a href="https://learn.microsoft.com/graph/api/conversation-post-threads?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
      * Create a new thread in the specified conversation.  A thread and post are created as specified. Use reply thread to further post to that thread. Or, if you get the post ID, you can also reply to that post in that thread. Note: You can also start a new conversation by first creating a thread.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationThread
+     * @return a CompletableFuture of ConversationThread
      * @see <a href="https://learn.microsoft.com/graph/api/conversation-post-threads?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a threadsRequestBuilder
+     * @return a ThreadsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ThreadsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

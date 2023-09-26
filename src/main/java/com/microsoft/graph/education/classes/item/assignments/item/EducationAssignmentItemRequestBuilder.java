@@ -115,7 +115,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class.
-     * @return a CompletableFuture of educationAssignment
+     * @return a CompletableFuture of EducationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationAssignment
+     * @return a CompletableFuture of EducationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update an educationAssignment object.  Only teachers can perform this action.  Alternatively, request to change the status of an assignment with publish action. Don't use a PATCH operation for this purpose.
      * @param body The request body
-     * @return a CompletableFuture of educationAssignment
+     * @return a CompletableFuture of EducationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -150,7 +150,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
      * Update an educationAssignment object.  Only teachers can perform this action.  Alternatively, request to change the status of an assignment with publish action. Don't use a PATCH operation for this purpose.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationAssignment
+     * @return a CompletableFuture of EducationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

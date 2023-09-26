@@ -67,7 +67,7 @@ public class RubricRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the educationRubric object attached to an educationAssignment, if one exists. Only teachers, students, and applications with application permissions can perform this operation.
-     * @return a CompletableFuture of educationRubric
+     * @return a CompletableFuture of EducationRubric
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-get-rubric?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class RubricRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the educationRubric object attached to an educationAssignment, if one exists. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationRubric
+     * @return a CompletableFuture of EducationRubric
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-get-rubric?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class RubricRequestBuilder extends BaseRequestBuilder {
     /**
      * Attach an existing educationRubric object to an educationAssignment. Only teachers can perform this operation.
      * @param body The request body
-     * @return a CompletableFuture of educationRubric
+     * @return a CompletableFuture of EducationRubric
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-put-rubric?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class RubricRequestBuilder extends BaseRequestBuilder {
      * Attach an existing educationRubric object to an educationAssignment. Only teachers can perform this operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationRubric
+     * @return a CompletableFuture of EducationRubric
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-put-rubric?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -205,7 +205,7 @@ public class RubricRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a rubricRequestBuilder
+     * @return a RubricRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RubricRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

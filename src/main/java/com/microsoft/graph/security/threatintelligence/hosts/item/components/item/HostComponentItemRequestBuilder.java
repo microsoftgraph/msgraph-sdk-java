@@ -38,7 +38,7 @@ public class HostComponentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The hostComponents that are associated with this host.
-     * @return a CompletableFuture of hostComponent
+     * @return a CompletableFuture of HostComponent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostComponent> get() {
@@ -47,7 +47,7 @@ public class HostComponentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The hostComponents that are associated with this host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostComponent
+     * @return a CompletableFuture of HostComponent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostComponent> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

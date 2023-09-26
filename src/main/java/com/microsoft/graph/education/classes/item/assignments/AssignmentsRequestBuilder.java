@@ -68,7 +68,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of assignment objects. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application executing with application permissions can see all assignment objects for the class. Students can only see assignments that are assigned to them.
-     * @return a CompletableFuture of educationAssignmentCollectionResponse
+     * @return a CompletableFuture of EducationAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-assignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of assignment objects. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application executing with application permissions can see all assignment objects for the class. Students can only see assignments that are assigned to them.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationAssignmentCollectionResponse
+     * @return a CompletableFuture of EducationAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-assignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new assignment. Only teachers in a class can create an assignment. Assignments start in the Draft state, which means that students will not see the assignment until publication.
      * @param body The request body
-     * @return a CompletableFuture of educationAssignment
+     * @return a CompletableFuture of EducationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-post-assignment?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
      * Create a new assignment. Only teachers in a class can create an assignment. Assignments start in the Draft state, which means that students will not see the assignment until publication.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationAssignment
+     * @return a CompletableFuture of EducationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-post-assignment?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignmentsRequestBuilder
+     * @return a AssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

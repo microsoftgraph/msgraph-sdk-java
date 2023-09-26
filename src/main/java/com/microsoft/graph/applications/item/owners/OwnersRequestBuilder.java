@@ -99,7 +99,7 @@ public class OwnersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand, $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1), and $select nested in $expand.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/application-list-owners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +109,7 @@ public class OwnersRequestBuilder extends BaseRequestBuilder {
     /**
      * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand, $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1), and $select nested in $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/application-list-owners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -152,7 +152,7 @@ public class OwnersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ownersRequestBuilder
+     * @return a OwnersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OwnersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

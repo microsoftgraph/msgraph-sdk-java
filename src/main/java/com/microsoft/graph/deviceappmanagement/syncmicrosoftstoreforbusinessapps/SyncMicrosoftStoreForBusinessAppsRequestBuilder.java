@@ -85,7 +85,7 @@ public class SyncMicrosoftStoreForBusinessAppsRequestBuilder extends BaseRequest
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a syncMicrosoftStoreForBusinessAppsRequestBuilder
+     * @return a SyncMicrosoftStoreForBusinessAppsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SyncMicrosoftStoreForBusinessAppsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

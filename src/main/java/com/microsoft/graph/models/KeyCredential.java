@@ -18,7 +18,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
     /**
      * A 40-character binary type that can be used to identify the credential. Optional. When not provided in the payload, defaults to the thumbprint of the certificate.
      */
-    private byte[] customKeyIdentifier;
+    private Base64url customKeyIdentifier;
     /**
      * Friendly name for the key. Optional.
      */
@@ -30,7 +30,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
     /**
      * The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
      */
-    private byte[] key;
+    private Base64url key;
     /**
      * The unique identifier (GUID) for the key.
      */
@@ -52,7 +52,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
      */
     private String usage;
     /**
-     * Instantiates a new keyCredential and sets the default values.
+     * Instantiates a new KeyCredential and sets the default values.
      */
     public KeyCredential() {
         this.setAdditionalData(new HashMap<>());
@@ -60,7 +60,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a keyCredential
+     * @return a KeyCredential
      */
     @jakarta.annotation.Nonnull
     public static KeyCredential createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -68,7 +68,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
         return new KeyCredential();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -77,15 +77,15 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the customKeyIdentifier property value. A 40-character binary type that can be used to identify the credential. Optional. When not provided in the payload, defaults to the thumbprint of the certificate.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getCustomKeyIdentifier() {
+    public Base64url getCustomKeyIdentifier() {
         return this.customKeyIdentifier;
     }
     /**
      * Gets the displayName property value. Friendly name for the key. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -106,10 +106,10 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
-        deserializerMap.put("customKeyIdentifier", (n) -> { this.setCustomKeyIdentifier(n.getByteArrayValue()); });
+        deserializerMap.put("customKeyIdentifier", (n) -> { this.setCustomKeyIdentifier(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("key", (n) -> { this.setKey(n.getByteArrayValue()); });
+        deserializerMap.put("key", (n) -> { this.setKey(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("keyId", (n) -> { this.setKeyId(n.getUUIDValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
@@ -119,10 +119,10 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getKey() {
+    public Base64url getKey() {
         return this.key;
     }
     /**
@@ -135,7 +135,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -151,7 +151,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type of key credential; for example, Symmetric, AsymmetricX509Cert.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -159,7 +159,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the usage property value. A string that describes the purpose for which the key can be used; for example, Verify.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUsage() {
@@ -171,10 +171,10 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeByteArrayValue("customKeyIdentifier", this.getCustomKeyIdentifier());
+        writer.writeObjectValue("customKeyIdentifier", this.getCustomKeyIdentifier());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
-        writer.writeByteArrayValue("key", this.getKey());
+        writer.writeObjectValue("key", this.getKey());
         writer.writeUUIDValue("keyId", this.getKeyId());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
@@ -183,8 +183,8 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -193,7 +193,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
      * Sets the customKeyIdentifier property value. A 40-character binary type that can be used to identify the credential. Optional. When not provided in the payload, defaults to the thumbprint of the certificate.
      * @param value Value to set for the customKeyIdentifier property.
      */
-    public void setCustomKeyIdentifier(@jakarta.annotation.Nullable final byte[] value) {
+    public void setCustomKeyIdentifier(@jakarta.annotation.Nullable final Base64url value) {
         this.customKeyIdentifier = value;
     }
     /**
@@ -214,7 +214,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
      * Sets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
      * @param value Value to set for the key property.
      */
-    public void setKey(@jakarta.annotation.Nullable final byte[] value) {
+    public void setKey(@jakarta.annotation.Nullable final Base64url value) {
         this.key = value;
     }
     /**

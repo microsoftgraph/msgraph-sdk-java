@@ -68,7 +68,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of event objects.
-     * @return a CompletableFuture of eventCollectionResponse
+     * @return a CompletableFuture of EventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-events?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of event objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of eventCollectionResponse
+     * @return a CompletableFuture of EventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-events?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new event.
      * @param body The request body
-     * @return a CompletableFuture of event
+     * @return a CompletableFuture of Event
      * @see <a href="https://learn.microsoft.com/graph/api/group-post-events?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new event.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of event
+     * @return a CompletableFuture of Event
      * @see <a href="https://learn.microsoft.com/graph/api/group-post-events?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a eventsRequestBuilder
+     * @return a EventsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -42,7 +42,7 @@ public class ImageWithWidthWithHeightWithFittingModeRequestBuilder extends BaseR
     }
     /**
      * Invoke function image
-     * @return a CompletableFuture of imageWithWidthWithHeightWithFittingModeResponse
+     * @return a CompletableFuture of ImageWithWidthWithHeightWithFittingModeResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImageWithWidthWithHeightWithFittingModeResponse> get() {
@@ -51,7 +51,7 @@ public class ImageWithWidthWithHeightWithFittingModeRequestBuilder extends BaseR
     /**
      * Invoke function image
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of imageWithWidthWithHeightWithFittingModeResponse
+     * @return a CompletableFuture of ImageWithWidthWithHeightWithFittingModeResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImageWithWidthWithHeightWithFittingModeResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -92,7 +92,7 @@ public class ImageWithWidthWithHeightWithFittingModeRequestBuilder extends BaseR
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a imageWithWidthWithHeightWithFittingModeRequestBuilder
+     * @return a ImageWithWidthWithHeightWithFittingModeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ImageWithWidthWithHeightWithFittingModeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

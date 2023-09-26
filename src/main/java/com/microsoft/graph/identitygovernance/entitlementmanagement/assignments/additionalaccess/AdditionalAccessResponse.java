@@ -15,7 +15,7 @@ public class AdditionalAccessResponse extends BaseCollectionPaginationCountRespo
      */
     private java.util.List<AccessPackageAssignment> value;
     /**
-     * Instantiates a new additionalAccessResponse and sets the default values.
+     * Instantiates a new AdditionalAccessResponse and sets the default values.
      */
     public AdditionalAccessResponse() {
         super();
@@ -23,7 +23,7 @@ public class AdditionalAccessResponse extends BaseCollectionPaginationCountRespo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a additionalAccessResponse
+     * @return a AdditionalAccessResponse
      */
     @jakarta.annotation.Nonnull
     public static AdditionalAccessResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class AdditionalAccessResponse extends BaseCollectionPaginationCountRespo
     }
     /**
      * Gets the value property value. The value property
-     * @return a accessPackageAssignment
+     * @return a java.util.List<AccessPackageAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignment> getValue() {

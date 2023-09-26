@@ -13,7 +13,7 @@ public class AudioRoutingGroupCollectionResponse extends BaseCollectionPaginatio
      */
     private java.util.List<AudioRoutingGroup> value;
     /**
-     * Instantiates a new audioRoutingGroupCollectionResponse and sets the default values.
+     * Instantiates a new AudioRoutingGroupCollectionResponse and sets the default values.
      */
     public AudioRoutingGroupCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AudioRoutingGroupCollectionResponse extends BaseCollectionPaginatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a audioRoutingGroupCollectionResponse
+     * @return a AudioRoutingGroupCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AudioRoutingGroupCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AudioRoutingGroupCollectionResponse extends BaseCollectionPaginatio
     }
     /**
      * Gets the value property value. The value property
-     * @return a audioRoutingGroup
+     * @return a java.util.List<AudioRoutingGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AudioRoutingGroup> getValue() {

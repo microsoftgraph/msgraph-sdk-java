@@ -14,7 +14,7 @@ public class TermCollectionResponse extends BaseCollectionPaginationCountRespons
      */
     private java.util.List<Term> value;
     /**
-     * Instantiates a new termCollectionResponse and sets the default values.
+     * Instantiates a new TermCollectionResponse and sets the default values.
      */
     public TermCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class TermCollectionResponse extends BaseCollectionPaginationCountRespons
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a termCollectionResponse
+     * @return a TermCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static TermCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class TermCollectionResponse extends BaseCollectionPaginationCountRespons
     }
     /**
      * Gets the value property value. The value property
-     * @return a term
+     * @return a java.util.List<Term>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Term> getValue() {

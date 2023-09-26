@@ -78,7 +78,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get communications
-     * @return a CompletableFuture of cloudCommunications
+     * @return a CompletableFuture of CloudCommunications
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudCommunications> get() {
@@ -87,7 +87,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudCommunications
+     * @return a CompletableFuture of CloudCommunications
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudCommunications> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,7 +100,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update communications
      * @param body The request body
-     * @return a CompletableFuture of cloudCommunications
+     * @return a CompletableFuture of CloudCommunications
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudCommunications> patch(@jakarta.annotation.Nonnull final CloudCommunications body) {
@@ -110,7 +110,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
      * Update communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudCommunications
+     * @return a CompletableFuture of CloudCommunications
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudCommunications> patch(@jakarta.annotation.Nonnull final CloudCommunications body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -185,7 +185,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a communicationsRequestBuilder
+     * @return a CommunicationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CommunicationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

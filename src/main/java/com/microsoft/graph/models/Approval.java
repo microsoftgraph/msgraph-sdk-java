@@ -13,7 +13,7 @@ public class Approval extends Entity implements Parsable {
      */
     private java.util.List<ApprovalStage> stages;
     /**
-     * Instantiates a new approval and sets the default values.
+     * Instantiates a new Approval and sets the default values.
      */
     public Approval() {
         super();
@@ -21,7 +21,7 @@ public class Approval extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a approval
+     * @return a Approval
      */
     @jakarta.annotation.Nonnull
     public static Approval createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class Approval extends Entity implements Parsable {
     }
     /**
      * Gets the stages property value. A collection of stages in the approval decision.
-     * @return a approvalStage
+     * @return a java.util.List<ApprovalStage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ApprovalStage> getStages() {

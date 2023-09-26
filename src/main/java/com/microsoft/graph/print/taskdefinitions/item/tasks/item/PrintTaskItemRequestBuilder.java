@@ -73,7 +73,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get details about a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
-     * @return a CompletableFuture of printTask
+     * @return a CompletableFuture of PrintTask
      * @see <a href="https://learn.microsoft.com/graph/api/printtask-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get details about a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printTask
+     * @return a CompletableFuture of PrintTask
      * @see <a href="https://learn.microsoft.com/graph/api/printtask-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param body The request body
-     * @return a CompletableFuture of printTask
+     * @return a CompletableFuture of PrintTask
      * @see <a href="https://learn.microsoft.com/graph/api/printtaskdefinition-update-task?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * Update a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printTask
+     * @return a CompletableFuture of PrintTask
      * @see <a href="https://learn.microsoft.com/graph/api/printtaskdefinition-update-task?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

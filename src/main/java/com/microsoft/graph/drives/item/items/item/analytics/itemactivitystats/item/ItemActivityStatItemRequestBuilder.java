@@ -65,7 +65,7 @@ public class ItemActivityStatItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get itemActivityStats from drives
-     * @return a CompletableFuture of itemActivityStat
+     * @return a CompletableFuture of ItemActivityStat
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivityStat> get() {
@@ -74,7 +74,7 @@ public class ItemActivityStatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get itemActivityStats from drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemActivityStat
+     * @return a CompletableFuture of ItemActivityStat
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivityStat> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ItemActivityStatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property itemActivityStats in drives
      * @param body The request body
-     * @return a CompletableFuture of itemActivityStat
+     * @return a CompletableFuture of ItemActivityStat
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivityStat> patch(@jakarta.annotation.Nonnull final ItemActivityStat body) {
@@ -97,7 +97,7 @@ public class ItemActivityStatItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property itemActivityStats in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemActivityStat
+     * @return a CompletableFuture of ItemActivityStat
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivityStat> patch(@jakarta.annotation.Nonnull final ItemActivityStat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

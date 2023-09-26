@@ -60,7 +60,7 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the attributeSet objects and their properties.
-     * @return a CompletableFuture of attributeSetCollectionResponse
+     * @return a CompletableFuture of AttributeSetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-attributesets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the attributeSet objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attributeSetCollectionResponse
+     * @return a CompletableFuture of AttributeSetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-attributesets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new attributeSet object.
      * @param body The request body
-     * @return a CompletableFuture of attributeSet
+     * @return a CompletableFuture of AttributeSet
      * @see <a href="https://learn.microsoft.com/graph/api/directory-post-attributesets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
      * Create a new attributeSet object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attributeSet
+     * @return a CompletableFuture of AttributeSet
      * @see <a href="https://learn.microsoft.com/graph/api/directory-post-attributesets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class AttributeSetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a attributeSetsRequestBuilder
+     * @return a AttributeSetsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AttributeSetsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

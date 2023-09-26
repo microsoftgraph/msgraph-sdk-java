@@ -107,7 +107,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the existing synchronization job and its properties.
-     * @return a CompletableFuture of synchronizationJob
+     * @return a CompletableFuture of SynchronizationJob
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +117,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the existing synchronization job and its properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of synchronizationJob
+     * @return a CompletableFuture of SynchronizationJob
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property jobs in applications
      * @param body The request body
-     * @return a CompletableFuture of synchronizationJob
+     * @return a CompletableFuture of SynchronizationJob
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationJob> patch(@jakarta.annotation.Nonnull final SynchronizationJob body) {
@@ -141,7 +141,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property jobs in applications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of synchronizationJob
+     * @return a CompletableFuture of SynchronizationJob
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationJob> patch(@jakarta.annotation.Nonnull final SynchronizationJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -59,7 +59,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a conversationMember from a chat or channel.
-     * @return a CompletableFuture of conversationMember
+     * @return a CompletableFuture of ConversationMember
      * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a conversationMember from a chat or channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationMember
+     * @return a CompletableFuture of ConversationMember
      * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property members in users
      * @param body The request body
-     * @return a CompletableFuture of conversationMember
+     * @return a CompletableFuture of ConversationMember
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> patch(@jakarta.annotation.Nonnull final ConversationMember body) {
@@ -93,7 +93,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property members in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationMember
+     * @return a CompletableFuture of ConversationMember
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> patch(@jakarta.annotation.Nonnull final ConversationMember body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

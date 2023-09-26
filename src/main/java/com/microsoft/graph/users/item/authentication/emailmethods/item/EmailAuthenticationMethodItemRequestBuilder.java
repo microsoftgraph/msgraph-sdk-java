@@ -59,7 +59,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * Retrieve a user's single email authentication method object.
-     * @return a CompletableFuture of emailAuthenticationMethod
+     * @return a CompletableFuture of EmailAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/emailauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     /**
      * Retrieve a user's single email authentication method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of emailAuthenticationMethod
+     * @return a CompletableFuture of EmailAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/emailauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     /**
      * Update a user's email address represented by an emailAuthenticationMethod object.
      * @param body The request body
-     * @return a CompletableFuture of emailAuthenticationMethod
+     * @return a CompletableFuture of EmailAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/emailauthenticationmethod-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
      * Update a user's email address represented by an emailAuthenticationMethod object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of emailAuthenticationMethod
+     * @return a CompletableFuture of EmailAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/emailauthenticationmethod-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

@@ -59,7 +59,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of printer shares associated with the printer.
-     * @return a CompletableFuture of printerShareCollectionResponse
+     * @return a CompletableFuture of PrinterShareCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/printer-list-shares?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of printer shares associated with the printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printerShareCollectionResponse
+     * @return a CompletableFuture of PrinterShareCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/printer-list-shares?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sharesRequestBuilder
+     * @return a SharesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SharesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

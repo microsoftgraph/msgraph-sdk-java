@@ -34,7 +34,7 @@ public class PassiveDnsRecord extends Artifact implements Parsable {
      */
     private String recordType;
     /**
-     * Instantiates a new passiveDnsRecord and sets the default values.
+     * Instantiates a new PassiveDnsRecord and sets the default values.
      */
     public PassiveDnsRecord() {
         super();
@@ -43,7 +43,7 @@ public class PassiveDnsRecord extends Artifact implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a passiveDnsRecord
+     * @return a PassiveDnsRecord
      */
     @jakarta.annotation.Nonnull
     public static PassiveDnsRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class PassiveDnsRecord extends Artifact implements Parsable {
     }
     /**
      * Gets the artifact property value. The artifact property
-     * @return a artifact
+     * @return a Artifact
      */
     @jakarta.annotation.Nullable
     public Artifact getArtifact() {
@@ -99,7 +99,7 @@ public class PassiveDnsRecord extends Artifact implements Parsable {
     }
     /**
      * Gets the parentHost property value. The parentHost property
-     * @return a host
+     * @return a Host
      */
     @jakarta.annotation.Nullable
     public Host getParentHost() {
@@ -107,7 +107,7 @@ public class PassiveDnsRecord extends Artifact implements Parsable {
     }
     /**
      * Gets the recordType property value. The DNS record type for this passiveDnsRecord entry.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecordType() {

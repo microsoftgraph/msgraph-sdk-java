@@ -67,7 +67,7 @@ public class PrintTaskTriggerItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a task trigger from a printer. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
-     * @return a CompletableFuture of printTaskTrigger
+     * @return a CompletableFuture of PrintTaskTrigger
      * @see <a href="https://learn.microsoft.com/graph/api/printtasktrigger-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class PrintTaskTriggerItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a task trigger from a printer. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printTaskTrigger
+     * @return a CompletableFuture of PrintTaskTrigger
      * @see <a href="https://learn.microsoft.com/graph/api/printtasktrigger-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class PrintTaskTriggerItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property taskTriggers in print
      * @param body The request body
-     * @return a CompletableFuture of printTaskTrigger
+     * @return a CompletableFuture of PrintTaskTrigger
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskTrigger> patch(@jakarta.annotation.Nonnull final PrintTaskTrigger body) {
@@ -101,7 +101,7 @@ public class PrintTaskTriggerItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property taskTriggers in print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printTaskTrigger
+     * @return a CompletableFuture of PrintTaskTrigger
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskTrigger> patch(@jakarta.annotation.Nonnull final PrintTaskTrigger body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -147,7 +147,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a deleted workflow object.
-     * @return a CompletableFuture of workflow
+     * @return a CompletableFuture of Workflow
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-deleteditemcontainer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +157,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a deleted workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workflow
+     * @return a CompletableFuture of Workflow
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-deleteditemcontainer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

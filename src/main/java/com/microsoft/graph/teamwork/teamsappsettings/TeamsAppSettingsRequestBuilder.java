@@ -57,7 +57,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get teamsAppSettings from teamwork
-     * @return a CompletableFuture of teamsAppSettings
+     * @return a CompletableFuture of TeamsAppSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppSettings> get() {
@@ -66,7 +66,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get teamsAppSettings from teamwork
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAppSettings
+     * @return a CompletableFuture of TeamsAppSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property teamsAppSettings in teamwork
      * @param body The request body
-     * @return a CompletableFuture of teamsAppSettings
+     * @return a CompletableFuture of TeamsAppSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppSettings> patch(@jakarta.annotation.Nonnull final TeamsAppSettings body) {
@@ -89,7 +89,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property teamsAppSettings in teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAppSettings
+     * @return a CompletableFuture of TeamsAppSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppSettings> patch(@jakarta.annotation.Nonnull final TeamsAppSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a teamsAppSettingsRequestBuilder
+     * @return a TeamsAppSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TeamsAppSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

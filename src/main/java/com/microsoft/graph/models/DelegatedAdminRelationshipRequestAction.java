@@ -8,7 +8,8 @@ public enum DelegatedAdminRelationshipRequestAction implements ValuedEnum {
     LockForApproval("lockForApproval"),
     Approve("approve"),
     Terminate("terminate"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Reject("reject");
     public final String value;
     DelegatedAdminRelationshipRequestAction(final String value) {
         this.value = value;
@@ -23,6 +24,7 @@ public enum DelegatedAdminRelationshipRequestAction implements ValuedEnum {
             case "approve": return Approve;
             case "terminate": return Terminate;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "reject": return Reject;
             default: return null;
         }
     }

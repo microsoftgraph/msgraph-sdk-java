@@ -13,7 +13,7 @@ public class AnonymousGuestConversationMember extends ConversationMember impleme
      */
     private String anonymousGuestId;
     /**
-     * Instantiates a new anonymousGuestConversationMember and sets the default values.
+     * Instantiates a new AnonymousGuestConversationMember and sets the default values.
      */
     public AnonymousGuestConversationMember() {
         super();
@@ -22,7 +22,7 @@ public class AnonymousGuestConversationMember extends ConversationMember impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a anonymousGuestConversationMember
+     * @return a AnonymousGuestConversationMember
      */
     @jakarta.annotation.Nonnull
     public static AnonymousGuestConversationMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class AnonymousGuestConversationMember extends ConversationMember impleme
     }
     /**
      * Gets the anonymousGuestId property value. Unique ID that represents the user. Note: This ID can change if the user leaves and rejoins the meeting, or joins from a different device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAnonymousGuestId() {

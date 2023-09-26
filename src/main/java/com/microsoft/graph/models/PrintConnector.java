@@ -34,7 +34,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     private OffsetDateTime registeredDateTime;
     /**
-     * Instantiates a new printConnector and sets the default values.
+     * Instantiates a new PrintConnector and sets the default values.
      */
     public PrintConnector() {
         super();
@@ -42,7 +42,7 @@ public class PrintConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printConnector
+     * @return a PrintConnector
      */
     @jakarta.annotation.Nonnull
     public static PrintConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class PrintConnector extends Entity implements Parsable {
     }
     /**
      * Gets the appVersion property value. The connector's version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppVersion() {
@@ -59,7 +59,7 @@ public class PrintConnector extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the connector.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -82,7 +82,7 @@ public class PrintConnector extends Entity implements Parsable {
     }
     /**
      * Gets the fullyQualifiedDomainName property value. The connector machine's hostname.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFullyQualifiedDomainName() {
@@ -90,7 +90,7 @@ public class PrintConnector extends Entity implements Parsable {
     }
     /**
      * Gets the location property value. The physical and/or organizational location of the connector.
-     * @return a printerLocation
+     * @return a PrinterLocation
      */
     @jakarta.annotation.Nullable
     public PrinterLocation getLocation() {
@@ -98,7 +98,7 @@ public class PrintConnector extends Entity implements Parsable {
     }
     /**
      * Gets the operatingSystem property value. The connector machine's operating system version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {

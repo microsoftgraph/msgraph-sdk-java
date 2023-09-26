@@ -18,7 +18,7 @@ public class Indicator extends Entity implements Parsable {
      */
     private IndicatorSource source;
     /**
-     * Instantiates a new indicator and sets the default values.
+     * Instantiates a new Indicator and sets the default values.
      */
     public Indicator() {
         super();
@@ -26,7 +26,7 @@ public class Indicator extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a indicator
+     * @return a Indicator
      */
     @jakarta.annotation.Nonnull
     public static Indicator createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class Indicator extends Entity implements Parsable {
     }
     /**
      * Gets the artifact property value. The artifact property
-     * @return a artifact
+     * @return a Artifact
      */
     @jakarta.annotation.Nullable
     public Artifact getArtifact() {
@@ -62,7 +62,7 @@ public class Indicator extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. The source property
-     * @return a indicatorSource
+     * @return a IndicatorSource
      */
     @jakarta.annotation.Nullable
     public IndicatorSource getSource() {

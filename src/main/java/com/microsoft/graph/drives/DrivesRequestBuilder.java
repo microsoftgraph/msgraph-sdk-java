@@ -52,7 +52,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from drives
-     * @return a CompletableFuture of driveCollectionResponse
+     * @return a CompletableFuture of DriveCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveCollectionResponse> get() {
@@ -61,7 +61,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of driveCollectionResponse
+     * @return a CompletableFuture of DriveCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -74,7 +74,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to drives
      * @param body The request body
-     * @return a CompletableFuture of drive
+     * @return a CompletableFuture of Drive
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Drive> post(@jakarta.annotation.Nonnull final Drive body) {
@@ -84,7 +84,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
      * Add new entity to drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of drive
+     * @return a CompletableFuture of Drive
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Drive> post(@jakarta.annotation.Nonnull final Drive body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -159,7 +159,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a drivesRequestBuilder
+     * @return a DrivesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DrivesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -85,7 +85,7 @@ public class UnsubscribeByMailRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a unsubscribeByMailRequestBuilder
+     * @return a UnsubscribeByMailRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UnsubscribeByMailRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

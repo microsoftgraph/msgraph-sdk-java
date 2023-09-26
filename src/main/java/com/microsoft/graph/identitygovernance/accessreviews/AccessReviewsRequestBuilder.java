@@ -73,7 +73,7 @@ public class AccessReviewsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get accessReviews from identityGovernance
-     * @return a CompletableFuture of accessReviewSet
+     * @return a CompletableFuture of AccessReviewSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewSet> get() {
@@ -82,7 +82,7 @@ public class AccessReviewsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get accessReviews from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewSet
+     * @return a CompletableFuture of AccessReviewSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewSet> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class AccessReviewsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property accessReviews in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessReviewSet
+     * @return a CompletableFuture of AccessReviewSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewSet> patch(@jakarta.annotation.Nonnull final AccessReviewSet body) {
@@ -105,7 +105,7 @@ public class AccessReviewsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property accessReviews in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewSet
+     * @return a CompletableFuture of AccessReviewSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewSet> patch(@jakarta.annotation.Nonnull final AccessReviewSet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -207,7 +207,7 @@ public class AccessReviewsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessReviewsRequestBuilder
+     * @return a AccessReviewsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AccessReviewsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

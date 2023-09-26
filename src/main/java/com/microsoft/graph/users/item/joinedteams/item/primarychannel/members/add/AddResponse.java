@@ -15,7 +15,7 @@ public class AddResponse extends BaseCollectionPaginationCountResponse implement
      */
     private java.util.List<ActionResultPart> value;
     /**
-     * Instantiates a new addResponse and sets the default values.
+     * Instantiates a new AddResponse and sets the default values.
      */
     public AddResponse() {
         super();
@@ -23,7 +23,7 @@ public class AddResponse extends BaseCollectionPaginationCountResponse implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a addResponse
+     * @return a AddResponse
      */
     @jakarta.annotation.Nonnull
     public static AddResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class AddResponse extends BaseCollectionPaginationCountResponse implement
     }
     /**
      * Gets the value property value. The value property
-     * @return a actionResultPart
+     * @return a java.util.List<ActionResultPart>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActionResultPart> getValue() {

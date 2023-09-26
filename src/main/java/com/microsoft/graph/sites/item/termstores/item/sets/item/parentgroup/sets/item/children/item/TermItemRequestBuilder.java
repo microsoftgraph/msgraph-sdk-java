@@ -81,7 +81,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Children terms of set in term [store].
-     * @return a CompletableFuture of term
+     * @return a CompletableFuture of Term
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> get() {
@@ -90,7 +90,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Children terms of set in term [store].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of term
+     * @return a CompletableFuture of Term
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property children in sites
      * @param body The request body
-     * @return a CompletableFuture of term
+     * @return a CompletableFuture of Term
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> patch(@jakarta.annotation.Nonnull final Term body) {
@@ -113,7 +113,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property children in sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of term
+     * @return a CompletableFuture of Term
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> patch(@jakarta.annotation.Nonnull final Term body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

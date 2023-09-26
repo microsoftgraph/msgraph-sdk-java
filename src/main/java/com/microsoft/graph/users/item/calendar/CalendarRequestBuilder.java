@@ -56,12 +56,12 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the allowedCalendarSharingRoles method.
      * @param User Usage: User='{User}'
-     * @return a allowedCalendarSharingRolesWithUserRequestBuilder
+     * @return a AllowedCalendarSharingRolesWithUserRequestBuilder
      */
     @jakarta.annotation.Nonnull
-    public AllowedCalendarSharingRolesWithUserRequestBuilder allowedCalendarSharingRolesWithUser(@jakarta.annotation.Nonnull final String user) {
-        Objects.requireNonNull(user);
-        return new AllowedCalendarSharingRolesWithUserRequestBuilder(pathParameters, requestAdapter, user);
+    public AllowedCalendarSharingRolesWithUserRequestBuilder allowedCalendarSharingRolesWithUser(@jakarta.annotation.Nonnull final String User) {
+        Objects.requireNonNull(User);
+        return new AllowedCalendarSharingRolesWithUserRequestBuilder(pathParameters, requestAdapter, User);
     }
     /**
      * Instantiates a new CalendarRequestBuilder and sets the default values.
@@ -81,7 +81,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
-     * @return a CompletableFuture of calendar
+     * @return a CompletableFuture of Calendar
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of calendar
+     * @return a CompletableFuture of Calendar
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -105,7 +105,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group.
      * @param body The request body
-     * @return a CompletableFuture of calendar
+     * @return a CompletableFuture of Calendar
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of calendar
+     * @return a CompletableFuture of Calendar
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -192,7 +192,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a calendarRequestBuilder
+     * @return a CalendarRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CalendarRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

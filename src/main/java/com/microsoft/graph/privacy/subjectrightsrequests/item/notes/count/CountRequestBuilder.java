@@ -37,7 +37,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the number of the resource
-     * @return a CompletableFuture of integer
+     * @return a CompletableFuture of Integer
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
@@ -49,7 +49,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the number of the resource
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of integer
+     * @return a CompletableFuture of Integer
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */

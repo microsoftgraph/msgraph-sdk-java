@@ -85,7 +85,7 @@ public class MicrosoftGraphSecurityReopenRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphSecurityReopenRequestBuilder
+     * @return a MicrosoftGraphSecurityReopenRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityReopenRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

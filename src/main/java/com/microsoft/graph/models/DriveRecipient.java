@@ -30,7 +30,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new driveRecipient and sets the default values.
+     * Instantiates a new DriveRecipient and sets the default values.
      */
     public DriveRecipient() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a driveRecipient
+     * @return a DriveRecipient
      */
     @jakarta.annotation.Nonnull
     public static DriveRecipient createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
         return new DriveRecipient();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the alias property value. The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlias() {
@@ -63,7 +63,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the email property value. The email address for the recipient, if the recipient has an associated email address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -84,7 +84,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the objectId property value. The unique identifier for the recipient in the directory.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getObjectId() {
@@ -92,7 +92,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,8 +111,8 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

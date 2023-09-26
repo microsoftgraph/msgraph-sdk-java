@@ -37,7 +37,7 @@ public class SupportedTimeZonesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function supportedTimeZones
-     * @return a CompletableFuture of supportedTimeZonesResponse
+     * @return a CompletableFuture of SupportedTimeZonesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SupportedTimeZonesResponse> get() {
@@ -46,7 +46,7 @@ public class SupportedTimeZonesRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function supportedTimeZones
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of supportedTimeZonesResponse
+     * @return a CompletableFuture of SupportedTimeZonesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SupportedTimeZonesResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class SupportedTimeZonesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a supportedTimeZonesRequestBuilder
+     * @return a SupportedTimeZonesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SupportedTimeZonesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

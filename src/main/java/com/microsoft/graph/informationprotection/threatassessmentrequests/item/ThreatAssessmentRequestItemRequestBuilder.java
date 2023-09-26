@@ -65,7 +65,7 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:
-     * @return a CompletableFuture of threatAssessmentRequest
+     * @return a CompletableFuture of ThreatAssessmentRequest
      * @see <a href="https://learn.microsoft.com/graph/api/threatassessmentrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
     /**
      * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of threatAssessmentRequest
+     * @return a CompletableFuture of ThreatAssessmentRequest
      * @see <a href="https://learn.microsoft.com/graph/api/threatassessmentrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property threatAssessmentRequests in informationProtection
      * @param body The request body
-     * @return a CompletableFuture of threatAssessmentRequest
+     * @return a CompletableFuture of ThreatAssessmentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> patch(@jakarta.annotation.Nonnull final ThreatAssessmentRequest body) {
@@ -99,7 +99,7 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property threatAssessmentRequests in informationProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of threatAssessmentRequest
+     * @return a CompletableFuture of ThreatAssessmentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> patch(@jakarta.annotation.Nonnull final ThreatAssessmentRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

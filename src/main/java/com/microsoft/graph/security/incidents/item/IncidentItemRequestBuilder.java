@@ -65,7 +65,7 @@ public class IncidentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of an incident object. Attacks are typically inflicted on different types of entities, such as devices, users, and mailboxes, resulting in multiple alert objects. Microsoft 365 Defender correlates alerts with the same attack techniques or the same attacker into an incident. 
-     * @return a CompletableFuture of incident
+     * @return a CompletableFuture of Incident
      * @see <a href="https://learn.microsoft.com/graph/api/security-incident-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class IncidentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an incident object. Attacks are typically inflicted on different types of entities, such as devices, users, and mailboxes, resulting in multiple alert objects. Microsoft 365 Defender correlates alerts with the same attack techniques or the same attacker into an incident. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of incident
+     * @return a CompletableFuture of Incident
      * @see <a href="https://learn.microsoft.com/graph/api/security-incident-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class IncidentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an incident object.
      * @param body The request body
-     * @return a CompletableFuture of incident
+     * @return a CompletableFuture of Incident
      * @see <a href="https://learn.microsoft.com/graph/api/security-incident-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class IncidentItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an incident object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of incident
+     * @return a CompletableFuture of Incident
      * @see <a href="https://learn.microsoft.com/graph/api/security-incident-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

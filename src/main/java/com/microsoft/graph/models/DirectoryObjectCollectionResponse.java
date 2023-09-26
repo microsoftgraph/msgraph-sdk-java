@@ -13,7 +13,7 @@ public class DirectoryObjectCollectionResponse extends BaseCollectionPaginationC
      */
     private java.util.List<DirectoryObject> value;
     /**
-     * Instantiates a new directoryObjectCollectionResponse and sets the default values.
+     * Instantiates a new DirectoryObjectCollectionResponse and sets the default values.
      */
     public DirectoryObjectCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DirectoryObjectCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a directoryObjectCollectionResponse
+     * @return a DirectoryObjectCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DirectoryObjectCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DirectoryObjectCollectionResponse extends BaseCollectionPaginationC
     }
     /**
      * Gets the value property value. The value property
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getValue() {

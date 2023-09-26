@@ -59,7 +59,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
     }
     /**
      * Read the properties and relationships of an authenticationCombinationConfiguration object.
-     * @return a CompletableFuture of authenticationCombinationConfiguration
+     * @return a CompletableFuture of AuthenticationCombinationConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
     /**
      * Read the properties and relationships of an authenticationCombinationConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationCombinationConfiguration
+     * @return a CompletableFuture of AuthenticationCombinationConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return this.requestAdapter.sendAsync(requestInfo, AuthenticationCombinationConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they are the only type of authenticationCombinationConfiguration that may be created.
+     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created.
      * @param body The request body
-     * @return a CompletableFuture of authenticationCombinationConfiguration
+     * @return a CompletableFuture of AuthenticationCombinationConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,10 +91,10 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return patch(body, null);
     }
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they are the only type of authenticationCombinationConfiguration that may be created.
+     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationCombinationConfiguration
+     * @return a CompletableFuture of AuthenticationCombinationConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -163,7 +163,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they are the only type of authenticationCombinationConfiguration that may be created.
+     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they are the only type of authenticationCombinationConfiguration that may be created.
+     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

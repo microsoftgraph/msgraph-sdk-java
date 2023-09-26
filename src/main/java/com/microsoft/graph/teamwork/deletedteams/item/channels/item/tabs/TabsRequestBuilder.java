@@ -60,7 +60,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the list of tabs in the specified channel within a team. 
-     * @return a CompletableFuture of teamsTabCollectionResponse
+     * @return a CompletableFuture of TeamsTabCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of tabs in the specified channel within a team. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsTabCollectionResponse
+     * @return a CompletableFuture of TeamsTabCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
     /**
      * Adds (pins) a tab to the specified channel within a team. The corresponding app must already be installed in the team.
      * @param body The request body
-     * @return a CompletableFuture of teamsTab
+     * @return a CompletableFuture of TeamsTab
      * @see <a href="https://learn.microsoft.com/graph/api/channel-post-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
      * Adds (pins) a tab to the specified channel within a team. The corresponding app must already be installed in the team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsTab
+     * @return a CompletableFuture of TeamsTab
      * @see <a href="https://learn.microsoft.com/graph/api/channel-post-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a tabsRequestBuilder
+     * @return a TabsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TabsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

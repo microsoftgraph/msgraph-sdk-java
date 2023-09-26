@@ -36,7 +36,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function count
-     * @return a CompletableFuture of countResponse
+     * @return a CompletableFuture of CountResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CountResponse> get() {
@@ -45,7 +45,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function count
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of countResponse
+     * @return a CompletableFuture of CountResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CountResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,7 +86,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a countRequestBuilder
+     * @return a CountRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

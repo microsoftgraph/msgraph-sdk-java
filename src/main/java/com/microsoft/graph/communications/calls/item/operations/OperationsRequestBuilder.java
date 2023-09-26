@@ -60,7 +60,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the status of an operation that adds the large gallery view to a call.
-     * @return a CompletableFuture of commsOperationCollectionResponse
+     * @return a CompletableFuture of CommsOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommsOperationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the status of an operation that adds the large gallery view to a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of commsOperationCollectionResponse
+     * @return a CompletableFuture of CommsOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommsOperationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to operations for communications
      * @param body The request body
-     * @return a CompletableFuture of commsOperation
+     * @return a CompletableFuture of CommsOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommsOperation> post(@jakarta.annotation.Nonnull final CommsOperation body) {
@@ -92,7 +92,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to operations for communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of commsOperation
+     * @return a CompletableFuture of CommsOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommsOperation> post(@jakarta.annotation.Nonnull final CommsOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a operationsRequestBuilder
+     * @return a OperationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -61,7 +61,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of an application object.
-     * @return a CompletableFuture of application
+     * @return a CompletableFuture of Application
      * @see <a href="https://learn.microsoft.com/graph/api/application-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of an application object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of application
+     * @return a CompletableFuture of Application
      * @see <a href="https://learn.microsoft.com/graph/api/application-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an application object.
      * @param body The request body
-     * @return a CompletableFuture of application
+     * @return a CompletableFuture of Application
      * @see <a href="https://learn.microsoft.com/graph/api/application-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an application object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of application
+     * @return a CompletableFuture of Application
      * @see <a href="https://learn.microsoft.com/graph/api/application-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -199,7 +199,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a applicationsWithAppIdRequestBuilder
+     * @return a ApplicationsWithAppIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ApplicationsWithAppIdRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

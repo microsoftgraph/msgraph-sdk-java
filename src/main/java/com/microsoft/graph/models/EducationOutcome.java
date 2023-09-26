@@ -18,7 +18,7 @@ public class EducationOutcome extends Entity implements Parsable {
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * Instantiates a new educationOutcome and sets the default values.
+     * Instantiates a new EducationOutcome and sets the default values.
      */
     public EducationOutcome() {
         super();
@@ -26,7 +26,7 @@ public class EducationOutcome extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationOutcome
+     * @return a EducationOutcome
      */
     @jakarta.annotation.Nonnull
     public static EducationOutcome createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +56,7 @@ public class EducationOutcome extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The individual who updated the resource.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {

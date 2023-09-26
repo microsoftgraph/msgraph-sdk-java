@@ -38,7 +38,7 @@ public class ArticleIndicatorItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Indicators related to this article.
-     * @return a CompletableFuture of articleIndicator
+     * @return a CompletableFuture of ArticleIndicator
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ArticleIndicator> get() {
@@ -47,7 +47,7 @@ public class ArticleIndicatorItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Indicators related to this article.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of articleIndicator
+     * @return a CompletableFuture of ArticleIndicator
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ArticleIndicator> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

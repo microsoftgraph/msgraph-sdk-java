@@ -37,7 +37,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function delta
-     * @return a CompletableFuture of deltaResponse
+     * @return a CompletableFuture of DeltaResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeltaResponse> get() {
@@ -46,7 +46,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function delta
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deltaResponse
+     * @return a CompletableFuture of DeltaResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeltaResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deltaRequestBuilder
+     * @return a DeltaRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

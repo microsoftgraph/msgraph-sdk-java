@@ -60,7 +60,7 @@ public class SchemaExtensionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of schemaExtension objects in your tenant. The schema extensions can be InDevelopment, Available, or Deprecated and includes schema extensions:+ Created by any apps you own in the current tenant.+ Owned by other apps that are marked as Available.+ Created by other developers from other tenants and marked as Available. This is different from other APIs that only return tenant-specific data. Extension data created based on schema extension definitions is tenant-specific and can only be accessed by apps explicitly granted permission. 
-     * @return a CompletableFuture of schemaExtensionCollectionResponse
+     * @return a CompletableFuture of SchemaExtensionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schemaextension-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class SchemaExtensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of schemaExtension objects in your tenant. The schema extensions can be InDevelopment, Available, or Deprecated and includes schema extensions:+ Created by any apps you own in the current tenant.+ Owned by other apps that are marked as Available.+ Created by other developers from other tenants and marked as Available. This is different from other APIs that only return tenant-specific data. Extension data created based on schema extension definitions is tenant-specific and can only be accessed by apps explicitly granted permission. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of schemaExtensionCollectionResponse
+     * @return a CompletableFuture of SchemaExtensionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/schemaextension-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SchemaExtensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new schemaExtension definition and its associated schema extension property to extend a supporting resource type. Schema extensions let you add strongly-typed custom data to a resource. The app that creates a schema extension is the owner app. Depending on the state of the extension, the owner app, and only the owner app, may update or delete the extension.  See examples of how to define a schema extension that describes a training course, use the schema extension definition to create a new group with training course data, and add training course data to an existing group.
      * @param body The request body
-     * @return a CompletableFuture of schemaExtension
+     * @return a CompletableFuture of SchemaExtension
      * @see <a href="https://learn.microsoft.com/graph/api/schemaextension-post-schemaextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class SchemaExtensionsRequestBuilder extends BaseRequestBuilder {
      * Create a new schemaExtension definition and its associated schema extension property to extend a supporting resource type. Schema extensions let you add strongly-typed custom data to a resource. The app that creates a schema extension is the owner app. Depending on the state of the extension, the owner app, and only the owner app, may update or delete the extension.  See examples of how to define a schema extension that describes a training course, use the schema extension definition to create a new group with training course data, and add training course data to an existing group.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of schemaExtension
+     * @return a CompletableFuture of SchemaExtension
      * @see <a href="https://learn.microsoft.com/graph/api/schemaextension-post-schemaextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class SchemaExtensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a schemaExtensionsRequestBuilder
+     * @return a SchemaExtensionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SchemaExtensionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

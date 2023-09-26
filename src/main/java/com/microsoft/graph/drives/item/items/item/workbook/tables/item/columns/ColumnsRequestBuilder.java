@@ -69,8 +69,8 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of tablecolumn objects.
-     * @return a CompletableFuture of workbookTableColumnCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/table-list-columns?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of WorkbookTableColumnCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumnCollectionResponse> get() {
@@ -79,8 +79,8 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of tablecolumn objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookTableColumnCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/table-list-columns?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of WorkbookTableColumnCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumnCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the itemAt method.
      * @param index Usage: index={index}
-     * @return a itemAtWithIndexRequestBuilder
+     * @return a ItemAtWithIndexRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemAtWithIndexRequestBuilder itemAtWithIndex(@jakarta.annotation.Nonnull final Integer index) {
@@ -103,7 +103,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new TableColumn.
      * @param body The request body
-     * @return a CompletableFuture of workbookTableColumn
+     * @return a CompletableFuture of WorkbookTableColumn
      * @see <a href="https://learn.microsoft.com/graph/api/table-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new TableColumn.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookTableColumn
+     * @return a CompletableFuture of WorkbookTableColumn
      * @see <a href="https://learn.microsoft.com/graph/api/table-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -190,7 +190,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a columnsRequestBuilder
+     * @return a ColumnsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ColumnsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

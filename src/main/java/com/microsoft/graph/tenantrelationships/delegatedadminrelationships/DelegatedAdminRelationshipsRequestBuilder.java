@@ -60,7 +60,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Get a list of the delegatedAdminRelationship objects and their properties.
-     * @return a CompletableFuture of delegatedAdminRelationshipCollectionResponse
+     * @return a CompletableFuture of DelegatedAdminRelationshipCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-list-delegatedadminrelationships?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
     /**
      * Get a list of the delegatedAdminRelationship objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedAdminRelationshipCollectionResponse
+     * @return a CompletableFuture of DelegatedAdminRelationshipCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-list-delegatedadminrelationships?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
     /**
      * Create a new delegatedAdminRelationship object.
      * @param body The request body
-     * @return a CompletableFuture of delegatedAdminRelationship
+     * @return a CompletableFuture of DelegatedAdminRelationship
      * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-post-delegatedadminrelationships?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
      * Create a new delegatedAdminRelationship object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedAdminRelationship
+     * @return a CompletableFuture of DelegatedAdminRelationship
      * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-post-delegatedadminrelationships?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a delegatedAdminRelationshipsRequestBuilder
+     * @return a DelegatedAdminRelationshipsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DelegatedAdminRelationshipsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

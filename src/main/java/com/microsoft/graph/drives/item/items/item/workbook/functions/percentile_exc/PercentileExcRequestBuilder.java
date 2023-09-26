@@ -38,7 +38,7 @@ public class PercentileExcRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action percentile_Exc
      * @param body The request body
-     * @return a CompletableFuture of workbookFunctionResult
+     * @return a CompletableFuture of WorkbookFunctionResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookFunctionResult> post(@jakarta.annotation.Nonnull final PercentileExcPostRequestBody body) {
@@ -48,7 +48,7 @@ public class PercentileExcRequestBuilder extends BaseRequestBuilder {
      * Invoke action percentile_Exc
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookFunctionResult
+     * @return a CompletableFuture of WorkbookFunctionResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookFunctionResult> post(@jakarta.annotation.Nonnull final PercentileExcPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

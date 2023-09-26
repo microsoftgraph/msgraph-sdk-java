@@ -37,7 +37,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/identity/userFlowAttributes/{identityUserFlowAttribute%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an identityUserFlowAttribute. Only custom user flow attributes can be deleted.
+     * Delete a custom identityUserFlowAttribute.
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return delete(null);
     }
     /**
-     * Delete an identityUserFlowAttribute. Only custom user flow attributes can be deleted.
+     * Delete a custom identityUserFlowAttribute.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -59,7 +59,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * Retrieve the properties and relationships of a identityUserFlowAttribute object.
-     * @return a CompletableFuture of identityUserFlowAttribute
+     * @return a CompletableFuture of IdentityUserFlowAttribute
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
     /**
      * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityUserFlowAttribute
+     * @return a CompletableFuture of IdentityUserFlowAttribute
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.sendAsync(requestInfo, IdentityUserFlowAttribute::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a identityUserFlowAttribute object. Only custom user flow attributes can be updated.
+     * Update the properties of a custom identityUserFlowAttribute object.
      * @param body The request body
-     * @return a CompletableFuture of identityUserFlowAttribute
+     * @return a CompletableFuture of IdentityUserFlowAttribute
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,10 +91,10 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return patch(body, null);
     }
     /**
-     * Update the properties of a identityUserFlowAttribute object. Only custom user flow attributes can be updated.
+     * Update the properties of a custom identityUserFlowAttribute object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityUserFlowAttribute
+     * @return a CompletableFuture of IdentityUserFlowAttribute
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.sendAsync(requestInfo, IdentityUserFlowAttribute::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete an identityUserFlowAttribute. Only custom user flow attributes can be deleted.
+     * Delete a custom identityUserFlowAttribute.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an identityUserFlowAttribute. Only custom user flow attributes can be deleted.
+     * Delete a custom identityUserFlowAttribute.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -163,7 +163,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Update the properties of a identityUserFlowAttribute object. Only custom user flow attributes can be updated.
+     * Update the properties of a custom identityUserFlowAttribute object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a identityUserFlowAttribute object. Only custom user flow attributes can be updated.
+     * Update the properties of a custom identityUserFlowAttribute object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

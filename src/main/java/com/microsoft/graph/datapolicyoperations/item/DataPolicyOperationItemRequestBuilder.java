@@ -57,7 +57,7 @@ public class DataPolicyOperationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties of a dataPolicyOperation object.
-     * @return a CompletableFuture of dataPolicyOperation
+     * @return a CompletableFuture of DataPolicyOperation
      * @see <a href="https://learn.microsoft.com/graph/api/datapolicyoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DataPolicyOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties of a dataPolicyOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataPolicyOperation
+     * @return a CompletableFuture of DataPolicyOperation
      * @see <a href="https://learn.microsoft.com/graph/api/datapolicyoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class DataPolicyOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in dataPolicyOperations
      * @param body The request body
-     * @return a CompletableFuture of dataPolicyOperation
+     * @return a CompletableFuture of DataPolicyOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataPolicyOperation> patch(@jakarta.annotation.Nonnull final DataPolicyOperation body) {
@@ -91,7 +91,7 @@ public class DataPolicyOperationItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in dataPolicyOperations
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataPolicyOperation
+     * @return a CompletableFuture of DataPolicyOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataPolicyOperation> patch(@jakarta.annotation.Nonnull final DataPolicyOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

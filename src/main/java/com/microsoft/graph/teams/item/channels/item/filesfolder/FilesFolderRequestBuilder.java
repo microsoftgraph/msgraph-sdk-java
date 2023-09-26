@@ -46,7 +46,7 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the metadata for the location where the files of a channel are stored. 
-     * @return a CompletableFuture of driveItem
+     * @return a CompletableFuture of DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/channel-get-filesfolder?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -56,7 +56,7 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the metadata for the location where the files of a channel are stored. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of driveItem
+     * @return a CompletableFuture of DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/channel-get-filesfolder?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a filesFolderRequestBuilder
+     * @return a FilesFolderRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilesFolderRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

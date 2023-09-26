@@ -30,7 +30,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
      */
     private String phoneAppVersion;
     /**
-     * Instantiates a new microsoftAuthenticatorAuthenticationMethod and sets the default values.
+     * Instantiates a new MicrosoftAuthenticatorAuthenticationMethod and sets the default values.
      */
     public MicrosoftAuthenticatorAuthenticationMethod() {
         super();
@@ -39,7 +39,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftAuthenticatorAuthenticationMethod
+     * @return a MicrosoftAuthenticatorAuthenticationMethod
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftAuthenticatorAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +56,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     }
     /**
      * Gets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
-     * @return a device
+     * @return a Device
      */
     @jakarta.annotation.Nullable
     public Device getDevice() {
@@ -64,7 +64,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     }
     /**
      * Gets the deviceTag property value. Tags containing app metadata.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceTag() {
@@ -72,7 +72,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     }
     /**
      * Gets the displayName property value. The name of the device on which this app is registered.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -94,7 +94,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     }
     /**
      * Gets the phoneAppVersion property value. Numerical version of this instance of the Authenticator app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhoneAppVersion() {

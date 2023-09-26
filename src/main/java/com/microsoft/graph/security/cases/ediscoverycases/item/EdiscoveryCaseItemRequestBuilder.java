@@ -131,7 +131,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of an ediscoveryCase object.
-     * @return a CompletableFuture of ediscoveryCase
+     * @return a CompletableFuture of EdiscoveryCase
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an ediscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryCase
+     * @return a CompletableFuture of EdiscoveryCase
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +155,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an ediscoveryCase object.
      * @param body The request body
-     * @return a CompletableFuture of ediscoveryCase
+     * @return a CompletableFuture of EdiscoveryCase
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -166,7 +166,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an ediscoveryCase object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryCase
+     * @return a CompletableFuture of EdiscoveryCase
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

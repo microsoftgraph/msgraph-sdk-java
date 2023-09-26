@@ -13,7 +13,7 @@ public class TeamworkApplicationIdentity extends Identity implements Parsable {
      */
     private TeamworkApplicationIdentityType applicationIdentityType;
     /**
-     * Instantiates a new teamworkApplicationIdentity and sets the default values.
+     * Instantiates a new TeamworkApplicationIdentity and sets the default values.
      */
     public TeamworkApplicationIdentity() {
         super();
@@ -22,7 +22,7 @@ public class TeamworkApplicationIdentity extends Identity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkApplicationIdentity
+     * @return a TeamworkApplicationIdentity
      */
     @jakarta.annotation.Nonnull
     public static TeamworkApplicationIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class TeamworkApplicationIdentity extends Identity implements Parsable {
     }
     /**
      * Gets the applicationIdentityType property value. Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
-     * @return a teamworkApplicationIdentityType
+     * @return a TeamworkApplicationIdentityType
      */
     @jakarta.annotation.Nullable
     public TeamworkApplicationIdentityType getApplicationIdentityType() {

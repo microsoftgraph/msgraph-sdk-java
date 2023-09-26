@@ -60,7 +60,7 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the list of permissionGrantPolicy objects.
-     * @return a CompletableFuture of permissionGrantPolicyCollectionResponse
+     * @return a CompletableFuture of PermissionGrantPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of permissionGrantPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of permissionGrantPolicyCollectionResponse
+     * @return a CompletableFuture of PermissionGrantPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Creates a permissionGrantPolicy. A permission grant policy is used to describe the conditions under which permissions can be granted (for example, during application consent). After creating the permission grant policy, you can add include condition sets to add matching rules, and add exclude condition sets to add exclusion rules.
      * @param body The request body
-     * @return a CompletableFuture of permissionGrantPolicy
+     * @return a CompletableFuture of PermissionGrantPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-post-permissiongrantpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
      * Creates a permissionGrantPolicy. A permission grant policy is used to describe the conditions under which permissions can be granted (for example, during application consent). After creating the permission grant policy, you can add include condition sets to add matching rules, and add exclude condition sets to add exclusion rules.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of permissionGrantPolicy
+     * @return a CompletableFuture of PermissionGrantPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-post-permissiongrantpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a permissionGrantPoliciesRequestBuilder
+     * @return a PermissionGrantPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PermissionGrantPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -44,7 +44,7 @@ public class GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDat
     }
     /**
      * Invoke function getPrinterArchivedPrintJobs
-     * @return a CompletableFuture of getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeResponse
+     * @return a CompletableFuture of GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeResponse> get() {
@@ -53,7 +53,7 @@ public class GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDat
     /**
      * Invoke function getPrinterArchivedPrintJobs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeResponse
+     * @return a CompletableFuture of GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDat
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return a GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

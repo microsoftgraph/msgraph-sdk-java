@@ -38,7 +38,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get appliesTo from policies
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObject> get() {
@@ -47,7 +47,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get appliesTo from policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObject> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

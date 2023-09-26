@@ -15,7 +15,7 @@ public class GetPstnCallsWithFromDateTimeWithToDateTimeResponse extends BaseColl
      */
     private java.util.List<PstnCallLogRow> value;
     /**
-     * Instantiates a new getPstnCallsWithFromDateTimeWithToDateTimeResponse and sets the default values.
+     * Instantiates a new GetPstnCallsWithFromDateTimeWithToDateTimeResponse and sets the default values.
      */
     public GetPstnCallsWithFromDateTimeWithToDateTimeResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetPstnCallsWithFromDateTimeWithToDateTimeResponse extends BaseColl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getPstnCallsWithFromDateTimeWithToDateTimeResponse
+     * @return a GetPstnCallsWithFromDateTimeWithToDateTimeResponse
      */
     @jakarta.annotation.Nonnull
     public static GetPstnCallsWithFromDateTimeWithToDateTimeResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetPstnCallsWithFromDateTimeWithToDateTimeResponse extends BaseColl
     }
     /**
      * Gets the value property value. The value property
-     * @return a pstnCallLogRow
+     * @return a java.util.List<PstnCallLogRow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PstnCallLogRow> getValue() {

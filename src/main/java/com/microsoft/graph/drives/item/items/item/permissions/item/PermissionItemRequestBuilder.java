@@ -67,7 +67,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Return the effective sharing permission for a particular permission resource. Effective permissions of an item can come from two sources: permissions set directly on the item itself or permissions that are inherited from the item's ancestors. Callers can differentiate if the permission is inherited or not by checking the inheritedFrom property.This property is an ItemReference resource referencing the ancestor that the permission is inherited from.
-     * @return a CompletableFuture of permission
+     * @return a CompletableFuture of Permission
      * @see <a href="https://learn.microsoft.com/graph/api/permission-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Return the effective sharing permission for a particular permission resource. Effective permissions of an item can come from two sources: permissions set directly on the item itself or permissions that are inherited from the item's ancestors. Callers can differentiate if the permission is inherited or not by checking the inheritedFrom property.This property is an ItemReference resource referencing the ancestor that the permission is inherited from.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of permission
+     * @return a CompletableFuture of Permission
      * @see <a href="https://learn.microsoft.com/graph/api/permission-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a sharing permission by patching the permission resource. Only the roles property can be modified this way.
      * @param body The request body
-     * @return a CompletableFuture of permission
+     * @return a CompletableFuture of Permission
      * @see <a href="https://learn.microsoft.com/graph/api/permission-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a sharing permission by patching the permission resource. Only the roles property can be modified this way.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of permission
+     * @return a CompletableFuture of Permission
      * @see <a href="https://learn.microsoft.com/graph/api/permission-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

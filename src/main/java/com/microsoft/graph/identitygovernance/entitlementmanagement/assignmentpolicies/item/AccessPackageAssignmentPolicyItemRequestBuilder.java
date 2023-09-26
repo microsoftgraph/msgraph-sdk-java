@@ -91,7 +91,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     }
     /**
      * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
-     * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @return a CompletableFuture of AccessPackageAssignmentPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -101,7 +101,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     /**
      * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @return a CompletableFuture of AccessPackageAssignmentPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property assignmentPolicies in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @return a CompletableFuture of AccessPackageAssignmentPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentPolicy> put(@jakarta.annotation.Nonnull final AccessPackageAssignmentPolicy body) {
@@ -125,7 +125,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * Update the navigation property assignmentPolicies in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @return a CompletableFuture of AccessPackageAssignmentPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentPolicy> put(@jakarta.annotation.Nonnull final AccessPackageAssignmentPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {

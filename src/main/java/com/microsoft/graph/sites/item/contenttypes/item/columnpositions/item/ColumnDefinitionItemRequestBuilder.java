@@ -38,7 +38,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Column order information in a content type.
-     * @return a CompletableFuture of columnDefinition
+     * @return a CompletableFuture of ColumnDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinition> get() {
@@ -47,7 +47,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Column order information in a content type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of columnDefinition
+     * @return a CompletableFuture of ColumnDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

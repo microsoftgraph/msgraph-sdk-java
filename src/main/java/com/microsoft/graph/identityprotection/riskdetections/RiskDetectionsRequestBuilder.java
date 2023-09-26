@@ -60,7 +60,7 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the riskDetection objects and their properties.
-     * @return a CompletableFuture of riskDetectionCollectionResponse
+     * @return a CompletableFuture of RiskDetectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the riskDetection objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskDetectionCollectionResponse
+     * @return a CompletableFuture of RiskDetectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to riskDetections for identityProtection
      * @param body The request body
-     * @return a CompletableFuture of riskDetection
+     * @return a CompletableFuture of RiskDetection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetection> post(@jakarta.annotation.Nonnull final RiskDetection body) {
@@ -94,7 +94,7 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to riskDetections for identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskDetection
+     * @return a CompletableFuture of RiskDetection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetection> post(@jakarta.annotation.Nonnull final RiskDetection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a riskDetectionsRequestBuilder
+     * @return a RiskDetectionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RiskDetectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

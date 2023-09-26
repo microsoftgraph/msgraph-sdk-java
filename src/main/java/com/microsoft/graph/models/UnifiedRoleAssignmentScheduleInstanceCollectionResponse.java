@@ -13,7 +13,7 @@ public class UnifiedRoleAssignmentScheduleInstanceCollectionResponse extends Bas
      */
     private java.util.List<UnifiedRoleAssignmentScheduleInstance> value;
     /**
-     * Instantiates a new unifiedRoleAssignmentScheduleInstanceCollectionResponse and sets the default values.
+     * Instantiates a new UnifiedRoleAssignmentScheduleInstanceCollectionResponse and sets the default values.
      */
     public UnifiedRoleAssignmentScheduleInstanceCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class UnifiedRoleAssignmentScheduleInstanceCollectionResponse extends Bas
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleAssignmentScheduleInstanceCollectionResponse
+     * @return a UnifiedRoleAssignmentScheduleInstanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleAssignmentScheduleInstanceCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class UnifiedRoleAssignmentScheduleInstanceCollectionResponse extends Bas
     }
     /**
      * Gets the value property value. The value property
-     * @return a unifiedRoleAssignmentScheduleInstance
+     * @return a java.util.List<UnifiedRoleAssignmentScheduleInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignmentScheduleInstance> getValue() {

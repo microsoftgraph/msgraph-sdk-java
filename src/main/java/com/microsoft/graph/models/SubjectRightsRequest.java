@@ -86,11 +86,11 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * The mailboxlocations property
+     * The mailboxLocations property
      */
-    private SubjectRightsRequestMailboxLocation mailboxlocations;
+    private SubjectRightsRequestMailboxLocation mailboxLocations;
     /**
-     * List of notes associcated with the request.
+     * List of notes associated with the request.
      */
     private java.util.List<AuthoredNote> notes;
     /**
@@ -98,19 +98,19 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     private Boolean pauseAfterEstimate;
     /**
-     * List of regulations that this request will fulfill.
+     * List of regulations that this request fulfills.
      */
     private java.util.List<String> regulations;
     /**
-     * The sitelocations property
+     * The siteLocations property
      */
-    private SubjectRightsRequestSiteLocation sitelocations;
+    private SubjectRightsRequestSiteLocation siteLocations;
     /**
      * Information about the different stages for the request.
      */
     private java.util.List<SubjectRightsRequestStageDetail> stages;
     /**
-     * The status of the request.. Possible values are: active, closed, unknownFutureValue.
+     * The status of the request. Possible values are: active, closed, unknownFutureValue.
      */
     private SubjectRightsRequestStatus status;
     /**
@@ -122,7 +122,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     private SubjectRightsRequestType type;
     /**
-     * Instantiates a new subjectRightsRequest and sets the default values.
+     * Instantiates a new SubjectRightsRequest and sets the default values.
      */
     public SubjectRightsRequest() {
         super();
@@ -130,7 +130,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a subjectRightsRequest
+     * @return a SubjectRightsRequest
      */
     @jakarta.annotation.Nonnull
     public static SubjectRightsRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -139,7 +139,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the approvers property value. The approvers property
-     * @return a user
+     * @return a java.util.List<User>
      */
     @jakarta.annotation.Nullable
     public java.util.List<User> getApprovers() {
@@ -147,7 +147,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the assignedTo property value. Identity that the request is assigned to.
-     * @return a identity
+     * @return a Identity
      */
     @jakarta.annotation.Nullable
     public Identity getAssignedTo() {
@@ -163,7 +163,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the collaborators property value. The collaborators property
-     * @return a user
+     * @return a java.util.List<User>
      */
     @jakarta.annotation.Nullable
     public java.util.List<User> getCollaborators() {
@@ -171,7 +171,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the contentQuery property value. The contentQuery property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentQuery() {
@@ -179,7 +179,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Identity information for the entity that created the request.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -195,7 +195,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the dataSubject property value. Information about the data subject.
-     * @return a dataSubject
+     * @return a DataSubject
      */
     @jakarta.annotation.Nullable
     public DataSubject getDataSubject() {
@@ -203,7 +203,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
-     * @return a dataSubjectType
+     * @return a DataSubjectType
      */
     @jakarta.annotation.Nullable
     public DataSubjectType getDataSubjectType() {
@@ -211,7 +211,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description for the request.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -219,7 +219,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the request.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -227,7 +227,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the externalId property value. The externalId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -259,11 +259,11 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         deserializerMap.put("internalDueDateTime", (n) -> { this.setInternalDueDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("mailboxlocations", (n) -> { this.setMailboxlocations(n.getObjectValue(SubjectRightsRequestMailboxLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("mailboxLocations", (n) -> { this.setMailboxLocations(n.getObjectValue(SubjectRightsRequestMailboxLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getCollectionOfObjectValues(AuthoredNote::createFromDiscriminatorValue)); });
         deserializerMap.put("pauseAfterEstimate", (n) -> { this.setPauseAfterEstimate(n.getBooleanValue()); });
         deserializerMap.put("regulations", (n) -> { this.setRegulations(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("sitelocations", (n) -> { this.setSitelocations(n.getObjectValue(SubjectRightsRequestSiteLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("siteLocations", (n) -> { this.setSiteLocations(n.getObjectValue(SubjectRightsRequestSiteLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("stages", (n) -> { this.setStages(n.getCollectionOfObjectValues(SubjectRightsRequestStageDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SubjectRightsRequestStatus.class)); });
         deserializerMap.put("team", (n) -> { this.setTeam(n.getObjectValue(Team::createFromDiscriminatorValue)); });
@@ -272,7 +272,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the history property value. Collection of history change events.
-     * @return a subjectRightsRequestHistory
+     * @return a java.util.List<SubjectRightsRequestHistory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectRightsRequestHistory> getHistory() {
@@ -280,7 +280,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the includeAllVersions property value. The includeAllVersions property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIncludeAllVersions() {
@@ -288,7 +288,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the includeAuthoredContent property value. The includeAuthoredContent property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIncludeAuthoredContent() {
@@ -296,7 +296,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the insight property value. Insight about the request.
-     * @return a subjectRightsRequestDetail
+     * @return a SubjectRightsRequestDetail
      */
     @jakarta.annotation.Nullable
     public SubjectRightsRequestDetail getInsight() {
@@ -312,7 +312,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Identity information for the entity that last modified the request.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -327,16 +327,16 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         return this.lastModifiedDateTime;
     }
     /**
-     * Gets the mailboxlocations property value. The mailboxlocations property
-     * @return a subjectRightsRequestMailboxLocation
+     * Gets the mailboxLocations property value. The mailboxLocations property
+     * @return a SubjectRightsRequestMailboxLocation
      */
     @jakarta.annotation.Nullable
-    public SubjectRightsRequestMailboxLocation getMailboxlocations() {
-        return this.mailboxlocations;
+    public SubjectRightsRequestMailboxLocation getMailboxLocations() {
+        return this.mailboxLocations;
     }
     /**
-     * Gets the notes property value. List of notes associcated with the request.
-     * @return a authoredNote
+     * Gets the notes property value. List of notes associated with the request.
+     * @return a java.util.List<AuthoredNote>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthoredNote> getNotes() {
@@ -344,39 +344,39 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the pauseAfterEstimate property value. The pauseAfterEstimate property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPauseAfterEstimate() {
         return this.pauseAfterEstimate;
     }
     /**
-     * Gets the regulations property value. List of regulations that this request will fulfill.
-     * @return a string
+     * Gets the regulations property value. List of regulations that this request fulfills.
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRegulations() {
         return this.regulations;
     }
     /**
-     * Gets the sitelocations property value. The sitelocations property
-     * @return a subjectRightsRequestSiteLocation
+     * Gets the siteLocations property value. The siteLocations property
+     * @return a SubjectRightsRequestSiteLocation
      */
     @jakarta.annotation.Nullable
-    public SubjectRightsRequestSiteLocation getSitelocations() {
-        return this.sitelocations;
+    public SubjectRightsRequestSiteLocation getSiteLocations() {
+        return this.siteLocations;
     }
     /**
      * Gets the stages property value. Information about the different stages for the request.
-     * @return a subjectRightsRequestStageDetail
+     * @return a java.util.List<SubjectRightsRequestStageDetail>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectRightsRequestStageDetail> getStages() {
         return this.stages;
     }
     /**
-     * Gets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
-     * @return a subjectRightsRequestStatus
+     * Gets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
+     * @return a SubjectRightsRequestStatus
      */
     @jakarta.annotation.Nullable
     public SubjectRightsRequestStatus getStatus() {
@@ -384,7 +384,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the team property value. Information about the Microsoft Teams team that was created for the request.
-     * @return a team
+     * @return a Team
      */
     @jakarta.annotation.Nullable
     public Team getTeam() {
@@ -392,7 +392,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
-     * @return a subjectRightsRequestType
+     * @return a SubjectRightsRequestType
      */
     @jakarta.annotation.Nullable
     public SubjectRightsRequestType getType() {
@@ -424,11 +424,11 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("internalDueDateTime", this.getInternalDueDateTime());
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
-        writer.writeObjectValue("mailboxlocations", this.getMailboxlocations());
+        writer.writeObjectValue("mailboxLocations", this.getMailboxLocations());
         writer.writeCollectionOfObjectValues("notes", this.getNotes());
         writer.writeBooleanValue("pauseAfterEstimate", this.getPauseAfterEstimate());
         writer.writeCollectionOfPrimitiveValues("regulations", this.getRegulations());
-        writer.writeObjectValue("sitelocations", this.getSitelocations());
+        writer.writeObjectValue("siteLocations", this.getSiteLocations());
         writer.writeCollectionOfObjectValues("stages", this.getStages());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeObjectValue("team", this.getTeam());
@@ -568,14 +568,14 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         this.lastModifiedDateTime = value;
     }
     /**
-     * Sets the mailboxlocations property value. The mailboxlocations property
-     * @param value Value to set for the mailboxlocations property.
+     * Sets the mailboxLocations property value. The mailboxLocations property
+     * @param value Value to set for the mailboxLocations property.
      */
-    public void setMailboxlocations(@jakarta.annotation.Nullable final SubjectRightsRequestMailboxLocation value) {
-        this.mailboxlocations = value;
+    public void setMailboxLocations(@jakarta.annotation.Nullable final SubjectRightsRequestMailboxLocation value) {
+        this.mailboxLocations = value;
     }
     /**
-     * Sets the notes property value. List of notes associcated with the request.
+     * Sets the notes property value. List of notes associated with the request.
      * @param value Value to set for the notes property.
      */
     public void setNotes(@jakarta.annotation.Nullable final java.util.List<AuthoredNote> value) {
@@ -589,18 +589,18 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         this.pauseAfterEstimate = value;
     }
     /**
-     * Sets the regulations property value. List of regulations that this request will fulfill.
+     * Sets the regulations property value. List of regulations that this request fulfills.
      * @param value Value to set for the regulations property.
      */
     public void setRegulations(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.regulations = value;
     }
     /**
-     * Sets the sitelocations property value. The sitelocations property
-     * @param value Value to set for the sitelocations property.
+     * Sets the siteLocations property value. The siteLocations property
+     * @param value Value to set for the siteLocations property.
      */
-    public void setSitelocations(@jakarta.annotation.Nullable final SubjectRightsRequestSiteLocation value) {
-        this.sitelocations = value;
+    public void setSiteLocations(@jakarta.annotation.Nullable final SubjectRightsRequestSiteLocation value) {
+        this.siteLocations = value;
     }
     /**
      * Sets the stages property value. Information about the different stages for the request.
@@ -610,7 +610,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         this.stages = value;
     }
     /**
-     * Sets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
+     * Sets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final SubjectRightsRequestStatus value) {

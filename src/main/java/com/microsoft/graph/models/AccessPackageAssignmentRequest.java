@@ -54,7 +54,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     private String status;
     /**
-     * Instantiates a new accessPackageAssignmentRequest and sets the default values.
+     * Instantiates a new AccessPackageAssignmentRequest and sets the default values.
      */
     public AccessPackageAssignmentRequest() {
         super();
@@ -62,7 +62,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAssignmentRequest
+     * @return a AccessPackageAssignmentRequest
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackage property value. The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
-     * @return a accessPackage
+     * @return a AccessPackage
      */
     @jakarta.annotation.Nullable
     public AccessPackage getAccessPackage() {
@@ -79,7 +79,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the answers property value. Answers provided by the requestor to accessPackageQuestions asked of them at the time of request.
-     * @return a accessPackageAnswer
+     * @return a java.util.List<AccessPackageAnswer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAnswer> getAnswers() {
@@ -87,7 +87,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the assignment property value. For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created.  For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
-     * @return a accessPackageAssignment
+     * @return a AccessPackageAssignment
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignment getAssignment() {
@@ -111,7 +111,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the customExtensionCalloutInstances property value. Information about all the custom extension calls that were made during the access package assignment workflow.
-     * @return a customExtensionCalloutInstance
+     * @return a java.util.List<CustomExtensionCalloutInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionCalloutInstance> getCustomExtensionCalloutInstances() {
@@ -139,7 +139,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestor property value. The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
-     * @return a accessPackageSubject
+     * @return a AccessPackageSubject
      */
     @jakarta.annotation.Nullable
     public AccessPackageSubject getRequestor() {
@@ -147,7 +147,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. A request from the user themselves would have requestType of userAdd, userUpdate or userRemove. This property cannot be changed once set.
-     * @return a accessPackageRequestType
+     * @return a AccessPackageRequestType
      */
     @jakarta.annotation.Nullable
     public AccessPackageRequestType getRequestType() {
@@ -155,7 +155,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
-     * @return a entitlementManagementSchedule
+     * @return a EntitlementManagementSchedule
      */
     @jakarta.annotation.Nullable
     public EntitlementManagementSchedule getSchedule() {
@@ -163,7 +163,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq).
-     * @return a accessPackageRequestState
+     * @return a AccessPackageRequestState
      */
     @jakarta.annotation.Nullable
     public AccessPackageRequestState getState() {
@@ -171,7 +171,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. More information on the request processing status. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {

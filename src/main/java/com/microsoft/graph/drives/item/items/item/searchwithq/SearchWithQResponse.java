@@ -15,7 +15,7 @@ public class SearchWithQResponse extends BaseCollectionPaginationCountResponse i
      */
     private java.util.List<DriveItem> value;
     /**
-     * Instantiates a new searchWithQResponse and sets the default values.
+     * Instantiates a new SearchWithQResponse and sets the default values.
      */
     public SearchWithQResponse() {
         super();
@@ -23,7 +23,7 @@ public class SearchWithQResponse extends BaseCollectionPaginationCountResponse i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a searchWithQResponse
+     * @return a SearchWithQResponse
      */
     @jakarta.annotation.Nonnull
     public static SearchWithQResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class SearchWithQResponse extends BaseCollectionPaginationCountResponse i
     }
     /**
      * Gets the value property value. The value property
-     * @return a driveItem
+     * @return a java.util.List<DriveItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DriveItem> getValue() {

@@ -13,11 +13,11 @@ public class PlannerPlanDetails extends Entity implements Parsable {
      */
     private PlannerCategoryDescriptions categoryDescriptions;
     /**
-     * Set of user IDs that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required for them to access the plan owned by the group.
+     * Set of user IDs that this plan is shared with. If you're using Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it isn't required for them to access the plan owned by the group.
      */
     private PlannerUserIds sharedWith;
     /**
-     * Instantiates a new plannerPlanDetails and sets the default values.
+     * Instantiates a new PlannerPlanDetails and sets the default values.
      */
     public PlannerPlanDetails() {
         super();
@@ -25,7 +25,7 @@ public class PlannerPlanDetails extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerPlanDetails
+     * @return a PlannerPlanDetails
      */
     @jakarta.annotation.Nonnull
     public static PlannerPlanDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class PlannerPlanDetails extends Entity implements Parsable {
     }
     /**
      * Gets the categoryDescriptions property value. An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan.
-     * @return a plannerCategoryDescriptions
+     * @return a PlannerCategoryDescriptions
      */
     @jakarta.annotation.Nullable
     public PlannerCategoryDescriptions getCategoryDescriptions() {
@@ -52,8 +52,8 @@ public class PlannerPlanDetails extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the sharedWith property value. Set of user IDs that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required for them to access the plan owned by the group.
-     * @return a plannerUserIds
+     * Gets the sharedWith property value. Set of user IDs that this plan is shared with. If you're using Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it isn't required for them to access the plan owned by the group.
+     * @return a PlannerUserIds
      */
     @jakarta.annotation.Nullable
     public PlannerUserIds getSharedWith() {
@@ -77,7 +77,7 @@ public class PlannerPlanDetails extends Entity implements Parsable {
         this.categoryDescriptions = value;
     }
     /**
-     * Sets the sharedWith property value. Set of user IDs that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required for them to access the plan owned by the group.
+     * Sets the sharedWith property value. Set of user IDs that this plan is shared with. If you're using Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it isn't required for them to access the plan owned by the group.
      * @param value Value to set for the sharedWith property.
      */
     public void setSharedWith(@jakarta.annotation.Nullable final PlannerUserIds value) {

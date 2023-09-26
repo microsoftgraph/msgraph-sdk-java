@@ -60,7 +60,7 @@ public class UsedRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Calculate and list the documents that a user has viewed or modified.  For the signed-in user:- This method includes documents that the user has modified; see example 1. - Using an $orderby query parameter on the lastAccessedDateTime property returns the most recently viewed documents that the user might or might not not have modified; see example 2. For other users, this method includes only documents that the user has modified.
-     * @return a CompletableFuture of usedInsightCollectionResponse
+     * @return a CompletableFuture of UsedInsightCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/insights-list-used?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class UsedRequestBuilder extends BaseRequestBuilder {
     /**
      * Calculate and list the documents that a user has viewed or modified.  For the signed-in user:- This method includes documents that the user has modified; see example 1. - Using an $orderby query parameter on the lastAccessedDateTime property returns the most recently viewed documents that the user might or might not not have modified; see example 2. For other users, this method includes only documents that the user has modified.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of usedInsightCollectionResponse
+     * @return a CompletableFuture of UsedInsightCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/insights-list-used?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class UsedRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to used for users
      * @param body The request body
-     * @return a CompletableFuture of usedInsight
+     * @return a CompletableFuture of UsedInsight
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UsedInsight> post(@jakarta.annotation.Nonnull final UsedInsight body) {
@@ -94,7 +94,7 @@ public class UsedRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to used for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of usedInsight
+     * @return a CompletableFuture of UsedInsight
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UsedInsight> post(@jakarta.annotation.Nonnull final UsedInsight body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class UsedRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a usedRequestBuilder
+     * @return a UsedRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UsedRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

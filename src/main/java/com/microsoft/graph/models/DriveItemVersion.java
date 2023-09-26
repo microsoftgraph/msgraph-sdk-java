@@ -11,13 +11,13 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
     /**
      * The content stream for this version of the item.
      */
-    private byte[] content;
+    private Base64url content;
     /**
      * Indicates the size of the content stream for this version of the item.
      */
     private Long size;
     /**
-     * Instantiates a new driveItemVersion and sets the default values.
+     * Instantiates a new DriveItemVersion and sets the default values.
      */
     public DriveItemVersion() {
         super();
@@ -26,7 +26,7 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a driveItemVersion
+     * @return a DriveItemVersion
      */
     @jakarta.annotation.Nonnull
     public static DriveItemVersion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,10 +35,10 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
     }
     /**
      * Gets the content property value. The content stream for this version of the item.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getContent() {
+    public Base64url getContent() {
         return this.content;
     }
     /**
@@ -48,13 +48,13 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("size", (n) -> { this.setSize(n.getLongValue()); });
         return deserializerMap;
     }
     /**
      * Gets the size property value. Indicates the size of the content stream for this version of the item.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
@@ -67,14 +67,14 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeByteArrayValue("content", this.getContent());
+        writer.writeObjectValue("content", this.getContent());
         writer.writeLongValue("size", this.getSize());
     }
     /**
      * Sets the content property value. The content stream for this version of the item.
      * @param value Value to set for the content property.
      */
-    public void setContent(@jakarta.annotation.Nullable final byte[] value) {
+    public void setContent(@jakarta.annotation.Nullable final Base64url value) {
         this.content = value;
     }
     /**

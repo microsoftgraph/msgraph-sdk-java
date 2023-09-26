@@ -67,7 +67,7 @@ public class ExternalGroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get an externalGroup object.
-     * @return a CompletableFuture of externalGroup
+     * @return a CompletableFuture of ExternalGroup
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class ExternalGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get an externalGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of externalGroup
+     * @return a CompletableFuture of ExternalGroup
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class ExternalGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an externalGroup object.
      * @param body The request body
-     * @return a CompletableFuture of externalGroup
+     * @return a CompletableFuture of ExternalGroup
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class ExternalGroupItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an externalGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of externalGroup
+     * @return a CompletableFuture of ExternalGroup
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

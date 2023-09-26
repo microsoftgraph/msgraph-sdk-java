@@ -38,7 +38,7 @@ public class BetaInvRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action beta_Inv
      * @param body The request body
-     * @return a CompletableFuture of workbookFunctionResult
+     * @return a CompletableFuture of WorkbookFunctionResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookFunctionResult> post(@jakarta.annotation.Nonnull final BetaInvPostRequestBody body) {
@@ -48,7 +48,7 @@ public class BetaInvRequestBuilder extends BaseRequestBuilder {
      * Invoke action beta_Inv
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookFunctionResult
+     * @return a CompletableFuture of WorkbookFunctionResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookFunctionResult> post(@jakarta.annotation.Nonnull final BetaInvPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

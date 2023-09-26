@@ -17,7 +17,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      */
     private java.util.List<Simulation> simulations;
     /**
-     * Instantiates a new attackSimulationRoot and sets the default values.
+     * Instantiates a new AttackSimulationRoot and sets the default values.
      */
     public AttackSimulationRoot() {
         super();
@@ -25,7 +25,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attackSimulationRoot
+     * @return a AttackSimulationRoot
      */
     @jakarta.annotation.Nonnull
     public static AttackSimulationRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     }
     /**
      * Gets the simulationAutomations property value. Represents simulation automation created to run on a tenant.
-     * @return a simulationAutomation
+     * @return a java.util.List<SimulationAutomation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SimulationAutomation> getSimulationAutomations() {
@@ -53,7 +53,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     }
     /**
      * Gets the simulations property value. Represents an attack simulation training campaign in a tenant.
-     * @return a simulation
+     * @return a java.util.List<Simulation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Simulation> getSimulations() {

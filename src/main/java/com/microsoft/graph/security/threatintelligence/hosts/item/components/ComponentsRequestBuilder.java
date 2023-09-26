@@ -59,7 +59,7 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of hostComponent resources.
-     * @return a CompletableFuture of hostComponentCollectionResponse
+     * @return a CompletableFuture of HostComponentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-components?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of hostComponent resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostComponentCollectionResponse
+     * @return a CompletableFuture of HostComponentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-components?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a componentsRequestBuilder
+     * @return a ComponentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ComponentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

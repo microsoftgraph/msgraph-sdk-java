@@ -37,7 +37,7 @@ public class UnfavoriteRequestBuilder extends BaseRequestBuilder {
     /**
      * Remove the favorite status of serviceUpdateMessages for the signed in user.
      * @param body The request body
-     * @return a CompletableFuture of unfavoriteResponse
+     * @return a CompletableFuture of UnfavoriteResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-unfavorite?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class UnfavoriteRequestBuilder extends BaseRequestBuilder {
      * Remove the favorite status of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unfavoriteResponse
+     * @return a CompletableFuture of UnfavoriteResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-unfavorite?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class UnfavoriteRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a unfavoriteRequestBuilder
+     * @return a UnfavoriteRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UnfavoriteRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -45,7 +45,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      */
     private Boolean showValue;
     /**
-     * Instantiates a new workbookChartDataLabels and sets the default values.
+     * Instantiates a new WorkbookChartDataLabels and sets the default values.
      */
     public WorkbookChartDataLabels() {
         super();
@@ -53,7 +53,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookChartDataLabels
+     * @return a WorkbookChartDataLabels
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartDataLabels createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -80,7 +80,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
     }
     /**
      * Gets the format property value. Represents the format of chart data labels, which includes fill and font formatting. Read-only.
-     * @return a workbookChartDataLabelFormat
+     * @return a WorkbookChartDataLabelFormat
      */
     @jakarta.annotation.Nullable
     public WorkbookChartDataLabelFormat getFormat() {
@@ -88,7 +88,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
     }
     /**
      * Gets the position property value. DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPosition() {
@@ -96,7 +96,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
     }
     /**
      * Gets the separator property value. String representing the separator used for the data labels on a chart.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSeparator() {
@@ -104,7 +104,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
     }
     /**
      * Gets the showBubbleSize property value. Boolean value representing if the data label bubble size is visible or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowBubbleSize() {
@@ -112,7 +112,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
     }
     /**
      * Gets the showCategoryName property value. Boolean value representing if the data label category name is visible or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowCategoryName() {
@@ -120,7 +120,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
     }
     /**
      * Gets the showLegendKey property value. Boolean value representing if the data label legend key is visible or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowLegendKey() {
@@ -128,7 +128,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
     }
     /**
      * Gets the showPercentage property value. Boolean value representing if the data label percentage is visible or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowPercentage() {
@@ -136,7 +136,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
     }
     /**
      * Gets the showSeriesName property value. Boolean value representing if the data label series name is visible or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowSeriesName() {
@@ -144,7 +144,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
     }
     /**
      * Gets the showValue property value. Boolean value representing if the data label value is visible or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowValue() {

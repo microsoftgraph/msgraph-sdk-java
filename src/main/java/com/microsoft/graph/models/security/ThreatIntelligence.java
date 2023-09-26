@@ -50,7 +50,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
      */
     private java.util.List<Vulnerability> vulnerabilities;
     /**
-     * Instantiates a new threatIntelligence and sets the default values.
+     * Instantiates a new ThreatIntelligence and sets the default values.
      */
     public ThreatIntelligence() {
         super();
@@ -58,7 +58,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a threatIntelligence
+     * @return a ThreatIntelligence
      */
     @jakarta.annotation.Nonnull
     public static ThreatIntelligence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the articleIndicators property value. Refers to indicators of threat or compromise highlighted in an microsoft.graph.security.article.Note: List retrieval is not yet supported.
-     * @return a articleIndicator
+     * @return a java.util.List<ArticleIndicator>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ArticleIndicator> getArticleIndicators() {
@@ -75,7 +75,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the articles property value. A list of article objects.
-     * @return a article
+     * @return a java.util.List<Article>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Article> getArticles() {
@@ -102,7 +102,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the hostComponents property value. Retrieve details about microsoft.graph.security.hostComponent objects.Note: List retrieval is not yet supported.
-     * @return a hostComponent
+     * @return a java.util.List<HostComponent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostComponent> getHostComponents() {
@@ -110,7 +110,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the hostCookies property value. Retrieve details about microsoft.graph.security.hostCookie objects.Note: List retrieval is not yet supported.
-     * @return a hostCookie
+     * @return a java.util.List<HostCookie>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostCookie> getHostCookies() {
@@ -118,7 +118,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the hosts property value. Refers to microsoft.graph.security.host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
-     * @return a host
+     * @return a java.util.List<Host>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Host> getHosts() {
@@ -126,7 +126,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the hostTrackers property value. Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
-     * @return a hostTracker
+     * @return a java.util.List<HostTracker>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostTracker> getHostTrackers() {
@@ -134,7 +134,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the intelligenceProfileIndicators property value. The intelligenceProfileIndicators property
-     * @return a intelligenceProfileIndicator
+     * @return a java.util.List<IntelligenceProfileIndicator>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntelligenceProfileIndicator> getIntelligenceProfileIndicators() {
@@ -142,7 +142,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the intelProfiles property value. A list of intelligenceProfile objects.
-     * @return a intelligenceProfile
+     * @return a java.util.List<IntelligenceProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntelligenceProfile> getIntelProfiles() {
@@ -150,7 +150,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the passiveDnsRecords property value. Retrieve details about microsoft.graph.security.passiveDnsRecord objects.Note: List retrieval is not yet supported.
-     * @return a passiveDnsRecord
+     * @return a java.util.List<PassiveDnsRecord>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PassiveDnsRecord> getPassiveDnsRecords() {
@@ -158,7 +158,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
     }
     /**
      * Gets the vulnerabilities property value. Retrieve details about microsoft.graph.security.vulnerabilities.Note: List retrieval is not yet supported.
-     * @return a vulnerability
+     * @return a java.util.List<Vulnerability>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Vulnerability> getVulnerabilities() {

@@ -66,7 +66,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of subjectRightsRequest objects and their properties.
-     * @return a CompletableFuture of subjectRightsRequestCollectionResponse
+     * @return a CompletableFuture of SubjectRightsRequestCollectionResponse
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-list?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of subjectRightsRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subjectRightsRequestCollectionResponse
+     * @return a CompletableFuture of SubjectRightsRequestCollectionResponse
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-list?view=graph-rest-1.0">Find more info here</a>
@@ -96,7 +96,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new subjectRightsRequest object.
      * @param body The request body
-     * @return a CompletableFuture of subjectRightsRequest
+     * @return a CompletableFuture of SubjectRightsRequest
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-post?view=graph-rest-1.0">Find more info here</a>
@@ -110,7 +110,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
      * Create a new subjectRightsRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subjectRightsRequest
+     * @return a CompletableFuture of SubjectRightsRequest
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-post?view=graph-rest-1.0">Find more info here</a>
@@ -201,7 +201,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a subjectRightsRequestsRequestBuilder
+     * @return a SubjectRightsRequestsRequestBuilder
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */

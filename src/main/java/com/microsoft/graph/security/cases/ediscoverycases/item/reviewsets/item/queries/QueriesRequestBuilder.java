@@ -60,7 +60,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of queries associated with an eDiscovery review set.
-     * @return a CompletableFuture of ediscoveryReviewSetQueryCollectionResponse
+     * @return a CompletableFuture of EdiscoveryReviewSetQueryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-list-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of queries associated with an eDiscovery review set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryReviewSetQueryCollectionResponse
+     * @return a CompletableFuture of EdiscoveryReviewSetQueryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-list-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new ediscoveryReviewSetQuery object.
      * @param body The request body
-     * @return a CompletableFuture of ediscoveryReviewSetQuery
+     * @return a CompletableFuture of EdiscoveryReviewSetQuery
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-post-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
      * Create a new ediscoveryReviewSetQuery object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryReviewSetQuery
+     * @return a CompletableFuture of EdiscoveryReviewSetQuery
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-post-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a queriesRequestBuilder
+     * @return a QueriesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public QueriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

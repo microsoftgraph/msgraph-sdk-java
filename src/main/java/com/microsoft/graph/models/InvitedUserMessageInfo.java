@@ -14,7 +14,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
+     * Additional recipients the invitation message should be sent to. Currently only one additional recipient is supported.
      */
     private java.util.List<Recipient> ccRecipients;
     /**
@@ -30,7 +30,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new invitedUserMessageInfo and sets the default values.
+     * Instantiates a new InvitedUserMessageInfo and sets the default values.
      */
     public InvitedUserMessageInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a invitedUserMessageInfo
+     * @return a InvitedUserMessageInfo
      */
     @jakarta.annotation.Nonnull
     public static InvitedUserMessageInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
         return new InvitedUserMessageInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -54,8 +54,8 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
-     * @return a recipient
+     * Gets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only one additional recipient is supported.
+     * @return a java.util.List<Recipient>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getCcRecipients() {
@@ -63,7 +63,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomizedMessageBody() {
@@ -84,7 +84,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the messageLanguage property value. The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessageLanguage() {
@@ -92,7 +92,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,14 +111,14 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
+     * Sets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only one additional recipient is supported.
      * @param value Value to set for the ccRecipients property.
      */
     public void setCcRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {

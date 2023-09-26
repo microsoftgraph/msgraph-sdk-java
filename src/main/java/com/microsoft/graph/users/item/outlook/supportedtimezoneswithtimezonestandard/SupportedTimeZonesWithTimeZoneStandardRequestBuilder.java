@@ -25,9 +25,9 @@ public class SupportedTimeZonesWithTimeZoneStandardRequestBuilder extends BaseRe
      * @param requestAdapter The request adapter to use to execute the requests.
      * @param TimeZoneStandard Usage: TimeZoneStandard='{TimeZoneStandard}'
      */
-    public SupportedTimeZonesWithTimeZoneStandardRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String timeZoneStandard) {
+    public SupportedTimeZonesWithTimeZoneStandardRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String TimeZoneStandard) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/supportedTimeZones(TimeZoneStandard='{TimeZoneStandard}'){?%24top,%24skip,%24search,%24filter,%24count}", pathParameters);
-        this.pathParameters.put("TimeZoneStandard", timeZoneStandard);
+        this.pathParameters.put("TimeZoneStandard", TimeZoneStandard);
     }
     /**
      * Instantiates a new SupportedTimeZonesWithTimeZoneStandardRequestBuilder and sets the default values.
@@ -39,7 +39,7 @@ public class SupportedTimeZonesWithTimeZoneStandardRequestBuilder extends BaseRe
     }
     /**
      * Invoke function supportedTimeZones
-     * @return a CompletableFuture of supportedTimeZonesWithTimeZoneStandardResponse
+     * @return a CompletableFuture of SupportedTimeZonesWithTimeZoneStandardResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SupportedTimeZonesWithTimeZoneStandardResponse> get() {
@@ -48,7 +48,7 @@ public class SupportedTimeZonesWithTimeZoneStandardRequestBuilder extends BaseRe
     /**
      * Invoke function supportedTimeZones
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of supportedTimeZonesWithTimeZoneStandardResponse
+     * @return a CompletableFuture of SupportedTimeZonesWithTimeZoneStandardResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SupportedTimeZonesWithTimeZoneStandardResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class SupportedTimeZonesWithTimeZoneStandardRequestBuilder extends BaseRe
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a supportedTimeZonesWithTimeZoneStandardRequestBuilder
+     * @return a SupportedTimeZonesWithTimeZoneStandardRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SupportedTimeZonesWithTimeZoneStandardRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -98,7 +98,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new entity and sets the default values.
+     * Instantiates a new Entity and sets the default values.
      */
     public Entity() {
         this.setAdditionalData(new HashMap<>());
@@ -106,7 +106,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a entity
+     * @return a Entity
      */
     @jakarta.annotation.Nonnull
     public static Entity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -114,13 +114,13 @@ public class Entity implements AdditionalDataHolder, Parsable {
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
-            final Entity CreateFromDiscriminatorValue_0_result = createFromDiscriminatorValue_0(mappingValue);
-            if (CreateFromDiscriminatorValue_0_result != null) {
-                return CreateFromDiscriminatorValue_0_result;
+            final Entity createFromDiscriminatorValue_0_result = createFromDiscriminatorValue_0(mappingValue);
+            if (createFromDiscriminatorValue_0_result != null) {
+                return createFromDiscriminatorValue_0_result;
             }
-            final Entity CreateFromDiscriminatorValue_1_result = createFromDiscriminatorValue_1(mappingValue);
-            if (CreateFromDiscriminatorValue_1_result != null) {
-                return CreateFromDiscriminatorValue_1_result;
+            final Entity createFromDiscriminatorValue_1_result = createFromDiscriminatorValue_1(mappingValue);
+            if (createFromDiscriminatorValue_1_result != null) {
+                return createFromDiscriminatorValue_1_result;
             }
         }
         return new Entity();
@@ -128,7 +128,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param discriminatorValue Discriminator value from the payload
-     * @return a entity
+     * @return a Entity
      */
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_0(@jakarta.annotation.Nonnull final String discriminatorValue) {
@@ -601,6 +601,17 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.printUsage": return new PrintUsage();
             case "#microsoft.graph.printUsageByPrinter": return new PrintUsageByPrinter();
             case "#microsoft.graph.printUsageByUser": return new PrintUsageByUser();
+            case "#microsoft.graph.privilegedAccessGroup": return new PrivilegedAccessGroup();
+            case "#microsoft.graph.privilegedAccessGroupAssignmentSchedule": return new PrivilegedAccessGroupAssignmentSchedule();
+            case "#microsoft.graph.privilegedAccessGroupAssignmentScheduleInstance": return new PrivilegedAccessGroupAssignmentScheduleInstance();
+            case "#microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest": return new PrivilegedAccessGroupAssignmentScheduleRequest();
+            case "#microsoft.graph.privilegedAccessGroupEligibilitySchedule": return new PrivilegedAccessGroupEligibilitySchedule();
+            case "#microsoft.graph.privilegedAccessGroupEligibilityScheduleInstance": return new PrivilegedAccessGroupEligibilityScheduleInstance();
+            case "#microsoft.graph.privilegedAccessGroupEligibilityScheduleRequest": return new PrivilegedAccessGroupEligibilityScheduleRequest();
+            case "#microsoft.graph.privilegedAccessRoot": return new PrivilegedAccessRoot();
+            case "#microsoft.graph.privilegedAccessSchedule": return new PrivilegedAccessSchedule();
+            case "#microsoft.graph.privilegedAccessScheduleInstance": return new PrivilegedAccessScheduleInstance();
+            case "#microsoft.graph.privilegedAccessScheduleRequest": return new PrivilegedAccessScheduleRequest();
             case "#microsoft.graph.profilePhoto": return new ProfilePhoto();
             case "#microsoft.graph.provisioningObjectSummary": return new ProvisioningObjectSummary();
             case "#microsoft.graph.rbacApplication": return new RbacApplication();
@@ -608,6 +619,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.referenceAttachment": return new ReferenceAttachment();
             case "#microsoft.graph.remoteAssistancePartner": return new RemoteAssistancePartner();
             case "#microsoft.graph.request": return new Request();
+            case "#microsoft.graph.resellerDelegatedAdminRelationship": return new ResellerDelegatedAdminRelationship();
             case "#microsoft.graph.resourceOperation": return new ResourceOperation();
             case "#microsoft.graph.resourceSpecificPermissionGrant": return new ResourceSpecificPermissionGrant();
             case "#microsoft.graph.richLongRunningOperation": return new RichLongRunningOperation();
@@ -621,6 +633,17 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.room": return new Room();
             case "#microsoft.graph.roomList": return new RoomList();
             case "#microsoft.graph.samlOrWsFedExternalDomainFederation": return new SamlOrWsFedExternalDomainFederation();
+        }
+        return null;
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param discriminatorValue Discriminator value from the payload
+     * @return a Entity
+     */
+    @jakarta.annotation.Nonnull
+    private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
+        switch (discriminatorValue) {
             case "#microsoft.graph.samlOrWsFedProvider": return new SamlOrWsFedProvider();
             case "#microsoft.graph.schedule": return new Schedule();
             case "#microsoft.graph.scheduleChangeRequest": return new ScheduleChangeRequest();
@@ -633,17 +656,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.secureScoreControlProfile": return new SecureScoreControlProfile();
             case "#microsoft.graph.security": return new Security();
             case "#microsoft.graph.security.alert": return new Alert();
-        }
-        return null;
-    }
-    /**
-     * Creates a new instance of the appropriate class based on discriminator value
-     * @param discriminatorValue Discriminator value from the payload
-     * @return a entity
-     */
-    @jakarta.annotation.Nonnull
-    private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
-        switch (discriminatorValue) {
             case "#microsoft.graph.security.article": return new Article();
             case "#microsoft.graph.security.articleIndicator": return new ArticleIndicator();
             case "#microsoft.graph.security.artifact": return new Artifact();
@@ -926,7 +938,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
         return null;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -946,7 +958,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. The unique identifier for an entity. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -954,7 +966,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -971,8 +983,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -34,7 +34,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      */
     private Integer similarityThreshold;
     /**
-     * Instantiates a new redundancyDetectionSettings and sets the default values.
+     * Instantiates a new RedundancyDetectionSettings and sets the default values.
      */
     public RedundancyDetectionSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a redundancyDetectionSettings
+     * @return a RedundancyDetectionSettings
      */
     @jakarta.annotation.Nonnull
     public static RedundancyDetectionSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
         return new RedundancyDetectionSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the isEnabled property value. Indicates whether email threading and near duplicate detection are enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -81,7 +81,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the maxWords property value. Specifies the maximum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaxWords() {
@@ -89,7 +89,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the minWords property value. Specifies the minimum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMinWords() {
@@ -97,7 +97,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the similarityThreshold property value. Specifies the similarity level for documents to be put in the same near duplicate set. To learn more, see Document and email similarity threshold.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSimilarityThreshold() {
@@ -125,8 +125,8 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

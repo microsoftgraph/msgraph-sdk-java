@@ -60,7 +60,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
     }
     /**
      * Get a list of certificateBasedAuthConfiguration objects.
-     * @return a CompletableFuture of certificateBasedAuthConfigurationCollectionResponse
+     * @return a CompletableFuture of CertificateBasedAuthConfigurationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
     /**
      * Get a list of certificateBasedAuthConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateBasedAuthConfigurationCollectionResponse
+     * @return a CompletableFuture of CertificateBasedAuthConfigurationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
     /**
      * Create a new certificateBasedAuthConfiguration object.
      * @param body The request body
-     * @return a CompletableFuture of certificateBasedAuthConfiguration
+     * @return a CompletableFuture of CertificateBasedAuthConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-post-certificatebasedauthconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
      * Create a new certificateBasedAuthConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateBasedAuthConfiguration
+     * @return a CompletableFuture of CertificateBasedAuthConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-post-certificatebasedauthconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a certificateBasedAuthConfigurationRequestBuilder
+     * @return a CertificateBasedAuthConfigurationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CertificateBasedAuthConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

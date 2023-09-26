@@ -60,7 +60,7 @@ public class ArticleIndicatorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of an articleIndicator object.
-     * @return a CompletableFuture of articleIndicatorCollectionResponse
+     * @return a CompletableFuture of ArticleIndicatorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ArticleIndicatorCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ArticleIndicatorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an articleIndicator object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of articleIndicatorCollectionResponse
+     * @return a CompletableFuture of ArticleIndicatorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ArticleIndicatorCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ArticleIndicatorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to articleIndicators for security
      * @param body The request body
-     * @return a CompletableFuture of articleIndicator
+     * @return a CompletableFuture of ArticleIndicator
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ArticleIndicator> post(@jakarta.annotation.Nonnull final ArticleIndicator body) {
@@ -92,7 +92,7 @@ public class ArticleIndicatorsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to articleIndicators for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of articleIndicator
+     * @return a CompletableFuture of ArticleIndicator
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ArticleIndicator> post(@jakarta.annotation.Nonnull final ArticleIndicator body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ArticleIndicatorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a articleIndicatorsRequestBuilder
+     * @return a ArticleIndicatorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ArticleIndicatorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

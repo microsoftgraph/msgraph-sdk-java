@@ -76,7 +76,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List all the categories associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
-     * @return a CompletableFuture of educationCategoryCollectionResponse
+     * @return a CompletableFuture of EducationCategoryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -86,7 +86,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * List all the categories associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationCategoryCollectionResponse
+     * @return a CompletableFuture of EducationCategoryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Add one or more existing educationCategory objects to the specified  educationAssignment. Only teachers can perform this operation.
      * @param body The request body
-     * @return a CompletableFuture of educationCategory
+     * @return a CompletableFuture of EducationCategory
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-post-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -111,7 +111,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
      * Add one or more existing educationCategory objects to the specified  educationAssignment. Only teachers can perform this operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationCategory
+     * @return a CompletableFuture of EducationCategory
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-post-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -187,7 +187,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a categoriesRequestBuilder
+     * @return a CategoriesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CategoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -15,7 +15,7 @@ public class AsHierarchyResponse extends BaseCollectionPaginationCountResponse i
      */
     private java.util.List<EdiscoveryReviewTag> value;
     /**
-     * Instantiates a new asHierarchyResponse and sets the default values.
+     * Instantiates a new AsHierarchyResponse and sets the default values.
      */
     public AsHierarchyResponse() {
         super();
@@ -23,7 +23,7 @@ public class AsHierarchyResponse extends BaseCollectionPaginationCountResponse i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a asHierarchyResponse
+     * @return a AsHierarchyResponse
      */
     @jakarta.annotation.Nonnull
     public static AsHierarchyResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class AsHierarchyResponse extends BaseCollectionPaginationCountResponse i
     }
     /**
      * Gets the value property value. The value property
-     * @return a ediscoveryReviewTag
+     * @return a java.util.List<EdiscoveryReviewTag>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewTag> getValue() {

@@ -60,7 +60,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
-     * @return a CompletableFuture of accessReviewHistoryDefinitionCollectionResponse
+     * @return a CompletableFuture of AccessReviewHistoryDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewHistoryDefinitionCollectionResponse
+     * @return a CompletableFuture of AccessReviewHistoryDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new accessReviewHistoryDefinition object.
      * @param body The request body
-     * @return a CompletableFuture of accessReviewHistoryDefinition
+     * @return a CompletableFuture of AccessReviewHistoryDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
      * Create a new accessReviewHistoryDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewHistoryDefinition
+     * @return a CompletableFuture of AccessReviewHistoryDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a historyDefinitionsRequestBuilder
+     * @return a HistoryDefinitionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HistoryDefinitionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

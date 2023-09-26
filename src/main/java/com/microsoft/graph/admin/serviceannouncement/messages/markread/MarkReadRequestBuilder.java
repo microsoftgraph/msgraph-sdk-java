@@ -37,7 +37,7 @@ public class MarkReadRequestBuilder extends BaseRequestBuilder {
     /**
      * Mark a list of serviceUpdateMessages as read for the signed in user.
      * @param body The request body
-     * @return a CompletableFuture of markReadResponse
+     * @return a CompletableFuture of MarkReadResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-markread?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class MarkReadRequestBuilder extends BaseRequestBuilder {
      * Mark a list of serviceUpdateMessages as read for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of markReadResponse
+     * @return a CompletableFuture of MarkReadResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-markread?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class MarkReadRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a markReadRequestBuilder
+     * @return a MarkReadRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MarkReadRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

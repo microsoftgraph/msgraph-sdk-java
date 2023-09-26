@@ -60,7 +60,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
-     * @return a CompletableFuture of agreementFileLocalizationCollectionResponse
+     * @return a CompletableFuture of AgreementFileLocalizationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalizationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
     /**
      * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementFileLocalizationCollectionResponse
+     * @return a CompletableFuture of AgreementFileLocalizationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalizationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new localized agreement file.
      * @param body The request body
-     * @return a CompletableFuture of agreementFileLocalization
+     * @return a CompletableFuture of AgreementFileLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/agreement-post-files?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
      * Create a new localized agreement file.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementFileLocalization
+     * @return a CompletableFuture of AgreementFileLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/agreement-post-files?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a filesRequestBuilder
+     * @return a FilesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

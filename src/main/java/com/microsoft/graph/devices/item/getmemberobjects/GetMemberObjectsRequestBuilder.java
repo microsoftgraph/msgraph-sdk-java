@@ -37,7 +37,7 @@ public class GetMemberObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. Note: Only users and role-enabled groups can be members of directory roles.
      * @param body The request body
-     * @return a CompletableFuture of getMemberObjectsResponse
+     * @return a CompletableFuture of GetMemberObjectsResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-getmemberobjects?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class GetMemberObjectsRequestBuilder extends BaseRequestBuilder {
      * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. Note: Only users and role-enabled groups can be members of directory roles.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getMemberObjectsResponse
+     * @return a CompletableFuture of GetMemberObjectsResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-getmemberobjects?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class GetMemberObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getMemberObjectsRequestBuilder
+     * @return a GetMemberObjectsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetMemberObjectsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

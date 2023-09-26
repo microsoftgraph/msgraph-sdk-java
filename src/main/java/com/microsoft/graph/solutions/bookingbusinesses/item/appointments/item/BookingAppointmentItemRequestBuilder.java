@@ -67,7 +67,7 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The startDateTime and endDateTime properties are always returned in UTC.
-     * @return a CompletableFuture of bookingAppointment
+     * @return a CompletableFuture of BookingAppointment
      * @see <a href="https://learn.microsoft.com/graph/api/bookingappointment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The startDateTime and endDateTime properties are always returned in UTC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingAppointment
+     * @return a CompletableFuture of BookingAppointment
      * @see <a href="https://learn.microsoft.com/graph/api/bookingappointment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a bookingAppointment object in the specified bookingBusiness.
      * @param body The request body
-     * @return a CompletableFuture of bookingAppointment
+     * @return a CompletableFuture of BookingAppointment
      * @see <a href="https://learn.microsoft.com/graph/api/bookingappointment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a bookingAppointment object in the specified bookingBusiness.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingAppointment
+     * @return a CompletableFuture of BookingAppointment
      * @see <a href="https://learn.microsoft.com/graph/api/bookingappointment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

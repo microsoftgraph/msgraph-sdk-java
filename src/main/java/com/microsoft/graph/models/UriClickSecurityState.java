@@ -43,7 +43,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      */
     private String verdict;
     /**
-     * Instantiates a new uriClickSecurityState and sets the default values.
+     * Instantiates a new UriClickSecurityState and sets the default values.
      */
     public UriClickSecurityState() {
         this.setAdditionalData(new HashMap<>());
@@ -51,7 +51,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a uriClickSecurityState
+     * @return a UriClickSecurityState
      */
     @jakarta.annotation.Nonnull
     public static UriClickSecurityState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
         return new UriClickSecurityState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the clickAction property value. The clickAction property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClickAction() {
@@ -100,7 +100,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. The id property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -108,7 +108,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -116,7 +116,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sourceId property value. The sourceId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceId() {
@@ -124,7 +124,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the uriDomain property value. The uriDomain property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUriDomain() {
@@ -132,7 +132,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the verdict property value. The verdict property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVerdict() {
@@ -154,8 +154,8 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

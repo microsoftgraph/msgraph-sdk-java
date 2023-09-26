@@ -26,7 +26,7 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
      */
     private Integer position;
     /**
-     * Instantiates a new contentTypeOrder and sets the default values.
+     * Instantiates a new ContentTypeOrder and sets the default values.
      */
     public ContentTypeOrder() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a contentTypeOrder
+     * @return a ContentTypeOrder
      */
     @jakarta.annotation.Nonnull
     public static ContentTypeOrder createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
         return new ContentTypeOrder();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the default property value. Indicates whether this is the default content type
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefault() {
@@ -71,7 +71,7 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the position property value. Specifies the position in which the content type appears in the selection UI.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPosition() {
@@ -97,8 +97,8 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

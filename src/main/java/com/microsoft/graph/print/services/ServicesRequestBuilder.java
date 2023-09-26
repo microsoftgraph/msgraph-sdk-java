@@ -60,7 +60,7 @@ public class ServicesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of printService objects that represent the services available to your tenant.
-     * @return a CompletableFuture of printServiceCollectionResponse
+     * @return a CompletableFuture of PrintServiceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/print-list-services?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ServicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of printService objects that represent the services available to your tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printServiceCollectionResponse
+     * @return a CompletableFuture of PrintServiceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/print-list-services?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ServicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to services for print
      * @param body The request body
-     * @return a CompletableFuture of printService
+     * @return a CompletableFuture of PrintService
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintService> post(@jakarta.annotation.Nonnull final PrintService body) {
@@ -94,7 +94,7 @@ public class ServicesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to services for print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printService
+     * @return a CompletableFuture of PrintService
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintService> post(@jakarta.annotation.Nonnull final PrintService body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class ServicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a servicesRequestBuilder
+     * @return a ServicesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ServicesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

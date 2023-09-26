@@ -15,7 +15,7 @@ public class GetManagedAppDiagnosticStatusesResponse extends BaseCollectionPagin
      */
     private java.util.List<ManagedAppDiagnosticStatus> value;
     /**
-     * Instantiates a new getManagedAppDiagnosticStatusesResponse and sets the default values.
+     * Instantiates a new GetManagedAppDiagnosticStatusesResponse and sets the default values.
      */
     public GetManagedAppDiagnosticStatusesResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetManagedAppDiagnosticStatusesResponse extends BaseCollectionPagin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getManagedAppDiagnosticStatusesResponse
+     * @return a GetManagedAppDiagnosticStatusesResponse
      */
     @jakarta.annotation.Nonnull
     public static GetManagedAppDiagnosticStatusesResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetManagedAppDiagnosticStatusesResponse extends BaseCollectionPagin
     }
     /**
      * Gets the value property value. The value property
-     * @return a managedAppDiagnosticStatus
+     * @return a java.util.List<ManagedAppDiagnosticStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppDiagnosticStatus> getValue() {

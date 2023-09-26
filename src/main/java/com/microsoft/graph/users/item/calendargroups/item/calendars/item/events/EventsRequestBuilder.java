@@ -68,7 +68,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of events in a calendar. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. The list of events contains single instance meetings and series masters. To get expanded event instances, you can get the calendar view, or get the instances of an event.
-     * @return a CompletableFuture of eventCollectionResponse
+     * @return a CompletableFuture of EventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-list-events?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of events in a calendar. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. The list of events contains single instance meetings and series masters. To get expanded event instances, you can get the calendar view, or get the instances of an event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of eventCollectionResponse
+     * @return a CompletableFuture of EventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-list-events?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new event in a calendar. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. 
      * @param body The request body
-     * @return a CompletableFuture of event
+     * @return a CompletableFuture of Event
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-post-events?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new event in a calendar. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of event
+     * @return a CompletableFuture of Event
      * @see <a href="https://learn.microsoft.com/graph/api/calendar-post-events?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a eventsRequestBuilder
+     * @return a EventsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

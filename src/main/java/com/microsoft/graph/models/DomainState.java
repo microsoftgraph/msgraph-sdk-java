@@ -31,7 +31,7 @@ public class DomainState implements AdditionalDataHolder, Parsable {
      */
     private String status;
     /**
-     * Instantiates a new domainState and sets the default values.
+     * Instantiates a new DomainState and sets the default values.
      */
     public DomainState() {
         this.setAdditionalData(new HashMap<>());
@@ -39,7 +39,7 @@ public class DomainState implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a domainState
+     * @return a DomainState
      */
     @jakarta.annotation.Nonnull
     public static DomainState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class DomainState implements AdditionalDataHolder, Parsable {
         return new DomainState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class DomainState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class DomainState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the operation property value. Type of asynchronous operation. The values can be ForceDelete or Verification
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperation() {
@@ -93,7 +93,7 @@ public class DomainState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the status property value. Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -112,8 +112,8 @@ public class DomainState implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

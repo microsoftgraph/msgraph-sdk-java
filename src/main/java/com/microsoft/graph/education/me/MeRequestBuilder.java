@@ -105,7 +105,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get me from education
-     * @return a CompletableFuture of educationUser
+     * @return a CompletableFuture of EducationUser
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> get() {
@@ -114,7 +114,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
     /**
      * Get me from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationUser
+     * @return a CompletableFuture of EducationUser
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +127,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property me in education
      * @param body The request body
-     * @return a CompletableFuture of educationUser
+     * @return a CompletableFuture of EducationUser
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> patch(@jakarta.annotation.Nonnull final EducationUser body) {
@@ -137,7 +137,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property me in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationUser
+     * @return a CompletableFuture of EducationUser
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> patch(@jakarta.annotation.Nonnull final EducationUser body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -239,7 +239,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a meRequestBuilder
+     * @return a MeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

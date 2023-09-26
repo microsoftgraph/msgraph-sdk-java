@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookRange extends Entity implements Parsable {
     /**
-     * Represents the range reference in A1-style. Address value will contain the Sheet reference (e.g. Sheet1!A1:B4). Read-only.
+     * Represents the range reference in A1-style. Address value contains the Sheet reference (for example, Sheet1!A1:B4). Read-only.
      */
     private String address;
     /**
@@ -73,11 +73,11 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     private WorkbookRangeSort sort;
     /**
-     * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
+     * Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
      */
     private Json text;
     /**
-     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
      */
     private Json values;
     /**
@@ -89,7 +89,7 @@ public class WorkbookRange extends Entity implements Parsable {
      */
     private WorkbookWorksheet worksheet;
     /**
-     * Instantiates a new workbookRange and sets the default values.
+     * Instantiates a new WorkbookRange and sets the default values.
      */
     public WorkbookRange() {
         super();
@@ -97,7 +97,7 @@ public class WorkbookRange extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookRange
+     * @return a WorkbookRange
      */
     @jakarta.annotation.Nonnull
     public static WorkbookRange createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -105,8 +105,8 @@ public class WorkbookRange extends Entity implements Parsable {
         return new WorkbookRange();
     }
     /**
-     * Gets the address property value. Represents the range reference in A1-style. Address value will contain the Sheet reference (e.g. Sheet1!A1:B4). Read-only.
-     * @return a string
+     * Gets the address property value. Represents the range reference in A1-style. Address value contains the Sheet reference (for example, Sheet1!A1:B4). Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAddress() {
@@ -114,7 +114,7 @@ public class WorkbookRange extends Entity implements Parsable {
     }
     /**
      * Gets the addressLocal property value. Represents range reference for the specified range in the language of the user. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAddressLocal() {
@@ -122,7 +122,7 @@ public class WorkbookRange extends Entity implements Parsable {
     }
     /**
      * Gets the cellCount property value. Number of cells in the range. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCellCount() {
@@ -130,7 +130,7 @@ public class WorkbookRange extends Entity implements Parsable {
     }
     /**
      * Gets the columnCount property value. Represents the total number of columns in the range. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getColumnCount() {
@@ -138,7 +138,7 @@ public class WorkbookRange extends Entity implements Parsable {
     }
     /**
      * Gets the columnHidden property value. Represents if all columns of the current range are hidden.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getColumnHidden() {
@@ -146,7 +146,7 @@ public class WorkbookRange extends Entity implements Parsable {
     }
     /**
      * Gets the columnIndex property value. Represents the column number of the first cell in the range. Zero-indexed. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getColumnIndex() {
@@ -183,7 +183,7 @@ public class WorkbookRange extends Entity implements Parsable {
     }
     /**
      * Gets the format property value. Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
-     * @return a workbookRangeFormat
+     * @return a WorkbookRangeFormat
      */
     @jakarta.annotation.Nullable
     public WorkbookRangeFormat getFormat() {
@@ -215,7 +215,7 @@ public class WorkbookRange extends Entity implements Parsable {
     }
     /**
      * Gets the hidden property value. Represents if all cells of the current range are hidden. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
@@ -231,7 +231,7 @@ public class WorkbookRange extends Entity implements Parsable {
     }
     /**
      * Gets the rowCount property value. Returns the total number of rows in the range. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRowCount() {
@@ -239,7 +239,7 @@ public class WorkbookRange extends Entity implements Parsable {
     }
     /**
      * Gets the rowHidden property value. Represents if all rows of the current range are hidden.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRowHidden() {
@@ -247,7 +247,7 @@ public class WorkbookRange extends Entity implements Parsable {
     }
     /**
      * Gets the rowIndex property value. Returns the row number of the first cell in the range. Zero-indexed. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRowIndex() {
@@ -255,14 +255,14 @@ public class WorkbookRange extends Entity implements Parsable {
     }
     /**
      * Gets the sort property value. The worksheet containing the current range. Read-only.
-     * @return a workbookRangeSort
+     * @return a WorkbookRangeSort
      */
     @jakarta.annotation.Nullable
     public WorkbookRangeSort getSort() {
         return this.sort;
     }
     /**
-     * Gets the text property value. Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
+     * Gets the text property value. Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
      * @return a Json
      */
     @jakarta.annotation.Nullable
@@ -270,7 +270,7 @@ public class WorkbookRange extends Entity implements Parsable {
         return this.text;
     }
     /**
-     * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
      * @return a Json
      */
     @jakarta.annotation.Nullable
@@ -287,7 +287,7 @@ public class WorkbookRange extends Entity implements Parsable {
     }
     /**
      * Gets the worksheet property value. The worksheet containing the current range. Read-only.
-     * @return a workbookWorksheet
+     * @return a WorkbookWorksheet
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheet getWorksheet() {
@@ -322,7 +322,7 @@ public class WorkbookRange extends Entity implements Parsable {
         writer.writeObjectValue("worksheet", this.getWorksheet());
     }
     /**
-     * Sets the address property value. Represents the range reference in A1-style. Address value will contain the Sheet reference (e.g. Sheet1!A1:B4). Read-only.
+     * Sets the address property value. Represents the range reference in A1-style. Address value contains the Sheet reference (for example, Sheet1!A1:B4). Read-only.
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final String value) {
@@ -434,14 +434,14 @@ public class WorkbookRange extends Entity implements Parsable {
         this.sort = value;
     }
     /**
-     * Sets the text property value. Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
+     * Sets the text property value. Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final Json value) {
         this.text = value;
     }
     /**
-     * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final Json value) {

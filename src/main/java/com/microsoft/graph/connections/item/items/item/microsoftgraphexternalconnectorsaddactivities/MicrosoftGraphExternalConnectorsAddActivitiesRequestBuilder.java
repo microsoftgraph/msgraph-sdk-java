@@ -37,7 +37,7 @@ public class MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder extends
     /**
      * Invoke action addActivities
      * @param body The request body
-     * @return a CompletableFuture of addActivitiesResponse
+     * @return a CompletableFuture of AddActivitiesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AddActivitiesResponse> post(@jakarta.annotation.Nonnull final AddActivitiesPostRequestBody body) {
@@ -47,7 +47,7 @@ public class MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder extends
      * Invoke action addActivities
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of addActivitiesResponse
+     * @return a CompletableFuture of AddActivitiesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AddActivitiesResponse> post(@jakarta.annotation.Nonnull final AddActivitiesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder extends
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphExternalConnectorsAddActivitiesRequestBuilder
+     * @return a MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

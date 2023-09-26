@@ -65,7 +65,7 @@ public class AppConsentRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get appConsent from identityGovernance
-     * @return a CompletableFuture of appConsentApprovalRoute
+     * @return a CompletableFuture of AppConsentApprovalRoute
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppConsentApprovalRoute> get() {
@@ -74,7 +74,7 @@ public class AppConsentRequestBuilder extends BaseRequestBuilder {
     /**
      * Get appConsent from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appConsentApprovalRoute
+     * @return a CompletableFuture of AppConsentApprovalRoute
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppConsentApprovalRoute> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class AppConsentRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property appConsent in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of appConsentApprovalRoute
+     * @return a CompletableFuture of AppConsentApprovalRoute
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppConsentApprovalRoute> patch(@jakarta.annotation.Nonnull final AppConsentApprovalRoute body) {
@@ -97,7 +97,7 @@ public class AppConsentRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property appConsent in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appConsentApprovalRoute
+     * @return a CompletableFuture of AppConsentApprovalRoute
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppConsentApprovalRoute> patch(@jakarta.annotation.Nonnull final AppConsentApprovalRoute body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class AppConsentRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appConsentRequestBuilder
+     * @return a AppConsentRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppConsentRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of additional sources associated with an eDiscovery search.
-     * @return a CompletableFuture of dataSourceCollectionResponse
+     * @return a CompletableFuture of DataSourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of additional sources associated with an eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataSourceCollectionResponse
+     * @return a CompletableFuture of DataSourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new additional source associated with an eDiscovery search.
      * @param body The request body
-     * @return a CompletableFuture of dataSource
+     * @return a CompletableFuture of DataSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-post-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
      * Create a new additional source associated with an eDiscovery search.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataSource
+     * @return a CompletableFuture of DataSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-post-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a additionalSourcesRequestBuilder
+     * @return a AdditionalSourcesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AdditionalSourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

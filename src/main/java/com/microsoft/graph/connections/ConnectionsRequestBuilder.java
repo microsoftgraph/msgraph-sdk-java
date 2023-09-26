@@ -60,7 +60,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from connections
-     * @return a CompletableFuture of externalConnectionCollectionResponse
+     * @return a CompletableFuture of ExternalConnectionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalConnectionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from connections
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of externalConnectionCollectionResponse
+     * @return a CompletableFuture of ExternalConnectionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalConnectionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to connections
      * @param body The request body
-     * @return a CompletableFuture of externalConnection
+     * @return a CompletableFuture of ExternalConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalConnection> post(@jakarta.annotation.Nonnull final ExternalConnection body) {
@@ -92,7 +92,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to connections
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of externalConnection
+     * @return a CompletableFuture of ExternalConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalConnection> post(@jakarta.annotation.Nonnull final ExternalConnection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a connectionsRequestBuilder
+     * @return a ConnectionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConnectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

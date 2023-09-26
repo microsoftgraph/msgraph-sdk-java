@@ -48,7 +48,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
      */
     private Integer unknownDeviceCount;
     /**
-     * Instantiates a new settingStateDeviceSummary and sets the default values.
+     * Instantiates a new SettingStateDeviceSummary and sets the default values.
      */
     public SettingStateDeviceSummary() {
         super();
@@ -56,7 +56,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a settingStateDeviceSummary
+     * @return a SettingStateDeviceSummary
      */
     @jakarta.annotation.Nonnull
     public static SettingStateDeviceSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -65,7 +65,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
     }
     /**
      * Gets the compliantDeviceCount property value. Device Compliant count for the setting
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantDeviceCount() {
@@ -73,7 +73,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
     }
     /**
      * Gets the conflictDeviceCount property value. Device conflict error count for the setting
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConflictDeviceCount() {
@@ -81,7 +81,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
     }
     /**
      * Gets the errorDeviceCount property value. Device error count for the setting
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
@@ -107,7 +107,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
     }
     /**
      * Gets the instancePath property value. Name of the InstancePath for the setting
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInstancePath() {
@@ -115,7 +115,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
     }
     /**
      * Gets the nonCompliantDeviceCount property value. Device NonCompliant count for the setting
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
@@ -123,7 +123,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
     }
     /**
      * Gets the notApplicableDeviceCount property value. Device Not Applicable count for the setting
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
@@ -131,7 +131,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
     }
     /**
      * Gets the remediatedDeviceCount property value. Device Compliant count for the setting
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRemediatedDeviceCount() {
@@ -139,7 +139,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
     }
     /**
      * Gets the settingName property value. Name of the setting
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {
@@ -147,7 +147,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
     }
     /**
      * Gets the unknownDeviceCount property value. Device Unkown count for the setting
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {

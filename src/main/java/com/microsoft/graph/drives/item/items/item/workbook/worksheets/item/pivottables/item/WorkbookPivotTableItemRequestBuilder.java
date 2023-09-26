@@ -73,7 +73,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of workbookPivotTable object.
-     * @return a CompletableFuture of workbookPivotTable
+     * @return a CompletableFuture of WorkbookPivotTable
      * @see <a href="https://learn.microsoft.com/graph/api/workbookpivottable-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of workbookPivotTable object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookPivotTable
+     * @return a CompletableFuture of WorkbookPivotTable
      * @see <a href="https://learn.microsoft.com/graph/api/workbookpivottable-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property pivotTables in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookPivotTable
+     * @return a CompletableFuture of WorkbookPivotTable
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookPivotTable> patch(@jakarta.annotation.Nonnull final WorkbookPivotTable body) {
@@ -107,7 +107,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property pivotTables in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookPivotTable
+     * @return a CompletableFuture of WorkbookPivotTable
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookPivotTable> patch(@jakarta.annotation.Nonnull final WorkbookPivotTable body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

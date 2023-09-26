@@ -36,7 +36,7 @@ public class CreateDownloadUrlRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke action createDownloadUrl
-     * @return a CompletableFuture of createDownloadUrlResponse
+     * @return a CompletableFuture of CreateDownloadUrlResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CreateDownloadUrlResponse> post() {
@@ -45,7 +45,7 @@ public class CreateDownloadUrlRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action createDownloadUrl
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of createDownloadUrlResponse
+     * @return a CompletableFuture of CreateDownloadUrlResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CreateDownloadUrlResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -86,7 +86,7 @@ public class CreateDownloadUrlRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a createDownloadUrlRequestBuilder
+     * @return a CreateDownloadUrlRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CreateDownloadUrlRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

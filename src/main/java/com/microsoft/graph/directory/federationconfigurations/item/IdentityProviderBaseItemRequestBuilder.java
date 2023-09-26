@@ -59,7 +59,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
-     * @return a CompletableFuture of identityProviderBase
+     * @return a CompletableFuture of IdentityProviderBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProviderBase> get() {
@@ -68,7 +68,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityProviderBase
+     * @return a CompletableFuture of IdentityProviderBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProviderBase> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property federationConfigurations in directory
      * @param body The request body
-     * @return a CompletableFuture of identityProviderBase
+     * @return a CompletableFuture of IdentityProviderBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProviderBase> patch(@jakarta.annotation.Nonnull final IdentityProviderBase body) {
@@ -91,7 +91,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property federationConfigurations in directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityProviderBase
+     * @return a CompletableFuture of IdentityProviderBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProviderBase> patch(@jakarta.annotation.Nonnull final IdentityProviderBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

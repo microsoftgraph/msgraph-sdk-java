@@ -17,7 +17,7 @@ public class WorkbookChartDataLabelFormat extends Entity implements Parsable {
      */
     private WorkbookChartFont font;
     /**
-     * Instantiates a new workbookChartDataLabelFormat and sets the default values.
+     * Instantiates a new WorkbookChartDataLabelFormat and sets the default values.
      */
     public WorkbookChartDataLabelFormat() {
         super();
@@ -25,7 +25,7 @@ public class WorkbookChartDataLabelFormat extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookChartDataLabelFormat
+     * @return a WorkbookChartDataLabelFormat
      */
     @jakarta.annotation.Nonnull
     public static WorkbookChartDataLabelFormat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class WorkbookChartDataLabelFormat extends Entity implements Parsable {
     }
     /**
      * Gets the fill property value. Represents the fill format of the current chart data label. Read-only.
-     * @return a workbookChartFill
+     * @return a WorkbookChartFill
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFill getFill() {
@@ -53,7 +53,7 @@ public class WorkbookChartDataLabelFormat extends Entity implements Parsable {
     }
     /**
      * Gets the font property value. Represents the font attributes (font name, font size, color, etc.) for a chart data label. Read-only.
-     * @return a workbookChartFont
+     * @return a WorkbookChartFont
      */
     @jakarta.annotation.Nullable
     public WorkbookChartFont getFont() {

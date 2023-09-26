@@ -73,7 +73,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of nameditem object.
-     * @return a CompletableFuture of workbookNamedItem
+     * @return a CompletableFuture of WorkbookNamedItem
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of nameditem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookNamedItem
+     * @return a CompletableFuture of WorkbookNamedItem
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of nameditem object.
      * @param body The request body
-     * @return a CompletableFuture of workbookNamedItem
+     * @return a CompletableFuture of WorkbookNamedItem
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of nameditem object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookNamedItem
+     * @return a CompletableFuture of WorkbookNamedItem
      * @see <a href="https://learn.microsoft.com/graph/api/nameditem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

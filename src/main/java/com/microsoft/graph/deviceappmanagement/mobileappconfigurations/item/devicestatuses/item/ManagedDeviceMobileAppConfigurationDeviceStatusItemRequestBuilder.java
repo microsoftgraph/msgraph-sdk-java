@@ -59,7 +59,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder e
     }
     /**
      * Read properties and relationships of the managedDeviceMobileAppConfigurationDeviceStatus object.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceStatus
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationDeviceStatus
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicestatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder e
     /**
      * Read properties and relationships of the managedDeviceMobileAppConfigurationDeviceStatus object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceStatus
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationDeviceStatus
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicestatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder e
     /**
      * Update the properties of a managedDeviceMobileAppConfigurationDeviceStatus object.
      * @param body The request body
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceStatus
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationDeviceStatus
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicestatus-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder e
      * Update the properties of a managedDeviceMobileAppConfigurationDeviceStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceStatus
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationDeviceStatus
      * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicestatus-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

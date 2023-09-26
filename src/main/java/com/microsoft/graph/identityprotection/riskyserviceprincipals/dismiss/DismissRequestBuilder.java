@@ -92,7 +92,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a dismissRequestBuilder
+     * @return a DismissRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DismissRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

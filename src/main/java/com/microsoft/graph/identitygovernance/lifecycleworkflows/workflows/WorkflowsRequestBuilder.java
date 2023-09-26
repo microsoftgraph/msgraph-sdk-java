@@ -60,7 +60,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of workflow resources that are associated with lifecycle workflows.
-     * @return a CompletableFuture of workflowCollectionResponse
+     * @return a CompletableFuture of WorkflowCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-list-workflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of workflow resources that are associated with lifecycle workflows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workflowCollectionResponse
+     * @return a CompletableFuture of WorkflowCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-list-workflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new workflow object. You can create up to 50 workflows in a tenant.
      * @param body The request body
-     * @return a CompletableFuture of workflow
+     * @return a CompletableFuture of Workflow
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-post-workflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
      * Create a new workflow object. You can create up to 50 workflows in a tenant.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workflow
+     * @return a CompletableFuture of Workflow
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-post-workflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a workflowsRequestBuilder
+     * @return a WorkflowsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WorkflowsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

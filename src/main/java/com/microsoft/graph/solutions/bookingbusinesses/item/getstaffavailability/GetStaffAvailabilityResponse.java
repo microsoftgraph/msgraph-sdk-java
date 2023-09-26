@@ -15,7 +15,7 @@ public class GetStaffAvailabilityResponse extends BaseCollectionPaginationCountR
      */
     private java.util.List<StaffAvailabilityItem> value;
     /**
-     * Instantiates a new getStaffAvailabilityResponse and sets the default values.
+     * Instantiates a new GetStaffAvailabilityResponse and sets the default values.
      */
     public GetStaffAvailabilityResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetStaffAvailabilityResponse extends BaseCollectionPaginationCountR
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getStaffAvailabilityResponse
+     * @return a GetStaffAvailabilityResponse
      */
     @jakarta.annotation.Nonnull
     public static GetStaffAvailabilityResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetStaffAvailabilityResponse extends BaseCollectionPaginationCountR
     }
     /**
      * Gets the value property value. The value property
-     * @return a staffAvailabilityItem
+     * @return a java.util.List<StaffAvailabilityItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<StaffAvailabilityItem> getValue() {

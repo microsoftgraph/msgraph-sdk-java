@@ -35,7 +35,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
      */
     private java.util.List<WorkflowTemplate> workflowTemplates;
     /**
-     * Instantiates a new lifecycleWorkflowsContainer and sets the default values.
+     * Instantiates a new LifecycleWorkflowsContainer and sets the default values.
      */
     public LifecycleWorkflowsContainer() {
         super();
@@ -43,7 +43,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a lifecycleWorkflowsContainer
+     * @return a LifecycleWorkflowsContainer
      */
     @jakarta.annotation.Nonnull
     public static LifecycleWorkflowsContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
     }
     /**
      * Gets the customTaskExtensions property value. The customTaskExtension instance.
-     * @return a customTaskExtension
+     * @return a java.util.List<CustomTaskExtension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomTaskExtension> getCustomTaskExtensions() {
@@ -60,7 +60,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
     }
     /**
      * Gets the deletedItems property value. Deleted workflows in your lifecycle workflows instance.
-     * @return a deletedItemContainer
+     * @return a DeletedItemContainer
      */
     @jakarta.annotation.Nullable
     public DeletedItemContainer getDeletedItems() {
@@ -83,7 +83,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
     }
     /**
      * Gets the settings property value. The settings property
-     * @return a lifecycleManagementSettings
+     * @return a LifecycleManagementSettings
      */
     @jakarta.annotation.Nullable
     public LifecycleManagementSettings getSettings() {
@@ -91,7 +91,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
     }
     /**
      * Gets the taskDefinitions property value. The definition of tasks within the lifecycle workflows instance.
-     * @return a taskDefinition
+     * @return a java.util.List<TaskDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaskDefinition> getTaskDefinitions() {
@@ -99,7 +99,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
     }
     /**
      * Gets the workflows property value. The workflows in the lifecycle workflows instance.
-     * @return a workflow
+     * @return a java.util.List<Workflow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Workflow> getWorkflows() {
@@ -107,7 +107,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
     }
     /**
      * Gets the workflowTemplates property value. The workflow templates in the lifecycle workflow instance.
-     * @return a workflowTemplate
+     * @return a java.util.List<WorkflowTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkflowTemplate> getWorkflowTemplates() {

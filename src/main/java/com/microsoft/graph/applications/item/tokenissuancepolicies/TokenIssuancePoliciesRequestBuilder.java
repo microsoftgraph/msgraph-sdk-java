@@ -67,7 +67,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the tokenIssuancePolicy objects that are assigned to an application.
-     * @return a CompletableFuture of tokenIssuancePolicyCollectionResponse
+     * @return a CompletableFuture of TokenIssuancePolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/application-list-tokenissuancepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * List the tokenIssuancePolicy objects that are assigned to an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tokenIssuancePolicyCollectionResponse
+     * @return a CompletableFuture of TokenIssuancePolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/application-list-tokenissuancepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -120,7 +120,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a tokenIssuancePoliciesRequestBuilder
+     * @return a TokenIssuancePoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TokenIssuancePoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

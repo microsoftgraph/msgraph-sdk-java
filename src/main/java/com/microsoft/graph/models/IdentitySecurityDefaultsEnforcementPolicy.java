@@ -13,7 +13,7 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
      */
     private Boolean isEnabled;
     /**
-     * Instantiates a new identitySecurityDefaultsEnforcementPolicy and sets the default values.
+     * Instantiates a new IdentitySecurityDefaultsEnforcementPolicy and sets the default values.
      */
     public IdentitySecurityDefaultsEnforcementPolicy() {
         super();
@@ -22,7 +22,7 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identitySecurityDefaultsEnforcementPolicy
+     * @return a IdentitySecurityDefaultsEnforcementPolicy
      */
     @jakarta.annotation.Nonnull
     public static IdentitySecurityDefaultsEnforcementPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
     }
     /**
      * Gets the isEnabled property value. If set to true, Azure Active Directory security defaults is enabled for the tenant.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {

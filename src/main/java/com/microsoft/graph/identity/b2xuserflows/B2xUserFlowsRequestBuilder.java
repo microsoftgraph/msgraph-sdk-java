@@ -60,7 +60,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of b2xIdentityUserFlow objects.
-     * @return a CompletableFuture of b2xIdentityUserFlowCollectionResponse
+     * @return a CompletableFuture of B2xIdentityUserFlowCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-b2xuserflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of b2xIdentityUserFlow objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of b2xIdentityUserFlowCollectionResponse
+     * @return a CompletableFuture of B2xIdentityUserFlowCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-b2xuserflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new b2xIdentityUserFlow object.
      * @param body The request body
-     * @return a CompletableFuture of b2xIdentityUserFlow
+     * @return a CompletableFuture of B2xIdentityUserFlow
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-b2xuserflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
      * Create a new b2xIdentityUserFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of b2xIdentityUserFlow
+     * @return a CompletableFuture of B2xIdentityUserFlow
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-b2xuserflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a b2xUserFlowsRequestBuilder
+     * @return a B2xUserFlowsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public B2xUserFlowsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

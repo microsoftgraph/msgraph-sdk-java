@@ -12,7 +12,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     /**
      * The page's HTML content.
      */
-    private byte[] content;
+    private Base64url content;
     /**
      * The URL for the page's HTML content.  Read-only.
      */
@@ -54,7 +54,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      */
     private java.util.List<String> userTags;
     /**
-     * Instantiates a new onenotePage and sets the default values.
+     * Instantiates a new OnenotePage and sets the default values.
      */
     public OnenotePage() {
         super();
@@ -63,7 +63,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onenotePage
+     * @return a OnenotePage
      */
     @jakarta.annotation.Nonnull
     public static OnenotePage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -72,15 +72,15 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the content property value. The page's HTML content.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getContent() {
+    public Base64url getContent() {
         return this.content;
     }
     /**
      * Gets the contentUrl property value. The URL for the page's HTML content.  Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentUrl() {
@@ -88,7 +88,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the createdByAppId property value. The unique identifier of the application that created the page. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByAppId() {
@@ -101,7 +101,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("contentUrl", (n) -> { this.setContentUrl(n.getStringValue()); });
         deserializerMap.put("createdByAppId", (n) -> { this.setCreatedByAppId(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -124,7 +124,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the level property value. The indentation level of the page. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLevel() {
@@ -132,7 +132,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the links property value. Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
-     * @return a pageLinks
+     * @return a PageLinks
      */
     @jakarta.annotation.Nullable
     public PageLinks getLinks() {
@@ -140,7 +140,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the order property value. The order of the page within its parent section. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getOrder() {
@@ -148,7 +148,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the parentNotebook property value. The notebook that contains the page.  Read-only.
-     * @return a notebook
+     * @return a Notebook
      */
     @jakarta.annotation.Nullable
     public Notebook getParentNotebook() {
@@ -156,7 +156,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the parentSection property value. The section that contains the page. Read-only.
-     * @return a onenoteSection
+     * @return a OnenoteSection
      */
     @jakarta.annotation.Nullable
     public OnenoteSection getParentSection() {
@@ -164,7 +164,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the title property value. The title of the page.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
@@ -172,7 +172,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     }
     /**
      * Gets the userTags property value. The userTags property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUserTags() {
@@ -185,7 +185,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeByteArrayValue("content", this.getContent());
+        writer.writeObjectValue("content", this.getContent());
         writer.writeStringValue("contentUrl", this.getContentUrl());
         writer.writeStringValue("createdByAppId", this.getCreatedByAppId());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
@@ -201,7 +201,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      * Sets the content property value. The page's HTML content.
      * @param value Value to set for the content property.
      */
-    public void setContent(@jakarta.annotation.Nullable final byte[] value) {
+    public void setContent(@jakarta.annotation.Nullable final Base64url value) {
         this.content = value;
     }
     /**

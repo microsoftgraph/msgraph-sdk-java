@@ -60,7 +60,7 @@ public class RulesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the rules or settings defined for a role management policy. The rules are a collection of following types that are derived from the unifiedRoleManagementPolicyRule object:+ unifiedRoleManagementPolicyApprovalRule+ unifiedRoleManagementPolicyAuthenticationContextRule+ unifiedRoleManagementPolicyEnablementRule+ unifiedRoleManagementPolicyExpirationRule+ unifiedRoleManagementPolicyNotificationRule
-     * @return a CompletableFuture of unifiedRoleManagementPolicyRuleCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyRuleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicy-list-rules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class RulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the rules or settings defined for a role management policy. The rules are a collection of following types that are derived from the unifiedRoleManagementPolicyRule object:+ unifiedRoleManagementPolicyApprovalRule+ unifiedRoleManagementPolicyAuthenticationContextRule+ unifiedRoleManagementPolicyEnablementRule+ unifiedRoleManagementPolicyExpirationRule+ unifiedRoleManagementPolicyNotificationRule
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementPolicyRuleCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyRuleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicy-list-rules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class RulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to rules for policies
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleManagementPolicyRule
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule> post(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyRule body) {
@@ -94,7 +94,7 @@ public class RulesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to rules for policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementPolicyRule
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule> post(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyRule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class RulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a rulesRequestBuilder
+     * @return a RulesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RulesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

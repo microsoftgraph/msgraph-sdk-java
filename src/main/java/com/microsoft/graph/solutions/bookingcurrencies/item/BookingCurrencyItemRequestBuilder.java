@@ -57,7 +57,7 @@ public class BookingCurrencyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties of a bookingCurrency object that is available to a Microsoft Bookings business. Use the id property, which is the currency code, to specify the currency.
-     * @return a CompletableFuture of bookingCurrency
+     * @return a CompletableFuture of BookingCurrency
      * @see <a href="https://learn.microsoft.com/graph/api/bookingcurrency-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class BookingCurrencyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties of a bookingCurrency object that is available to a Microsoft Bookings business. Use the id property, which is the currency code, to specify the currency.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingCurrency
+     * @return a CompletableFuture of BookingCurrency
      * @see <a href="https://learn.microsoft.com/graph/api/bookingcurrency-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class BookingCurrencyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property bookingCurrencies in solutions
      * @param body The request body
-     * @return a CompletableFuture of bookingCurrency
+     * @return a CompletableFuture of BookingCurrency
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCurrency> patch(@jakarta.annotation.Nonnull final BookingCurrency body) {
@@ -91,7 +91,7 @@ public class BookingCurrencyItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property bookingCurrencies in solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bookingCurrency
+     * @return a CompletableFuture of BookingCurrency
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCurrency> patch(@jakarta.annotation.Nonnull final BookingCurrency body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

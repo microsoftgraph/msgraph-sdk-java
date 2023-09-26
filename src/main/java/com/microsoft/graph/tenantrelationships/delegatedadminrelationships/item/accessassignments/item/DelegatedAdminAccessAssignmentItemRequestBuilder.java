@@ -59,7 +59,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
     }
     /**
      * Read the properties of a delegatedAdminAccessAssignment object.
-     * @return a CompletableFuture of delegatedAdminAccessAssignment
+     * @return a CompletableFuture of DelegatedAdminAccessAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
     /**
      * Read the properties of a delegatedAdminAccessAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedAdminAccessAssignment
+     * @return a CompletableFuture of DelegatedAdminAccessAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
     /**
      * Update the properties of a delegatedAdminAccessAssignment object.
      * @param body The request body
-     * @return a CompletableFuture of delegatedAdminAccessAssignment
+     * @return a CompletableFuture of DelegatedAdminAccessAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
      * Update the properties of a delegatedAdminAccessAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of delegatedAdminAccessAssignment
+     * @return a CompletableFuture of DelegatedAdminAccessAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

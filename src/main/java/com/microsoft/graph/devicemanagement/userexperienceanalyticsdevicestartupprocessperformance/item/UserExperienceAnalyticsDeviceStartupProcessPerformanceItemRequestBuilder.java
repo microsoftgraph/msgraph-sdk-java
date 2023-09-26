@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceItemRequestBu
     }
     /**
      * User experience analytics device Startup Process Performance
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupProcessPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupProcessPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupProcessPerformance> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceItemRequestBu
     /**
      * User experience analytics device Startup Process Performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupProcessPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupProcessPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupProcessPerformance> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceItemRequestBu
     /**
      * Update the navigation property userExperienceAnalyticsDeviceStartupProcessPerformance in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupProcessPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupProcessPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupProcessPerformance> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupProcessPerformance body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformanceItemRequestBu
      * Update the navigation property userExperienceAnalyticsDeviceStartupProcessPerformance in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceStartupProcessPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceStartupProcessPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceStartupProcessPerformance> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceStartupProcessPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

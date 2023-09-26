@@ -48,7 +48,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     private String versionNumber;
     /**
-     * Instantiates a new macOSLobApp and sets the default values.
+     * Instantiates a new MacOSLobApp and sets the default values.
      */
     public MacOSLobApp() {
         super();
@@ -57,7 +57,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSLobApp
+     * @return a MacOSLobApp
      */
     @jakarta.annotation.Nonnull
     public static MacOSLobApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the buildNumber property value. The build number of the package. This should match the package CFBundleShortVersionString of the .pkg file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBuildNumber() {
@@ -74,7 +74,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the bundleId property value. The primary bundleId of the package.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBundleId() {
@@ -82,7 +82,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the childApps property value. List of ComplexType macOSLobChildApp objects. Represents the apps expected to be installed by the package.
-     * @return a macOSLobChildApp
+     * @return a java.util.List<MacOSLobChildApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSLobChildApp> getChildApps() {
@@ -108,7 +108,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the ignoreVersionDetection property value. When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIgnoreVersionDetection() {
@@ -116,7 +116,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the installAsManaged property value. When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getInstallAsManaged() {
@@ -124,7 +124,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the md5Hash property value. The MD5 hash codes. This is empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMd5Hash() {
@@ -132,7 +132,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the md5HashChunkSize property value. The chunk size for MD5 hash. This is '0' or empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMd5HashChunkSize() {
@@ -140,7 +140,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application.
-     * @return a macOSMinimumOperatingSystem
+     * @return a MacOSMinimumOperatingSystem
      */
     @jakarta.annotation.Nullable
     public MacOSMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
@@ -148,7 +148,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the versionNumber property value. The version number of the package. This should match the package CFBundleVersion in the packageinfo file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersionNumber() {

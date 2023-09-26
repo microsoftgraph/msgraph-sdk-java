@@ -60,7 +60,7 @@ public class VerificationDnsRecordsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of domainDnsRecord objects. You cannot use an associated domain with your Azure AD tenant until ownership is verified. To verify the ownership of the domain, retrieve the domain verification records and add the details to the zone file of the domain. This can be done through the domain registrar or DNS server configuration. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified.
-     * @return a CompletableFuture of domainDnsRecordCollectionResponse
+     * @return a CompletableFuture of DomainDnsRecordCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-list-verificationdnsrecords?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class VerificationDnsRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of domainDnsRecord objects. You cannot use an associated domain with your Azure AD tenant until ownership is verified. To verify the ownership of the domain, retrieve the domain verification records and add the details to the zone file of the domain. This can be done through the domain registrar or DNS server configuration. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of domainDnsRecordCollectionResponse
+     * @return a CompletableFuture of DomainDnsRecordCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/domain-list-verificationdnsrecords?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class VerificationDnsRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to verificationDnsRecords for domains
      * @param body The request body
-     * @return a CompletableFuture of domainDnsRecord
+     * @return a CompletableFuture of DomainDnsRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainDnsRecord> post(@jakarta.annotation.Nonnull final DomainDnsRecord body) {
@@ -94,7 +94,7 @@ public class VerificationDnsRecordsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to verificationDnsRecords for domains
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of domainDnsRecord
+     * @return a CompletableFuture of DomainDnsRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainDnsRecord> post(@jakarta.annotation.Nonnull final DomainDnsRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class VerificationDnsRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a verificationDnsRecordsRequestBuilder
+     * @return a VerificationDnsRecordsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public VerificationDnsRecordsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

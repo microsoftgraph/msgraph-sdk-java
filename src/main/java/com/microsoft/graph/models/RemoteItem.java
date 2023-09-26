@@ -95,7 +95,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     private String webUrl;
     /**
-     * Instantiates a new remoteItem and sets the default values.
+     * Instantiates a new RemoteItem and sets the default values.
      */
     public RemoteItem() {
         this.setAdditionalData(new HashMap<>());
@@ -103,7 +103,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a remoteItem
+     * @return a RemoteItem
      */
     @jakarta.annotation.Nonnull
     public static RemoteItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -111,7 +111,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
         return new RemoteItem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -120,7 +120,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the createdBy property value. Identity of the user, device, and application which created the item. Read-only.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -165,7 +165,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the file property value. Indicates that the remote item is a file. Read-only.
-     * @return a file
+     * @return a File
      */
     @jakarta.annotation.Nullable
     public File getFile() {
@@ -173,7 +173,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the fileSystemInfo property value. Information about the remote item from the local file system. Read-only.
-     * @return a fileSystemInfo
+     * @return a FileSystemInfo
      */
     @jakarta.annotation.Nullable
     public FileSystemInfo getFileSystemInfo() {
@@ -181,7 +181,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the folder property value. Indicates that the remote item is a folder. Read-only.
-     * @return a folder
+     * @return a Folder
      */
     @jakarta.annotation.Nullable
     public Folder getFolder() {
@@ -189,7 +189,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. Unique identifier for the remote item in its drive. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -197,7 +197,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the image property value. Image metadata, if the item is an image. Read-only.
-     * @return a image
+     * @return a Image
      */
     @jakarta.annotation.Nullable
     public Image getImage() {
@@ -205,7 +205,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -221,7 +221,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. Optional. Filename of the remote item. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -229,7 +229,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -237,7 +237,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the package property value. If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
-     * @return a packageEscaped
+     * @return a PackageEscaped
      */
     @jakarta.annotation.Nullable
     public PackageEscaped getPackage() {
@@ -245,7 +245,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the parentReference property value. Properties of the parent of the remote item. Read-only.
-     * @return a itemReference
+     * @return a ItemReference
      */
     @jakarta.annotation.Nullable
     public ItemReference getParentReference() {
@@ -253,7 +253,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the shared property value. Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
-     * @return a shared
+     * @return a Shared
      */
     @jakarta.annotation.Nullable
     public Shared getShared() {
@@ -261,7 +261,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sharepointIds property value. Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only.
-     * @return a sharepointIds
+     * @return a SharepointIds
      */
     @jakarta.annotation.Nullable
     public SharepointIds getSharepointIds() {
@@ -269,7 +269,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the size property value. Size of the remote item. Read-only.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
@@ -277,7 +277,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the specialFolder property value. If the current item is also available as a special folder, this facet is returned. Read-only.
-     * @return a specialFolder
+     * @return a SpecialFolder
      */
     @jakarta.annotation.Nullable
     public SpecialFolder getSpecialFolder() {
@@ -285,7 +285,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the video property value. Video metadata, if the item is a video. Read-only.
-     * @return a video
+     * @return a Video
      */
     @jakarta.annotation.Nullable
     public Video getVideo() {
@@ -293,7 +293,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the webDavUrl property value. DAV compatible URL for the item.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebDavUrl() {
@@ -301,7 +301,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the webUrl property value. URL that displays the resource in the browser. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
@@ -336,8 +336,8 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

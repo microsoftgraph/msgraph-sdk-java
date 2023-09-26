@@ -105,7 +105,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     }
     /**
      * In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object.
-     * @return a CompletableFuture of unifiedRoleEligibilityScheduleRequest
+     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     /**
      * In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleEligibilityScheduleRequest
+     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     /**
      * Update the navigation property roleEligibilityScheduleRequests in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleEligibilityScheduleRequest
+     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleRequest> patch(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleRequest body) {
@@ -139,7 +139,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
      * Update the navigation property roleEligibilityScheduleRequests in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleEligibilityScheduleRequest
+     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleRequest> patch(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

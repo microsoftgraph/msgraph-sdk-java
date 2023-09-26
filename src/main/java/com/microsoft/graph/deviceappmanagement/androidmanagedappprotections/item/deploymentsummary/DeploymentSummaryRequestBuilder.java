@@ -57,7 +57,7 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Navigation property to deployment summary of the configuration.
-     * @return a CompletableFuture of managedAppPolicyDeploymentSummary
+     * @return a CompletableFuture of ManagedAppPolicyDeploymentSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> get() {
@@ -66,7 +66,7 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Navigation property to deployment summary of the configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppPolicyDeploymentSummary
+     * @return a CompletableFuture of ManagedAppPolicyDeploymentSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property deploymentSummary in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedAppPolicyDeploymentSummary
+     * @return a CompletableFuture of ManagedAppPolicyDeploymentSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> patch(@jakarta.annotation.Nonnull final ManagedAppPolicyDeploymentSummary body) {
@@ -89,7 +89,7 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property deploymentSummary in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppPolicyDeploymentSummary
+     * @return a CompletableFuture of ManagedAppPolicyDeploymentSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> patch(@jakarta.annotation.Nonnull final ManagedAppPolicyDeploymentSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deploymentSummaryRequestBuilder
+     * @return a DeploymentSummaryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeploymentSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

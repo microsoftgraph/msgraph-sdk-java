@@ -13,7 +13,7 @@ public class TeamsAsyncOperationCollectionResponse extends BaseCollectionPaginat
      */
     private java.util.List<TeamsAsyncOperation> value;
     /**
-     * Instantiates a new teamsAsyncOperationCollectionResponse and sets the default values.
+     * Instantiates a new TeamsAsyncOperationCollectionResponse and sets the default values.
      */
     public TeamsAsyncOperationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class TeamsAsyncOperationCollectionResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamsAsyncOperationCollectionResponse
+     * @return a TeamsAsyncOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static TeamsAsyncOperationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class TeamsAsyncOperationCollectionResponse extends BaseCollectionPaginat
     }
     /**
      * Gets the value property value. The value property
-     * @return a teamsAsyncOperation
+     * @return a java.util.List<TeamsAsyncOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamsAsyncOperation> getValue() {

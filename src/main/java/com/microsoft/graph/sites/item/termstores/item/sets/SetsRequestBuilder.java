@@ -60,7 +60,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a set object.
-     * @return a CompletableFuture of setCollectionResponse
+     * @return a CompletableFuture of SetCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SetCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of setCollectionResponse
+     * @return a CompletableFuture of SetCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SetCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new set object.
      * @param body The request body
-     * @return a CompletableFuture of set
+     * @return a CompletableFuture of Set
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-set-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
      * Create a new set object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of set
+     * @return a CompletableFuture of Set
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-set-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a setsRequestBuilder
+     * @return a SetsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SetsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

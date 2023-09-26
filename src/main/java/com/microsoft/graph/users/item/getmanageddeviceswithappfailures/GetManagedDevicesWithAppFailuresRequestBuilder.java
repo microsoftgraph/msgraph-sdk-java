@@ -37,7 +37,7 @@ public class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestB
     }
     /**
      * Retrieves the list of devices with failed apps
-     * @return a CompletableFuture of getManagedDevicesWithAppFailuresResponse
+     * @return a CompletableFuture of GetManagedDevicesWithAppFailuresResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetManagedDevicesWithAppFailuresResponse> get() {
@@ -46,7 +46,7 @@ public class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestB
     /**
      * Retrieves the list of devices with failed apps
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getManagedDevicesWithAppFailuresResponse
+     * @return a CompletableFuture of GetManagedDevicesWithAppFailuresResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetManagedDevicesWithAppFailuresResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestB
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getManagedDevicesWithAppFailuresRequestBuilder
+     * @return a GetManagedDevicesWithAppFailuresRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetManagedDevicesWithAppFailuresRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

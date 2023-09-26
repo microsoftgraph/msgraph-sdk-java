@@ -57,7 +57,7 @@ public class AccessReviewReviewerItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Returns the collection of reviewers who were contacted to complete this review. While the reviewers and fallbackReviewers properties of the accessReviewScheduleDefinition might specify group owners or managers as reviewers, contactedReviewers returns their individual identities. Supports $select. Read-only.
-     * @return a CompletableFuture of accessReviewReviewer
+     * @return a CompletableFuture of AccessReviewReviewer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewReviewer> get() {
@@ -66,7 +66,7 @@ public class AccessReviewReviewerItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns the collection of reviewers who were contacted to complete this review. While the reviewers and fallbackReviewers properties of the accessReviewScheduleDefinition might specify group owners or managers as reviewers, contactedReviewers returns their individual identities. Supports $select. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewReviewer
+     * @return a CompletableFuture of AccessReviewReviewer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewReviewer> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AccessReviewReviewerItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property contactedReviewers in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessReviewReviewer
+     * @return a CompletableFuture of AccessReviewReviewer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewReviewer> patch(@jakarta.annotation.Nonnull final AccessReviewReviewer body) {
@@ -89,7 +89,7 @@ public class AccessReviewReviewerItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property contactedReviewers in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewReviewer
+     * @return a CompletableFuture of AccessReviewReviewer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewReviewer> patch(@jakarta.annotation.Nonnull final AccessReviewReviewer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

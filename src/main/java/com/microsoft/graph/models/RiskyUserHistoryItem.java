@@ -21,7 +21,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
      */
     private String userId;
     /**
-     * Instantiates a new riskyUserHistoryItem and sets the default values.
+     * Instantiates a new RiskyUserHistoryItem and sets the default values.
      */
     public RiskyUserHistoryItem() {
         super();
@@ -29,7 +29,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a riskyUserHistoryItem
+     * @return a RiskyUserHistoryItem
      */
     @jakarta.annotation.Nonnull
     public static RiskyUserHistoryItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     }
     /**
      * Gets the activity property value. The activity related to user risk level change.
-     * @return a riskUserActivity
+     * @return a RiskUserActivity
      */
     @jakarta.annotation.Nullable
     public RiskUserActivity getActivity() {
@@ -58,7 +58,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     }
     /**
      * Gets the initiatedBy property value. The ID of actor that does the operation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInitiatedBy() {
@@ -66,7 +66,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     }
     /**
      * Gets the userId property value. The ID of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

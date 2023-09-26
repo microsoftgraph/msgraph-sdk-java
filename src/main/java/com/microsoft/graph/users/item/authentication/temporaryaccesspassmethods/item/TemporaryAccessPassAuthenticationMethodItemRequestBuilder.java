@@ -59,7 +59,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
     }
     /**
      * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
-     * @return a CompletableFuture of temporaryAccessPassAuthenticationMethod
+     * @return a CompletableFuture of TemporaryAccessPassAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
     /**
      * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of temporaryAccessPassAuthenticationMethod
+     * @return a CompletableFuture of TemporaryAccessPassAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

@@ -38,7 +38,7 @@ public class CreateSessionRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new workbook session.  Excel APIs can be called in one of two modes:  To represent the session in the API, use the workbook-session-id: {session-id} header.  In some cases, creating a new session requires an indeterminate time to complete. Microsoft Graph also provides a long running operations pattern. This pattern provides a way to poll for creation status updates, without waiting for the creation to complete. The following are the steps:
      * @param body The request body
-     * @return a CompletableFuture of workbookSessionInfo
+     * @return a CompletableFuture of WorkbookSessionInfo
      * @see <a href="https://learn.microsoft.com/graph/api/workbook-createsession?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class CreateSessionRequestBuilder extends BaseRequestBuilder {
      * Create a new workbook session.  Excel APIs can be called in one of two modes:  To represent the session in the API, use the workbook-session-id: {session-id} header.  In some cases, creating a new session requires an indeterminate time to complete. Microsoft Graph also provides a long running operations pattern. This pattern provides a way to poll for creation status updates, without waiting for the creation to complete. The following are the steps:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookSessionInfo
+     * @return a CompletableFuture of WorkbookSessionInfo
      * @see <a href="https://learn.microsoft.com/graph/api/workbook-createsession?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class CreateSessionRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a createSessionRequestBuilder
+     * @return a CreateSessionRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CreateSessionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -23,7 +23,7 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
      */
     private ItemReference sourceFile;
     /**
-     * Instantiates a new copyToDefaultContentLocationPostRequestBody and sets the default values.
+     * Instantiates a new CopyToDefaultContentLocationPostRequestBody and sets the default values.
      */
     public CopyToDefaultContentLocationPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -31,7 +31,7 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a copyToDefaultContentLocationPostRequestBody
+     * @return a CopyToDefaultContentLocationPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static CopyToDefaultContentLocationPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
         return new CopyToDefaultContentLocationPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
     }
     /**
      * Gets the destinationFileName property value. The destinationFileName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationFileName() {
@@ -67,7 +67,7 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
     }
     /**
      * Gets the sourceFile property value. The sourceFile property
-     * @return a itemReference
+     * @return a ItemReference
      */
     @jakarta.annotation.Nullable
     public ItemReference getSourceFile() {
@@ -84,8 +84,8 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

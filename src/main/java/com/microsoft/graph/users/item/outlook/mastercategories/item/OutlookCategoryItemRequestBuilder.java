@@ -59,7 +59,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of the specified outlookCategory object.
-     * @return a CompletableFuture of outlookCategory
+     * @return a CompletableFuture of OutlookCategory
      * @see <a href="https://learn.microsoft.com/graph/api/outlookcategory-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of the specified outlookCategory object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of outlookCategory
+     * @return a CompletableFuture of OutlookCategory
      * @see <a href="https://learn.microsoft.com/graph/api/outlookcategory-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, OutlookCategory::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the writable property, color, of the specified outlookCategory object. You cannot modify the displayName propertyonce you have created the category.
+     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category.
      * @param body The request body
-     * @return a CompletableFuture of outlookCategory
+     * @return a CompletableFuture of OutlookCategory
      * @see <a href="https://learn.microsoft.com/graph/api/outlookcategory-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,10 +91,10 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the writable property, color, of the specified outlookCategory object. You cannot modify the displayName propertyonce you have created the category.
+     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of outlookCategory
+     * @return a CompletableFuture of OutlookCategory
      * @see <a href="https://learn.microsoft.com/graph/api/outlookcategory-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -163,7 +163,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the writable property, color, of the specified outlookCategory object. You cannot modify the displayName propertyonce you have created the category.
+     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the writable property, color, of the specified outlookCategory object. You cannot modify the displayName propertyonce you have created the category.
+     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

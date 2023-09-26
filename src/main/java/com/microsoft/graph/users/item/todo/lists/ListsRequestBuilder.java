@@ -68,7 +68,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the todoTaskList objects and their properties.
-     * @return a CompletableFuture of todoTaskListCollectionResponse
+     * @return a CompletableFuture of TodoTaskListCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/todo-list-lists?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the todoTaskList objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of todoTaskListCollectionResponse
+     * @return a CompletableFuture of TodoTaskListCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/todo-list-lists?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new lists object.
      * @param body The request body
-     * @return a CompletableFuture of todoTaskList
+     * @return a CompletableFuture of TodoTaskList
      * @see <a href="https://learn.microsoft.com/graph/api/todo-post-lists?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
      * Create a new lists object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of todoTaskList
+     * @return a CompletableFuture of TodoTaskList
      * @see <a href="https://learn.microsoft.com/graph/api/todo-post-lists?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a listsRequestBuilder
+     * @return a ListsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ListsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

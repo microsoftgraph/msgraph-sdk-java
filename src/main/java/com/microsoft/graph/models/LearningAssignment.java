@@ -30,7 +30,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
      */
     private ItemBody notes;
     /**
-     * Instantiates a new learningAssignment and sets the default values.
+     * Instantiates a new LearningAssignment and sets the default values.
      */
     public LearningAssignment() {
         super();
@@ -38,7 +38,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a learningAssignment
+     * @return a LearningAssignment
      */
     @jakarta.annotation.Nonnull
     public static LearningAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     }
     /**
      * Gets the assignerUserId property value. The user ID of the assigner. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignerUserId() {
@@ -63,7 +63,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     }
     /**
      * Gets the assignmentType property value. The assignmentType property
-     * @return a assignmentType
+     * @return a AssignmentType
      */
     @jakarta.annotation.Nullable
     public AssignmentType getAssignmentType() {
@@ -71,7 +71,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     }
     /**
      * Gets the dueDateTime property value. Due date for the course activity. Optional.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getDueDateTime() {
@@ -93,7 +93,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     }
     /**
      * Gets the notes property value. Notes for the course activity. Optional.
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getNotes() {

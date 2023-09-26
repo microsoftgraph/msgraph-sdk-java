@@ -67,7 +67,7 @@ public class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of tablerow object.
-     * @return a CompletableFuture of workbookTableRow
+     * @return a CompletableFuture of WorkbookTableRow
      * @see <a href="https://learn.microsoft.com/graph/api/tablerow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of tablerow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookTableRow
+     * @return a CompletableFuture of WorkbookTableRow
      * @see <a href="https://learn.microsoft.com/graph/api/tablerow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of tablerow object.
      * @param body The request body
-     * @return a CompletableFuture of workbookTableRow
+     * @return a CompletableFuture of WorkbookTableRow
      * @see <a href="https://learn.microsoft.com/graph/api/tablerow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of tablerow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookTableRow
+     * @return a CompletableFuture of WorkbookTableRow
      * @see <a href="https://learn.microsoft.com/graph/api/tablerow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

@@ -17,7 +17,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
      */
     private Json values;
     /**
-     * Instantiates a new workbookTableRow and sets the default values.
+     * Instantiates a new WorkbookTableRow and sets the default values.
      */
     public WorkbookTableRow() {
         super();
@@ -25,7 +25,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookTableRow
+     * @return a WorkbookTableRow
      */
     @jakarta.annotation.Nonnull
     public static WorkbookTableRow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
     }
     /**
      * Gets the index property value. Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIndex() {

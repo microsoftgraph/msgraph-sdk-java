@@ -38,7 +38,7 @@ public class CreateOrGetRequestBuilder extends BaseRequestBuilder {
     /**
      * Create an onlineMeeting object with a custom specified external ID. If the external ID already exists, this API will return the onlineMeeting object with that external ID. 
      * @param body The request body
-     * @return a CompletableFuture of onlineMeeting
+     * @return a CompletableFuture of OnlineMeeting
      * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-createorget?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class CreateOrGetRequestBuilder extends BaseRequestBuilder {
      * Create an onlineMeeting object with a custom specified external ID. If the external ID already exists, this API will return the onlineMeeting object with that external ID. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onlineMeeting
+     * @return a CompletableFuture of OnlineMeeting
      * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-createorget?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class CreateOrGetRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a createOrGetRequestBuilder
+     * @return a CreateOrGetRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CreateOrGetRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

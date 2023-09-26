@@ -38,7 +38,7 @@ public class ParentSectionGroupRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The section group that contains the section.  Read-only.
-     * @return a CompletableFuture of sectionGroup
+     * @return a CompletableFuture of SectionGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SectionGroup> get() {
@@ -47,7 +47,7 @@ public class ParentSectionGroupRequestBuilder extends BaseRequestBuilder {
     /**
      * The section group that contains the section.  Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sectionGroup
+     * @return a CompletableFuture of SectionGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SectionGroup> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class ParentSectionGroupRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a parentSectionGroupRequestBuilder
+     * @return a ParentSectionGroupRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ParentSectionGroupRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

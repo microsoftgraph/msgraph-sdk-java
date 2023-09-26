@@ -37,7 +37,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      */
     private Integer unknownDeviceCount;
     /**
-     * Instantiates a new deviceConfigurationDeviceStateSummary and sets the default values.
+     * Instantiates a new DeviceConfigurationDeviceStateSummary and sets the default values.
      */
     public DeviceConfigurationDeviceStateSummary() {
         super();
@@ -45,7 +45,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceConfigurationDeviceStateSummary
+     * @return a DeviceConfigurationDeviceStateSummary
      */
     @jakarta.annotation.Nonnull
     public static DeviceConfigurationDeviceStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
     }
     /**
      * Gets the compliantDeviceCount property value. Number of compliant devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantDeviceCount() {
@@ -62,7 +62,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
     }
     /**
      * Gets the conflictDeviceCount property value. Number of conflict devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConflictDeviceCount() {
@@ -70,7 +70,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
     }
     /**
      * Gets the errorDeviceCount property value. Number of error devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
@@ -94,7 +94,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
     }
     /**
      * Gets the nonCompliantDeviceCount property value. Number of NonCompliant devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
@@ -102,7 +102,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
     }
     /**
      * Gets the notApplicableDeviceCount property value. Number of not applicable devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
@@ -110,7 +110,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
     }
     /**
      * Gets the remediatedDeviceCount property value. Number of remediated devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRemediatedDeviceCount() {
@@ -118,7 +118,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
     }
     /**
      * Gets the unknownDeviceCount property value. Number of unknown devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {

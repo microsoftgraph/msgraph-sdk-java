@@ -137,7 +137,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a schedule object. The schedule creation process conforms to the One API guideline for resource based long running operations (RELO).When clients use the PUT method, if the schedule is provisioned, the operation updates the schedule; otherwise, the operation starts the schedule provisioning process in the background. During schedule provisioning, clients can use the GET method to get the schedule and look at the provisionStatus property for the current state of the provisioning. If the provisioning failed, clients can get additional information from the provisionStatusCode property. Clients can also inspect the configuration of the schedule.
-     * @return a CompletableFuture of schedule
+     * @return a CompletableFuture of Schedule
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -147,7 +147,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a schedule object. The schedule creation process conforms to the One API guideline for resource based long running operations (RELO).When clients use the PUT method, if the schedule is provisioned, the operation updates the schedule; otherwise, the operation starts the schedule provisioning process in the background. During schedule provisioning, clients can use the GET method to get the schedule and look at the provisionStatus property for the current state of the provisioning. If the provisioning failed, clients can get additional information from the provisionStatusCode property. Clients can also inspect the configuration of the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of schedule
+     * @return a CompletableFuture of Schedule
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -161,7 +161,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property schedule in groups
      * @param body The request body
-     * @return a CompletableFuture of schedule
+     * @return a CompletableFuture of Schedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Schedule> put(@jakarta.annotation.Nonnull final Schedule body) {
@@ -171,7 +171,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property schedule in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of schedule
+     * @return a CompletableFuture of Schedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Schedule> put(@jakarta.annotation.Nonnull final Schedule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
@@ -273,7 +273,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a scheduleRequestBuilder
+     * @return a ScheduleRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ScheduleRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -15,7 +15,7 @@ public class GetPresencesByUserIdResponse extends BaseCollectionPaginationCountR
      */
     private java.util.List<Presence> value;
     /**
-     * Instantiates a new getPresencesByUserIdResponse and sets the default values.
+     * Instantiates a new GetPresencesByUserIdResponse and sets the default values.
      */
     public GetPresencesByUserIdResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetPresencesByUserIdResponse extends BaseCollectionPaginationCountR
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getPresencesByUserIdResponse
+     * @return a GetPresencesByUserIdResponse
      */
     @jakarta.annotation.Nonnull
     public static GetPresencesByUserIdResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetPresencesByUserIdResponse extends BaseCollectionPaginationCountR
     }
     /**
      * Gets the value property value. The value property
-     * @return a presence
+     * @return a java.util.List<Presence>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Presence> getValue() {

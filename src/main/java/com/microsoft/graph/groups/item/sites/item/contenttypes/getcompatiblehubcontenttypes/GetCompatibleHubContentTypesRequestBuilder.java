@@ -37,7 +37,7 @@ public class GetCompatibleHubContentTypesRequestBuilder extends BaseRequestBuild
     }
     /**
      * Invoke function getCompatibleHubContentTypes
-     * @return a CompletableFuture of getCompatibleHubContentTypesResponse
+     * @return a CompletableFuture of GetCompatibleHubContentTypesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetCompatibleHubContentTypesResponse> get() {
@@ -46,7 +46,7 @@ public class GetCompatibleHubContentTypesRequestBuilder extends BaseRequestBuild
     /**
      * Invoke function getCompatibleHubContentTypes
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getCompatibleHubContentTypesResponse
+     * @return a CompletableFuture of GetCompatibleHubContentTypesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetCompatibleHubContentTypesResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class GetCompatibleHubContentTypesRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getCompatibleHubContentTypesRequestBuilder
+     * @return a GetCompatibleHubContentTypesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetCompatibleHubContentTypesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

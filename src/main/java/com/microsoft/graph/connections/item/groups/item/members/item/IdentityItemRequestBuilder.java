@@ -59,7 +59,7 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
-     * @return a CompletableFuture of identity
+     * @return a CompletableFuture of Identity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Identity> get() {
@@ -68,7 +68,7 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
     /**
      * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identity
+     * @return a CompletableFuture of Identity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Identity> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property members in connections
      * @param body The request body
-     * @return a CompletableFuture of identity
+     * @return a CompletableFuture of Identity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Identity> patch(@jakarta.annotation.Nonnull final Identity body) {
@@ -91,7 +91,7 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property members in connections
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identity
+     * @return a CompletableFuture of Identity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Identity> patch(@jakarta.annotation.Nonnull final Identity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

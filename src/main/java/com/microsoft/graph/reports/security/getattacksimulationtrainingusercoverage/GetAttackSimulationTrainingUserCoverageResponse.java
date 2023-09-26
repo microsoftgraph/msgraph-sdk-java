@@ -15,7 +15,7 @@ public class GetAttackSimulationTrainingUserCoverageResponse extends BaseCollect
      */
     private java.util.List<AttackSimulationTrainingUserCoverage> value;
     /**
-     * Instantiates a new getAttackSimulationTrainingUserCoverageResponse and sets the default values.
+     * Instantiates a new GetAttackSimulationTrainingUserCoverageResponse and sets the default values.
      */
     public GetAttackSimulationTrainingUserCoverageResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetAttackSimulationTrainingUserCoverageResponse extends BaseCollect
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getAttackSimulationTrainingUserCoverageResponse
+     * @return a GetAttackSimulationTrainingUserCoverageResponse
      */
     @jakarta.annotation.Nonnull
     public static GetAttackSimulationTrainingUserCoverageResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetAttackSimulationTrainingUserCoverageResponse extends BaseCollect
     }
     /**
      * Gets the value property value. The value property
-     * @return a attackSimulationTrainingUserCoverage
+     * @return a java.util.List<AttackSimulationTrainingUserCoverage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttackSimulationTrainingUserCoverage> getValue() {

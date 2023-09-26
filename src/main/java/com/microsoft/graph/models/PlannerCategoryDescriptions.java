@@ -118,7 +118,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     private String odataType;
     /**
-     * Instantiates a new plannerCategoryDescriptions and sets the default values.
+     * Instantiates a new PlannerCategoryDescriptions and sets the default values.
      */
     public PlannerCategoryDescriptions() {
         this.setAdditionalData(new HashMap<>());
@@ -126,7 +126,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerCategoryDescriptions
+     * @return a PlannerCategoryDescriptions
      */
     @jakarta.annotation.Nonnull
     public static PlannerCategoryDescriptions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -134,7 +134,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
         return new PlannerCategoryDescriptions();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -143,7 +143,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category1 property value. The label associated with Category 1
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory1() {
@@ -151,7 +151,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category10 property value. The label associated with Category 10
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory10() {
@@ -159,7 +159,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category11 property value. The label associated with Category 11
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory11() {
@@ -167,7 +167,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category12 property value. The label associated with Category 12
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory12() {
@@ -175,7 +175,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category13 property value. The label associated with Category 13
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory13() {
@@ -183,7 +183,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category14 property value. The label associated with Category 14
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory14() {
@@ -191,7 +191,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category15 property value. The label associated with Category 15
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory15() {
@@ -199,7 +199,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category16 property value. The label associated with Category 16
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory16() {
@@ -207,7 +207,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category17 property value. The label associated with Category 17
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory17() {
@@ -215,7 +215,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category18 property value. The label associated with Category 18
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory18() {
@@ -223,7 +223,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category19 property value. The label associated with Category 19
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory19() {
@@ -231,7 +231,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category2 property value. The label associated with Category 2
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory2() {
@@ -239,7 +239,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category20 property value. The label associated with Category 20
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory20() {
@@ -247,7 +247,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category21 property value. The label associated with Category 21
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory21() {
@@ -255,7 +255,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category22 property value. The label associated with Category 22
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory22() {
@@ -263,7 +263,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category23 property value. The label associated with Category 23
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory23() {
@@ -271,7 +271,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category24 property value. The label associated with Category 24
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory24() {
@@ -279,7 +279,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category25 property value. The label associated with Category 25
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory25() {
@@ -287,7 +287,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category3 property value. The label associated with Category 3
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory3() {
@@ -295,7 +295,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category4 property value. The label associated with Category 4
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory4() {
@@ -303,7 +303,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category5 property value. The label associated with Category 5
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory5() {
@@ -311,7 +311,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category6 property value. The label associated with Category 6
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory6() {
@@ -319,7 +319,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category7 property value. The label associated with Category 7
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory7() {
@@ -327,7 +327,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category8 property value. The label associated with Category 8
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory8() {
@@ -335,7 +335,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the category9 property value. The label associated with Category 9
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory9() {
@@ -378,7 +378,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -419,8 +419,8 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

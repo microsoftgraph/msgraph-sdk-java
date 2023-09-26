@@ -60,7 +60,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
     }
     /**
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     * @return a CompletableFuture of customExtensionStageSettingCollectionResponse
+     * @return a CompletableFuture of CustomExtensionStageSettingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomExtensionStageSettingCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
     /**
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customExtensionStageSettingCollectionResponse
+     * @return a CompletableFuture of CustomExtensionStageSettingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomExtensionStageSettingCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
     /**
      * Create new navigation property to customExtensionStageSettings for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of customExtensionStageSetting
+     * @return a CompletableFuture of CustomExtensionStageSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomExtensionStageSetting> post(@jakarta.annotation.Nonnull final CustomExtensionStageSetting body) {
@@ -92,7 +92,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
      * Create new navigation property to customExtensionStageSettings for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customExtensionStageSetting
+     * @return a CompletableFuture of CustomExtensionStageSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomExtensionStageSetting> post(@jakarta.annotation.Nonnull final CustomExtensionStageSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a customExtensionStageSettingsRequestBuilder
+     * @return a CustomExtensionStageSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CustomExtensionStageSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

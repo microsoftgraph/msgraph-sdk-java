@@ -65,7 +65,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Read the properties and relationships of an authenticationMethodsPolicy object.
-     * @return a CompletableFuture of authenticationMethodsPolicy
+     * @return a CompletableFuture of AuthenticationMethodsPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
     /**
      * Read the properties and relationships of an authenticationMethodsPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationMethodsPolicy
+     * @return a CompletableFuture of AuthenticationMethodsPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
     /**
      * Update the properties of an authenticationMethodsPolicy object.
      * @param body The request body
-     * @return a CompletableFuture of authenticationMethodsPolicy
+     * @return a CompletableFuture of AuthenticationMethodsPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
      * Update the properties of an authenticationMethodsPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationMethodsPolicy
+     * @return a CompletableFuture of AuthenticationMethodsPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -203,7 +203,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a authenticationMethodsPolicyRequestBuilder
+     * @return a AuthenticationMethodsPolicyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AuthenticationMethodsPolicyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

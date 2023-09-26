@@ -14,7 +14,7 @@ public class ArticleIndicatorCollectionResponse extends BaseCollectionPagination
      */
     private java.util.List<ArticleIndicator> value;
     /**
-     * Instantiates a new articleIndicatorCollectionResponse and sets the default values.
+     * Instantiates a new ArticleIndicatorCollectionResponse and sets the default values.
      */
     public ArticleIndicatorCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class ArticleIndicatorCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a articleIndicatorCollectionResponse
+     * @return a ArticleIndicatorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ArticleIndicatorCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class ArticleIndicatorCollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a articleIndicator
+     * @return a java.util.List<ArticleIndicator>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ArticleIndicator> getValue() {

@@ -38,7 +38,7 @@ public class ImageWithWidthRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function image
-     * @return a CompletableFuture of imageWithWidthResponse
+     * @return a CompletableFuture of ImageWithWidthResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImageWithWidthResponse> get() {
@@ -47,7 +47,7 @@ public class ImageWithWidthRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function image
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of imageWithWidthResponse
+     * @return a CompletableFuture of ImageWithWidthResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImageWithWidthResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class ImageWithWidthRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a imageWithWidthRequestBuilder
+     * @return a ImageWithWidthRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ImageWithWidthRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

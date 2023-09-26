@@ -92,8 +92,8 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the user objects.
-     * @return a CompletableFuture of userCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of UserCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get() {
@@ -102,8 +102,8 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the user objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of UserCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -116,7 +116,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new user object.
      * @param body The request body
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-user-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
      * Create a new user object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-user-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -203,7 +203,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a usersRequestBuilder
+     * @return a UsersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UsersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -25,7 +25,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      */
     private ProductFamily productFamily;
     /**
-     * Instantiates a new clientUserAgent and sets the default values.
+     * Instantiates a new ClientUserAgent and sets the default values.
      */
     public ClientUserAgent() {
         super();
@@ -34,7 +34,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a clientUserAgent
+     * @return a ClientUserAgent
      */
     @jakarta.annotation.Nonnull
     public static ClientUserAgent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     }
     /**
      * Gets the azureADAppId property value. The unique identifier of the Azure AD application used by this endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureADAppId() {
@@ -51,7 +51,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     }
     /**
      * Gets the communicationServiceId property value. Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCommunicationServiceId() {
@@ -72,7 +72,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     }
     /**
      * Gets the platform property value. The platform property
-     * @return a clientPlatform
+     * @return a ClientPlatform
      */
     @jakarta.annotation.Nullable
     public ClientPlatform getPlatform() {
@@ -80,7 +80,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     }
     /**
      * Gets the productFamily property value. The productFamily property
-     * @return a productFamily
+     * @return a ProductFamily
      */
     @jakarta.annotation.Nullable
     public ProductFamily getProductFamily() {

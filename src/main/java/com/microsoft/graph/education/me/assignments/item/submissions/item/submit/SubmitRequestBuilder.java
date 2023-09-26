@@ -37,7 +37,7 @@ public class SubmitRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Indicate that a student is done with the work and is ready to hand in the assignment. Only teachers, students, and applications with application permissions can perform this operation. This method changes the status of the submission from working to submitted. During the submit process, all the resources are copied to the submittedResources bucket. The teacher will be looking at the submitted resources list for grading. A teacher can also submit a student's assignment on their behalf.
-     * @return a CompletableFuture of educationSubmission
+     * @return a CompletableFuture of EducationSubmission
      * @see <a href="https://learn.microsoft.com/graph/api/educationsubmission-submit?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class SubmitRequestBuilder extends BaseRequestBuilder {
     /**
      * Indicate that a student is done with the work and is ready to hand in the assignment. Only teachers, students, and applications with application permissions can perform this operation. This method changes the status of the submission from working to submitted. During the submit process, all the resources are copied to the submittedResources bucket. The teacher will be looking at the submitted resources list for grading. A teacher can also submit a student's assignment on their behalf.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSubmission
+     * @return a CompletableFuture of EducationSubmission
      * @see <a href="https://learn.microsoft.com/graph/api/educationsubmission-submit?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class SubmitRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a submitRequestBuilder
+     * @return a SubmitRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SubmitRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

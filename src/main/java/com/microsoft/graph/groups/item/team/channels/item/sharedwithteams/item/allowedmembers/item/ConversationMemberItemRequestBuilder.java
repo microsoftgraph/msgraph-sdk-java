@@ -38,7 +38,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A collection of team members who have access to the shared channel.
-     * @return a CompletableFuture of conversationMember
+     * @return a CompletableFuture of ConversationMember
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> get() {
@@ -47,7 +47,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
     /**
      * A collection of team members who have access to the shared channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationMember
+     * @return a CompletableFuture of ConversationMember
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

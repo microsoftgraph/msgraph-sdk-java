@@ -35,7 +35,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     private String servicePlanName;
     /**
-     * Instantiates a new servicePlanInfo and sets the default values.
+     * Instantiates a new ServicePlanInfo and sets the default values.
      */
     public ServicePlanInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -43,7 +43,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a servicePlanInfo
+     * @return a ServicePlanInfo
      */
     @jakarta.annotation.Nonnull
     public static ServicePlanInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
         return new ServicePlanInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -60,7 +60,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appliesTo property value. The object the service plan can be assigned to. The possible values are:User - service plan can be assigned to individual users.Company - service plan can be assigned to the entire tenant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppliesTo() {
@@ -82,7 +82,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -90,7 +90,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the provisioningStatus property value. The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProvisioningStatus() {
@@ -106,7 +106,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the servicePlanName property value. The name of the service plan.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePlanName() {
@@ -126,8 +126,8 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

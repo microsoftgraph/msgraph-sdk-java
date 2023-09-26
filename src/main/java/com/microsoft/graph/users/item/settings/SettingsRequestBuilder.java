@@ -65,7 +65,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the user and organization userSettings object.To learn how to update the properties of the userSettings object, see update user settings.
-     * @return a CompletableFuture of userSettings
+     * @return a CompletableFuture of UserSettings
      * @see <a href="https://learn.microsoft.com/graph/api/usersettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the user and organization userSettings object.To learn how to update the properties of the userSettings object, see update user settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userSettings
+     * @return a CompletableFuture of UserSettings
      * @see <a href="https://learn.microsoft.com/graph/api/usersettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of the userSettings object. Users in the same organization can have different settings based on their preference or on the organization policies. To get the user current settings, see current user settings. 
      * @param body The request body
-     * @return a CompletableFuture of userSettings
+     * @return a CompletableFuture of UserSettings
      * @see <a href="https://learn.microsoft.com/graph/api/usersettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the userSettings object. Users in the same organization can have different settings based on their preference or on the organization policies. To get the user current settings, see current user settings. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userSettings
+     * @return a CompletableFuture of UserSettings
      * @see <a href="https://learn.microsoft.com/graph/api/usersettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -203,7 +203,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a settingsRequestBuilder
+     * @return a SettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

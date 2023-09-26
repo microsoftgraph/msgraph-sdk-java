@@ -59,7 +59,7 @@ public class ManagedAppOperationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read properties and relationships of the managedAppOperation object.
-     * @return a CompletableFuture of managedAppOperation
+     * @return a CompletableFuture of ManagedAppOperation
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ManagedAppOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the managedAppOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppOperation
+     * @return a CompletableFuture of ManagedAppOperation
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ManagedAppOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a managedAppOperation object.
      * @param body The request body
-     * @return a CompletableFuture of managedAppOperation
+     * @return a CompletableFuture of ManagedAppOperation
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappoperation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class ManagedAppOperationItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a managedAppOperation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppOperation
+     * @return a CompletableFuture of ManagedAppOperation
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappoperation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

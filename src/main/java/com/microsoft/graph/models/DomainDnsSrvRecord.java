@@ -33,7 +33,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      */
     private Integer weight;
     /**
-     * Instantiates a new domainDnsSrvRecord and sets the default values.
+     * Instantiates a new DomainDnsSrvRecord and sets the default values.
      */
     public DomainDnsSrvRecord() {
         super();
@@ -41,7 +41,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a domainDnsSrvRecord
+     * @return a DomainDnsSrvRecord
      */
     @jakarta.annotation.Nonnull
     public static DomainDnsSrvRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -65,7 +65,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
     }
     /**
      * Gets the nameTarget property value. Value to use when configuring the Target property of the SRV record at the DNS host.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNameTarget() {
@@ -73,7 +73,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
     }
     /**
      * Gets the port property value. Value to use when configuring the port property of the SRV record at the DNS host.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPort() {
@@ -81,7 +81,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
     }
     /**
      * Gets the priority property value. Value to use when configuring the priority property of the SRV record at the DNS host.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -89,7 +89,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
     }
     /**
      * Gets the protocol property value. Value to use when configuring the protocol property of the SRV record at the DNS host.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProtocol() {
@@ -97,7 +97,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
     }
     /**
      * Gets the service property value. Value to use when configuring the service property of the SRV record at the DNS host.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getService() {
@@ -105,7 +105,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
     }
     /**
      * Gets the weight property value. Value to use when configuring the weight property of the SRV record at the DNS host.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWeight() {

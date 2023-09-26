@@ -13,11 +13,11 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
      */
     private String claimValue;
     /**
-     * Whether this rule is enabled.
+     * Determines whether this rule is enabled.
      */
     private Boolean isEnabled;
     /**
-     * Instantiates a new unifiedRoleManagementPolicyAuthenticationContextRule and sets the default values.
+     * Instantiates a new UnifiedRoleManagementPolicyAuthenticationContextRule and sets the default values.
      */
     public UnifiedRoleManagementPolicyAuthenticationContextRule() {
         super();
@@ -26,7 +26,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleManagementPolicyAuthenticationContextRule
+     * @return a UnifiedRoleManagementPolicyAuthenticationContextRule
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementPolicyAuthenticationContextRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
     }
     /**
      * Gets the claimValue property value. The value of the authentication context claim.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClaimValue() {
@@ -53,8 +53,8 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. Whether this rule is enabled.
-     * @return a boolean
+     * Gets the isEnabled property value. Determines whether this rule is enabled.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -78,7 +78,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
         this.claimValue = value;
     }
     /**
-     * Sets the isEnabled property value. Whether this rule is enabled.
+     * Sets the isEnabled property value. Determines whether this rule is enabled.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {

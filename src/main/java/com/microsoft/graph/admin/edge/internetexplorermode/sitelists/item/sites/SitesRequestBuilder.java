@@ -60,7 +60,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the browserSite objects and their properties.
-     * @return a CompletableFuture of browserSiteCollectionResponse
+     * @return a CompletableFuture of BrowserSiteCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-list-sites?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the browserSite objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of browserSiteCollectionResponse
+     * @return a CompletableFuture of BrowserSiteCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-list-sites?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new browserSite object in a browserSiteList.
      * @param body The request body
-     * @return a CompletableFuture of browserSite
+     * @return a CompletableFuture of BrowserSite
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-post-sites?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
      * Create a new browserSite object in a browserSiteList.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of browserSite
+     * @return a CompletableFuture of BrowserSite
      * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-post-sites?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sitesRequestBuilder
+     * @return a SitesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SitesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

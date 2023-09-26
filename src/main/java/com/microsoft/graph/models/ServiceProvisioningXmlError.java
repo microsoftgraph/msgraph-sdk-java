@@ -13,7 +13,7 @@ public class ServiceProvisioningXmlError extends ServiceProvisioningError implem
      */
     private String errorDetail;
     /**
-     * Instantiates a new serviceProvisioningXmlError and sets the default values.
+     * Instantiates a new ServiceProvisioningXmlError and sets the default values.
      */
     public ServiceProvisioningXmlError() {
         super();
@@ -22,7 +22,7 @@ public class ServiceProvisioningXmlError extends ServiceProvisioningError implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceProvisioningXmlError
+     * @return a ServiceProvisioningXmlError
      */
     @jakarta.annotation.Nonnull
     public static ServiceProvisioningXmlError createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class ServiceProvisioningXmlError extends ServiceProvisioningError implem
     }
     /**
      * Gets the errorDetail property value. The errorDetail property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorDetail() {

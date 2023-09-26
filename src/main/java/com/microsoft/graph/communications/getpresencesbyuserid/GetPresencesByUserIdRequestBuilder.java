@@ -37,7 +37,7 @@ public class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the presence information for multiple users.
      * @param body The request body
-     * @return a CompletableFuture of getPresencesByUserIdResponse
+     * @return a CompletableFuture of GetPresencesByUserIdResponse
      * @see <a href="https://learn.microsoft.com/graph/api/cloudcommunications-getpresencesbyuserid?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder {
      * Get the presence information for multiple users.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getPresencesByUserIdResponse
+     * @return a CompletableFuture of GetPresencesByUserIdResponse
      * @see <a href="https://learn.microsoft.com/graph/api/cloudcommunications-getpresencesbyuserid?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getPresencesByUserIdRequestBuilder
+     * @return a GetPresencesByUserIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetPresencesByUserIdRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -129,7 +129,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Access a shared DriveItem or a collection of shared items by using a shareId or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
-     * @return a CompletableFuture of sharedDriveItem
+     * @return a CompletableFuture of SharedDriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/shares-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Access a shared DriveItem or a collection of shared items by using a shareId or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharedDriveItem
+     * @return a CompletableFuture of SharedDriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/shares-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -153,7 +153,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in shares
      * @param body The request body
-     * @return a CompletableFuture of sharedDriveItem
+     * @return a CompletableFuture of SharedDriveItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedDriveItem> patch(@jakarta.annotation.Nonnull final SharedDriveItem body) {
@@ -163,7 +163,7 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in shares
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharedDriveItem
+     * @return a CompletableFuture of SharedDriveItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedDriveItem> patch(@jakarta.annotation.Nonnull final SharedDriveItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -60,7 +60,7 @@ public class ResourceRoleScopesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get resourceRoleScopes from identityGovernance
-     * @return a CompletableFuture of accessPackageResourceRoleScopeCollectionResponse
+     * @return a CompletableFuture of AccessPackageResourceRoleScopeCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScopeCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ResourceRoleScopesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get resourceRoleScopes from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceRoleScopeCollectionResponse
+     * @return a CompletableFuture of AccessPackageResourceRoleScopeCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScopeCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ResourceRoleScopesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to resourceRoleScopes for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageResourceRoleScope
+     * @return a CompletableFuture of AccessPackageResourceRoleScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> post(@jakarta.annotation.Nonnull final AccessPackageResourceRoleScope body) {
@@ -92,7 +92,7 @@ public class ResourceRoleScopesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to resourceRoleScopes for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceRoleScope
+     * @return a CompletableFuture of AccessPackageResourceRoleScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> post(@jakarta.annotation.Nonnull final AccessPackageResourceRoleScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ResourceRoleScopesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resourceRoleScopesRequestBuilder
+     * @return a ResourceRoleScopesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ResourceRoleScopesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

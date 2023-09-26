@@ -60,7 +60,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of a user's emailAuthenticationMethod objects and their properties. This API will return only a single object in the collection as only one email method can be set for a user.
-     * @return a CompletableFuture of emailAuthenticationMethodCollectionResponse
+     * @return a CompletableFuture of EmailAuthenticationMethodCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-emailmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of a user's emailAuthenticationMethod objects and their properties. This API will return only a single object in the collection as only one email method can be set for a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of emailAuthenticationMethodCollectionResponse
+     * @return a CompletableFuture of EmailAuthenticationMethodCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-emailmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
      * @param body The request body
-     * @return a CompletableFuture of emailAuthenticationMethod
+     * @return a CompletableFuture of EmailAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-post-emailmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
      * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of emailAuthenticationMethod
+     * @return a CompletableFuture of EmailAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-post-emailmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a emailMethodsRequestBuilder
+     * @return a EmailMethodsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EmailMethodsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

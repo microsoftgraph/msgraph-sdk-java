@@ -13,7 +13,7 @@ public class TeamworkTagMemberCollectionResponse extends BaseCollectionPaginatio
      */
     private java.util.List<TeamworkTagMember> value;
     /**
-     * Instantiates a new teamworkTagMemberCollectionResponse and sets the default values.
+     * Instantiates a new TeamworkTagMemberCollectionResponse and sets the default values.
      */
     public TeamworkTagMemberCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class TeamworkTagMemberCollectionResponse extends BaseCollectionPaginatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkTagMemberCollectionResponse
+     * @return a TeamworkTagMemberCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static TeamworkTagMemberCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class TeamworkTagMemberCollectionResponse extends BaseCollectionPaginatio
     }
     /**
      * Gets the value property value. The value property
-     * @return a teamworkTagMember
+     * @return a java.util.List<TeamworkTagMember>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkTagMember> getValue() {

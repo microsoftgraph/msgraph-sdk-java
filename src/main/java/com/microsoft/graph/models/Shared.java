@@ -35,7 +35,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      */
     private OffsetDateTime sharedDateTime;
     /**
-     * Instantiates a new shared and sets the default values.
+     * Instantiates a new Shared and sets the default values.
      */
     public Shared() {
         this.setAdditionalData(new HashMap<>());
@@ -43,7 +43,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a shared
+     * @return a Shared
      */
     @jakarta.annotation.Nonnull
     public static Shared createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
         return new Shared();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -74,7 +74,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -82,7 +82,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the owner property value. The identity of the owner of the shared item. Read-only.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getOwner() {
@@ -90,7 +90,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the scope property value. Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScope() {
@@ -98,7 +98,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sharedBy property value. The identity of the user who shared the item. Read-only.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getSharedBy() {
@@ -126,8 +126,8 @@ public class Shared implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

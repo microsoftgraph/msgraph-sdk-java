@@ -57,7 +57,7 @@ public class AgreementFileVersionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
-     * @return a CompletableFuture of agreementFileVersion
+     * @return a CompletableFuture of AgreementFileVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileVersion> get() {
@@ -66,7 +66,7 @@ public class AgreementFileVersionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementFileVersion
+     * @return a CompletableFuture of AgreementFileVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileVersion> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AgreementFileVersionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property versions in agreements
      * @param body The request body
-     * @return a CompletableFuture of agreementFileVersion
+     * @return a CompletableFuture of AgreementFileVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileVersion> patch(@jakarta.annotation.Nonnull final AgreementFileVersion body) {
@@ -89,7 +89,7 @@ public class AgreementFileVersionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property versions in agreements
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agreementFileVersion
+     * @return a CompletableFuture of AgreementFileVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileVersion> patch(@jakarta.annotation.Nonnull final AgreementFileVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

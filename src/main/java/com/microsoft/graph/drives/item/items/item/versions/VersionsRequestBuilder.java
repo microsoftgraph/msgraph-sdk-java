@@ -60,7 +60,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * OneDrive and SharePoint can be configured to retain the history for files.Depending on the service and configuration, a new version can be created for each edit, each time the file is saved, manually, or never. Previous versions of a document may be retained for a finite period of time depending on admin settings which may be unique per user or location.
-     * @return a CompletableFuture of driveItemVersionCollectionResponse
+     * @return a CompletableFuture of DriveItemVersionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-list-versions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     /**
      * OneDrive and SharePoint can be configured to retain the history for files.Depending on the service and configuration, a new version can be created for each edit, each time the file is saved, manually, or never. Previous versions of a document may be retained for a finite period of time depending on admin settings which may be unique per user or location.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of driveItemVersionCollectionResponse
+     * @return a CompletableFuture of DriveItemVersionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-list-versions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to versions for drives
      * @param body The request body
-     * @return a CompletableFuture of driveItemVersion
+     * @return a CompletableFuture of DriveItemVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItemVersion> post(@jakarta.annotation.Nonnull final DriveItemVersion body) {
@@ -94,7 +94,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to versions for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of driveItemVersion
+     * @return a CompletableFuture of DriveItemVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItemVersion> post(@jakarta.annotation.Nonnull final DriveItemVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a versionsRequestBuilder
+     * @return a VersionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public VersionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

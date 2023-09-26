@@ -37,7 +37,7 @@ public class AdditionalAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function additionalAccess
-     * @return a CompletableFuture of additionalAccessResponse
+     * @return a CompletableFuture of AdditionalAccessResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdditionalAccessResponse> get() {
@@ -46,7 +46,7 @@ public class AdditionalAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function additionalAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of additionalAccessResponse
+     * @return a CompletableFuture of AdditionalAccessResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdditionalAccessResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class AdditionalAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a additionalAccessRequestBuilder
+     * @return a AdditionalAccessRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AdditionalAccessRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

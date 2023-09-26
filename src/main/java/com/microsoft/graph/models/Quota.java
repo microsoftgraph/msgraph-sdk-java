@@ -42,7 +42,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     private Long used;
     /**
-     * Instantiates a new quota and sets the default values.
+     * Instantiates a new Quota and sets the default values.
      */
     public Quota() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a quota
+     * @return a Quota
      */
     @jakarta.annotation.Nonnull
     public static Quota createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
         return new Quota();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the deleted property value. Total space consumed by files in the recycle bin, in bytes. Read-only.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getDeleted() {
@@ -91,7 +91,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -99,7 +99,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the remaining property value. Total space remaining before reaching the quota limit, in bytes. Read-only.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getRemaining() {
@@ -107,7 +107,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the state property value. Enumeration value that indicates the state of the storage space. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getState() {
@@ -115,7 +115,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the storagePlanInformation property value. Information about the drive's storage quota plans. Only in Personal OneDrive.
-     * @return a storagePlanInformation
+     * @return a StoragePlanInformation
      */
     @jakarta.annotation.Nullable
     public StoragePlanInformation getStoragePlanInformation() {
@@ -123,7 +123,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the total property value. Total allowed storage space, in bytes. Read-only.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTotal() {
@@ -131,7 +131,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the used property value. Total space used, in bytes. Read-only.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getUsed() {
@@ -153,8 +153,8 @@ public class Quota implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

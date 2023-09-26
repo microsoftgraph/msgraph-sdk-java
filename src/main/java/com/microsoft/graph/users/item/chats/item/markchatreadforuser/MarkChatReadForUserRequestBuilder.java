@@ -92,7 +92,7 @@ public class MarkChatReadForUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a markChatReadForUserRequestBuilder
+     * @return a MarkChatReadForUserRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MarkChatReadForUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

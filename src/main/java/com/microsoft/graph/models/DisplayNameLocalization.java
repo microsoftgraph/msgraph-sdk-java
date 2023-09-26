@@ -26,7 +26,7 @@ public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new displayNameLocalization and sets the default values.
+     * Instantiates a new DisplayNameLocalization and sets the default values.
      */
     public DisplayNameLocalization() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a displayNameLocalization
+     * @return a DisplayNameLocalization
      */
     @jakarta.annotation.Nonnull
     public static DisplayNameLocalization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
         return new DisplayNameLocalization();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. If present, the value of this field contains the displayName string that has been set for the language present in the languageTag field.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -71,7 +71,7 @@ public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the languageTag property value. Provides the language culture-code and friendly name of the language that the displayName field has been provided in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
@@ -79,7 +79,7 @@ public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,8 +97,8 @@ public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

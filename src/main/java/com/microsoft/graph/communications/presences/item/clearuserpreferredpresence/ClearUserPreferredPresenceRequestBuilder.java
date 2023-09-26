@@ -85,7 +85,7 @@ public class ClearUserPreferredPresenceRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a clearUserPreferredPresenceRequestBuilder
+     * @return a ClearUserPreferredPresenceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ClearUserPreferredPresenceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

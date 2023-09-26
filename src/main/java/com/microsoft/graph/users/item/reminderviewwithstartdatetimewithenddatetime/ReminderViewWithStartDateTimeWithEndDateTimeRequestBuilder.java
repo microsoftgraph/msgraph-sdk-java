@@ -26,10 +26,10 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends 
      * @param requestAdapter The request adapter to use to execute the requests.
      * @param StartDateTime Usage: StartDateTime='{StartDateTime}'
      */
-    public ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String endDateTime, @jakarta.annotation.Nullable final String startDateTime) {
+    public ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String EndDateTime, @jakarta.annotation.Nullable final String StartDateTime) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}'){?%24top,%24skip,%24search,%24filter,%24count}", pathParameters);
-        this.pathParameters.put("EndDateTime", endDateTime);
-        this.pathParameters.put("StartDateTime", startDateTime);
+        this.pathParameters.put("EndDateTime", EndDateTime);
+        this.pathParameters.put("StartDateTime", StartDateTime);
     }
     /**
      * Instantiates a new ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder and sets the default values.
@@ -41,7 +41,7 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends 
     }
     /**
      * Invoke function reminderView
-     * @return a CompletableFuture of reminderViewWithStartDateTimeWithEndDateTimeResponse
+     * @return a CompletableFuture of ReminderViewWithStartDateTimeWithEndDateTimeResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReminderViewWithStartDateTimeWithEndDateTimeResponse> get() {
@@ -50,7 +50,7 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends 
     /**
      * Invoke function reminderView
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of reminderViewWithStartDateTimeWithEndDateTimeResponse
+     * @return a CompletableFuture of ReminderViewWithStartDateTimeWithEndDateTimeResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReminderViewWithStartDateTimeWithEndDateTimeResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -92,7 +92,7 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reminderViewWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return a ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

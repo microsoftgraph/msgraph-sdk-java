@@ -13,7 +13,7 @@ public class PermissionCollectionResponse extends BaseCollectionPaginationCountR
      */
     private java.util.List<Permission> value;
     /**
-     * Instantiates a new permissionCollectionResponse and sets the default values.
+     * Instantiates a new PermissionCollectionResponse and sets the default values.
      */
     public PermissionCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class PermissionCollectionResponse extends BaseCollectionPaginationCountR
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a permissionCollectionResponse
+     * @return a PermissionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PermissionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class PermissionCollectionResponse extends BaseCollectionPaginationCountR
     }
     /**
      * Gets the value property value. The value property
-     * @return a permission
+     * @return a java.util.List<Permission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Permission> getValue() {

@@ -88,7 +88,7 @@ public class GetM365AppPlatformUserCountsWithPeriodRequestBuilder extends BaseRe
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getM365AppPlatformUserCountsWithPeriodRequestBuilder
+     * @return a GetM365AppPlatformUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetM365AppPlatformUserCountsWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

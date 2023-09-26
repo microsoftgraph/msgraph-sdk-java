@@ -60,7 +60,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of pinnedChatMessages in a chat.
-     * @return a CompletableFuture of pinnedChatMessageInfoCollectionResponse
+     * @return a CompletableFuture of PinnedChatMessageInfoCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of pinnedChatMessages in a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of pinnedChatMessageInfoCollectionResponse
+     * @return a CompletableFuture of PinnedChatMessageInfoCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message.
      * @param body The request body
-     * @return a CompletableFuture of pinnedChatMessageInfo
+     * @return a CompletableFuture of PinnedChatMessageInfo
      * @see <a href="https://learn.microsoft.com/graph/api/chat-post-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
      * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of pinnedChatMessageInfo
+     * @return a CompletableFuture of PinnedChatMessageInfo
      * @see <a href="https://learn.microsoft.com/graph/api/chat-post-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a pinnedMessagesRequestBuilder
+     * @return a PinnedMessagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PinnedMessagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

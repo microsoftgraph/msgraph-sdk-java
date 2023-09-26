@@ -14,7 +14,7 @@ public class SessionCollectionResponse extends BaseCollectionPaginationCountResp
      */
     private java.util.List<Session> value;
     /**
-     * Instantiates a new sessionCollectionResponse and sets the default values.
+     * Instantiates a new SessionCollectionResponse and sets the default values.
      */
     public SessionCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class SessionCollectionResponse extends BaseCollectionPaginationCountResp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sessionCollectionResponse
+     * @return a SessionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static SessionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class SessionCollectionResponse extends BaseCollectionPaginationCountResp
     }
     /**
      * Gets the value property value. The value property
-     * @return a session
+     * @return a java.util.List<Session>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Session> getValue() {

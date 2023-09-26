@@ -27,7 +27,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      */
     private String sensitivityLabelId;
     /**
-     * Instantiates a new assignSensitivityLabelPostRequestBody and sets the default values.
+     * Instantiates a new AssignSensitivityLabelPostRequestBody and sets the default values.
      */
     public AssignSensitivityLabelPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -35,7 +35,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a assignSensitivityLabelPostRequestBody
+     * @return a AssignSensitivityLabelPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static AssignSensitivityLabelPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
         return new AssignSensitivityLabelPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -52,7 +52,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the assignmentMethod property value. The assignmentMethod property
-     * @return a sensitivityLabelAssignmentMethod
+     * @return a SensitivityLabelAssignmentMethod
      */
     @jakarta.annotation.Nullable
     public SensitivityLabelAssignmentMethod getAssignmentMethod() {
@@ -72,7 +72,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the justificationText property value. The justificationText property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJustificationText() {
@@ -80,7 +80,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the sensitivityLabelId property value. The sensitivityLabelId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSensitivityLabelId() {
@@ -98,8 +98,8 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

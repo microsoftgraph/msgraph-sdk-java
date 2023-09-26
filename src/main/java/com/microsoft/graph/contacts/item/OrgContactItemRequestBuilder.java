@@ -9,6 +9,7 @@ import com.microsoft.graph.contacts.item.manager.ManagerRequestBuilder;
 import com.microsoft.graph.contacts.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.contacts.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.contacts.item.retryserviceprovisioning.RetryServiceProvisioningRequestBuilder;
+import com.microsoft.graph.contacts.item.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.graph.contacts.item.transitivememberof.TransitiveMemberOfRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OrgContact;
@@ -94,6 +95,13 @@ public class OrgContactItemRequestBuilder extends BaseRequestBuilder {
         return new RetryServiceProvisioningRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * The serviceProvisioningErrors property
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.orgContact entity.
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +145,7 @@ public class OrgContactItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of an organizational contact.
-     * @return a CompletableFuture of orgContact
+     * @return a CompletableFuture of OrgContact
      * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -147,7 +155,7 @@ public class OrgContactItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of an organizational contact.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of orgContact
+     * @return a CompletableFuture of OrgContact
      * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -161,7 +169,7 @@ public class OrgContactItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in contacts
      * @param body The request body
-     * @return a CompletableFuture of orgContact
+     * @return a CompletableFuture of OrgContact
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrgContact> patch(@jakarta.annotation.Nonnull final OrgContact body) {
@@ -171,7 +179,7 @@ public class OrgContactItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in contacts
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of orgContact
+     * @return a CompletableFuture of OrgContact
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrgContact> patch(@jakarta.annotation.Nonnull final OrgContact body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

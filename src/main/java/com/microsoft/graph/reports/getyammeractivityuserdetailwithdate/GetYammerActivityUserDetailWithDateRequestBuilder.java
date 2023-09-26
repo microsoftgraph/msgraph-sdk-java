@@ -89,7 +89,7 @@ public class GetYammerActivityUserDetailWithDateRequestBuilder extends BaseReque
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getYammerActivityUserDetailWithDateRequestBuilder
+     * @return a GetYammerActivityUserDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetYammerActivityUserDetailWithDateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

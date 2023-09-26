@@ -109,7 +109,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     private DateTimeTimeZone startDateTime;
     /**
-     * Instantiates a new bookingAppointment and sets the default values.
+     * Instantiates a new BookingAppointment and sets the default values.
      */
     public BookingAppointment() {
         super();
@@ -117,7 +117,7 @@ public class BookingAppointment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingAppointment
+     * @return a BookingAppointment
      */
     @jakarta.annotation.Nonnull
     public static BookingAppointment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -126,7 +126,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the additionalInformation property value. Additional information that is sent to the customer when an appointment is confirmed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdditionalInformation() {
@@ -134,7 +134,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the anonymousJoinWebUrl property value. The URL of the meeting to join anonymously.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAnonymousJoinWebUrl() {
@@ -142,7 +142,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the customers property value. A collection of customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
-     * @return a bookingCustomerInformationBase
+     * @return a java.util.List<BookingCustomerInformationBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingCustomerInformationBase> getCustomers() {
@@ -150,7 +150,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the customerTimeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomerTimeZone() {
@@ -166,7 +166,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
@@ -207,7 +207,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the filledAttendeesCount property value. The current number of customers in the appointment
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFilledAttendeesCount() {
@@ -215,7 +215,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the isLocationOnline property value. If true, indicates that the appointment will be held online. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLocationOnline() {
@@ -223,7 +223,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the joinWebUrl property value. The URL of the online meeting for the appointment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJoinWebUrl() {
@@ -231,7 +231,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the maximumAttendeesCount property value. The maximum number of customers allowed in an appointment. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumAttendeesCount() {
@@ -239,7 +239,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOptOutOfCustomerEmail() {
@@ -263,7 +263,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the price property value. The regular price for an appointment for the specified bookingService.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getPrice() {
@@ -271,7 +271,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the priceType property value. Represents the type of pricing of a booking service.
-     * @return a bookingPriceType
+     * @return a BookingPriceType
      */
     @jakarta.annotation.Nullable
     public BookingPriceType getPriceType() {
@@ -279,7 +279,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the reminders property value. The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by its ID.
-     * @return a bookingReminder
+     * @return a java.util.List<BookingReminder>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingReminder> getReminders() {
@@ -287,7 +287,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSelfServiceAppointmentId() {
@@ -295,7 +295,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the serviceId property value. The ID of the bookingService associated with this appointment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceId() {
@@ -303,7 +303,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the serviceLocation property value. The location where the service is delivered.
-     * @return a location
+     * @return a Location
      */
     @jakarta.annotation.Nullable
     public Location getServiceLocation() {
@@ -311,7 +311,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the serviceName property value. The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it is computed from the service associated with the appointment by the serviceId property.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceName() {
@@ -319,7 +319,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the serviceNotes property value. Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceNotes() {
@@ -327,7 +327,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the smsNotificationsEnabled property value. If true, indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmsNotificationsEnabled() {
@@ -335,7 +335,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the staffMemberIds property value. The ID of each bookingStaffMember who is scheduled in this appointment.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getStaffMemberIds() {
@@ -343,7 +343,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {

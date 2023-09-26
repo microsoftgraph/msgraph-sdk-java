@@ -59,7 +59,7 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of channels either in this team or shared with this team (incoming channels).
-     * @return a CompletableFuture of channelCollectionResponse
+     * @return a CompletableFuture of ChannelCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/team-list-allchannels?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of channels either in this team or shared with this team (incoming channels).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of channelCollectionResponse
+     * @return a CompletableFuture of ChannelCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/team-list-allchannels?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a allChannelsRequestBuilder
+     * @return a AllChannelsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AllChannelsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

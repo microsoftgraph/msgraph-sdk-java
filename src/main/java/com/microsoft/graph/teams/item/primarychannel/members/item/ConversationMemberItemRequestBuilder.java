@@ -37,17 +37,17 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/primaryChannel/members/{conversationMember%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a conversationMember from a channel.
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-delete?view=graph-rest-1.0">Find more info here</a>
+     * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared.
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-delete-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         return delete(null);
     }
     /**
-     * Delete a conversationMember from a channel.
+     * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-delete-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -59,7 +59,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a conversationMember from a channel.
-     * @return a CompletableFuture of conversationMember
+     * @return a CompletableFuture of ConversationMember
      * @see <a href="https://learn.microsoft.com/graph/api/channel-get-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a conversationMember from a channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationMember
+     * @return a CompletableFuture of ConversationMember
      * @see <a href="https://learn.microsoft.com/graph/api/channel-get-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param body The request body
-     * @return a CompletableFuture of conversationMember
+     * @return a CompletableFuture of ConversationMember
      * @see <a href="https://learn.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
      * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationMember
+     * @return a CompletableFuture of ConversationMember
      * @see <a href="https://learn.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ConversationMember::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a conversationMember from a channel.
+     * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a conversationMember from a channel.
+     * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

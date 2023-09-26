@@ -60,7 +60,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List all the groupLifecyclePolicies.
-     * @return a CompletableFuture of groupLifecyclePolicyCollectionResponse
+     * @return a CompletableFuture of GroupLifecyclePolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * List all the groupLifecyclePolicies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupLifecyclePolicyCollectionResponse
+     * @return a CompletableFuture of GroupLifecyclePolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Creates a new groupLifecyclePolicy.
      * @param body The request body
-     * @return a CompletableFuture of groupLifecyclePolicy
+     * @return a CompletableFuture of GroupLifecyclePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-post-grouplifecyclepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
      * Creates a new groupLifecyclePolicy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupLifecyclePolicy
+     * @return a CompletableFuture of GroupLifecyclePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-post-grouplifecyclepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a groupLifecyclePoliciesRequestBuilder
+     * @return a GroupLifecyclePoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GroupLifecyclePoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

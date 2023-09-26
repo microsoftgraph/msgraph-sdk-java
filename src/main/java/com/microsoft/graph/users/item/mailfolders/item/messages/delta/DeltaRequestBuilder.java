@@ -37,7 +37,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a set of messages that have been added, deleted, or updated in a specified folder. A delta function call for messages in a folder is similar to a GET request, except that by appropriatelyapplying state tokens in one or more of these calls, you can [query for incremental changes in the messages inthat folder](/graph/delta-query-messages). This allows you to maintain and synchronize a local store of a user's messages withouthaving to fetch the entire set of messages from the server every time.
-     * @return a CompletableFuture of deltaResponse
+     * @return a CompletableFuture of DeltaResponse
      * @see <a href="https://learn.microsoft.com/graph/api/message-delta?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a set of messages that have been added, deleted, or updated in a specified folder. A delta function call for messages in a folder is similar to a GET request, except that by appropriatelyapplying state tokens in one or more of these calls, you can [query for incremental changes in the messages inthat folder](/graph/delta-query-messages). This allows you to maintain and synchronize a local store of a user's messages withouthaving to fetch the entire set of messages from the server every time.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deltaResponse
+     * @return a CompletableFuture of DeltaResponse
      * @see <a href="https://learn.microsoft.com/graph/api/message-delta?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -90,7 +90,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deltaRequestBuilder
+     * @return a DeltaRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

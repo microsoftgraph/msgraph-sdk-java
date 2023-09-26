@@ -34,7 +34,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     private AdvancedConfigState state;
     /**
-     * Instantiates a new authenticationMethodsRegistrationCampaign and sets the default values.
+     * Instantiates a new AuthenticationMethodsRegistrationCampaign and sets the default values.
      */
     public AuthenticationMethodsRegistrationCampaign() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationMethodsRegistrationCampaign
+     * @return a AuthenticationMethodsRegistrationCampaign
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationMethodsRegistrationCampaign createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
         return new AuthenticationMethodsRegistrationCampaign();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     }
     /**
      * Gets the excludeTargets property value. Users and groups of users that are excluded from being prompted to set up the authentication method.
-     * @return a excludeTarget
+     * @return a java.util.List<ExcludeTarget>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExcludeTarget> getExcludeTargets() {
@@ -81,7 +81,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     }
     /**
      * Gets the includeTargets property value. Users and groups of users that are prompted to set up the authentication method.
-     * @return a authenticationMethodsRegistrationCampaignIncludeTarget
+     * @return a java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> getIncludeTargets() {
@@ -89,7 +89,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     }
     /**
      * Gets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum: 0 days. Maximum: 14 days. If the value is '0', the user is prompted during every MFA attempt.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSnoozeDurationInDays() {
@@ -105,7 +105,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     }
     /**
      * Gets the state property value. The state property
-     * @return a advancedConfigState
+     * @return a AdvancedConfigState
      */
     @jakarta.annotation.Nullable
     public AdvancedConfigState getState() {
@@ -125,8 +125,8 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

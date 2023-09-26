@@ -37,7 +37,7 @@ public class GetAuditCategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function getAuditCategories
-     * @return a CompletableFuture of getAuditCategoriesResponse
+     * @return a CompletableFuture of GetAuditCategoriesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetAuditCategoriesResponse> get() {
@@ -46,7 +46,7 @@ public class GetAuditCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function getAuditCategories
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getAuditCategoriesResponse
+     * @return a CompletableFuture of GetAuditCategoriesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetAuditCategoriesResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class GetAuditCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getAuditCategoriesRequestBuilder
+     * @return a GetAuditCategoriesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetAuditCategoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -85,7 +85,7 @@ public class ReapplyRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reapplyRequestBuilder
+     * @return a ReapplyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReapplyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement.
-     * @return a CompletableFuture of listCollectionResponse
+     * @return a CompletableFuture of ListCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/list-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of listCollectionResponse
+     * @return a CompletableFuture of ListCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/list-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new [list][] in a [site][].
      * @param body The request body
-     * @return a CompletableFuture of list
+     * @return a CompletableFuture of List
      * @see <a href="https://learn.microsoft.com/graph/api/list-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
      * Create a new [list][] in a [site][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of list
+     * @return a CompletableFuture of List
      * @see <a href="https://learn.microsoft.com/graph/api/list-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a listsRequestBuilder
+     * @return a ListsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ListsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -73,7 +73,7 @@ public class ServiceUpdateMessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a serviceUpdateMessage object. This operation retrieves a specified service update message for the tenant. The operation returns an error if the message does not exist for the tenant.
-     * @return a CompletableFuture of serviceUpdateMessage
+     * @return a CompletableFuture of ServiceUpdateMessage
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ServiceUpdateMessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a serviceUpdateMessage object. This operation retrieves a specified service update message for the tenant. The operation returns an error if the message does not exist for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of serviceUpdateMessage
+     * @return a CompletableFuture of ServiceUpdateMessage
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class ServiceUpdateMessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property messages in admin
      * @param body The request body
-     * @return a CompletableFuture of serviceUpdateMessage
+     * @return a CompletableFuture of ServiceUpdateMessage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceUpdateMessage> patch(@jakarta.annotation.Nonnull final ServiceUpdateMessage body) {
@@ -107,7 +107,7 @@ public class ServiceUpdateMessageItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property messages in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of serviceUpdateMessage
+     * @return a CompletableFuture of ServiceUpdateMessage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceUpdateMessage> patch(@jakarta.annotation.Nonnull final ServiceUpdateMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

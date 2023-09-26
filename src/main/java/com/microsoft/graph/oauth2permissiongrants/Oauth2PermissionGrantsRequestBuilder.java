@@ -68,7 +68,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of oAuth2PermissionGrant objects, representing delegated permissions which have been granted for client applications to access APIs on behalf of signed-in users.
-     * @return a CompletableFuture of oAuth2PermissionGrantCollectionResponse
+     * @return a CompletableFuture of OAuth2PermissionGrantCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/oauth2permissiongrant-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of oAuth2PermissionGrant objects, representing delegated permissions which have been granted for client applications to access APIs on behalf of signed-in users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of oAuth2PermissionGrantCollectionResponse
+     * @return a CompletableFuture of OAuth2PermissionGrantCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/oauth2permissiongrant-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a delegated permission grant represented by an oAuth2PermissionGrant object. A delegated permission grant authorizes a client service principal (representing a client application) to access a resource service principal (representing an API), on behalf of a signed-in user, for the level of access limited by the delegated permissions which were granted.
      * @param body The request body
-     * @return a CompletableFuture of oAuth2PermissionGrant
+     * @return a CompletableFuture of OAuth2PermissionGrant
      * @see <a href="https://learn.microsoft.com/graph/api/oauth2permissiongrant-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * Create a delegated permission grant represented by an oAuth2PermissionGrant object. A delegated permission grant authorizes a client service principal (representing a client application) to access a resource service principal (representing an API), on behalf of a signed-in user, for the level of access limited by the delegated permissions which were granted.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of oAuth2PermissionGrant
+     * @return a CompletableFuture of OAuth2PermissionGrant
      * @see <a href="https://learn.microsoft.com/graph/api/oauth2permissiongrant-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a oauth2PermissionGrantsRequestBuilder
+     * @return a Oauth2PermissionGrantsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public Oauth2PermissionGrantsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

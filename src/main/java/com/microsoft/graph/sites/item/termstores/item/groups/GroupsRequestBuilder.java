@@ -60,7 +60,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of group objects in a term store.
-     * @return a CompletableFuture of groupCollectionResponse
+     * @return a CompletableFuture of GroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-list-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of group objects in a term store.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupCollectionResponse
+     * @return a CompletableFuture of GroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-list-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new group object in a term store.
      * @param body The request body
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-group-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
      * Create a new group object in a term store.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-group-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a groupsRequestBuilder
+     * @return a GroupsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GroupsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

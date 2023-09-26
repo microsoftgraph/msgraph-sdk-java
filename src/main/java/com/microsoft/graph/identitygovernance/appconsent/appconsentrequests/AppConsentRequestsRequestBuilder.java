@@ -62,7 +62,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -71,7 +71,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve appConsentRequest objects and their properties.
-     * @return a CompletableFuture of appConsentRequestCollectionResponse
+     * @return a CompletableFuture of AppConsentRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/appconsentapprovalroute-list-appconsentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve appConsentRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appConsentRequestCollectionResponse
+     * @return a CompletableFuture of AppConsentRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/appconsentapprovalroute-list-appconsentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to appConsentRequests for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of appConsentRequest
+     * @return a CompletableFuture of AppConsentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppConsentRequest> post(@jakarta.annotation.Nonnull final AppConsentRequest body) {
@@ -105,7 +105,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to appConsentRequests for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appConsentRequest
+     * @return a CompletableFuture of AppConsentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppConsentRequest> post(@jakarta.annotation.Nonnull final AppConsentRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -180,7 +180,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appConsentRequestsRequestBuilder
+     * @return a AppConsentRequestsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppConsentRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

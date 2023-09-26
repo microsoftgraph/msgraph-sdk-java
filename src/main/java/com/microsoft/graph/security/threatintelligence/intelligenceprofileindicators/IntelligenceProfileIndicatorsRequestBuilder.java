@@ -60,7 +60,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
     }
     /**
      * Read the properties and relationships of a intelligenceProfileIndicator object.
-     * @return a CompletableFuture of intelligenceProfileIndicatorCollectionResponse
+     * @return a CompletableFuture of IntelligenceProfileIndicatorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntelligenceProfileIndicatorCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
     /**
      * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of intelligenceProfileIndicatorCollectionResponse
+     * @return a CompletableFuture of IntelligenceProfileIndicatorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntelligenceProfileIndicatorCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to intelligenceProfileIndicators for security
      * @param body The request body
-     * @return a CompletableFuture of intelligenceProfileIndicator
+     * @return a CompletableFuture of IntelligenceProfileIndicator
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntelligenceProfileIndicator> post(@jakarta.annotation.Nonnull final IntelligenceProfileIndicator body) {
@@ -92,7 +92,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
      * Create new navigation property to intelligenceProfileIndicators for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of intelligenceProfileIndicator
+     * @return a CompletableFuture of IntelligenceProfileIndicator
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntelligenceProfileIndicator> post(@jakarta.annotation.Nonnull final IntelligenceProfileIndicator body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a intelligenceProfileIndicatorsRequestBuilder
+     * @return a IntelligenceProfileIndicatorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IntelligenceProfileIndicatorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

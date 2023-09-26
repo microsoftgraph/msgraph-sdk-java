@@ -13,7 +13,7 @@ public class BookingCurrency extends Entity implements Parsable {
      */
     private String symbol;
     /**
-     * Instantiates a new bookingCurrency and sets the default values.
+     * Instantiates a new BookingCurrency and sets the default values.
      */
     public BookingCurrency() {
         super();
@@ -21,7 +21,7 @@ public class BookingCurrency extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingCurrency
+     * @return a BookingCurrency
      */
     @jakarta.annotation.Nonnull
     public static BookingCurrency createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class BookingCurrency extends Entity implements Parsable {
     }
     /**
      * Gets the symbol property value. The currency symbol. For example, the currency symbol for the US dollar and for the Australian dollar is $.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSymbol() {

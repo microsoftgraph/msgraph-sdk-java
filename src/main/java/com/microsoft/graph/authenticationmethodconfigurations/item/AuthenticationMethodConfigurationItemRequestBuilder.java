@@ -57,7 +57,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
     }
     /**
      * Get entity from authenticationMethodConfigurations by key
-     * @return a CompletableFuture of authenticationMethodConfiguration
+     * @return a CompletableFuture of AuthenticationMethodConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodConfiguration> get() {
@@ -66,7 +66,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
     /**
      * Get entity from authenticationMethodConfigurations by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationMethodConfiguration
+     * @return a CompletableFuture of AuthenticationMethodConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
     /**
      * Update entity in authenticationMethodConfigurations
      * @param body The request body
-     * @return a CompletableFuture of authenticationMethodConfiguration
+     * @return a CompletableFuture of AuthenticationMethodConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodConfiguration> patch(@jakarta.annotation.Nonnull final AuthenticationMethodConfiguration body) {
@@ -89,7 +89,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
      * Update entity in authenticationMethodConfigurations
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationMethodConfiguration
+     * @return a CompletableFuture of AuthenticationMethodConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodConfiguration> patch(@jakarta.annotation.Nonnull final AuthenticationMethodConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

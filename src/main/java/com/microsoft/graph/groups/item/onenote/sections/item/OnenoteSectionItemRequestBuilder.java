@@ -97,7 +97,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a onenoteSection object.
-     * @return a CompletableFuture of onenoteSection
+     * @return a CompletableFuture of OnenoteSection
      * @see <a href="https://learn.microsoft.com/graph/api/section-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a onenoteSection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenoteSection
+     * @return a CompletableFuture of OnenoteSection
      * @see <a href="https://learn.microsoft.com/graph/api/section-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sections in groups
      * @param body The request body
-     * @return a CompletableFuture of onenoteSection
+     * @return a CompletableFuture of OnenoteSection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteSection> patch(@jakarta.annotation.Nonnull final OnenoteSection body) {
@@ -131,7 +131,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sections in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenoteSection
+     * @return a CompletableFuture of OnenoteSection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteSection> patch(@jakarta.annotation.Nonnull final OnenoteSection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

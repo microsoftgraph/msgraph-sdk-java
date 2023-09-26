@@ -37,7 +37,7 @@ public class GetAllSitesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function getAllSites
-     * @return a CompletableFuture of getAllSitesResponse
+     * @return a CompletableFuture of GetAllSitesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetAllSitesResponse> get() {
@@ -46,7 +46,7 @@ public class GetAllSitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function getAllSites
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getAllSitesResponse
+     * @return a CompletableFuture of GetAllSitesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetAllSitesResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class GetAllSitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getAllSitesRequestBuilder
+     * @return a GetAllSitesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetAllSitesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

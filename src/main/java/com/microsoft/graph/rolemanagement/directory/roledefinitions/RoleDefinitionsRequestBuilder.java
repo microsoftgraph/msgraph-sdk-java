@@ -60,7 +60,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of unifiedRoleDefinition objects for the provider. The following RBAC providers are currently supported:- directory (Azure AD)- entitlement management (Azure AD)
-     * @return a CompletableFuture of unifiedRoleDefinitionCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roledefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of unifiedRoleDefinition objects for the provider. The following RBAC providers are currently supported:- directory (Azure AD)- entitlement management (Azure AD)
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleDefinitionCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roledefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new custom unifiedRoleDefinition object. This feature requires an Azure AD Premium P1 or P2 license.
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleDefinition
+     * @return a CompletableFuture of UnifiedRoleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-post-roledefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
      * Create a new custom unifiedRoleDefinition object. This feature requires an Azure AD Premium P1 or P2 license.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleDefinition
+     * @return a CompletableFuture of UnifiedRoleDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-post-roledefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleDefinitionsRequestBuilder
+     * @return a RoleDefinitionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleDefinitionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

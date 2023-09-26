@@ -59,7 +59,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Retrieve the properties and relationships of a conditionalAccessPolicy object.
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a CompletableFuture of ConditionalAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
     /**
      * Retrieve the properties and relationships of a conditionalAccessPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a CompletableFuture of ConditionalAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the properties of a conditionalAccessPolicy object.
      * @param body The request body
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a CompletableFuture of ConditionalAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
      * Update the properties of a conditionalAccessPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessPolicy
+     * @return a CompletableFuture of ConditionalAccessPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

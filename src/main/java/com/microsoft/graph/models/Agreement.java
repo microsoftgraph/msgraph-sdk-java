@@ -42,7 +42,7 @@ public class Agreement extends Entity implements Parsable {
      */
     private PeriodAndDuration userReacceptRequiredFrequency;
     /**
-     * Instantiates a new agreement and sets the default values.
+     * Instantiates a new Agreement and sets the default values.
      */
     public Agreement() {
         super();
@@ -50,7 +50,7 @@ public class Agreement extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a agreement
+     * @return a Agreement
      */
     @jakarta.annotation.Nonnull
     public static Agreement createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class Agreement extends Entity implements Parsable {
     }
     /**
      * Gets the acceptances property value. Read-only. Information about acceptances of this agreement.
-     * @return a agreementAcceptance
+     * @return a java.util.List<AgreementAcceptance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgreementAcceptance> getAcceptances() {
@@ -67,7 +67,7 @@ public class Agreement extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -92,7 +92,7 @@ public class Agreement extends Entity implements Parsable {
     }
     /**
      * Gets the file property value. Default PDF linked to this agreement.
-     * @return a agreementFile
+     * @return a AgreementFile
      */
     @jakarta.annotation.Nullable
     public AgreementFile getFile() {
@@ -100,7 +100,7 @@ public class Agreement extends Entity implements Parsable {
     }
     /**
      * Gets the files property value. PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
-     * @return a agreementFileLocalization
+     * @return a java.util.List<AgreementFileLocalization>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgreementFileLocalization> getFiles() {
@@ -108,7 +108,7 @@ public class Agreement extends Entity implements Parsable {
     }
     /**
      * Gets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPerDeviceAcceptanceRequired() {
@@ -116,7 +116,7 @@ public class Agreement extends Entity implements Parsable {
     }
     /**
      * Gets the isViewingBeforeAcceptanceRequired property value. Indicates whether the user has to expand the agreement before accepting. Supports $filter (eq).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsViewingBeforeAcceptanceRequired() {
@@ -124,7 +124,7 @@ public class Agreement extends Entity implements Parsable {
     }
     /**
      * Gets the termsExpiration property value. Expiration schedule and frequency of agreement for all users. Supports $filter (eq).
-     * @return a termsExpiration
+     * @return a TermsExpiration
      */
     @jakarta.annotation.Nullable
     public TermsExpiration getTermsExpiration() {

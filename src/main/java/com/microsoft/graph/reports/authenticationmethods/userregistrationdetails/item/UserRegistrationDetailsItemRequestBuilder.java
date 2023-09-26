@@ -57,7 +57,7 @@ public class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Read the properties and relationships of a userRegistrationDetails object.
-     * @return a CompletableFuture of userRegistrationDetails
+     * @return a CompletableFuture of UserRegistrationDetails
      * @see <a href="https://learn.microsoft.com/graph/api/userregistrationdetails-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilde
     /**
      * Read the properties and relationships of a userRegistrationDetails object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userRegistrationDetails
+     * @return a CompletableFuture of UserRegistrationDetails
      * @see <a href="https://learn.microsoft.com/graph/api/userregistrationdetails-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property userRegistrationDetails in reports
      * @param body The request body
-     * @return a CompletableFuture of userRegistrationDetails
+     * @return a CompletableFuture of UserRegistrationDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserRegistrationDetails> patch(@jakarta.annotation.Nonnull final UserRegistrationDetails body) {
@@ -91,7 +91,7 @@ public class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property userRegistrationDetails in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userRegistrationDetails
+     * @return a CompletableFuture of UserRegistrationDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserRegistrationDetails> patch(@jakarta.annotation.Nonnull final UserRegistrationDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

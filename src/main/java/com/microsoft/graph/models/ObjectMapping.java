@@ -51,7 +51,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      */
     private String targetObjectName;
     /**
-     * Instantiates a new objectMapping and sets the default values.
+     * Instantiates a new ObjectMapping and sets the default values.
      */
     public ObjectMapping() {
         this.setAdditionalData(new HashMap<>());
@@ -59,7 +59,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a objectMapping
+     * @return a ObjectMapping
      */
     @jakarta.annotation.Nonnull
     public static ObjectMapping createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         return new ObjectMapping();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the attributeMappings property value. Attribute mappings define which attributes to map from the source object into the target object and how they should flow. A number of functions are available to support the transformation of the original source values.
-     * @return a attributeMapping
+     * @return a java.util.List<AttributeMapping>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttributeMapping> getAttributeMappings() {
@@ -84,7 +84,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the enabled property value. When true, this object mapping will be processed during synchronization. When false, this object mapping will be skipped.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
@@ -110,7 +110,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the flowTypes property value. The flowTypes property
-     * @return a objectFlowTypes
+     * @return a EnumSet<ObjectFlowTypes>
      */
     @jakarta.annotation.Nullable
     public EnumSet<ObjectFlowTypes> getFlowTypes() {
@@ -118,7 +118,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
-     * @return a objectMappingMetadataEntry
+     * @return a java.util.List<ObjectMappingMetadataEntry>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ObjectMappingMetadataEntry> getMetadata() {
@@ -126,7 +126,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. Human-friendly name of the object mapping.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -134,7 +134,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -142,7 +142,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the scope property value. Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US.
-     * @return a filter
+     * @return a Filter
      */
     @jakarta.annotation.Nullable
     public Filter getScope() {
@@ -150,7 +150,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sourceObjectName property value. Name of the object in the source directory. Must match the object name from the source directory definition.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceObjectName() {
@@ -158,7 +158,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the targetObjectName property value. Name of the object in target directory. Must match the object name from the target directory definition.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetObjectName() {
@@ -182,8 +182,8 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

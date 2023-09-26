@@ -60,7 +60,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the list of apps installed in the personal scope of the specified user.
-     * @return a CompletableFuture of userScopeTeamsAppInstallationCollectionResponse
+     * @return a CompletableFuture of UserScopeTeamsAppInstallationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of apps installed in the personal scope of the specified user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userScopeTeamsAppInstallationCollectionResponse
+     * @return a CompletableFuture of UserScopeTeamsAppInstallationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Install an app in the personal scope of the specified user.
      * @param body The request body
-     * @return a CompletableFuture of userScopeTeamsAppInstallation
+     * @return a CompletableFuture of UserScopeTeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
      * Install an app in the personal scope of the specified user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userScopeTeamsAppInstallation
+     * @return a CompletableFuture of UserScopeTeamsAppInstallation
      * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a installedAppsRequestBuilder
+     * @return a InstalledAppsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InstalledAppsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

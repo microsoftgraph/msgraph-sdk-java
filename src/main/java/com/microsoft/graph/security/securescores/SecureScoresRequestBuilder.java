@@ -60,7 +60,7 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of secureScore objects.
-     * @return a CompletableFuture of secureScoreCollectionResponse
+     * @return a CompletableFuture of SecureScoreCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-list-securescores?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of secureScore objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of secureScoreCollectionResponse
+     * @return a CompletableFuture of SecureScoreCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-list-securescores?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to secureScores for security
      * @param body The request body
-     * @return a CompletableFuture of secureScore
+     * @return a CompletableFuture of SecureScore
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecureScore> post(@jakarta.annotation.Nonnull final SecureScore body) {
@@ -94,7 +94,7 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to secureScores for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of secureScore
+     * @return a CompletableFuture of SecureScore
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecureScore> post(@jakarta.annotation.Nonnull final SecureScore body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a secureScoresRequestBuilder
+     * @return a SecureScoresRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SecureScoresRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

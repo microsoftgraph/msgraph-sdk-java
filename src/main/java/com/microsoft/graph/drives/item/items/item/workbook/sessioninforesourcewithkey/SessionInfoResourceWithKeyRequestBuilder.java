@@ -39,7 +39,7 @@ public class SessionInfoResourceWithKeyRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Invoke function sessionInfoResource
-     * @return a CompletableFuture of workbookSessionInfo
+     * @return a CompletableFuture of WorkbookSessionInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookSessionInfo> get() {
@@ -48,7 +48,7 @@ public class SessionInfoResourceWithKeyRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke function sessionInfoResource
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookSessionInfo
+     * @return a CompletableFuture of WorkbookSessionInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookSessionInfo> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class SessionInfoResourceWithKeyRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sessionInfoResourceWithKeyRequestBuilder
+     * @return a SessionInfoResourceWithKeyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SessionInfoResourceWithKeyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

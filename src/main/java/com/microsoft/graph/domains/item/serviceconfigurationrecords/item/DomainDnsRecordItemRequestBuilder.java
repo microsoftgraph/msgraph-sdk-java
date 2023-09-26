@@ -57,7 +57,7 @@ public class DomainDnsRecordItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Supports $expand.
-     * @return a CompletableFuture of domainDnsRecord
+     * @return a CompletableFuture of DomainDnsRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainDnsRecord> get() {
@@ -66,7 +66,7 @@ public class DomainDnsRecordItemRequestBuilder extends BaseRequestBuilder {
     /**
      * DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of domainDnsRecord
+     * @return a CompletableFuture of DomainDnsRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainDnsRecord> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DomainDnsRecordItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property serviceConfigurationRecords in domains
      * @param body The request body
-     * @return a CompletableFuture of domainDnsRecord
+     * @return a CompletableFuture of DomainDnsRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainDnsRecord> patch(@jakarta.annotation.Nonnull final DomainDnsRecord body) {
@@ -89,7 +89,7 @@ public class DomainDnsRecordItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property serviceConfigurationRecords in domains
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of domainDnsRecord
+     * @return a CompletableFuture of DomainDnsRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainDnsRecord> patch(@jakarta.annotation.Nonnull final DomainDnsRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

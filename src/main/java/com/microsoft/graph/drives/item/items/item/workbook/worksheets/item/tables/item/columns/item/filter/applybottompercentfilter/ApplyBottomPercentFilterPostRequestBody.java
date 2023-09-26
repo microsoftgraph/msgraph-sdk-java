@@ -18,7 +18,7 @@ public class ApplyBottomPercentFilterPostRequestBody implements AdditionalDataHo
      */
     private Integer percent;
     /**
-     * Instantiates a new applyBottomPercentFilterPostRequestBody and sets the default values.
+     * Instantiates a new ApplyBottomPercentFilterPostRequestBody and sets the default values.
      */
     public ApplyBottomPercentFilterPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -26,7 +26,7 @@ public class ApplyBottomPercentFilterPostRequestBody implements AdditionalDataHo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a applyBottomPercentFilterPostRequestBody
+     * @return a ApplyBottomPercentFilterPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static ApplyBottomPercentFilterPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class ApplyBottomPercentFilterPostRequestBody implements AdditionalDataHo
         return new ApplyBottomPercentFilterPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class ApplyBottomPercentFilterPostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the percent property value. The percent property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPercent() {
@@ -69,8 +69,8 @@ public class ApplyBottomPercentFilterPostRequestBody implements AdditionalDataHo
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

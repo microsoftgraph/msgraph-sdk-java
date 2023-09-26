@@ -46,7 +46,7 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of an authenticationMethod object.
-     * @return a CompletableFuture of authenticationMethod
+     * @return a CompletableFuture of AuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -56,7 +56,7 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an authenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationMethod
+     * @return a CompletableFuture of AuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property methods in users
      * @param body The request body
-     * @return a CompletableFuture of authenticationMethod
+     * @return a CompletableFuture of AuthenticationMethod
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethod> patch(@jakarta.annotation.Nonnull final AuthenticationMethod body) {
@@ -80,7 +80,7 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property methods in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationMethod
+     * @return a CompletableFuture of AuthenticationMethod
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethod> patch(@jakarta.annotation.Nonnull final AuthenticationMethod body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -28,7 +28,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     private String proof;
     /**
-     * Instantiates a new addKeyPostRequestBody and sets the default values.
+     * Instantiates a new AddKeyPostRequestBody and sets the default values.
      */
     public AddKeyPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -36,7 +36,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a addKeyPostRequestBody
+     * @return a AddKeyPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static AddKeyPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
         return new AddKeyPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -65,7 +65,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the keyCredential property value. The keyCredential property
-     * @return a keyCredential
+     * @return a KeyCredential
      */
     @jakarta.annotation.Nullable
     public KeyCredential getKeyCredential() {
@@ -73,7 +73,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the passwordCredential property value. The passwordCredential property
-     * @return a passwordCredential
+     * @return a PasswordCredential
      */
     @jakarta.annotation.Nullable
     public PasswordCredential getPasswordCredential() {
@@ -81,7 +81,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the proof property value. The proof property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProof() {
@@ -99,8 +99,8 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

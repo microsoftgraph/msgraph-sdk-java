@@ -14,7 +14,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     /**
      * Payload. (UTF8 encoded byte array)
      */
-    private byte[] payload;
+    private Base64url payload;
     /**
      * Payload file name (.mobileconfig
      */
@@ -24,7 +24,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
      */
     private String payloadName;
     /**
-     * Instantiates a new iosCustomConfiguration and sets the default values.
+     * Instantiates a new IosCustomConfiguration and sets the default values.
      */
     public IosCustomConfiguration() {
         super();
@@ -33,7 +33,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosCustomConfiguration
+     * @return a IosCustomConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IosCustomConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,22 +47,22 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("payload", (n) -> { this.setPayload(n.getByteArrayValue()); });
+        deserializerMap.put("payload", (n) -> { this.setPayload(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("payloadFileName", (n) -> { this.setPayloadFileName(n.getStringValue()); });
         deserializerMap.put("payloadName", (n) -> { this.setPayloadName(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the payload property value. Payload. (UTF8 encoded byte array)
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getPayload() {
+    public Base64url getPayload() {
         return this.payload;
     }
     /**
      * Gets the payloadFileName property value. Payload file name (.mobileconfig
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadFileName() {
@@ -70,7 +70,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the payloadName property value. Name that is displayed to the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadName() {
@@ -83,7 +83,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeByteArrayValue("payload", this.getPayload());
+        writer.writeObjectValue("payload", this.getPayload());
         writer.writeStringValue("payloadFileName", this.getPayloadFileName());
         writer.writeStringValue("payloadName", this.getPayloadName());
     }
@@ -91,7 +91,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
      * Sets the payload property value. Payload. (UTF8 encoded byte array)
      * @param value Value to set for the payload property.
      */
-    public void setPayload(@jakarta.annotation.Nullable final byte[] value) {
+    public void setPayload(@jakarta.annotation.Nullable final Base64url value) {
         this.payload = value;
     }
     /**

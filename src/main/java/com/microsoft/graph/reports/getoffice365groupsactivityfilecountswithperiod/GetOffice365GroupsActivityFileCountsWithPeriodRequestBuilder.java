@@ -88,7 +88,7 @@ public class GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder extend
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getOffice365GroupsActivityFileCountsWithPeriodRequestBuilder
+     * @return a GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

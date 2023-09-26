@@ -81,7 +81,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Read properties and relationships of the managedAppRegistration object.
-     * @return a CompletableFuture of managedAppRegistration
+     * @return a CompletableFuture of ManagedAppRegistration
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Read properties and relationships of the managedAppRegistration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppRegistration
+     * @return a CompletableFuture of ManagedAppRegistration
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -105,7 +105,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property managedAppRegistrations in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedAppRegistration
+     * @return a CompletableFuture of ManagedAppRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> patch(@jakarta.annotation.Nonnull final ManagedAppRegistration body) {
@@ -115,7 +115,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
      * Update the navigation property managedAppRegistrations in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppRegistration
+     * @return a CompletableFuture of ManagedAppRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> patch(@jakarta.annotation.Nonnull final ManagedAppRegistration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

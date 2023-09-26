@@ -97,7 +97,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a user's presence information.
-     * @return a CompletableFuture of presence
+     * @return a CompletableFuture of Presence
      * @see <a href="https://learn.microsoft.com/graph/api/presence-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a user's presence information.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of presence
+     * @return a CompletableFuture of Presence
      * @see <a href="https://learn.microsoft.com/graph/api/presence-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property presence in users
      * @param body The request body
-     * @return a CompletableFuture of presence
+     * @return a CompletableFuture of Presence
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Presence> patch(@jakarta.annotation.Nonnull final Presence body) {
@@ -131,7 +131,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property presence in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of presence
+     * @return a CompletableFuture of Presence
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Presence> patch(@jakarta.annotation.Nonnull final Presence body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -233,7 +233,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a presenceRequestBuilder
+     * @return a PresenceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PresenceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

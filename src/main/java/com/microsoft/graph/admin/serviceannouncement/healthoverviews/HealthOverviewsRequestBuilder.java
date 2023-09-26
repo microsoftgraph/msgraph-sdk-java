@@ -60,7 +60,7 @@ public class HealthOverviewsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the serviceHealth resources from the healthOverviews navigation property. This operation provides the health report of all subscribed services for a tenant.
-     * @return a CompletableFuture of serviceHealthCollectionResponse
+     * @return a CompletableFuture of ServiceHealthCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceannouncement-list-healthoverviews?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class HealthOverviewsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the serviceHealth resources from the healthOverviews navigation property. This operation provides the health report of all subscribed services for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of serviceHealthCollectionResponse
+     * @return a CompletableFuture of ServiceHealthCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/serviceannouncement-list-healthoverviews?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class HealthOverviewsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to healthOverviews for admin
      * @param body The request body
-     * @return a CompletableFuture of serviceHealth
+     * @return a CompletableFuture of ServiceHealth
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceHealth> post(@jakarta.annotation.Nonnull final ServiceHealth body) {
@@ -94,7 +94,7 @@ public class HealthOverviewsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to healthOverviews for admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of serviceHealth
+     * @return a CompletableFuture of ServiceHealth
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceHealth> post(@jakarta.annotation.Nonnull final ServiceHealth body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class HealthOverviewsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a healthOverviewsRequestBuilder
+     * @return a HealthOverviewsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HealthOverviewsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

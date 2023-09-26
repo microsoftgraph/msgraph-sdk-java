@@ -59,7 +59,7 @@ public class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a schedulingGroup by ID.
-     * @return a CompletableFuture of schedulingGroup
+     * @return a CompletableFuture of SchedulingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/schedulinggroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a schedulingGroup by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of schedulingGroup
+     * @return a CompletableFuture of SchedulingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/schedulinggroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Replace an existing schedulingGroup. If the specified schedulingGroup doesn't exist, this method returns 404 Not found.
      * @param body The request body
-     * @return a CompletableFuture of schedulingGroup
+     * @return a CompletableFuture of SchedulingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/schedulinggroup-put?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder {
      * Replace an existing schedulingGroup. If the specified schedulingGroup doesn't exist, this method returns 404 Not found.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of schedulingGroup
+     * @return a CompletableFuture of SchedulingGroup
      * @see <a href="https://learn.microsoft.com/graph/api/schedulinggroup-put?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

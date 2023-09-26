@@ -60,7 +60,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of onenoteSection objects.
-     * @return a CompletableFuture of onenoteSectionCollectionResponse
+     * @return a CompletableFuture of OnenoteSectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/onenote-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of onenoteSection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenoteSectionCollectionResponse
+     * @return a CompletableFuture of OnenoteSectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/onenote-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to sections for groups
      * @param body The request body
-     * @return a CompletableFuture of onenoteSection
+     * @return a CompletableFuture of OnenoteSection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteSection> post(@jakarta.annotation.Nonnull final OnenoteSection body) {
@@ -94,7 +94,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sections for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenoteSection
+     * @return a CompletableFuture of OnenoteSection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteSection> post(@jakarta.annotation.Nonnull final OnenoteSection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sectionsRequestBuilder
+     * @return a SectionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

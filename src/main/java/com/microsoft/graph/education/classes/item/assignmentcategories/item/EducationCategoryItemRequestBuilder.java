@@ -59,7 +59,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation.
-     * @return a CompletableFuture of educationCategory
+     * @return a CompletableFuture of EducationCategory
      * @see <a href="https://learn.microsoft.com/graph/api/educationcategory-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationCategory
+     * @return a CompletableFuture of EducationCategory
      * @see <a href="https://learn.microsoft.com/graph/api/educationcategory-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property assignmentCategories in education
      * @param body The request body
-     * @return a CompletableFuture of educationCategory
+     * @return a CompletableFuture of EducationCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationCategory> patch(@jakarta.annotation.Nonnull final EducationCategory body) {
@@ -93,7 +93,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property assignmentCategories in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationCategory
+     * @return a CompletableFuture of EducationCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationCategory> patch(@jakarta.annotation.Nonnull final EducationCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

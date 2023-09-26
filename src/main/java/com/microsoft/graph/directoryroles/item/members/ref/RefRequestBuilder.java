@@ -61,7 +61,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, StringCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new directory role member. You can use both the object ID and template ID of the directoryRole with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Azure portal. For details, see Role template IDs.
+     * Create a new directory role member. You can use both the object ID and template ID of the directoryRole with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Microsoft Entra admin center. For details, see Role template IDs.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-post-members?view=graph-rest-1.0">Find more info here</a>
      */
@@ -70,7 +70,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new directory role member. You can use both the object ID and template ID of the directoryRole with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Azure portal. For details, see Role template IDs.
+     * Create a new directory role member. You can use both the object ID and template ID of the directoryRole with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Microsoft Entra admin center. For details, see Role template IDs.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-post-members?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new directory role member. You can use both the object ID and template ID of the directoryRole with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Azure portal. For details, see Role template IDs.
+     * Create a new directory role member. You can use both the object ID and template ID of the directoryRole with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Microsoft Entra admin center. For details, see Role template IDs.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -123,7 +123,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new directory role member. You can use both the object ID and template ID of the directoryRole with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Azure portal. For details, see Role template IDs.
+     * Create a new directory role member. You can use both the object ID and template ID of the directoryRole with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Microsoft Entra admin center. For details, see Role template IDs.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

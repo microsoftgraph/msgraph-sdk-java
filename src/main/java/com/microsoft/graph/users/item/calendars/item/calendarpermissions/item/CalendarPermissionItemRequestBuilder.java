@@ -59,7 +59,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the specified permissions object of a user or group calendar that has been shared.
-     * @return a CompletableFuture of calendarPermission
+     * @return a CompletableFuture of CalendarPermission
      * @see <a href="https://learn.microsoft.com/graph/api/calendarpermission-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the specified permissions object of a user or group calendar that has been shared.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of calendarPermission
+     * @return a CompletableFuture of CalendarPermission
      * @see <a href="https://learn.microsoft.com/graph/api/calendarpermission-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the permissions assigned to an existing sharee or delegate, through the corresponding <b>calendarPermission</b> object for a calendar.
      * @param body The request body
-     * @return a CompletableFuture of calendarPermission
+     * @return a CompletableFuture of CalendarPermission
      * @see <a href="https://learn.microsoft.com/graph/api/calendarpermission-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
      * Update the permissions assigned to an existing sharee or delegate, through the corresponding <b>calendarPermission</b> object for a calendar.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of calendarPermission
+     * @return a CompletableFuture of CalendarPermission
      * @see <a href="https://learn.microsoft.com/graph/api/calendarpermission-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

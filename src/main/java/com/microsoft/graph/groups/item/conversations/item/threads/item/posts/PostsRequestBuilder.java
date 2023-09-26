@@ -59,7 +59,7 @@ public class PostsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of a post in a specified thread. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. Since the post resource supports extensions, you can also use the GET operation to get custom properties and extension data in a post instance.
-     * @return a CompletableFuture of postCollectionResponse
+     * @return a CompletableFuture of PostCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/post-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class PostsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a post in a specified thread. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. Since the post resource supports extensions, you can also use the GET operation to get custom properties and extension data in a post instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of postCollectionResponse
+     * @return a CompletableFuture of PostCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/post-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class PostsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a postsRequestBuilder
+     * @return a PostsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PostsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

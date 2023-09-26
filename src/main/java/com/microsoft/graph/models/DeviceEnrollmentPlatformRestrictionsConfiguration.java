@@ -32,7 +32,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      */
     private DeviceEnrollmentPlatformRestriction windowsRestriction;
     /**
-     * Instantiates a new deviceEnrollmentPlatformRestrictionsConfiguration and sets the default values.
+     * Instantiates a new DeviceEnrollmentPlatformRestrictionsConfiguration and sets the default values.
      */
     public DeviceEnrollmentPlatformRestrictionsConfiguration() {
         super();
@@ -41,7 +41,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceEnrollmentPlatformRestrictionsConfiguration
+     * @return a DeviceEnrollmentPlatformRestrictionsConfiguration
      */
     @jakarta.annotation.Nonnull
     public static DeviceEnrollmentPlatformRestrictionsConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
     }
     /**
      * Gets the androidRestriction property value. Android restrictions based on platform, platform operating system version, and device ownership
-     * @return a deviceEnrollmentPlatformRestriction
+     * @return a DeviceEnrollmentPlatformRestriction
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction getAndroidRestriction() {
@@ -72,7 +72,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
     }
     /**
      * Gets the iosRestriction property value. Ios restrictions based on platform, platform operating system version, and device ownership
-     * @return a deviceEnrollmentPlatformRestriction
+     * @return a DeviceEnrollmentPlatformRestriction
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction getIosRestriction() {
@@ -80,7 +80,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
     }
     /**
      * Gets the macOSRestriction property value. Mac restrictions based on platform, platform operating system version, and device ownership
-     * @return a deviceEnrollmentPlatformRestriction
+     * @return a DeviceEnrollmentPlatformRestriction
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction getMacOSRestriction() {
@@ -88,7 +88,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
     }
     /**
      * Gets the windowsMobileRestriction property value. Windows mobile restrictions based on platform, platform operating system version, and device ownership
-     * @return a deviceEnrollmentPlatformRestriction
+     * @return a DeviceEnrollmentPlatformRestriction
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction getWindowsMobileRestriction() {
@@ -96,7 +96,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
     }
     /**
      * Gets the windowsRestriction property value. Windows restrictions based on platform, platform operating system version, and device ownership
-     * @return a deviceEnrollmentPlatformRestriction
+     * @return a DeviceEnrollmentPlatformRestriction
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction getWindowsRestriction() {

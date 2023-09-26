@@ -37,7 +37,7 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Gets the range object associated with the data body of the table.
-     * @return a CompletableFuture of workbookRange
+     * @return a CompletableFuture of WorkbookRange
      * @see <a href="https://learn.microsoft.com/graph/api/table-databodyrange?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Gets the range object associated with the data body of the table.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookRange
+     * @return a CompletableFuture of WorkbookRange
      * @see <a href="https://learn.microsoft.com/graph/api/table-databodyrange?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class DataBodyRangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a dataBodyRangeRequestBuilder
+     * @return a DataBodyRangeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DataBodyRangeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

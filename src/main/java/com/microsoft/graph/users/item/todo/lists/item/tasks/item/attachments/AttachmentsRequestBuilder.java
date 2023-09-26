@@ -68,7 +68,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the taskFileAttachment objects and their properties. The contentBytes property will not be returned in the response. Use the Get attachment API to view the contentBytes.
-     * @return a CompletableFuture of attachmentBaseCollectionResponse
+     * @return a CompletableFuture of AttachmentBaseCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the taskFileAttachment objects and their properties. The contentBytes property will not be returned in the response. Use the Get attachment API to view the contentBytes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attachmentBaseCollectionResponse
+     * @return a CompletableFuture of AttachmentBaseCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add a new taskFileAttachment object to a todoTask. This operation limits the size of the attachment you can add to under 3 MB. If the size of the file attachments is more than 3 MB, create an upload session to upload the attachments.
      * @param body The request body
-     * @return a CompletableFuture of attachmentBase
+     * @return a CompletableFuture of AttachmentBase
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-post-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
      * Add a new taskFileAttachment object to a todoTask. This operation limits the size of the attachment you can add to under 3 MB. If the size of the file attachments is more than 3 MB, create an upload session to upload the attachments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attachmentBase
+     * @return a CompletableFuture of AttachmentBase
      * @see <a href="https://learn.microsoft.com/graph/api/todotask-post-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a attachmentsRequestBuilder
+     * @return a AttachmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AttachmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

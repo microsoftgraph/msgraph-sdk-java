@@ -37,7 +37,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder extends BaseR
     }
     /**
      * Invoke function getAttackSimulationTrainingUserCoverage
-     * @return a CompletableFuture of getAttackSimulationTrainingUserCoverageResponse
+     * @return a CompletableFuture of GetAttackSimulationTrainingUserCoverageResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetAttackSimulationTrainingUserCoverageResponse> get() {
@@ -46,7 +46,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder extends BaseR
     /**
      * Invoke function getAttackSimulationTrainingUserCoverage
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getAttackSimulationTrainingUserCoverageResponse
+     * @return a CompletableFuture of GetAttackSimulationTrainingUserCoverageResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetAttackSimulationTrainingUserCoverageResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder extends BaseR
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getAttackSimulationTrainingUserCoverageRequestBuilder
+     * @return a GetAttackSimulationTrainingUserCoverageRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetAttackSimulationTrainingUserCoverageRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

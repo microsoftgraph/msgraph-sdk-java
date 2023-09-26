@@ -37,7 +37,7 @@ public class GetMailTipsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the MailTips of one or more recipients as available to the signed-in user. Note that by making a POST call to the getMailTips action, you can request specific types of MailTips tobe returned for more than one recipient at one time. The requested MailTips are returned in a mailTips collection.
      * @param body The request body
-     * @return a CompletableFuture of getMailTipsResponse
+     * @return a CompletableFuture of GetMailTipsResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-getmailtips?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class GetMailTipsRequestBuilder extends BaseRequestBuilder {
      * Get the MailTips of one or more recipients as available to the signed-in user. Note that by making a POST call to the getMailTips action, you can request specific types of MailTips tobe returned for more than one recipient at one time. The requested MailTips are returned in a mailTips collection.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getMailTipsResponse
+     * @return a CompletableFuture of GetMailTipsResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-getmailtips?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class GetMailTipsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getMailTipsRequestBuilder
+     * @return a GetMailTipsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetMailTipsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

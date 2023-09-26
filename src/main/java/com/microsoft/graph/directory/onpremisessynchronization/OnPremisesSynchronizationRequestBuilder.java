@@ -60,7 +60,7 @@ public class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Read the properties and relationships of an onPremisesDirectorySynchronization object.
-     * @return a CompletableFuture of onPremisesDirectorySynchronizationCollectionResponse
+     * @return a CompletableFuture of OnPremisesDirectorySynchronizationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesDirectorySynchronizationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder 
     /**
      * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesDirectorySynchronizationCollectionResponse
+     * @return a CompletableFuture of OnPremisesDirectorySynchronizationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesDirectorySynchronizationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder 
     /**
      * Create new navigation property to onPremisesSynchronization for directory
      * @param body The request body
-     * @return a CompletableFuture of onPremisesDirectorySynchronization
+     * @return a CompletableFuture of OnPremisesDirectorySynchronization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesDirectorySynchronization> post(@jakarta.annotation.Nonnull final OnPremisesDirectorySynchronization body) {
@@ -92,7 +92,7 @@ public class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder 
      * Create new navigation property to onPremisesSynchronization for directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesDirectorySynchronization
+     * @return a CompletableFuture of OnPremisesDirectorySynchronization
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesDirectorySynchronization> post(@jakarta.annotation.Nonnull final OnPremisesDirectorySynchronization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a onPremisesSynchronizationRequestBuilder
+     * @return a OnPremisesSynchronizationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OnPremisesSynchronizationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

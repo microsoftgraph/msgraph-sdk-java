@@ -19,13 +19,13 @@ public class DeviceAndAppManagementData implements AdditionalDataHolder, Parsabl
     /**
      * Not yet documented
      */
-    private byte[] content;
+    private Base64url content;
     /**
      * The OdataType property
      */
     private String odataType;
     /**
-     * Instantiates a new deviceAndAppManagementData and sets the default values.
+     * Instantiates a new DeviceAndAppManagementData and sets the default values.
      */
     public DeviceAndAppManagementData() {
         this.setAdditionalData(new HashMap<>());
@@ -33,7 +33,7 @@ public class DeviceAndAppManagementData implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceAndAppManagementData
+     * @return a DeviceAndAppManagementData
      */
     @jakarta.annotation.Nonnull
     public static DeviceAndAppManagementData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class DeviceAndAppManagementData implements AdditionalDataHolder, Parsabl
         return new DeviceAndAppManagementData();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -50,10 +50,10 @@ public class DeviceAndAppManagementData implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the content property value. Not yet documented
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getContent() {
+    public Base64url getContent() {
         return this.content;
     }
     /**
@@ -63,13 +63,13 @@ public class DeviceAndAppManagementData implements AdditionalDataHolder, Parsabl
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -81,13 +81,13 @@ public class DeviceAndAppManagementData implements AdditionalDataHolder, Parsabl
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeByteArrayValue("content", this.getContent());
+        writer.writeObjectValue("content", this.getContent());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -96,7 +96,7 @@ public class DeviceAndAppManagementData implements AdditionalDataHolder, Parsabl
      * Sets the content property value. Not yet documented
      * @param value Value to set for the content property.
      */
-    public void setContent(@jakarta.annotation.Nullable final byte[] value) {
+    public void setContent(@jakarta.annotation.Nullable final Base64url value) {
         this.content = value;
     }
     /**

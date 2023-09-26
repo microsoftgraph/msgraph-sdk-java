@@ -62,7 +62,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -71,7 +71,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the decisions from a stage in a multi-stage access review. The decisions in an accessReviewStage object are represented by an accessReviewInstanceDecisionItem object.
-     * @return a CompletableFuture of accessReviewInstanceDecisionItemCollectionResponse
+     * @return a CompletableFuture of AccessReviewInstanceDecisionItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewstage-list-decisions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the decisions from a stage in a multi-stage access review. The decisions in an accessReviewStage object are represented by an accessReviewInstanceDecisionItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewInstanceDecisionItemCollectionResponse
+     * @return a CompletableFuture of AccessReviewInstanceDecisionItemCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewstage-list-decisions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to decisions for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessReviewInstanceDecisionItem
+     * @return a CompletableFuture of AccessReviewInstanceDecisionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstanceDecisionItem> post(@jakarta.annotation.Nonnull final AccessReviewInstanceDecisionItem body) {
@@ -105,7 +105,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to decisions for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewInstanceDecisionItem
+     * @return a CompletableFuture of AccessReviewInstanceDecisionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstanceDecisionItem> post(@jakarta.annotation.Nonnull final AccessReviewInstanceDecisionItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -180,7 +180,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a decisionsRequestBuilder
+     * @return a DecisionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DecisionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

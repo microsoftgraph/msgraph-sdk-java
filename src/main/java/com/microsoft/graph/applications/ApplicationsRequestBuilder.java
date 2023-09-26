@@ -92,7 +92,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of applications in this organization.
-     * @return a CompletableFuture of applicationCollectionResponse
+     * @return a CompletableFuture of ApplicationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/application-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of applications in this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of applicationCollectionResponse
+     * @return a CompletableFuture of ApplicationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/application-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new application object.
      * @param body The request body
-     * @return a CompletableFuture of application
+     * @return a CompletableFuture of Application
      * @see <a href="https://learn.microsoft.com/graph/api/application-post-applications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
      * Create a new application object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of application
+     * @return a CompletableFuture of Application
      * @see <a href="https://learn.microsoft.com/graph/api/application-post-applications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -203,7 +203,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a applicationsRequestBuilder
+     * @return a ApplicationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ApplicationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

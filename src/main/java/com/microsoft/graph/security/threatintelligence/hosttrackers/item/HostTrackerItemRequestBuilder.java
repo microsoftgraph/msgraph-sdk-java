@@ -65,7 +65,7 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a hostTracker object.
-     * @return a CompletableFuture of hostTracker
+     * @return a CompletableFuture of HostTracker
      * @see <a href="https://learn.microsoft.com/graph/api/security-hosttracker-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a hostTracker object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostTracker
+     * @return a CompletableFuture of HostTracker
      * @see <a href="https://learn.microsoft.com/graph/api/security-hosttracker-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property hostTrackers in security
      * @param body The request body
-     * @return a CompletableFuture of hostTracker
+     * @return a CompletableFuture of HostTracker
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostTracker> patch(@jakarta.annotation.Nonnull final HostTracker body) {
@@ -99,7 +99,7 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property hostTrackers in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostTracker
+     * @return a CompletableFuture of HostTracker
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostTracker> patch(@jakarta.annotation.Nonnull final HostTracker body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

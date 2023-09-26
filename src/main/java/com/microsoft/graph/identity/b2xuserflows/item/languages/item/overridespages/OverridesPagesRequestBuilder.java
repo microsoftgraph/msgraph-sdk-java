@@ -60,7 +60,7 @@ public class OverridesPagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the userFlowLanguagePage resources from the overridesPages navigation property. These pages are used to customize the values shown to the user during a user journey in a user flow.
-     * @return a CompletableFuture of userFlowLanguagePageCollectionResponse
+     * @return a CompletableFuture of UserFlowLanguagePageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/userflowlanguageconfiguration-list-overridespages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class OverridesPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the userFlowLanguagePage resources from the overridesPages navigation property. These pages are used to customize the values shown to the user during a user journey in a user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userFlowLanguagePageCollectionResponse
+     * @return a CompletableFuture of UserFlowLanguagePageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/userflowlanguageconfiguration-list-overridespages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class OverridesPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to overridesPages for identity
      * @param body The request body
-     * @return a CompletableFuture of userFlowLanguagePage
+     * @return a CompletableFuture of UserFlowLanguagePage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguagePage> post(@jakarta.annotation.Nonnull final UserFlowLanguagePage body) {
@@ -94,7 +94,7 @@ public class OverridesPagesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to overridesPages for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userFlowLanguagePage
+     * @return a CompletableFuture of UserFlowLanguagePage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguagePage> post(@jakarta.annotation.Nonnull final UserFlowLanguagePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class OverridesPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a overridesPagesRequestBuilder
+     * @return a OverridesPagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OverridesPagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

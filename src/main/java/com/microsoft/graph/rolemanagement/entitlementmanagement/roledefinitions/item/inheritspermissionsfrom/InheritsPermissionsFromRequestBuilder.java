@@ -60,7 +60,7 @@ public class InheritsPermissionsFromRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
-     * @return a CompletableFuture of unifiedRoleDefinitionCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinitionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class InheritsPermissionsFromRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleDefinitionCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinitionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class InheritsPermissionsFromRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to inheritsPermissionsFrom for roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleDefinition
+     * @return a CompletableFuture of UnifiedRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinition> post(@jakarta.annotation.Nonnull final UnifiedRoleDefinition body) {
@@ -92,7 +92,7 @@ public class InheritsPermissionsFromRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to inheritsPermissionsFrom for roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleDefinition
+     * @return a CompletableFuture of UnifiedRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinition> post(@jakarta.annotation.Nonnull final UnifiedRoleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class InheritsPermissionsFromRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a inheritsPermissionsFromRequestBuilder
+     * @return a InheritsPermissionsFromRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InheritsPermissionsFromRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

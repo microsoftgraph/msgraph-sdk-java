@@ -15,7 +15,7 @@ public class QueryResponse extends BaseCollectionPaginationCountResponse impleme
      */
     private java.util.List<SearchResponse> value;
     /**
-     * Instantiates a new queryResponse and sets the default values.
+     * Instantiates a new QueryResponse and sets the default values.
      */
     public QueryResponse() {
         super();
@@ -23,7 +23,7 @@ public class QueryResponse extends BaseCollectionPaginationCountResponse impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a queryResponse
+     * @return a QueryResponse
      */
     @jakarta.annotation.Nonnull
     public static QueryResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class QueryResponse extends BaseCollectionPaginationCountResponse impleme
     }
     /**
      * Gets the value property value. The value property
-     * @return a searchResponse
+     * @return a java.util.List<SearchResponse>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SearchResponse> getValue() {

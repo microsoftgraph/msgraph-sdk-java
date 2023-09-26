@@ -60,7 +60,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the first level children of a [set] or [term] resource using the children navigation property.
-     * @return a CompletableFuture of termCollectionResponse
+     * @return a CompletableFuture of TermCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-list-children?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termCollectionResponse
+     * @return a CompletableFuture of TermCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-list-children?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new term object.
      * @param body The request body
-     * @return a CompletableFuture of term
+     * @return a CompletableFuture of Term
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
      * Create a new term object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of term
+     * @return a CompletableFuture of Term
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a childrenRequestBuilder
+     * @return a ChildrenRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChildrenRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

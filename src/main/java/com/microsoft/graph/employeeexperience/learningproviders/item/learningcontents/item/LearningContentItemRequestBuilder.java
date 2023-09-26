@@ -59,7 +59,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
-     * @return a CompletableFuture of learningContent
+     * @return a CompletableFuture of LearningContent
      * @see <a href="https://learn.microsoft.com/graph/api/learningcontent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of learningContent
+     * @return a CompletableFuture of LearningContent
      * @see <a href="https://learn.microsoft.com/graph/api/learningcontent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property learningContents in employeeExperience
      * @param body The request body
-     * @return a CompletableFuture of learningContent
+     * @return a CompletableFuture of LearningContent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningContent> patch(@jakarta.annotation.Nonnull final LearningContent body) {
@@ -93,7 +93,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property learningContents in employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of learningContent
+     * @return a CompletableFuture of LearningContent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningContent> patch(@jakarta.annotation.Nonnull final LearningContent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

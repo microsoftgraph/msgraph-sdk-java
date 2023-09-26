@@ -59,7 +59,7 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
     }
     /**
      * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties.
-     * @return a CompletableFuture of microsoftAuthenticatorAuthenticationMethodCollectionResponse
+     * @return a CompletableFuture of MicrosoftAuthenticatorAuthenticationMethodCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
     /**
      * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of microsoftAuthenticatorAuthenticationMethodCollectionResponse
+     * @return a CompletableFuture of MicrosoftAuthenticatorAuthenticationMethodCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftAuthenticatorMethodsRequestBuilder
+     * @return a MicrosoftAuthenticatorMethodsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftAuthenticatorMethodsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

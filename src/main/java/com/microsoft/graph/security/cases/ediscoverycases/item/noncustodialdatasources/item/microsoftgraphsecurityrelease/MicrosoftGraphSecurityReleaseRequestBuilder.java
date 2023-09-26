@@ -85,7 +85,7 @@ public class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphSecurityReleaseRequestBuilder
+     * @return a MicrosoftGraphSecurityReleaseRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityReleaseRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

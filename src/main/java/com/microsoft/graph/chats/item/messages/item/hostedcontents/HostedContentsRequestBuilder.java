@@ -60,7 +60,7 @@ public class HostedContentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content
-     * @return a CompletableFuture of chatMessageHostedContentCollectionResponse
+     * @return a CompletableFuture of ChatMessageHostedContentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-list-hostedcontents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class HostedContentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of chatMessageHostedContentCollectionResponse
+     * @return a CompletableFuture of ChatMessageHostedContentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-list-hostedcontents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class HostedContentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to hostedContents for chats
      * @param body The request body
-     * @return a CompletableFuture of chatMessageHostedContent
+     * @return a CompletableFuture of ChatMessageHostedContent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> post(@jakarta.annotation.Nonnull final ChatMessageHostedContent body) {
@@ -94,7 +94,7 @@ public class HostedContentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to hostedContents for chats
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of chatMessageHostedContent
+     * @return a CompletableFuture of ChatMessageHostedContent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> post(@jakarta.annotation.Nonnull final ChatMessageHostedContent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class HostedContentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a hostedContentsRequestBuilder
+     * @return a HostedContentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HostedContentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

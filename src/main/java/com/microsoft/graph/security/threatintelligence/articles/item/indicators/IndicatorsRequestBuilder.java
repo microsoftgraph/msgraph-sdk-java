@@ -59,7 +59,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of articleIndicator objects that represent indicators of threat or compromise related to the contents of an article.
-     * @return a CompletableFuture of articleIndicatorCollectionResponse
+     * @return a CompletableFuture of ArticleIndicatorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-article-list-indicators?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of articleIndicator objects that represent indicators of threat or compromise related to the contents of an article.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of articleIndicatorCollectionResponse
+     * @return a CompletableFuture of ArticleIndicatorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-article-list-indicators?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a indicatorsRequestBuilder
+     * @return a IndicatorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IndicatorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

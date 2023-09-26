@@ -57,7 +57,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * Read-only. Nullable. Supports $expand.
-     * @return a CompletableFuture of accessPackageResourceRole
+     * @return a CompletableFuture of AccessPackageResourceRole
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRole> get() {
@@ -66,7 +66,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
     /**
      * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceRole
+     * @return a CompletableFuture of AccessPackageResourceRole
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRole> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property roles in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageResourceRole
+     * @return a CompletableFuture of AccessPackageResourceRole
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRole> patch(@jakarta.annotation.Nonnull final AccessPackageResourceRole body) {
@@ -89,7 +89,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
      * Update the navigation property roles in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceRole
+     * @return a CompletableFuture of AccessPackageResourceRole
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRole> patch(@jakarta.annotation.Nonnull final AccessPackageResourceRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

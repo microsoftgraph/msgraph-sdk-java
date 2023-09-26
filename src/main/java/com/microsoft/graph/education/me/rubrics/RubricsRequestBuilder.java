@@ -60,7 +60,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of educationRubric objects.
-     * @return a CompletableFuture of educationRubricCollectionResponse
+     * @return a CompletableFuture of EducationRubricCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-list-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of educationRubric objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationRubricCollectionResponse
+     * @return a CompletableFuture of EducationRubricCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-list-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new educationRubric object.
      * @param body The request body
-     * @return a CompletableFuture of educationRubric
+     * @return a CompletableFuture of EducationRubric
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-post-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
      * Create a new educationRubric object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationRubric
+     * @return a CompletableFuture of EducationRubric
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-post-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a rubricsRequestBuilder
+     * @return a RubricsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RubricsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

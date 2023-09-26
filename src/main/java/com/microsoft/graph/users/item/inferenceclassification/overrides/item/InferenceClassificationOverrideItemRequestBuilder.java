@@ -59,7 +59,7 @@ public class InferenceClassificationOverrideItemRequestBuilder extends BaseReque
     }
     /**
      * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
-     * @return a CompletableFuture of inferenceClassificationOverride
+     * @return a CompletableFuture of InferenceClassificationOverride
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> get() {
@@ -68,7 +68,7 @@ public class InferenceClassificationOverrideItemRequestBuilder extends BaseReque
     /**
      * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of inferenceClassificationOverride
+     * @return a CompletableFuture of InferenceClassificationOverride
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class InferenceClassificationOverrideItemRequestBuilder extends BaseReque
     /**
      * Change the classifyAs field of an override as specified. You cannot use PATCH to change any other fields in an inferenceClassificationOverride instance. If an override exists for a sender and the sender changes his/her display name, you can use POST to force an update to the name field in the existing override. If an override exists for a sender and the sender changes his/her SMTP address, deleting the existing override and creating a new one withthe new SMTP address is the only way to 'update' the override for this sender.
      * @param body The request body
-     * @return a CompletableFuture of inferenceClassificationOverride
+     * @return a CompletableFuture of InferenceClassificationOverride
      * @see <a href="https://learn.microsoft.com/graph/api/inferenceclassificationoverride-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class InferenceClassificationOverrideItemRequestBuilder extends BaseReque
      * Change the classifyAs field of an override as specified. You cannot use PATCH to change any other fields in an inferenceClassificationOverride instance. If an override exists for a sender and the sender changes his/her display name, you can use POST to force an update to the name field in the existing override. If an override exists for a sender and the sender changes his/her SMTP address, deleting the existing override and creating a new one withthe new SMTP address is the only way to 'update' the override for this sender.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of inferenceClassificationOverride
+     * @return a CompletableFuture of InferenceClassificationOverride
      * @see <a href="https://learn.microsoft.com/graph/api/inferenceclassificationoverride-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

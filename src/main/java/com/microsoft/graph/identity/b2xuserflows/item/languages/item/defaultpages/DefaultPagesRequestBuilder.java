@@ -60,7 +60,7 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
-     * @return a CompletableFuture of userFlowLanguagePageCollectionResponse
+     * @return a CompletableFuture of UserFlowLanguagePageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguagePageCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userFlowLanguagePageCollectionResponse
+     * @return a CompletableFuture of UserFlowLanguagePageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguagePageCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to defaultPages for identity
      * @param body The request body
-     * @return a CompletableFuture of userFlowLanguagePage
+     * @return a CompletableFuture of UserFlowLanguagePage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguagePage> post(@jakarta.annotation.Nonnull final UserFlowLanguagePage body) {
@@ -92,7 +92,7 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to defaultPages for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userFlowLanguagePage
+     * @return a CompletableFuture of UserFlowLanguagePage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguagePage> post(@jakarta.annotation.Nonnull final UserFlowLanguagePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a defaultPagesRequestBuilder
+     * @return a DefaultPagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DefaultPagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

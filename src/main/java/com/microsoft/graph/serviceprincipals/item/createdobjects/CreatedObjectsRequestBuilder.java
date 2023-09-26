@@ -67,7 +67,7 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Directory objects created by this service principal. Read-only. Nullable.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -76,7 +76,7 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Directory objects created by this service principal. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,7 +118,7 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a createdObjectsRequestBuilder
+     * @return a CreatedObjectsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CreatedObjectsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

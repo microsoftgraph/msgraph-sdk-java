@@ -83,7 +83,7 @@ public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a participant object.
-     * @return a CompletableFuture of participant
+     * @return a CompletableFuture of Participant
      * @see <a href="https://learn.microsoft.com/graph/api/participant-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a participant object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of participant
+     * @return a CompletableFuture of Participant
      * @see <a href="https://learn.microsoft.com/graph/api/participant-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property participants in communications
      * @param body The request body
-     * @return a CompletableFuture of participant
+     * @return a CompletableFuture of Participant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Participant> patch(@jakarta.annotation.Nonnull final Participant body) {
@@ -117,7 +117,7 @@ public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property participants in communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of participant
+     * @return a CompletableFuture of Participant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Participant> patch(@jakarta.annotation.Nonnull final Participant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

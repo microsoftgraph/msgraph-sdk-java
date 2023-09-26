@@ -73,7 +73,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Entry-point to the Planner resource that might exist for a user. Read-only.
-     * @return a CompletableFuture of plannerUser
+     * @return a CompletableFuture of PlannerUser
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerUser> get() {
@@ -82,7 +82,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     /**
      * Entry-point to the Planner resource that might exist for a user. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerUser
+     * @return a CompletableFuture of PlannerUser
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerUser> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property planner in users
      * @param body The request body
-     * @return a CompletableFuture of plannerUser
+     * @return a CompletableFuture of PlannerUser
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerUser> patch(@jakarta.annotation.Nonnull final PlannerUser body) {
@@ -105,7 +105,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property planner in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerUser
+     * @return a CompletableFuture of PlannerUser
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerUser> patch(@jakarta.annotation.Nonnull final PlannerUser body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -207,7 +207,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a plannerRequestBuilder
+     * @return a PlannerRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PlannerRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

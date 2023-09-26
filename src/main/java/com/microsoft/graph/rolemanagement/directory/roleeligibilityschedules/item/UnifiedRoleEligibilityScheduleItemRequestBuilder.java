@@ -89,7 +89,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
     }
     /**
      * Retrieve the schedule for a role eligibility operation.
-     * @return a CompletableFuture of unifiedRoleEligibilitySchedule
+     * @return a CompletableFuture of UnifiedRoleEligibilitySchedule
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
     /**
      * Retrieve the schedule for a role eligibility operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleEligibilitySchedule
+     * @return a CompletableFuture of UnifiedRoleEligibilitySchedule
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property roleEligibilitySchedules in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleEligibilitySchedule
+     * @return a CompletableFuture of UnifiedRoleEligibilitySchedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilitySchedule> patch(@jakarta.annotation.Nonnull final UnifiedRoleEligibilitySchedule body) {
@@ -123,7 +123,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
      * Update the navigation property roleEligibilitySchedules in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleEligibilitySchedule
+     * @return a CompletableFuture of UnifiedRoleEligibilitySchedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilitySchedule> patch(@jakarta.annotation.Nonnull final UnifiedRoleEligibilitySchedule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

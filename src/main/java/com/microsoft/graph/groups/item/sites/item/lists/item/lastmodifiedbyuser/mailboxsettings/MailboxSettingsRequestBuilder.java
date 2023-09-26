@@ -38,7 +38,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale and time zone. Returned only on $select.
-     * @return a CompletableFuture of mailboxSettings
+     * @return a CompletableFuture of MailboxSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailboxSettings> get() {
@@ -47,7 +47,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale and time zone. Returned only on $select.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mailboxSettings
+     * @return a CompletableFuture of MailboxSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailboxSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +60,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update property mailboxSettings value.
      * @param body The request body
-     * @return a CompletableFuture of mailboxSettings
+     * @return a CompletableFuture of MailboxSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailboxSettings> patch(@jakarta.annotation.Nonnull final MailboxSettings body) {
@@ -70,7 +70,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
      * Update property mailboxSettings value.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mailboxSettings
+     * @return a CompletableFuture of MailboxSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailboxSettings> patch(@jakarta.annotation.Nonnull final MailboxSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -145,7 +145,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a mailboxSettingsRequestBuilder
+     * @return a MailboxSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MailboxSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -65,7 +65,7 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
-     * @return a CompletableFuture of activityHistoryItem
+     * @return a CompletableFuture of ActivityHistoryItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityHistoryItem> get() {
@@ -74,7 +74,7 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of activityHistoryItem
+     * @return a CompletableFuture of ActivityHistoryItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityHistoryItem> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an existing history item for an existing user activity.
      * @param body The request body
-     * @return a CompletableFuture of activityHistoryItem
+     * @return a CompletableFuture of ActivityHistoryItem
      * @see <a href="https://learn.microsoft.com/graph/api/projectrome-delete-historyitem?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -98,7 +98,7 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
      * Delete an existing history item for an existing user activity.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of activityHistoryItem
+     * @return a CompletableFuture of ActivityHistoryItem
      * @see <a href="https://learn.microsoft.com/graph/api/projectrome-delete-historyitem?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

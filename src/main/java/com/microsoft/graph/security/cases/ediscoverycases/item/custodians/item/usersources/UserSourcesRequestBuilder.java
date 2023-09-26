@@ -60,7 +60,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the userSource objects associated with an ediscoveryCustodian.
-     * @return a CompletableFuture of userSourceCollectionResponse
+     * @return a CompletableFuture of UserSourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-usersources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the userSource objects associated with an ediscoveryCustodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userSourceCollectionResponse
+     * @return a CompletableFuture of UserSourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-usersources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new userSource object associated with an eDiscovery custodian.
      * @param body The request body
-     * @return a CompletableFuture of userSource
+     * @return a CompletableFuture of UserSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-usersources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
      * Create a new userSource object associated with an eDiscovery custodian.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userSource
+     * @return a CompletableFuture of UserSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-usersources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userSourcesRequestBuilder
+     * @return a UserSourcesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserSourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

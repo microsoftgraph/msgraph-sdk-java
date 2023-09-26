@@ -60,7 +60,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
     }
     /**
      * Get a list of the customSecurityAttributeDefinition objects and their properties.
-     * @return a CompletableFuture of customSecurityAttributeDefinitionCollectionResponse
+     * @return a CompletableFuture of CustomSecurityAttributeDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
     /**
      * Get a list of the customSecurityAttributeDefinition objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customSecurityAttributeDefinitionCollectionResponse
+     * @return a CompletableFuture of CustomSecurityAttributeDefinitionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
     /**
      * Create a new customSecurityAttributeDefinition object.
      * @param body The request body
-     * @return a CompletableFuture of customSecurityAttributeDefinition
+     * @return a CompletableFuture of CustomSecurityAttributeDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/directory-post-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
      * Create a new customSecurityAttributeDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customSecurityAttributeDefinition
+     * @return a CompletableFuture of CustomSecurityAttributeDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/directory-post-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a customSecurityAttributeDefinitionsRequestBuilder
+     * @return a CustomSecurityAttributeDefinitionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CustomSecurityAttributeDefinitionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

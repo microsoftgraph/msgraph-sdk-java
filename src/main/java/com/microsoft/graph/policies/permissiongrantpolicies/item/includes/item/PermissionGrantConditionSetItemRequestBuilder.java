@@ -59,7 +59,7 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
-     * @return a CompletableFuture of permissionGrantConditionSet
+     * @return a CompletableFuture of PermissionGrantConditionSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> get() {
@@ -68,7 +68,7 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
     /**
      * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of permissionGrantConditionSet
+     * @return a CompletableFuture of PermissionGrantConditionSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property includes in policies
      * @param body The request body
-     * @return a CompletableFuture of permissionGrantConditionSet
+     * @return a CompletableFuture of PermissionGrantConditionSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> patch(@jakarta.annotation.Nonnull final PermissionGrantConditionSet body) {
@@ -91,7 +91,7 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
      * Update the navigation property includes in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of permissionGrantConditionSet
+     * @return a CompletableFuture of PermissionGrantConditionSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> patch(@jakarta.annotation.Nonnull final PermissionGrantConditionSet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

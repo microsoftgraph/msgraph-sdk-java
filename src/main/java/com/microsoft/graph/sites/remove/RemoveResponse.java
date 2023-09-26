@@ -15,7 +15,7 @@ public class RemoveResponse extends BaseCollectionPaginationCountResponse implem
      */
     private java.util.List<Site> value;
     /**
-     * Instantiates a new removeResponse and sets the default values.
+     * Instantiates a new RemoveResponse and sets the default values.
      */
     public RemoveResponse() {
         super();
@@ -23,7 +23,7 @@ public class RemoveResponse extends BaseCollectionPaginationCountResponse implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a removeResponse
+     * @return a RemoveResponse
      */
     @jakarta.annotation.Nonnull
     public static RemoveResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class RemoveResponse extends BaseCollectionPaginationCountResponse implem
     }
     /**
      * Gets the value property value. The value property
-     * @return a site
+     * @return a java.util.List<Site>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Site> getValue() {

@@ -46,7 +46,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of related alerts. Supports $expand.
-     * @return a CompletableFuture of alert
+     * @return a CompletableFuture of Alert
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Alert> get() {
@@ -55,7 +55,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of related alerts. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alert
+     * @return a CompletableFuture of Alert
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Alert> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

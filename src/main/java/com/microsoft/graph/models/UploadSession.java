@@ -31,7 +31,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      */
     private String uploadUrl;
     /**
-     * Instantiates a new uploadSession and sets the default values.
+     * Instantiates a new UploadSession and sets the default values.
      */
     public UploadSession() {
         this.setAdditionalData(new HashMap<>());
@@ -39,7 +39,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a uploadSession
+     * @return a UploadSession
      */
     @jakarta.annotation.Nonnull
     public static UploadSession createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
         return new UploadSession();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the nextExpectedRanges property value. A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format 'start-end' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNextExpectedRanges() {
@@ -85,7 +85,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -93,7 +93,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the uploadUrl property value. The URL endpoint that accepts PUT requests for byte ranges of the file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUploadUrl() {
@@ -112,8 +112,8 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -62,7 +62,7 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
     }
     /**
      * Read the properties and relationships of a workflowVersion object.
-     * @return a CompletableFuture of workflowVersion
+     * @return a CompletableFuture of WorkflowVersion
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflowversion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -72,7 +72,7 @@ public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestB
     /**
      * Read the properties and relationships of a workflowVersion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workflowVersion
+     * @return a CompletableFuture of WorkflowVersion
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflowversion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

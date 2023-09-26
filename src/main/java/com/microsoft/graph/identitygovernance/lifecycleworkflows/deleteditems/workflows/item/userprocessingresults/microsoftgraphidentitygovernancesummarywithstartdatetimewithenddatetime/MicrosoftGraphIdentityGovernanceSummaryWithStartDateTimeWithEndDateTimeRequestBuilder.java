@@ -42,7 +42,7 @@ public class MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDate
     }
     /**
      * Invoke function summary
-     * @return a CompletableFuture of userSummary
+     * @return a CompletableFuture of UserSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSummary> get() {
@@ -51,7 +51,7 @@ public class MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDate
     /**
      * Invoke function summary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userSummary
+     * @return a CompletableFuture of UserSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -92,7 +92,7 @@ public class MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDate
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return a MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
