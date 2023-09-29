@@ -84,7 +84,7 @@ public class HostSecurityState implements IJsonBackedObject {
 
     /**
      * The Os.
-     * Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
+     * Host Operating System. (For example, Windows 10, macOS, RHEL, etc.).
      */
     @SerializedName(value = "os", alternate = {"Os"})
     @Expose

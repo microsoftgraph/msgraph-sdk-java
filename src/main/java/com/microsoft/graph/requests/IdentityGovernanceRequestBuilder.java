@@ -106,4 +106,14 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder<Identit
     public com.microsoft.graph.requests.EntitlementManagementRequestBuilder entitlementManagement() {
         return new com.microsoft.graph.requests.EntitlementManagementRequestBuilder(getRequestUrlWithAdditionalSegment("entitlementManagement"), getClient(), null);
     }
+
+    /**
+     * Gets the request builder for PrivilegedAccessRoot
+     *
+     * @return the PrivilegedAccessRootRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PrivilegedAccessRootRequestBuilder privilegedAccess() {
+        return new com.microsoft.graph.requests.PrivilegedAccessRootRequestBuilder(getRequestUrlWithAdditionalSegment("privilegedAccess"), getClient(), null);
+    }
 }

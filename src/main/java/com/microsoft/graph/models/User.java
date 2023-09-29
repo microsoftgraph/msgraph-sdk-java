@@ -838,7 +838,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Registered Devices.
-     * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
+     * Devices that are registered for the user. Read-only. Nullable. Supports $expand and returns up to 100 objects.
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage registeredDevices;

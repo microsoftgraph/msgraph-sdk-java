@@ -57,7 +57,7 @@ public class InsightIdentity implements IJsonBackedObject {
 
     /**
      * The Id.
-     * The id of the user who shared the item.
+     * The ID of the user who shared the item.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

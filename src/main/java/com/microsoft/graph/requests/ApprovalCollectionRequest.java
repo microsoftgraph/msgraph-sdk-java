@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.EntitlementManagement;
+import com.microsoft.graph.models.PrivilegedAccessGroup;
 import com.microsoft.graph.models.Approval;
 import com.microsoft.graph.models.ApprovalFilterByCurrentUserOptions;
 import java.util.Arrays;

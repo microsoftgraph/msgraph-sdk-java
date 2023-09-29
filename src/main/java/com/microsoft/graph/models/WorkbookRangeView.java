@@ -101,7 +101,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Text.
-     * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
+     * Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
      */
     @SerializedName(value = "text", alternate = {"Text"})
     @Expose
@@ -110,7 +110,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Values.
-     * Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
      */
     @SerializedName(value = "values", alternate = {"Values"})
     @Expose

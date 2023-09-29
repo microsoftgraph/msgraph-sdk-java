@@ -29,6 +29,21 @@ public class DelegatedAdminRelationshipRequest extends BaseRequest<DelegatedAdmi
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
+     */
+    public DelegatedAdminRelationshipRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient<?> client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends DelegatedAdminRelationship> responseClass) {
+        super(requestUrl, client, requestOptions, responseClass);
+    }
+
+    /**
+     * The request for the DelegatedAdminRelationship
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public DelegatedAdminRelationshipRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DelegatedAdminRelationship.class);

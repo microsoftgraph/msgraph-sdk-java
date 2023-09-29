@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.EntitlementManagement;
+import com.microsoft.graph.models.PrivilegedAccessGroup;
 import com.microsoft.graph.models.Approval;
 import com.microsoft.graph.models.ApprovalFilterByCurrentUserOptions;
 import java.util.Arrays;
@@ -31,7 +31,7 @@ import com.microsoft.graph.models.ApprovalFilterByCurrentUserParameterSet;
 public class ApprovalCollectionRequestBuilder extends BaseCollectionRequestBuilder<Approval, ApprovalRequestBuilder, ApprovalCollectionResponse, ApprovalCollectionPage, ApprovalCollectionRequest> {
 
     /**
-     * The request builder for this collection of EntitlementManagement
+     * The request builder for this collection of PrivilegedAccessGroup
      *
      * @param requestUrl     the request URL
      * @param client         the service client

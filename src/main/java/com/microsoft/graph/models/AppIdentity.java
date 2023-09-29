@@ -48,7 +48,7 @@ public class AppIdentity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Refers to the Application Name displayed in the Azure Portal.
+     * Refers to the application name displayed in the Microsoft Entra admin center.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

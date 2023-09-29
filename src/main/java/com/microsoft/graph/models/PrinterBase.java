@@ -60,7 +60,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Accepting Jobs.
-     * Whether the printer/printerShare is currently accepting new print jobs.
+     * Specifies whether the printer/printerShare is currently accepting new print jobs.
      */
     @SerializedName(value = "isAcceptingJobs", alternate = {"IsAcceptingJobs"})
     @Expose

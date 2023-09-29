@@ -29,7 +29,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements IJsonBa
 
     /**
      * The Action.
-     * The action to be performed on the delegated admin relationship.
+     * The action to be performed on the delegated admin relationship. The possible values are: lockForApproval, approve, terminate, unknownFutureValue, reject. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reject. For a partner to finalize a relationship in the created status, set the action to lockForApproval. For a partner to terminate a relationship in the active status, set the action to terminate. For an indirect reseller to approve a relationship created by an indirect provider in the approvalPending status, set the action to approve. For an indirect reseller to reject a relationship created by an indirect provider in the approvalPending status, set the action to reject.
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose

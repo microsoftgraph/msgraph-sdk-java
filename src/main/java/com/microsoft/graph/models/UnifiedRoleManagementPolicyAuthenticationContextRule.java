@@ -36,7 +36,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
 
     /**
      * The Is Enabled.
-     * Whether this rule is enabled.
+     * Determines whether this rule is enabled.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose

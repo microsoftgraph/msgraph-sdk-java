@@ -11,6 +11,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.72.0] - 2023-09-29
+
+### Added 
+
+- AssignmentSchedule, EligibilitySchedule, PrivilegedAccessGroup, PrivilegedAccessRoot, ResellerDelegatedAdminRelationship models and derived requests.
+- ScheduleRequestActions model.
+
+### Changed 
+
+- DelegatedAdminRelationshipRequest, DirectoryRequestBuilder, IdentityGovernance, IdentityGovernanceRequestBuilder, Incident, SubjectRightsRequest classes.
+
 ## [5.71.0] - 2023-09-22
 
 ### Added 
