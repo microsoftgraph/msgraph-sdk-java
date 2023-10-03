@@ -61,4 +61,30 @@ public class HostReferenceRequest extends BaseReferenceRequest<Host> {
         addExpandOption(value);
         return this;
     }
+    /**
+     * Puts the Host
+     *
+     * @param srcHost the Host reference to PUT
+     * @return a future with the result
+     */
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Host> putAsync(@Nonnull final Host srcHost) {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/security/threatIntelligence/{id}/hosts/" + srcHost.id));
+        return sendAsync(HttpMethod.PUT, payload);
+    }
+
+    /**
+     * Puts the Host
+     *
+     * @param srcHost the Host reference to PUT
+     * @return the Host
+     * @throws ClientException an exception occurs if there was an error while the request was sent
+     */
+    @Nullable
+    public Host put(@Nonnull final Host srcHost) throws ClientException {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/security/threatIntelligence/{id}/hosts/" + srcHost.id));
+        return send(HttpMethod.PUT, payload);
+    }
 }

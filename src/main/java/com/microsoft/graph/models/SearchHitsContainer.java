@@ -69,7 +69,7 @@ public class SearchHitsContainer implements IJsonBackedObject {
 
     /**
      * The Total.
-     * The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
+     * The total number of results. Note this isn't the number of results on the page, but the total number of results satisfying the query.
      */
     @SerializedName(value = "total", alternate = {"Total"})
     @Expose

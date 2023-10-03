@@ -41,7 +41,7 @@ public class AccessPackageAssignmentApprovalSettings implements IJsonBackedObjec
 
     /**
      * The Is Approval Required For Add.
-     * If false, then approval is not required for new requests in this policy.
+     * If false, then approval isn't required for new requests in this policy.
      */
     @SerializedName(value = "isApprovalRequiredForAdd", alternate = {"IsApprovalRequiredForAdd"})
     @Expose
@@ -50,7 +50,7 @@ public class AccessPackageAssignmentApprovalSettings implements IJsonBackedObjec
 
     /**
      * The Is Approval Required For Update.
-     * If false, then approval is not required for updates to requests in this policy.
+     * If false, then approval isn't required for updates to requests in this policy.
      */
     @SerializedName(value = "isApprovalRequiredForUpdate", alternate = {"IsApprovalRequiredForUpdate"})
     @Expose

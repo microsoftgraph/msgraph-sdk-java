@@ -28,7 +28,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
 
     /**
      * The Created Date Time.
-     * The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
+     * The date and time that this app was registered. This property is null if the device isn't registered for passwordless Phone Sign-In.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -64,7 +64,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
 
     /**
      * The Device.
-     * The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
+     * The registered device on which Microsoft Authenticator resides. This property is null if the device isn't registered for passwordless Phone Sign-In.
      */
     @SerializedName(value = "device", alternate = {"Device"})
     @Expose

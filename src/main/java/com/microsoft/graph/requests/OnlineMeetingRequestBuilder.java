@@ -78,6 +78,26 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder<OnlineMeetin
     public com.microsoft.graph.requests.MeetingAttendanceReportRequestBuilder attendanceReports(@Nonnull final String id) {
         return new com.microsoft.graph.requests.MeetingAttendanceReportRequestBuilder(getRequestUrlWithAdditionalSegment("attendanceReports") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the CallTranscript collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CallTranscriptCollectionRequestBuilder transcripts() {
+        return new com.microsoft.graph.requests.CallTranscriptCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("transcripts"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CallTranscript item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CallTranscriptRequestBuilder transcripts(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CallTranscriptRequestBuilder(getRequestUrlWithAdditionalSegment("transcripts") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for attendeeReport

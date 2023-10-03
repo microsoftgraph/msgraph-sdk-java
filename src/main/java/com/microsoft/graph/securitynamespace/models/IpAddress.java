@@ -37,7 +37,7 @@ public class IpAddress extends Host implements IJsonBackedObject {
 
     /**
      * The Country Or Region.
-     * The country or region for this IP address.
+     * The country/region for this IP address.
      */
     @SerializedName(value = "countryOrRegion", alternate = {"CountryOrRegion"})
     @Expose

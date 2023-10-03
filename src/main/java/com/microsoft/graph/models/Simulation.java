@@ -11,9 +11,16 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.SimulationAttackTechnique;
 import com.microsoft.graph.models.SimulationAttackType;
 import com.microsoft.graph.models.EmailIdentity;
+import com.microsoft.graph.models.EndUserNotificationSetting;
+import com.microsoft.graph.models.AccountTargetContent;
+import com.microsoft.graph.models.OAuthConsentAppDetail;
 import com.microsoft.graph.models.PayloadDeliveryPlatform;
 import com.microsoft.graph.models.SimulationReport;
 import com.microsoft.graph.models.SimulationStatus;
+import com.microsoft.graph.models.TrainingSetting;
+import com.microsoft.graph.models.LandingPage;
+import com.microsoft.graph.models.LoginPage;
+import com.microsoft.graph.models.Payload;
 import com.microsoft.graph.models.Entity;
 
 
@@ -104,6 +111,42 @@ public class Simulation extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Duration In Days.
+     * 
+     */
+    @SerializedName(value = "durationInDays", alternate = {"DurationInDays"})
+    @Expose
+	@Nullable
+    public Integer durationInDays;
+
+    /**
+     * The End User Notification Setting.
+     * 
+     */
+    @SerializedName(value = "endUserNotificationSetting", alternate = {"EndUserNotificationSetting"})
+    @Expose
+	@Nullable
+    public EndUserNotificationSetting endUserNotificationSetting;
+
+    /**
+     * The Excluded Account Target.
+     * 
+     */
+    @SerializedName(value = "excludedAccountTarget", alternate = {"ExcludedAccountTarget"})
+    @Expose
+	@Nullable
+    public AccountTargetContent excludedAccountTarget;
+
+    /**
+     * The Included Account Target.
+     * 
+     */
+    @SerializedName(value = "includedAccountTarget", alternate = {"IncludedAccountTarget"})
+    @Expose
+	@Nullable
+    public AccountTargetContent includedAccountTarget;
+
+    /**
      * The Is Automated.
      * Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
      */
@@ -140,6 +183,15 @@ public class Simulation extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime launchDateTime;
 
     /**
+     * The OAuth Consent App Detail.
+     * 
+     */
+    @SerializedName(value = "oAuthConsentAppDetail", alternate = {"OAuthConsentAppDetail"})
+    @Expose
+	@Nullable
+    public OAuthConsentAppDetail oAuthConsentAppDetail;
+
+    /**
      * The Payload Delivery Platform.
      * Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
      */
@@ -165,6 +217,42 @@ public class Simulation extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public SimulationStatus status;
+
+    /**
+     * The Training Setting.
+     * 
+     */
+    @SerializedName(value = "trainingSetting", alternate = {"TrainingSetting"})
+    @Expose
+	@Nullable
+    public TrainingSetting trainingSetting;
+
+    /**
+     * The Landing Page.
+     * 
+     */
+    @SerializedName(value = "landingPage", alternate = {"LandingPage"})
+    @Expose
+	@Nullable
+    public LandingPage landingPage;
+
+    /**
+     * The Login Page.
+     * 
+     */
+    @SerializedName(value = "loginPage", alternate = {"LoginPage"})
+    @Expose
+	@Nullable
+    public LoginPage loginPage;
+
+    /**
+     * The Payload.
+     * 
+     */
+    @SerializedName(value = "payload", alternate = {"Payload"})
+    @Expose
+	@Nullable
+    public Payload payload;
 
 
     /**

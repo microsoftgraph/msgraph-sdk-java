@@ -39,7 +39,7 @@ public class CustomExtensionClientConfiguration implements IJsonBackedObject {
 
     /**
      * The Timeout In Milliseconds.
-     * The max duration in milliseconds that Azure AD will wait for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. Default duration is 1000.
+     * The max duration in milliseconds that Azure AD waits for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. Default duration is 1000.
      */
     @SerializedName(value = "timeoutInMilliseconds", alternate = {"TimeoutInMilliseconds"})
     @Expose

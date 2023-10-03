@@ -58,7 +58,7 @@ public class AggregationOption implements IJsonBackedObject {
 
     /**
      * The Size.
-     * The number of searchBucket resources to be returned. This is not required when the range is provided manually in the search request. Optional.
+     * The number of searchBucket resources to be returned. This isn't required when the range is provided manually in the search request. Optional.
      */
     @SerializedName(value = "size", alternate = {"Size"})
     @Expose

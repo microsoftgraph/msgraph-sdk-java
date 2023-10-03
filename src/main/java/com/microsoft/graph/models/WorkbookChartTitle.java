@@ -46,7 +46,7 @@ public class WorkbookChartTitle extends Entity implements IJsonBackedObject {
 
     /**
      * The Visible.
-     * A boolean value the represents the visibility of a chart title object.
+     * A boolean value that represents the visibility of a chart title object.
      */
     @SerializedName(value = "visible", alternate = {"Visible"})
     @Expose

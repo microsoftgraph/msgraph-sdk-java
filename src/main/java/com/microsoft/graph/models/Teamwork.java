@@ -49,7 +49,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
     /**
      * The Teams App Settings.
-     * 
+     * Represents tenant-wide settings for all Teams apps in the tenant.
      */
     @SerializedName(value = "teamsAppSettings", alternate = {"TeamsAppSettings"})
     @Expose

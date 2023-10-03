@@ -36,7 +36,7 @@ public class WorkbookChartFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Color.
-     * HTML color code representation of the text color. E.g. #FF0000 represents Red.
+     * HTML color code representation of the text color. for example #FF0000 represents Red.
      */
     @SerializedName(value = "color", alternate = {"Color"})
     @Expose
@@ -54,7 +54,7 @@ public class WorkbookChartFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * Font name (e.g. 'Calibri')
+     * Font name (for example 'Calibri')
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -63,7 +63,7 @@ public class WorkbookChartFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Size.
-     * Size of the font (e.g. 11)
+     * Size of the font (for example 11)
      */
     @SerializedName(value = "size", alternate = {"Size"})
     @Expose

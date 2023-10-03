@@ -59,7 +59,7 @@ public class RubricLevel implements IJsonBackedObject {
 
     /**
      * The Grading.
-     * Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric.
+     * Null if this is a no-points rubric; educationAssignmentPointsGradeType if it's a points rubric.
      */
     @SerializedName(value = "grading", alternate = {"Grading"})
     @Expose

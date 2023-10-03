@@ -41,7 +41,7 @@ public class AccessPackageAssignmentRequestorSettings implements IJsonBackedObje
 
     /**
      * The Allow Custom Assignment Schedule.
-     * False indicates that the requestor is not permitted to include a schedule in their request.
+     * False indicates that the requestor isn't permitted to include a schedule in their request.
      */
     @SerializedName(value = "allowCustomAssignmentSchedule", alternate = {"AllowCustomAssignmentSchedule"})
     @Expose

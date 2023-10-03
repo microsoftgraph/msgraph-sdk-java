@@ -50,7 +50,7 @@ public class AvailabilityItem implements IJsonBackedObject {
 
     /**
      * The Service Id.
-     * Indicates the service ID in case of 1:n appointments. If the appointment is of type 1:n, this field will be present, otherwise, null.
+     * Indicates the service ID for 1:n appointments. If the appointment is of type 1:n, this field is present, otherwise, null.
      */
     @SerializedName(value = "serviceId", alternate = {"ServiceId"})
     @Expose

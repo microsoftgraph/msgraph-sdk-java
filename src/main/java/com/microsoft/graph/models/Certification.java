@@ -48,7 +48,7 @@ public class Certification implements IJsonBackedObject {
 
     /**
      * The Certification Expiration Date Time.
-     * The timestamp when the current certification for the application will expire.
+     * The timestamp when the current certification for the application expires.
      */
     @SerializedName(value = "certificationExpirationDateTime", alternate = {"CertificationExpirationDateTime"})
     @Expose

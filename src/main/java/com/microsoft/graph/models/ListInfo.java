@@ -48,7 +48,7 @@ public class ListInfo implements IJsonBackedObject {
 
     /**
      * The Hidden.
-     * If true, indicates that the list is not normally visible in the SharePoint user experience.
+     * If true, indicates that the list isn't normally visible in the SharePoint user experience.
      */
     @SerializedName(value = "hidden", alternate = {"Hidden"})
     @Expose

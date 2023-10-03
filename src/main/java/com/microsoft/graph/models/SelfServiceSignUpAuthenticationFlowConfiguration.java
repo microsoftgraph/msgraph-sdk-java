@@ -39,7 +39,7 @@ public class SelfServiceSignUpAuthenticationFlowConfiguration implements IJsonBa
 
     /**
      * The Is Enabled.
-     * Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property is not a key. Required.
+     * Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property isn't a key. Required.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose

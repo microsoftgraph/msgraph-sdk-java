@@ -27,7 +27,7 @@ public class TeamsAppSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Allow User Requests For App Access.
-     * 
+     * Indicates whether users are allowed to request access to the unavailable Teams apps.
      */
     @SerializedName(value = "allowUserRequestsForAppAccess", alternate = {"AllowUserRequestsForAppAccess"})
     @Expose

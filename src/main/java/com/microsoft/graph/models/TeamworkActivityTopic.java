@@ -49,7 +49,7 @@ public class TeamworkActivityTopic implements IJsonBackedObject {
 
     /**
      * The Value.
-     * The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the vaule is text, this must be a plain text value.
+     * The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the value is text, this must be a plain text value.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

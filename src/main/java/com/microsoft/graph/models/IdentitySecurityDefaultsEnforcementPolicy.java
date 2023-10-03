@@ -27,7 +27,7 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
 
     /**
      * The Is Enabled.
-     * If set to true, Azure Active Directory security defaults is enabled for the tenant.
+     * If set to true, Azure Active Directory security defaults are enabled for the tenant.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose

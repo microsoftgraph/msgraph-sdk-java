@@ -56,4 +56,34 @@ public class SimulationRequestBuilder extends BaseRequestBuilder<Simulation> {
     }
 
 
+
+    /**
+     * Gets the request builder for LandingPage
+     *
+     * @return the LandingPageWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.LandingPageWithReferenceRequestBuilder landingPage() {
+        return new com.microsoft.graph.requests.LandingPageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("landingPage"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for LoginPage
+     *
+     * @return the LoginPageWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.LoginPageWithReferenceRequestBuilder loginPage() {
+        return new com.microsoft.graph.requests.LoginPageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("loginPage"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Payload
+     *
+     * @return the PayloadWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PayloadWithReferenceRequestBuilder payload() {
+        return new com.microsoft.graph.requests.PayloadWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("payload"), getClient(), null);
+    }
 }

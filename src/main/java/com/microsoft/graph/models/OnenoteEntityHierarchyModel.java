@@ -28,7 +28,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
 
     /**
      * The Created By.
-     * Identity of the user, device, and application which created the item. Read-only.
+     * Identity of the user, device, and application that created the item. Read-only.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -46,7 +46,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
 
     /**
      * The Last Modified By.
-     * Identity of the user, device, and application which created the item. Read-only.
+     * Identity of the user, device, and application that created the item. Read-only.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose

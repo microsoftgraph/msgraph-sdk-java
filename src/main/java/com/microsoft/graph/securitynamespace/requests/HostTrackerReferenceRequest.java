@@ -70,7 +70,7 @@ public class HostTrackerReferenceRequest extends BaseReferenceRequest<HostTracke
     @Nonnull
     public java.util.concurrent.CompletableFuture<HostTracker> putAsync(@Nonnull final HostTracker srcHostTracker) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/security/threatIntelligence/{id}/hostTrackers/" + srcHostTracker.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/host/{id}/trackers/" + srcHostTracker.id));
         return sendAsync(HttpMethod.PUT, payload);
     }
 
@@ -84,7 +84,7 @@ public class HostTrackerReferenceRequest extends BaseReferenceRequest<HostTracke
     @Nullable
     public HostTracker put(@Nonnull final HostTracker srcHostTracker) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/security/threatIntelligence/{id}/hostTrackers/" + srcHostTracker.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/host/{id}/trackers/" + srcHostTracker.id));
         return send(HttpMethod.PUT, payload);
     }
 }
