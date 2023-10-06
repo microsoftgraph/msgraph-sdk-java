@@ -49,7 +49,7 @@ public class Synchronization extends Entity implements IJsonBackedObject {
 
     /**
      * The Templates.
-     * Pre-configured synchronization settings for a particular application.
+     * Preconfigured synchronization settings for a particular application.
      */
     @SerializedName(value = "templates", alternate = {"Templates"})
     @Expose

@@ -39,7 +39,7 @@ public class TermsExpiration implements IJsonBackedObject {
 
     /**
      * The Frequency.
-     * Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of 1 month.
+     * Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of one month.
      */
     @SerializedName(value = "frequency", alternate = {"Frequency"})
     @Expose

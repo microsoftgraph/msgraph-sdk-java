@@ -46,7 +46,7 @@ public class UserFlowLanguageConfiguration extends Entity implements IJsonBacked
 
     /**
      * The Default Pages.
-     * Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
+     * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
      */
     @SerializedName(value = "defaultPages", alternate = {"DefaultPages"})
     @Expose
@@ -55,7 +55,7 @@ public class UserFlowLanguageConfiguration extends Entity implements IJsonBacked
 
     /**
      * The Overrides Pages.
-     * Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
+     * Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows you to modify the content of the page, any other modification isn't allowed (creation or deletion of pages).
      */
     @SerializedName(value = "overridesPages", alternate = {"OverridesPages"})
     @Expose

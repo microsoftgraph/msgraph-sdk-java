@@ -49,7 +49,7 @@ public class AttachmentItem implements IJsonBackedObject {
 
     /**
      * The Content Id.
-     * The CID or Content-Id of the attachment for referencing in case of in-line attachments using &amp;lt;img src='cid:contentId'&amp;gt; tag in HTML messages. Optional.
+     * The CID or Content-Id of the attachment for referencing for the in-line attachments using the &amp;lt;img src='cid:contentId'&amp;gt; tag in HTML messages. Optional.
      */
     @SerializedName(value = "contentId", alternate = {"ContentId"})
     @Expose
@@ -76,7 +76,7 @@ public class AttachmentItem implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+     * The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose

@@ -75,7 +75,7 @@ public class DirectoryDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * Read only value that indicates version discovered. null if discovery has not yet occurred.
+     * Read only value that indicates version discovered. null if discovery hasn't yet occurred.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose

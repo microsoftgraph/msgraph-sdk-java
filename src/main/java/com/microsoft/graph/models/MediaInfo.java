@@ -39,7 +39,7 @@ public class MediaInfo implements IJsonBackedObject {
 
     /**
      * The Resource Id.
-     * Optional. Used to uniquely identity the resource. If passed in, the prompt uri will be cached against this resourceId as a key.
+     * Optional. Used to uniquely identity the resource. If passed in, the prompt uri is against this resourceId as a key.
      */
     @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose
@@ -48,7 +48,7 @@ public class MediaInfo implements IJsonBackedObject {
 
     /**
      * The Uri.
-     * Path to the prompt that will be played. Currently supports only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate.
+     * Path to the prompt that will be played. Currently supports only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16 KHz) sampling rate.
      */
     @SerializedName(value = "uri", alternate = {"Uri"})
     @Expose

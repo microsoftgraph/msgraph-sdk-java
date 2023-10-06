@@ -40,7 +40,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements IJson
 
     /**
      * The Is Optional.
-     * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
+     * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user can't complete sign-up without providing a value.
      */
     @SerializedName(value = "isOptional", alternate = {"IsOptional"})
     @Expose
@@ -49,7 +49,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements IJson
 
     /**
      * The Requires Verification.
-     * Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
+     * Determines whether the identityUserFlowAttribute requires verification, and is only used for verifying the user's phone number or email address.
      */
     @SerializedName(value = "requiresVerification", alternate = {"RequiresVerification"})
     @Expose

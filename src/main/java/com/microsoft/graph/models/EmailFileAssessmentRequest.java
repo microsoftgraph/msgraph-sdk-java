@@ -28,7 +28,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
 
     /**
      * The Content Data.
-     * Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
+     * Base64 encoded .eml email file content. The file content can't fetch back because it isn't stored.
      */
     @SerializedName(value = "contentData", alternate = {"ContentData"})
     @Expose

@@ -51,7 +51,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Customers.
-     * A collection of customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
+     * A collection of customer properties for an appointment. An appointment contains a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
      */
     @SerializedName(value = "customers", alternate = {"Customers"})
     @Expose
@@ -123,7 +123,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Opt Out Of Customer Email.
-     * If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
+     * If true indicates that the bookingCustomer for this appointment doesn't wish to receive a confirmation for this appointment.
      */
     @SerializedName(value = "optOutOfCustomerEmail", alternate = {"OptOutOfCustomerEmail"})
     @Expose

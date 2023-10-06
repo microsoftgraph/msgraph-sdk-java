@@ -11,6 +11,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.73.0] - 2023-10-06
+
+### Added
+
+- AccountTargetContent, AccountTargetContentType, AddressBookAccountTargetContent, IncludeAllAccountTargetContent models and derived requests.
+- AttackSimulationOperation, AttackSimulationOperationType, AttackSimulationRoot, SimulationContentSource, SimulationContentStatus, SimulationNotification, TargettedUserType models and derived requests.
+- BaseEndUserNotification, EndUserNotification, EndUserNotificationDetail, EndUserNotificationPreference, EndUserNotificationSetting, EndUserNotificationSettingType, EndUserNotificationType, NotificationDeliveryFrequency, NotificationDeliveryPreference, PositiveReinforcementNotification, TrainingReminderNotification models and derived requests.
+- CallTranscript, CallTranscriptContentStream, CallTranscriptMetadataContentStream models and derived requests.
+- CoachmarkLocation, CoachmarkLocationType, PayloadCoachmark models.
+- CustomTrainingSetting, MicrosoftCustomTrainingSetting, MicrosoftManagedTrainingSetting, MicrosoftTrainingAssignmentMapping, NoTrainingNotificationSetting, NoTrainingSetting, Training, TrainingAssignedTo, TrainingAvailabilityStatus, TrainingCompletionDuration, TrainingLanguageDetail, TrainingNotificationSetting, TrainingSetting, TrainingSettingType, TrainingType models and derived requests.
+- EmailPayloadDetail model.
+- LandingPage, LandingPageDetail, LoginPage models and derived requests.
+- OAuthAppScope, OAuthConsentAppDetail models.
+- Payload, PayloadBrand, PayloadComplexity, PayloadDetail, PayloadIndustry, PayloadTheme models and derived requests.
+- HostPair, HostSslCertificate, HostSslCertificatePort, SslCertificate, SslCertificateEntity, Subdomain models and derived requests.
+- WhoisBaseRecord, WhoisContact, WhoisDomainStatus, WhoisHistoryRecord, WhoisNameserver, WhoisRecord models and derived requests.
+
+### Changed
+
+- Label, OnlineMeeting, Simulation, ThreatIntelligence models and derived requests.
+- Host, Hostname, IpAddress, AttackSimulationRoot, OnlineMeeting, Simulation, ThreatIntelligence request builders.
+
 ## [5.72.0] - 2023-09-29
 
 ### Added 

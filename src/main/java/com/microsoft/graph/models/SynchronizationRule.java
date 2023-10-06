@@ -53,7 +53,7 @@ public class SynchronizationRule implements IJsonBackedObject {
 
     /**
      * The Editable.
-     * true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
+     * true if the synchronization rule can be customized; false if this rule is read-only and shouldn't be changed.
      */
     @SerializedName(value = "editable", alternate = {"Editable"})
     @Expose
@@ -80,7 +80,7 @@ public class SynchronizationRule implements IJsonBackedObject {
 
     /**
      * The Metadata.
-     * Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
+     * Additional extension properties. Unless instructed explicitly by the support team, metadata values shouldn't be changed.
      */
     @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose

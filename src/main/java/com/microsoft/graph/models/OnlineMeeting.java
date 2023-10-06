@@ -22,6 +22,7 @@ import com.microsoft.graph.models.MeetingChatHistoryDefaultMode;
 import com.microsoft.graph.models.WatermarkProtectionValues;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage;
+import com.microsoft.graph.requests.CallTranscriptCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -272,6 +273,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 	@Nullable
     public com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage attendanceReports;
 
+    /**
+     * The Transcripts.
+     * 
+     */
+    @SerializedName(value = "transcripts", alternate = {"Transcripts"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.CallTranscriptCollectionPage transcripts;
+
 
     /**
      * Sets the raw JSON object
@@ -284,6 +294,10 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
         if (json.has("attendanceReports")) {
             attendanceReports = serializer.deserializeObject(json.get("attendanceReports"), com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage.class);
+        }
+
+        if (json.has("transcripts")) {
+            transcripts = serializer.deserializeObject(json.get("transcripts"), com.microsoft.graph.requests.CallTranscriptCollectionPage.class);
         }
     }
 }

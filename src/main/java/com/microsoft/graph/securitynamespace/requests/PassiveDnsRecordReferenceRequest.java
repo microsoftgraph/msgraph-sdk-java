@@ -70,7 +70,7 @@ public class PassiveDnsRecordReferenceRequest extends BaseReferenceRequest<Passi
     @Nonnull
     public java.util.concurrent.CompletableFuture<PassiveDnsRecord> putAsync(@Nonnull final PassiveDnsRecord srcPassiveDnsRecord) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/security/threatIntelligence/{id}/passiveDnsRecords/" + srcPassiveDnsRecord.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/host/{id}/passiveDns/" + srcPassiveDnsRecord.id));
         return sendAsync(HttpMethod.PUT, payload);
     }
 
@@ -84,7 +84,7 @@ public class PassiveDnsRecordReferenceRequest extends BaseReferenceRequest<Passi
     @Nullable
     public PassiveDnsRecord put(@Nonnull final PassiveDnsRecord srcPassiveDnsRecord) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/security/threatIntelligence/{id}/passiveDnsRecords/" + srcPassiveDnsRecord.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/host/{id}/passiveDns/" + srcPassiveDnsRecord.id));
         return send(HttpMethod.PUT, payload);
     }
 }

@@ -57,6 +57,26 @@ public class HostRequestBuilder extends BaseRequestBuilder<Host> {
 
 
     /**
+     *  Gets a request builder for the HostPair collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.HostPairCollectionWithReferencesRequestBuilder childHostPairs() {
+        return new com.microsoft.graph.security.requests.HostPairCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("childHostPairs"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the HostPair item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.HostPairWithReferenceRequestBuilder childHostPairs(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.HostPairWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("childHostPairs") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the HostComponent collection
      *
      * @return the collection request builder
@@ -95,6 +115,46 @@ public class HostRequestBuilder extends BaseRequestBuilder<Host> {
     @Nonnull
     public com.microsoft.graph.security.requests.HostCookieWithReferenceRequestBuilder cookies(@Nonnull final String id) {
         return new com.microsoft.graph.security.requests.HostCookieWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("cookies") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the HostPair collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.HostPairCollectionWithReferencesRequestBuilder hostPairs() {
+        return new com.microsoft.graph.security.requests.HostPairCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("hostPairs"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the HostPair item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.HostPairWithReferenceRequestBuilder hostPairs(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.HostPairWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("hostPairs") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the HostPair collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.HostPairCollectionWithReferencesRequestBuilder parentHostPairs() {
+        return new com.microsoft.graph.security.requests.HostPairCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("parentHostPairs"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the HostPair item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.HostPairWithReferenceRequestBuilder parentHostPairs(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.HostPairWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("parentHostPairs") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PassiveDnsRecord collection
@@ -147,6 +207,46 @@ public class HostRequestBuilder extends BaseRequestBuilder<Host> {
         return new com.microsoft.graph.security.requests.HostReputationRequestBuilder(getRequestUrlWithAdditionalSegment("reputation"), getClient(), null);
     }
     /**
+     *  Gets a request builder for the HostSslCertificate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.HostSslCertificateCollectionWithReferencesRequestBuilder sslCertificates() {
+        return new com.microsoft.graph.security.requests.HostSslCertificateCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("sslCertificates"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the HostSslCertificate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.HostSslCertificateWithReferenceRequestBuilder sslCertificates(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.HostSslCertificateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("sslCertificates") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Subdomain collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.SubdomainCollectionWithReferencesRequestBuilder subdomains() {
+        return new com.microsoft.graph.security.requests.SubdomainCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("subdomains"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Subdomain item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.SubdomainWithReferenceRequestBuilder subdomains(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.SubdomainWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("subdomains") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the HostTracker collection
      *
      * @return the collection request builder
@@ -165,5 +265,15 @@ public class HostRequestBuilder extends BaseRequestBuilder<Host> {
     @Nonnull
     public com.microsoft.graph.security.requests.HostTrackerWithReferenceRequestBuilder trackers(@Nonnull final String id) {
         return new com.microsoft.graph.security.requests.HostTrackerWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("trackers") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for WhoisRecord
+     *
+     * @return the WhoisRecordWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.WhoisRecordWithReferenceRequestBuilder whois() {
+        return new com.microsoft.graph.security.requests.WhoisRecordWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("whois"), getClient(), null);
     }
 }

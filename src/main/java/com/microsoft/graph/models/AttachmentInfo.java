@@ -58,7 +58,7 @@ public class AttachmentInfo implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+     * The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose

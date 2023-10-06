@@ -27,7 +27,7 @@ public class AllowedValue extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Active.
-     * Indicates whether the predefined value is active or deactivated. If set to false, this predefined value cannot be assigned to any additional supported directory objects.
+     * Indicates whether the predefined value is active or deactivated. If set to false, this predefined value can't be assigned to any other supported directory objects.
      */
     @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose

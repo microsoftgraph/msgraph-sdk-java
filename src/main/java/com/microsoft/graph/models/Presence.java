@@ -46,7 +46,7 @@ public class Presence extends Entity implements IJsonBackedObject {
 
     /**
      * The Status Message.
-     * 
+     * The presence status message of a user.
      */
     @SerializedName(value = "statusMessage", alternate = {"StatusMessage"})
     @Expose

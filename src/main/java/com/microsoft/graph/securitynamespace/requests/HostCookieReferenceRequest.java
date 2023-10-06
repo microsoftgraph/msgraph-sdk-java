@@ -70,7 +70,7 @@ public class HostCookieReferenceRequest extends BaseReferenceRequest<HostCookie>
     @Nonnull
     public java.util.concurrent.CompletableFuture<HostCookie> putAsync(@Nonnull final HostCookie srcHostCookie) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/security/threatIntelligence/{id}/hostCookies/" + srcHostCookie.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/host/{id}/cookies/" + srcHostCookie.id));
         return sendAsync(HttpMethod.PUT, payload);
     }
 
@@ -84,7 +84,7 @@ public class HostCookieReferenceRequest extends BaseReferenceRequest<HostCookie>
     @Nullable
     public HostCookie put(@Nonnull final HostCookie srcHostCookie) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/security/threatIntelligence/{id}/hostCookies/" + srcHostCookie.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/host/{id}/cookies/" + srcHostCookie.id));
         return send(HttpMethod.PUT, payload);
     }
 }

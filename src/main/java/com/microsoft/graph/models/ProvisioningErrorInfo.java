@@ -40,7 +40,7 @@ public class ProvisioningErrorInfo implements IJsonBackedObject {
 
     /**
      * The Additional Details.
-     * Additional details in case of error.
+     * Additional details if there's error.
      */
     @SerializedName(value = "additionalDetails", alternate = {"AdditionalDetails"})
     @Expose

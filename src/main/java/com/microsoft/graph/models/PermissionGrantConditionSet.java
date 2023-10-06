@@ -47,7 +47,7 @@ public class PermissionGrantConditionSet extends Entity implements IJsonBackedOb
 
     /**
      * The Client Applications From Verified Publisher Only.
-     * Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it does not have a verified publisher. Default is false.
+     * Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it doesn't have a verified publisher. Default is false.
      */
     @SerializedName(value = "clientApplicationsFromVerifiedPublisherOnly", alternate = {"ClientApplicationsFromVerifiedPublisherOnly"})
     @Expose
@@ -65,7 +65,7 @@ public class PermissionGrantConditionSet extends Entity implements IJsonBackedOb
 
     /**
      * The Permission Classification.
-     * The permission classification for the permission being granted, or all to match with any permission classification (including permissions which are not classified). Default is all.
+     * The permission classification for the permission being granted, or all to match with any permission classification (including permissions that aren't classified). Default is all.
      */
     @SerializedName(value = "permissionClassification", alternate = {"PermissionClassification"})
     @Expose
@@ -83,7 +83,7 @@ public class PermissionGrantConditionSet extends Entity implements IJsonBackedOb
 
     /**
      * The Permission Type.
-     * The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
+     * The permission type of the permission being granted. Possible values: application for application permissions (for example app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions that haven't been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but can't be used in custom permission grant policies. Required.
      */
     @SerializedName(value = "permissionType", alternate = {"PermissionType"})
     @Expose
@@ -92,7 +92,7 @@ public class PermissionGrantConditionSet extends Entity implements IJsonBackedOb
 
     /**
      * The Resource Application.
-     * The appId of the resource application (e.g. the API) for which a permission is being granted, or any to match with any resource application or API. Default is any.
+     * The appId of the resource application (for example the API) for which a permission is being granted, or any to match with any resource application or API. Default is any.
      */
     @SerializedName(value = "resourceApplication", alternate = {"ResourceApplication"})
     @Expose

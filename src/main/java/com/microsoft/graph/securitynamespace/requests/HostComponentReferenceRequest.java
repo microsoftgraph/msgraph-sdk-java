@@ -70,7 +70,7 @@ public class HostComponentReferenceRequest extends BaseReferenceRequest<HostComp
     @Nonnull
     public java.util.concurrent.CompletableFuture<HostComponent> putAsync(@Nonnull final HostComponent srcHostComponent) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/security/threatIntelligence/{id}/hostComponents/" + srcHostComponent.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/host/{id}/components/" + srcHostComponent.id));
         return sendAsync(HttpMethod.PUT, payload);
     }
 
@@ -84,7 +84,7 @@ public class HostComponentReferenceRequest extends BaseReferenceRequest<HostComp
     @Nullable
     public HostComponent put(@Nonnull final HostComponent srcHostComponent) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/security/threatIntelligence/{id}/hostComponents/" + srcHostComponent.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/host/{id}/components/" + srcHostComponent.id));
         return send(HttpMethod.PUT, payload);
     }
 }

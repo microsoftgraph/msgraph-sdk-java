@@ -92,7 +92,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Direction.
-     * The direction of the call. The possible value are incoming or outgoing. Read-only.
+     * The direction of the call. The possible values are incoming or outgoing. Read-only.
      */
     @SerializedName(value = "direction", alternate = {"Direction"})
     @Expose
@@ -155,7 +155,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Result Info.
-     * The result information. For example can hold termination reason. Read-only.
+     * The result information. For example, the result can hold termination reason. Read-only.
      */
     @SerializedName(value = "resultInfo", alternate = {"ResultInfo"})
     @Expose

@@ -79,7 +79,7 @@ public class AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Roles.
-     * The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
+     * The role/s that an evidence entity represents in an alert, for example, an IP address that is associated with an attacker has the evidence role Attacker.
      */
     @SerializedName(value = "roles", alternate = {"Roles"})
     @Expose

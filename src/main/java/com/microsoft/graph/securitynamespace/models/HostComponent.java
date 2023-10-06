@@ -64,7 +64,7 @@ public class HostComponent extends Artifact implements IJsonBackedObject {
 
     /**
      * The Version.
-     * The component version running on the artifact, for example, v8.5. This should not be assumed to be strictly numerical.
+     * The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
